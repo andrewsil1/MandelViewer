@@ -1,0 +1,256 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.IO.Ports;
+using System.Diagnostics;
+using FixedPoint;
+
+namespace MandelViewer
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        static WriteableBitmap writeableBitmap;
+        static SerialPort _serialPort;
+
+        const int BAUD_RATE = 2000000;
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            Crc32 crc32 = new Crc32();
+            _serialPort = new SerialPort();
+            using (_serialPort as SerialPort)
+            {
+                // Get a list of serial port names.
+                string[] ports = SerialPort.GetPortNames();
+                foreach (string port in ports)
+                {
+                    ComPortcomboBox.Items.Add(port);
+                }
+
+                Fractal.SnapsToDevicePixels = true;
+                // Create a bitmap and tie it to the onscreen control.
+                writeableBitmap = new WriteableBitmap(
+                    (Int32)Fractal.Width,
+                    (Int32)Fractal.Height,
+                    96,
+                    96,
+                    PixelFormats.Bgr32,
+                    null);
+
+                RenderOptions.SetBitmapScalingMode(Fractal, BitmapScalingMode.HighQuality);
+                RenderOptions.SetEdgeMode(Fractal, EdgeMode.Unspecified);
+
+                Fractal.Stretch = Stretch.None;
+                Fractal.Source = writeableBitmap;
+
+                _serialPort.Close();
+                _serialPort.PortName = "COM4";
+                _serialPort.DataBits = 8;
+                _serialPort.BaudRate = BAUD_RATE;
+                _serialPort.Parity = Parity.None;
+                _serialPort.StopBits = StopBits.One;
+                _serialPort.Handshake = Handshake.None;
+                _serialPort.ReadBufferSize = (int)Fractal.Height * (int)Fractal.Width * sizeof(UInt16);
+
+                // Set the read/write timeouts
+                _serialPort.ReadTimeout = 1000;
+                _serialPort.WriteTimeout = 1000;
+
+                _serialPort.Open();
+                _serialPort.DiscardInBuffer();
+
+                /* TODO: Add length and CRC fields to output messages, not just input. */
+                WaitForReady();
+                _serialPort.Write("A");
+                FixedPoint.FixedPoint fp = new FixedPoint.FixedPoint(40, 35);
+                var val = BitConverter.GetBytes(fp.Convert(-2.0));
+                _serialPort.Write(val, 0, sizeof(ulong)); //X0
+
+                WaitForReady();
+                _serialPort.Write("B");
+                val = BitConverter.GetBytes(fp.Convert(1));
+                _serialPort.Write(val, 0, sizeof(ulong)); //X1
+
+                WaitForReady();
+                _serialPort.Write("C");
+                val = BitConverter.GetBytes(fp.Convert(1.25));
+                _serialPort.Write(val, 0, sizeof(ulong)); //Y0
+
+                WaitForReady();
+                _serialPort.DiscardInBuffer();
+                _serialPort.Write("G");
+
+                int size = 65536;
+                int payloadBytes = 0;
+                byte[] buffer = new byte[size];
+                bool done = false;
+
+                int y = 0;
+                int x = 0;
+                while (!done)
+                {
+                    while (_serialPort.BytesToRead < 4) { } //TODO: Properly #define the consts here.
+
+                    _serialPort.Read(buffer, 0, 4);
+                    int packetSize = BitConverter.ToInt32(buffer, 0);
+
+                    while (_serialPort.BytesToRead < packetSize) { } //TODO: Properly #define the consts here.
+                    _serialPort.Read(buffer, 0, packetSize);
+
+                    string s = System.Text.Encoding.UTF8.GetString(buffer, 0, 4);
+                    if (s != "DONE")
+                    {
+                        UInt32 incomingCrc = BitConverter.ToUInt32(buffer, packetSize - 4); //Extract CRC from the packet.
+                        byte[] payload = new byte[packetSize - 4];                          //Copy bytes without the CRC tacked on to a new buffer
+                        Array.Copy(buffer, payload, packetSize - 4);
+                        payloadBytes += payload.Length;
+                        UInt32 calcCrc = crc32.Get(payload);
+
+                        if (calcCrc != incomingCrc)
+                        {
+                            Debug.Write(String.Format("Expected CRC: {0:X}  Received CRC: {1:X}\n", incomingCrc, calcCrc));
+                            throw new Exception("CRC failure during reception.");
+                        }
+
+                        for (int index = 0; index < payload.Length; index += 2)
+                        {
+                            DrawPixel(x++, y, GetColor(BitConverter.ToUInt16(payload, index)));
+                            if (x == Fractal.Width)
+                            {
+                                x = 0;
+                                y++;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        done = true;
+                        Debug.Write(String.Format("Total Bytes read: {0}", payloadBytes));
+                    }
+                }
+            }
+        }
+
+        private static void WaitForReady()
+        {
+            String prompt = "";
+            do
+            {
+                try
+                {
+                    prompt = _serialPort.ReadLine();
+                }
+                catch (TimeoutException e)
+                { };
+
+            } while (!prompt.Equals("READY"));
+            if (_serialPort.BytesToRead == 6)
+            {
+                _serialPort.DiscardInBuffer();
+            }
+        }
+
+        static int GetColor(UInt16 n)
+        {
+            const int MAX_ITERATIONS = 2000;
+            int mapping = 0x00FFFFFF;
+            if (n <= MAX_ITERATIONS)
+            {
+                double quotient = (double)n / (double)MAX_ITERATIONS;
+                int color = Math.Min((int)(Math.Round(quotient * 256)),0xFF);
+
+                if (quotient > 0.5)
+                {
+                    // Close to the mandelbrot set the color changes from green to white
+                    mapping = color << 16 | 0xFF << 8 | color << 0;
+                }
+                else
+                {
+                    // Far away it changes from black to green
+                    mapping = color << 8;
+                }
+            }
+            return mapping;
+        }
+
+        // The DrawPixel method updates the WriteableBitmap by using
+        // unsafe code to write a pixel into the back buffer.
+        static void DrawPixel(int column, int row, int pixValue)
+        {
+            try
+            {
+                // Reserve the back buffer for updates.
+                writeableBitmap.Lock();
+
+                unsafe
+                {
+                    // Get a pointer to the back buffer.
+                    IntPtr pBackBuffer = writeableBitmap.BackBuffer;
+
+                    // Find the address of the pixel to draw.
+                    pBackBuffer += row * writeableBitmap.BackBufferStride;
+                    pBackBuffer += column * 4;
+
+                    //int color_data;
+                    //// Compute the pixel's color. Draw blue and green stripes for demo.
+                    //if (pixValue <= 32/2 - 1)
+                    //{
+                    //    color_data = 0 << 16; // R
+                    //    color_data |= 0 << 8;   // G
+                    //    color_data |= 255 << 0;   // B
+                    //}
+                    //else
+                    //{
+                    //    color_data = 0 << 16; // R
+                    //    color_data |= 255 << 8;   // G
+                    //    color_data |= 0 << 0;   // B
+                    //}
+
+                    // Assign the color data to the pixel.
+                    *(int*)pBackBuffer = pixValue;
+                }
+
+                // Specify the area of the bitmap that changed.
+                writeableBitmap.AddDirtyRect(new Int32Rect(column, row, 1, 1));
+            }
+            finally
+            {
+                // Release the back buffer and make it available for display.
+                writeableBitmap.Unlock();
+            }
+        }
+
+        private void ComPortcomboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            _serialPort.Close();
+            _serialPort.PortName = ComPortcomboBox.SelectedItem.ToString();
+            _serialPort.DataBits = 8;
+            _serialPort.BaudRate = BAUD_RATE;
+            _serialPort.Parity = Parity.None;
+            _serialPort.StopBits = StopBits.One;
+            _serialPort.Handshake = Handshake.None;
+
+            // Set the read/write timeouts
+            _serialPort.ReadTimeout = 500;
+            _serialPort.WriteTimeout = 500;
+
+            _serialPort.Open();
+
+        }
+    }
+}
