@@ -101,7 +101,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp1\FixedPoint.csproj">
+    <ProjectReference Include="..\FixedPoint\FixedPoint.csproj">
       <Project>{61d7617e-4ea5-45c5-be72-d249d69bd6ea}</Project>
       <Name>FixedPoint</Name>
     </ProjectReference>

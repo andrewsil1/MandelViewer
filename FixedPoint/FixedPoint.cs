@@ -1,27 +1,20 @@
-﻿using System;
+﻿namespace FixedPoint
+{
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FixedPoint
-{
     public class FixedPoint
     {
-        readonly uint Width;
-        readonly uint FracBits;
-        public FixedPoint(uint Width, uint FracBits)
-        {
-            this.Width = Width;
-            this.FracBits = FracBits;
-        }
+        private readonly uint width;
+        private readonly uint fracBits;
 
-        public UInt64 Convert(double inVal)
+        public FixedPoint(uint width, uint fracBits)
         {
-            var temp = inVal * (Math.Pow(2,FracBits));
-            temp = Math.Round(temp);
-
-            return (UInt64) Math.Floor(temp);
+            this.width = width;
+            this.fracBits = fracBits;
         }
 
         public static void Main()
@@ -31,9 +24,16 @@ namespace FixedPoint
             Console.WriteLine("Converted to 16.16: {0:X16}", me.Convert(Math.PI));
             me = new FixedPoint(64, 32);
             Console.WriteLine("Converted to 32.32: {0:X16}", me.Convert(Math.PI));
-            me = new FixedPoint(40,5);
+            me = new FixedPoint(40, 5);
             Console.WriteLine("Converted to 5.35: {0:X16}", me.Convert(Math.PI));
-            
+        }
+
+        public ulong Convert(double inVal)
+        {
+            var temp = inVal * Math.Pow(2, this.fracBits);
+            temp = Math.Round(temp);
+
+            return (ulong)Math.Floor(temp);
         }
     }
 }

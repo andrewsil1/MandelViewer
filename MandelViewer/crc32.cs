@@ -11,7 +11,14 @@ public class Crc32
     /// <summary>
     /// Generator polynomial (modulo 2) for the reversed CRC32 algorithm. 
     /// </summary>
-    private const UInt32 s_generator = 0xEDB88320;
+    private const uint Seed_generator = 0xEDB88320;
+    #endregion
+
+    #region Fields
+    /// <summary>
+    /// Contains a cache of calculated checksum chunks.
+    /// </summary>
+    private readonly uint[] m_checksumTable;
     #endregion
 
     #region Constructors
@@ -27,9 +34,10 @@ public class Crc32
             for (var j = 0; j < 8; ++j)
             {
                 tableEntry = ((tableEntry & 1) != 0)
-                    ? (s_generator ^ (tableEntry >> 1))
+                    ? (Seed_generator ^ (tableEntry >> 1))
                     : (tableEntry >> 1);
             }
+
             return tableEntry;
         }).ToArray();
     }
@@ -41,13 +49,15 @@ public class Crc32
     /// </summary>
     /// <param name="byteStream">The byte stream to calculate the checksum for.</param>
     /// <returns>A 32-bit reversed checksum.</returns>
-    public UInt32 Get<T>(IEnumerable<T> byteStream)
+    public uint Get<T>(IEnumerable<T> byteStream)
     {
         try
         {
             // Initialize checksumRegister to 0xFFFFFFFF and calculate the checksum.
-            return ~byteStream.Aggregate(0xFFFFFFFF, (checksumRegister, currentByte) =>
-                      (m_checksumTable[(checksumRegister & 0xFF) ^ Convert.ToByte(currentByte)] ^ (checksumRegister >> 8)));
+            return ~byteStream.Aggregate(
+                    0xFFFFFFFF, 
+                    (checksumRegister, currentByte) => (this.m_checksumTable[(checksumRegister & 0xFF) ^ Convert.ToByte(currentByte)] ^ (checksumRegister >> 8))
+            );
         }
         catch (FormatException e)
         {
@@ -62,13 +72,5 @@ public class Crc32
             throw new Exception("Could not read the stream out as bytes.", e);
         }
     }
-    #endregion
-
-    #region Fields
-    /// <summary>
-    /// Contains a cache of calculated checksum chunks.
-    /// </summary>
-    private readonly UInt32[] m_checksumTable;
-
     #endregion
 }

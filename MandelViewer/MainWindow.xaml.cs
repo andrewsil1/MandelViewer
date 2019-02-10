@@ -1,26 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.IO.Ports;
-using System.Diagnostics;
-using FixedPoint;
-
-namespace MandelViewer
+﻿namespace MandelViewer
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
+    using System;
+    using System.Collections.Generic;
+    using System.Diagnostics;
+    using System.IO;
+    using System.IO.Ports;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Data;
+    using System.Windows.Documents;
+    using System.Windows.Input;
+    using System.Windows.Media;
+    using System.Windows.Media.Imaging;
+    using System.Windows.Navigation;
+    using System.Windows.Shapes;
+    using FixedPoint;
+    
     public partial class MainWindow : Window
     {
         static WriteableBitmap writeableBitmap;
@@ -52,11 +55,11 @@ namespace MandelViewer
                     PixelFormats.Bgr32,
                     null);
 
-                RenderOptions.SetBitmapScalingMode(Fractal, BitmapScalingMode.HighQuality);
-                RenderOptions.SetEdgeMode(Fractal, EdgeMode.Unspecified);
+                RenderOptions.SetBitmapScalingMode(this.Fractal, BitmapScalingMode.HighQuality);
+                RenderOptions.SetEdgeMode(this.Fractal, EdgeMode.Unspecified);
 
-                Fractal.Stretch = Stretch.None;
-                Fractal.Source = writeableBitmap;
+                this.Fractal.Stretch = Stretch.None;
+                this.Fractal.Source = writeableBitmap;
 
                 _serialPort.Close();
                 _serialPort.PortName = "COM4";
@@ -65,7 +68,7 @@ namespace MandelViewer
                 _serialPort.Parity = Parity.None;
                 _serialPort.StopBits = StopBits.One;
                 _serialPort.Handshake = Handshake.None;
-                _serialPort.ReadBufferSize = (int)Fractal.Height * (int)Fractal.Width * sizeof(UInt16);
+                _serialPort.ReadBufferSize = (int)this.Fractal.Height * (int)this.Fractal.Width * sizeof(ushort);
 
                 // Set the read/write timeouts
                 _serialPort.ReadTimeout = 1000;
@@ -74,22 +77,10 @@ namespace MandelViewer
                 _serialPort.Open();
                 _serialPort.DiscardInBuffer();
 
-                /* TODO: Add length and CRC fields to output messages, not just input. */
-                WaitForReady();
-                _serialPort.Write("A");
-                FixedPoint.FixedPoint fp = new FixedPoint.FixedPoint(40, 35);
-                var val = BitConverter.GetBytes(fp.Convert(-2.0));
-                _serialPort.Write(val, 0, sizeof(ulong)); //X0
-
-                WaitForReady();
-                _serialPort.Write("B");
-                val = BitConverter.GetBytes(fp.Convert(1));
-                _serialPort.Write(val, 0, sizeof(ulong)); //X1
-
-                WaitForReady();
-                _serialPort.Write("C");
-                val = BitConverter.GetBytes(fp.Convert(1.25));
-                _serialPort.Write(val, 0, sizeof(ulong)); //Y0
+                FixedPoint fp = new FixedPoint(40, 35);
+                SendCommand(_serialPort, crc32, fp, "A", -2.0);
+                SendCommand(_serialPort, crc32, fp, "B", 1.0);
+                SendCommand(_serialPort, crc32, fp, "C", 1.25);
 
                 WaitForReady();
                 _serialPort.DiscardInBuffer();
@@ -146,23 +137,45 @@ namespace MandelViewer
             }
         }
 
+        private void SendCommand(SerialPort serialPort, Crc32 crc32, FixedPoint fp, string command, double sendParam)
+        {
+            MemoryStream buf = new MemoryStream();
+            buf.Write(GetAscii(command), 0, 1); //Command
+            buf.Write(BitConverter.GetBytes((uint)12), 0, sizeof(uint)); //Length of message + CRC
+            byte[] val = BitConverter.GetBytes(fp.Convert(sendParam));
+            buf.Write(val, 0, val.Length); //X0
+            uint crcOut = crc32.Get(val);
+            byte[] crcBytes = BitConverter.GetBytes(crcOut);
+            buf.Write(crcBytes, 0, crcBytes.Length);
+            byte[] outBuf = new byte[buf.Length];
+            buf.Seek(0, 0);
+            buf.Read(outBuf, 0, (int)buf.Length);
+            WaitForReady();
+            _serialPort.Write(outBuf, 0, outBuf.Length);
+        }
+
+        private byte[] GetAscii(string str)
+        {
+            byte[] unicodeBytes = Encoding.Unicode.GetBytes(str);
+            return Encoding.Convert(Encoding.Unicode, Encoding.ASCII, unicodeBytes);
+        }
+
         private static void WaitForReady()
         {
-            String prompt = "";
+            string prompt = string.Empty;
             do
             {
                 try
                 {
                     prompt = _serialPort.ReadLine();
                 }
+                #pragma warning disable CS0168 // Variable is declared but never used
                 catch (TimeoutException e)
-                { };
+                #pragma warning restore CS0168 // Variable is declared but never used
+                {
+                }
 
-            } while (!prompt.Equals("READY"));
-            if (_serialPort.BytesToRead == 6)
-            {
-                _serialPort.DiscardInBuffer();
-            }
+            } while (!prompt.Equals("@"));
         }
 
         static int GetColor(UInt16 n)
@@ -205,21 +218,6 @@ namespace MandelViewer
                     // Find the address of the pixel to draw.
                     pBackBuffer += row * writeableBitmap.BackBufferStride;
                     pBackBuffer += column * 4;
-
-                    //int color_data;
-                    //// Compute the pixel's color. Draw blue and green stripes for demo.
-                    //if (pixValue <= 32/2 - 1)
-                    //{
-                    //    color_data = 0 << 16; // R
-                    //    color_data |= 0 << 8;   // G
-                    //    color_data |= 255 << 0;   // B
-                    //}
-                    //else
-                    //{
-                    //    color_data = 0 << 16; // R
-                    //    color_data |= 255 << 8;   // G
-                    //    color_data |= 0 << 0;   // B
-                    //}
 
                     // Assign the color data to the pixel.
                     *(int*)pBackBuffer = pixValue;
