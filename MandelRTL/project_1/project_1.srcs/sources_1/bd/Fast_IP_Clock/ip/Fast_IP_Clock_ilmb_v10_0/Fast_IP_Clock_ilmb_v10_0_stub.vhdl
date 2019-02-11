@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Fri Feb  1 10:29:56 2019
+-- Date        : Sun Feb 10 20:35:34 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top Fast_IP_Clock_ilmb_v10_0 -prefix
 --               Fast_IP_Clock_ilmb_v10_0_ Fast_IP_Clock_dlmb_v10_0_stub.vhdl

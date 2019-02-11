@@ -290,3 +290,4 @@ __pycache__/
 /MandelRTL/project_1/project_1.runs
 /MandelRTL/project_1/project_1.sdk/webtalk
 /MandelRTL/project_1/project_1.srcs/utils_1/imports/impl_1
+/mandelbrotHLS/AXI/directives.tcl

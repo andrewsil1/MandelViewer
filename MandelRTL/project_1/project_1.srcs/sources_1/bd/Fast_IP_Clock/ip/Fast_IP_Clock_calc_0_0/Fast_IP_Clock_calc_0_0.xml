@@ -1676,11 +1676,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 01 20:15:05 UTC 2019</spirit:value>
+            <spirit:value>Mon Feb 11 06:54:08 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:eb06034d</spirit:value>
+            <spirit:value>9:ff6319f6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1696,11 +1696,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 01 20:15:05 UTC 2019</spirit:value>
+            <spirit:value>Mon Feb 11 06:54:08 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:eb06034d</spirit:value>
+            <spirit:value>9:ff6319f6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1716,11 +1716,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 01 20:15:05 UTC 2019</spirit:value>
+            <spirit:value>Mon Feb 11 06:54:08 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:30e37e1d</spirit:value>
+            <spirit:value>9:34ad55cb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1736,11 +1736,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 01 20:15:05 UTC 2019</spirit:value>
+            <spirit:value>Mon Feb 11 06:54:08 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:30e37e1d</spirit:value>
+            <spirit:value>9:34ad55cb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1754,11 +1754,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Feb 01 20:17:48 UTC 2019</spirit:value>
+            <spirit:value>Mon Feb 11 06:56:45 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:eb06034d</spirit:value>
+            <spirit:value>9:ff6319f6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2974,43 +2974,35 @@
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_buf_r_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/calc_buf_r_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_in_parms_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/calc_in_parms_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_mem_0.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/calc_mem_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_mul_40s_41s_cud.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/calc_mux_432_16_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_mul_41s_41s_bkb.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/calc_sdiv_41ns_13bkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_mux_432_16_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/mandel_calc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_sdiv_41ns_13dEe.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/pretest.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/mandel_calc.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/pretest.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/calc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -3025,52 +3017,42 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_buf_r_m_axi.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/calc_buf_r_m_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_in_parms_s_axi.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/calc_in_parms_s_axi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_mem_0.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/calc_mem_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_mul_40s_41s_cud.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/calc_mux_432_16_1_1.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_mul_41s_41s_bkb.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/calc_sdiv_41ns_13bkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_mux_432_16_1_1.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/mandel_calc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc_sdiv_41ns_13dEe.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/pretest.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/mandel_calc.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/pretest.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/7b5f/hdl/verilog/calc.v</spirit:name>
+        <spirit:name>../../ipshared/cfc4/hdl/verilog/calc.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -3242,7 +3224,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="15">10</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="15">12.5</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -3300,12 +3282,11 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>Mandelbrot Calculator Core</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1902011213</xilinx:coreRevision>
+      <xilinx:coreRevision>1902102243</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AP_CLK.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTERRUPT.PortWidth" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_BUF_R.ARUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_BUF_R.AWUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_BUF_R.BUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
@@ -3355,10 +3336,10 @@
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="1e71911a"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="ad851dea"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="bbae72b9"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bf9971a6"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="90e46707"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="03f66315"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="62b10da1"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="5a0e3953"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="aa524964"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

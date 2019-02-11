@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Fri Feb  1 14:37:33 2019
+//Date        : Sun Feb 10 22:54:07 2019
 //Host        : AndrewSi64 running 64-bit major release  (build 9200)
 //Command     : generate_target Fast_IP_Clock.bd
 //Design      : Fast_IP_Clock
@@ -453,10 +453,10 @@ module Fast_IP_Clock
         .s_axi_in_parms_WSTRB(microblaze_0_axi_periph_M04_AXI_WSTRB),
         .s_axi_in_parms_WVALID(microblaze_0_axi_periph_M04_AXI_WVALID));
   Fast_IP_Clock_clk_wiz_0_0 clk_wiz_0
-       (.clk_in1(clk_1),
-        .clk_out1(microblaze_0_Clk),
-        .clk_out2(clk_wiz_0_clk_out2),
-        .clk_out3(clk_wiz_0_clk_out3),
+       (.AXIclk(microblaze_0_Clk),
+        .CalcClk(clk_wiz_0_clk_out3),
+        .MBClk(clk_wiz_0_clk_out2),
+        .clk_in1(clk_1),
         .locked(clk_wiz_0_locked));
   Fast_IP_Clock_mdm_1_0 mdm_1
        (.Dbg_Capture_0(microblaze_0_debug_CAPTURE),

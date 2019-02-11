@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Fri Feb  1 10:33:44 2019
+// Date        : Sun Feb 10 20:40:00 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_xbar_1 -prefix
-//               Fast_IP_Clock_xbar_1_ Fast_IP_Clock_xbar_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim {C:/Users/andrewsi/OneDrive/Documents/Visual Studio
+//               2017/Projects/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_xbar_1/Fast_IP_Clock_xbar_1_sim_netlist.v}
 // Design      : Fast_IP_Clock_xbar_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -399,6 +399,7 @@ module Fast_IP_Clock_xbar_1
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "axi_crossbar_v2_1_19_addr_arbiter" *) 
 module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_addr_arbiter
    (SR,
     aa_mi_arvalid,
@@ -5519,13 +5520,13 @@ endmodule
 (* C_NUM_MASTER_SLOTS = "6" *) (* C_NUM_SLAVE_SLOTS = "3" *) (* C_R_REGISTER = "0" *) 
 (* C_S_AXI_ARB_PRIORITY = "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* C_S_AXI_BASE_ID = "96'b000000000000000000000000000000100000000000000000000000000000000100000000000000000000000000000000" *) (* C_S_AXI_READ_ACCEPTANCE = "96'b000000000000000000000000000100000000000000000000000000000000001000000000000000000000000000000001" *) 
 (* C_S_AXI_SINGLE_THREAD = "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* C_S_AXI_THREAD_ID_WIDTH = "96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* C_S_AXI_WRITE_ACCEPTANCE = "96'b000000000000000000000000000100000000000000000000000000000010000000000000000000000000000000000001" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* P_ADDR_DECODE = "1" *) (* P_AXI3 = "1" *) 
-(* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_AXILITE_SIZE = "3'b010" *) 
-(* P_FAMILY = "artix7" *) (* P_INCR = "2'b01" *) (* P_LEN = "8" *) 
-(* P_LOCK = "1" *) (* P_M_AXI_ERR_MODE = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) (* P_M_AXI_SUPPORTS_READ = "6'b111111" *) 
-(* P_M_AXI_SUPPORTS_WRITE = "6'b111111" *) (* P_ONES = "65'b11111111111111111111111111111111111111111111111111111111111111111" *) (* P_RANGE_CHECK = "1" *) 
-(* P_S_AXI_BASE_ID = "192'b000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_HIGH_ID = "192'b000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_SUPPORTS_READ = "3'b111" *) 
-(* P_S_AXI_SUPPORTS_WRITE = "3'b111" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_crossbar_v2_1_19_axi_crossbar" *) (* P_ADDR_DECODE = "1" *) 
+(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
+(* P_AXILITE_SIZE = "3'b010" *) (* P_FAMILY = "artix7" *) (* P_INCR = "2'b01" *) 
+(* P_LEN = "8" *) (* P_LOCK = "1" *) (* P_M_AXI_ERR_MODE = "192'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" *) 
+(* P_M_AXI_SUPPORTS_READ = "6'b111111" *) (* P_M_AXI_SUPPORTS_WRITE = "6'b111111" *) (* P_ONES = "65'b11111111111111111111111111111111111111111111111111111111111111111" *) 
+(* P_RANGE_CHECK = "1" *) (* P_S_AXI_BASE_ID = "192'b000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_HIGH_ID = "192'b000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000" *) 
+(* P_S_AXI_SUPPORTS_READ = "3'b111" *) (* P_S_AXI_SUPPORTS_WRITE = "3'b111" *) 
 module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_axi_crossbar
    (aclk,
     aresetn,
@@ -6070,6 +6071,7 @@ module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_axi_crossbar
         .s_ready_i_reg_4(m_axi_rready[5]));
 endmodule
 
+(* ORIG_REF_NAME = "axi_crossbar_v2_1_19_crossbar" *) 
 module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_crossbar
    (\gen_arbiter.s_ready_i_reg[2] ,
     \gen_arbiter.s_ready_i_reg[1] ,
@@ -8153,6 +8155,7 @@ module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_crossbar
         .sa_wm_awready_mux(sa_wm_awready_mux));
 endmodule
 
+(* ORIG_REF_NAME = "axi_crossbar_v2_1_19_decerr_slave" *) 
 module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_decerr_slave
    (p_40_in,
     p_36_in,
@@ -8650,6 +8653,7 @@ module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_decerr_slave
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "axi_crossbar_v2_1_19_si_transactor" *) 
 module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_si_transactor
    (s_axi_rresp,
     s_axi_rdata,
@@ -10158,6 +10162,7 @@ module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_si_transactor__parameterized4
         .st_mr_bmesg(st_mr_bmesg));
 endmodule
 
+(* ORIG_REF_NAME = "axi_crossbar_v2_1_19_splitter" *) 
 module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_splitter
    (\m_ready_d_reg[1]_0 ,
     m_ready_d,
@@ -10537,6 +10542,7 @@ module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_splitter_14
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_crossbar_v2_1_19_wdata_mux" *) 
 module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_wdata_mux
    (f_decoder_return,
     m_select_enc,
@@ -11326,6 +11332,7 @@ module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_wdata_mux__parameterized0
         .wr_tmp_wready(wr_tmp_wready));
 endmodule
 
+(* ORIG_REF_NAME = "axi_crossbar_v2_1_19_wdata_router" *) 
 module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_wdata_router
    (\s_axi_awaddr[28] ,
     ss_wr_awready_0,
@@ -11751,6 +11758,7 @@ module Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_wdata_router__parameterized1
         .tmp_wm_wvalid(tmp_wm_wvalid));
 endmodule
 
+(* ORIG_REF_NAME = "axi_data_fifo_v2_1_17_axic_reg_srl_fifo" *) 
 module Fast_IP_Clock_xbar_1_axi_data_fifo_v2_1_17_axic_reg_srl_fifo
    (\s_axi_awaddr[28] ,
     ss_wr_awready_0,
@@ -17786,6 +17794,7 @@ module Fast_IP_Clock_xbar_1_axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameteriz
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_data_fifo_v2_1_17_ndeep_srl" *) 
 module Fast_IP_Clock_xbar_1_axi_data_fifo_v2_1_17_ndeep_srl
    (\s_axi_awaddr[17] ,
     D,
@@ -19983,6 +19992,7 @@ module Fast_IP_Clock_xbar_1_axi_data_fifo_v2_1_17_ndeep_srl__parameterized2_17
         .O(D));
 endmodule
 
+(* ORIG_REF_NAME = "axi_register_slice_v2_1_18_axi_register_slice" *) 
 module Fast_IP_Clock_xbar_1_axi_register_slice_v2_1_18_axi_register_slice
    (st_mr_bvalid,
     m_axi_bready,
@@ -29518,6 +29528,7 @@ module Fast_IP_Clock_xbar_1_axi_register_slice_v2_1_18_axic_register_slice__para
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "generic_baseblocks_v2_1_0_mux_enc" *) 
 module Fast_IP_Clock_xbar_1_generic_baseblocks_v2_1_0_mux_enc
    (s_axi_rresp,
     s_axi_rdata,

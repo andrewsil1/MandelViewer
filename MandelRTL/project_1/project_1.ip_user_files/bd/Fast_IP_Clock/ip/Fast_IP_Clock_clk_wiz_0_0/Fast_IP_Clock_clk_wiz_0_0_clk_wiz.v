@@ -56,8 +56,9 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1___100.000______0.000______50.0______144.719____114.212
-// clk_out2____80.000______0.000______50.0______151.652____114.212
+// __AXIclk___100.000______0.000______50.0______144.719____114.212
+// ___MBClk____80.000______0.000______50.0______151.652____114.212
+// _CalcClk____80.000______0.000______50.0______151.652____114.212
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -70,8 +71,9 @@ module Fast_IP_Clock_clk_wiz_0_0_clk_wiz
 
  (// Clock in ports
   // Clock out ports
-  output        clk_out1,
-  output        clk_out2,
+  output        AXIclk,
+  output        MBClk,
+  output        CalcClk,
   // Status and control signals
   output        locked,
   input         clk_in1
@@ -94,9 +96,9 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
   //    * Unused inputs are tied off
   //    * Unused outputs are labeled unused
 
-  wire        clk_out1_Fast_IP_Clock_clk_wiz_0_0;
-  wire        clk_out2_Fast_IP_Clock_clk_wiz_0_0;
-  wire        clk_out3_Fast_IP_Clock_clk_wiz_0_0;
+  wire        AXIclk_Fast_IP_Clock_clk_wiz_0_0;
+  wire        MBClk_Fast_IP_Clock_clk_wiz_0_0;
+  wire        CalcClk_Fast_IP_Clock_clk_wiz_0_0;
   wire        clk_out4_Fast_IP_Clock_clk_wiz_0_0;
   wire        clk_out5_Fast_IP_Clock_clk_wiz_0_0;
   wire        clk_out6_Fast_IP_Clock_clk_wiz_0_0;
@@ -111,7 +113,6 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
   wire        clkfboutb_unused;
     wire clkout0b_unused;
    wire clkout1b_unused;
-   wire clkout2_unused;
    wire clkout2b_unused;
    wire clkout3_unused;
    wire clkout3b_unused;
@@ -126,6 +127,9 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
   (* KEEP = "TRUE" *) 
   (* ASYNC_REG = "TRUE" *)
   reg  [7 :0] seq_reg2 = 0;
+  (* KEEP = "TRUE" *) 
+  (* ASYNC_REG = "TRUE" *)
+  reg  [7 :0] seq_reg3 = 0;
 
   MMCME2_ADV
   #(.BANDWIDTH            ("OPTIMIZED"),
@@ -144,17 +148,21 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
+    .CLKOUT2_DIVIDE       (10),
+    .CLKOUT2_PHASE        (0.000),
+    .CLKOUT2_DUTY_CYCLE   (0.500),
+    .CLKOUT2_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (10.000))
   mmcm_adv_inst
     // Output clocks
    (
     .CLKFBOUT            (clkfbout_Fast_IP_Clock_clk_wiz_0_0),
     .CLKFBOUTB           (clkfboutb_unused),
-    .CLKOUT0             (clk_out1_Fast_IP_Clock_clk_wiz_0_0),
+    .CLKOUT0             (AXIclk_Fast_IP_Clock_clk_wiz_0_0),
     .CLKOUT0B            (clkout0b_unused),
-    .CLKOUT1             (clk_out2_Fast_IP_Clock_clk_wiz_0_0),
+    .CLKOUT1             (MBClk_Fast_IP_Clock_clk_wiz_0_0),
     .CLKOUT1B            (clkout1b_unused),
-    .CLKOUT2             (clkout2_unused),
+    .CLKOUT2             (CalcClk_Fast_IP_Clock_clk_wiz_0_0),
     .CLKOUT2B            (clkout2b_unused),
     .CLKOUT3             (clkout3_unused),
     .CLKOUT3B            (clkout3b_unused),
@@ -204,28 +212,41 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
 
 
   BUFGCE clkout1_buf
-   (.O   (clk_out1),
+   (.O   (AXIclk),
     .CE  (seq_reg1[7]),
-    .I   (clk_out1_Fast_IP_Clock_clk_wiz_0_0));
+    .I   (AXIclk_Fast_IP_Clock_clk_wiz_0_0));
 
   BUFH clkout1_buf_en
-   (.O   (clk_out1_Fast_IP_Clock_clk_wiz_0_0_en_clk),
-    .I   (clk_out1_Fast_IP_Clock_clk_wiz_0_0));
-  always @(posedge clk_out1_Fast_IP_Clock_clk_wiz_0_0_en_clk)
+   (.O   (AXIclk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
+    .I   (AXIclk_Fast_IP_Clock_clk_wiz_0_0));
+  always @(posedge AXIclk_Fast_IP_Clock_clk_wiz_0_0_en_clk)
         seq_reg1 <= {seq_reg1[6:0],locked_int};
 
 
   BUFGCE clkout2_buf
-   (.O   (clk_out2),
+   (.O   (MBClk),
     .CE  (seq_reg2[7]),
-    .I   (clk_out2_Fast_IP_Clock_clk_wiz_0_0));
+    .I   (MBClk_Fast_IP_Clock_clk_wiz_0_0));
  
   BUFH clkout2_buf_en
-   (.O   (clk_out2_Fast_IP_Clock_clk_wiz_0_0_en_clk),
-    .I   (clk_out2_Fast_IP_Clock_clk_wiz_0_0));
+   (.O   (MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
+    .I   (MBClk_Fast_IP_Clock_clk_wiz_0_0));
  
-  always @(posedge clk_out2_Fast_IP_Clock_clk_wiz_0_0_en_clk)
+  always @(posedge MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk)
         seq_reg2 <= {seq_reg2[6:0],locked_int};
+
+
+  BUFGCE clkout3_buf
+   (.O   (CalcClk),
+    .CE  (seq_reg3[7]),
+    .I   (CalcClk_Fast_IP_Clock_clk_wiz_0_0));
+ 
+  BUFH clkout3_buf_en
+   (.O   (CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
+    .I   (CalcClk_Fast_IP_Clock_clk_wiz_0_0));
+ 
+  always @(posedge CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk)
+        seq_reg3 <= {seq_reg3[6:0],locked_int};
 
 
 

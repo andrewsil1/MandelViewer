@@ -2,39 +2,11 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="Fast_IP_Clock" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1549060665"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1549060665"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1549060665"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1549060665"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1549868055"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1549868055"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1549868055"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1549868055"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="Fast_IP_Clock_sim_netlist.vhdl" Type="VHDL">
-        <Properties IsEditable="true" IsVisible="true" Timestamp="1548806209" IsTrackable="true" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-        <UsedIn Val="SINGLE_LANGUAGE"/>
-      </File>
-      <File Name="Fast_IP_Clock_sim_netlist.v" Type="Verilog">
-        <Properties IsEditable="true" IsVisible="true" Timestamp="1548806200" IsTrackable="true" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-        <UsedIn Val="SINGLE_LANGUAGE"/>
-      </File>
-      <File Name="Fast_IP_Clock_stub.vhdl" Type="VHDL">
-        <Properties IsEditable="true" IsVisible="true" Timestamp="1548806193" IsTrackable="true" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTH_BLACKBOX_STUB"/>
-      </File>
-      <File Name="Fast_IP_Clock_stub.v" Type="Verilog">
-        <Properties IsEditable="true" IsVisible="true" Timestamp="1548806193" IsTrackable="true" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTH_BLACKBOX_STUB"/>
-      </File>
-      <File Name="Fast_IP_Clock.dcp" Type="DCP">
-        <Properties IsEditable="true" IsVisible="true" Timestamp="1548806192" IsTrackable="true" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
       <File Name="ip\Fast_IP_Clock_mdm_1_0\Fast_IP_Clock_mdm_1_0.xci" Type="IP">
         <Instance HierarchyPath="mdm_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -155,17 +127,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="synth\Fast_IP_Clock.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="sim\Fast_IP_Clock.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\Fast_IP_Clock_xbar_1\Fast_IP_Clock_xbar_1.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0_axi_periph/xbar"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -196,6 +157,17 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="synth\Fast_IP_Clock.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+      </File>
+      <File Name="sim\Fast_IP_Clock.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\Fast_IP_Clock_auto_cc_2\Fast_IP_Clock_auto_cc_2.xci" Type="IP">

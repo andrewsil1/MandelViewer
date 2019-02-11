@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\andrewsi\OneDrive\Documents\VisualStudio2017\Projects\MandelViewer\MandelRTL\project_1\project_1.sdk"/>
+	</list>
 	<section name="CleanDialogSettings">
 		<item value="828" key="DIALOG_WIDTH"/>
 		<item value="false" key="TOGGLE_SELECTED"/>

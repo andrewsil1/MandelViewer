@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="mandel.cpp" path="C:\Users\andrewsi\OneDrive\fpgaproducts\Vivado\mandelbrot\mandel.cpp"/>
-    <originFiles name="pretest.cpp" path="C:\Users\andrewsi\OneDrive\fpgaproducts\Vivado\mandelbrot\pretest.cpp"/>
+    <originFiles name="pretest.cpp" path="C:\Users\andrewsi\Documents\MandelHLS\pretest.cpp"/>
+    <originFiles name="mandel.cpp" path="C:\Users\andrewsi\Documents\MandelHLS\mandel.cpp"/>
   </source>
   <testbench>
-    <originFiles name="mandel_maintb.cpp" path="C:\Users\andrewsi\OneDrive\fpgaproducts\Vivado\mandelbrot\mandel_maintb.cpp"/>
+    <originFiles name="mandel_maintb.cpp" path="C:\Users\andrewsi\Documents\MandelHLS\mandel_maintb.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

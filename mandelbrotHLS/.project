@@ -29,87 +29,87 @@
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/.apc/.src</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/.apc/.src</location>
 		</link>
 		<link>
 			<name>testbench</name>
 			<type>2</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/.apc/.tb</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/.apc/.tb</location>
 		</link>
 		<link>
 			<name>AXI/constraints</name>
 			<type>2</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/AXI/.tcls</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/AXI/.tcls</location>
 		</link>
 		<link>
 			<name>MemPart/constraints</name>
 			<type>2</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/MemPart/.tcls</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/MemPart/.tcls</location>
 		</link>
 		<link>
 			<name>NoOpt/constraints</name>
 			<type>2</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/NoOpt/.tcls</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/NoOpt/.tcls</location>
 		</link>
 		<link>
 			<name>source/mandel.cpp</name>
 			<type>1</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/mandel.cpp</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/mandel.cpp</location>
 		</link>
 		<link>
 			<name>source/pretest.cpp</name>
 			<type>1</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/pretest.cpp</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/pretest.cpp</location>
 		</link>
 		<link>
 			<name>testbench/mandel_maintb.cpp</name>
 			<type>1</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/mandel_maintb.cpp</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/mandel_maintb.cpp</location>
 		</link>
 		<link>
 			<name>AXI/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/AXI/AXI.directive</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/AXI/AXI.directive</location>
 		</link>
 		<link>
 			<name>AXI/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/AXI/directives.tcl</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/AXI/directives.tcl</location>
 		</link>
 		<link>
 			<name>AXI/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/AXI/script.tcl</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/AXI/script.tcl</location>
 		</link>
 		<link>
 			<name>MemPart/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/MemPart/MemPart.directive</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/MemPart/MemPart.directive</location>
 		</link>
 		<link>
 			<name>MemPart/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/MemPart/directives.tcl</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/MemPart/directives.tcl</location>
 		</link>
 		<link>
 			<name>MemPart/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/MemPart/script.tcl</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/MemPart/script.tcl</location>
 		</link>
 		<link>
 			<name>NoOpt/constraints/.xml.directive</name>
 			<type>1</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/NoOpt/NoOpt.directive</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/NoOpt/NoOpt.directive</location>
 		</link>
 		<link>
 			<name>NoOpt/constraints/directives.tcl</name>
 			<type>1</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/NoOpt/directives.tcl</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/NoOpt/directives.tcl</location>
 		</link>
 		<link>
 			<name>NoOpt/constraints/script.tcl</name>
 			<type>1</type>
-			<location>C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/mandelbrot/NoOpt/script.tcl</location>
+			<location>C:/Users/andrewsi/Documents/MandelHLS/NoOpt/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

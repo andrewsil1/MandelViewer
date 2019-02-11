@@ -14,5 +14,6 @@ vhdl xil_defaultlib  \
 "../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_proc_sys_reset_1_0/sim/Fast_IP_Clock_proc_sys_reset_1_0.vhd" \
 "../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_intc_0_0/sim/Fast_IP_Clock_axi_intc_0_0.vhd" \
 "../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_uart16550_0_0/sim/Fast_IP_Clock_axi_uart16550_0_0.vhd" \
+"../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_proc_sys_reset_2_0/sim/Fast_IP_Clock_proc_sys_reset_2_0.vhd" \
 
 nosort

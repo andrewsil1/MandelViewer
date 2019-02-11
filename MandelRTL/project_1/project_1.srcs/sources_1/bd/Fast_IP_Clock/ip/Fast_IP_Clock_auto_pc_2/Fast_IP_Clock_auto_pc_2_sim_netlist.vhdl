@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Fri Feb  1 10:37:18 2019
+-- Date        : Sun Feb 10 20:42:51 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top Fast_IP_Clock_auto_pc_2 -prefix
 --               Fast_IP_Clock_auto_pc_2_ Fast_IP_Clock_auto_pc_2_sim_netlist.vhdl

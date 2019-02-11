@@ -133,18 +133,15 @@ vlog -work xlconcat_v2_1_1 -64 -incr "+incdir+../../../../project_1.srcs/sources
 
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/85a3" "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/ec67/hdl" \
 "../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_xlconcat_0_0/sim/Fast_IP_Clock_xlconcat_0_0.v" \
-"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/7b5f/hdl/verilog/calc_buf_r_m_axi.v" \
-"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/7b5f/hdl/verilog/calc_in_parms_s_axi.v" \
-"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/7b5f/hdl/verilog/calc_mem_0.v" \
-"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/7b5f/hdl/verilog/calc_mul_40s_41s_cud.v" \
-"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/7b5f/hdl/verilog/calc_mul_41s_41s_bkb.v" \
-"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/7b5f/hdl/verilog/calc_mux_432_16_1_1.v" \
-"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/7b5f/hdl/verilog/calc_sdiv_41ns_13dEe.v" \
-"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/7b5f/hdl/verilog/mandel_calc.v" \
-"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/7b5f/hdl/verilog/pretest.v" \
-"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/7b5f/hdl/verilog/calc.v" \
+"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/cfc4/hdl/verilog/calc_buf_r_m_axi.v" \
+"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/cfc4/hdl/verilog/calc_in_parms_s_axi.v" \
+"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/cfc4/hdl/verilog/calc_mem_0.v" \
+"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/cfc4/hdl/verilog/calc_mux_432_16_1_1.v" \
+"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/cfc4/hdl/verilog/calc_sdiv_41ns_13bkb.v" \
+"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/cfc4/hdl/verilog/mandel_calc.v" \
+"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/cfc4/hdl/verilog/pretest.v" \
+"../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/cfc4/hdl/verilog/calc.v" \
 "../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_calc_0_0/sim/Fast_IP_Clock_calc_0_0.v" \
-"../../../bd/Fast_IP_Clock/sim/Fast_IP_Clock.v" \
 
 vlog -work generic_baseblocks_v2_1_0 -64 -incr "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/85a3" "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/ec67/hdl" \
 "../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
@@ -184,24 +181,30 @@ vcom -work axi_uart16550_v2_0_20 -64 -93 \
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_uart16550_0_0/sim/Fast_IP_Clock_axi_uart16550_0_0.vhd" \
+"../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_proc_sys_reset_2_0/sim/Fast_IP_Clock_proc_sys_reset_2_0.vhd" \
+
+vlog -work xil_defaultlib -64 -incr "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/85a3" "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/ec67/hdl" \
+"../../../bd/Fast_IP_Clock/sim/Fast_IP_Clock.v" \
 
 vlog -work axi_clock_converter_v2_1_17 -64 -incr "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/85a3" "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/ec67/hdl" \
 "../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/693a/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/85a3" "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/ec67/hdl" \
-"../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_cc_1/sim/Fast_IP_Clock_auto_cc_1.v" \
+"../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_cc_2/sim/Fast_IP_Clock_auto_cc_2.v" \
 
 vlog -work axi_protocol_converter_v2_1_18 -64 -incr "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/85a3" "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/ec67/hdl" \
 "../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/85a3" "+incdir+../../../../project_1.srcs/sources_1/bd/Fast_IP_Clock/ipshared/ec67/hdl" \
 "../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_pc_5/sim/Fast_IP_Clock_auto_pc_5.v" \
-"../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_cc_2/sim/Fast_IP_Clock_auto_cc_2.v" \
+"../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_cc_3/sim/Fast_IP_Clock_auto_cc_3.v" \
+"../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_cc_4/sim/Fast_IP_Clock_auto_cc_4.v" \
 "../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_pc_0/sim/Fast_IP_Clock_auto_pc_0.v" \
 "../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_pc_1/sim/Fast_IP_Clock_auto_pc_1.v" \
 "../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_pc_2/sim/Fast_IP_Clock_auto_pc_2.v" \
 "../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_cc_0/sim/Fast_IP_Clock_auto_cc_0.v" \
 "../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_pc_3/sim/Fast_IP_Clock_auto_pc_3.v" \
+"../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_cc_1/sim/Fast_IP_Clock_auto_cc_1.v" \
 "../../../bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_pc_4/sim/Fast_IP_Clock_auto_pc_4.v" \
 
 vlog -work xil_defaultlib \

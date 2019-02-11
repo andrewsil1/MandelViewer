@@ -56,9 +56,9 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1___100.000______0.000______50.0______144.719____114.212
-// clk_out2____80.000______0.000______50.0______151.652____114.212
-// clk_out3____80.000______0.000______50.0______151.652____114.212
+// __AXIclk___100.000______0.000______50.0______144.719____114.212
+// ___MBClk____80.000______0.000______50.0______151.652____114.212
+// _CalcClk____80.000______0.000______50.0______151.652____114.212
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -72,9 +72,9 @@
 module Fast_IP_Clock_clk_wiz_0_0 
  (
   // Clock out ports
-  output        clk_out1,
-  output        clk_out2,
-  output        clk_out3,
+  output        AXIclk,
+  output        MBClk,
+  output        CalcClk,
   // Status and control signals
   output        locked,
  // Clock in ports
@@ -84,9 +84,9 @@ module Fast_IP_Clock_clk_wiz_0_0
   Fast_IP_Clock_clk_wiz_0_0_clk_wiz inst
   (
   // Clock out ports  
-  .clk_out1(clk_out1),
-  .clk_out2(clk_out2),
-  .clk_out3(clk_out3),
+  .AXIclk(AXIclk),
+  .MBClk(MBClk),
+  .CalcClk(CalcClk),
   // Status and control signals               
   .locked(locked),
  // Clock in ports

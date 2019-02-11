@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Fri Feb  1 14:15:32 2019
+-- Date        : Sun Feb 10 22:51:50 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/andrewsi/OneDrive/fpgaproducts/Vivado/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_clk_wiz_0_0/Fast_IP_Clock_clk_wiz_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim {C:/Users/andrewsi/OneDrive/Documents/Visual Studio
+--               2017/Projects/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_clk_wiz_0_0/Fast_IP_Clock_clk_wiz_0_0_sim_netlist.vhdl}
 -- Design      : Fast_IP_Clock_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,9 +16,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz is
   port (
-    clk_out1 : out STD_LOGIC;
-    clk_out2 : out STD_LOGIC;
-    clk_out3 : out STD_LOGIC;
+    AXIclk : out STD_LOGIC;
+    MBClk : out STD_LOGIC;
+    CalcClk : out STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -27,13 +27,13 @@ entity Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz is
 end Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz;
 
 architecture STRUCTURE of Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz is
+  signal AXIclk_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
+  signal AXIclk_Fast_IP_Clock_clk_wiz_0_0_en_clk : STD_LOGIC;
+  signal CalcClk_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
+  signal CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk : STD_LOGIC;
+  signal MBClk_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
+  signal MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk : STD_LOGIC;
   signal clk_in1_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
-  signal clk_out1_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
-  signal clk_out1_Fast_IP_Clock_clk_wiz_0_0_en_clk : STD_LOGIC;
-  signal clk_out2_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
-  signal clk_out2_Fast_IP_Clock_clk_wiz_0_0_en_clk : STD_LOGIC;
-  signal clk_out3_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
-  signal clk_out3_Fast_IP_Clock_clk_wiz_0_0_en_clk : STD_LOGIC;
   signal clkfbout_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_buf_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
   signal \^locked\ : STD_LOGIC;
@@ -160,18 +160,18 @@ clkout1_buf: unisim.vcomponents.BUFGCTRL
         port map (
       CE0 => seq_reg1(7),
       CE1 => '0',
-      I0 => clk_out1_Fast_IP_Clock_clk_wiz_0_0,
+      I0 => AXIclk_Fast_IP_Clock_clk_wiz_0_0,
       I1 => '1',
       IGNORE0 => '0',
       IGNORE1 => '1',
-      O => clk_out1,
+      O => AXIclk,
       S0 => '1',
       S1 => '0'
     );
 clkout1_buf_en: unisim.vcomponents.BUFH
      port map (
-      I => clk_out1_Fast_IP_Clock_clk_wiz_0_0,
-      O => clk_out1_Fast_IP_Clock_clk_wiz_0_0_en_clk
+      I => AXIclk_Fast_IP_Clock_clk_wiz_0_0,
+      O => AXIclk_Fast_IP_Clock_clk_wiz_0_0_en_clk
     );
 clkout2_buf: unisim.vcomponents.BUFGCTRL
     generic map(
@@ -182,18 +182,18 @@ clkout2_buf: unisim.vcomponents.BUFGCTRL
         port map (
       CE0 => seq_reg2(7),
       CE1 => '0',
-      I0 => clk_out2_Fast_IP_Clock_clk_wiz_0_0,
+      I0 => MBClk_Fast_IP_Clock_clk_wiz_0_0,
       I1 => '1',
       IGNORE0 => '0',
       IGNORE1 => '1',
-      O => clk_out2,
+      O => MBClk,
       S0 => '1',
       S1 => '0'
     );
 clkout2_buf_en: unisim.vcomponents.BUFH
      port map (
-      I => clk_out2_Fast_IP_Clock_clk_wiz_0_0,
-      O => clk_out2_Fast_IP_Clock_clk_wiz_0_0_en_clk
+      I => MBClk_Fast_IP_Clock_clk_wiz_0_0,
+      O => MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk
     );
 clkout3_buf: unisim.vcomponents.BUFGCTRL
     generic map(
@@ -204,18 +204,18 @@ clkout3_buf: unisim.vcomponents.BUFGCTRL
         port map (
       CE0 => seq_reg3(7),
       CE1 => '0',
-      I0 => clk_out3_Fast_IP_Clock_clk_wiz_0_0,
+      I0 => CalcClk_Fast_IP_Clock_clk_wiz_0_0,
       I1 => '1',
       IGNORE0 => '0',
       IGNORE1 => '1',
-      O => clk_out3,
+      O => CalcClk,
       S0 => '1',
       S1 => '0'
     );
 clkout3_buf_en: unisim.vcomponents.BUFH
      port map (
-      I => clk_out3_Fast_IP_Clock_clk_wiz_0_0,
-      O => clk_out3_Fast_IP_Clock_clk_wiz_0_0_en_clk
+      I => CalcClk_Fast_IP_Clock_clk_wiz_0_0,
+      O => CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk
     );
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
@@ -277,11 +277,11 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKIN2 => '0',
       CLKINSEL => '1',
       CLKINSTOPPED => NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED,
-      CLKOUT0 => clk_out1_Fast_IP_Clock_clk_wiz_0_0,
+      CLKOUT0 => AXIclk_Fast_IP_Clock_clk_wiz_0_0,
       CLKOUT0B => NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED,
-      CLKOUT1 => clk_out2_Fast_IP_Clock_clk_wiz_0_0,
+      CLKOUT1 => MBClk_Fast_IP_Clock_clk_wiz_0_0,
       CLKOUT1B => NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED,
-      CLKOUT2 => clk_out3_Fast_IP_Clock_clk_wiz_0_0,
+      CLKOUT2 => CalcClk_Fast_IP_Clock_clk_wiz_0_0,
       CLKOUT2B => NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED,
       CLKOUT3 => NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED,
       CLKOUT3B => NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED,
@@ -308,7 +308,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out1_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => AXIclk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => \^locked\,
       Q => seq_reg1(0),
@@ -319,7 +319,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out1_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => AXIclk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg1(0),
       Q => seq_reg1(1),
@@ -330,7 +330,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out1_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => AXIclk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg1(1),
       Q => seq_reg1(2),
@@ -341,7 +341,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out1_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => AXIclk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg1(2),
       Q => seq_reg1(3),
@@ -352,7 +352,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out1_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => AXIclk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg1(3),
       Q => seq_reg1(4),
@@ -363,7 +363,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out1_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => AXIclk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg1(4),
       Q => seq_reg1(5),
@@ -374,7 +374,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out1_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => AXIclk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg1(5),
       Q => seq_reg1(6),
@@ -385,7 +385,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out1_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => AXIclk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg1(6),
       Q => seq_reg1(7),
@@ -396,7 +396,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out2_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => \^locked\,
       Q => seq_reg2(0),
@@ -407,7 +407,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out2_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg2(0),
       Q => seq_reg2(1),
@@ -418,7 +418,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out2_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg2(1),
       Q => seq_reg2(2),
@@ -429,7 +429,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out2_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg2(2),
       Q => seq_reg2(3),
@@ -440,7 +440,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out2_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg2(3),
       Q => seq_reg2(4),
@@ -451,7 +451,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out2_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg2(4),
       Q => seq_reg2(5),
@@ -462,7 +462,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out2_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg2(5),
       Q => seq_reg2(6),
@@ -473,7 +473,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out2_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg2(6),
       Q => seq_reg2(7),
@@ -484,7 +484,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out3_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => \^locked\,
       Q => seq_reg3(0),
@@ -495,7 +495,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out3_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg3(0),
       Q => seq_reg3(1),
@@ -506,7 +506,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out3_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg3(1),
       Q => seq_reg3(2),
@@ -517,7 +517,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out3_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg3(2),
       Q => seq_reg3(3),
@@ -528,7 +528,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out3_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg3(3),
       Q => seq_reg3(4),
@@ -539,7 +539,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out3_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg3(4),
       Q => seq_reg3(5),
@@ -550,7 +550,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out3_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg3(5),
       Q => seq_reg3(6),
@@ -561,7 +561,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       INIT => '0'
     )
         port map (
-      C => clk_out3_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      C => CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
       CE => '1',
       D => seq_reg3(6),
       Q => seq_reg3(7),
@@ -574,9 +574,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity Fast_IP_Clock_clk_wiz_0_0 is
   port (
-    clk_out1 : out STD_LOGIC;
-    clk_out2 : out STD_LOGIC;
-    clk_out3 : out STD_LOGIC;
+    AXIclk : out STD_LOGIC;
+    MBClk : out STD_LOGIC;
+    CalcClk : out STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -588,10 +588,10 @@ architecture STRUCTURE of Fast_IP_Clock_clk_wiz_0_0 is
 begin
 inst: entity work.Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
      port map (
+      AXIclk => AXIclk,
+      CalcClk => CalcClk,
+      MBClk => MBClk,
       clk_in1 => clk_in1,
-      clk_out1 => clk_out1,
-      clk_out2 => clk_out2,
-      clk_out3 => clk_out3,
       locked => locked
     );
 end STRUCTURE;

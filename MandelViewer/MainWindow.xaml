@@ -5,10 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MandelViewer"
         mc:Ignorable="d"
-        Title="MandelViewer" Height="929" Width="1090" ResizeMode="NoResize">
+        Title="MandelViewer" Height="929" Width="1090" ResizeMode="CanMinimize">
     <Grid x:Name="Grid">
-        <ComboBox x:Name="ComPortcomboBox" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComPortcomboBox_SelectionChanged"/>
+        <ComboBox x:Name="ComPortcomboBox" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComPortcomboBox_SelectionChanged" SnapsToDevicePixels="True"/>
         <TextBlock x:Name="ComTextBlock" HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="COM Port:" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.0,0.0"/>
         <Image x:Name="Fractal" Margin="10,43,10,10" Width="1024" Height ="768" MinWidth="1024" MinHeight="768"/>
+        <TextBox x:Name="X0" HorizontalAlignment="Left" Height="22" Margin="160,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
+        <TextBlock x:Name="ComTextBlock_Copy" HorizontalAlignment="Left" Margin="160,3,0,0" TextWrapping="Wrap" Text="Upper left X:" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.0,0.0"/>
+        <TextBox x:Name="X1" HorizontalAlignment="Left" Height="22" Margin="331,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
+        <TextBlock x:Name="ComTextBlock_Copy1" HorizontalAlignment="Left" Margin="331,3,0,0" TextWrapping="Wrap" Text="Upper Right X:" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.0,0.0"/>
+        <TextBlock x:Name="ComTextBlock_Copy2" HorizontalAlignment="Left" Margin="506,3,0,0" TextWrapping="Wrap" Text="Top Y:" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.0,0.0"/>
+        <TextBox x:Name="Y0" HorizontalAlignment="Left" Height="22" Margin="506,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
+        <Button x:Name="buttonGo" Content="Go" HorizontalAlignment="Left" Height="22" Margin="680,28,0,0" VerticalAlignment="Top" Width="55" SnapsToDevicePixels="True"/>
+        <Button x:Name="buttonDown" HorizontalAlignment="Left" Margin="782,46,0,0" VerticalAlignment="Top" Width="20" FontFamily="Wingdings" Content="ò" TextOptions.TextFormattingMode="Display" SnapsToDevicePixels="True"/>
+        <Button x:Name="buttonUp" HorizontalAlignment="Left" Margin="782,14,0,0" VerticalAlignment="Top" Width="20" FontFamily="Wingdings" Content="ñ" TextOptions.TextFormattingMode="Display" SnapsToDevicePixels="True"/>
+        <Button x:Name="buttonRight" HorizontalAlignment="Left" Margin="807,31,0,0" VerticalAlignment="Top" Width="20" FontFamily="Wingdings" Content="ð" TextOptions.TextFormattingMode="Display" RenderTransformOrigin="0.517,0.404" SnapsToDevicePixels="True"/>
+        <Button x:Name="buttonRight_Copy" HorizontalAlignment="Left" Margin="758,31,0,0" VerticalAlignment="Top" Width="20" FontFamily="Wingdings" Content="ï" TextOptions.TextFormattingMode="Display" RenderTransformOrigin="0.517,0.404" SnapsToDevicePixels="True"/>
+        <Button x:Name="buttonZoom" Content="Zoom" HorizontalAlignment="Left" Height="22" Margin="850,28,0,0" VerticalAlignment="Top" Width="55" SnapsToDevicePixels="True"/>
     </Grid>
 </Window>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="DEBUG" key="org.eclipse.cdt.utils.ui.controls.FileListControl"/>
+	<item value="../../standalone_bsp_0/microblaze_0/include" key="org.eclipse.cdt.utils.ui.controls.FileListControl"/>
 	<item value="" key="LastUsedSourceTemplate"/>
 	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
 		<item value="398" key="DIALOG_WIDTH"/>
