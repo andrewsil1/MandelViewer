@@ -1,0 +1,9 @@
+/*
+ * uartfuncs.h
+ *
+ *  Created on: Jan 30, 2019
+ *      Author: AndrewSi
+ */
+
+/************************** Type Definitions    ******************************/
+#define INTC			XIntc

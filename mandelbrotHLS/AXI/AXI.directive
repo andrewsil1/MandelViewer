@@ -1,0 +1,62 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="calc" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="mem" positionalBoolean="4"/>
+                <option name="cyclic" value="" positionalBoolean="type"/>
+                <option name="factor" value="4"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="calc" label="x_for" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="skip_exit_check" value="" positionalBoolean="1"/>
+                <option name="factor" value="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="calc" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="depth" value="7500"/>
+                <option name="port" value="buf" positionalBoolean="4"/>
+                <option name="offset" value="off"/>
+            </pragma>
+        </directive>
+        <directive functionName="calc" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+                <option name="bundle" value="in_parms"/>
+            </pragma>
+        </directive>
+        <directive functionName="calc" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="X0" positionalBoolean="4"/>
+                <option name="bundle" value="in_parms"/>
+            </pragma>
+        </directive>
+        <directive functionName="calc" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="Y0" positionalBoolean="4"/>
+                <option name="bundle" value="in_parms"/>
+            </pragma>
+        </directive>
+        <directive functionName="calc" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="X1" positionalBoolean="4"/>
+                <option name="bundle" value="in_parms"/>
+            </pragma>
+        </directive>
+        <directive functionName="calc" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="width" positionalBoolean="4"/>
+                <option name="bundle" value="in_parms"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

@@ -1,0 +1,16 @@
+/*
+ * uartfuncs.h
+ *
+ *  Created on: Jan 30, 2019
+ *      Author: AndrewSi
+ */
+
+/************************** Type Definitions    ******************************/
+#define INTC			XIntc
+#define INTC_HANDLER	XIntc_InterruptHandler
+
+/************************** Function prototypes ******************************/
+void UartNs550IntrHandler(void *CallBackRef, u32 Event, unsigned int EventData);
+static int UartNs550SetupIntrSystem(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr,	u16 UartIntrId);
+static void UartNs550DisableIntrSystem(INTC *IntcInstancePtr, u16 UartIntrId);
+

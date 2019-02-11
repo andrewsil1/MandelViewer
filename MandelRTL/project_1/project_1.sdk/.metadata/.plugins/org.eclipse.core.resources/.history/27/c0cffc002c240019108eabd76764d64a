@@ -1,0 +1,437 @@
+//NAME:
+//  main.c
+//
+//PURPOSE:
+//  This C file is meant to be built with the Xilinx SDK and run as an
+//  ELF file on a Microblaze processor.
+//
+//AUTHOR:
+//  Lance Simms
+//  Note: Code uses Xilinx examples included with Vivado.
+//
+//DATE:
+//  01/09/17
+//
+/***************************** Include Files *********************************/
+
+#include "xparameters.h"
+#include <xil_printf.h>
+#include <climits>
+#include <stdio.h>
+#include "xil_exception.h"
+#include "xuartns550.h"
+#include "xintc.h"
+#include "xgpio_l.h"
+#include "psram_ip.h"
+#include "xcalc.h"
+#include "microblaze_sleep.h"
+#include "xintc.h"
+
+/************************** Type Definitions    ******************************/
+#define INTC			XIntc
+#define INTC_HANDLER	XIntc_InterruptHandler
+
+/************************** Constant Definitions *****************************/
+
+/*
+ * The following constants map to the XPAR parameters created in the
+ * xparameters.h file. They are defined here such that a user can easily
+ * change all the needed parameters in one place.
+ */
+#define UART_DEVICE_ID			XPAR_UARTNS550_0_DEVICE_ID
+#define UART_IRPT_INTR			XPAR_INTC_0_UARTNS550_0_VEC_ID
+#define UART_BASE				XPAR_UARTNS550_0_BASEADDR
+#define UART_CLOCK				XPAR_AXI_UART16550_0_CLOCK_FREQ_HZ
+#define INTC_DEVICE_ID          XPAR_INTC_0_DEVICE_ID
+#define PSRAM_BASE				XPAR_PSRAM_IP_0_S00_AXI_BASEADDR
+#define PSRAM_END				XPAR_PSRAM_IP_0_S00_AXI_HIGHADDR
+#define CALC_DEVICE_ID			XPAR_CALC_0_DEVICE_ID
+//#define GPIO_REG_BASEADDR		0x40000000
+
+
+/*
+ * The following constant controls the length of the buffers to be sent
+ * and received with the Uart device.
+ */
+#define TEST_BUFFER_SIZE        500
+#define LED_CHANNEL				1
+
+/************************** Function Prototypes ******************************/
+
+int UartNS550IntrExample(INTC *IntcInstancePtr,	XUartNs550 *UartInstancePtr, u16 UartDeviceId, u16 UartIntrId);
+
+void UartNs550IntrHandler(void *CallBackRef, u32 Event, unsigned int EventData);
+
+static int UartNs550SetupIntrSystem(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr,	u16 UartIntrId);
+
+static void UartNs550DisableIntrSystem(INTC *IntcInstancePtr, u16 UartIntrId);
+
+void crc32(const void *data, size_t n_bytes, uint32_t* crc);
+
+//static int GpioOutputExample(u32 LED_Value);
+
+/************************** Variable Definitions *****************************/
+
+ XUartNs550 UartNs550Instance;	 /* Instance of the UART Device */
+ INTC IntcInstance;				 /* Instance of the Interrupt Controller */
+ XIntc InterruptController;      /* The instance of the Interrupt Controller */
+ XCalc Calc;					 /* The instance of the Mandelbrot Calc device */
+ XCalc_Config *Calc_Cfg;		 /* The instance of the Calc config */
+
+ /*
+  * The following buffers are used in this example to send and receive data
+  * with the Uart.
+  */
+ u8 SendBuffer[TEST_BUFFER_SIZE];
+ u8 ReceiveBuffer[TEST_BUFFER_SIZE];
+
+ /* Here are the pointers to the buffer */
+ u8* ReceiveBufferPtr = &ReceiveBuffer[0];
+ u8* CommandPtr       = &ReceiveBuffer[0];
+
+ /*
+  * The following counters are used to determine when the entire buffer has
+  * been sent and received.
+  */
+ static volatile int TotalReceivedCount;
+ static volatile int TotalSentCount;
+ static volatile int TotalErrorCount;
+
+ // Coordinates for Mandelbrot set calculation to pass to the hardware - Upper left X/Y, Upper right X.
+ u64 X0, X1, Y0;
+ u16 WIDTH = 1024;  // Hardware supports up to 1920 wide. Do not exceed.
+ u16 HEIGHT = WIDTH * 3 / 4;
+
+ // For the serial port...
+ u16 Options;
+ u8 Errors;
+
+ void printmem() {
+		u16* buffer = (u16*)PSRAM_BASE;
+		for (int y = 0; y < HEIGHT; y++) {
+			for (int x = 0; x < WIDTH; x++) {
+				xil_printf("%d ",*buffer++);
+			}
+			xil_printf("\r");
+		}
+ }
+
+int main()
+{
+
+	//Variable definitions
+	int Status=0;
+
+	Status = UartNS550IntrExample(&IntcInstance, &UartNs550Instance, UART_DEVICE_ID, UART_IRPT_INTR);
+
+	if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+	return Status;
+}
+
+int UartNS550IntrExample(INTC *IntcInstancePtr,	XUartNs550 *UartInstancePtr, u16 UartDeviceId, u16 UartIntrId)
+{
+	int Status;
+	u16 Options;
+
+    //Set up the UART and configure the interrupt handler for bytes in RX buffer
+	Status = XUartNs550_Initialize(UartInstancePtr, UartDeviceId);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+	/*
+	 * Connect the UART to the interrupt subsystem such that interrupts can
+	 * occur. This function is application specific.
+	 */
+	Status = UartNs550SetupIntrSystem(IntcInstancePtr, UartInstancePtr, UartIntrId);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Setup the handlers for the UART that will be called from the
+	 * interrupt context when data has been sent and received, specify a
+	 * pointer to the UART driver instance as the callback reference so
+	 * the handlers are able to access the instance data.
+	 */
+	XUartNs550_SetHandler(UartInstancePtr, UartNs550IntrHandler, UartInstancePtr);
+
+	/*
+	 * Enable the interrupt of the UART so interrupts will occur, and keep the
+	 * FIFOs enabled.
+	 */
+	Options = XUN_OPTION_DATA_INTR | XUN_OPTION_FIFOS_ENABLE;
+	XUartNs550_SetOptions(UartInstancePtr, Options);
+
+	// Change the baud rate of the UART to 1Mbps, and indicate that incoming AXI clock is 100MHz.
+	XUartNs550_SetBaud(UART_BASE, 100000000U, UART_CLOCK);
+
+#ifdef DEBUG
+	//Fill 16MB empty memory with a recognizable pattern.
+	xil_printf("Initialize memory\r");
+	for (u32* x = (u32 *)PSRAM_BASE; x <= (u32 *)PSRAM_END - 1; x++) {
+		 *x = 0xDEADBEEF;
+	}
+#endif
+
+	Status = XCalc_Initialize(&Calc, CALC_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+#ifdef DEBUG
+		xil_printf("Failed to initialize Calc IP\r");
+#endif
+		return XST_FAILURE;
+	}
+
+	while (!XCalc_IsIdle(&Calc)); // Wait for IP to be Idle
+
+#ifdef DEBUG
+	xil_printf("Calc IP is ready.\r");
+#endif
+
+	/*	The set goes from -2 to 2 on the X axis, and -1 to 1 on the Y axis.
+		Pick a 4:3 window specified by Top Left X/Y coordinate, Top Right X value. The rest is calculated.
+		Values are fixed point: 5 MSB bits for sign and integer, remainder for fractional portion.
+	*/
+	X0 = 0xF000000000000000ULL;//-2;
+	X1 = 0x1000000000000000ULL;//2;
+	Y0 = 0x0800000000000000ULL;//1;
+
+	XCalc_Set_X0_V(&Calc, X0);
+	XCalc_Set_X1_V(&Calc, X1);
+	XCalc_Set_Y0_V(&Calc, Y0);
+	XCalc_Set_width_V(&Calc, WIDTH);
+    XCalc_Start(&Calc);
+
+    // Wait for the full image to iterate.
+    while (!XCalc_IsDone(&Calc)) {};
+
+#ifdef DEBUG
+    xil_printf("Calc IP is done.\r");
+#endif
+
+    // Send the contents of image memory to the serial port.
+    TotalSentCount = 0;
+    int TotalToSend = HEIGHT * WIDTH * sizeof(u16);
+    XUartNs550_Send(UartInstancePtr, (u8 *) PSRAM_BASE, TotalToSend);
+
+    while (TotalSentCount != TotalToSend) {
+    	usleep_MB(250);
+    }
+
+#ifdef DEBUG
+    xil_printf("Buffer completed: %d sent\r",TotalSentCount);
+#endif
+    //printmem();
+
+    return Status;
+
+}
+
+/*****************************************************************************/
+/**
+*
+* This function does a minimal test on the GPIO device configured as OUTPUT.
+*
+* @param	None.
+*
+* @return	- XST_SUCCESS if the example has completed successfully.
+*			- XST_FAILURE if the example has failed.
+*
+* @note		None.
+*
+****************************************************************************/
+
+//static int GpioOutputExample(u32 LED_Value)
+//{
+//
+//	//Change the value of the LED accordingly
+//	if (LED_Value == 0xFF){
+//      xil_printf("GPIO LED is off, turning on!\r");
+//	} else if (LED_Value == 0x00){
+//	  xil_printf("GPIO LED is on, turning off!\r");
+//	} else {
+//	  xil_printf("Programming LED with ASCII representation of : %c\r", LED_Value);
+//	}
+//
+//	// Set the LED to the requested state
+//	XGpio_WriteReg((GPIO_REG_BASEADDR),
+//		  ((LED_CHANNEL - 1) * XGPIO_CHAN_OFFSET) +
+//		  XGPIO_DATA_OFFSET, LED_Value);
+//
+//	// Return
+//	return XST_SUCCESS;
+//
+//}
+
+
+	/*****************************************************************************/
+	/**
+	*
+	* This function is the handler which performs processing to handle data events
+	* from the UartNs550.  It is called from an interrupt context such that the
+	* amount of processing performed should be minimized.
+	*
+	* This handler provides an example of how to handle data for the UART and
+	* is application specific.
+	*
+	* @param	CallBackRef contains a callback reference from the driver,
+	*		in thiscase it is the instance pointer for the UART driver.
+	* @param	Event contains the specific kind of event that has occurred.
+	* @param	EventData contains the number of bytes sent or received for sent
+	*		and receive events.
+	*
+	* @return	None.
+	*
+	* @note		None.
+	*
+	*******************************************************************************/
+
+	void UartNs550IntrHandler(void *CallBackRef, u32 Event, unsigned int EventData)
+	{
+		XUartNs550 *UartNs550Ptr = (XUartNs550 *)CallBackRef;
+
+		/*
+		 * All of the data has been sent.
+		 */
+		if (Event == XUN_EVENT_SENT_DATA) {
+			TotalSentCount = EventData;
+		}
+
+		/*
+		 * All of the data has been received.
+		 */
+		if (Event == XUN_EVENT_RECV_DATA) {
+			TotalReceivedCount = EventData;
+		}
+
+		/*
+		 * Data was received, but not the expected number of bytes, a
+		 * timeout just indicates the data stopped for 4 character times.
+		 */
+		if (Event == XUN_EVENT_RECV_TIMEOUT) {
+			TotalReceivedCount = EventData;
+		}
+
+		/*
+		 * Data was received with an error, keep the data but determine
+		 * what kind of errors occurred.
+		 */
+		if (Event == XUN_EVENT_RECV_ERROR) {
+			TotalReceivedCount = EventData;
+			TotalErrorCount++;
+			Errors = XUartNs550_GetLastErrors(UartNs550Ptr);
+		}
+	}
+
+	/******************************************************************************/
+	/**
+	*
+	* This function setups the interrupt system such that interrupts can occur
+	* for the UART.  This function is application specific since the actual
+	* system may or may not have an interrupt controller.  The UART could be
+	* directly connected to a processor without an interrupt controller.  The
+	* user should modify this function to fit the application.
+	*
+	* @param	IntcInstancePtr is a pointer to the instance of the Interrupt
+	*		Controller.
+	* @param	UartInstancePtr is a pointer to the instance of the UART.
+	* @param	UartIntrId is the interrupt Id and is typically
+	*		XPAR_<INTC_instance>_<UARTNS550_instance>_VEC_ID value from
+	*		xparameters.h.
+	*
+	* @return	XST_SUCCESS if successful, otherwise XST_FAILURE.
+	*
+	* @note		None.
+	*
+	*******************************************************************************/
+	static int UartNs550SetupIntrSystem(INTC *IntcInstancePtr,
+						XUartNs550 *UartInstancePtr,
+						u16 UartIntrId)
+	{
+		int Status;
+		/*
+		 * Initialize the interrupt controller driver so that it is ready
+		 * to use.
+		 */
+		Status = XIntc_Initialize(IntcInstancePtr, INTC_DEVICE_ID);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+		/*
+		 * Connect a device driver handler that will be called when an interrupt
+		 * for the device occurs, the device driver handler performs the
+		 * specific interrupt processing for the device.
+		 */
+		Status = XIntc_Connect(IntcInstancePtr, UartIntrId,
+				   (XInterruptHandler)XUartNs550_InterruptHandler,
+				   (void *)UartInstancePtr);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+		/*
+		 * Start the interrupt controller such that interrupts are enabled for
+		 * all devices that cause interrupts, specific real mode so that
+		 * the UART can cause interrupts thru the interrupt controller.
+		 */
+		Status = XIntc_Start(IntcInstancePtr, XIN_REAL_MODE);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+		/*
+		 * Enable the interrupt for the UartNs550.
+		 */
+		XIntc_Enable(IntcInstancePtr, UartIntrId);
+
+		/*
+		 * Initialize the exception table.
+		 */
+		Xil_ExceptionInit();
+
+		/*
+		 * Register the interrupt controller handler with the exception table.
+		 */
+		Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+				 (Xil_ExceptionHandler)INTC_HANDLER,
+				 IntcInstancePtr);
+
+		/*
+		 * Enable exceptions.
+		 */
+		Xil_ExceptionEnable();
+
+		return XST_SUCCESS;
+	}
+
+
+	/*****************************************************************************/
+	/**
+	*
+	* This function disables the interrupts that occur for the UartNs550 device.
+	*
+	* @param	IntcInstancePtr is the pointer to the instance of the Interrupt
+	*		Controller.
+	* @param	UartIntrId is the interrupt Id and is typically
+	*		XPAR_<INTC_instance>_<UARTNS550_instance>_VEC_ID
+	*		value from xparameters.h.
+	*
+	* @return	None.
+	*
+	* @note		None.
+	*
+	******************************************************************************/
+	static void UartNs550DisableIntrSystem(INTC *IntcInstancePtr, u16 UartIntrId)
+	{
+
+		/*
+		 * Disconnect and disable the interrupt for the UartNs550 device.
+		 */
+			XIntc_Disconnect(IntcInstancePtr, UartIntrId);
+
+	}
+

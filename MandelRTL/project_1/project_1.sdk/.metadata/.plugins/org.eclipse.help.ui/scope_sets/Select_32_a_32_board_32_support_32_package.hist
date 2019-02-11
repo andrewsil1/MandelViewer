@@ -1,0 +1,4 @@
+#Wed Jan 02 20:35:04 PST 2019
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=Select a board support package
