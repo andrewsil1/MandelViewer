@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: QuickSilver:hls:calc:1.0
--- IP Revision: 1902102243
+-- IP Revision: 1902141545
 
 -- The following code must appear in the VHDL architecture header.
 

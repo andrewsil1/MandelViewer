@@ -13,8 +13,9 @@ bool pretest(real x, real y) {
     real y2 = y * y;
     real x_1 = x - (real) 0.25;
     real q = x_1 * x_1 + y2;
+    real xp1 = x + 1;
 
-    if ((q * (q + (x_1)) <= (y2 / 4) || (x + 1) * (x + 1) + y2 <= (real) 0.0625))
+    if ((q * (q + (x_1)) <= (y2 * (real) 0.25) || xp1 * xp1 + y2 <= (real) 0.0625))
     {
         #ifndef __SYNTHESIS__
             printf("Inside main set cardioid or bulb at ");

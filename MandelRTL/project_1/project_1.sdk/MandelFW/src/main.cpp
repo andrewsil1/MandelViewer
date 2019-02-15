@@ -53,7 +53,7 @@
 #define FRAC_BITS				35
 #define BAUD_RATE				2000000U
 #define LED_CHANNEL				1
-#define	CHUNK_SIZE				8192 //Serial packet chunks for sending image data
+#define	CHUNK_SIZE				4096 //Serial packet chunks for sending image data
 
 /************************** Function Prototypes ******************************/
 
