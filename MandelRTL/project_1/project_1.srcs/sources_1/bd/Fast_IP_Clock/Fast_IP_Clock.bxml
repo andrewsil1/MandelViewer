@@ -136,7 +136,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\Fast_IP_Clock_microblaze_0_axi_periph_1\Fast_IP_Clock_microblaze_0_axi_periph_1.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

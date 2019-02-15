@@ -75,15 +75,14 @@
                 _serialPort.WriteTimeout = 1000;
 
                 _serialPort.Open();
-                _serialPort.DiscardInBuffer();
+                WaitForReady(_serialPort);
 
                 FixedPoint fp = new FixedPoint(40, 35);
                 SendCommand(_serialPort, crc32, fp, "A", -2.0);
                 SendCommand(_serialPort, crc32, fp, "B", 1.0);
                 SendCommand(_serialPort, crc32, fp, "C", 1.25);
 
-                WaitForReady();
-                _serialPort.DiscardInBuffer();
+                WaitForReady(_serialPort);
                 _serialPort.Write("G");
 
                 int size = 65536;
@@ -150,8 +149,8 @@
             byte[] outBuf = new byte[buf.Length];
             buf.Seek(0, 0);
             buf.Read(outBuf, 0, (int)buf.Length);
-            WaitForReady();
-            _serialPort.Write(outBuf, 0, outBuf.Length);
+            WaitForReady(serialPort);
+            serialPort.Write(outBuf, 0, outBuf.Length);
         }
 
         private byte[] GetAscii(string str)
@@ -160,14 +159,15 @@
             return Encoding.Convert(Encoding.Unicode, Encoding.ASCII, unicodeBytes);
         }
 
-        private static void WaitForReady()
+        private static void WaitForReady(SerialPort serialPort)
         {
+            serialPort.DiscardInBuffer();
             string prompt = string.Empty;
             do
             {
                 try
                 {
-                    prompt = _serialPort.ReadLine();
+                    prompt = serialPort.ReadLine();
                 }
                 #pragma warning disable CS0168 // Variable is declared but never used
                 catch (TimeoutException e)
