@@ -75,13 +75,14 @@
                 _serialPort.WriteTimeout = 1000;
 
                 _serialPort.Open();
-                WaitForReady(_serialPort);
-
                 FixedPoint fp = new FixedPoint(40, 35);
-                SendCommand(_serialPort, crc32, fp, "A", -2.0);
-                SendCommand(_serialPort, crc32, fp, "B", 1.0);
-                SendCommand(_serialPort, crc32, fp, "C", 1.25);
 
+                WaitForReady(_serialPort);
+                SendCommand(_serialPort, crc32, fp, "A", -2.0);
+                WaitForReady(_serialPort);
+                SendCommand(_serialPort, crc32, fp, "B", 1.0);
+                WaitForReady(_serialPort);
+                SendCommand(_serialPort, crc32, fp, "C", 1.25);
                 WaitForReady(_serialPort);
                 _serialPort.Write("G");
 
@@ -149,7 +150,6 @@
             byte[] outBuf = new byte[buf.Length];
             buf.Seek(0, 0);
             buf.Read(outBuf, 0, (int)buf.Length);
-            WaitForReady(serialPort);
             serialPort.Write(outBuf, 0, outBuf.Length);
         }
 
@@ -161,7 +161,6 @@
 
         private static void WaitForReady(SerialPort serialPort)
         {
-            serialPort.DiscardInBuffer();
             string prompt = string.Empty;
             do
             {

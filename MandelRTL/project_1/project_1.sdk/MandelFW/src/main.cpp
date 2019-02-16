@@ -1,17 +1,4 @@
-//NAME:
-//  main.c
-//
-//PURPOSE:
-//  This C file is meant to be built with the Xilinx SDK and run as an
-//  ELF file on a Microblaze processor.
-//
-//AUTHOR:
-//  Lance Simms
-//  Note: Code uses Xilinx examples included with Vivado.
-//
-//DATE:
-//  01/09/17
-//
+
 /***************************** Include Files *********************************/
 
 #include "xparameters.h"
@@ -103,8 +90,9 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
 	static char SendStat[] = "@\n";
 	ReceiveBufferPtr[0] = 0;
 
-	//while (XUartNs550_IsSending(UartInstancePtr)) {}
+
 	XUartNs550_Send(UartInstancePtr, (u8 *)SendStat, 2);
+	while (XUartNs550_IsSending(UartInstancePtr)) {}
 
 	//Wait for an incoming character
 	do {
@@ -188,7 +176,7 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
     while (!XCalc_IsDone(&Calc)) {};
 
  #ifdef DEBUG
-    xil_printf("Calc IP is done.\r\n");
+    xil_printf("Calc IP is done, returning data.\r\n");
  #endif
 
     // Send the contents of image memory to the serial port.
@@ -271,18 +259,23 @@ int CalcMandelbrot(INTC *IntcInstancePtr,	XUartNs550 *UartInstancePtr, u16 UartD
 
 		switch (ReceiveBuffer[0]) {
 			case 'G':
+				xil_printf("Go!\r\n");
 				StartCalc(UartInstancePtr);
 				break;
 			case 'A' :
+				xil_printf("Got A\r\n");
 				X0 = GetParam(UartInstancePtr, ReceiveBufferPtr);
 				break;
 			case 'B' :
+				xil_printf("Got B\r\n");
 				X1 = GetParam(UartInstancePtr, ReceiveBufferPtr);
 				break;
 			case 'C' :
+				xil_printf("Got C\r\n");
 				Y0 = GetParam(UartInstancePtr, ReceiveBufferPtr);
 				break;
 			case 'X' :
+				xil_printf("Got X\r\n");
 				quit = true;
 				break;
 		}
