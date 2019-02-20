@@ -69,22 +69,22 @@
                 _serialPort.Parity = Parity.None;
                 _serialPort.StopBits = StopBits.One;
                 _serialPort.Handshake = Handshake.None;
-                _serialPort.ReadBufferSize = (int)this.Fractal.Height * (int)this.Fractal.Width * sizeof(ushort);
+                _serialPort.ReadBufferSize = 1 << 17;
 
                 // Set the read/write timeouts
-                _serialPort.ReadTimeout = 5000;
-                _serialPort.WriteTimeout = 5000;
+                _serialPort.ReadTimeout = 1000;
+                _serialPort.WriteTimeout = 1000;
 
                 _serialPort.Open();
                 FixedPoint fp = new FixedPoint(40, 35);
 
-                WaitForReady(_serialPort);
-                SendCommand(_serialPort, crc32, fp, "A", -2.0);
-                WaitForReady(_serialPort);
-                SendCommand(_serialPort, crc32, fp, "B", 1.0);
-                WaitForReady(_serialPort);
-                SendCommand(_serialPort, crc32, fp, "C", 1.25);
-                WaitForReady(_serialPort);
+                WaitForReady();
+                SendCommand(crc32, fp, "A", -2.0);
+                WaitForReady();
+                SendCommand(crc32, fp, "B", 1.0);
+                WaitForReady();
+                SendCommand(crc32, fp, "C", 1.25);
+                WaitForReady();
                 _serialPort.Write("G");
 
                 int size = 65536; //BUGBUG: Get this size from the FPGA.
@@ -136,13 +136,14 @@
                         Debug.WriteLine(string.Format("Total Bytes read: {0}", payloadBytes));
                     }
                 }
-                WaitForReady(_serialPort);
+
+                /*WaitForReady(_serialPort);
                 _serialPort.Write("X");
-                Debug.WriteLine("Sent Exit command.");
+                Debug.WriteLine("Sent Exit command.");*/
             }
         }
 
-        private void SendCommand(SerialPort serialPort, Crc32 crc32, FixedPoint fp, string command, double sendParam)
+        private void SendCommand(Crc32 crc32, FixedPoint fp, string command, double sendParam)
         {
             MemoryStream buf = new MemoryStream();
             buf.Write(GetAscii(command), 0, 1); //Command
@@ -155,7 +156,7 @@
             byte[] outBuf = new byte[buf.Length];
             buf.Seek(0, 0);
             buf.Read(outBuf, 0, (int)buf.Length);
-            serialPort.Write(outBuf, 0, outBuf.Length);
+            _serialPort.Write(outBuf, 0, outBuf.Length);
             Debug.WriteLine(string.Format("Sent command: {0} CRC:{1:X}",command,crcOut));
         }
 
@@ -165,19 +166,20 @@
             return Encoding.Convert(Encoding.Unicode, Encoding.ASCII, unicodeBytes);
         }
 
-        private static void WaitForReady(SerialPort serialPort)
+        private static void WaitForReady()
         {
             string prompt = string.Empty;
             do
             {
                 try
                 {
-                    prompt = serialPort.ReadLine();
+                    prompt = _serialPort.ReadLine();
                 }
                 #pragma warning disable CS0168 // Variable is declared but never used
                 catch (TimeoutException e)
                 #pragma warning restore CS0168 // Variable is declared but never used
                 {
+                    _serialPort.Write("Z"); //If read timed out, send a little NOP kick to the other end to make it prompt us again.
                 }
 
             } while (!prompt.Equals("@"));
@@ -248,10 +250,11 @@
             _serialPort.Parity = Parity.None;
             _serialPort.StopBits = StopBits.One;
             _serialPort.Handshake = Handshake.None;
+            _serialPort.ReadBufferSize = 1 << 17;
 
             // Set the read/write timeouts
-            _serialPort.ReadTimeout = 5000;
-            _serialPort.WriteTimeout = 5000;
+            _serialPort.ReadTimeout = 1000;
+            _serialPort.WriteTimeout = 1000;
 
             _serialPort.Open();
 

@@ -47,7 +47,7 @@
 
 /************************** Function Prototypes ******************************/
 
-int CalcMandelbrot(INTC *IntcInstancePtr,	XUartNs550 *UartInstancePtr, u16 UartDeviceId, u16 UartIntrId);
+int CalcMandelbrot(XIntc *IntcInstancePtr,	XUartNs550 *UartInstancePtr, u16 UartDeviceId, u16 UartIntrId);
 
 uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
 
@@ -55,18 +55,14 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
 
  XUartNs550 UartNs550Instance;	 /* Instance of the UART Device */
  XUartLite DbgInstance;			 /* Instance of the MDM_1 UartLite for console */
- INTC IntcInstance;				 /* Instance of the Interrupt Controller */
  XIntc InterruptController;      /* The instance of the Interrupt Controller */
  XCalc Calc;					 /* The instance of the Mandelbrot Calc device */
  XCalc_Config *Calc_Cfg;		 /* The instance of the Calc config */
 
  /*
-  * The following buffers are used in this example to send and receive data
-  * with the Uart.
+  * The following buffer is used to receive data with the Uart.
   */
  u8 ReceiveBuffer[TEST_BUFFER_SIZE];
-
- /* Here are the pointers to the buffer */
  u8* ReceiveBufferPtr = &ReceiveBuffer[0];
 
  /*
@@ -208,7 +204,7 @@ int main()
 {
 
 	//Variable definitions
-	int Status = CalcMandelbrot(&IntcInstance, &UartNs550Instance, UART_DEVICE_ID, UART_IRPT_INTR);
+	int Status = CalcMandelbrot(&InterruptController, &UartNs550Instance, UART_DEVICE_ID, UART_IRPT_INTR);
 
 	if (Status != XST_SUCCESS) {
 			return XST_FAILURE;
@@ -218,7 +214,7 @@ int main()
 }
 
 
-int CalcMandelbrot(INTC *IntcInstancePtr,	XUartNs550 *UartInstancePtr, u16 UartDeviceId, u16 UartIntrId)
+int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartDeviceId, u16 UartIntrId)
 {
 	int Status;
 
@@ -302,6 +298,7 @@ int CalcMandelbrot(INTC *IntcInstancePtr,	XUartNs550 *UartInstancePtr, u16 UartD
 #endif
 				quit = true;
 				break;
+			default : break;
 		}
 	} while (!quit);
 
