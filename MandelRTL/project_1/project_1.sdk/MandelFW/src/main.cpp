@@ -2,7 +2,6 @@
 /***************************** Include Files *********************************/
 
 #include "xparameters.h"
-#include <xil_printf.h>
 #include <climits>
 #include <stdio.h>
 #include "xil_exception.h"
@@ -15,6 +14,10 @@
 #include "microblaze_sleep.h"
 #include "uartfuncs.h"
 #include "xuartlite.h"
+
+#ifdef DEBUG
+	#include <xil_printf.h>
+#endif
 
 /************************** Constant Definitions *****************************/
 
@@ -38,9 +41,9 @@
  */
 #define TEST_BUFFER_SIZE        100
 #define FRAC_BITS				35
-#define BAUD_RATE				2000000U
+#define BAUD_RATE				3000000U
 #define LED_CHANNEL				1
-#define	CHUNK_SIZE				4096 //Serial packet chunks for sending image data
+#define	CHUNK_SIZE				32768 //Serial packet chunks for sending image data
 
 /************************** Function Prototypes ******************************/
 
@@ -90,13 +93,13 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
 	static char SendStat[] = "@\n";
 	ReceiveBufferPtr[0] = 0;
 
-
+	//Send "Ready" Prompt
 	XUartNs550_Send(UartInstancePtr, (u8 *)SendStat, 2);
 	while (XUartNs550_IsSending(UartInstancePtr)) {}
 
 	//Wait for an incoming character
+	XUartNs550_Recv(UartInstancePtr, ReceiveBufferPtr, 1);
 	do {
-		XUartNs550_Recv(UartInstancePtr, ReceiveBufferPtr, 1);
 		XUartNs550_GetStats(UartInstancePtr,&Stats);
 	} while (Stats.CharactersReceived == 0);
 
@@ -105,25 +108,34 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
  u64 GetParam (XUartNs550 *UartInstancePtr, u8 *ReceiveBufferPtr) {
 
 	 XUartNs550_ClearStats(UartInstancePtr);
-	 XUartNs550_Recv(UartInstancePtr, ReceiveBufferPtr, 4);
-	 //while (TotalReceivedCount < 4) {}
+	 XUartNs550_Recv(UartInstancePtr, ReceiveBufferPtr, 4);  // Get length of packet
+		do {
+			XUartNs550_GetStats(UartInstancePtr,&Stats);
+		} while (Stats.CharactersReceived < 4);
 
-	 int length = *(u32 *)ReceiveBufferPtr; // Get length of packet
+	 int length = *(u32 *)ReceiveBufferPtr;
 
-	 XUartNs550_Recv(UartInstancePtr, ReceiveBufferPtr, length);
-	 //while (TotalReceivedCount < length) {}
+	 XUartNs550_Recv(UartInstancePtr, ReceiveBufferPtr, length); //Get the bytes
+	 do {
+		 	XUartNs550_GetStats(UartInstancePtr,&Stats);
+	 } while (Stats.CharactersReceived < length);
 
 	 u32 recCRC = rc_crc32(0, (char *)ReceiveBufferPtr, length-4); //Calculate received CRC
 
-	 if (recCRC != *(u32 *) (ReceiveBufferPtr+length-4)) {
+	 if (recCRC != *(u32 *)(ReceiveBufferPtr + length - 4)) {
+#ifdef DEBUG
 		 xil_printf("Received CRC invalid: %H",recCRC);
+#endif
 		 return XST_FAILURE;
 	 }
 
- 	 return (*(u64*)ReceiveBufferPtr);
+ 	 return (*(u64*)ReceiveBufferPtr); //Return the data.
  }
 
  void SerialSend(XUartNs550 *UartInstancePtr, u8 *sendBuffer, u32 TotalToSend) {
+/* This function returns the entire calculated image (iteration) buffer over the serial port
+ * using chunks of a few kilobytes, with a CRC appended at the end to guarantee data integrity.
+ */
 
 	 uint size = CHUNK_SIZE;
 
@@ -175,9 +187,9 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
     // Wait for the full image to iterate.
     while (!XCalc_IsDone(&Calc)) {};
 
- #ifdef DEBUG
+#ifdef DEBUG
     xil_printf("Calc IP is done, returning data.\r\n");
- #endif
+#endif
 
     // Send the contents of image memory to the serial port.
     TotalSentCount = 0;
@@ -186,7 +198,9 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
 
     SerialSend(UartInstancePtr, (u8 *) PSRAM_BASE, TotalToSend);
 
+#ifdef DEBUG
     xil_printf("Send complete, waiting for command.\r\n");
+#endif
 
   }
 
@@ -259,30 +273,42 @@ int CalcMandelbrot(INTC *IntcInstancePtr,	XUartNs550 *UartInstancePtr, u16 UartD
 
 		switch (ReceiveBuffer[0]) {
 			case 'G':
+#ifdef DEBUG
 				xil_printf("Go!\r\n");
+#endif
 				StartCalc(UartInstancePtr);
 				break;
 			case 'A' :
+#ifdef DEBUG
 				xil_printf("Got A\r\n");
+#endif
 				X0 = GetParam(UartInstancePtr, ReceiveBufferPtr);
 				break;
 			case 'B' :
+#ifdef DEBUG
 				xil_printf("Got B\r\n");
+#endif
 				X1 = GetParam(UartInstancePtr, ReceiveBufferPtr);
 				break;
 			case 'C' :
+#ifdef DEBUG
 				xil_printf("Got C\r\n");
+#endif
 				Y0 = GetParam(UartInstancePtr, ReceiveBufferPtr);
 				break;
 			case 'X' :
+#ifdef DEBUG
 				xil_printf("Got X\r\n");
+#endif
 				quit = true;
 				break;
 		}
 	} while (!quit);
 
 	UartNs550DisableIntrSystem(IntcInstancePtr, UartIntrId);
+#ifdef DEBUG
 	xil_printf("Exiting.\r\n");
+#endif
 
     return Status;
 

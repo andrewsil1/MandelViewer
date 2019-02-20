@@ -29,7 +29,7 @@
         static WriteableBitmap writeableBitmap;
         static SerialPort _serialPort;
 
-        const int BAUD_RATE = 2000000;
+        const int BAUD_RATE = 3000000;
 
         public MainWindow()
         {
@@ -134,6 +134,8 @@
                         Debug.Write(String.Format("Total Bytes read: {0}", payloadBytes));
                     }
                 }
+                WaitForReady(_serialPort);
+                _serialPort.Write("X");
             }
         }
 
