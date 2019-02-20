@@ -12,6 +12,7 @@
     using System.IO.Ports;
     using System.Linq;
     using System.Text;
+    using System.Threading;
     using System.Threading.Tasks;
     using System.Windows;
     using System.Windows.Controls;
@@ -71,8 +72,8 @@
                 _serialPort.ReadBufferSize = (int)this.Fractal.Height * (int)this.Fractal.Width * sizeof(ushort);
 
                 // Set the read/write timeouts
-                _serialPort.ReadTimeout = 1000;
-                _serialPort.WriteTimeout = 1000;
+                _serialPort.ReadTimeout = 5000;
+                _serialPort.WriteTimeout = 5000;
 
                 _serialPort.Open();
                 FixedPoint fp = new FixedPoint(40, 35);
@@ -86,21 +87,22 @@
                 WaitForReady(_serialPort);
                 _serialPort.Write("G");
 
-                int size = 65536;
+                int size = 65536; //BUGBUG: Get this size from the FPGA.
                 int payloadBytes = 0;
                 byte[] buffer = new byte[size];
                 bool done = false;
 
                 int y = 0;
                 int x = 0;
-                while (!done)
+                while (!done) //TODO: Turn this into a fixed loop by having FPGA send us the total incoming number of packets first.
                 {
                     while (_serialPort.BytesToRead < 4) { } //TODO: Properly #define the consts here.
 
+                    //How big is the incoming packet?
                     _serialPort.Read(buffer, 0, 4);
                     int packetSize = BitConverter.ToInt32(buffer, 0);
 
-                    while (_serialPort.BytesToRead < packetSize) { } //TODO: Properly #define the consts here.
+                    while (_serialPort.BytesToRead < packetSize) { Thread.Sleep(50); } //TODO: Properly #define the consts here.
                     _serialPort.Read(buffer, 0, packetSize);
 
                     string s = System.Text.Encoding.UTF8.GetString(buffer, 0, 4);
@@ -131,11 +133,12 @@
                     else
                     {
                         done = true;
-                        Debug.Write(String.Format("Total Bytes read: {0}", payloadBytes));
+                        Debug.WriteLine(string.Format("Total Bytes read: {0}", payloadBytes));
                     }
                 }
                 WaitForReady(_serialPort);
                 _serialPort.Write("X");
+                Debug.WriteLine("Sent Exit command.");
             }
         }
 
@@ -153,6 +156,7 @@
             buf.Seek(0, 0);
             buf.Read(outBuf, 0, (int)buf.Length);
             serialPort.Write(outBuf, 0, outBuf.Length);
+            Debug.WriteLine(string.Format("Sent command: {0} CRC:{1:X}",command,crcOut));
         }
 
         private byte[] GetAscii(string str)
@@ -177,6 +181,7 @@
                 }
 
             } while (!prompt.Equals("@"));
+            Debug.WriteLine("Received Ready Prompt.");
         }
 
         static int GetColor(UInt16 n)
@@ -245,8 +250,8 @@
             _serialPort.Handshake = Handshake.None;
 
             // Set the read/write timeouts
-            _serialPort.ReadTimeout = 500;
-            _serialPort.WriteTimeout = 500;
+            _serialPort.ReadTimeout = 5000;
+            _serialPort.WriteTimeout = 5000;
 
             _serialPort.Open();
 
