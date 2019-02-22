@@ -35,6 +35,29 @@
         public MainWindow()
         {
             InitializeComponent();
+
+            ImageParams imageParams = new ImageParams(new FixedPoint(40,35,-2), new FixedPoint(40,35,1), new FixedPoint(40,35,1.25), (Int32)Fractal.Width); //Basic Mandelbrot image.
+            Binding X0Binding = new Binding("X0")
+            {
+                Source = imageParams,
+                Converter = imageParams.X0
+            };
+            X0.SetBinding(TextBox.TextProperty, X0Binding);
+
+            Binding X1Binding = new Binding("X1")
+            {
+                Source = imageParams,
+                Converter = imageParams.X1
+            };
+            X1.SetBinding(TextBox.TextProperty, X1Binding);
+
+            Binding Y0Binding = new Binding("Y0")
+            {
+                Source = imageParams,
+                Converter = imageParams.Y0
+            };
+            Y0.SetBinding(TextBox.TextProperty, Y0Binding);
+
             Crc32 crc32 = new Crc32();
             _serialPort = new SerialPort();
             using (_serialPort as SerialPort)
@@ -79,11 +102,11 @@
                 FixedPoint fp = new FixedPoint(40, 35);
 
                 WaitForReady();
-                SendCommand(crc32, fp, "A", -2.0);
+                SendCommand(crc32, fp, "A", imageParams.X0);
                 WaitForReady();
-                SendCommand(crc32, fp, "B", 1.0);
+                SendCommand(crc32, fp, "B", imageParams.X1);
                 WaitForReady();
-                SendCommand(crc32, fp, "C", 1.25);
+                SendCommand(crc32, fp, "C", imageParams.Y0);
                 WaitForReady();
                 _serialPort.Write("G");
 
@@ -143,12 +166,12 @@
             }
         }
 
-        private void SendCommand(Crc32 crc32, FixedPoint fp, string command, double sendParam)
+        private void SendCommand(Crc32 crc32, FixedPoint fp, string command, FixedPoint sendParam)
         {
             MemoryStream buf = new MemoryStream();
             buf.Write(GetAscii(command), 0, 1); //Command
             buf.Write(BitConverter.GetBytes((uint)12), 0, sizeof(uint)); //Length of message + CRC
-            byte[] val = BitConverter.GetBytes(fp.Convert(sendParam));
+            byte[] val = BitConverter.GetBytes(sendParam.Value);
             buf.Write(val, 0, val.Length); //X0
             uint crcOut = crc32.Get(val);
             byte[] crcBytes = BitConverter.GetBytes(crcOut);
