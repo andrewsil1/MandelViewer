@@ -164,60 +164,47 @@
             return mapping;
         }
 
-        /* The DrawPixel method updates the WriteableBitmap by using unsafe code to write a pixel into the back buffer.
-         * Must run on the dispatcher thread.
-        */
-        private static void DrawPixel(int column, int row, int pixValue)
-        {
-            try
-            {
-                // Reserve the back buffer for updates.
-                    writeableBitmap.Lock();
-
-                unsafe
-                {
-                    // Get a pointer to the back buffer.
-                    IntPtr pBackBuffer = writeableBitmap.BackBuffer;
-
-                    // Find the address of the pixel to draw.
-                    pBackBuffer += row * writeableBitmap.BackBufferStride;
-                    pBackBuffer += column * 4;
-
-                    // Assign the color data to the pixel.
-                    *(int*)pBackBuffer = pixValue;
-                }
-
-                // Specify the area of the bitmap that changed.
-                    writeableBitmap.AddDirtyRect(new Int32Rect(column, row, 1, 1));
-            }
-            finally
-            {
-                // Release the back buffer and make it available for display.
-                    writeableBitmap.Unlock();
-            }
-        }
-
-        /* Takes an entire CRC-validated chunk of received data and renders it to the screen on the Dispatcher thread.
+        /* Takes an entire CRC-validated chunk of received data and renders it to the screen on the Dispatcher thread,
+         * using unsafe code to write pixels into the back buffer.
          */
         private void DrawPayload(object data)
         {
             Dispatcher.Invoke(() =>
             {
                 byte[] payload = (byte[]) data;
+                
+                // Reserve the back buffer for updates.
+                writeableBitmap.Lock();
 
                 for (int index = 0; index < payload.Length; index += 2)
                 {
-                    DrawPixel(x++, y, GetColor(BitConverter.ToUInt16(payload, index)));
-                    if (x == Fractal.Width)
+                    unsafe
+                    {
+                        // Get a pointer to the back buffer.
+                        IntPtr pBackBuffer = writeableBitmap.BackBuffer;
+
+                        // Find the address of the pixel to draw.
+                        pBackBuffer += y * writeableBitmap.BackBufferStride;
+                        pBackBuffer += (x++) * 4;
+
+                        // Assign the color data to the pixel.
+                        *(int*)pBackBuffer = GetColor(BitConverter.ToUInt16(payload, index));
+                    }
+                   
+                    if (x == (int)Fractal.Width)
                     {
                         x = 0;
+                        writeableBitmap.AddDirtyRect(new Int32Rect(x, y, (int)Fractal.Width, 1));  // Specify the area of the bitmap that changed.
                         y++;
                     }
-                    if (y == Fractal.Height) // This is true only when we start a new image after one has already been drawn.
+                    if (y == (int)Fractal.Height) // This is true only when we start a new image after one has already been drawn.
                     {
                         y = 0;
                     }
                 }
+                
+                // Release the back buffer and make it available for display.
+                writeableBitmap.Unlock();
             });
         }
         #endregion
