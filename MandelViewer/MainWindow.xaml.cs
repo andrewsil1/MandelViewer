@@ -11,6 +11,7 @@
     using System.IO.Ports;
     using System.Text;
     using System.Threading;
+    using System.Threading.Tasks;
     using System.Windows;
     using System.Windows.Automation.Peers;
     using System.Windows.Automation.Provider;
@@ -24,10 +25,18 @@
     {
         static private WriteableBitmap writeableBitmap;
         static private SerialPort _serialPort;
+        static int x, y;
         private ImageParams imageParams;
         private Crc32 crc32;
 
         const int BAUD_RATE = 3000000;
+
+        public delegate void SerialErrorReceivedHandler(object sender, SerialErrorReceivedEventArgs e);
+
+        static void SerialErrorHandler(object sender, SerialErrorReceivedEventArgs e)
+        {
+            Debug.WriteLine(e.EventType.ToString());
+        }
 
         public MainWindow()
         {
@@ -58,6 +67,8 @@
             Y0.SetBinding(TextBox.TextProperty, Y0Binding);
 
             _serialPort = new SerialPort();
+            _serialPort.ErrorReceived += SerialErrorHandler;
+
 
             // Get a list of serial port names and open the first one we find.
             string[] ports = SerialPort.GetPortNames();
@@ -86,13 +97,15 @@
             AutomateGo();
         }
 
+        /* Sends a command to the remote after packaging with message length and CRC.
+         */
         private void SendCommand(Crc32 crc32, string command, FixedPoint sendParam)
         {
             MemoryStream buf = new MemoryStream();
-            buf.Write(GetAscii(command), 0, 1); //Command
-            buf.Write(BitConverter.GetBytes((uint)12), 0, sizeof(uint)); //Length of message + CRC
+            buf.Write(GetAscii(command), 0, 1);                             //Command
+            buf.Write(BitConverter.GetBytes((uint)12), 0, sizeof(uint));    //Length of message is constant: FP5.35 (8) + CRC(4)
             byte[] val = BitConverter.GetBytes(sendParam.Value);
-            buf.Write(val, 0, val.Length); //X0
+            buf.Write(val, 0, val.Length);
             uint crcOut = crc32.Get(val);
             byte[] crcBytes = BitConverter.GetBytes(crcOut);
             buf.Write(crcBytes, 0, crcBytes.Length);
@@ -100,15 +113,19 @@
             buf.Seek(0, 0);
             buf.Read(outBuf, 0, (int)buf.Length);
             _serialPort.Write(outBuf, 0, outBuf.Length);
-            Debug.WriteLine(string.Format("Sent command: {0} CRC:{1:X}",command,crcOut));
+            Debug.WriteLine(string.Format("Sent command: {0} CRC:{1:X}", command, crcOut));
         }
 
+        /* Helper function to turn default Unicode strings into ASCII for serial transmission.
+         */
         private byte[] GetAscii(string str)
         {
             byte[] unicodeBytes = Encoding.Unicode.GetBytes(str);
             return Encoding.Convert(Encoding.Unicode, Encoding.ASCII, unicodeBytes);
         }
 
+        /* Listen to the serial port for a "Ready" prompt.
+         */
         private static void WaitForReady()
         {
             string prompt = string.Empty;
@@ -118,48 +135,44 @@
                 {
                     prompt = _serialPort.ReadLine();
                 }
-                #pragma warning disable CS0168 // Variable is declared but never used
+#pragma warning disable CS0168 // Variable is declared but never used
                 catch (TimeoutException e)
-                #pragma warning restore CS0168 // Variable is declared but never used
+#pragma warning restore CS0168 // Variable is declared but never used
                 {
-                    _serialPort.Write("Z"); //If read timed out, send a little NOP kick to the other end to make it prompt us again.
+                    _serialPort.Write("Z"); //If read timed out, send a little NOP kick to the other end to try to make it prompt us again.
                 }
 
             } while (!prompt.Equals("@"));
             Debug.WriteLine("Received Ready Prompt.");
         }
 
-        static int GetColor(UInt16 n)
+        #region Pixel Colors and Translation
+
+        /* Takes an "N iterations" value from the calculator and translates to a monochromatic brightness value using a Sqrt function to enhance contrast.
+         */
+        private static int GetColor(UInt16 n)
         {
             const int MAX_ITERATIONS = 2000;
-            int mapping = 0x00FFFFFF;
-            if (n <= MAX_ITERATIONS)
+            int mapping = 0;
+            if (n < MAX_ITERATIONS)
             {
-                double quotient = (double)n / (double)MAX_ITERATIONS;
-                int color = Math.Min((int)(Math.Round(quotient * 256)),0xFF);
+                double quotient = Math.Sqrt((double)n / (double)MAX_ITERATIONS);
+                int color = (int)Math.Round(0xFF * quotient);
 
-                if (quotient > 0.5)
-                {
-                    // Close to the mandelbrot set the color changes from green to white
-                    mapping = color << 16 | 0xFF << 8 | color << 0;
-                }
-                else
-                {
-                    // Far away it changes from black to green
-                    mapping = color << 8;
-                }
+                mapping = color << 16 | color << 8 | color;
             }
             return mapping;
         }
 
-        // The DrawPixel method updates the WriteableBitmap by using
-        // unsafe code to write a pixel into the back buffer.
-        static void DrawPixel(int column, int row, int pixValue)
+        /* The DrawPixel method updates the WriteableBitmap by using unsafe code to write a pixel into the back buffer.
+         * Must run on the dispatcher thread.
+        */
+        private static void DrawPixel(int column, int row, int pixValue)
         {
             try
             {
                 // Reserve the back buffer for updates.
-                writeableBitmap.Lock();
+                    writeableBitmap.Lock();
 
                 unsafe
                 {
@@ -175,45 +188,62 @@
                 }
 
                 // Specify the area of the bitmap that changed.
-                writeableBitmap.AddDirtyRect(new Int32Rect(column, row, 1, 1));
+                    writeableBitmap.AddDirtyRect(new Int32Rect(column, row, 1, 1));
             }
             finally
             {
                 // Release the back buffer and make it available for display.
-                writeableBitmap.Unlock();
+                    writeableBitmap.Unlock();
             }
         }
 
-        private void ButtonGo_Click(object sender, RoutedEventArgs e)
+        /* Takes an entire CRC-validated chunk of received data and renders it to the screen on the Dispatcher thread.
+         */
+        private void DrawPayload(object data)
         {
-            this.buttonGo.IsEnabled = false;
-            WaitForReady();
-            SendCommand(crc32, "A", imageParams.X0);
-            WaitForReady();
-            SendCommand(crc32, "B", imageParams.X1);
-            WaitForReady();
-            SendCommand(crc32, "C", imageParams.Y0);
-            WaitForReady();
-            _serialPort.Write("G");
-            Debug.WriteLine("{0:hh:mm:ss.fff}: Calculation launched.", DateTime.Now);
-            this.labelStatus.Content = "Working...";
+            Dispatcher.Invoke(() =>
+            {
+                byte[] payload = (byte[]) data;
 
-            //TODO: Move the receive section into its own thread so the UI is not blocked.
+                for (int index = 0; index < payload.Length; index += 2)
+                {
+                    DrawPixel(x++, y, GetColor(BitConverter.ToUInt16(payload, index)));
+                    if (x == Fractal.Width)
+                    {
+                        x = 0;
+                        y++;
+                    }
+                    if (y == Fractal.Height) // This is true only when we start a new image after one has already been drawn.
+                    {
+                        y = 0;
+                    }
+                }
+            });
+        }
+        #endregion
+
+        /* This is the primary "work" method which waits for the calculation kicked off elsewhere to return data. 
+         * As it comes in, we check the CRC of each packet, and then render it as a background task.
+         */
+        private void DoCalculation(Object stateInfo)
+        {
             int size = 65536; //BUGBUG: Get this size from the FPGA.
             int payloadBytes = 0;
             byte[] buffer = new byte[size];
             bool done = false;
-
-            int y = 0;
-            int x = 0;
             bool firstPacket = true;
+
             while (!done) //TODO: Turn this into a fixed loop by having FPGA send us the total incoming number of packets first.
             {
-                while (_serialPort.BytesToRead < 4) { } //TODO: Properly #define the consts here.
+                while (_serialPort.BytesToRead < 4) { Thread.Sleep(200); } //TODO: Properly #define the consts here.
                 if (firstPacket)
                 {
                     Debug.WriteLine("{0:hh:mm:ss.fff}: Data is returning.", DateTime.Now);
-                    this.labelStatus.Content = "Receiving...";
+                    Dispatcher.Invoke(() =>
+                    {
+                        labelStatus.Content = "Receiving...";
+                    });
+
                 }
                 firstPacket = false;
 
@@ -239,24 +269,48 @@
                         throw new Exception("CRC failure during reception.");
                     }
 
-                    for (int index = 0; index < payload.Length; index += 2)
-                    {
-                        DrawPixel(x++, y, GetColor(BitConverter.ToUInt16(payload, index)));
-                        if (x == Fractal.Width)
-                        {
-                            x = 0;
-                            y++;
-                        }
-                    }
+                    ThreadPool.QueueUserWorkItem(DrawPayload, payload);
                 }
                 else
                 {
                     done = true;
                     Debug.WriteLine(string.Format("{0:hh:mm:ss.fff}: Total Bytes read: {1}", DateTime.Now, payloadBytes));
-                    this.labelStatus.Content = "Ready";
+                    Dispatcher.Invoke(() =>
+                    {
+                        labelStatus.Content = "Ready";
+                        ChangeButtonStates(true);
+                    });
                 }
             }
-            this.buttonGo.IsEnabled = true;
+        }
+
+        /* Allow all of the modal buttons to be enabled/disabled as a group. (Don't allow anyone to press while data is still incoming, for example.)
+         */
+        private void ChangeButtonStates(bool state)
+        {
+            buttonGo.IsEnabled = state;
+            buttonZoom.IsEnabled = state;
+            buttonUp.IsEnabled = state;
+            buttonDown.IsEnabled = state;
+            buttonLeft.IsEnabled = state;
+            buttonRight.IsEnabled = state;
+        }
+
+        private void ButtonGo_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeButtonStates(false);
+            WaitForReady();
+            SendCommand(crc32, "A", imageParams.X0);
+            WaitForReady();
+            SendCommand(crc32, "B", imageParams.X1);
+            WaitForReady();
+            SendCommand(crc32, "C", imageParams.Y0);
+            WaitForReady();
+            _serialPort.Write("G");
+            Debug.WriteLine("{0:hh:mm:ss.fff}: Calculation launched.", DateTime.Now);
+            this.labelStatus.Content = "Working...";
+
+            ThreadPool.QueueUserWorkItem(DoCalculation);
         }
 
 
@@ -341,7 +395,7 @@
             _serialPort.Parity = Parity.None;
             _serialPort.StopBits = StopBits.One;
             _serialPort.Handshake = Handshake.None;
-            _serialPort.ReadBufferSize = 1 << 17; //128K receive buffer
+            _serialPort.ReadBufferSize = 1 << 17; //receive buffer
 
             // Set the read/write timeouts
             _serialPort.ReadTimeout = 1000;
