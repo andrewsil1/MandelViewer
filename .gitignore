@@ -298,3 +298,7 @@ MandelRTL/project_1/vivado.jou
 *.syncinfo.snap
 /MandelRTL/project_1/updatemem.jou
 /MandelRTL/project_1/vivado_90516.backup.jou
+
+*.a
+*.o
+*.elf
