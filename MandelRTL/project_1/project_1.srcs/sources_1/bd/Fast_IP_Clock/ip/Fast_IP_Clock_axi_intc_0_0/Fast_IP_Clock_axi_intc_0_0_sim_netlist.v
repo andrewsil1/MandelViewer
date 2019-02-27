@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Feb 10 20:38:50 2019
+// Date        : Tue Feb 26 15:56:10 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim {C:/Users/andrewsi/OneDrive/Documents/Visual Studio
-//               2017/Projects/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_intc_0_0/Fast_IP_Clock_axi_intc_0_0_sim_netlist.v}
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_intc_0_0/Fast_IP_Clock_axi_intc_0_0_sim_netlist.v
 // Design      : Fast_IP_Clock_axi_intc_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -100,7 +100,7 @@ module Fast_IP_Clock_axi_intc_0_0
   (* C_IRQ_IS_LEVEL = "1" *) 
   (* C_IVAR_RESET_VALUE = "64'b0000000000000000000000000000000000000000000000000000000000010000" *) 
   (* C_KIND_OF_EDGE = "-1" *) 
-  (* C_KIND_OF_INTR = "-7" *) 
+  (* C_KIND_OF_INTR = "-11" *) 
   (* C_KIND_OF_LVL = "-1" *) 
   (* C_MB_CLK_NOT_CONNECTED = "1" *) 
   (* C_NUM_INTR_INPUTS = "2" *) 
@@ -969,7 +969,7 @@ endmodule
 (* C_HAS_ILR = "0" *) (* C_HAS_IPR = "1" *) (* C_HAS_IVR = "1" *) 
 (* C_HAS_SIE = "1" *) (* C_INSTANCE = "Fast_IP_Clock_axi_intc_0_0" *) (* C_IRQ_ACTIVE = "1'b1" *) 
 (* C_IRQ_IS_LEVEL = "1" *) (* C_IVAR_RESET_VALUE = "64'b0000000000000000000000000000000000000000000000000000000000010000" *) (* C_KIND_OF_EDGE = "-1" *) 
-(* C_KIND_OF_INTR = "-7" *) (* C_KIND_OF_LVL = "-1" *) (* C_MB_CLK_NOT_CONNECTED = "1" *) 
+(* C_KIND_OF_INTR = "-11" *) (* C_KIND_OF_LVL = "-1" *) (* C_MB_CLK_NOT_CONNECTED = "1" *) 
 (* C_NUM_INTR_INPUTS = "2" *) (* C_NUM_SW_INTR = "0" *) (* C_NUM_SYNC_FF = "2" *) 
 (* C_S_AXI_ADDR_WIDTH = "9" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* ORIG_REF_NAME = "axi_intc" *) 
 (* hdl = "VHDL" *) (* imp_netlist = "TRUE" *) (* ip_group = "LOGICORE" *) 

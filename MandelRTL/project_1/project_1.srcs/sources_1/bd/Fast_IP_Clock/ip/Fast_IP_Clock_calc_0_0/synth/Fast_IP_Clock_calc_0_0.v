@@ -48,7 +48,7 @@
 
 
 // IP VLNV: QuickSilver:hls:calc:1.0
-// IP Revision: 1902141545
+// IP Revision: 1902260927
 
 (* X_CORE_INFO = "calc,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "Fast_IP_Clock_calc_0_0,calc,{}" *)

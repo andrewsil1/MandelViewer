@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Feb 10 20:38:50 2019
+-- Date        : Tue Feb 26 15:56:10 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {C:/Users/andrewsi/OneDrive/Documents/Visual Studio
---               2017/Projects/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_intc_0_0/Fast_IP_Clock_axi_intc_0_0_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_intc_0_0/Fast_IP_Clock_axi_intc_0_0_sim_netlist.vhdl
 -- Design      : Fast_IP_Clock_axi_intc_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -2461,7 +2461,7 @@ entity Fast_IP_Clock_axi_intc_0_0_axi_intc is
   attribute C_KIND_OF_EDGE : integer;
   attribute C_KIND_OF_EDGE of Fast_IP_Clock_axi_intc_0_0_axi_intc : entity is -1;
   attribute C_KIND_OF_INTR : integer;
-  attribute C_KIND_OF_INTR of Fast_IP_Clock_axi_intc_0_0_axi_intc : entity is -7;
+  attribute C_KIND_OF_INTR of Fast_IP_Clock_axi_intc_0_0_axi_intc : entity is -11;
   attribute C_KIND_OF_LVL : integer;
   attribute C_KIND_OF_LVL of Fast_IP_Clock_axi_intc_0_0_axi_intc : entity is -1;
   attribute C_MB_CLK_NOT_CONNECTED : integer;
@@ -2814,7 +2814,7 @@ architecture STRUCTURE of Fast_IP_Clock_axi_intc_0_0 is
   attribute C_KIND_OF_EDGE : integer;
   attribute C_KIND_OF_EDGE of U0 : label is -1;
   attribute C_KIND_OF_INTR : integer;
-  attribute C_KIND_OF_INTR of U0 : label is -7;
+  attribute C_KIND_OF_INTR of U0 : label is -11;
   attribute C_KIND_OF_LVL : integer;
   attribute C_KIND_OF_LVL of U0 : label is -1;
   attribute C_MB_CLK_NOT_CONNECTED : integer;

@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Feb 10 20:40:00 2019
+-- Date        : Sun Feb 10 20:39:57 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {C:/Users/andrewsi/OneDrive/Documents/Visual Studio
---               2017/Projects/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_xbar_1/Fast_IP_Clock_xbar_1_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim -rename_top Fast_IP_Clock_xbar_1 -prefix
+--               Fast_IP_Clock_xbar_1_ Fast_IP_Clock_xbar_1_sim_netlist.vhdl
 -- Design      : Fast_IP_Clock_xbar_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -100,8 +100,6 @@ entity Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_addr_arbiter is
     \gen_master_slots[0].r_issuing_cnt_reg[0]\ : in STD_LOGIC;
     \gen_arbiter.qual_reg_reg[2]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_addr_arbiter : entity is "axi_crossbar_v2_1_19_addr_arbiter";
 end Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_addr_arbiter;
 
 architecture STRUCTURE of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_addr_arbiter is
@@ -6350,8 +6348,6 @@ entity Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_decerr_slave is
     mi_awvalid_en : in STD_LOGIC;
     \gen_axi.s_axi_rlast_i_reg_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_decerr_slave : entity is "axi_crossbar_v2_1_19_decerr_slave";
 end Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_decerr_slave;
 
 architecture STRUCTURE of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_decerr_slave is
@@ -6925,8 +6921,6 @@ entity Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_splitter is
     aresetn_d : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_splitter : entity is "axi_crossbar_v2_1_19_splitter";
 end Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_splitter;
 
 architecture STRUCTURE of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_splitter is
@@ -7338,8 +7332,6 @@ entity Fast_IP_Clock_xbar_1_axi_data_fifo_v2_1_17_ndeep_srl is
     \gen_single_issue.active_target_enc_reg[0]_0\ : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_xbar_1_axi_data_fifo_v2_1_17_ndeep_srl : entity is "axi_data_fifo_v2_1_17_ndeep_srl";
 end Fast_IP_Clock_xbar_1_axi_data_fifo_v2_1_17_ndeep_srl;
 
 architecture STRUCTURE of Fast_IP_Clock_xbar_1_axi_data_fifo_v2_1_17_ndeep_srl is
@@ -19136,8 +19128,6 @@ entity Fast_IP_Clock_xbar_1_generic_baseblocks_v2_1_0_mux_enc is
     \s_axi_rlast[2]_0\ : in STD_LOGIC;
     st_mr_rlast : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_xbar_1_generic_baseblocks_v2_1_0_mux_enc : entity is "generic_baseblocks_v2_1_0_mux_enc";
 end Fast_IP_Clock_xbar_1_generic_baseblocks_v2_1_0_mux_enc;
 
 architecture STRUCTURE of Fast_IP_Clock_xbar_1_generic_baseblocks_v2_1_0_mux_enc is
@@ -23032,8 +23022,6 @@ entity Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_si_transactor is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     st_mr_rlast : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_si_transactor : entity is "axi_crossbar_v2_1_19_si_transactor";
 end Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_si_transactor;
 
 architecture STRUCTURE of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_si_transactor is
@@ -24775,8 +24763,6 @@ entity Fast_IP_Clock_xbar_1_axi_data_fifo_v2_1_17_axic_reg_srl_fifo is
     \m_axi_wvalid[5]_0\ : in STD_LOGIC;
     m_avalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_xbar_1_axi_data_fifo_v2_1_17_axic_reg_srl_fifo : entity is "axi_data_fifo_v2_1_17_axic_reg_srl_fifo";
 end Fast_IP_Clock_xbar_1_axi_data_fifo_v2_1_17_axic_reg_srl_fifo;
 
 architecture STRUCTURE of Fast_IP_Clock_xbar_1_axi_data_fifo_v2_1_17_axic_reg_srl_fifo is
@@ -31999,8 +31985,6 @@ entity Fast_IP_Clock_xbar_1_axi_register_slice_v2_1_18_axi_register_slice is
     m_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_xbar_1_axi_register_slice_v2_1_18_axi_register_slice : entity is "axi_register_slice_v2_1_18_axi_register_slice";
 end Fast_IP_Clock_xbar_1_axi_register_slice_v2_1_18_axi_register_slice;
 
 architecture STRUCTURE of Fast_IP_Clock_xbar_1_axi_register_slice_v2_1_18_axi_register_slice is
@@ -32884,8 +32868,6 @@ entity Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_wdata_mux is
     \storage_data1_reg[1]\ : in STD_LOGIC;
     sa_wm_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_wdata_mux : entity is "axi_crossbar_v2_1_19_wdata_mux";
 end Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_wdata_mux;
 
 architecture STRUCTURE of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_wdata_mux is
@@ -33391,8 +33373,6 @@ entity Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_wdata_router is
     \m_axi_wvalid[5]_0\ : in STD_LOGIC;
     m_avalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_wdata_router : entity is "axi_crossbar_v2_1_19_wdata_router";
 end Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_wdata_router;
 
 architecture STRUCTURE of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_wdata_router is
@@ -33684,8 +33664,6 @@ entity Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_crossbar is
     m_axi_bvalid : in STD_LOGIC_VECTOR ( 5 downto 0 );
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_crossbar : entity is "axi_crossbar_v2_1_19_crossbar";
 end Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_crossbar;
 
 architecture STRUCTURE of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_crossbar is
@@ -36078,8 +36056,6 @@ entity Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_axi_crossbar : entity is "96'b000000000000000000000000000100000000000000000000000000000010000000000000000000000000000000000001";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_axi_crossbar : entity is "axi_crossbar_v2_1_19_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of Fast_IP_Clock_xbar_1_axi_crossbar_v2_1_19_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;

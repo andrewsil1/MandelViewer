@@ -99,8 +99,8 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
   wire        AXIclk_Fast_IP_Clock_clk_wiz_0_0;
   wire        MBClk_Fast_IP_Clock_clk_wiz_0_0;
   wire        CalcClk_Fast_IP_Clock_clk_wiz_0_0;
-  wire        clk_out4_Fast_IP_Clock_clk_wiz_0_0;
-  wire        clk_out5_Fast_IP_Clock_clk_wiz_0_0;
+  wire        NetClk_Fast_IP_Clock_clk_wiz_0_0;
+  wire        NetClkSkew_Fast_IP_Clock_clk_wiz_0_0;
   wire        clk_out6_Fast_IP_Clock_clk_wiz_0_0;
   wire        clk_out7_Fast_IP_Clock_clk_wiz_0_0;
 

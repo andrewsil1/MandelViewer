@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Thu Feb 14 15:55:53 2019
+-- Date        : Thu Feb 14 15:55:51 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/andrewsi/OneDrive/Documents/VisualStudio2017/Projects/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_cc_1/Fast_IP_Clock_auto_cc_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top Fast_IP_Clock_auto_cc_1 -prefix
+--               Fast_IP_Clock_auto_cc_1_ Fast_IP_Clock_auto_cc_1_stub.vhdl
 -- Design      : Fast_IP_Clock_auto_cc_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

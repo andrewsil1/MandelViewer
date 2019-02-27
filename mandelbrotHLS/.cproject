@@ -167,9 +167,9 @@
                                 								
                                 <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2018.3/win64/tools/systemc/include"/>
                                 								
-                                <listOptionValue builtIn="false" value="C:/Users/andrewsi/Documents"/>
-                                								
                                 <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2018.3/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Users/andrewsi/Documents/GitHub/MandelViewer"/>
                                 								
                                 <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2018.3/win64/tools/auto_cc/include"/>
                                 								
@@ -179,7 +179,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.2031150735" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.2031150735" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.960923813" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						
@@ -345,9 +345,9 @@
                                 								
                                 <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2018.3/win64/tools/systemc/include"/>
                                 								
-                                <listOptionValue builtIn="false" value="C:/Users/andrewsi/Documents"/>
-                                								
                                 <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2018.3/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="C:/Users/andrewsi/Documents/GitHub/MandelViewer"/>
                                 								
                                 <listOptionValue builtIn="false" value="D:/Xilinx/Vivado/2018.3/win64/tools/auto_cc/include"/>
                                 								
@@ -357,7 +357,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.256570833" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.256570833" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1983028906" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						
@@ -395,6 +395,12 @@
         		
         <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
         		
+        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.1174223386;cdt.managedbuild.config.gnu.exe.debug.1174223386.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1131927496;cdt.managedbuild.tool.gnu.c.compiler.input.464840885">
+            			
+            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+            		
+        </scannerConfigBuildInfo>
+        		
         <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.1174223386;cdt.managedbuild.config.gnu.exe.debug.1174223386.;cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.579363262;cdt.managedbuild.tool.gnu.cpp.compiler.input.183160401">
             			
             <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
@@ -408,12 +414,6 @@
         </scannerConfigBuildInfo>
         		
         <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.release.1040982072;cdt.managedbuild.config.gnu.exe.release.1040982072.;cdt.managedbuild.tool.gnu.c.compiler.exe.release.1635296035;cdt.managedbuild.tool.gnu.c.compiler.input.19122272">
-            			
-            <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-            		
-        </scannerConfigBuildInfo>
-        		
-        <scannerConfigBuildInfo instanceId="cdt.managedbuild.config.gnu.exe.debug.1174223386;cdt.managedbuild.config.gnu.exe.debug.1174223386.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1131927496;cdt.managedbuild.tool.gnu.c.compiler.input.464840885">
             			
             <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
             		

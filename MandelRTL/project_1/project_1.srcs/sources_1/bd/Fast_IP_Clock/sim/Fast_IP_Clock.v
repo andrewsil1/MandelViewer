@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Thu Feb 14 15:53:10 2019
+//Date        : Tue Feb 26 16:01:37 2019
 //Host        : AndrewSi64 running 64-bit major release  (build 9200)
 //Command     : generate_target Fast_IP_Clock.bd
 //Design      : Fast_IP_Clock
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Fast_IP_Clock,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Fast_IP_Clock,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=40,numReposBlks=29,numNonXlnxBlks=2,numHierBlks=11,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=11,da_board_cnt=1,da_clkrst_cnt=6,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Fast_IP_Clock.hwdef" *) 
+(* CORE_GENERATION_INFO = "Fast_IP_Clock,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Fast_IP_Clock,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=40,numReposBlks=29,numNonXlnxBlks=2,numHierBlks=11,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=13,da_board_cnt=4,da_clkrst_cnt=6,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Fast_IP_Clock.hwdef" *) 
 module Fast_IP_Clock
    (btnCpuReset,
     clk,

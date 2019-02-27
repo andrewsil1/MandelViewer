@@ -296,3 +296,5 @@ MandelRTL/project_1/vivado.jou
 *.str
 *.markers.snap
 *.syncinfo.snap
+/MandelRTL/project_1/updatemem.jou
+/MandelRTL/project_1/vivado_90516.backup.jou

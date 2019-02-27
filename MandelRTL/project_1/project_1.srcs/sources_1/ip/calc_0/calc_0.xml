@@ -1687,11 +1687,11 @@ solve_type immediate dependency {} format string minimum {} maximum {}} value {}
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Feb 14 23:52:15 UTC 2019</spirit:value>
+            <spirit:value>Tue Feb 26 18:01:16 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:27344c7d</spirit:value>
+            <spirit:value>9:625b6640</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3026,7 +3026,7 @@ solve_type immediate dependency {} format string minimum {} maximum {}} value {}
     <xilinx:coreExtensions>
       <xilinx:displayName>Mandelbrot Calculator Core</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1902141545</xilinx:coreRevision>
+      <xilinx:coreRevision>1902260927</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_BUF_R.ARUSER_WIDTH" xilinx:valueSource="auto"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_BUF_R.AWUSER_WIDTH" xilinx:valueSource="auto"/>
@@ -3069,7 +3069,7 @@ solve_type immediate dependency {} format string minimum {} maximum {}} value {}
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="1e71911a"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="ad851dea"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="bbae72b9"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e52d3493"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0138c8e3"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="03f66315"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="62b10da1"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="71634327"/>

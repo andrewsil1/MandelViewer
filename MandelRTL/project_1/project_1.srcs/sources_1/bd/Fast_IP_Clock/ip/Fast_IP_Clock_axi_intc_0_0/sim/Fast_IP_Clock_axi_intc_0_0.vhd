@@ -183,7 +183,7 @@ BEGIN
       C_S_AXI_DATA_WIDTH => 32,
       C_NUM_INTR_INPUTS => 2,
       C_NUM_SW_INTR => 0,
-      C_KIND_OF_INTR => X"fffffff9",
+      C_KIND_OF_INTR => X"fffffff5",
       C_KIND_OF_EDGE => X"FFFFFFFF",
       C_KIND_OF_LVL => X"FFFFFFFF",
       C_ASYNC_INTR => X"FFFFFFFD",

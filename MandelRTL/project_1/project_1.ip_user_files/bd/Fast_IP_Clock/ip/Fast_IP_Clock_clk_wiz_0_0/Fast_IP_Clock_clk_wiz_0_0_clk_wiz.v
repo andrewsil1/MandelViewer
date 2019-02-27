@@ -58,7 +58,9 @@
 //----------------------------------------------------------------------------
 // __AXIclk___100.000______0.000______50.0______144.719____114.212
 // ___MBClk____80.000______0.000______50.0______151.652____114.212
-// _CalcClk____80.000______0.000______50.0______151.652____114.212
+// _CalcClk___160.000______0.000______50.0______131.841____114.212
+// __NetClk____50.000______0.000______50.0______167.017____114.212
+// NetClkSkew____50.000_____45.000______50.0______167.017____114.212
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -74,6 +76,8 @@ module Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   output        AXIclk,
   output        MBClk,
   output        CalcClk,
+  output        NetClk,
+  output        NetClkSkew,
   // Status and control signals
   output        locked,
   input         clk_in1
@@ -99,8 +103,8 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
   wire        AXIclk_Fast_IP_Clock_clk_wiz_0_0;
   wire        MBClk_Fast_IP_Clock_clk_wiz_0_0;
   wire        CalcClk_Fast_IP_Clock_clk_wiz_0_0;
-  wire        clk_out4_Fast_IP_Clock_clk_wiz_0_0;
-  wire        clk_out5_Fast_IP_Clock_clk_wiz_0_0;
+  wire        NetClk_Fast_IP_Clock_clk_wiz_0_0;
+  wire        NetClkSkew_Fast_IP_Clock_clk_wiz_0_0;
   wire        clk_out6_Fast_IP_Clock_clk_wiz_0_0;
   wire        clk_out7_Fast_IP_Clock_clk_wiz_0_0;
 
@@ -114,9 +118,7 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
     wire clkout0b_unused;
    wire clkout1b_unused;
    wire clkout2b_unused;
-   wire clkout3_unused;
    wire clkout3b_unused;
-   wire clkout4_unused;
   wire        clkout5_unused;
   wire        clkout6_unused;
   wire        clkfbstopped_unused;
@@ -130,6 +132,12 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
   (* KEEP = "TRUE" *) 
   (* ASYNC_REG = "TRUE" *)
   reg  [7 :0] seq_reg3 = 0;
+  (* KEEP = "TRUE" *) 
+  (* ASYNC_REG = "TRUE" *)
+  reg  [7 :0] seq_reg4 = 0;
+  (* KEEP = "TRUE" *) 
+  (* ASYNC_REG = "TRUE" *)
+  reg  [7 :0] seq_reg5 = 0;
 
   MMCME2_ADV
   #(.BANDWIDTH            ("OPTIMIZED"),
@@ -148,10 +156,18 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
-    .CLKOUT2_DIVIDE       (10),
+    .CLKOUT2_DIVIDE       (5),
     .CLKOUT2_PHASE        (0.000),
     .CLKOUT2_DUTY_CYCLE   (0.500),
     .CLKOUT2_USE_FINE_PS  ("FALSE"),
+    .CLKOUT3_DIVIDE       (16),
+    .CLKOUT3_PHASE        (0.000),
+    .CLKOUT3_DUTY_CYCLE   (0.500),
+    .CLKOUT3_USE_FINE_PS  ("FALSE"),
+    .CLKOUT4_DIVIDE       (16),
+    .CLKOUT4_PHASE        (45.000),
+    .CLKOUT4_DUTY_CYCLE   (0.500),
+    .CLKOUT4_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (10.000))
   mmcm_adv_inst
     // Output clocks
@@ -164,9 +180,9 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
     .CLKOUT1B            (clkout1b_unused),
     .CLKOUT2             (CalcClk_Fast_IP_Clock_clk_wiz_0_0),
     .CLKOUT2B            (clkout2b_unused),
-    .CLKOUT3             (clkout3_unused),
+    .CLKOUT3             (NetClk_Fast_IP_Clock_clk_wiz_0_0),
     .CLKOUT3B            (clkout3b_unused),
-    .CLKOUT4             (clkout4_unused),
+    .CLKOUT4             (NetClkSkew_Fast_IP_Clock_clk_wiz_0_0),
     .CLKOUT5             (clkout5_unused),
     .CLKOUT6             (clkout6_unused),
      // Input clock control
@@ -247,6 +263,32 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
  
   always @(posedge CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk)
         seq_reg3 <= {seq_reg3[6:0],locked_int};
+
+
+  BUFGCE clkout4_buf
+   (.O   (NetClk),
+    .CE  (seq_reg4[7]),
+    .I   (NetClk_Fast_IP_Clock_clk_wiz_0_0));
+
+  BUFH clkout4_buf_en
+   (.O   (NetClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
+    .I   (NetClk_Fast_IP_Clock_clk_wiz_0_0));
+	
+  always @(posedge NetClk_Fast_IP_Clock_clk_wiz_0_0_en_clk)
+        seq_reg4 <= {seq_reg4[6:0],locked_int};
+
+
+  BUFGCE clkout5_buf
+   (.O   (NetClkSkew),
+    .CE  (seq_reg5[7]),
+    .I   (NetClkSkew_Fast_IP_Clock_clk_wiz_0_0));
+ 
+  BUFH clkout5_buf_en
+   (.O   (NetClkSkew_Fast_IP_Clock_clk_wiz_0_0_en_clk),
+    .I   (NetClkSkew_Fast_IP_Clock_clk_wiz_0_0));
+ 
+  always @(posedge NetClkSkew_Fast_IP_Clock_clk_wiz_0_0_en_clk)
+        seq_reg5 <= {seq_reg5[6:0],locked_int};
 
 
 

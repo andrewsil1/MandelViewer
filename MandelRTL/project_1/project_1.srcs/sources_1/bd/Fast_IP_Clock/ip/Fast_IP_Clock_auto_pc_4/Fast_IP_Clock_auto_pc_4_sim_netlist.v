@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Thu Feb 14 15:56:28 2019
+// Date        : Thu Feb 14 15:56:27 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/andrewsi/OneDrive/Documents/VisualStudio2017/Projects/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_pc_4/Fast_IP_Clock_auto_pc_4_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_auto_pc_4 -prefix
+//               Fast_IP_Clock_auto_pc_4_ Fast_IP_Clock_auto_pc_4_sim_netlist.v
 // Design      : Fast_IP_Clock_auto_pc_4
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -346,10 +346,10 @@ endmodule
 (* C_AXI_RUSER_WIDTH = "1" *) (* C_AXI_SUPPORTS_READ = "1" *) (* C_AXI_SUPPORTS_USER_SIGNALS = "0" *) 
 (* C_AXI_SUPPORTS_WRITE = "1" *) (* C_AXI_WUSER_WIDTH = "1" *) (* C_FAMILY = "artix7" *) 
 (* C_IGNORE_ID = "0" *) (* C_M_AXI_PROTOCOL = "2" *) (* C_S_AXI_PROTOCOL = "0" *) 
-(* C_TRANSLATION_MODE = "2" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_protocol_converter_v2_1_18_axi_protocol_converter" *) 
-(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
-(* P_AXILITE_SIZE = "3'b010" *) (* P_CONVERSION = "2" *) (* P_DECERR = "2'b11" *) 
-(* P_INCR = "2'b01" *) (* P_PROTECTION = "1" *) (* P_SLVERR = "2'b10" *) 
+(* C_TRANSLATION_MODE = "2" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* P_AXI3 = "1" *) 
+(* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_AXILITE_SIZE = "3'b010" *) 
+(* P_CONVERSION = "2" *) (* P_DECERR = "2'b11" *) (* P_INCR = "2'b01" *) 
+(* P_PROTECTION = "1" *) (* P_SLVERR = "2'b10" *) 
 module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_axi_protocol_converter
    (aclk,
     aresetn,
@@ -699,7 +699,6 @@ module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_axi_protocol_conve
         .s_axi_rvalid(s_axi_rvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_18_b2s" *) 
 module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s
    (s_axi_awready,
     s_axi_arready,
@@ -1131,7 +1130,6 @@ module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_18_b2s_ar_channel" *) 
 module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_ar_channel
    (sel_first,
     sel_first_reg,
@@ -1382,7 +1380,6 @@ module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_ar_channel
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_18_b2s_aw_channel" *) 
 module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_aw_channel
    (sel_first_0,
     sel_first,
@@ -1637,7 +1634,6 @@ module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_aw_channel
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_18_b2s_b_channel" *) 
 module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_b_channel
    (si_rs_bvalid,
     b_full,
@@ -1908,7 +1904,6 @@ module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_b_channel
         .R(areset_d1));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_18_b2s_cmd_translator" *) 
 module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_cmd_translator
    (incr_next_pending,
     next_pending_r_reg,
@@ -2348,7 +2343,6 @@ module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_cmd_translator
         .\wrap_second_len_r_reg[3]_0 (\wrap_second_len_r_reg[3] ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_18_b2s_incr_cmd" *) 
 module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_incr_cmd
    (incr_next_pending,
     sel_first_reg_0,
@@ -3876,7 +3870,6 @@ module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_incr_cmd_2
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_18_b2s_r_channel" *) 
 module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_r_channel
    (r_full,
     m_axi_rready,
@@ -3978,7 +3971,6 @@ module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_r_channel
         .wr_en0(wr_en0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm" *) 
 module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm
    (s_ready_i0,
     Q,
@@ -4351,7 +4343,6 @@ module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm
         .O(\FSM_sequential_state_reg[1]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_18_b2s_simple_fifo" *) 
 module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_simple_fifo
    (b_full,
     addr,
@@ -5625,7 +5616,6 @@ module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_simple_fifo__p
         .Q31(\NLW_memory_reg[31][2]_srl32_Q31_UNCONNECTED ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_18_b2s_wr_cmd_fsm" *) 
 module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_wr_cmd_fsm
    (\m_payload_i_reg[39] ,
     sel_first_i,
@@ -5891,7 +5881,6 @@ module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_wr_cmd_fsm
         .O(E));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_18_b2s_wrap_cmd" *) 
 module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_wrap_cmd
    (next_pending_r_reg_0,
     sel_first,
@@ -7030,7 +7019,6 @@ module Fast_IP_Clock_auto_pc_4_axi_protocol_converter_v2_1_18_b2s_wrap_cmd_3
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_18_axi_register_slice" *) 
 module Fast_IP_Clock_auto_pc_4_axi_register_slice_v2_1_18_axi_register_slice
    (s_ready_i_reg,
     s_ready_i_reg_0,
@@ -7400,7 +7388,6 @@ module Fast_IP_Clock_auto_pc_4_axi_register_slice_v2_1_18_axi_register_slice
         .\skid_buffer_reg[36]_0 (\skid_buffer_reg[36] ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_18_axic_register_slice" *) 
 module Fast_IP_Clock_auto_pc_4_axi_register_slice_v2_1_18_axic_register_slice
    (s_ready_i_reg_0,
     m_valid_i_reg_0,

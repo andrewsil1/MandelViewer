@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Feb 10 22:51:50 2019
+-- Date        : Tue Feb 26 10:10:43 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {C:/Users/andrewsi/OneDrive/Documents/Visual Studio
---               2017/Projects/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_clk_wiz_0_0/Fast_IP_Clock_clk_wiz_0_0_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_clk_wiz_0_0/Fast_IP_Clock_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : Fast_IP_Clock_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,6 +19,8 @@ entity Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz is
     AXIclk : out STD_LOGIC;
     MBClk : out STD_LOGIC;
     CalcClk : out STD_LOGIC;
+    NetClk : out STD_LOGIC;
+    NetClkSkew : out STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -33,6 +35,10 @@ architecture STRUCTURE of Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_cl
   signal CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk : STD_LOGIC;
   signal MBClk_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
   signal MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk : STD_LOGIC;
+  signal NetClkSkew_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
+  signal NetClkSkew_Fast_IP_Clock_clk_wiz_0_0_en_clk : STD_LOGIC;
+  signal NetClk_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
+  signal NetClk_Fast_IP_Clock_clk_wiz_0_0_en_clk : STD_LOGIC;
   signal clk_in1_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_buf_Fast_IP_Clock_clk_wiz_0_0 : STD_LOGIC;
@@ -48,15 +54,19 @@ architecture STRUCTURE of Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_cl
   signal seq_reg3 : STD_LOGIC_VECTOR ( 7 downto 0 );
   attribute RTL_KEEP of seq_reg3 : signal is "true";
   attribute async_reg of seq_reg3 : signal is "true";
+  signal seq_reg4 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  attribute RTL_KEEP of seq_reg4 : signal is "true";
+  attribute async_reg of seq_reg4 : signal is "true";
+  signal seq_reg5 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  attribute RTL_KEEP of seq_reg5 : signal is "true";
+  attribute async_reg of seq_reg5 : signal is "true";
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED : STD_LOGIC;
-  signal NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED : STD_LOGIC;
-  signal NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_DRDY_UNCONNECTED : STD_LOGIC;
@@ -85,6 +95,14 @@ architecture STRUCTURE of Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_cl
   attribute XILINX_LEGACY_PRIM of clkout3_buf : label is "BUFGCE";
   attribute XILINX_TRANSFORM_PINMAP of clkout3_buf : label is "CE:CE0 I:I0";
   attribute BOX_TYPE of clkout3_buf_en : label is "PRIMITIVE";
+  attribute BOX_TYPE of clkout4_buf : label is "PRIMITIVE";
+  attribute XILINX_LEGACY_PRIM of clkout4_buf : label is "BUFGCE";
+  attribute XILINX_TRANSFORM_PINMAP of clkout4_buf : label is "CE:CE0 I:I0";
+  attribute BOX_TYPE of clkout4_buf_en : label is "PRIMITIVE";
+  attribute BOX_TYPE of clkout5_buf : label is "PRIMITIVE";
+  attribute XILINX_LEGACY_PRIM of clkout5_buf : label is "BUFGCE";
+  attribute XILINX_TRANSFORM_PINMAP of clkout5_buf : label is "CE:CE0 I:I0";
+  attribute BOX_TYPE of clkout5_buf_en : label is "PRIMITIVE";
   attribute BOX_TYPE of mmcm_adv_inst : label is "PRIMITIVE";
   attribute ASYNC_REG_boolean : boolean;
   attribute ASYNC_REG_boolean of \seq_reg1_reg[0]\ : label is std.standard.true;
@@ -136,6 +154,38 @@ architecture STRUCTURE of Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_cl
   attribute KEEP of \seq_reg3_reg[6]\ : label is "yes";
   attribute ASYNC_REG_boolean of \seq_reg3_reg[7]\ : label is std.standard.true;
   attribute KEEP of \seq_reg3_reg[7]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg4_reg[0]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg4_reg[0]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg4_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg4_reg[1]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg4_reg[2]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg4_reg[2]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg4_reg[3]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg4_reg[3]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg4_reg[4]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg4_reg[4]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg4_reg[5]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg4_reg[5]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg4_reg[6]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg4_reg[6]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg4_reg[7]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg4_reg[7]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg5_reg[0]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg5_reg[0]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg5_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg5_reg[1]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg5_reg[2]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg5_reg[2]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg5_reg[3]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg5_reg[3]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg5_reg[4]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg5_reg[4]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg5_reg[5]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg5_reg[5]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg5_reg[6]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg5_reg[6]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \seq_reg5_reg[7]\ : label is std.standard.true;
+  attribute KEEP of \seq_reg5_reg[7]\ : label is "yes";
 begin
   locked <= \^locked\;
 clkf_buf: unisim.vcomponents.BUFG
@@ -217,6 +267,50 @@ clkout3_buf_en: unisim.vcomponents.BUFH
       I => CalcClk_Fast_IP_Clock_clk_wiz_0_0,
       O => CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk
     );
+clkout4_buf: unisim.vcomponents.BUFGCTRL
+    generic map(
+      INIT_OUT => 0,
+      PRESELECT_I0 => true,
+      PRESELECT_I1 => false
+    )
+        port map (
+      CE0 => seq_reg4(7),
+      CE1 => '0',
+      I0 => NetClk_Fast_IP_Clock_clk_wiz_0_0,
+      I1 => '1',
+      IGNORE0 => '0',
+      IGNORE1 => '1',
+      O => NetClk,
+      S0 => '1',
+      S1 => '0'
+    );
+clkout4_buf_en: unisim.vcomponents.BUFH
+     port map (
+      I => NetClk_Fast_IP_Clock_clk_wiz_0_0,
+      O => NetClk_Fast_IP_Clock_clk_wiz_0_0_en_clk
+    );
+clkout5_buf: unisim.vcomponents.BUFGCTRL
+    generic map(
+      INIT_OUT => 0,
+      PRESELECT_I0 => true,
+      PRESELECT_I1 => false
+    )
+        port map (
+      CE0 => seq_reg5(7),
+      CE1 => '0',
+      I0 => NetClkSkew_Fast_IP_Clock_clk_wiz_0_0,
+      I1 => '1',
+      IGNORE0 => '0',
+      IGNORE1 => '1',
+      O => NetClkSkew,
+      S0 => '1',
+      S1 => '0'
+    );
+clkout5_buf_en: unisim.vcomponents.BUFH
+     port map (
+      I => NetClkSkew_Fast_IP_Clock_clk_wiz_0_0,
+      O => NetClkSkew_Fast_IP_Clock_clk_wiz_0_0_en_clk
+    );
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
@@ -233,18 +327,18 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
       CLKOUT1_USE_FINE_PS => false,
-      CLKOUT2_DIVIDE => 10,
+      CLKOUT2_DIVIDE => 5,
       CLKOUT2_DUTY_CYCLE => 0.500000,
       CLKOUT2_PHASE => 0.000000,
       CLKOUT2_USE_FINE_PS => false,
-      CLKOUT3_DIVIDE => 1,
+      CLKOUT3_DIVIDE => 16,
       CLKOUT3_DUTY_CYCLE => 0.500000,
       CLKOUT3_PHASE => 0.000000,
       CLKOUT3_USE_FINE_PS => false,
       CLKOUT4_CASCADE => false,
-      CLKOUT4_DIVIDE => 1,
+      CLKOUT4_DIVIDE => 16,
       CLKOUT4_DUTY_CYCLE => 0.500000,
-      CLKOUT4_PHASE => 0.000000,
+      CLKOUT4_PHASE => 45.000000,
       CLKOUT4_USE_FINE_PS => false,
       CLKOUT5_DIVIDE => 1,
       CLKOUT5_DUTY_CYCLE => 0.500000,
@@ -283,9 +377,9 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT1B => NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED,
       CLKOUT2 => CalcClk_Fast_IP_Clock_clk_wiz_0_0,
       CLKOUT2B => NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED,
-      CLKOUT3 => NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED,
+      CLKOUT3 => NetClk_Fast_IP_Clock_clk_wiz_0_0,
       CLKOUT3B => NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED,
-      CLKOUT4 => NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED,
+      CLKOUT4 => NetClkSkew_Fast_IP_Clock_clk_wiz_0_0,
       CLKOUT5 => NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED,
       CLKOUT6 => NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED,
       DADDR(6 downto 0) => B"0000000",
@@ -567,6 +661,182 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       Q => seq_reg3(7),
       R => '0'
     );
+\seq_reg4_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => \^locked\,
+      Q => seq_reg4(0),
+      R => '0'
+    );
+\seq_reg4_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg4(0),
+      Q => seq_reg4(1),
+      R => '0'
+    );
+\seq_reg4_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg4(1),
+      Q => seq_reg4(2),
+      R => '0'
+    );
+\seq_reg4_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg4(2),
+      Q => seq_reg4(3),
+      R => '0'
+    );
+\seq_reg4_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg4(3),
+      Q => seq_reg4(4),
+      R => '0'
+    );
+\seq_reg4_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg4(4),
+      Q => seq_reg4(5),
+      R => '0'
+    );
+\seq_reg4_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg4(5),
+      Q => seq_reg4(6),
+      R => '0'
+    );
+\seq_reg4_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClk_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg4(6),
+      Q => seq_reg4(7),
+      R => '0'
+    );
+\seq_reg5_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClkSkew_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => \^locked\,
+      Q => seq_reg5(0),
+      R => '0'
+    );
+\seq_reg5_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClkSkew_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg5(0),
+      Q => seq_reg5(1),
+      R => '0'
+    );
+\seq_reg5_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClkSkew_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg5(1),
+      Q => seq_reg5(2),
+      R => '0'
+    );
+\seq_reg5_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClkSkew_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg5(2),
+      Q => seq_reg5(3),
+      R => '0'
+    );
+\seq_reg5_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClkSkew_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg5(3),
+      Q => seq_reg5(4),
+      R => '0'
+    );
+\seq_reg5_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClkSkew_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg5(4),
+      Q => seq_reg5(5),
+      R => '0'
+    );
+\seq_reg5_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClkSkew_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg5(5),
+      Q => seq_reg5(6),
+      R => '0'
+    );
+\seq_reg5_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => NetClkSkew_Fast_IP_Clock_clk_wiz_0_0_en_clk,
+      CE => '1',
+      D => seq_reg5(6),
+      Q => seq_reg5(7),
+      R => '0'
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -577,6 +847,8 @@ entity Fast_IP_Clock_clk_wiz_0_0 is
     AXIclk : out STD_LOGIC;
     MBClk : out STD_LOGIC;
     CalcClk : out STD_LOGIC;
+    NetClk : out STD_LOGIC;
+    NetClkSkew : out STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -591,6 +863,8 @@ inst: entity work.Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
       AXIclk => AXIclk,
       CalcClk => CalcClk,
       MBClk => MBClk,
+      NetClk => NetClk,
+      NetClkSkew => NetClkSkew,
       clk_in1 => clk_in1,
       locked => locked
     );

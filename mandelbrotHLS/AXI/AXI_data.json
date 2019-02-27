@@ -63,8 +63,8 @@
   },
   "Files": {
     "CSource": [
-      "..\/pretest.cpp",
-      "..\/mandel.cpp"
+      "..\/mandel.cpp",
+      "..\/pretest.cpp"
     ],
     "Vhdl": [
       "impl\/vhdl\/calc_buf_r_m_axi.vhd",
@@ -105,7 +105,7 @@
       "impl\/misc\/drivers\/calc_v1_0\/src\/xcalc_sinit.c"
     ],
     "Misc": ["impl\/misc\/logo.png"],
-    "DesignXml": "C:\/Users\/andrewsi\/Documents\/MandelHLS\/AXI\/.autopilot\/db\/calc.design.xml"
+    "DesignXml": "C:\/Users\/andrewsi\/Documents\/GitHub\/MandelViewer\/mandelbrotHLS\/AXI\/.autopilot\/db\/calc.design.xml"
   },
   "SubcoreInfo": {
     "HasXpmMemory": false,
@@ -1144,7 +1144,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-02-14 15:45:25 -0800",
+    "Time": "2019-02-26 09:27:25 -0800",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.3"
   }

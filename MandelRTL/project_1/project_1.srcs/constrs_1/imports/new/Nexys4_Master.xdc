@@ -513,41 +513,41 @@ set_property IOSTANDARD LVCMOS33 [get_ports usb_uart_txd]
 
 ##SMSC Ethernet PHY
 ##Bank = 16, Pin name = IO_L11P_T1_SRCC_16,					Sch name = ETH_MDC
-#set_property PACKAGE_PIN C9 [get_ports PhyMdc]
-#set_property IOSTANDARD LVCMOS33 [get_ports PhyMdc]
+#set_property PACKAGE_PIN C9 [get_ports eth_mdio_mdc_mdc]
+#set_property IOSTANDARD LVCMOS33 [get_ports eth_mdio_mdc_mdc]
 ##Bank = 16, Pin name = IO_L14N_T2_SRCC_16,					Sch name = ETH_MDIO
-#set_property PACKAGE_PIN A9 [get_ports PhyMdio]
-#set_property IOSTANDARD LVCMOS33 [get_ports PhyMdio]
+#set_property PACKAGE_PIN A9 [get_ports eth_mdio_mdc_mdio_io]
+#set_property IOSTANDARD LVCMOS33 [get_ports eth_mdio_mdc_mdio_io]
 ##Bank = 35, Pin name = IO_L10P_T1_AD15P_35,					Sch name = ETH_RSTN
-#set_property PACKAGE_PIN B3 [get_ports PhyRstn]
-#set_property IOSTANDARD LVCMOS33 [get_ports PhyRstn]
+#set_property PACKAGE_PIN B3 [get_ports {Eth_rst_n[0]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {Eth_rst_n[0]}]
 ##Bank = 16, Pin name = IO_L6N_T0_VREF_16,					Sch name = ETH_CRSDV
-#set_property PACKAGE_PIN D9 [get_ports PhyCrs]
-#set_property IOSTANDARD LVCMOS33 [get_ports PhyCrs]
+#set_property PACKAGE_PIN D9 [get_ports eth_rmii_crs_dv]
+#set_property IOSTANDARD LVCMOS33 [get_ports eth_rmii_crs_dv]
 ##Bank = 16, Pin name = IO_L13N_T2_MRCC_16,					Sch name = ETH_RXERR
-#set_property PACKAGE_PIN C10 [get_ports PhyRxErr]
-#set_property IOSTANDARD LVCMOS33 [get_ports PhyRxErr]
+#set_property PACKAGE_PIN C10 [get_ports eth_rmii_rx_er]
+#set_property IOSTANDARD LVCMOS33 [get_ports eth_rmii_rx_er]
 ##Bank = 16, Pin name = IO_L19N_T3_VREF_16,					Sch name = ETH_RXD0
-#set_property PACKAGE_PIN D10 [get_ports {PhyRxd[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {PhyRxd[0]}]
+#set_property PACKAGE_PIN D10 [get_ports {eth_rmii_rxd[0]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {eth_rmii_rxd[0]}]
 ##Bank = 16, Pin name = IO_L13P_T2_MRCC_16,					Sch name = ETH_RXD1
-#set_property PACKAGE_PIN C11 [get_ports {PhyRxd[1]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {PhyRxd[1]}]
+#set_property PACKAGE_PIN C11 [get_ports {eth_rmii_rxd[1]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {eth_rmii_rxd[1]}]
 ##Bank = 16, Pin name = IO_L11N_T1_SRCC_16,					Sch name = ETH_TXEN
-#set_property PACKAGE_PIN B9 [get_ports PhyTxEn]
-#set_property IOSTANDARD LVCMOS33 [get_ports PhyTxEn]
+#set_property PACKAGE_PIN B9 [get_ports eth_rmii_tx_en]
+#set_property IOSTANDARD LVCMOS33 [get_ports eth_rmii_tx_en]
 ##Bank = 16, Pin name = IO_L14P_T2_SRCC_16,					Sch name = ETH_TXD0
-#set_property PACKAGE_PIN A10 [get_ports {PhyTxd[0]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {PhyTxd[0]}]
+#set_property PACKAGE_PIN A10 [get_ports {eth_rmii_txd[0]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {eth_rmii_txd[0]}]
 ##Bank = 16, Pin name = IO_L12N_T1_MRCC_16,					Sch name = ETH_TXD1
-#set_property PACKAGE_PIN A8 [get_ports {PhyTxd[1]}]
-#set_property IOSTANDARD LVCMOS33 [get_ports {PhyTxd[1]}]
+#set_property PACKAGE_PIN A8 [get_ports {eth_rmii_txd[1]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {eth_rmii_txd[1]}]
 ##Bank = 35, Pin name = IO_L11P_T1_SRCC_35,					Sch name = ETH_REFCLK
-#set_property PACKAGE_PIN D5 [get_ports PhyClk50Mhz]
-#set_property IOSTANDARD LVCMOS33 [get_ports PhyClk50Mhz]
+#set_property PACKAGE_PIN D5 [get_ports NetClkSkew_0]
+#set_property IOSTANDARD LVCMOS33 [get_ports NetClkSkew_0]
 ##Bank = 16, Pin name = IO_L12P_T1_MRCC_16,					Sch name = ETH_INTN
-#set_property PACKAGE_PIN B8 [get_ports PhyIntn]
-#set_property IOSTANDARD LVCMOS33 [get_ports PhyIntn]
+##set_property PACKAGE_PIN B8 [get_ports PhyIntn]
+##set_property IOSTANDARD LVCMOS33 [get_ports PhyIntn]
 
 
 
@@ -725,13 +725,14 @@ set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[22]}]
 create_pblock pblock_microblaze_0
 add_cells_to_pblock [get_pblocks pblock_microblaze_0] [get_cells -quiet [list Fast_IP_Clock_i/microblaze_0]]
 resize_pblock [get_pblocks pblock_microblaze_0] -add {SLICE_X12Y18:SLICE_X39Y48}
+
 create_pblock pblock_mdm_1
 add_cells_to_pblock [get_pblocks pblock_mdm_1] [get_cells -quiet [list Fast_IP_Clock_i/mdm_1]]
 resize_pblock [get_pblocks pblock_mdm_1] -add {SLICE_X40Y41:SLICE_X45Y49}
+
 create_pblock pblock_calc_0
 add_cells_to_pblock [get_pblocks pblock_calc_0] [get_cells -quiet [list Fast_IP_Clock_i/calc_0]]
 resize_pblock [get_pblocks pblock_calc_0] -add {SLICE_X52Y50:SLICE_X81Y148}
-
 
 create_pblock pblock_axi_uart16550_0
 add_cells_to_pblock [get_pblocks pblock_axi_uart16550_0] [get_cells -quiet [list Fast_IP_Clock_i/axi_uart16550_0]]
@@ -740,9 +741,7 @@ resize_pblock [get_pblocks pblock_axi_uart16550_0] -add {SLICE_X82Y125:SLICE_X89
 create_pblock pblock_psram_ip_0
 add_cells_to_pblock [get_pblocks pblock_psram_ip_0] [get_cells -quiet [list Fast_IP_Clock_i/psram_ip_0]]
 resize_pblock [get_pblocks pblock_psram_ip_0] -add {SLICE_X0Y88:SLICE_X7Y99}
+
 create_pblock pblock_axi_gpio_0
 add_cells_to_pblock [get_pblocks pblock_axi_gpio_0] [get_cells -quiet [list Fast_IP_Clock_i/axi_gpio_0]]
 resize_pblock [get_pblocks pblock_axi_gpio_0] -add {SLICE_X0Y143:SLICE_X3Y147}
-
-
-
