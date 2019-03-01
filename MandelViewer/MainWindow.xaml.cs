@@ -11,7 +11,6 @@
     using System.IO.Ports;
     using System.Text;
     using System.Threading;
-    using System.Threading.Tasks;
     using System.Windows;
     using System.Windows.Automation.Peers;
     using System.Windows.Automation.Provider;
@@ -19,16 +18,20 @@
     using System.Windows.Data;
     using System.Windows.Media;
     using System.Windows.Media.Imaging;
+    using K4os.Compression.LZ4.Streams;
+
     using FixedPoint;
 
     public partial class MainWindow : Window
     {
-        static private WriteableBitmap writeableBitmap;
+        private WriteableBitmap writeableBitmap;
         static private SerialPort _serialPort;
-        static int x, y;
+        int x, y;
+        private int ImageBufferLength;
         private ImageParams imageParams;
         private Crc32 crc32;
-
+        double zoomPercent = 0.3;
+    
         const int BAUD_RATE = 3000000;
 
         public delegate void SerialErrorReceivedHandler(object sender, SerialErrorReceivedEventArgs e);
@@ -61,14 +64,20 @@
                 Source = imageParams,
                 Converter = imageParams.Y0
             };
+            Binding ZoomBinding = new Binding("ZoomPercent")
+            {
+                Source = zoomPercent
+            };
 
             X0.SetBinding(TextBox.TextProperty, X0Binding);
             X1.SetBinding(TextBox.TextProperty, X1Binding);
             Y0.SetBinding(TextBox.TextProperty, Y0Binding);
+            ZoomPercent.SetBinding(TextBox.TextProperty, ZoomBinding);
 
             _serialPort = new SerialPort();
             _serialPort.ErrorReceived += SerialErrorHandler;
-
+            
+            ImageBufferLength = (int)Fractal.Height * (int)Fractal.Width * sizeof(short);
 
             // Get a list of serial port names and open the first one we find.
             string[] ports = SerialPort.GetPortNames();
@@ -176,7 +185,7 @@
                 // Reserve the back buffer for updates.
                 writeableBitmap.Lock();
 
-                for (int index = 0; index < payload.Length; index += 2)
+                for (int index = 0; index < ImageBufferLength; index += 2)
                 {
                     unsafe
                     {
@@ -210,15 +219,19 @@
         #endregion
 
         /* This is the primary "work" method which waits for the calculation kicked off elsewhere to return data. 
-         * As it comes in, we check the CRC of each packet, and then render it as a background task.
+         * As it comes in, we check the CRC of each packet, decompress the data from its LZ4 frame, and then render it.
          */
         private void DoCalculation(Object stateInfo)
         {
-            int size = 65536; //BUGBUG: Get this size from the FPGA.
-            int payloadBytes = 0;
-            byte[] buffer = new byte[size];
+            int packetSize = 65536;                     //BUGBUG: Get this size from the FPGA.
+            int payloadBytes = 0;                       //This will be a running count of how many compressed payload bytes we've received, not counting headers/CRCs.
+            byte[] buffer = new byte[packetSize];
             bool done = false;
             bool firstPacket = true;
+            MemoryStream decompressedData = new MemoryStream(ImageBufferLength);
+            MemoryStream incomingData = new MemoryStream(ImageBufferLength);// / 2); //Assume we'll get at least a 2x ratio.
+            Byte[] drawBuffer = new byte[ImageBufferLength]; //For the full decompressed data
+            byte[] payload = new byte[ImageBufferLength];// / 2];//For the full compressed-as-received data om the serial line
 
             while (!done) //TODO: Turn this into a fixed loop by having FPGA send us the total incoming number of packets first.
             {
@@ -231,37 +244,42 @@
                         labelStatus.Content = "Receiving...";
                     });
 
+                    firstPacket = false;
                 }
-                firstPacket = false;
 
                 //How big is the incoming packet?
                 _serialPort.Read(buffer, 0, 4);
-                int packetSize = BitConverter.ToInt32(buffer, 0);
+                int packetLength = BitConverter.ToInt32(buffer, 0);
 
-                while (_serialPort.BytesToRead < packetSize) { Thread.Sleep(50); } //TODO: Properly #define the consts here.
-                _serialPort.Read(buffer, 0, packetSize);
+                while (_serialPort.BytesToRead < packetLength) { Thread.Sleep(50); } //TODO: Properly #define the consts here.
+                _serialPort.Read(buffer, 0, packetLength);
 
                 string s = System.Text.Encoding.UTF8.GetString(buffer, 0, 4);
                 if (s != "DONE")
                 {
-                    UInt32 incomingCrc = BitConverter.ToUInt32(buffer, packetSize - 4); //Extract CRC from the packet.
-                    byte[] payload = new byte[packetSize - 4];                          //Copy bytes without the CRC tacked on to a new buffer
-                    Array.Copy(buffer, payload, packetSize - 4);
-                    payloadBytes += payload.Length;
-                    UInt32 calcCrc = crc32.Get(payload);
+                    int payloadSegmentEnd = packetLength - 4;
+                    UInt32 incomingCrc = BitConverter.ToUInt32(buffer, payloadSegmentEnd); //Extract CRC from the packet.
+                    Array.Copy(buffer, 0, payload, payloadBytes, payloadSegmentEnd);       //Copy bytes without the CRC tacked on to the complete payload buffer
+                    UInt32 calcCrc = crc32.Get(new ArraySegment<Byte>(payload, payloadBytes, payloadSegmentEnd));
+                    payloadBytes += payloadSegmentEnd;
 
                     if (calcCrc != incomingCrc)
                     {
-                        Debug.Write(String.Format("Expected CRC: {0:X}  Received CRC: {1:X}\n", incomingCrc, calcCrc));
+                        Debug.Write(String.Format("Incoming CRC: {0:X}  Calculated CRC: {1:X}\n", incomingCrc, calcCrc));
                         throw new Exception("CRC failure during reception.");
                     }
-
-                    ThreadPool.QueueUserWorkItem(DrawPayload, payload);
                 }
                 else
                 {
                     done = true;
-                    Debug.WriteLine(string.Format("{0:hh:mm:ss.fff}: Total Bytes read: {1}", DateTime.Now, payloadBytes));
+                    incomingData.Write(payload, 0, payloadBytes);                   //Put compressed buffer into a memory stream.
+                    incomingData.Seek(0, 0);
+                    using (var source = LZ4Stream.Decode(incomingData, 0, false))
+                    {
+                        source.Read(drawBuffer, 0, ImageBufferLength);              //Pass the stream through the decompressor and store in the drawBuffer.
+                    }
+                    ThreadPool.QueueUserWorkItem(DrawPayload, drawBuffer);
+                    Debug.WriteLine(string.Format("{0:hh:mm:ss.fff}: Total Compressed Bytes read: {1}", DateTime.Now, payloadBytes));
                     Dispatcher.Invoke(() =>
                     {
                         labelStatus.Content = "Ready";
@@ -362,7 +380,7 @@
             double.TryParse(X1.Text, out double x1);
             double.TryParse(Y0.Text, out double y0);
             double width = x1 - x0;
-            double delta = width * 0.15;
+            double delta = width * zoomPercent;
             X0.Text = (x0 + delta).ToString();
             X1.Text = (x1 - delta).ToString();
             Y0.Text = (y0 - (delta * .75)).ToString(); //Y delta is 3/4 of X in a 4:3 aspect ratio image.

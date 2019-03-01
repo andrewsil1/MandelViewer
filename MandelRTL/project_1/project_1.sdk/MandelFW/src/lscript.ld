@@ -11,7 +11,7 @@
 /*******************************************************************/
 
 _STACK_SIZE = DEFINED(_STACK_SIZE) ? _STACK_SIZE : 0x1000;
-_HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x10000;
+_HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x400000;
 
 /* Define Memories in the system */
 
@@ -19,6 +19,7 @@ MEMORY
 {
    microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem : ORIGIN = 0x50, LENGTH = 0x3FFB0
    psram_ip_0_S00_AXI_BASEADDR_S00_AXI_mem : ORIGIN = 0x80000000, LENGTH = 0x1000000
+   Heap  : ORIGIN = 0x80C00000, LENGTH = 0x00400000
 }
 
 /* Specify the default entry point to the program */
@@ -198,7 +199,7 @@ _SDA2_BASE_ = __sdata2_start + ((__sbss2_end - __sdata2_start) / 2 );
    _heap_start = .;
    . += _HEAP_SIZE;
    _heap_end = .;
-} > microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem
+} > Heap
 
 .stack (NOLOAD) : {
    _stack_end = .;

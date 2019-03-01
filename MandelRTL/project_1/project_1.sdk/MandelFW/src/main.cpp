@@ -14,6 +14,8 @@
 #include "microblaze_sleep.h"
 #include "uartfuncs.h"
 #include "xuartlite.h"
+#include "lib/lz4frame.h"
+#include "lib/xxhash.h"
 
 #ifdef DEBUG
 	#include <xil_printf.h>
@@ -65,6 +67,9 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
  u8 ReceiveBuffer[TEST_BUFFER_SIZE];
  u8* ReceiveBufferPtr = &ReceiveBuffer[0];
 
+ // Space to compress data prior to transmission.
+u8* compressBuffer = (u8*) (PSRAM_BASE + 0x200000);
+
  /*
   * The following counters are used to determine when the entire buffer has
   * been sent and received.
@@ -82,6 +87,61 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
  // For the serial port...
  u16 Options;
  u8 Errors;
+
+ u32 CompressOutput() {
+	 LZ4F_cctx* cctxPtr;	//compressionContext object
+	 u32 compressCapacity = 0x80C00000L - (u32)compressBuffer; // Space above 80D00000 is reserved for program heap.
+
+	 LZ4F_errorCode_t error = LZ4F_createCompressionContext(&cctxPtr, LZ4F_VERSION);
+	 if (error != 0) {
+		 xil_printf("Error creating compression context: %s", LZ4F_getErrorName(error));
+		 return XST_FAILURE;
+	 }
+
+	 LZ4F_frameInfo_t frameInfo;
+	 frameInfo.blockSizeID = LZ4F_max4MB;
+	 frameInfo.blockMode = LZ4F_blockLinked;
+	 frameInfo.contentChecksumFlag = LZ4F_noContentChecksum; //disabled
+	 frameInfo.contentSize = WIDTH * HEIGHT * sizeof(u16);
+	 frameInfo.dictID = 0;
+	 frameInfo.blockChecksumFlag = LZ4F_noBlockChecksum; //disabled
+
+	 LZ4F_preferences_t prefs;
+	 memset(&prefs,0,sizeof(prefs));
+	 prefs.frameInfo = frameInfo;
+	 prefs.compressionLevel = 0; //default (fast mode)
+	 prefs.autoFlush = 1; //always flush, less use of internal buffers
+	 prefs.favorDecSpeed = 0; //Don't care about decompression speed, much more so about the encode side. :-)
+
+	 u32 bytesWritten = 0;
+
+	 u32 returncode = LZ4F_compressBegin(cctxPtr, compressBuffer , compressCapacity, &prefs);
+	 if (LZ4F_isError(returncode)) {
+		 xil_printf("Error with compressBegin: %s\r\n",LZ4F_getErrorName(returncode));
+		 return XST_FAILURE;
+	 } else
+		 bytesWritten += returncode;
+
+	 returncode = LZ4F_compressUpdate(cctxPtr, compressBuffer+bytesWritten, compressCapacity-bytesWritten, (void*) PSRAM_BASE, frameInfo.contentSize, NULL);
+	 if (LZ4F_isError(returncode)) {
+	 		 xil_printf("Error with compressUpdate: %s\r\n",LZ4F_getErrorName(returncode));
+	 		 return XST_FAILURE;
+	 } else
+	 	 bytesWritten += returncode;
+
+	 returncode = bytesWritten += LZ4F_compressEnd(cctxPtr, compressBuffer+bytesWritten, compressCapacity-bytesWritten, NULL);
+	 if (LZ4F_isError(returncode)) {
+	 	 		 xil_printf("Error with compressEnd: %s\r\n",LZ4F_getErrorName(returncode));
+	 	 		 return XST_FAILURE;
+	 } else
+	 	 bytesWritten = returncode; //The returncode from compressEnd is the _entire_ size of the frame and includes the bytes from the prior calls.
+	 #ifdef DEBUG
+	 	 xil_printf("Successfully compressed to %d bytes.\r\n",bytesWritten);
+	 #endif
+
+	 LZ4F_freeCompressionContext(cctxPtr);
+	 return bytesWritten;
+ }
 
  void GetCommand(XUartNs550 *UartInstancePtr, u8 *ReceiveBufferPtr) {
 
@@ -120,7 +180,7 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
 
 	 if (recCRC != *(u32 *)(ReceiveBufferPtr + length - 4)) {
 #ifdef DEBUG
-		 xil_printf("Received CRC invalid: %H",recCRC);
+		 xil_printf("Received CRC invalid: %H\r\n",recCRC);
 #endif
 		 return XST_FAILURE;
 	 }
@@ -128,29 +188,42 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
  	 return (*(u64*)ReceiveBufferPtr); //Return the data.
  }
 
- void SerialSend(XUartNs550 *UartInstancePtr, u8 *sendBuffer, u32 TotalToSend) {
+ void SerialSend(XUartNs550 *UartInstancePtr, u8* sendBuffer, u32 TotalToSend) {
 /* This function returns the entire calculated image (iteration) buffer over the serial port
  * using chunks of a few kilobytes, with a CRC appended at the end to guarantee data integrity.
  */
 
-	 uint size = CHUNK_SIZE;
+	 uint totalSent = 0;
 
 	 for (uint i = 0; i < TotalToSend; i += CHUNK_SIZE) {					// Break up the image buffer into chunks.
-		 u32 crc = rc_crc32(0, (const char*) sendBuffer+i, CHUNK_SIZE);		// Calculate CRC at current offset into the buffer.
 
-		 int size = CHUNK_SIZE+sizeof(u32); 								// Total packet size is chunk bytes + CRC32
+		 int actualToSend;
+		 if (totalSent + CHUNK_SIZE > TotalToSend)
+			 {
+				 actualToSend = TotalToSend % CHUNK_SIZE; //Size of leftover end packet
+			 }
+		 else
+		 	 {
+			 	 actualToSend = CHUNK_SIZE;
+		 	 }
+
+		 u32 crc = rc_crc32(0, (const char*) sendBuffer+i, actualToSend);	// Calculate CRC at current offset into the buffer.
+
+		 int size = actualToSend+sizeof(u32); 								// Total packet size is chunk bytes + CRC32: //BUGBUG: Last chunk might be smaller!
 		 while (XUartNs550_IsSending(UartInstancePtr)) {}
 		 XUartNs550_Send(UartInstancePtr, (u8 *) &size, sizeof(int)); 		// Tell receiver how big the packet will be.
 
 		 while (XUartNs550_IsSending(UartInstancePtr)) {}
-		 XUartNs550_Send(UartInstancePtr, sendBuffer+i, CHUNK_SIZE); 		// Send the payload bytes from the buffer.
+		 XUartNs550_Send(UartInstancePtr, (sendBuffer+i), actualToSend);	// Send the payload bytes from the buffer.
 
 		 while (XUartNs550_IsSending(UartInstancePtr)) {}
 		 XUartNs550_Send(UartInstancePtr, (u8 *) &crc, sizeof(u32));		// Tack the CRC onto the end of the sent packet.
+
+		 totalSent += actualToSend;
 	 }
 
 	 // Finish up the transmission after all packets sent.
-	 size = 4;
+	 uint size = 4;
 	 while (XUartNs550_IsSending(UartInstancePtr)) {}
 	 XUartNs550_Send(UartInstancePtr, (u8 *) &size, sizeof(uint)); 			// Tell receiver how big the packet will be (4 characters)
 
@@ -170,10 +243,6 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
  		Values are 5.35-bit fixed point: Uppermost bytes of ULL are not used.
  	*/
 
- 	/*u64 X10 = -2ULL << FRAC_BITS;//-2;
- 	u64 X11 = 1ULL << FRAC_BITS; //2;
- 	u64 Y01 = 5ULL << (FRAC_BITS - 2); //1.25;*/
-
  	XCalc_Set_X0_V(&Calc, X0);
  	XCalc_Set_X1_V(&Calc, X1);
  	XCalc_Set_Y0_V(&Calc, Y0);
@@ -187,12 +256,16 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
     xil_printf("Calc IP is done, returning data.\r\n");
 #endif
 
+    // Compress contents of image memory
+    uint TotalToSend = CompressOutput();
+
     // Send the contents of image memory to the serial port.
     TotalSentCount = 0;
-    uint TotalToSend = HEIGHT * WIDTH * 2;//sizeof(u16);
+    //uint TotalToSend = HEIGHT * WIDTH * sizeof(u16);
     XUartNs550_ClearStats(UartInstancePtr);
 
-    SerialSend(UartInstancePtr, (u8 *) PSRAM_BASE, TotalToSend);
+    SerialSend(UartInstancePtr, compressBuffer, TotalToSend);
+    //SerialSend(UartInstancePtr, (u8 *)PSRAM_BASE, TotalToSend);
 
 #ifdef DEBUG
     xil_printf("Send complete, waiting for command.\r\n");
