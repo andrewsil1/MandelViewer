@@ -1,3 +1,4 @@
+
 /*
    LZ4 HC - High Compression Mode of LZ4
    Header File
@@ -40,7 +41,7 @@ extern "C" {
 
 /* --- Dependency --- */
 /* note : lz4hc requires lz4.h/lz4.c for compilation */
-#include "lz4.h"   /* stddef, LZ4LIB_API, LZ4_DEPRECATED */
+#include "../LZ4/lz4.h"   /* stddef, LZ4LIB_API, LZ4_DEPRECATED */
 
 
 /* --- Useful constants --- */

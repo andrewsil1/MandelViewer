@@ -2,6 +2,7 @@
 /***************************** Include Files *********************************/
 
 #include "xparameters.h"
+#include "xil_cache.h"
 #include <climits>
 #include <stdio.h>
 #include "xil_exception.h"
@@ -14,8 +15,9 @@
 #include "microblaze_sleep.h"
 #include "uartfuncs.h"
 #include "xuartlite.h"
-#include "lib/lz4frame.h"
-#include "lib/xxhash.h"
+
+#include "LZ4/lz4frame.h"
+#include "LZ4/xxhash.h"
 
 #ifdef DEBUG
 	#include <xil_printf.h>
@@ -315,6 +317,8 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 		 *x = 0xDEADBEEF;
 	}
 #endif
+
+	Xil_DCacheEnable();
 
 	// Set up the Mandelbrot calculator IP
 	Status = XCalc_Initialize(&Calc, CALC_DEVICE_ID);

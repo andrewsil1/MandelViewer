@@ -724,11 +724,11 @@ set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[22]}]
 
 create_pblock pblock_microblaze_0
 add_cells_to_pblock [get_pblocks pblock_microblaze_0] [get_cells -quiet [list Fast_IP_Clock_i/microblaze_0]]
-resize_pblock [get_pblocks pblock_microblaze_0] -add {SLICE_X12Y18:SLICE_X39Y48}
+resize_pblock [get_pblocks pblock_microblaze_0] -add {SLICE_X12Y10:SLICE_X39Y48}
 
 create_pblock pblock_mdm_1
 add_cells_to_pblock [get_pblocks pblock_mdm_1] [get_cells -quiet [list Fast_IP_Clock_i/mdm_1]]
-resize_pblock [get_pblocks pblock_mdm_1] -add {SLICE_X40Y41:SLICE_X45Y49}
+resize_pblock [get_pblocks pblock_mdm_1] -add {SLICE_X40Y35:SLICE_X51Y49}
 
 create_pblock pblock_calc_0
 add_cells_to_pblock [get_pblocks pblock_calc_0] [get_cells -quiet [list Fast_IP_Clock_i/calc_0]]
@@ -736,12 +736,13 @@ resize_pblock [get_pblocks pblock_calc_0] -add {SLICE_X52Y50:SLICE_X81Y148}
 
 create_pblock pblock_axi_uart16550_0
 add_cells_to_pblock [get_pblocks pblock_axi_uart16550_0] [get_cells -quiet [list Fast_IP_Clock_i/axi_uart16550_0]]
-resize_pblock [get_pblocks pblock_axi_uart16550_0] -add {SLICE_X82Y125:SLICE_X89Y141}
+resize_pblock [get_pblocks pblock_axi_uart16550_0] -add {SLICE_X82Y123:SLICE_X89Y143}
 
 create_pblock pblock_psram_ip_0
 add_cells_to_pblock [get_pblocks pblock_psram_ip_0] [get_cells -quiet [list Fast_IP_Clock_i/psram_ip_0]]
-resize_pblock [get_pblocks pblock_psram_ip_0] -add {SLICE_X0Y88:SLICE_X7Y99}
+resize_pblock [get_pblocks pblock_psram_ip_0] -add {SLICE_X0Y81:SLICE_X7Y99}
 
 create_pblock pblock_axi_gpio_0
 add_cells_to_pblock [get_pblocks pblock_axi_gpio_0] [get_cells -quiet [list Fast_IP_Clock_i/axi_gpio_0]]
 resize_pblock [get_pblocks pblock_axi_gpio_0] -add {SLICE_X0Y143:SLICE_X3Y147}
+

@@ -79,13 +79,13 @@ You can contact the author at :
 *  Includes
 **************************************/
 #define LZ4F_STATIC_LINKING_ONLY
-#include "lz4frame.h"
+#include "../LZ4/lz4frame.h"
 #define LZ4_STATIC_LINKING_ONLY
-#include "lz4.h"
+#include "../LZ4/lz4.h"
 #define LZ4_HC_STATIC_LINKING_ONLY
-#include "lz4hc.h"
+#include "../LZ4/lz4hc.h"
 #define XXH_STATIC_LINKING_ONLY
-#include "xxhash.h"
+#include "../LZ4/xxhash.h"
 
 
 /*-************************************

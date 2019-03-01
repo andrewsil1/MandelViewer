@@ -360,6 +360,8 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_ADDR_TAG_BITS {0} \
    CONFIG.C_DCACHE_ADDR_TAG {11} \
+   CONFIG.C_DCACHE_ALWAYS_USED {0} \
+   CONFIG.C_DCACHE_BYTE_SIZE {8192} \
    CONFIG.C_DCACHE_FORCE_TAG_LUTRAM {1} \
    CONFIG.C_DEBUG_ENABLED {1} \
    CONFIG.C_DIV_ZERO_EXCEPTION {0} \
@@ -376,17 +378,24 @@ proc create_root_design { parentCell } {
    CONFIG.C_USE_BRANCH_TARGET_CACHE {1} \
    CONFIG.C_USE_DCACHE {1} \
    CONFIG.C_USE_DIV {1} \
-   CONFIG.C_USE_HW_MUL {0} \
+   CONFIG.C_USE_FPU {0} \
+   CONFIG.C_USE_HW_MUL {1} \
    CONFIG.C_USE_ICACHE {0} \
+   CONFIG.C_USE_PCMP_INSTR {1} \
    CONFIG.C_USE_STACK_PROTECTION {1} \
-   CONFIG.G_USE_EXCEPTIONS {1} \
+   CONFIG.G_USE_EXCEPTIONS {0} \
  ] $microblaze_0
 
   # Create instance: microblaze_0_axi_periph, and set properties
   set microblaze_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 microblaze_0_axi_periph ]
   set_property -dict [ list \
+   CONFIG.ENABLE_ADVANCED_OPTIONS {1} \
    CONFIG.NUM_MI {6} \
    CONFIG.NUM_SI {3} \
+   CONFIG.S00_HAS_DATA_FIFO {2} \
+   CONFIG.S01_HAS_DATA_FIFO {2} \
+   CONFIG.S02_HAS_DATA_FIFO {2} \
+   CONFIG.STRATEGY {2} \
  ] $microblaze_0_axi_periph
 
   # Create instance: microblaze_0_local_memory

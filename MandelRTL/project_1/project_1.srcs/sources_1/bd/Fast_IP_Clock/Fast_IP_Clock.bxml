@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="Fast_IP_Clock" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1551225705"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1551225705"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1551225705"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1551225705"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1551400996"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1551400996"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1551400996"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1551400996"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\Fast_IP_Clock_mdm_1_0\Fast_IP_Clock_mdm_1_0.xci" Type="IP">
         <Instance HierarchyPath="mdm_1"/>
@@ -136,7 +136,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\Fast_IP_Clock_microblaze_0_axi_periph_1\Fast_IP_Clock_microblaze_0_axi_periph_1.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -170,6 +169,14 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
+      <File Name="ip\Fast_IP_Clock_s00_data_fifo_0\Fast_IP_Clock_s00_data_fifo_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_axi_periph/s00_couplers/s00_data_fifo"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
       <File Name="ip\Fast_IP_Clock_auto_cc_2\Fast_IP_Clock_auto_cc_2.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0_axi_periph/s00_couplers/auto_cc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -186,8 +193,24 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
+      <File Name="ip\Fast_IP_Clock_s01_data_fifo_0\Fast_IP_Clock_s01_data_fifo_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_axi_periph/s01_couplers/s01_data_fifo"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
       <File Name="ip\Fast_IP_Clock_auto_cc_3\Fast_IP_Clock_auto_cc_3.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0_axi_periph/s01_couplers/auto_cc"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\Fast_IP_Clock_s02_data_fifo_0\Fast_IP_Clock_s02_data_fifo_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_axi_periph/s02_couplers/s02_data_fifo"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
