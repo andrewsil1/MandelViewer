@@ -42,6 +42,21 @@
 			<location>C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/AXI/.tcls</location>
 		</link>
 		<link>
+			<name>source/mandel.cpp</name>
+			<type>1</type>
+			<location>C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp</location>
+		</link>
+		<link>
+			<name>source/pretest.cpp</name>
+			<type>1</type>
+			<location>C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/pretest.cpp</location>
+		</link>
+		<link>
+			<name>testbench/mandel_maintb.cpp</name>
+			<type>1</type>
+			<location>C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel_maintb.cpp</location>
+		</link>
+		<link>
 			<name>AXI/constraints/.xml.directive</name>
 			<type>1</type>
 			<location>C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/AXI/AXI.directive</location>

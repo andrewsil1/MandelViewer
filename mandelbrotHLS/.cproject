@@ -179,7 +179,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.2031150735" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.2031150735" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.960923813" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						
@@ -189,7 +189,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding="AXI|MemPart|NoOpt|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="AXI|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
@@ -357,7 +357,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.cpp.compiler.option.other.other.256570833" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.cpp.compiler.option.other.other.256570833" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1983028906" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
                             						
@@ -367,7 +367,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding="AXI|MemPart|NoOpt|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding="AXI|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
