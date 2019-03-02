@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="Fast_IP_Clock" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1551400996"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1551400996"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1551400996"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1551400996"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1551485650"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1551485650"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1551485650"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1551485650"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\Fast_IP_Clock_mdm_1_0\Fast_IP_Clock_mdm_1_0.xci" Type="IP">
         <Instance HierarchyPath="mdm_1"/>
@@ -136,6 +136,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\Fast_IP_Clock_microblaze_0_axi_periph_1\Fast_IP_Clock_microblaze_0_axi_periph_1.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

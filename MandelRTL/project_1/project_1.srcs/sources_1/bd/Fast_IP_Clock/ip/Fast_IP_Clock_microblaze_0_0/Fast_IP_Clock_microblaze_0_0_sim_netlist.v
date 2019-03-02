@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Thu Feb 28 16:45:56 2019
+// Date        : Thu Feb 28 16:45:51 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_microblaze_0_0/Fast_IP_Clock_microblaze_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_microblaze_0_0 -prefix
+//               Fast_IP_Clock_microblaze_0_0_ Fast_IP_Clock_microblaze_0_0_sim_netlist.v
 // Design      : Fast_IP_Clock_microblaze_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -1113,7 +1113,6 @@ module Fast_IP_Clock_microblaze_0_0
         .Write_Strobe(Write_Strobe));
 endmodule
 
-(* ORIG_REF_NAME = "ALU" *) 
 module Fast_IP_Clock_microblaze_0_0_ALU
    (mem_valid_req0,
     A1,
@@ -1834,7 +1833,6 @@ module Fast_IP_Clock_microblaze_0_0_ALU
         .lopt_3(lopt_74));
 endmodule
 
-(* ORIG_REF_NAME = "ALU_Bit" *) 
 module Fast_IP_Clock_microblaze_0_0_ALU_Bit
    (EX_CarryOut,
     A1,
@@ -4138,7 +4136,6 @@ module Fast_IP_Clock_microblaze_0_0_ALU_Bit__parameterized2
         .lopt(lopt));
 endmodule
 
-(* ORIG_REF_NAME = "Barrel_Shifter_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_Barrel_Shifter_gti
    (MEM_Barrel_Result,
     \Using_FPGA.Native ,
@@ -5805,7 +5802,6 @@ module Fast_IP_Clock_microblaze_0_0_Barrel_Shifter_gti
         .O(I025_out));
 endmodule
 
-(* ORIG_REF_NAME = "Byte_Doublet_Handle_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_Byte_Doublet_Handle_gti
    (mem_reverse_byteorder_reg_0,
     wb_read_lsb_1_sel,
@@ -6372,7 +6368,6 @@ module Fast_IP_Clock_microblaze_0_0_Byte_Doublet_Handle_gti
         .R(sync_reset));
 endmodule
 
-(* ORIG_REF_NAME = "Cache_Interface" *) 
 module Fast_IP_Clock_microblaze_0_0_Cache_Interface
    (\Using_FPGA.Native ,
     \MEM_DataBus_Addr_reg[0] ,
@@ -9164,7 +9159,6 @@ module Fast_IP_Clock_microblaze_0_0_Cache_Interface
         .O(write_req_drop_cmb));
 endmodule
 
-(* ORIG_REF_NAME = "DAXI_interface" *) 
 module Fast_IP_Clock_microblaze_0_0_DAXI_interface
    (active_access_d1,
     active_access,
@@ -9693,7 +9687,6 @@ module Fast_IP_Clock_microblaze_0_0_DAXI_interface
         .R(sync_reset));
 endmodule
 
-(* ORIG_REF_NAME = "DCache_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_DCache_gti
    (MEM_DCache_Drop_request,
     mem_dcache_data_strobe,
@@ -11468,7 +11461,6 @@ module Fast_IP_Clock_microblaze_0_0_DCache_gti
         .R(reset_bool_for_rst));
 endmodule
 
-(* ORIG_REF_NAME = "Data_Flow_Logic" *) 
 module Fast_IP_Clock_microblaze_0_0_Data_Flow_Logic
    (MEM_EX_Result,
     SR,
@@ -11927,7 +11919,6 @@ module Fast_IP_Clock_microblaze_0_0_Data_Flow_Logic
         .R(\WB_MEM_Result_reg[31]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "Data_Flow_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_Data_Flow_gti
    (div_count_is_2,
     Q,
@@ -13770,7 +13761,6 @@ module Fast_IP_Clock_microblaze_0_0_Data_Flow_gti
         .wb_exception_unmasked(wb_exception_unmasked));
 endmodule
 
-(* ORIG_REF_NAME = "Debug" *) 
 module Fast_IP_Clock_microblaze_0_0_Debug
    (LOCKSTEP_Master_Out,
     \Serial_Dbg_Intf.force_stop_cmd_i_reg_0 ,
@@ -16923,7 +16913,6 @@ module Fast_IP_Clock_microblaze_0_0_Debug
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "Decode_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_Decode_gti
    (\MEM_DataBus_Addr_reg[31]_0 ,
     \Using_FPGA.Native ,
@@ -23582,7 +23571,6 @@ module Fast_IP_Clock_microblaze_0_0_Decode_gti
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "Div_unit_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_Div_unit_gti
    (div_count_is_2,
     Q,
@@ -26433,7 +26421,6 @@ module Fast_IP_Clock_microblaze_0_0_Div_unit_gti
         .O(mem_is_msr_instr_reg[15]));
 endmodule
 
-(* ORIG_REF_NAME = "MB_AND2B1L" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_AND2B1L
    (D,
     D_AS,
@@ -26546,7 +26533,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_AND2B1L_34
         .O(in0));
 endmodule
 
-(* ORIG_REF_NAME = "MB_DSP48E1" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_DSP48E1
    (D,
     \Using_FPGA.DSP48E1_I1_0 ,
@@ -27132,7 +27118,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_DSP48E1__parameterized3
         .UNDERFLOW(\Using_FPGA.DSP48E1_I1_n_5 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDE" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_FDE
    (\Using_FPGA.Native_0 ,
     \Using_FPGA.Native_1 ,
@@ -28028,7 +28013,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_FDE_725
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDR" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_FDR
    (wb_dcache_valid_read_data,
     sync_reset,
@@ -28056,7 +28040,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_FDR
         .R(sync_reset));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDRE" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_FDRE
    (w_fifo_exist,
     D,
@@ -41849,7 +41832,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_FDR_98
         .R(sync_reset));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDS" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_FDS
    (\Using_FPGA.Native_0 ,
     I0177_out,
@@ -42430,7 +42412,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_FDS
         .O(\Using_FPGA.Native_1 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDSE" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_FDSE
    (w_read_fifo_addr_3,
     sync_reset,
@@ -42659,7 +42640,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_FDSE_188
         .O(\Using_FPGA.Native_2 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_LUT4" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_LUT4
    (S,
     Q,
@@ -43791,7 +43771,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_LUT4__parameterized3_26
         .O(WEB));
 endmodule
 
-(* ORIG_REF_NAME = "MB_LUT5" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_LUT5
    (WB_DCache_Valid_Read_data_i_31,
     cacheline_copy_data_31,
@@ -44783,7 +44762,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_LUT5_99
         .O(WB_DCache_Valid_Read_data_i_6));
 endmodule
 
-(* ORIG_REF_NAME = "MB_LUT6" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_LUT6
    (xor6_1);
   output xor6_1;
@@ -44915,7 +44893,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_LUT6_197
         .O(xor6_3));
 endmodule
 
-(* ORIG_REF_NAME = "MB_LUT6_2" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_LUT6_2
    (DI,
     S,
@@ -52000,7 +51977,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_LUT6__parameterized8
         .O(of_Valid_II));
 endmodule
 
-(* ORIG_REF_NAME = "MB_MULT_AND" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_MULT_AND
    (DI,
     I0,
@@ -52024,7 +52000,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_MULT_AND
         .O(DI));
 endmodule
 
-(* ORIG_REF_NAME = "MB_MUXCY" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_MUXCY
    (mem_databus_ready,
     \Using_FPGA.Native_0 ,
@@ -56478,7 +56453,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_MUXCY_954
   assign CI = lopt;
 endmodule
 
-(* ORIG_REF_NAME = "MB_MUXCY_XORCY" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_MUXCY_XORCY
    (Res,
     xor6_3,
@@ -64733,7 +64707,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_MUXCY_XORCY_999
   assign EX_CarryOut = lopt;
 endmodule
 
-(* ORIG_REF_NAME = "MB_MUXF7" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_MUXF7
    (sel_input_i_1,
     I4_0,
@@ -69882,7 +69855,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_MUXF7_890
         .O(\Using_FPGA.Native_i_3__64_n_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_RAM16X1D" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_RAM16X1D
    (cacheline_copy_data_31,
     Clk,
@@ -71002,7 +70974,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_RAM16X1D_65
         .read_data_cnt(read_data_cnt));
 endmodule
 
-(* ORIG_REF_NAME = "MB_RAM32M" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_RAM32M
    (GPR_Op1,
     GPR_Op2,
@@ -71962,7 +71933,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_RAM32M_858
         .WE(\EX_Op3[19]_i_2 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_RAM32X1D" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_RAM32X1D
    (cacheline_copy_data_22,
     Clk,
@@ -73498,7 +73468,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_RAM32X1D_183
         .WE(\Using_FPGA.Native_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_RAMB36" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_RAMB36
    (InA,
     \Using_FPGA.Native_0 ,
@@ -74696,7 +74665,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_RAMB36__parameterized1_239
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,WEB}));
 endmodule
 
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_SRL16E
    (Q_0,
     Q,
@@ -75260,7 +75228,6 @@ module Fast_IP_Clock_microblaze_0_0_MB_SRL16E__parameterized9
         .Q(Q3_out));
 endmodule
 
-(* ORIG_REF_NAME = "MB_SRLC16E" *) 
 module Fast_IP_Clock_microblaze_0_0_MB_SRLC16E
    (SRL16_Sel_7,
     which_pc__0,
@@ -75647,7 +75614,7 @@ endmodule
 (* C_USE_HW_MUL = "1" *) (* C_USE_ICACHE = "0" *) (* C_USE_INTERRUPT = "1" *) 
 (* C_USE_MMU = "0" *) (* C_USE_MSR_INSTR = "0" *) (* C_USE_NON_SECURE = "0" *) 
 (* C_USE_PCMP_INSTR = "1" *) (* C_USE_REORDER_INSTR = "1" *) (* C_USE_STACK_PROTECTION = "1" *) 
-(* ORIG_REF_NAME = "MicroBlaze" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module Fast_IP_Clock_microblaze_0_0_MicroBlaze
    (RAM_To,
     RAM_From,
@@ -88799,7 +88766,6 @@ module Fast_IP_Clock_microblaze_0_0_MicroBlaze
        (.P(\<const1> ));
 endmodule
 
-(* ORIG_REF_NAME = "MicroBlaze_Core" *) 
 module Fast_IP_Clock_microblaze_0_0_MicroBlaze_Core
    (D,
     Sleep,
@@ -89050,7 +89016,6 @@ module Fast_IP_Clock_microblaze_0_0_MicroBlaze_Core
         .O(reset_temp__0));
 endmodule
 
-(* ORIG_REF_NAME = "MicroBlaze_GTi" *) 
 module Fast_IP_Clock_microblaze_0_0_MicroBlaze_GTi
    (D,
     Sleep,
@@ -91556,7 +91521,6 @@ module Fast_IP_Clock_microblaze_0_0_MicroBlaze_GTi
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "Operand_Select_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_Operand_Select_gti
    (Q,
     \EX_Op1_reg[1]_0 ,
@@ -94916,7 +94880,6 @@ module Fast_IP_Clock_microblaze_0_0_Operand_Select_gti
         .O(in0));
 endmodule
 
-(* ORIG_REF_NAME = "PC_Module_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_PC_Module_gti
    (D,
     WEBWE,
@@ -99006,7 +98969,6 @@ module Fast_IP_Clock_microblaze_0_0_PC_Module_gti
         .R(reset_bool_for_rst));
 endmodule
 
-(* ORIG_REF_NAME = "Parity" *) 
 module Fast_IP_Clock_microblaze_0_0_Parity
    (Res,
     InA);
@@ -99044,7 +99006,6 @@ module Fast_IP_Clock_microblaze_0_0_Parity_519
         .bt_in_delayslot(bt_in_delayslot));
 endmodule
 
-(* ORIG_REF_NAME = "Parity_Recursive_LUT6" *) 
 module Fast_IP_Clock_microblaze_0_0_Parity_Recursive_LUT6
    (DIBDI,
     Q,
@@ -100026,7 +99987,6 @@ module Fast_IP_Clock_microblaze_0_0_Parity__parameterized6_29
         .xor6_2(xor6_2));
 endmodule
 
-(* ORIG_REF_NAME = "PreFetch_Buffer_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_PreFetch_Buffer_gti
    (\Using_FPGA.Native ,
     \Using_FPGA.Native_0 ,
@@ -102928,7 +102888,6 @@ module Fast_IP_Clock_microblaze_0_0_PreFetch_Buffer_gti
         .Q(p_1_in174_in));
 endmodule
 
-(* ORIG_REF_NAME = "RAM_Module" *) 
 module Fast_IP_Clock_microblaze_0_0_RAM_Module
    (InA,
     \Using_FPGA.Native ,
@@ -106641,7 +106600,6 @@ module Fast_IP_Clock_microblaze_0_0_RAM_Module__parameterized5
         .WEB({WEB[2],WEB[3]}));
 endmodule
 
-(* ORIG_REF_NAME = "Register_File_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_Register_File_gti
    (GPR_Op1,
     GPR_Op2,
@@ -106898,7 +106856,6 @@ module Fast_IP_Clock_microblaze_0_0_Register_File_gti
         .of_gpr_op3_rd_addr(of_gpr_op3_rd_addr));
 endmodule
 
-(* ORIG_REF_NAME = "Shift_Logic_Module_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_Shift_Logic_Module_gti
    (out,
     \EX_Op1_reg[24] ,
@@ -106918,7 +106875,6 @@ module Fast_IP_Clock_microblaze_0_0_Shift_Logic_Module_gti
   assign sign_doublet = \Using_FPGA.Native ;
 endmodule
 
-(* ORIG_REF_NAME = "Zero_Detect_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_Zero_Detect_gti
    (ex_op1_cmp_eq_n_reg,
     ex_hold_div_by_zero_reg,
@@ -107097,7 +107053,6 @@ module Fast_IP_Clock_microblaze_0_0_Zero_Detect_gti
         .zero_CI_6(zero_CI_6));
 endmodule
 
-(* ORIG_REF_NAME = "address_hit" *) 
 module Fast_IP_Clock_microblaze_0_0_address_hit
    (p_45_out,
     Hit,
@@ -107327,7 +107282,6 @@ module Fast_IP_Clock_microblaze_0_0_address_hit
         .single_Step_N_reg(single_Step_N_reg));
 endmodule
 
-(* ORIG_REF_NAME = "cache_valid_bit_detect" *) 
 module Fast_IP_Clock_microblaze_0_0_cache_valid_bit_detect
    (mem_cache_hit,
     Trace_Cache_Hit0,
@@ -107362,7 +107316,6 @@ module Fast_IP_Clock_microblaze_0_0_cache_valid_bit_detect
         .mem_tag_hit_without_data_parity_0(mem_tag_hit_without_data_parity_0));
 endmodule
 
-(* ORIG_REF_NAME = "carry_and" *) 
 module Fast_IP_Clock_microblaze_0_0_carry_and
    (mem_tag_hit_without_data_parity_3,
     \Using_FPGA.Native ,
@@ -108688,7 +108641,6 @@ module Fast_IP_Clock_microblaze_0_0_carry_and_523
         .lopt_1(lopt_1));
 endmodule
 
-(* ORIG_REF_NAME = "carry_or" *) 
 module Fast_IP_Clock_microblaze_0_0_carry_or
    (mem_databus_ready,
     \Using_FPGA.Native ,
@@ -109225,7 +109177,6 @@ module Fast_IP_Clock_microblaze_0_0_carry_or_524
         .we_hold(we_hold));
 endmodule
 
-(* ORIG_REF_NAME = "comparator" *) 
 module Fast_IP_Clock_microblaze_0_0_comparator
    (Carry_OUT,
     Carry_IN,
@@ -109633,7 +109584,6 @@ module Fast_IP_Clock_microblaze_0_0_comparator__parameterized1_134
         .mem_tag_miss_without_parity(mem_tag_miss_without_parity));
 endmodule
 
-(* ORIG_REF_NAME = "dsp_module" *) 
 module Fast_IP_Clock_microblaze_0_0_dsp_module
    (D,
     \Using_FPGA.DSP48E1_I1 ,
@@ -109738,7 +109688,6 @@ module Fast_IP_Clock_microblaze_0_0_dsp_module__parameterized3
         .\Using_FPGA.DSP48E1_I1_4 (\Using_FPGA.DSP48E1_I1_3 ));
 endmodule
 
-(* ORIG_REF_NAME = "exception_registers_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_exception_registers_gti
    (DI,
     \Using_FPGA.Native ,
@@ -112619,7 +112568,6 @@ module Fast_IP_Clock_microblaze_0_0_exception_registers_gti
         .R(sync_reset));
 endmodule
 
-(* ORIG_REF_NAME = "instr_mux" *) 
 module Fast_IP_Clock_microblaze_0_0_instr_mux
    (I041_out,
     Y,
@@ -112666,7 +112614,6 @@ module Fast_IP_Clock_microblaze_0_0_instr_mux
         .in(in));
 endmodule
 
-(* ORIG_REF_NAME = "jump_logic" *) 
 module Fast_IP_Clock_microblaze_0_0_jump_logic
    (\Performance_Debug_Control.ex_dbg_pc_hit_i_reg ,
     ex_Take_Intr_or_Exc_reg,
@@ -113001,7 +112948,6 @@ module Fast_IP_Clock_microblaze_0_0_jump_logic
         .R(reset_bool_for_rst));
 endmodule
 
-(* ORIG_REF_NAME = "mb_sync_bit" *) 
 module Fast_IP_Clock_microblaze_0_0_mb_sync_bit
    (out,
     reset_temp,
@@ -114022,7 +113968,6 @@ module Fast_IP_Clock_microblaze_0_0_mb_sync_bit__parameterized4_287
         .Q(D));
 endmodule
 
-(* ORIG_REF_NAME = "mb_sync_vec" *) 
 module Fast_IP_Clock_microblaze_0_0_mb_sync_vec
    (D,
     Raw,
@@ -114193,7 +114138,6 @@ module Fast_IP_Clock_microblaze_0_0_mb_sync_vec__parameterized1
         .sync_reset(sync_reset));
 endmodule
 
-(* ORIG_REF_NAME = "msr_reg_gti" *) 
 module Fast_IP_Clock_microblaze_0_0_msr_reg_gti
    (\Using_FPGA.Native ,
     mem_MSR,
@@ -114558,7 +114502,6 @@ module Fast_IP_Clock_microblaze_0_0_msr_reg_gti
         .R(sync_reset));
 endmodule
 
-(* ORIG_REF_NAME = "mul_unit" *) 
 module Fast_IP_Clock_microblaze_0_0_mul_unit
    (\SHR_Value_DFF_reg[17] ,
     \SHR_Value_DFF_reg[16] ,
@@ -114781,7 +114724,6 @@ module Fast_IP_Clock_microblaze_0_0_mul_unit
         .\Using_FPGA.DSP48E1_I1_2 (\Using_FPGA.DSP48E1_I1_2 [16:0]));
 endmodule
 
-(* ORIG_REF_NAME = "mux_bus" *) 
 module Fast_IP_Clock_microblaze_0_0_mux_bus
    (I041_out,
     Y,
@@ -114989,7 +114931,6 @@ module Fast_IP_Clock_microblaze_0_0_mux_bus_631
         .ex_load_btr(ex_load_btr));
 endmodule
 
-(* ORIG_REF_NAME = "read_data_mux" *) 
 module Fast_IP_Clock_microblaze_0_0_read_data_mux
    (wb_databus_read_data,
     Q,
@@ -115266,7 +115207,6 @@ module Fast_IP_Clock_microblaze_0_0_read_data_mux
         .O(wb_databus_read_data[7]));
 endmodule
 
-(* ORIG_REF_NAME = "stack_protection" *) 
 module Fast_IP_Clock_microblaze_0_0_stack_protection
    (CO,
     \slr_reg_reg[1]_0 ,

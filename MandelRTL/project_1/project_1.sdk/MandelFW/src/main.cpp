@@ -3,19 +3,18 @@
 
 #include "xparameters.h"
 #include "xil_cache.h"
-#include <climits>
-#include <stdio.h>
 #include "xil_exception.h"
 #include "xuartns550.h"
 #include "xuartlite.h"
 #include "xintc.h"
-//#include "xgpio_l.h"
-#include "psram_ip.h"
 #include "xcalc.h"
 #include "microblaze_sleep.h"
-#include "uartfuncs.h"
-#include "xuartlite.h"
 
+//#include <climits>
+#include <stdio.h>
+
+#include "uartfuncs.h"
+#include "psram_ip.h"
 #include "LZ4/lz4frame.h"
 #include "LZ4/xxhash.h"
 

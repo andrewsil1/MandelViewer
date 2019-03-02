@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Feb 10 20:34:59 2019
+// Date        : Sun Feb 10 20:34:58 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim {C:/Users/andrewsi/OneDrive/Documents/Visual Studio
-//               2017/Projects/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_mdm_1_0/Fast_IP_Clock_mdm_1_0_sim_netlist.v}
+// Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_mdm_1_0 -prefix
+//               Fast_IP_Clock_mdm_1_0_ Fast_IP_Clock_mdm_1_0_sim_netlist.v
 // Design      : Fast_IP_Clock_mdm_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -2533,7 +2533,6 @@ module Fast_IP_Clock_mdm_1_0
         .bscan_ext_update(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "JTAG_CONTROL" *) 
 module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
    (Q,
     data_Exists_I_reg,
@@ -4144,7 +4143,6 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
         .Q(\tdi_shifter_reg_n_0_[7] ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_BSCANE2" *) 
 module Fast_IP_Clock_mdm_1_0_MB_BSCANE2
    (\Use_BSCAN.PORT_Selector_reg[0] ,
     DRCK,
@@ -4303,7 +4301,6 @@ module Fast_IP_Clock_mdm_1_0_MB_BSCANE2
         .O(\shift_Count_reg[0] ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_BUFG" *) 
 module Fast_IP_Clock_mdm_1_0_MB_BUFG
    (Ext_JTAG_DRCK,
     DRCK);
@@ -4319,7 +4316,6 @@ module Fast_IP_Clock_mdm_1_0_MB_BUFG
         .O(Ext_JTAG_DRCK));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDC_1" *) 
 module Fast_IP_Clock_mdm_1_0_MB_FDC_1
    (D_2,
     data_cmd_reset6_out,
@@ -4870,7 +4866,6 @@ module Fast_IP_Clock_mdm_1_0_MB_FDC_1
         .O(\tdi_shifter_reg[0]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDRE" *) 
 module Fast_IP_Clock_mdm_1_0_MB_FDRE
    (Q_0,
     bus2ip_wrce,
@@ -4900,7 +4895,6 @@ module Fast_IP_Clock_mdm_1_0_MB_FDRE
         .R(bus2ip_wrce));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDRE_1" *) 
 module Fast_IP_Clock_mdm_1_0_MB_FDRE_1
    (sync,
     \Use_Serial_Unified_Completion.count_reg[1] ,
@@ -5597,7 +5591,6 @@ module Fast_IP_Clock_mdm_1_0_MB_FDRE_7
         .O(LI));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDRSE" *) 
 module Fast_IP_Clock_mdm_1_0_MB_FDRSE
    (Ext_BRK,
     \Using_FPGA.Native_0 ,
@@ -5636,7 +5629,6 @@ module Fast_IP_Clock_mdm_1_0_MB_FDRSE
         .O(\Using_FPGA.Native_i_1__4_n_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_MUXCY_XORCY" *) 
 module Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY
    (LO,
     O,
@@ -5892,7 +5884,6 @@ module Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY_6
   assign O = lopt_1;
 endmodule
 
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
 module Fast_IP_Clock_mdm_1_0_MB_SRL16E
    (\shift_Count_reg[0] ,
     Q,
@@ -6739,7 +6730,6 @@ module Fast_IP_Clock_mdm_1_0_MB_SRL16E__parameterized7_9
         .Q(Data_Out));
 endmodule
 
-(* ORIG_REF_NAME = "MB_XORCY" *) 
 module Fast_IP_Clock_mdm_1_0_MB_XORCY
    (sum_A_0,
     LI,
@@ -6785,7 +6775,7 @@ endmodule
 (* C_TRACE_CLK_FREQ_HZ = "200000000" *) (* C_TRACE_CLK_OUT_PHASE = "90" *) (* C_TRACE_DATA_WIDTH = "32" *) 
 (* C_TRACE_ID = "110" *) (* C_TRACE_OUTPUT = "0" *) (* C_TRACE_PROTOCOL = "1" *) 
 (* C_USE_BSCAN = "0" *) (* C_USE_CONFIG_RESET = "0" *) (* C_USE_CROSS_TRIGGER = "0" *) 
-(* C_USE_UART = "1" *) (* ORIG_REF_NAME = "MDM" *) 
+(* C_USE_UART = "1" *) 
 module Fast_IP_Clock_mdm_1_0_MDM
    (Config_Reset,
     Scan_Reset_Sel,
@@ -15628,7 +15618,6 @@ module Fast_IP_Clock_mdm_1_0_MDM
        (.P(\<const1> ));
 endmodule
 
-(* ORIG_REF_NAME = "MDM_Core" *) 
 module Fast_IP_Clock_mdm_1_0_MDM_Core
    (Q,
     rx_Data_Present,
@@ -16306,7 +16295,6 @@ module Fast_IP_Clock_mdm_1_0_MDM_Core
         .S(S_AXI_ARESETN_0));
 endmodule
 
-(* ORIG_REF_NAME = "SRL_FIFO" *) 
 module Fast_IP_Clock_mdm_1_0_SRL_FIFO
    (data_Exists_I_reg_0,
     RX_Data,
@@ -16797,7 +16785,6 @@ module Fast_IP_Clock_mdm_1_0_SRL_FIFO_0
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "address_decoder" *) 
 module Fast_IP_Clock_mdm_1_0_address_decoder
    (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ,
@@ -17214,7 +17201,6 @@ module Fast_IP_Clock_mdm_1_0_address_decoder
         .O(\FSM_onehot_state_reg[3] ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module Fast_IP_Clock_mdm_1_0_axi_lite_ipif
    (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ,
@@ -17361,7 +17347,6 @@ module Fast_IP_Clock_mdm_1_0_axi_lite_ipif
         .tx_Buffer_Full(tx_Buffer_Full));
 endmodule
 
-(* ORIG_REF_NAME = "pselect_f" *) 
 module Fast_IP_Clock_mdm_1_0_pselect_f
    (ce_expnd_i_3,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
@@ -17403,7 +17388,6 @@ module Fast_IP_Clock_mdm_1_0_pselect_f__parameterized1
         .O(ce_expnd_i_1));
 endmodule
 
-(* ORIG_REF_NAME = "slave_attachment" *) 
 module Fast_IP_Clock_mdm_1_0_slave_attachment
    (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,

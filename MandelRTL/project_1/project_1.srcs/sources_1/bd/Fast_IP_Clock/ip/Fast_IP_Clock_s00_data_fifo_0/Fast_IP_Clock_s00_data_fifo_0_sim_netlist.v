@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Thu Feb 28 16:46:29 2019
+// Date        : Thu Feb 28 16:46:28 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_s00_data_fifo_0/Fast_IP_Clock_s00_data_fifo_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_s00_data_fifo_0 -prefix
+//               Fast_IP_Clock_s00_data_fifo_0_ Fast_IP_Clock_s00_data_fifo_0_sim_netlist.v
 // Design      : Fast_IP_Clock_s00_data_fifo_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -373,10 +373,10 @@ endmodule
 (* C_AXI_READ_FIFO_TYPE = "bram" *) (* C_AXI_RUSER_WIDTH = "1" *) (* C_AXI_SUPPORTS_USER_SIGNALS = "0" *) 
 (* C_AXI_WRITE_FIFO_DELAY = "1" *) (* C_AXI_WRITE_FIFO_DEPTH = "512" *) (* C_AXI_WRITE_FIFO_TYPE = "bram" *) 
 (* C_AXI_WUSER_WIDTH = "1" *) (* C_FAMILY = "artix7" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* ORIG_REF_NAME = "axi_data_fifo_v2_1_17_axi_data_fifo" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
-(* P_AXILITE = "2" *) (* P_PRIM_FIFO_TYPE = "512x72" *) (* P_READ_FIFO_DEPTH_LOG = "9" *) 
-(* P_WIDTH_RACH = "63" *) (* P_WIDTH_RDCH = "37" *) (* P_WIDTH_WACH = "63" *) 
-(* P_WIDTH_WDCH = "38" *) (* P_WIDTH_WRCH = "4" *) (* P_WRITE_FIFO_DEPTH_LOG = "9" *) 
+(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
+(* P_PRIM_FIFO_TYPE = "512x72" *) (* P_READ_FIFO_DEPTH_LOG = "9" *) (* P_WIDTH_RACH = "63" *) 
+(* P_WIDTH_RDCH = "37" *) (* P_WIDTH_WACH = "63" *) (* P_WIDTH_WDCH = "38" *) 
+(* P_WIDTH_WRCH = "4" *) (* P_WRITE_FIFO_DEPTH_LOG = "9" *) 
 module Fast_IP_Clock_s00_data_fifo_0_axi_data_fifo_v2_1_17_axi_data_fifo
    (aclk,
     aresetn,
@@ -1182,8 +1182,8 @@ module Fast_IP_Clock_s00_data_fifo_0_axi_data_fifo_v2_1_17_axi_data_fifo
 endmodule
 
 (* DEF_VAL = "1'b0" *) (* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) 
-(* INV_DEF_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_cdc_async_rst" *) (* RST_ACTIVE_HIGH = "1" *) 
-(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "ASYNC_RST" *) 
+(* INV_DEF_VAL = "1'b1" *) (* RST_ACTIVE_HIGH = "1" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "ASYNC_RST" *) 
 module Fast_IP_Clock_s00_data_fifo_0_xpm_cdc_async_rst
    (src_arst,
     dest_clk,
@@ -1381,9 +1381,9 @@ module Fast_IP_Clock_s00_data_fifo_0_xpm_cdc_async_rst__6
         .Q(arststages_ff[1]));
 endmodule
 
-(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
-(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "1" *) (* VERSION = "0" *) 
-(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SINGLE" *) 
+(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) 
+(* SRC_INPUT_REG = "1" *) (* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) 
+(* xpm_cdc = "SINGLE" *) 
 module Fast_IP_Clock_s00_data_fifo_0_xpm_cdc_single
    (src_clk,
     src_in,
@@ -1574,8 +1574,8 @@ module Fast_IP_Clock_s00_data_fifo_0_xpm_cdc_single__2
 endmodule
 
 (* DEF_VAL = "1'b1" *) (* DEST_SYNC_FF = "5" *) (* INIT = "1" *) 
-(* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_sync_rst" *) (* SIM_ASSERT_CHK = "0" *) 
-(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SYNC_RST" *) 
+(* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SYNC_RST" *) 
 module Fast_IP_Clock_s00_data_fifo_0_xpm_cdc_sync_rst
    (src_rst,
     dest_clk,
@@ -1719,7 +1719,6 @@ module Fast_IP_Clock_s00_data_fifo_0_xpm_cdc_sync_rst__2
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_reg_slice" *) 
 module Fast_IP_Clock_s00_data_fifo_0_axi_reg_slice
    (src_arst,
     \gfwd_rev_pipeline1.m_valid_i_reg_0 ,
@@ -2881,7 +2880,6 @@ module Fast_IP_Clock_s00_data_fifo_0_axi_reg_slice__xdcDup__1
         .src_arst(src_arst));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module Fast_IP_Clock_s00_data_fifo_0_blk_mem_gen_generic_cstr
    (D,
     s_aclk,
@@ -2999,7 +2997,6 @@ module Fast_IP_Clock_s00_data_fifo_0_blk_mem_gen_generic_cstr__parameterized0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Fast_IP_Clock_s00_data_fifo_0_blk_mem_gen_prim_width
    (D,
     s_aclk,
@@ -3181,7 +3178,6 @@ module Fast_IP_Clock_s00_data_fifo_0_blk_mem_gen_prim_width__parameterized0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
 module Fast_IP_Clock_s00_data_fifo_0_blk_mem_gen_prim_wrapper
    (D,
     s_aclk,
@@ -3787,7 +3783,6 @@ module Fast_IP_Clock_s00_data_fifo_0_blk_mem_gen_prim_wrapper__parameterized0
         .O(ENA_I_0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module Fast_IP_Clock_s00_data_fifo_0_blk_mem_gen_top
    (D,
     s_aclk,
@@ -3905,7 +3900,6 @@ module Fast_IP_Clock_s00_data_fifo_0_blk_mem_gen_top__parameterized0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2" *) 
 module Fast_IP_Clock_s00_data_fifo_0_blk_mem_gen_v8_4_2
    (D,
     s_aclk,
@@ -4023,7 +4017,6 @@ module Fast_IP_Clock_s00_data_fifo_0_blk_mem_gen_v8_4_2__parameterized1
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2_synth" *) 
 module Fast_IP_Clock_s00_data_fifo_0_blk_mem_gen_v8_4_2_synth
    (D,
     s_aclk,
@@ -4619,7 +4612,6 @@ module Fast_IP_Clock_s00_data_fifo_0_compare__parameterized0_8
         .O(ram_full_fb_i_i_2__0_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "dmem" *) 
 module Fast_IP_Clock_s00_data_fifo_0_dmem
    (dout_i,
     s_aclk,
@@ -6211,7 +6203,6 @@ module Fast_IP_Clock_s00_data_fifo_0_dmem_17
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module Fast_IP_Clock_s00_data_fifo_0_fifo_generator_ramfifo
    (out,
     src_in,
@@ -6780,7 +6771,6 @@ module Fast_IP_Clock_s00_data_fifo_0_fifo_generator_ramfifo__xdcDup__1
         .src_in(src_in));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module Fast_IP_Clock_s00_data_fifo_0_fifo_generator_top
    (out,
     src_in,
@@ -7203,7 +7193,7 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "10" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "5" *) (* C_WR_PNTR_WIDTH_RDCH = "9" *) 
 (* C_WR_PNTR_WIDTH_WACH = "5" *) (* C_WR_PNTR_WIDTH_WDCH = "9" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_2_3" *) 
+(* C_WR_RESPONSE_LATENCY = "1" *) 
 module Fast_IP_Clock_s00_data_fifo_0_fifo_generator_v13_2_3
    (backup,
     backup_marker,
@@ -8126,7 +8116,6 @@ module Fast_IP_Clock_s00_data_fifo_0_fifo_generator_v13_2_3
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_2_3_synth" *) 
 module Fast_IP_Clock_s00_data_fifo_0_fifo_generator_v13_2_3_synth
    (Q,
     \goreg_bm.dout_i_reg[36] ,
@@ -8849,7 +8838,6 @@ module Fast_IP_Clock_s00_data_fifo_0_fifo_generator_v13_2_3_synth
         .src_arst(inverted_reset));
 endmodule
 
-(* ORIG_REF_NAME = "memory" *) 
 module Fast_IP_Clock_s00_data_fifo_0_memory
    (\goreg_dm.dout_i_reg[62]_0 ,
     E,
@@ -11124,7 +11112,6 @@ module Fast_IP_Clock_s00_data_fifo_0_memory__parameterized1
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module Fast_IP_Clock_s00_data_fifo_0_rd_bin_cntr
    (ram_empty_fb_i_reg,
     comp0,
@@ -12030,7 +12017,6 @@ module Fast_IP_Clock_s00_data_fifo_0_rd_bin_cntr__parameterized0_11
         .R(\gc0.count_d1_reg[8]_1 ));
 endmodule
 
-(* ORIG_REF_NAME = "rd_fwft" *) 
 module Fast_IP_Clock_s00_data_fifo_0_rd_fwft
    (out,
     empty_fwft_i_reg_0,
@@ -13055,7 +13041,6 @@ module Fast_IP_Clock_s00_data_fifo_0_rd_fwft__parameterized0_9
         .O(s_axi_rvalid));
 endmodule
 
-(* ORIG_REF_NAME = "rd_logic" *) 
 module Fast_IP_Clock_s00_data_fifo_0_rd_logic
    (out,
     empty_fwft_i_reg,
@@ -13465,7 +13450,6 @@ module Fast_IP_Clock_s00_data_fifo_0_rd_logic__parameterized0_3
         .s_aclk(s_aclk));
 endmodule
 
-(* ORIG_REF_NAME = "rd_status_flags_ss" *) 
 module Fast_IP_Clock_s00_data_fifo_0_rd_status_flags_ss
    (out,
     ram_empty_fb_i_reg_0,
@@ -13709,7 +13693,6 @@ module Fast_IP_Clock_s00_data_fifo_0_rd_status_flags_ss__parameterized0_10
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
 module Fast_IP_Clock_s00_data_fifo_0_reset_blk_ramfifo
    (AR,
     src_arst,
@@ -14702,7 +14685,6 @@ module Fast_IP_Clock_s00_data_fifo_0_reset_blk_ramfifo__parameterized2__xdcDup__
         .O(wr_rst_busy_i));
 endmodule
 
-(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module Fast_IP_Clock_s00_data_fifo_0_wr_bin_cntr
    (comp1,
     Q,
@@ -15890,7 +15872,6 @@ module Fast_IP_Clock_s00_data_fifo_0_wr_bin_cntr__parameterized0_6
         .O(\gcc0.gc0.count_d1_reg[8]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "wr_logic" *) 
 module Fast_IP_Clock_s00_data_fifo_0_wr_logic
    (E,
     s_axi_awready,
@@ -16186,7 +16167,6 @@ module Fast_IP_Clock_s00_data_fifo_0_wr_logic__parameterized0_4
         .v1_reg_1(\c1/v1_reg ));
 endmodule
 
-(* ORIG_REF_NAME = "wr_status_flags_ss" *) 
 module Fast_IP_Clock_s00_data_fifo_0_wr_status_flags_ss
    (E,
     s_axi_awready,

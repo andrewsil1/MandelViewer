@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Feb 10 20:35:00 2019
+-- Date        : Sun Feb 10 20:34:58 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {C:/Users/andrewsi/OneDrive/Documents/Visual Studio
---               2017/Projects/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_mdm_1_0/Fast_IP_Clock_mdm_1_0_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim -rename_top Fast_IP_Clock_mdm_1_0 -prefix
+--               Fast_IP_Clock_mdm_1_0_ Fast_IP_Clock_mdm_1_0_sim_netlist.vhdl
 -- Design      : Fast_IP_Clock_mdm_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -41,8 +41,6 @@ entity Fast_IP_Clock_mdm_1_0_MB_BSCANE2 is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Use_Serial_Unified_Completion.completion_status_reg[15]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_BSCANE2 : entity is "MB_BSCANE2";
 end Fast_IP_Clock_mdm_1_0_MB_BSCANE2;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_BSCANE2 is
@@ -173,8 +171,6 @@ entity Fast_IP_Clock_mdm_1_0_MB_BUFG is
     Ext_JTAG_DRCK : out STD_LOGIC;
     DRCK : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_BUFG : entity is "MB_BUFG";
 end Fast_IP_Clock_mdm_1_0_MB_BUFG;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_BUFG is
@@ -243,8 +239,6 @@ entity Fast_IP_Clock_mdm_1_0_MB_FDC_1 is
     completion_ctrl : in STD_LOGIC;
     in0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_FDC_1 : entity is "MB_FDC_1";
 end Fast_IP_Clock_mdm_1_0_MB_FDC_1;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_FDC_1 is
@@ -804,8 +798,6 @@ entity Fast_IP_Clock_mdm_1_0_MB_FDRE is
     tx_Buffer_Empty : in STD_LOGIC;
     S_AXI_ACLK : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_FDRE : entity is "MB_FDRE";
 end Fast_IP_Clock_mdm_1_0_MB_FDRE;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_FDRE is
@@ -849,8 +841,6 @@ entity Fast_IP_Clock_mdm_1_0_MB_FDRE_1 is
     \Use_UART.fifo_Din_reg[7]_2\ : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_FDRE_1 : entity is "MB_FDRE_1";
 end Fast_IP_Clock_mdm_1_0_MB_FDRE_1;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_FDRE_1 is
@@ -1511,8 +1501,6 @@ entity Fast_IP_Clock_mdm_1_0_MB_FDRSE is
     S_AXI_ACLK : in STD_LOGIC;
     set_Ext_BRK : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_FDRSE : entity is "MB_FDRSE";
 end Fast_IP_Clock_mdm_1_0_MB_FDRSE;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_FDRSE is
@@ -1572,8 +1560,6 @@ entity Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY is
     lopt_8 : out STD_LOGIC;
     lopt_9 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY : entity is "MB_MUXCY_XORCY";
 end Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY is
@@ -1828,8 +1814,6 @@ entity Fast_IP_Clock_mdm_1_0_MB_SRL16E is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \Use_E2.BSCANE2_I_i_8\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_SRL16E : entity is "MB_SRL16E";
 end Fast_IP_Clock_mdm_1_0_MB_SRL16E;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_SRL16E is
@@ -2740,8 +2724,6 @@ entity Fast_IP_Clock_mdm_1_0_MB_XORCY is
     LO : in STD_LOGIC;
     lopt : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_XORCY : entity is "MB_XORCY";
 end Fast_IP_Clock_mdm_1_0_MB_XORCY;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_XORCY is
@@ -2781,8 +2763,6 @@ entity Fast_IP_Clock_mdm_1_0_pselect_f is
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\ : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_pselect_f : entity is "pselect_f";
 end Fast_IP_Clock_mdm_1_0_pselect_f;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_pselect_f is
@@ -2846,8 +2826,6 @@ entity Fast_IP_Clock_mdm_1_0_SRL_FIFO is
     Bus_RNW_reg : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_SRL_FIFO : entity is "SRL_FIFO";
 end Fast_IP_Clock_mdm_1_0_SRL_FIFO;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_SRL_FIFO is
@@ -3405,8 +3383,6 @@ entity Fast_IP_Clock_mdm_1_0_address_decoder is
     \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg[2]_2\ : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg[2]_3\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_address_decoder : entity is "address_decoder";
 end Fast_IP_Clock_mdm_1_0_address_decoder;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_address_decoder is
@@ -3866,8 +3842,6 @@ entity Fast_IP_Clock_mdm_1_0_JTAG_CONTROL is
     D : in STD_LOGIC_VECTOR ( 0 to 0 );
     \shift_Count_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_JTAG_CONTROL : entity is "JTAG_CONTROL";
 end Fast_IP_Clock_mdm_1_0_JTAG_CONTROL;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_JTAG_CONTROL is
@@ -5888,8 +5862,6 @@ entity Fast_IP_Clock_mdm_1_0_slave_attachment is
     S_AXI_ARADDR : in STD_LOGIC_VECTOR ( 1 downto 0 );
     S_AXI_AWADDR : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_slave_attachment : entity is "slave_attachment";
 end Fast_IP_Clock_mdm_1_0_slave_attachment;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_slave_attachment is
@@ -6333,8 +6305,6 @@ entity Fast_IP_Clock_mdm_1_0_MDM_Core is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Use_Serial_Unified_Completion.count_reg[5]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MDM_Core : entity is "MDM_Core";
 end Fast_IP_Clock_mdm_1_0_MDM_Core;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MDM_Core is
@@ -7038,8 +7008,6 @@ entity Fast_IP_Clock_mdm_1_0_axi_lite_ipif is
     S_AXI_ARADDR : in STD_LOGIC_VECTOR ( 1 downto 0 );
     S_AXI_AWADDR : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end Fast_IP_Clock_mdm_1_0_axi_lite_ipif;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_axi_lite_ipif is
@@ -8670,8 +8638,6 @@ entity Fast_IP_Clock_mdm_1_0_MDM is
   attribute C_USE_CROSS_TRIGGER of Fast_IP_Clock_mdm_1_0_MDM : entity is 0;
   attribute C_USE_UART : integer;
   attribute C_USE_UART of Fast_IP_Clock_mdm_1_0_MDM : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MDM : entity is "MDM";
 end Fast_IP_Clock_mdm_1_0_MDM;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MDM is
