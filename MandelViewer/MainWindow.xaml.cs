@@ -11,6 +11,7 @@
     using System.IO.Ports;
     using System.Text;
     using System.Threading;
+    using System.Threading.Tasks;
     using System.Windows;
     using System.Windows.Automation.Peers;
     using System.Windows.Automation.Provider;
@@ -299,16 +300,16 @@
             buttonRight.IsEnabled = state;
         }
 
-        private void ButtonGo_Click(object sender, RoutedEventArgs e)
+        private async void ButtonGo_Click(object sender, RoutedEventArgs e)
         {
             ChangeButtonStates(false);
-            WaitForReady();
+            await Task.Run(() => WaitForReady());
             SendCommand(crc32, "A", imageParams.X0);
-            WaitForReady();
+            await Task.Run(() => WaitForReady());
             SendCommand(crc32, "B", imageParams.X1);
-            WaitForReady();
+            await Task.Run(() => WaitForReady());
             SendCommand(crc32, "C", imageParams.Y0);
-            WaitForReady();
+            await Task.Run(() => WaitForReady());
             _serialPort.Write("G");
             Debug.WriteLine("{0:hh:mm:ss.fff}: Calculation launched.", DateTime.Now);
             this.labelStatus.Content = "Working...";

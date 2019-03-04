@@ -44,8 +44,7 @@
  */
 #define TEST_BUFFER_SIZE        100
 #define FRAC_BITS				35
-#define BAUD_RATE				3000000U
-#define LED_CHANNEL				1
+#define BAUD_RATE				3000000U //3Mbps is the maximum the FTDI USB UART can handle.
 #define	CHUNK_SIZE				32768 //Serial packet chunks for sending image data
 
 /************************** Function Prototypes ******************************/
@@ -292,16 +291,7 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 {
 	int Status;
 
-    //Set up the UART and configure the interrupt handler for bytes in RX buffer
-	Status = UartSetup(IntcInstancePtr, UartInstancePtr, UartDeviceId, UartIntrId);
-		if (Status != XST_SUCCESS) {
-			return XST_FAILURE;
-		}
-
-	// Change the baud rate of the UART and indicate that incoming AXI clock is 100MHz.
-	XUartNs550_SetBaud(UART_BASE, UART_CLOCK, BAUD_RATE);
-
-	// Reinitialize the Debug UART
+    // Reinitialize the Debug UART
 	Status = XUartLite_Initialize(&DbgInstance, DBG_DEVICE_ID);
 		if (Status != XST_SUCCESS) {
 			return XST_FAILURE;
@@ -318,6 +308,15 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 #endif
 
 	Xil_DCacheEnable();
+
+	//Set up the external UART and configure the interrupt handler for bytes in RX buffer
+		Status = UartSetup(IntcInstancePtr, UartInstancePtr, UartDeviceId, UartIntrId);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+
+	// Change the baud rate of the UART and indicate that incoming AXI clock is 100MHz.
+	XUartNs550_SetBaud(UART_BASE, UART_CLOCK, BAUD_RATE);
 
 	// Set up the Mandelbrot calculator IP
 	Status = XCalc_Initialize(&Calc, CALC_DEVICE_ID);
