@@ -30,8 +30,8 @@
         private int ImageBufferLength;
         private ImageParams imageParams;
         private Crc32 crc32;
-        double zoomPercent = 0.3;
-    
+        int zoomPercent;
+            
         const int BAUD_RATE = 3000000;
 
         public delegate void SerialErrorReceivedHandler(object sender, SerialErrorReceivedEventArgs e);
@@ -64,15 +64,10 @@
                 Source = imageParams,
                 Converter = imageParams.Y0
             };
-            Binding ZoomBinding = new Binding("ZoomPercent")
-            {
-                Source = zoomPercent
-            };
 
             X0.SetBinding(TextBox.TextProperty, X0Binding);
             X1.SetBinding(TextBox.TextProperty, X1Binding);
             Y0.SetBinding(TextBox.TextProperty, Y0Binding);
-            ZoomPercent.SetBinding(TextBox.TextProperty, ZoomBinding);
 
             _serialPort = new SerialPort();
             _serialPort.ErrorReceived += SerialErrorHandler;
@@ -289,12 +284,15 @@
             }
         }
 
+        #region UI Event Processing
+
         /* Allow all of the modal buttons to be enabled/disabled as a group. (Don't allow anyone to press while data is still incoming, for example.)
          */
         private void ChangeButtonStates(bool state)
         {
             buttonGo.IsEnabled = state;
-            buttonZoom.IsEnabled = state;
+            buttonZoomIn.IsEnabled = state;
+            buttonZoomOut.IsEnabled = state;
             buttonUp.IsEnabled = state;
             buttonDown.IsEnabled = state;
             buttonLeft.IsEnabled = state;
@@ -348,30 +346,39 @@
             double.TryParse(X0.Text, out double x0);
             double.TryParse(X1.Text, out double x1);
             double.TryParse(Y0.Text, out double y0);
-            double delta = (x1 - x0) * 0.15;
+            bool OK = int.TryParse(ZoomPercent.Text, out int movePercent);
+            if (OK)
+            {
+                double delta = (x1 - x0) * movePercent / 100;
 
-            if (e.Source.Equals(buttonLeft))
-            {
-                X0.Text = (x0 - delta).ToString();
-                X1.Text = (x1 - delta).ToString();
-            } else if (e.Source.Equals(buttonRight))
-            {
-                X0.Text = (x0 + delta).ToString();
-                X1.Text = (x1 + delta).ToString();
-            } else if (e.Source.Equals(buttonUp))
-            {
-                Y0.Text = (y0 + (delta * 0.75)).ToString();
-            } else if (e.Source.Equals(buttonDown)) {
-                Y0.Text = (y0 - (delta * 0.75)).ToString();
-            } else
-            {
-                throw new Exception("Received MoveButtons_Click from an unknown source.");
+                if (e.Source.Equals(buttonLeft))
+                {
+                    X0.Text = (x0 - delta).ToString();
+                    X1.Text = (x1 - delta).ToString();
+                }
+                else if (e.Source.Equals(buttonRight))
+                {
+                    X0.Text = (x0 + delta).ToString();
+                    X1.Text = (x1 + delta).ToString();
+                }
+                else if (e.Source.Equals(buttonUp))
+                {
+                    Y0.Text = (y0 + (delta * 0.75)).ToString();
+                }
+                else if (e.Source.Equals(buttonDown))
+                {
+                    Y0.Text = (y0 - (delta * 0.75)).ToString();
+                }
+                else
+                {
+                    throw new Exception("Received MoveButtons_Click from an unknown source.");
+                }
+                UpdateBindings();
+                AutomateGo();
             }
-            UpdateBindings();
-            AutomateGo();
         }
 
-        /* The Zoom button closes in the sides to increase the zoom level.
+        /* The Zoom button closes in or expands the sides to increase the zoom level.
          */
         private void ButtonZoom_Click(object sender, RoutedEventArgs e)
         {
@@ -380,12 +387,19 @@
             double.TryParse(X1.Text, out double x1);
             double.TryParse(Y0.Text, out double y0);
             double width = x1 - x0;
-            double delta = width * zoomPercent;
-            X0.Text = (x0 + delta).ToString();
-            X1.Text = (x1 - delta).ToString();
-            Y0.Text = (y0 - (delta * .75)).ToString(); //Y delta is 3/4 of X in a 4:3 aspect ratio image.
-            UpdateBindings();
-            AutomateGo();
+            bool OK = int.TryParse(ZoomPercent.Text,out zoomPercent);
+            if (OK)
+            {
+                double delta = width * zoomPercent / 100;
+                if (sender.Equals(buttonZoomOut)) {
+                    delta = -delta;
+                }
+                X0.Text = (x0 + delta).ToString();
+                X1.Text = (x1 - delta).ToString();
+                Y0.Text = (y0 - (delta * .75)).ToString(); //Y delta is 3/4 of X in a 4:3 aspect ratio image.
+                UpdateBindings();
+                AutomateGo();
+            }
         }
 
 
@@ -413,5 +427,6 @@
         {
             _serialPort.Close();
         }
+        #endregion
     }
 }
