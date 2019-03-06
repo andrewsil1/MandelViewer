@@ -54,6 +54,9 @@
   <PropertyGroup>
     <StartupObject>MandelViewer.App</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MandelViewerIco.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="K4os.Compression.LZ4, Version=1.1.0.0, Culture=neutral, PublicKeyToken=27d14aecb5186925, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.1.1\lib\net46\K4os.Compression.LZ4.dll</HintPath>
@@ -157,6 +160,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MandelViewerIco.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
