@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Thu Feb 14 15:55:21 2019
+// Date        : Thu Feb 14 15:55:20 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/andrewsi/OneDrive/Documents/VisualStudio2017/Projects/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_proc_sys_reset_2_0/Fast_IP_Clock_proc_sys_reset_2_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_proc_sys_reset_2_0 -prefix
+//               Fast_IP_Clock_proc_sys_reset_2_0_ Fast_IP_Clock_proc_sys_reset_2_0_sim_netlist.v
 // Design      : Fast_IP_Clock_proc_sys_reset_2_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -69,7 +69,6 @@ module Fast_IP_Clock_proc_sys_reset_2_0
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
 module Fast_IP_Clock_proc_sys_reset_2_0_cdc_sync
    (lpf_asr_reg,
     scndry_out,
@@ -251,7 +250,6 @@ module Fast_IP_Clock_proc_sys_reset_2_0_cdc_sync_0
         .O(lpf_exr_reg));
 endmodule
 
-(* ORIG_REF_NAME = "lpf" *) 
 module Fast_IP_Clock_proc_sys_reset_2_0_lpf
    (lpf_int,
     slowest_sync_clk,
@@ -400,7 +398,6 @@ endmodule
 (* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b0" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "artix7" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
-(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module Fast_IP_Clock_proc_sys_reset_2_0_proc_sys_reset
    (slowest_sync_clk,
     ext_reset_in,
@@ -517,7 +514,6 @@ module Fast_IP_Clock_proc_sys_reset_2_0_proc_sys_reset
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "sequence_psr" *) 
 module Fast_IP_Clock_proc_sys_reset_2_0_sequence_psr
    (MB_out,
     Bsr_out,
@@ -758,7 +754,6 @@ module Fast_IP_Clock_proc_sys_reset_2_0_sequence_psr
         .R(lpf_int));
 endmodule
 
-(* ORIG_REF_NAME = "upcnt_n" *) 
 module Fast_IP_Clock_proc_sys_reset_2_0_upcnt_n
    (Q,
     seq_clr,

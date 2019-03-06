@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: QuickSilver:hls:calc:1.0
--- IP Revision: 1902260927
+-- IP Revision: 1903041608
 
 -- The following code must appear in the VHDL architecture header.
 
 ------------- Begin Cut here for COMPONENT Declaration ------ COMP_TAG
 COMPONENT calc_0
   PORT (
-    s_axi_in_parms_AWADDR : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+    s_axi_in_parms_AWADDR : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
     s_axi_in_parms_AWVALID : IN STD_LOGIC;
     s_axi_in_parms_AWREADY : OUT STD_LOGIC;
     s_axi_in_parms_WDATA : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -64,7 +64,7 @@ COMPONENT calc_0
     s_axi_in_parms_BRESP : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_in_parms_BVALID : OUT STD_LOGIC;
     s_axi_in_parms_BREADY : IN STD_LOGIC;
-    s_axi_in_parms_ARADDR : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+    s_axi_in_parms_ARADDR : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
     s_axi_in_parms_ARVALID : IN STD_LOGIC;
     s_axi_in_parms_ARREADY : OUT STD_LOGIC;
     s_axi_in_parms_RDATA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);

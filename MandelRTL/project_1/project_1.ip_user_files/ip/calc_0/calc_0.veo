@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: QuickSilver:hls:calc:1.0
-// IP Revision: 1902260927
+// IP Revision: 1903041608
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -55,7 +55,7 @@
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 calc_0 your_instance_name (
-  .s_axi_in_parms_AWADDR(s_axi_in_parms_AWADDR),    // input wire [5 : 0] s_axi_in_parms_AWADDR
+  .s_axi_in_parms_AWADDR(s_axi_in_parms_AWADDR),    // input wire [6 : 0] s_axi_in_parms_AWADDR
   .s_axi_in_parms_AWVALID(s_axi_in_parms_AWVALID),  // input wire s_axi_in_parms_AWVALID
   .s_axi_in_parms_AWREADY(s_axi_in_parms_AWREADY),  // output wire s_axi_in_parms_AWREADY
   .s_axi_in_parms_WDATA(s_axi_in_parms_WDATA),      // input wire [31 : 0] s_axi_in_parms_WDATA
@@ -65,7 +65,7 @@ calc_0 your_instance_name (
   .s_axi_in_parms_BRESP(s_axi_in_parms_BRESP),      // output wire [1 : 0] s_axi_in_parms_BRESP
   .s_axi_in_parms_BVALID(s_axi_in_parms_BVALID),    // output wire s_axi_in_parms_BVALID
   .s_axi_in_parms_BREADY(s_axi_in_parms_BREADY),    // input wire s_axi_in_parms_BREADY
-  .s_axi_in_parms_ARADDR(s_axi_in_parms_ARADDR),    // input wire [5 : 0] s_axi_in_parms_ARADDR
+  .s_axi_in_parms_ARADDR(s_axi_in_parms_ARADDR),    // input wire [6 : 0] s_axi_in_parms_ARADDR
   .s_axi_in_parms_ARVALID(s_axi_in_parms_ARVALID),  // input wire s_axi_in_parms_ARVALID
   .s_axi_in_parms_ARREADY(s_axi_in_parms_ARREADY),  // output wire s_axi_in_parms_ARREADY
   .s_axi_in_parms_RDATA(s_axi_in_parms_RDATA),      // output wire [31 : 0] s_axi_in_parms_RDATA

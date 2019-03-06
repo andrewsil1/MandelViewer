@@ -1,5 +1,5 @@
 // ==============================================================
-// File generated on Sat Feb 23 12:26:17 -0800 2019
+// File generated on Mon Mar 04 15:02:43 -0800 2019
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
 // SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 // IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
@@ -46,6 +46,10 @@
 //        bit 11~0 - width_V[11:0] (Read/Write)
 //        others   - reserved
 // 0x38 : reserved
+// 0x3c : Data signal of maxIter
+//        bit 15~0 - maxIter[15:0] (Read/Write)
+//        others   - reserved
+// 0x40 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 #define XCALC_IN_PARMS_ADDR_AP_CTRL      0x00
@@ -60,4 +64,6 @@
 #define XCALC_IN_PARMS_BITS_X1_V_DATA    40
 #define XCALC_IN_PARMS_ADDR_WIDTH_V_DATA 0x34
 #define XCALC_IN_PARMS_BITS_WIDTH_V_DATA 12
+#define XCALC_IN_PARMS_ADDR_MAXITER_DATA 0x3c
+#define XCALC_IN_PARMS_BITS_MAXITER_DATA 16
 

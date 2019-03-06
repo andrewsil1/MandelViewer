@@ -9,7 +9,7 @@
     <Grid x:Name="Grid">
         <ComboBox x:Name="ComPortcomboBox" HorizontalAlignment="Left" Margin="20,28,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComPortcomboBox_SelectionChanged" SnapsToDevicePixels="True"/>
         <TextBlock x:Name="ComTextBlock" HorizontalAlignment="Left" Margin="20,6,0,0" TextWrapping="Wrap" Text="COM Port:" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.0,0.0"/>
-        <Image x:Name="Fractal" Margin="10,43,10,10" Width="1024" Height ="768" MinWidth="1024" MinHeight="768"/>
+        <Image x:Name="Fractal" Margin="30,119,30,13" Width="1024" Height ="768" MinWidth="1024" MinHeight="768"/>
         <TextBox x:Name="X0" HorizontalAlignment="Left" Height="22" Margin="157,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
         <TextBlock x:Name="ComTextBlock_Copy" HorizontalAlignment="Left" Margin="157,6,0,0" TextWrapping="Wrap" Text="Upper left X:" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.0,0.0"/>
         <TextBox x:Name="X1" HorizontalAlignment="Left" Height="22" Margin="310,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
@@ -27,5 +27,7 @@
         <Label x:Name="labelZoomMove" Content="Zoom/Move" HorizontalAlignment="Left" Margin="880,4,0,0" VerticalAlignment="Top" Height="24"/>
         <Button x:Name="buttonZoomOut" Content="Zoom Out" HorizontalAlignment="Left" Height="22" Margin="806,42,0,0" VerticalAlignment="Top" Width="69" SnapsToDevicePixels="True" Click="ButtonZoom_Click"/>
         <Label x:Name="labelPercent" Content="%" HorizontalAlignment="Left" Margin="926,25,0,0" VerticalAlignment="Top" Height="24" Width="26"/>
+        <TextBox x:Name="maxItersTextBox" HorizontalAlignment="Left" Height="22" Margin="157,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Text="2000" LostFocus="MaxItersTextBox_LostFocus"/>
+        <TextBlock x:Name="maxItersTextBlock" HorizontalAlignment="Left" Margin="157,55,0,0" TextWrapping="Wrap" Text="Maximum Iterations:" VerticalAlignment="Top" Width="138" RenderTransformOrigin="0.0,0.0"/>
     </Grid>
 </Window>

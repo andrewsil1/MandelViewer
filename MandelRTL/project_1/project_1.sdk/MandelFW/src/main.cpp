@@ -81,6 +81,7 @@ u8* compressBuffer = (u8*) (PSRAM_BASE + 0x200000);
 
  // Coordinates for Mandelbrot set calculation to pass to the hardware - Upper left X/Y, Upper right X.
  u64 X0, X1, Y0;
+ u32 maxIter = 2000;
  u32 WIDTH = 1024;  // Hardware supports up to 1920 wide. Do not exceed.
  u32 HEIGHT = WIDTH * 3U / 4U;
 
@@ -159,6 +160,33 @@ u8* compressBuffer = (u8*) (PSRAM_BASE + 0x200000);
 		XUartNs550_GetStats(UartInstancePtr,&Stats);
 	} while (Stats.CharactersReceived == 0);
 
+ }
+
+ u32 GetUIntParam (XUartNs550 *UartInstancePtr, u8 *ReceiveBufferPtr) {
+
+	 XUartNs550_ClearStats(UartInstancePtr);
+	 XUartNs550_Recv(UartInstancePtr, ReceiveBufferPtr, 4);  // Get length of packet
+		do {
+			XUartNs550_GetStats(UartInstancePtr,&Stats);
+		} while (Stats.CharactersReceived < 4);
+
+	 int length = *(u32 *)ReceiveBufferPtr;
+
+	 XUartNs550_Recv(UartInstancePtr, ReceiveBufferPtr, length); //Get the bytes
+	 do {
+		 	XUartNs550_GetStats(UartInstancePtr,&Stats);
+	 } while (Stats.CharactersReceived < length);
+
+	 u32 recCRC = rc_crc32(0, (char *)ReceiveBufferPtr, length-4); //Calculate received CRC
+
+	 if (recCRC != *(u32 *)(ReceiveBufferPtr + length - 4)) {
+		#ifdef DEBUG
+		 xil_printf("Received CRC invalid: %H\r\n",recCRC);
+		 #endif
+		 return -1;
+	 }
+
+ 	 return (*(u32*)ReceiveBufferPtr); //Return the data.
  }
 
  u64 GetParam (XUartNs550 *UartInstancePtr, u8 *ReceiveBufferPtr) {
@@ -247,6 +275,7 @@ u8* compressBuffer = (u8*) (PSRAM_BASE + 0x200000);
  	XCalc_Set_X1_V(&Calc, X1);
  	XCalc_Set_Y0_V(&Calc, Y0);
  	XCalc_Set_width_V(&Calc, WIDTH);
+ 	XCalc_Set_maxIter(&Calc, maxIter);
     XCalc_Start(&Calc);
 
     // Wait for the full image to iterate.
@@ -366,6 +395,12 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 				xil_printf("Got C\r\n");
 #endif
 				Y0 = GetParam(UartInstancePtr, ReceiveBufferPtr);
+				break;
+			case 'D' :
+#ifdef DEBUG
+				xil_printf("Got D\r\n");
+#endif
+				maxIter = GetUIntParam(UartInstancePtr, ReceiveBufferPtr);
 				break;
 			case 'X' :
 #ifdef DEBUG

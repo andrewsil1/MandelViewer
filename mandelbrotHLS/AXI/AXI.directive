@@ -4,14 +4,14 @@
             <pragma name="ARRAY_PARTITION">
                 <option name="variable" value="mem" positionalBoolean="4"/>
                 <option name="cyclic" value="" positionalBoolean="type"/>
-                <option name="factor" value="4"/>
+                <option name="factor" value="8"/>
                 <option name="dim" value="1"/>
             </pragma>
         </directive>
         <directive functionName="calc" label="x_for" functionLabel="">
             <pragma name="UNROLL">
                 <option name="skip_exit_check" value="" positionalBoolean="1"/>
-                <option name="factor" value="4"/>
+                <option name="factor" value="8"/>
             </pragma>
         </directive>
         <directive functionName="calc" label="" functionLabel="">
@@ -55,6 +55,20 @@
                 <option name="s_axilite" value="" positionalBoolean="mode"/>
                 <option name="port" value="width" positionalBoolean="4"/>
                 <option name="bundle" value="in_parms"/>
+            </pragma>
+        </directive>
+        <directive functionName="calc" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="maxIter" positionalBoolean="4"/>
+                <option name="bundle" value="in_parms"/>
+            </pragma>
+        </directive>
+        <directive functionName="mandel_calc" label="mandel_calc_loop" functionLabel="">
+            <pragma name="LOOP_TRIPCOUNT">
+                <option name="min" value="0"/>
+                <option name="max" value="65535"/>
+                <option name="avg" value="2000"/>
             </pragma>
         </directive>
     </sourceFile>

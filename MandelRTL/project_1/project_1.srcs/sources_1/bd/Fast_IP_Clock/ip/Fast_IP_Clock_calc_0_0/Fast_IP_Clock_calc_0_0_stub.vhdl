@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Tue Feb 26 10:11:57 2019
+-- Date        : Mon Mar  4 16:24:20 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_calc_0_0/Fast_IP_Clock_calc_0_0_stub.vhdl
@@ -14,7 +14,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Fast_IP_Clock_calc_0_0 is
   Port ( 
-    s_axi_in_parms_AWADDR : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s_axi_in_parms_AWADDR : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axi_in_parms_AWVALID : in STD_LOGIC;
     s_axi_in_parms_AWREADY : out STD_LOGIC;
     s_axi_in_parms_WDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -24,7 +24,7 @@ entity Fast_IP_Clock_calc_0_0 is
     s_axi_in_parms_BRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_in_parms_BVALID : out STD_LOGIC;
     s_axi_in_parms_BREADY : in STD_LOGIC;
-    s_axi_in_parms_ARADDR : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    s_axi_in_parms_ARADDR : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axi_in_parms_ARVALID : in STD_LOGIC;
     s_axi_in_parms_ARREADY : out STD_LOGIC;
     s_axi_in_parms_RDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -77,7 +77,7 @@ architecture stub of Fast_IP_Clock_calc_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "s_axi_in_parms_AWADDR[5:0],s_axi_in_parms_AWVALID,s_axi_in_parms_AWREADY,s_axi_in_parms_WDATA[31:0],s_axi_in_parms_WSTRB[3:0],s_axi_in_parms_WVALID,s_axi_in_parms_WREADY,s_axi_in_parms_BRESP[1:0],s_axi_in_parms_BVALID,s_axi_in_parms_BREADY,s_axi_in_parms_ARADDR[5:0],s_axi_in_parms_ARVALID,s_axi_in_parms_ARREADY,s_axi_in_parms_RDATA[31:0],s_axi_in_parms_RRESP[1:0],s_axi_in_parms_RVALID,s_axi_in_parms_RREADY,ap_clk,ap_rst_n,interrupt,m_axi_buf_r_AWADDR[31:0],m_axi_buf_r_AWLEN[7:0],m_axi_buf_r_AWSIZE[2:0],m_axi_buf_r_AWBURST[1:0],m_axi_buf_r_AWLOCK[1:0],m_axi_buf_r_AWREGION[3:0],m_axi_buf_r_AWCACHE[3:0],m_axi_buf_r_AWPROT[2:0],m_axi_buf_r_AWQOS[3:0],m_axi_buf_r_AWVALID,m_axi_buf_r_AWREADY,m_axi_buf_r_WDATA[31:0],m_axi_buf_r_WSTRB[3:0],m_axi_buf_r_WLAST,m_axi_buf_r_WVALID,m_axi_buf_r_WREADY,m_axi_buf_r_BRESP[1:0],m_axi_buf_r_BVALID,m_axi_buf_r_BREADY,m_axi_buf_r_ARADDR[31:0],m_axi_buf_r_ARLEN[7:0],m_axi_buf_r_ARSIZE[2:0],m_axi_buf_r_ARBURST[1:0],m_axi_buf_r_ARLOCK[1:0],m_axi_buf_r_ARREGION[3:0],m_axi_buf_r_ARCACHE[3:0],m_axi_buf_r_ARPROT[2:0],m_axi_buf_r_ARQOS[3:0],m_axi_buf_r_ARVALID,m_axi_buf_r_ARREADY,m_axi_buf_r_RDATA[31:0],m_axi_buf_r_RRESP[1:0],m_axi_buf_r_RLAST,m_axi_buf_r_RVALID,m_axi_buf_r_RREADY";
+attribute black_box_pad_pin of stub : architecture is "s_axi_in_parms_AWADDR[6:0],s_axi_in_parms_AWVALID,s_axi_in_parms_AWREADY,s_axi_in_parms_WDATA[31:0],s_axi_in_parms_WSTRB[3:0],s_axi_in_parms_WVALID,s_axi_in_parms_WREADY,s_axi_in_parms_BRESP[1:0],s_axi_in_parms_BVALID,s_axi_in_parms_BREADY,s_axi_in_parms_ARADDR[6:0],s_axi_in_parms_ARVALID,s_axi_in_parms_ARREADY,s_axi_in_parms_RDATA[31:0],s_axi_in_parms_RRESP[1:0],s_axi_in_parms_RVALID,s_axi_in_parms_RREADY,ap_clk,ap_rst_n,interrupt,m_axi_buf_r_AWADDR[31:0],m_axi_buf_r_AWLEN[7:0],m_axi_buf_r_AWSIZE[2:0],m_axi_buf_r_AWBURST[1:0],m_axi_buf_r_AWLOCK[1:0],m_axi_buf_r_AWREGION[3:0],m_axi_buf_r_AWCACHE[3:0],m_axi_buf_r_AWPROT[2:0],m_axi_buf_r_AWQOS[3:0],m_axi_buf_r_AWVALID,m_axi_buf_r_AWREADY,m_axi_buf_r_WDATA[31:0],m_axi_buf_r_WSTRB[3:0],m_axi_buf_r_WLAST,m_axi_buf_r_WVALID,m_axi_buf_r_WREADY,m_axi_buf_r_BRESP[1:0],m_axi_buf_r_BVALID,m_axi_buf_r_BREADY,m_axi_buf_r_ARADDR[31:0],m_axi_buf_r_ARLEN[7:0],m_axi_buf_r_ARSIZE[2:0],m_axi_buf_r_ARBURST[1:0],m_axi_buf_r_ARLOCK[1:0],m_axi_buf_r_ARREGION[3:0],m_axi_buf_r_ARCACHE[3:0],m_axi_buf_r_ARPROT[2:0],m_axi_buf_r_ARQOS[3:0],m_axi_buf_r_ARVALID,m_axi_buf_r_ARREADY,m_axi_buf_r_RDATA[31:0],m_axi_buf_r_RRESP[1:0],m_axi_buf_r_RLAST,m_axi_buf_r_RVALID,m_axi_buf_r_RREADY";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "calc,Vivado 2018.3";
 begin

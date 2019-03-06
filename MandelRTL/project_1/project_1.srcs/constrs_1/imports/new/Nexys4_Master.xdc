@@ -732,7 +732,7 @@ resize_pblock [get_pblocks pblock_mdm_1] -add {SLICE_X40Y35:SLICE_X51Y49}
 
 create_pblock pblock_calc_0
 add_cells_to_pblock [get_pblocks pblock_calc_0] [get_cells -quiet [list Fast_IP_Clock_i/calc_0]]
-resize_pblock [get_pblocks pblock_calc_0] -add {SLICE_X52Y50:SLICE_X81Y148}
+resize_pblock [get_pblocks pblock_calc_0] -add {SLICE_X52Y22:SLICE_X81Y174 SLICE_X28Y50:SLICE_X51Y174}
 
 create_pblock pblock_axi_uart16550_0
 add_cells_to_pblock [get_pblocks pblock_axi_uart16550_0] [get_cells -quiet [list Fast_IP_Clock_i/axi_uart16550_0]]
@@ -745,4 +745,6 @@ resize_pblock [get_pblocks pblock_psram_ip_0] -add {SLICE_X0Y81:SLICE_X7Y99}
 create_pblock pblock_axi_gpio_0
 add_cells_to_pblock [get_pblocks pblock_axi_gpio_0] [get_cells -quiet [list Fast_IP_Clock_i/axi_gpio_0]]
 resize_pblock [get_pblocks pblock_axi_gpio_0] -add {SLICE_X0Y143:SLICE_X3Y147}
+
+
 

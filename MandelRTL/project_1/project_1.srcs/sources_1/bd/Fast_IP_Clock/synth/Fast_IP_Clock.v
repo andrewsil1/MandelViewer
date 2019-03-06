@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Fri Mar  1 16:13:52 2019
+//Date        : Mon Mar  4 16:18:15 2019
 //Host        : AndrewSi64 running 64-bit major release  (build 9200)
 //Command     : generate_target Fast_IP_Clock.bd
 //Design      : Fast_IP_Clock
@@ -435,10 +435,10 @@ module Fast_IP_Clock
         .m_axi_buf_r_WREADY(calc_0_m_axi_buf_r_WREADY),
         .m_axi_buf_r_WSTRB(calc_0_m_axi_buf_r_WSTRB),
         .m_axi_buf_r_WVALID(calc_0_m_axi_buf_r_WVALID),
-        .s_axi_in_parms_ARADDR(microblaze_0_axi_periph_M04_AXI_ARADDR[5:0]),
+        .s_axi_in_parms_ARADDR(microblaze_0_axi_periph_M04_AXI_ARADDR[6:0]),
         .s_axi_in_parms_ARREADY(microblaze_0_axi_periph_M04_AXI_ARREADY),
         .s_axi_in_parms_ARVALID(microblaze_0_axi_periph_M04_AXI_ARVALID),
-        .s_axi_in_parms_AWADDR(microblaze_0_axi_periph_M04_AXI_AWADDR[5:0]),
+        .s_axi_in_parms_AWADDR(microblaze_0_axi_periph_M04_AXI_AWADDR[6:0]),
         .s_axi_in_parms_AWREADY(microblaze_0_axi_periph_M04_AXI_AWREADY),
         .s_axi_in_parms_AWVALID(microblaze_0_axi_periph_M04_AXI_AWVALID),
         .s_axi_in_parms_BREADY(microblaze_0_axi_periph_M04_AXI_BREADY),

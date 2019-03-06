@@ -1,0 +1,246 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "mem",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "cyclic",
+                "value": "",
+                "positionalBoolean": "type"
+              },
+              {
+                "name": "factor",
+                "value": "8"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "x_for",
+          "functionLabel": "",
+          "pragma": {
+            "name": "UNROLL",
+            "option": [
+              {
+                "name": "skip_exit_check",
+                "value": "",
+                "positionalBoolean": "1"
+              },
+              {
+                "name": "factor",
+                "value": "8"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "m_axi",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "depth",
+                "value": "7500"
+              },
+              {
+                "name": "port",
+                "value": "buf",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "offset",
+                "value": "off"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "return",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "bundle",
+                "value": "in_parms"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "X0",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "bundle",
+                "value": "in_parms"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "Y0",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "bundle",
+                "value": "in_parms"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "X1",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "bundle",
+                "value": "in_parms"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "width",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "bundle",
+                "value": "in_parms"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "maxIter",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "bundle",
+                "value": "in_parms"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "mandel_calc",
+          "label": "mandel_calc_loop",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [
+              {
+                "name": "min",
+                "value": "0"
+              },
+              {
+                "name": "max",
+                "value": "65535"
+              },
+              {
+                "name": "avg",
+                "value": "2000"
+              }
+            ]
+          }
+        }
+      ]
+    }]}

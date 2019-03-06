@@ -1,5 +1,5 @@
 // ==============================================================
-// File generated on Sat Feb 23 12:26:17 -0800 2019
+// File generated on Mon Mar 04 15:02:43 -0800 2019
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
 // SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 // IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
@@ -147,6 +147,23 @@ u32 XCalc_Get_width_V(XCalc *InstancePtr) {
     Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
     Data = XCalc_ReadReg(InstancePtr->In_parms_BaseAddress, XCALC_IN_PARMS_ADDR_WIDTH_V_DATA);
+    return Data;
+}
+
+void XCalc_Set_maxIter(XCalc *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XCalc_WriteReg(InstancePtr->In_parms_BaseAddress, XCALC_IN_PARMS_ADDR_MAXITER_DATA, Data);
+}
+
+u32 XCalc_Get_maxIter(XCalc *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XCalc_ReadReg(InstancePtr->In_parms_BaseAddress, XCALC_IN_PARMS_ADDR_MAXITER_DATA);
     return Data;
 }
 

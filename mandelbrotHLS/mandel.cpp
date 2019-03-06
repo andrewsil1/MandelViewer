@@ -6,7 +6,7 @@
 
 using namespace std;
 
-pixval mandel_calc(real x_in, real y_in) {
+pixval mandel_calc(real x_in, real y_in, pixval maxIter) {
 
     real x = 0.0;
     real y = 0.0;
@@ -14,9 +14,9 @@ pixval mandel_calc(real x_in, real y_in) {
 
     // Fixed iteration loops allow better unrolling/pipelining.
    if (pretest(x_in,y_in)) {
-        iter = MAXITER;
+        iter = maxIter;
    } else {
-        for (iter = 0; iter < MAXITER; iter++) {
+        mandel_calc_loop:for (iter = 0; iter < maxIter; iter++) {
             real x2 = x*x;
             real y2 = y*y;
 
@@ -30,7 +30,7 @@ pixval mandel_calc(real x_in, real y_in) {
                         printf("Periodicity detected at ");
                         cout << std::setprecision(16) << x_in << "," << y_in << endl;
                     #endif
-                    iter = MAXITER;
+                    iter = maxIter;
                     break;
                 }
                 x = xtemp;
@@ -44,7 +44,7 @@ pixval mandel_calc(real x_in, real y_in) {
 }
 
 //Calculates entire Mandelbrot Set 2D array and returns a completed buffer of iterations per pixel
-void calc(real X0, real Y0, real X1, res width, pixval *buf) {
+void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf) {
 
    	real delta = (real) 0.0;
     real x,y;
@@ -68,7 +68,7 @@ void calc(real X0, real Y0, real X1, res width, pixval *buf) {
 	    y = Y0;
 	    assert (height <= MAXWIDTH * 3 / 4);
   y_for:for (res line = 0; line < height; line++) {
-            assert (width % 4 == 0); // Line width must be multiple of 4 or it is not safe to turn off exit check on partial unroll of factor 4.
+            assert (width % 8 == 0); // Line width must be multiple of 4 or it is not safe to turn off exit check on partial unroll of factor 4.
             assert (width <= MAXWIDTH);
       x_for:for (res pix_x = 0; pix_x < width; pix_x++) {
                 // -X,+Y (quadrant II), across each line, then finally down to +X,-Y (quadrant IV)
@@ -76,7 +76,7 @@ void calc(real X0, real Y0, real X1, res width, pixval *buf) {
 
                 x = X0 + (pix_x * delta); // This form allows parallelism in unrolling, switching to an incremental add of delta to the initial x during each iteration seems to ruin parallel unrolling.
 
-                mem[pix_x] = mandel_calc(x,y); // When pre-test is performed inside function call, parallelism from loop unrolling works.  When outside, it breaks.
+                mem[pix_x] = mandel_calc(x,y,maxIter); // When pre-test is performed inside function call, parallelism from loop unrolling works.  When outside, it breaks.
             }
 
         assert (width <= MAXWIDTH);

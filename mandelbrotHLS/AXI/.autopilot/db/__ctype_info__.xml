@@ -1,0 +1,63 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>X0_V</name>
+<CType>
+<TypeName>ap_fixed 40 5 4 0 0</TypeName>
+<TypeWidth>40</TypeWidth>
+<PhysicalWidth>40</PhysicalWidth>
+</CType>
+<CFractionWidth>35</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>Y0_V</name>
+<CType>
+<TypeName>ap_fixed 40 5 4 0 0</TypeName>
+<TypeWidth>40</TypeWidth>
+<PhysicalWidth>40</PhysicalWidth>
+</CType>
+<CFractionWidth>35</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>X1_V</name>
+<CType>
+<TypeName>ap_fixed 40 5 4 0 0</TypeName>
+<TypeWidth>40</TypeWidth>
+<PhysicalWidth>40</PhysicalWidth>
+</CType>
+<CFractionWidth>35</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>width_V</name>
+<CType>
+<TypeName>ap_uint 12</TypeName>
+<TypeWidth>12</TypeWidth>
+<PhysicalWidth>12</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>maxIter</name>
+<CType>
+<TypeName>unsigned short</TypeName>
+<TypeWidth>16</TypeWidth>
+<PhysicalWidth>16</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>buf_r</name>
+<CType>
+<TypeName>unsigned short</TypeName>
+<TypeWidth>16</TypeWidth>
+<PhysicalWidth>16</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

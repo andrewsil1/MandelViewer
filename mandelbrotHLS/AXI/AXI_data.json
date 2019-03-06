@@ -28,10 +28,10 @@
       "config_interface -m_axi_offset=off",
       "config_interface -register_io=off",
       "config_interface -trim_dangling_port=0",
-      "config_bind -effort=medium",
-      "config_schedule -effort=medium",
+      "config_bind -effort=high",
+      "config_schedule -effort=high",
       "config_schedule -enable_dsp_full_reg=0",
-      "config_schedule -relax_ii_for_timing=0",
+      "config_schedule -relax_ii_for_timing=1",
       "config_schedule -verbose=1",
       "config_rtl -auto_prefix=0",
       "config_rtl -encoding=onehot",
@@ -63,18 +63,18 @@
   },
   "Files": {
     "CSource": [
-      "..\/mandel.cpp",
-      "..\/pretest.cpp"
+      "..\/pretest.cpp",
+      "..\/mandel.cpp"
     ],
     "Vhdl": [
       "impl\/vhdl\/calc_buf_r_m_axi.vhd",
       "impl\/vhdl\/calc_in_parms_s_axi.vhd",
       "impl\/vhdl\/calc_mem_0.vhd",
       "impl\/vhdl\/calc_mul_12ns_40sfYi.vhd",
-      "impl\/vhdl\/calc_mul_40s_40s_bkb.vhd",
+      "impl\/vhdl\/calc_mul_40s_40s_cud.vhd",
       "impl\/vhdl\/calc_mul_40s_41s_dEe.vhd",
-      "impl\/vhdl\/calc_mul_41s_40s_cud.vhd",
-      "impl\/vhdl\/calc_mux_432_16_1_1.vhd",
+      "impl\/vhdl\/calc_mul_41s_40s_bkb.vhd",
+      "impl\/vhdl\/calc_mux_832_16_1_1.vhd",
       "impl\/vhdl\/calc_sdiv_41ns_13eOg.vhd",
       "impl\/vhdl\/mandel_calc.vhd",
       "impl\/vhdl\/pretest.vhd",
@@ -85,10 +85,10 @@
       "impl\/verilog\/calc_in_parms_s_axi.v",
       "impl\/verilog\/calc_mem_0.v",
       "impl\/verilog\/calc_mul_12ns_40sfYi.v",
-      "impl\/verilog\/calc_mul_40s_40s_bkb.v",
+      "impl\/verilog\/calc_mul_40s_40s_cud.v",
       "impl\/verilog\/calc_mul_40s_41s_dEe.v",
-      "impl\/verilog\/calc_mul_41s_40s_cud.v",
-      "impl\/verilog\/calc_mux_432_16_1_1.v",
+      "impl\/verilog\/calc_mul_41s_40s_bkb.v",
+      "impl\/verilog\/calc_mux_832_16_1_1.v",
       "impl\/verilog\/calc_sdiv_41ns_13eOg.v",
       "impl\/verilog\/mandel_calc.v",
       "impl\/verilog\/pretest.v",
@@ -313,7 +313,7 @@
       "mode": "slave",
       "port_prefix": "s_axi_in_parms",
       "param_prefix": "C_S_AXI_IN_PARMS",
-      "addr_bits": "6",
+      "addr_bits": "7",
       "registers": [
         {
           "offset": "0x00",
@@ -615,6 +615,31 @@
               "description": "Reserved.  0s on read."
             }
           ]
+        },
+        {
+          "offset": "0x3c",
+          "name": "maxIter",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of maxIter",
+          "fields": [
+            {
+              "offset": "0",
+              "width": "16",
+              "name": "maxIter",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 15 to 0 Data signal of maxIter"
+            },
+            {
+              "offset": "16",
+              "width": "16",
+              "name": "RESERVED",
+              "access": "R",
+              "reset_value": "0",
+              "description": "Reserved.  0s on read."
+            }
+          ]
         }
       ],
       "memories": "",
@@ -639,11 +664,11 @@
         },
         "AWADDR": {
           "Type": "integer unsigned",
-          "Width": "6"
+          "Width": "7"
         },
         "WDATA": {
           "Type": "integer unsigned",
-          "Width": "12"
+          "Width": "16"
         },
         "WSTRB": {
           "Type": "integer unsigned",
@@ -651,17 +676,17 @@
         },
         "ARADDR": {
           "Type": "integer unsigned",
-          "Width": "6"
+          "Width": "7"
         },
         "RDATA": {
           "Type": "integer unsigned",
-          "Width": "12"
+          "Width": "16"
         }
       },
       "data_width": "32",
       "port_width": {
-        "ARADDR": "6",
-        "AWADDR": "6",
+        "ARADDR": "7",
+        "AWADDR": "7",
         "RDATA": "32",
         "WDATA": "32",
         "WSTRB": "4"
@@ -679,7 +704,7 @@
     },
     "s_axi_in_parms_AWADDR": {
       "dir": "in",
-      "width": "6"
+      "width": "7"
     },
     "s_axi_in_parms_WVALID": {
       "dir": "in",
@@ -707,7 +732,7 @@
     },
     "s_axi_in_parms_ARADDR": {
       "dir": "in",
-      "width": "6"
+      "width": "7"
     },
     "s_axi_in_parms_RVALID": {
       "dir": "out",
@@ -974,6 +999,14 @@
       "handshakeRef": "ap_none",
       "Object": "in_parms"
     },
+    "maxIter": {
+      "interfaceRef": "s_axi_in_parms",
+      "dir": "in",
+      "offset": "60",
+      "statusOffset": "NA",
+      "handshakeRef": "ap_none",
+      "Object": "in_parms"
+    },
     "ap_ctrl": {
       "interfaceRef": "s_axi_in_parms",
       "dir": "in",
@@ -990,34 +1023,66 @@
       "Instances": [
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_337",
+          "InstanceName": "grp_mandel_calc_fu_465",
           "Instances": [{
               "ModuleName": "pretest",
-              "InstanceName": "grp_pretest_fu_172"
+              "InstanceName": "grp_pretest_fu_187"
             }]
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_344",
+          "InstanceName": "grp_mandel_calc_fu_473",
           "Instances": [{
               "ModuleName": "pretest",
-              "InstanceName": "grp_pretest_fu_172"
+              "InstanceName": "grp_pretest_fu_187"
             }]
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_351",
+          "InstanceName": "grp_mandel_calc_fu_481",
           "Instances": [{
               "ModuleName": "pretest",
-              "InstanceName": "grp_pretest_fu_172"
+              "InstanceName": "grp_pretest_fu_187"
             }]
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_358",
+          "InstanceName": "grp_mandel_calc_fu_489",
           "Instances": [{
               "ModuleName": "pretest",
-              "InstanceName": "grp_pretest_fu_172"
+              "InstanceName": "grp_pretest_fu_187"
+            }]
+        },
+        {
+          "ModuleName": "mandel_calc",
+          "InstanceName": "grp_mandel_calc_fu_505",
+          "Instances": [{
+              "ModuleName": "pretest",
+              "InstanceName": "grp_pretest_fu_187"
+            }]
+        },
+        {
+          "ModuleName": "mandel_calc",
+          "InstanceName": "grp_mandel_calc_fu_497",
+          "Instances": [{
+              "ModuleName": "pretest",
+              "InstanceName": "grp_pretest_fu_187"
+            }]
+        },
+        {
+          "ModuleName": "mandel_calc",
+          "InstanceName": "grp_mandel_calc_fu_449",
+          "Instances": [{
+              "ModuleName": "pretest",
+              "InstanceName": "grp_pretest_fu_187"
+            }]
+        },
+        {
+          "ModuleName": "mandel_calc",
+          "InstanceName": "grp_mandel_calc_fu_457",
+          "Instances": [{
+              "ModuleName": "pretest",
+              "InstanceName": "grp_pretest_fu_187"
             }]
         }
       ]
@@ -1038,20 +1103,20 @@
           "Estimate": "5.097"
         },
         "Area": {
-          "DSP48E": "20",
-          "FF": "2057",
-          "LUT": "1481",
+          "DSP48E": "10",
+          "FF": "938",
+          "LUT": "1109",
           "BRAM_18K": "0"
         }
       },
       "mandel_calc": {
         "Latency": {
           "LatencyBest": "22",
-          "LatencyAvg": "10528",
-          "LatencyWorst": "42043",
+          "LatencyAvg": "21028",
+          "LatencyWorst": "1376278",
           "PipelineIIMin": "22",
-          "PipelineIIMax": "42043",
-          "PipelineII": "22 ~ 42043",
+          "PipelineIIMax": "1376278",
+          "PipelineII": "22 ~ 1376278",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -1061,18 +1126,18 @@
           "Estimate": "5.097"
         },
         "Loops": [{
-            "Name": "Loop 1",
+            "Name": "mandel_calc_loop",
             "TripCount": "",
-            "LatencyMin": "21",
-            "LatencyMax": "42020",
-            "Latency": "21 ~ 42020",
+            "LatencyMin": "0",
+            "LatencyMax": "1376255",
+            "Latency": "0 ~ 1376255",
             "PipelineII": "",
             "PipelineDepth": "21"
           }],
         "Area": {
-          "DSP48E": "35",
-          "FF": "4161",
-          "LUT": "3051",
+          "DSP48E": "20",
+          "FF": "2144",
+          "LUT": "2491",
           "BRAM_18K": "0"
         }
       },
@@ -1080,10 +1145,10 @@
         "Latency": {
           "LatencyBest": "47",
           "LatencyAvg": "",
-          "LatencyWorst": "29070504047",
+          "LatencyWorst": "475648259087",
           "PipelineIIMin": "48",
-          "PipelineIIMax": "29070504048",
-          "PipelineII": "48 ~ 29070504048",
+          "PipelineIIMax": "475648259088",
+          "PipelineII": "48 ~ 475648259088",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -1096,40 +1161,40 @@
             "Name": "y_for",
             "TripCount": "",
             "LatencyMin": "0",
-            "LatencyMax": "29070504000",
-            "Latency": "0 ~ 29070504000",
+            "LatencyMax": "475648259040",
+            "Latency": "0 ~ 475648259040",
             "PipelineII": "",
             "PipelineDepthMin": "4",
-            "PipelineDepthMax": "20187850",
-            "PipelineDepth": "4 ~ 20187850",
+            "PipelineDepthMax": "330311291",
+            "PipelineDepth": "4 ~ 330311291",
             "Loops": [
               {
                 "Name": "x_for",
                 "TripCount": "",
                 "LatencyMin": "0",
-                "LatencyMax": "20185920",
-                "Latency": "0 ~ 20185920",
+                "LatencyMax": "330309360",
+                "Latency": "0 ~ 330309360",
                 "PipelineII": "",
                 "PipelineDepthMin": "33",
-                "PipelineDepthMax": "42054",
-                "PipelineDepth": "33 ~ 42054"
+                "PipelineDepthMax": "1376289",
+                "PipelineDepth": "33 ~ 1376289"
               },
               {
                 "Name": "burst_out",
                 "TripCount": "",
                 "LatencyMin": "0",
-                "LatencyMax": "1926",
-                "Latency": "0 ~ 1926",
+                "LatencyMax": "1927",
+                "Latency": "0 ~ 1927",
                 "PipelineII": "1",
-                "PipelineDepth": "8"
+                "PipelineDepth": "9"
               }
             ]
           }],
         "Area": {
-          "BRAM_18K": "6",
-          "DSP48E": "148",
-          "FF": "20480",
-          "LUT": "15781"
+          "BRAM_18K": "12",
+          "DSP48E": "176",
+          "FF": "22082",
+          "LUT": "24974"
         }
       }
     }
@@ -1144,7 +1209,7 @@
   },
   "GenData": {
     "DataVersion": "0.1",
-    "Time": "2019-02-26 09:27:25 -0800",
+    "Time": "2019-03-04 16:08:04 -0800",
     "ToolName": "vivado_hls",
     "ToolVersion": "2018.3"
   }

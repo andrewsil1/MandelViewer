@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="mandel.cpp" path="C:\Users\andrewsi\Documents\GitHub\MandelViewer\mandel.cpp"/>
     <originFiles name="mandel.cpp" path="C:\Users\andrewsi\Documents\GitHub\MandelViewer\mandelbrotHLS\mandel.cpp"/>
     <originFiles name="pretest.cpp" path="C:\Users\andrewsi\Documents\GitHub\MandelViewer\mandelbrotHLS\pretest.cpp"/>
   </source>

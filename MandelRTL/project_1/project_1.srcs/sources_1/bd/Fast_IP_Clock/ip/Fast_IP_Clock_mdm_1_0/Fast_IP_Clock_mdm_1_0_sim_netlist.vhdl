@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Feb 10 20:34:58 2019
+-- Date        : Mon Mar  4 16:21:32 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top Fast_IP_Clock_mdm_1_0 -prefix
---               Fast_IP_Clock_mdm_1_0_ Fast_IP_Clock_mdm_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_mdm_1_0/Fast_IP_Clock_mdm_1_0_sim_netlist.vhdl
 -- Design      : Fast_IP_Clock_mdm_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -41,6 +41,8 @@ entity Fast_IP_Clock_mdm_1_0_MB_BSCANE2 is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Use_Serial_Unified_Completion.completion_status_reg[15]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_BSCANE2 : entity is "MB_BSCANE2";
 end Fast_IP_Clock_mdm_1_0_MB_BSCANE2;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_BSCANE2 is
@@ -171,6 +173,8 @@ entity Fast_IP_Clock_mdm_1_0_MB_BUFG is
     Ext_JTAG_DRCK : out STD_LOGIC;
     DRCK : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_BUFG : entity is "MB_BUFG";
 end Fast_IP_Clock_mdm_1_0_MB_BUFG;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_BUFG is
@@ -239,6 +243,8 @@ entity Fast_IP_Clock_mdm_1_0_MB_FDC_1 is
     completion_ctrl : in STD_LOGIC;
     in0 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_FDC_1 : entity is "MB_FDC_1";
 end Fast_IP_Clock_mdm_1_0_MB_FDC_1;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_FDC_1 is
@@ -798,6 +804,8 @@ entity Fast_IP_Clock_mdm_1_0_MB_FDRE is
     tx_Buffer_Empty : in STD_LOGIC;
     S_AXI_ACLK : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_FDRE : entity is "MB_FDRE";
 end Fast_IP_Clock_mdm_1_0_MB_FDRE;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_FDRE is
@@ -841,6 +849,8 @@ entity Fast_IP_Clock_mdm_1_0_MB_FDRE_1 is
     \Use_UART.fifo_Din_reg[7]_2\ : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_FDRE_1 : entity is "MB_FDRE_1";
 end Fast_IP_Clock_mdm_1_0_MB_FDRE_1;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_FDRE_1 is
@@ -1501,6 +1511,8 @@ entity Fast_IP_Clock_mdm_1_0_MB_FDRSE is
     S_AXI_ACLK : in STD_LOGIC;
     set_Ext_BRK : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_FDRSE : entity is "MB_FDRSE";
 end Fast_IP_Clock_mdm_1_0_MB_FDRSE;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_FDRSE is
@@ -1560,6 +1572,8 @@ entity Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY is
     lopt_8 : out STD_LOGIC;
     lopt_9 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY : entity is "MB_MUXCY_XORCY";
 end Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY is
@@ -1814,6 +1828,8 @@ entity Fast_IP_Clock_mdm_1_0_MB_SRL16E is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \Use_E2.BSCANE2_I_i_8\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_SRL16E : entity is "MB_SRL16E";
 end Fast_IP_Clock_mdm_1_0_MB_SRL16E;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_SRL16E is
@@ -2724,6 +2740,8 @@ entity Fast_IP_Clock_mdm_1_0_MB_XORCY is
     LO : in STD_LOGIC;
     lopt : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MB_XORCY : entity is "MB_XORCY";
 end Fast_IP_Clock_mdm_1_0_MB_XORCY;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_XORCY is
@@ -2763,6 +2781,8 @@ entity Fast_IP_Clock_mdm_1_0_pselect_f is
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\ : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_pselect_f : entity is "pselect_f";
 end Fast_IP_Clock_mdm_1_0_pselect_f;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_pselect_f is
@@ -2826,6 +2846,8 @@ entity Fast_IP_Clock_mdm_1_0_SRL_FIFO is
     Bus_RNW_reg : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_SRL_FIFO : entity is "SRL_FIFO";
 end Fast_IP_Clock_mdm_1_0_SRL_FIFO;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_SRL_FIFO is
@@ -3383,6 +3405,8 @@ entity Fast_IP_Clock_mdm_1_0_address_decoder is
     \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg[2]_2\ : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg[2]_3\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_address_decoder : entity is "address_decoder";
 end Fast_IP_Clock_mdm_1_0_address_decoder;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_address_decoder is
@@ -3842,6 +3866,8 @@ entity Fast_IP_Clock_mdm_1_0_JTAG_CONTROL is
     D : in STD_LOGIC_VECTOR ( 0 to 0 );
     \shift_Count_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_JTAG_CONTROL : entity is "JTAG_CONTROL";
 end Fast_IP_Clock_mdm_1_0_JTAG_CONTROL;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_JTAG_CONTROL is
@@ -5862,6 +5888,8 @@ entity Fast_IP_Clock_mdm_1_0_slave_attachment is
     S_AXI_ARADDR : in STD_LOGIC_VECTOR ( 1 downto 0 );
     S_AXI_AWADDR : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_slave_attachment : entity is "slave_attachment";
 end Fast_IP_Clock_mdm_1_0_slave_attachment;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_slave_attachment is
@@ -6305,6 +6333,8 @@ entity Fast_IP_Clock_mdm_1_0_MDM_Core is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Use_Serial_Unified_Completion.count_reg[5]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MDM_Core : entity is "MDM_Core";
 end Fast_IP_Clock_mdm_1_0_MDM_Core;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MDM_Core is
@@ -7008,6 +7038,8 @@ entity Fast_IP_Clock_mdm_1_0_axi_lite_ipif is
     S_AXI_ARADDR : in STD_LOGIC_VECTOR ( 1 downto 0 );
     S_AXI_AWADDR : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end Fast_IP_Clock_mdm_1_0_axi_lite_ipif;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_axi_lite_ipif is
@@ -8611,7 +8643,7 @@ entity Fast_IP_Clock_mdm_1_0_MDM is
   attribute C_M_AXI_THREAD_ID_WIDTH : integer;
   attribute C_M_AXI_THREAD_ID_WIDTH of Fast_IP_Clock_mdm_1_0_MDM : entity is 1;
   attribute C_S_AXI_ACLK_FREQ_HZ : integer;
-  attribute C_S_AXI_ACLK_FREQ_HZ of Fast_IP_Clock_mdm_1_0_MDM : entity is 80000000;
+  attribute C_S_AXI_ACLK_FREQ_HZ of Fast_IP_Clock_mdm_1_0_MDM : entity is 80357142;
   attribute C_S_AXI_ADDR_WIDTH : integer;
   attribute C_S_AXI_ADDR_WIDTH of Fast_IP_Clock_mdm_1_0_MDM : entity is 4;
   attribute C_S_AXI_DATA_WIDTH : integer;
@@ -8638,6 +8670,8 @@ entity Fast_IP_Clock_mdm_1_0_MDM is
   attribute C_USE_CROSS_TRIGGER of Fast_IP_Clock_mdm_1_0_MDM : entity is 0;
   attribute C_USE_UART : integer;
   attribute C_USE_UART of Fast_IP_Clock_mdm_1_0_MDM : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_mdm_1_0_MDM : entity is "MDM";
 end Fast_IP_Clock_mdm_1_0_MDM;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MDM is
@@ -15394,7 +15428,7 @@ architecture STRUCTURE of Fast_IP_Clock_mdm_1_0 is
   attribute C_M_AXI_THREAD_ID_WIDTH : integer;
   attribute C_M_AXI_THREAD_ID_WIDTH of U0 : label is 1;
   attribute C_S_AXI_ACLK_FREQ_HZ : integer;
-  attribute C_S_AXI_ACLK_FREQ_HZ of U0 : label is 80000000;
+  attribute C_S_AXI_ACLK_FREQ_HZ of U0 : label is 80357142;
   attribute C_S_AXI_ADDR_WIDTH : integer;
   attribute C_S_AXI_ADDR_WIDTH of U0 : label is 4;
   attribute C_S_AXI_DATA_WIDTH : integer;
@@ -15436,7 +15470,7 @@ architecture STRUCTURE of Fast_IP_Clock_mdm_1_0 is
   attribute x_interface_info of Interrupt : signal is "xilinx.com:signal:interrupt:1.0 INTERRUPT.INTERRUPT INTERRUPT";
   attribute x_interface_parameter of Interrupt : signal is "XIL_INTERFACENAME INTERRUPT.INTERRUPT, SENSITIVITY EDGE_RISING, SUGGESTED_PRIORITY HIGH, PortWidth 1";
   attribute x_interface_info of S_AXI_ACLK : signal is "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK";
-  attribute x_interface_parameter of S_AXI_ACLK : signal is "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI:MBDEBUG_AXI_0:MBDEBUG_AXI_1:MBDEBUG_AXI_2:MBDEBUG_AXI_3:MBDEBUG_AXI_4:MBDEBUG_AXI_5:MBDEBUG_AXI_6:MBDEBUG_AXI_7:MBDEBUG_AXI_8:MBDEBUG_AXI_9:MBDEBUG_AXI_10:MBDEBUG_AXI_11:MBDEBUG_AXI_12:MBDEBUG_AXI_13:MBDEBUG_AXI_14:MBDEBUG_AXI_15:MBDEBUG_AXI_16:MBDEBUG_AXI_17:MBDEBUG_AXI_18:MBDEBUG_AXI_19:MBDEBUG_AXI_20:MBDEBUG_AXI_21:MBDEBUG_AXI_22:MBDEBUG_AXI_23:MBDEBUG_AXI_24:MBDEBUG_AXI_25:MBDEBUG_AXI_26:MBDEBUG_AXI_27:MBDEBUG_AXI_28:MBDEBUG_AXI_29:MBDEBUG_AXI_30:MBDEBUG_AXI_31, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 80000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
+  attribute x_interface_parameter of S_AXI_ACLK : signal is "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI:MBDEBUG_AXI_0:MBDEBUG_AXI_1:MBDEBUG_AXI_2:MBDEBUG_AXI_3:MBDEBUG_AXI_4:MBDEBUG_AXI_5:MBDEBUG_AXI_6:MBDEBUG_AXI_7:MBDEBUG_AXI_8:MBDEBUG_AXI_9:MBDEBUG_AXI_10:MBDEBUG_AXI_11:MBDEBUG_AXI_12:MBDEBUG_AXI_13:MBDEBUG_AXI_14:MBDEBUG_AXI_15:MBDEBUG_AXI_16:MBDEBUG_AXI_17:MBDEBUG_AXI_18:MBDEBUG_AXI_19:MBDEBUG_AXI_20:MBDEBUG_AXI_21:MBDEBUG_AXI_22:MBDEBUG_AXI_23:MBDEBUG_AXI_24:MBDEBUG_AXI_25:MBDEBUG_AXI_26:MBDEBUG_AXI_27:MBDEBUG_AXI_28:MBDEBUG_AXI_29:MBDEBUG_AXI_30:MBDEBUG_AXI_31, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 80357142, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
   attribute x_interface_info of S_AXI_ARESETN : signal is "xilinx.com:signal:reset:1.0 RST.S_AXI_ARESETN RST";
   attribute x_interface_parameter of S_AXI_ARESETN : signal is "XIL_INTERFACENAME RST.S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute x_interface_info of S_AXI_ARREADY : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARREADY";
@@ -15452,7 +15486,7 @@ architecture STRUCTURE of Fast_IP_Clock_mdm_1_0 is
   attribute x_interface_info of Dbg_Reg_En_0 : signal is "xilinx.com:interface:mbdebug:3.0 MBDEBUG_0 REG_EN";
   attribute x_interface_info of S_AXI_ARADDR : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARADDR";
   attribute x_interface_info of S_AXI_AWADDR : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
-  attribute x_interface_parameter of S_AXI_AWADDR : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 80000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of S_AXI_AWADDR : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 80357142, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of S_AXI_BRESP : signal is "xilinx.com:interface:aximm:1.0 S_AXI BRESP";
   attribute x_interface_info of S_AXI_RDATA : signal is "xilinx.com:interface:aximm:1.0 S_AXI RDATA";
   attribute x_interface_info of S_AXI_RRESP : signal is "xilinx.com:interface:aximm:1.0 S_AXI RRESP";

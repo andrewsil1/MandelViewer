@@ -3,7 +3,6 @@
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    /// 
 
     using System;
     using System.Diagnostics;
@@ -28,6 +27,7 @@
         private WriteableBitmap writeableBitmap;
         static private SerialPort _serialPort;
         int x, y;
+        private ushort maxIter = 2000;
         private int ImageBufferLength;
         private ImageParams imageParams;
         private Crc32 crc32;
@@ -37,10 +37,7 @@
 
         public delegate void SerialErrorReceivedHandler(object sender, SerialErrorReceivedEventArgs e);
 
-        static void SerialErrorHandler(object sender, SerialErrorReceivedEventArgs e)
-        {
-            Debug.WriteLine(e.EventType.ToString());
-        }
+
 
         public MainWindow()
         {
@@ -102,6 +99,7 @@
             AutomateGo();
         }
 
+        #region Serial Processing
         /* Sends a command to the remote after packaging with message length and CRC.
          */
         private void SendCommand(Crc32 crc32, string command, FixedPoint sendParam)
@@ -119,6 +117,32 @@
             buf.Read(outBuf, 0, (int)buf.Length);
             _serialPort.Write(outBuf, 0, outBuf.Length);
             Debug.WriteLine(string.Format("Sent command: {0} CRC:{1:X}", command, crcOut));
+        }
+
+        //Overload sends params which are uShorts rather than FixedPoint.
+        private void SendCommand(Crc32 crc32, string command, string sendParam)
+        {
+            bool OK = ushort.TryParse(sendParam, out ushort result);            // Hardware only supports 16-bit iteration values.
+            if (OK)
+            {
+                MemoryStream buf = new MemoryStream();
+                buf.Write(GetAscii(command), 0, 1);                            // Command
+                buf.Write(BitConverter.GetBytes((uint)8), 0, sizeof(uint));    // Length of message is constant: uint(4) + CRC(4)
+                byte[] val = BitConverter.GetBytes((uint)result);              // Send short as uint32.
+                buf.Write(val, 0, val.Length);
+                uint crcOut = crc32.Get(val);
+                byte[] crcBytes = BitConverter.GetBytes(crcOut);
+                buf.Write(crcBytes, 0, crcBytes.Length);
+                byte[] outBuf = new byte[buf.Length];
+                buf.Seek(0, 0);
+                buf.Read(outBuf, 0, (int)buf.Length);
+                _serialPort.Write(outBuf, 0, outBuf.Length);
+                Debug.WriteLine(string.Format("Sent command: {0} CRC:{1:X}", command, crcOut));
+            }
+            else
+            {
+                Debug.WriteLine("maxIterations was not parsable as a uShort.");
+            }
         }
 
         /* Helper function to turn default Unicode strings into ASCII for serial transmission.
@@ -151,22 +175,115 @@
             Debug.WriteLine("Received Ready Prompt.");
         }
 
+        static void SerialErrorHandler(object sender, SerialErrorReceivedEventArgs e)
+        {
+            Debug.WriteLine(e.EventType.ToString());
+        }
+        #endregion
+
         #region Pixel Colors and Translation
 
-        /* Takes an "N iterations" value from the calculator and translates to a monochromatic brightness value using a Sqrt function to enhance contrast.
+        /* Stolen from Stack Exchange...
          */
-        private static int GetColor(UInt16 n)
+        void HsvToRgb(double h, double S, double V, out int r, out int g, out int b)
         {
-            const int MAX_ITERATIONS = 2000;
-            int mapping = 0;
-            if (n < MAX_ITERATIONS)
+            double H = h;
+            while (H < 0) { H += 360; };
+            while (H >= 360) { H -= 360; };
+            double R, G, B;
+            if (V <= 0)
+            { R = G = B = 0; }
+            else if (S <= 0)
             {
-                double quotient = Math.Sqrt((double)n / (double)MAX_ITERATIONS);
-                int color = (int)Math.Round(0xFF * quotient);
-
-                mapping = color << 16 | color << 8 | color;
+                R = G = B = V;
             }
-            return mapping;
+            else
+            {
+                double hf = H / 60.0;
+                int i = (int)Math.Floor(hf);
+                double f = hf - i;
+                double pv = V * (1 - S);
+                double qv = V * (1 - S * f);
+                double tv = V * (1 - S * (1 - f));
+                switch (i)
+                {
+
+                    // Red is the dominant color
+
+                    case 0:
+                        R = V;
+                        G = tv;
+                        B = pv;
+                        break;
+
+                    // Green is the dominant color
+
+                    case 1:
+                        R = qv;
+                        G = V;
+                        B = pv;
+                        break;
+                    case 2:
+                        R = pv;
+                        G = V;
+                        B = tv;
+                        break;
+
+                    // Blue is the dominant color
+
+                    case 3:
+                        R = pv;
+                        G = qv;
+                        B = V;
+                        break;
+                    case 4:
+                        R = tv;
+                        G = pv;
+                        B = V;
+                        break;
+
+                    // Red is the dominant color
+
+                    case 5:
+                        R = V;
+                        G = pv;
+                        B = qv;
+                        break;
+
+                    // Just in case we overshoot on our math by a little, we put these here. Since its a switch it won't slow us down at all to put these here.
+
+                    case 6:
+                        R = V;
+                        G = tv;
+                        B = pv;
+                        break;
+                    case -1:
+                        R = V;
+                        G = pv;
+                        B = qv;
+                        break;
+
+                    // The color is not defined, we should throw an error.
+
+                    default:
+                        //LFATAL("i Value error in Pixel conversion, Value is %d", i);
+                        R = G = B = V; // Just pretend its black/white
+                        break;
+                }
+            }
+            r = Clamp((int)(R * 255.0));
+            g = Clamp((int)(G * 255.0));
+            b = Clamp((int)(B * 255.0));
+        }
+
+        /// <summary>
+        /// Clamp a value to 0-255
+        /// </summary>
+        int Clamp(int i)
+        {
+            if (i < 0) return 0;
+            if (i > 255) return 255;
+            return i;
         }
 
         /* Takes an entire CRC-validated chunk of received data and renders it to the screen on the Dispatcher thread,
@@ -174,14 +291,35 @@
          */
         private void DrawPayload(object data)
         {
+            byte[] payload = (byte[])data;
+            int[] histo = new int[maxIter + 1];                             // For histogram of escape time values
+
+            for (int index = 0; index < ImageBufferLength; index += 2)      // Build the histogram from the raw values.
+            {
+                ushort val = BitConverter.ToUInt16(payload, index);
+                histo[val]++;
+            }
+
+            int total = 0;
+            for (int index = 0; index <= maxIter; index++)
+            {
+                total += histo[index];                               // Get the overall total so individual histo bars have a scale to work against.
+            }
+
+            double[] hueTable = new double[maxIter + 1];            // Do a one-time conversion of each possible escape value to a histogram-based hue, in the range of 0-360 degrees.
+            double hueTemp = 0;
+            for (int i = 0; i <= maxIter; i++)
+            {
+                hueTemp += histo[i] / (double)total;
+                hueTable[i] = hueTemp * 360.0;
+            }
+
             Dispatcher.Invoke(() =>
             {
-                byte[] payload = (byte[]) data;
-                
                 // Reserve the back buffer for updates.
                 writeableBitmap.Lock();
 
-                for (int index = 0; index < ImageBufferLength; index += 2)
+                for (int index = 0; index < ImageBufferLength; index += 2) //Loop through the escape value array again.
                 {
                     unsafe
                     {
@@ -193,9 +331,19 @@
                         pBackBuffer += (x++) * 4;
 
                         // Assign the color data to the pixel.
-                        *(int*)pBackBuffer = GetColor(BitConverter.ToUInt16(payload, index));
+                        ushort iters = BitConverter.ToUInt16(payload, index);
+                        if (iters == maxIter) //Reserve black for maxIter pixels.
+                        {
+                            *(int*)pBackBuffer = 0;
+                        }
+                        else                //Otherwise use histogram color.
+                        {
+                            HsvToRgb(hueTable[iters], 0.5, 0.5, out int r, out int g, out int b);
+                            *(int*)pBackBuffer = (byte)r << 16 | (byte)g << 8 | (byte)b;
+                        }
                     }
                    
+                    // Update our dirtyrects a line at a time, and update our target x/y value for the next pixel we draw.
                     if (x == (int)Fractal.Width)
                     {
                         x = 0;
@@ -231,7 +379,11 @@
 
             while (!done) //TODO: Turn this into a fixed loop by having FPGA send us the total incoming number of packets first.
             {
-                while (_serialPort.BytesToRead < 4) { Thread.Sleep(200); } //TODO: Properly #define the consts here.
+                while (_serialPort.BytesToRead < 4)
+                {
+                    Thread.Sleep(200);
+                } //TODO: Properly #define the consts here.
+
                 if (firstPacket)
                 {
                     Debug.WriteLine("{0:hh:mm:ss.fff}: Data is returning.", DateTime.Now);
@@ -309,6 +461,8 @@
             SendCommand(crc32, "B", imageParams.X1);
             await Task.Run(() => WaitForReady());
             SendCommand(crc32, "C", imageParams.Y0);
+            await Task.Run(() => WaitForReady());
+            SendCommand(crc32, "D", maxItersTextBox.Text);
             await Task.Run(() => WaitForReady());
             _serialPort.Write("G");
             Debug.WriteLine("{0:hh:mm:ss.fff}: Calculation launched.", DateTime.Now);
@@ -423,7 +577,16 @@
 
             _serialPort.Open();
         }
-        
+
+        private void MaxItersTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            bool OK = ushort.TryParse(maxItersTextBox.Text, out ushort result);
+            if (OK)
+            {
+                maxIter = result;
+            }
+        }
+
         private void MainWindow1_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             _serialPort.Close();
