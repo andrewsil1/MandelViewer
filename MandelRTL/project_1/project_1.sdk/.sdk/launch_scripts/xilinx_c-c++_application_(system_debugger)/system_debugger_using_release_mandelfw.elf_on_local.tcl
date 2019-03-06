@@ -4,6 +4,6 @@ targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag
 rst -system
 after 3000
 targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274552055A"} -index 0
-dow C:/Users/andrewsi/Documents/Github/MandelViewer/MandelRTL/project_1/project_1.sdk/MandelFW/Release/MandelFW.elf
+dow C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.sdk/MandelFW/Release/MandelFW.elf
 targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274552055A"} -index 0
 con

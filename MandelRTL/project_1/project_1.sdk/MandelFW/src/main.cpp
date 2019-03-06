@@ -2,6 +2,7 @@
 /***************************** Include Files *********************************/
 
 #include "xparameters.h"
+#include "xil_assert.h"
 #include "xil_cache.h"
 #include "xil_exception.h"
 #include "xuartns550.h"
@@ -226,26 +227,50 @@ u8* compressBuffer = (u8*) (PSRAM_BASE + 0x200000);
 	 for (uint i = 0; i < TotalToSend; i += CHUNK_SIZE) {					// Break up the image buffer into chunks.
 
 		 int actualToSend;
-		 if (totalSent + CHUNK_SIZE > TotalToSend)
-			 {
-				 actualToSend = TotalToSend % CHUNK_SIZE; //Size of leftover end packet
+
+		 bool receivedOK = false;
+		 u8 sendAttempts = 0;
+		 while (!receivedOK) {
+			 if (totalSent + CHUNK_SIZE > TotalToSend)
+				 {
+					 actualToSend = TotalToSend % CHUNK_SIZE; //Size of leftover end packet
+				 }
+			 else
+				 {
+					 actualToSend = CHUNK_SIZE;
+				 }
+
+			 u32 crc = rc_crc32(0, (const char*) sendBuffer+i, actualToSend);	// Calculate CRC at current offset into the buffer.
+
+			 int size = actualToSend+sizeof(u32); 								// Total packet size is chunk bytes + CRC32: //BUGBUG: Last chunk might be smaller!
+			 while (XUartNs550_IsSending(UartInstancePtr)) {}
+			 XUartNs550_Send(UartInstancePtr, (u8 *) &size, sizeof(int)); 		// Tell receiver how big the packet will be.
+
+			 while (XUartNs550_IsSending(UartInstancePtr)) {}
+			 XUartNs550_Send(UartInstancePtr, (sendBuffer+i), actualToSend);	// Send the payload bytes from the buffer.
+
+			 while (XUartNs550_IsSending(UartInstancePtr)) {}
+			 XUartNs550_Send(UartInstancePtr, (u8 *) &crc, sizeof(u32));		// Tack the CRC onto the end of the sent packet.
+			 sendAttempts++;
+
+			 while (XUartNs550_IsSending(UartInstancePtr)) {}
+			 XUartNs550_ClearStats(UartInstancePtr);
+			 //Wait for an incoming character after transmission completes
+			 XUartNs550_Recv(UartInstancePtr, ReceiveBufferPtr, 1);
+			 do {
+					XUartNs550_GetStats(UartInstancePtr,&Stats);
+			 } while (Stats.CharactersReceived == 0);
+
+			 if (*ReceiveBufferPtr == '@') {
+				 receivedOK = true;
 			 }
-		 else
-		 	 {
-			 	 actualToSend = CHUNK_SIZE;
-		 	 }
-
-		 u32 crc = rc_crc32(0, (const char*) sendBuffer+i, actualToSend);	// Calculate CRC at current offset into the buffer.
-
-		 int size = actualToSend+sizeof(u32); 								// Total packet size is chunk bytes + CRC32: //BUGBUG: Last chunk might be smaller!
-		 while (XUartNs550_IsSending(UartInstancePtr)) {}
-		 XUartNs550_Send(UartInstancePtr, (u8 *) &size, sizeof(int)); 		// Tell receiver how big the packet will be.
-
-		 while (XUartNs550_IsSending(UartInstancePtr)) {}
-		 XUartNs550_Send(UartInstancePtr, (sendBuffer+i), actualToSend);	// Send the payload bytes from the buffer.
-
-		 while (XUartNs550_IsSending(UartInstancePtr)) {}
-		 XUartNs550_Send(UartInstancePtr, (u8 *) &crc, sizeof(u32));		// Tack the CRC onto the end of the sent packet.
+			 if (sendAttempts > 5) {
+				 #ifdef DEBUG
+				 xil_printf("5 send attempts failed.");
+				 #endif
+				 Xil_AssertVoidAlways();
+			 }
+		 }
 
 		 totalSent += actualToSend;
 	 }
@@ -359,10 +384,7 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 
 	while (!XCalc_IsIdle(&Calc)) {} // Wait for IP to be Idle
 
-#ifdef DEBUG
 	xil_printf("Calc IP is ready.\r\n");
-#endif
-
 	// Wait for Go command.
 
 	XUartNs550_ClearStats(UartInstancePtr);

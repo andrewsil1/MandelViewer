@@ -26,18 +26,17 @@
     {
         private WriteableBitmap writeableBitmap;
         static private SerialPort _serialPort;
-        int x, y;
+        private int x, y;
         private ushort maxIter = 2000;
         private int ImageBufferLength;
         private ImageParams imageParams;
         private Crc32 crc32;
-        int zoomPercent;
+        private int zoomPercent;
             
-        const int BAUD_RATE = 3000000;
+        const int BAUD_RATE = 3000000; //FTDI chip can't handle anything higher.
 
         public delegate void SerialErrorReceivedHandler(object sender, SerialErrorReceivedEventArgs e);
-
-
+        
 
         public MainWindow()
         {
@@ -338,7 +337,7 @@
                         }
                         else                //Otherwise use histogram color.
                         {
-                            HsvToRgb(hueTable[iters], 0.5, 0.5, out int r, out int g, out int b);
+                            HsvToRgb(hueTable[iters], 0.5, 0.85, out int r, out int g, out int b);
                             *(int*)pBackBuffer = (byte)r << 16 | (byte)g << 8 | (byte)b;
                         }
                     }
@@ -369,6 +368,7 @@
         {
             int packetSize = 65536;                     //BUGBUG: Get this size from the FPGA.
             int payloadBytes = 0;                       //This will be a running count of how many compressed payload bytes we've received, not counting headers/CRCs.
+            int failedAttempts = 0;
             byte[] buffer = new byte[packetSize];
             bool done = false;
             bool firstPacket = true;
@@ -414,7 +414,19 @@
                     if (calcCrc != incomingCrc)
                     {
                         Debug.Write(String.Format("Incoming CRC: {0:X}  Calculated CRC: {1:X}\n", incomingCrc, calcCrc));
-                        throw new Exception("CRC failure during reception.");
+                        payloadBytes -= payloadSegmentEnd;
+                        failedAttempts++;
+                        _serialPort.Write(GetAscii("Z"), 0, 1); //Error
+                        if (failedAttempts > 5)
+                        {
+                            Debug.WriteLine("Too many failed receive attempts.");
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        _serialPort.Write(GetAscii("@"), 0, 1); //Acknowledge receipt.
+                        failedAttempts = 0;                     //Reset for next packet.
                     }
                 }
                 else
