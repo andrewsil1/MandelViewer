@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <core name="" type="" target="">
+    <kernel name="calc" language="c" vlnv="QuickSilver:hls:calc:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true">
+      <port name="S_AXI_IN_PARMS" mode="slave" range="0x1000" dataWidth="16" portType="addressable" base="0x00000000"/>
+      <port name="M_AXI_BUF_R" mode="master" range="0xFFFFFFFF" dataWidth="16" portType="addressable" base="0x00000000"/>
+      <arg name="X0" addressQualifier="0" id="0" port="S_AXI_IN_PARMS" size="0x4" offset="0x10" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="Y0" addressQualifier="0" id="1" port="S_AXI_IN_PARMS" size="0x4" offset="0x1C" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="X1" addressQualifier="0" id="2" port="S_AXI_IN_PARMS" size="0x4" offset="0x28" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="width" addressQualifier="0" id="3" port="S_AXI_IN_PARMS" size="0x4" offset="0x34" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="maxIter" addressQualifier="0" id="4" port="S_AXI_IN_PARMS" size="0x4" offset="0x3C" hostOffset="0x0" hostSize="0x4" type="unsigned short"/>
+      <compileWorkGroupSize x="1" y="1" z="1"/>
+    </kernel>
+  </core>
+</project>

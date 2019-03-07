@@ -262,7 +262,6 @@ __pycache__/
 
 mandelbrotHLS/AXI/csim/build
 mandelbrotHLS/AXI/csim/.lst_opt.tcl
-mandelbrotHLS/AXI/impl
 mandelbrotHLS/AXI/sim
 mandelbrotHLS/AXI/syn
 mandelbrotHLS/AXI/sdx.tcl
@@ -284,3 +283,6 @@ MandelRTL/project_1/vivado.jou
 *.a
 *.o
 *.elf
+/mandelbrotHLS/AXI/impl/verilog
+/mandelbrotHLS/AXI/impl/vhdl
+/mandelbrotHLS/AXI/impl/report/verilog
