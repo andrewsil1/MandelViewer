@@ -91,7 +91,7 @@
         /* Converts string back into Fixed Point */
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            Double.TryParse((string)value, out double result);
+            double.TryParse((string)value, out double result);
             return new FixedPoint(Width, FracBits, result);
         }
         #endregion

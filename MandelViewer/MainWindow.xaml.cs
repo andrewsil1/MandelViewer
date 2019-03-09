@@ -82,8 +82,8 @@
             Fractal.SnapsToDevicePixels = true;
             // Create a bitmap and tie it to the onscreen control.
             writeableBitmap = new WriteableBitmap(
-                (Int32)Fractal.Width,
-                (Int32)Fractal.Height,
+                (int)Fractal.Width,
+                (int)Fractal.Height,
                 96,
                 96,
                 PixelFormats.Bgr32,
@@ -364,7 +364,7 @@
         /* This is the primary "work" method which waits for the calculation kicked off elsewhere to return data. 
          * As it comes in, we check the CRC of each packet, decompress the data from its LZ4 frame, and then render it.
          */
-        private void DoCalculation(Object stateInfo)
+        private void DoCalculation(object stateInfo)
         {
             int packetSize = 65536;                     //BUGBUG: Get this size from the FPGA.
             int payloadBytes = 0;                       //This will be a running count of how many compressed payload bytes we've received, not counting headers/CRCs.
@@ -373,9 +373,9 @@
             bool done = false;
             bool firstPacket = true;
             MemoryStream decompressedData = new MemoryStream(ImageBufferLength);
-            MemoryStream incomingData = new MemoryStream(ImageBufferLength);// / 2); //Assume we'll get at least a 2x ratio.
-            Byte[] drawBuffer = new byte[ImageBufferLength]; //For the full decompressed data
-            byte[] payload = new byte[ImageBufferLength];// / 2];//For the full compressed-as-received data om the serial line
+            MemoryStream incomingData = new MemoryStream(ImageBufferLength);     //We don't really know how well compressed the incoming data will be.
+            byte[] drawBuffer = new byte[ImageBufferLength];                     //For the full decompressed data
+            byte[] payload = new byte[ImageBufferLength];                        //For the full compressed-as-received data on the serial line
 
             while (!done) //TODO: Turn this into a fixed loop by having FPGA send us the total incoming number of packets first.
             {
@@ -406,14 +406,14 @@
                 if (s != "DONE")
                 {
                     int payloadSegmentEnd = packetLength - 4;
-                    UInt32 incomingCrc = BitConverter.ToUInt32(buffer, payloadSegmentEnd); //Extract CRC from the packet.
+                    uint incomingCrc = BitConverter.ToUInt32(buffer, payloadSegmentEnd); //Extract CRC from the packet.
                     Array.Copy(buffer, 0, payload, payloadBytes, payloadSegmentEnd);       //Copy bytes without the CRC tacked on to the complete payload buffer
-                    UInt32 calcCrc = crc32.Get(new ArraySegment<Byte>(payload, payloadBytes, payloadSegmentEnd));
+                    uint calcCrc = crc32.Get(new ArraySegment<byte>(payload, payloadBytes, payloadSegmentEnd));
                     payloadBytes += payloadSegmentEnd;
 
                     if (calcCrc != incomingCrc)
                     {
-                        Debug.Write(String.Format("Incoming CRC: {0:X}  Calculated CRC: {1:X}\n", incomingCrc, calcCrc));
+                        Debug.Write(string.Format("Incoming CRC: {0:X}  Calculated CRC: {1:X}\n", incomingCrc, calcCrc));
                         payloadBytes -= payloadSegmentEnd;
                         failedAttempts++;
                         _serialPort.Write(GetAscii("Z"), 0, 1); //Error
