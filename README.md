@@ -27,7 +27,11 @@ regions of interest in the image and recalculate.
 
 The calculator itself makes use of 40-bit fixed point math with only 5 bits dedicated to the integer portion, given the limited
 range of the complex values required for the application.  This provides a reasonable tradeoff between maximum zoom depth, chip area
-required for the math (only 240 DSP blocks are available in the Artix-7), and the performance of the calculation.
+required for the math (only 240 DSP blocks are available in the Artix-7), and the performance of the calculation.  The
+algorithm was adapted initially from the Wikipedia pseudocode, including a few simple optimizations mentioned there such
+as first-order periodicity checking to allow early loop termination, as well as pre-testing of whether the current pixel
+is located within the primary cardioid bulbs of the set, which allows the loop to be skipped altogether for many points which
+would otherwise require a maximum-duration calculation.
 
 While a modern desktop CPU that makes use of vector floating point operations and/or a GPU to perform similar calculations can
 easily outstrip the performance of this FPGA, that wasn't really the point of the exercise.  However, given the slow speed
