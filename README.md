@@ -43,5 +43,5 @@ pretty satisfying to me.
 
 There are three clock domains used in the design: one for the Microblaze (which is notably cranky about meeting timing at
 frequencies much above 80Mhz when when a lot of BRAM is needed for the application), one for the AXI bus and most peripherals 
-at 100Mhz, and one for the Mandelbrot calculator IP, which has been tuned to run at a somewhat higher Fmax than the rest of 
+at 100Mhz, and one for the Mandelbrot calculator IP, which has been tuned to run at 133Mhz, a bit quicker than the rest of 
 the design.  The AXI bus crossbar automatically inserts the necessary synchronizers to move data between the different clock domains.
