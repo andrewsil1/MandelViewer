@@ -1,7 +1,7 @@
-// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Mon Mar  4 16:20:02 2019
+// Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+// Date        : Fri May 31 13:45:32 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_clk_wiz_0_0/Fast_IP_Clock_clk_wiz_0_0_sim_netlist.v
@@ -103,7 +103,8 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   BUFGCTRL #(
     .INIT_OUT(0),
     .PRESELECT_I0("TRUE"),
-    .PRESELECT_I1("FALSE")) 
+    .PRESELECT_I1("FALSE"),
+    .SIM_DEVICE("7SERIES")) 
     clkout1_buf
        (.CE0(seq_reg1[7]),
         .CE1(1'b0),
@@ -124,7 +125,8 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   BUFGCTRL #(
     .INIT_OUT(0),
     .PRESELECT_I0("TRUE"),
-    .PRESELECT_I1("FALSE")) 
+    .PRESELECT_I1("FALSE"),
+    .SIM_DEVICE("7SERIES")) 
     clkout2_buf
        (.CE0(seq_reg2[7]),
         .CE1(1'b0),
@@ -145,7 +147,8 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   BUFGCTRL #(
     .INIT_OUT(0),
     .PRESELECT_I0("TRUE"),
-    .PRESELECT_I1("FALSE")) 
+    .PRESELECT_I1("FALSE"),
+    .SIM_DEVICE("7SERIES")) 
     clkout3_buf
        (.CE0(seq_reg3[7]),
         .CE1(1'b0),
@@ -163,20 +166,20 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(11.250000),
+    .CLKFBOUT_MULT_F(8.000000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(10.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(11.250000),
+    .CLKOUT0_DIVIDE_F(8.000000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(14),
+    .CLKOUT1_DIVIDE(10),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
-    .CLKOUT2_DIVIDE(9),
+    .CLKOUT2_DIVIDE(6),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),

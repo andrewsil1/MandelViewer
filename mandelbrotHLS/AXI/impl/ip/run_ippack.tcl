@@ -1,17 +1,9 @@
 # ==============================================================
-# File generated on Mon Mar 04 16:08:04 -0800 2019
-# Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
-# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
-# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+# Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+# Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 # ==============================================================
 package require math::bignum
-# source iptypes.tcl
-if {[catch {source $env(XILINX_VIVADO)/data/ip/xilinx/xbip_utils_v3_0/common_tcl/iptypes.tcl}]} {
-    set SupportDataType 0
-} else {
-    set SupportDataType 1
-}
+set SupportDataType 0
 
 proc glob-r {{dir .}} {
     # {{{
@@ -59,19 +51,23 @@ proc sort_file_names {files {top_name {}}} {
 set Vendor      "QuickSilver"
 set Library     "hls"
 set IPName      "calc"
-set Version     "1.0"
-set DisplayName "Mandelbrot Calculator Core"
-set Revision    "1903041608"
-set Description "MandelCalc"
+set Version     "1.01"
+set DisplayName "calc"
+set Revision    "1905311127"
+set Description "Mandelbrot Calculator Core"
 set Device      "artix7"
 set AutoFamily  ""
 set Taxonomy    "/VIVADO_HLS_IP"
+set target_part "xc7a100t-csg324-1"
+set target_lang "verilog"
 set has_xpm_memory "0"
 set sdx_kernel_name "calc"
 set sdx_kernel_type ""
 set sdx_kernel_files {}
 set enable_xo_gen 0
 set sdaccel_dir [file join [pwd] .. sdaccel]
+set solution_dir "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/AXI"
+set debug_dir [file join $solution_dir .debug]
 set xo_hls_files_dir ""
 set hdl_module_list {calc_mul_41s_40s_bkb
 calc_mul_40s_40s_cud
@@ -1033,8 +1029,8 @@ if {$SubcoreFiles != ""} {
     file mkdir $ipdir
 
     set prj "tmp"
-    create_project -force $prj
-    set_property target_language verilog [current_project]
+    create_project -part $target_part -force $prj
+    set_property target_language $target_lang [current_project]
     if {[regexp -nocase {2018\.4.*} $vivado_ver match]} {
         set_property coreContainer.alwaysCreateXCI 1 [current_project]
     }
@@ -1965,8 +1961,7 @@ if {$enable_xo_gen && $kernel_xo ne ""} {
     if {[file isfile $kernel_xml]} {
         set ip_unzip_dir [file join [pwd] ip_unzip_dir]
         catch {exec unzip -d $ip_unzip_dir $ZipFile}
-        set debug_dir [file join [pwd] .. .. .debug]
-        set design_xml [file join [pwd] .. .. .autopilot db ${TopNoPrefix}.design.xml]
+        set design_xml [file join $solution_dir .autopilot db ${TopNoPrefix}.design.xml]
         if { [file exists $kernel_xo] } {
             file delete -force $kernel_xo
         }

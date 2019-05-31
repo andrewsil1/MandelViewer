@@ -20,7 +20,7 @@ set script_folder [_tcl::get_script_folder]
 ################################################################
 # Check if script is running in correct Vivado version.
 ################################################################
-set scripts_vivado_version 2018.3
+set scripts_vivado_version 2019.1
 set current_vivado_version [version -short]
 
 if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
@@ -158,7 +158,9 @@ proc create_hier_cell_microblaze_0_local_memory { parentCell nameHier } {
 
   # Create interface pins
   create_bd_intf_pin -mode MirroredMaster -vlnv xilinx.com:interface:lmb_rtl:1.0 DLMB
+
   create_bd_intf_pin -mode MirroredMaster -vlnv xilinx.com:interface:lmb_rtl:1.0 ILMB
+
 
   # Create pins
   create_bd_pin -dir I -type clk LMB_Clk
@@ -193,7 +195,11 @@ proc create_hier_cell_microblaze_0_local_memory { parentCell nameHier } {
    CONFIG.Byte_Size {8} \
    CONFIG.EN_SAFETY_CKT {true} \
    CONFIG.Enable_32bit_Address {true} \
+   CONFIG.Enable_B {Use_ENB_Pin} \
    CONFIG.Memory_Type {True_Dual_Port_RAM} \
+   CONFIG.Port_B_Clock {100} \
+   CONFIG.Port_B_Enable_Rate {100} \
+   CONFIG.Port_B_Write_Rate {50} \
    CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
    CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
    CONFIG.Use_Byte_Write_Enable {true} \
@@ -253,8 +259,11 @@ proc create_root_design { parentCell } {
 
   # Create interface ports
   set psram_rtl_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:emc_rtl:1.0 psram_rtl_0 ]
+
   set push_buttons_5bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 push_buttons_5bits ]
+
   set usb_uart [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 usb_uart ]
+
 
   # Create ports
   set btnCpuReset [ create_bd_port -dir I -type rst btnCpuReset ]
@@ -292,7 +301,7 @@ proc create_root_design { parentCell } {
  ] $axi_uart16550_0
 
   # Create instance: calc_0, and set properties
-  set calc_0 [ create_bd_cell -type ip -vlnv QuickSilver:hls:calc:1.0 calc_0 ]
+  set calc_0 [ create_bd_cell -type ip -vlnv QuickSilver:hls:calc:1.01 calc_0 ]
   set_property -dict [ list \
    CONFIG.C_M_AXI_BUF_R_TARGET_ADDR {0x80000000} \
  ] $calc_0
@@ -301,28 +310,28 @@ proc create_root_design { parentCell } {
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
    CONFIG.CLKOUT1_DRIVES {BUFGCE} \
-   CONFIG.CLKOUT1_JITTER {121.458} \
-   CONFIG.CLKOUT1_PHASE_ERROR {91.100} \
+   CONFIG.CLKOUT1_JITTER {144.719} \
+   CONFIG.CLKOUT1_PHASE_ERROR {114.212} \
    CONFIG.CLKOUT2_DRIVES {BUFGCE} \
-   CONFIG.CLKOUT2_JITTER {126.903} \
-   CONFIG.CLKOUT2_PHASE_ERROR {91.100} \
+   CONFIG.CLKOUT2_JITTER {151.652} \
+   CONFIG.CLKOUT2_PHASE_ERROR {114.212} \
    CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {80} \
    CONFIG.CLKOUT2_USED {true} \
    CONFIG.CLKOUT3_DRIVES {BUFGCE} \
-   CONFIG.CLKOUT3_JITTER {116.571} \
-   CONFIG.CLKOUT3_PHASE_ERROR {91.100} \
-   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {125} \
+   CONFIG.CLKOUT3_JITTER {136.421} \
+   CONFIG.CLKOUT3_PHASE_ERROR {114.212} \
+   CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {130} \
    CONFIG.CLKOUT3_USED {true} \
    CONFIG.CLKOUT4_DRIVES {BUFGCE} \
    CONFIG.CLKOUT4_JITTER {167.017} \
    CONFIG.CLKOUT4_PHASE_ERROR {114.212} \
-   CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {50} \
+   CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {100.000} \
    CONFIG.CLKOUT4_USED {false} \
    CONFIG.CLKOUT5_DRIVES {BUFGCE} \
    CONFIG.CLKOUT5_JITTER {167.017} \
    CONFIG.CLKOUT5_PHASE_ERROR {114.212} \
-   CONFIG.CLKOUT5_REQUESTED_OUT_FREQ {50} \
-   CONFIG.CLKOUT5_REQUESTED_PHASE {45} \
+   CONFIG.CLKOUT5_REQUESTED_OUT_FREQ {100.000} \
+   CONFIG.CLKOUT5_REQUESTED_PHASE {0.000} \
    CONFIG.CLKOUT5_USED {false} \
    CONFIG.CLKOUT6_DRIVES {BUFGCE} \
    CONFIG.CLKOUT7_DRIVES {BUFGCE} \
@@ -330,16 +339,16 @@ proc create_root_design { parentCell } {
    CONFIG.CLK_OUT1_PORT {AXIclk} \
    CONFIG.CLK_OUT2_PORT {MBClk} \
    CONFIG.CLK_OUT3_PORT {CalcClk} \
-   CONFIG.CLK_OUT4_PORT {NetClk} \
-   CONFIG.CLK_OUT5_PORT {NetClkSkew} \
+   CONFIG.CLK_OUT4_PORT {clk_out4} \
+   CONFIG.CLK_OUT5_PORT {clk_out5} \
    CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {11.250} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {11.250} \
-   CONFIG.MMCM_CLKOUT1_DIVIDE {14} \
-   CONFIG.MMCM_CLKOUT2_DIVIDE {9} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {8.000} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {8.000} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {10} \
+   CONFIG.MMCM_CLKOUT2_DIVIDE {6} \
    CONFIG.MMCM_CLKOUT3_DIVIDE {1} \
    CONFIG.MMCM_CLKOUT4_DIVIDE {1} \
-   CONFIG.MMCM_CLKOUT4_PHASE {45.000} \
+   CONFIG.MMCM_CLKOUT4_PHASE {0.000} \
    CONFIG.MMCM_DIVCLK_DIVIDE {1} \
    CONFIG.NUM_OUT_CLKS {3} \
    CONFIG.USE_RESET {false} \
@@ -479,6 +488,9 @@ proc create_root_design { parentCell } {
 
   create_bd_addr_seg -range 0x00010000 -offset 0x41200000 [get_bd_addr_spaces calc_0/Data_m_axi_buf_r] [get_bd_addr_segs axi_intc_0/S_AXI/Reg] SEG_axi_intc_0_Reg
   exclude_bd_addr_seg [get_bd_addr_segs calc_0/Data_m_axi_buf_r/SEG_axi_intc_0_Reg]
+
+  create_bd_addr_seg -range 0x00010000 -offset 0x44A10000 [get_bd_addr_spaces calc_0/Data_m_axi_buf_r] [get_bd_addr_segs axi_uart16550_0/S_AXI/Reg] SEG_axi_uart16550_0_Reg
+  exclude_bd_addr_seg [get_bd_addr_segs calc_0/Data_m_axi_buf_r/SEG_axi_uart16550_0_Reg]
 
   create_bd_addr_seg -range 0x00010000 -offset 0x44A00000 [get_bd_addr_spaces calc_0/Data_m_axi_buf_r] [get_bd_addr_segs calc_0/s_axi_in_parms/Reg] SEG_calc_0_Reg
   exclude_bd_addr_seg [get_bd_addr_segs calc_0/Data_m_axi_buf_r/SEG_calc_0_Reg]

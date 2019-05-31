@@ -744,7 +744,8 @@ resize_pblock [get_pblocks pblock_psram_ip_0] -add {SLICE_X0Y81:SLICE_X7Y99}
 
 create_pblock pblock_axi_gpio_0
 add_cells_to_pblock [get_pblocks pblock_axi_gpio_0] [get_cells -quiet [list Fast_IP_Clock_i/axi_gpio_0]]
-resize_pblock [get_pblocks pblock_axi_gpio_0] -add {SLICE_X0Y143:SLICE_X3Y147}
+resize_pblock [get_pblocks pblock_axi_gpio_0] -add {SLICE_X0Y140:SLICE_X7Y147}
+
 
 
 

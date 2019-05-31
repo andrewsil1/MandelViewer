@@ -1,7 +1,7 @@
-// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Mon Mar  4 16:21:32 2019
+// Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+// Date        : Fri May 31 13:45:51 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_mdm_1_0/Fast_IP_Clock_mdm_1_0_sim_netlist.v
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Fast_IP_Clock_mdm_1_0,MDM,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "MDM,Vivado 2018.3" *) 
+(* CHECK_LICENSE_TYPE = "Fast_IP_Clock_mdm_1_0,MDM,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "MDM,Vivado 2019.1" *) 
 (* NotValidForBitStream *)
 module Fast_IP_Clock_mdm_1_0
    (S_AXI_ACLK,
@@ -45,11 +45,11 @@ module Fast_IP_Clock_mdm_1_0
     Dbg_Update_0,
     Dbg_Rst_0,
     Dbg_Disable_0);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI:MBDEBUG_AXI_0:MBDEBUG_AXI_1:MBDEBUG_AXI_2:MBDEBUG_AXI_3:MBDEBUG_AXI_4:MBDEBUG_AXI_5:MBDEBUG_AXI_6:MBDEBUG_AXI_7:MBDEBUG_AXI_8:MBDEBUG_AXI_9:MBDEBUG_AXI_10:MBDEBUG_AXI_11:MBDEBUG_AXI_12:MBDEBUG_AXI_13:MBDEBUG_AXI_14:MBDEBUG_AXI_15:MBDEBUG_AXI_16:MBDEBUG_AXI_17:MBDEBUG_AXI_18:MBDEBUG_AXI_19:MBDEBUG_AXI_20:MBDEBUG_AXI_21:MBDEBUG_AXI_22:MBDEBUG_AXI_23:MBDEBUG_AXI_24:MBDEBUG_AXI_25:MBDEBUG_AXI_26:MBDEBUG_AXI_27:MBDEBUG_AXI_28:MBDEBUG_AXI_29:MBDEBUG_AXI_30:MBDEBUG_AXI_31, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 80357142, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input S_AXI_ACLK;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI:MBDEBUG_AXI_0:MBDEBUG_AXI_1:MBDEBUG_AXI_2:MBDEBUG_AXI_3:MBDEBUG_AXI_4:MBDEBUG_AXI_5:MBDEBUG_AXI_6:MBDEBUG_AXI_7:MBDEBUG_AXI_8:MBDEBUG_AXI_9:MBDEBUG_AXI_10:MBDEBUG_AXI_11:MBDEBUG_AXI_12:MBDEBUG_AXI_13:MBDEBUG_AXI_14:MBDEBUG_AXI_15:MBDEBUG_AXI_16:MBDEBUG_AXI_17:MBDEBUG_AXI_18:MBDEBUG_AXI_19:MBDEBUG_AXI_20:MBDEBUG_AXI_21:MBDEBUG_AXI_22:MBDEBUG_AXI_23:MBDEBUG_AXI_24:MBDEBUG_AXI_25:MBDEBUG_AXI_26:MBDEBUG_AXI_27:MBDEBUG_AXI_28:MBDEBUG_AXI_29:MBDEBUG_AXI_30:MBDEBUG_AXI_31, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 80000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input S_AXI_ACLK;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.S_AXI_ARESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input S_AXI_ARESETN;
   (* x_interface_info = "xilinx.com:signal:interrupt:1.0 INTERRUPT.INTERRUPT INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME INTERRUPT.INTERRUPT, SENSITIVITY EDGE_RISING, SUGGESTED_PRIORITY HIGH, PortWidth 1" *) output Interrupt;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.Debug_SYS_Rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.Debug_SYS_Rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) output Debug_SYS_Rst;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 80357142, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [3:0]S_AXI_AWADDR;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 80000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [3:0]S_AXI_AWADDR;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input S_AXI_AWVALID;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output S_AXI_AWREADY;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]S_AXI_WDATA;
@@ -998,7 +998,7 @@ module Fast_IP_Clock_mdm_1_0
   (* C_M_AXI_ADDR_WIDTH = "32" *) 
   (* C_M_AXI_DATA_WIDTH = "32" *) 
   (* C_M_AXI_THREAD_ID_WIDTH = "1" *) 
-  (* C_S_AXI_ACLK_FREQ_HZ = "80357142" *) 
+  (* C_S_AXI_ACLK_FREQ_HZ = "80000000" *) 
   (* C_S_AXI_ADDR_WIDTH = "4" *) 
   (* C_S_AXI_DATA_WIDTH = "32" *) 
   (* C_TRACE_ASYNC_RESET = "0" *) 
@@ -2723,9 +2723,9 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
   wire \Use_Serial_Unified_Completion.count[0]__0_i_4_n_0 ;
   wire \Use_Serial_Unified_Completion.count[0]_i_1_n_0 ;
   wire \Use_Serial_Unified_Completion.count[1]_i_1_n_0 ;
+  wire [0:4]\Use_Serial_Unified_Completion.count_reg ;
   wire [0:0]\Use_Serial_Unified_Completion.count_reg[5]_0 ;
   wire [0:0]\Use_Serial_Unified_Completion.count_reg[5]_1 ;
-  wire [0:4]\Use_Serial_Unified_Completion.count_reg__0__0 ;
   wire \Use_Serial_Unified_Completion.count_reg_n_0_[0] ;
   wire \Use_Serial_Unified_Completion.count_reg_n_0_[1] ;
   wire \Use_Serial_Unified_Completion.mb_data_overrun_i_2_n_0 ;
@@ -2796,8 +2796,8 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
   wire sel_n_reg_1;
   wire sel_with_scan_reset24_out;
   wire set_Ext_BRK;
+  wire [4:4]shift_Count_reg;
   wire [0:0]\shift_Count_reg[0]_0 ;
-  wire [4:4]shift_Count_reg__0;
   wire shifting_Data1__0;
   wire sync;
   wire tdi_shifter0;
@@ -3071,7 +3071,7 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
         .\Use_E2.BSCANE2_I_i_8 (\Using_FPGA.Native_0 ));
   Fast_IP_Clock_mdm_1_0_MB_SRL16E__parameterized5 \Use_ID_SRL16E.SRL16E_ID_2 
        (.Dbg_TDO_0(Dbg_TDO_0),
-        .Q({shift_Count_reg__0,A3,A2,A1,Q}),
+        .Q({shift_Count_reg,A3,A2,A1,Q}),
         .Q0_out(Q0_out),
         .\Use_E2.BSCANE2_I_i_1_0 (\Use_E2.BSCANE2_I_i_7_n_0 ),
         .\Use_E2.BSCANE2_I_i_1_1 (\Use_E2.BSCANE2_I_i_9_n_0 ),
@@ -3331,19 +3331,19 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
   LUT4 #(
     .INIT(16'h0078)) 
     \Use_Serial_Unified_Completion.count[0]__0_i_2 
-       (.I0(\Use_Serial_Unified_Completion.count_reg__0__0 [1]),
+       (.I0(\Use_Serial_Unified_Completion.count_reg [1]),
         .I1(\Use_Serial_Unified_Completion.count[0]__0_i_4_n_0 ),
-        .I2(\Use_Serial_Unified_Completion.count_reg__0__0 [0]),
+        .I2(\Use_Serial_Unified_Completion.count_reg [0]),
         .I3(sel_n_reg_0),
         .O(p_0_in[5]));
   (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \Use_Serial_Unified_Completion.count[0]__0_i_4 
-       (.I0(\Use_Serial_Unified_Completion.count_reg__0__0 [2]),
-        .I1(\Use_Serial_Unified_Completion.count_reg__0__0 [4]),
+       (.I0(\Use_Serial_Unified_Completion.count_reg [2]),
+        .I1(\Use_Serial_Unified_Completion.count_reg [4]),
         .I2(\Use_Serial_Unified_Completion.count_reg[5]_0 ),
-        .I3(\Use_Serial_Unified_Completion.count_reg__0__0 [3]),
+        .I3(\Use_Serial_Unified_Completion.count_reg [3]),
         .O(\Use_Serial_Unified_Completion.count[0]__0_i_4_n_0 ));
   LUT6 #(
     .INIT(64'h0000FF80FF00FF00)) 
@@ -3358,11 +3358,11 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
   LUT6 #(
     .INIT(64'h000000007FFF8000)) 
     \Use_Serial_Unified_Completion.count[1]__0_i_1 
-       (.I0(\Use_Serial_Unified_Completion.count_reg__0__0 [2]),
-        .I1(\Use_Serial_Unified_Completion.count_reg__0__0 [4]),
+       (.I0(\Use_Serial_Unified_Completion.count_reg [2]),
+        .I1(\Use_Serial_Unified_Completion.count_reg [4]),
         .I2(\Use_Serial_Unified_Completion.count_reg[5]_0 ),
-        .I3(\Use_Serial_Unified_Completion.count_reg__0__0 [3]),
-        .I4(\Use_Serial_Unified_Completion.count_reg__0__0 [1]),
+        .I3(\Use_Serial_Unified_Completion.count_reg [3]),
+        .I4(\Use_Serial_Unified_Completion.count_reg [1]),
         .I5(sel_n_reg_0),
         .O(p_0_in[4]));
   LUT6 #(
@@ -3379,26 +3379,26 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
   LUT5 #(
     .INIT(32'h00007F80)) 
     \Use_Serial_Unified_Completion.count[2]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.count_reg__0__0 [3]),
+       (.I0(\Use_Serial_Unified_Completion.count_reg [3]),
         .I1(\Use_Serial_Unified_Completion.count_reg[5]_0 ),
-        .I2(\Use_Serial_Unified_Completion.count_reg__0__0 [4]),
-        .I3(\Use_Serial_Unified_Completion.count_reg__0__0 [2]),
+        .I2(\Use_Serial_Unified_Completion.count_reg [4]),
+        .I3(\Use_Serial_Unified_Completion.count_reg [2]),
         .I4(sel_n_reg_0),
         .O(p_0_in[3]));
   (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
     .INIT(16'h0078)) 
     \Use_Serial_Unified_Completion.count[3]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.count_reg__0__0 [4]),
+       (.I0(\Use_Serial_Unified_Completion.count_reg [4]),
         .I1(\Use_Serial_Unified_Completion.count_reg[5]_0 ),
-        .I2(\Use_Serial_Unified_Completion.count_reg__0__0 [3]),
+        .I2(\Use_Serial_Unified_Completion.count_reg [3]),
         .I3(sel_n_reg_0),
         .O(p_0_in[2]));
   LUT3 #(
     .INIT(8'h06)) 
     \Use_Serial_Unified_Completion.count[4]_i_1 
        (.I0(\Use_Serial_Unified_Completion.count_reg[5]_0 ),
-        .I1(\Use_Serial_Unified_Completion.count_reg__0__0 [4]),
+        .I1(\Use_Serial_Unified_Completion.count_reg [4]),
         .I2(sel_n_reg_0),
         .O(p_0_in[1]));
   FDCE #(
@@ -3416,7 +3416,7 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
         .CE(\Use_Serial_Unified_Completion.count_reg[5]_1 ),
         .CLR(AR),
         .D(p_0_in[5]),
-        .Q(\Use_Serial_Unified_Completion.count_reg__0__0 [0]));
+        .Q(\Use_Serial_Unified_Completion.count_reg [0]));
   FDCE #(
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.count_reg[1] 
@@ -3432,7 +3432,7 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
         .CE(\Use_Serial_Unified_Completion.count_reg[5]_1 ),
         .CLR(AR),
         .D(p_0_in[4]),
-        .Q(\Use_Serial_Unified_Completion.count_reg__0__0 [1]));
+        .Q(\Use_Serial_Unified_Completion.count_reg [1]));
   FDCE #(
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.count_reg[2] 
@@ -3440,7 +3440,7 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
         .CE(\Use_Serial_Unified_Completion.count_reg[5]_1 ),
         .CLR(AR),
         .D(p_0_in[3]),
-        .Q(\Use_Serial_Unified_Completion.count_reg__0__0 [2]));
+        .Q(\Use_Serial_Unified_Completion.count_reg [2]));
   FDCE #(
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.count_reg[3] 
@@ -3448,7 +3448,7 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
         .CE(\Use_Serial_Unified_Completion.count_reg[5]_1 ),
         .CLR(AR),
         .D(p_0_in[2]),
-        .Q(\Use_Serial_Unified_Completion.count_reg__0__0 [3]));
+        .Q(\Use_Serial_Unified_Completion.count_reg [3]));
   FDCE #(
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.count_reg[4] 
@@ -3456,7 +3456,7 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
         .CE(\Use_Serial_Unified_Completion.count_reg[5]_1 ),
         .CLR(AR),
         .D(p_0_in[1]),
-        .Q(\Use_Serial_Unified_Completion.count_reg__0__0 [4]));
+        .Q(\Use_Serial_Unified_Completion.count_reg [4]));
   FDCE #(
     .INIT(1'b0)) 
     \Use_Serial_Unified_Completion.count_reg[5] 
@@ -3471,16 +3471,16 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
     \Use_Serial_Unified_Completion.mb_data_overrun_i_2 
        (.I0(\Use_Serial_Unified_Completion.mb_data_overrun_i_3_n_0 ),
         .I1(\Use_Serial_Unified_Completion.count_reg[5]_0 ),
-        .I2(\Use_Serial_Unified_Completion.count_reg__0__0 [4]),
-        .I3(\Use_Serial_Unified_Completion.count_reg__0__0 [3]),
+        .I2(\Use_Serial_Unified_Completion.count_reg [4]),
+        .I3(\Use_Serial_Unified_Completion.count_reg [3]),
         .O(\Use_Serial_Unified_Completion.mb_data_overrun_i_2_n_0 ));
   LUT4 #(
     .INIT(16'h0008)) 
     \Use_Serial_Unified_Completion.mb_data_overrun_i_3 
        (.I0(\Use_UART.fifo_Din_reg[7]_0 ),
-        .I1(\Use_Serial_Unified_Completion.count_reg__0__0 [0]),
-        .I2(\Use_Serial_Unified_Completion.count_reg__0__0 [1]),
-        .I3(\Use_Serial_Unified_Completion.count_reg__0__0 [2]),
+        .I1(\Use_Serial_Unified_Completion.count_reg [0]),
+        .I2(\Use_Serial_Unified_Completion.count_reg [1]),
+        .I3(\Use_Serial_Unified_Completion.count_reg [2]),
         .O(\Use_Serial_Unified_Completion.mb_data_overrun_i_3_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
@@ -4026,7 +4026,7 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
         .I2(Q),
         .I3(A2),
         .I4(\Use_UART.fifo_Din_reg[7]_0 ),
-        .I5(shift_Count_reg__0),
+        .I5(shift_Count_reg),
         .O(p_0_in__0[4]));
   FDCE #(
     .INIT(1'b0)) 
@@ -4067,7 +4067,7 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
         .CE(1'b1),
         .CLR(AR),
         .D(p_0_in__0[4]),
-        .Q(shift_Count_reg__0));
+        .Q(shift_Count_reg));
   LUT6 #(
     .INIT(64'h0100000000000000)) 
     \tdi_shifter[0]_i_1 
@@ -5697,7 +5697,7 @@ module Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY
   assign lopt_6 = \^lopt_7 ;
   assign lopt_7 = \^lopt_8 ;
   assign lopt_8 = \^lopt_9 ;
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* XILINX_TRANSFORM_PINMAP = "LO:O" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -5771,7 +5771,7 @@ module Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY_16
   assign lopt_6 = \^lopt_7 ;
   assign lopt_7 = \^lopt_8 ;
   assign lopt_8 = \^lopt_9 ;
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* XILINX_TRANSFORM_PINMAP = "LO:O" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -6780,7 +6780,7 @@ endmodule
 (* C_DEBUG_INTERFACE = "0" *) (* C_EXT_TRIG_RESET_VALUE = "20'b11110001001000110100" *) (* C_FAMILY = "artix7" *) 
 (* C_INTERCONNECT = "2" *) (* C_JTAG_CHAIN = "2" *) (* C_MB_DBG_PORTS = "1" *) 
 (* C_M_AXIS_DATA_WIDTH = "32" *) (* C_M_AXIS_ID_WIDTH = "7" *) (* C_M_AXI_ADDR_WIDTH = "32" *) 
-(* C_M_AXI_DATA_WIDTH = "32" *) (* C_M_AXI_THREAD_ID_WIDTH = "1" *) (* C_S_AXI_ACLK_FREQ_HZ = "80357142" *) 
+(* C_M_AXI_DATA_WIDTH = "32" *) (* C_M_AXI_THREAD_ID_WIDTH = "1" *) (* C_S_AXI_ACLK_FREQ_HZ = "80000000" *) 
 (* C_S_AXI_ADDR_WIDTH = "4" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRACE_ASYNC_RESET = "0" *) 
 (* C_TRACE_CLK_FREQ_HZ = "200000000" *) (* C_TRACE_CLK_OUT_PHASE = "90" *) (* C_TRACE_DATA_WIDTH = "32" *) 
 (* C_TRACE_ID = "110" *) (* C_TRACE_OUTPUT = "0" *) (* C_TRACE_PROTOCOL = "1" *) 
@@ -9848,7 +9848,7 @@ module Fast_IP_Clock_mdm_1_0_MDM
   wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
   wire Interrupt;
   wire \JTAG_CONTROL_I/FIFO_Write ;
-  wire [5:5]\JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg__0 ;
+  wire [5:5]\JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg ;
   wire \JTAG_CONTROL_I/fifo_Data_Present ;
   wire \JTAG_CONTROL_I/p_0_in32_in ;
   wire \JTAG_CONTROL_I/p_35_out__0 ;
@@ -15537,7 +15537,7 @@ module Fast_IP_Clock_mdm_1_0_MDM
         .Scan_Reset_Sel(Scan_Reset_Sel),
         .\Use_Serial_Unified_Completion.completion_status_reg[10] (\Use_E2.BSCAN_I_n_10 ),
         .\Use_Serial_Unified_Completion.completion_status_reg[15] (\Use_E2.BSCAN_I_n_14 ),
-        .\Use_Serial_Unified_Completion.count_reg[5] (\JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg__0 ),
+        .\Use_Serial_Unified_Completion.count_reg[5] (\JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg ),
         .\Use_Serial_Unified_Completion.count_reg[5]_0 (\JTAG_CONTROL_I/sel ),
         .\Use_Serial_Unified_Completion.sample_1_reg[15] (MDM_Core_I1_n_34),
         .\Use_UART.fifo_Din_reg[7] (Ext_JTAG_SHIFT),
@@ -15616,7 +15616,7 @@ module Fast_IP_Clock_mdm_1_0_MDM
         .\Use_BSCAN.command_reg[5] (\JTAG_CONTROL_I/sel ),
         .\Use_E2.BSCANE2_I_0 (\Use_E2.BSCAN_I_n_11 ),
         .\Use_Serial_Unified_Completion.completion_status_reg[15] (MDM_Core_I1_n_34),
-        .\Use_Serial_Unified_Completion.count_reg[5] (\JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg__0 ),
+        .\Use_Serial_Unified_Completion.count_reg[5] (\JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg ),
         .\Use_Serial_Unified_Completion.sample_1_reg[15] (\Use_E2.BSCAN_I_n_14 ),
         .\Using_FPGA.Native (\Use_E2.BSCAN_I_n_10 ),
         .p_35_out__0(\JTAG_CONTROL_I/p_35_out__0 ),

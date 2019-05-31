@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'calc'" level="0">
-<item name = "Date">Mon Mar  4 15:02:29 2019
+<item name = "Date">Fri May 31 11:24:37 2019
 </item>
-<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">mandelbrotHLS</item>
 <item name = "Solution">AXI</item>
 <item name = "Product family">artix7</item>
-<item name = "Target device">xc7a100tcsg324-1</item>
+<item name = "Target device">xc7a100t-csg324-1</item>
 </section>
 
 <section name = "Performance Estimates" level="0">

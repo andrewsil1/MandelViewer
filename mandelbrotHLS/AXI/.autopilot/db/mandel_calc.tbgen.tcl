@@ -1,7 +1,9 @@
 set moduleName mandel_calc
+set isTopModule 0
 set isTaskLevelControl 1
 set isCombinational 0
 set isDatapathOnly 0
+set isFreeRunPipelineModule 0
 set isPipelined 0
 set pipeline_type none
 set FunctionProtocol ap_ctrl_hs

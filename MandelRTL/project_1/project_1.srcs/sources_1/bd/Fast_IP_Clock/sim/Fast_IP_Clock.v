@@ -1,7 +1,7 @@
-//Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+//Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
-//Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Mon Mar  4 16:18:16 2019
+//Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+//Date        : Fri May 31 13:42:53 2019
 //Host        : AndrewSi64 running 64-bit major release  (build 9200)
 //Command     : generate_target Fast_IP_Clock.bd
 //Design      : Fast_IP_Clock
@@ -2765,7 +2765,7 @@ module Fast_IP_Clock_microblaze_0_axi_periph_1
         .S_AXI_wready(microblaze_0_axi_periph_to_s02_couplers_WREADY),
         .S_AXI_wstrb(microblaze_0_axi_periph_to_s02_couplers_WSTRB),
         .S_AXI_wvalid(microblaze_0_axi_periph_to_s02_couplers_WVALID));
-  Fast_IP_Clock_xbar_1 xbar
+  Fast_IP_Clock_xbar_0 xbar
        (.aclk(microblaze_0_axi_periph_ACLK_net),
         .aresetn(microblaze_0_axi_periph_ARESETN_net),
         .m_axi_araddr({xbar_to_m05_couplers_ARADDR,xbar_to_m04_couplers_ARADDR,xbar_to_m03_couplers_ARADDR,xbar_to_m02_couplers_ARADDR,xbar_to_m01_couplers_ARADDR,xbar_to_m00_couplers_ARADDR}),

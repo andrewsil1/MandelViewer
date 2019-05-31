@@ -1,7 +1,7 @@
-// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Thu Feb 28 16:46:28 2019
+// Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+// Date        : Fri May 31 11:59:06 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_s02_data_fifo_0 -prefix
 //               Fast_IP_Clock_s02_data_fifo_0_ Fast_IP_Clock_s00_data_fifo_0_sim_netlist.v
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Fast_IP_Clock_s00_data_fifo_0,axi_data_fifo_v2_1_17_axi_data_fifo,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_data_fifo_v2_1_17_axi_data_fifo,Vivado 2018.3" *) 
+(* CHECK_LICENSE_TYPE = "Fast_IP_Clock_s00_data_fifo_0,axi_data_fifo_v2_1_18_axi_data_fifo,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_data_fifo_v2_1_18_axi_data_fifo,Vivado 2019.1" *) 
 (* NotValidForBitStream *)
 module Fast_IP_Clock_s02_data_fifo_0
    (aclk,
@@ -272,7 +272,7 @@ module Fast_IP_Clock_s02_data_fifo_0
   (* P_WIDTH_WRCH = "4" *) 
   (* P_WRITE_FIFO_DEPTH_LOG = "9" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  Fast_IP_Clock_s02_data_fifo_0_axi_data_fifo_v2_1_17_axi_data_fifo inst
+  Fast_IP_Clock_s02_data_fifo_0_axi_data_fifo_v2_1_18_axi_data_fifo inst
        (.aclk(aclk),
         .aresetn(aresetn),
         .m_axi_araddr(m_axi_araddr),
@@ -377,7 +377,7 @@ endmodule
 (* P_PRIM_FIFO_TYPE = "512x72" *) (* P_READ_FIFO_DEPTH_LOG = "9" *) (* P_WIDTH_RACH = "63" *) 
 (* P_WIDTH_RDCH = "37" *) (* P_WIDTH_WACH = "63" *) (* P_WIDTH_WDCH = "38" *) 
 (* P_WIDTH_WRCH = "4" *) (* P_WRITE_FIFO_DEPTH_LOG = "9" *) 
-module Fast_IP_Clock_s02_data_fifo_0_axi_data_fifo_v2_1_17_axi_data_fifo
+module Fast_IP_Clock_s02_data_fifo_0_axi_data_fifo_v2_1_18_axi_data_fifo
    (aclk,
     aresetn,
     s_axi_awid,
@@ -947,7 +947,7 @@ module Fast_IP_Clock_s02_data_fifo_0_axi_data_fifo_v2_1_17_axi_data_fifo
   (* C_WR_PNTR_WIDTH_WDCH = "9" *) 
   (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
   (* C_WR_RESPONSE_LATENCY = "1" *) 
-  Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3 \gen_fifo.fifo_gen_inst 
+  Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_4 \gen_fifo.fifo_gen_inst 
        (.almost_empty(\NLW_gen_fifo.fifo_gen_inst_almost_empty_UNCONNECTED ),
         .almost_full(\NLW_gen_fifo.fifo_gen_inst_almost_full_UNCONNECTED ),
         .axi_ar_data_count(\NLW_gen_fifo.fifo_gen_inst_axi_ar_data_count_UNCONNECTED [5:0]),
@@ -1040,7 +1040,7 @@ module Fast_IP_Clock_s02_data_fifo_0_axi_data_fifo_v2_1_17_axi_data_fifo
         .injectdbiterr(1'b0),
         .injectsbiterr(1'b0),
         .int_clk(1'b0),
-        .m_aclk(aclk),
+        .m_aclk(1'b0),
         .m_aclk_en(1'b1),
         .m_axi_araddr(m_axi_araddr),
         .m_axi_arburst(m_axi_arburst),
@@ -3900,7 +3900,7 @@ module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_top__parameterized0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_2
+module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_3
    (D,
     s_aclk,
     ENB_I,
@@ -3933,7 +3933,7 @@ module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_2
   wire s_aclk;
   wire [18:0]s_axi_wdata;
 
-  Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_2_synth inst_blk_mem_gen
+  Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_3_synth inst_blk_mem_gen
        (.D(D),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram ),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 ),
@@ -3946,8 +3946,8 @@ module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_2
         .s_axi_wdata(s_axi_wdata));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2" *) 
-module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_2__parameterized1
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_3" *) 
+module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_3__parameterized1
    (D,
     POR_B,
     \SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_D_reg ,
@@ -3998,7 +3998,7 @@ module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_2__parameterized1
   wire s_aclk;
   wire s_axi_wvalid;
 
-  Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_2_synth__parameterized0 inst_blk_mem_gen
+  Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_3_synth__parameterized0 inst_blk_mem_gen
        (.D(D),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram ),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 ),
@@ -4017,7 +4017,7 @@ module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_2__parameterized1
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_2_synth
+module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_3_synth
    (D,
     s_aclk,
     ENB_I,
@@ -4063,8 +4063,8 @@ module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_2_synth
         .s_axi_wdata(s_axi_wdata));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_2_synth" *) 
-module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_2_synth__parameterized0
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_3_synth" *) 
+module Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_3_synth__parameterized0
    (D,
     POR_B,
     \SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_D_reg ,
@@ -4153,7 +4153,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0
   wire [3:0]\NLW_gmux.gm[4].gms.ms_CARRY4_O_UNCONNECTED ;
   wire [3:1]\NLW_gmux.gm[4].gms.ms_CARRY4_S_UNCONNECTED ;
 
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[0].gm1.m1_CARRY4 
@@ -4163,7 +4163,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(\NLW_gmux.gm[0].gm1.m1_CARRY4_O_UNCONNECTED [3:0]),
         .S(v1_reg[3:0]));
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[4].gms.ms_CARRY4 
@@ -4214,7 +4214,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_0
   wire [3:0]\NLW_gmux.gm[4].gms.ms_CARRY4_O_UNCONNECTED ;
   wire [3:1]\NLW_gmux.gm[4].gms.ms_CARRY4_S_UNCONNECTED ;
 
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[0].gm1.m1_CARRY4 
@@ -4224,7 +4224,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_0
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(\NLW_gmux.gm[0].gm1.m1_CARRY4_O_UNCONNECTED [3:0]),
         .S(v1_reg_0[3:0]));
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[4].gms.ms_CARRY4 
@@ -4300,7 +4300,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_1
   wire [3:0]\NLW_gmux.gm[4].gms.ms_CARRY4_O_UNCONNECTED ;
   wire [3:1]\NLW_gmux.gm[4].gms.ms_CARRY4_S_UNCONNECTED ;
 
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[0].gm1.m1_CARRY4 
@@ -4310,7 +4310,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_1
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(\NLW_gmux.gm[0].gm1.m1_CARRY4_O_UNCONNECTED [3:0]),
         .S({\gmux.gm[4].gms.ms_0 ,\gmux.gm[3].gms.ms_0 ,\gmux.gm[2].gms.ms_0 ,\gmux.gm[1].gms.ms_0 }));
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[4].gms.ms_CARRY4 
@@ -4379,7 +4379,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_12
   wire [3:0]\NLW_gmux.gm[4].gms.ms_CARRY4_O_UNCONNECTED ;
   wire [3:1]\NLW_gmux.gm[4].gms.ms_CARRY4_S_UNCONNECTED ;
 
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[0].gm1.m1_CARRY4 
@@ -4389,7 +4389,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_12
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(\NLW_gmux.gm[0].gm1.m1_CARRY4_O_UNCONNECTED [3:0]),
         .S({\gmux.gm[4].gms.ms_0 ,\gmux.gm[3].gms.ms_0 ,\gmux.gm[2].gms.ms_0 ,\gmux.gm[1].gms.ms_0 }));
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[4].gms.ms_CARRY4 
@@ -4430,7 +4430,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_13
   wire [3:0]\NLW_gmux.gm[4].gms.ms_CARRY4_O_UNCONNECTED ;
   wire [3:1]\NLW_gmux.gm[4].gms.ms_CARRY4_S_UNCONNECTED ;
 
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[0].gm1.m1_CARRY4 
@@ -4440,7 +4440,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_13
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(\NLW_gmux.gm[0].gm1.m1_CARRY4_O_UNCONNECTED [3:0]),
         .S(v1_reg[3:0]));
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[4].gms.ms_CARRY4 
@@ -4471,7 +4471,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_2
   wire [3:0]\NLW_gmux.gm[4].gms.ms_CARRY4_O_UNCONNECTED ;
   wire [3:1]\NLW_gmux.gm[4].gms.ms_CARRY4_S_UNCONNECTED ;
 
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[0].gm1.m1_CARRY4 
@@ -4481,7 +4481,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_2
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(\NLW_gmux.gm[0].gm1.m1_CARRY4_O_UNCONNECTED [3:0]),
         .S(v1_reg[3:0]));
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[4].gms.ms_CARRY4 
@@ -4512,7 +4512,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_7
   wire [3:0]\NLW_gmux.gm[4].gms.ms_CARRY4_O_UNCONNECTED ;
   wire [3:1]\NLW_gmux.gm[4].gms.ms_CARRY4_S_UNCONNECTED ;
 
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[0].gm1.m1_CARRY4 
@@ -4522,7 +4522,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_7
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(\NLW_gmux.gm[0].gm1.m1_CARRY4_O_UNCONNECTED [3:0]),
         .S(v1_reg[3:0]));
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[4].gms.ms_CARRY4 
@@ -4573,7 +4573,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_8
   wire [3:0]\NLW_gmux.gm[4].gms.ms_CARRY4_O_UNCONNECTED ;
   wire [3:1]\NLW_gmux.gm[4].gms.ms_CARRY4_S_UNCONNECTED ;
 
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[0].gm1.m1_CARRY4 
@@ -4583,7 +4583,7 @@ module Fast_IP_Clock_s02_data_fifo_0_compare__parameterized0_8
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(\NLW_gmux.gm[0].gm1.m1_CARRY4_O_UNCONNECTED [3:0]),
         .S(v1_reg_0[3:0]));
-  (* OPT_MODIFIED = "MLO " *) 
+  (* OPT_MODIFIED = "MLO" *) 
   (* XILINX_LEGACY_PRIM = "(MUXCY,XORCY)" *) 
   (* box_type = "PRIMITIVE" *) 
   CARRY4 \gmux.gm[4].gms.ms_CARRY4 
@@ -4651,8 +4651,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem
   wire [1:0]NLW_RAM_reg_0_31_6_11_DOD_UNCONNECTED;
 
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "0" *) 
   (* ram_slice_end = "5" *) 
   RAM32M RAM_reg_0_31_0_5
@@ -4671,8 +4674,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem
         .WCLK(s_aclk),
         .WE(EN));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "12" *) 
   (* ram_slice_end = "17" *) 
   RAM32M RAM_reg_0_31_12_17
@@ -4691,8 +4697,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem
         .WCLK(s_aclk),
         .WE(EN));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "18" *) 
   (* ram_slice_end = "23" *) 
   RAM32M RAM_reg_0_31_18_23
@@ -4711,8 +4720,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem
         .WCLK(s_aclk),
         .WE(EN));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "24" *) 
   (* ram_slice_end = "29" *) 
   RAM32M RAM_reg_0_31_24_29
@@ -4731,8 +4743,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem
         .WCLK(s_aclk),
         .WE(EN));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "30" *) 
   (* ram_slice_end = "35" *) 
   RAM32M RAM_reg_0_31_30_35
@@ -4751,8 +4766,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem
         .WCLK(s_aclk),
         .WE(EN));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "36" *) 
   (* ram_slice_end = "41" *) 
   RAM32M RAM_reg_0_31_36_41
@@ -4771,8 +4789,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem
         .WCLK(s_aclk),
         .WE(EN));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "42" *) 
   (* ram_slice_end = "47" *) 
   RAM32M RAM_reg_0_31_42_47
@@ -4791,8 +4812,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem
         .WCLK(s_aclk),
         .WE(EN));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "48" *) 
   (* ram_slice_end = "53" *) 
   RAM32M RAM_reg_0_31_48_53
@@ -4811,8 +4835,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem
         .WCLK(s_aclk),
         .WE(EN));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "54" *) 
   (* ram_slice_end = "59" *) 
   RAM32M RAM_reg_0_31_54_59
@@ -4831,8 +4858,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem
         .WCLK(s_aclk),
         .WE(EN));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "60" *) 
   (* ram_slice_end = "62" *) 
   RAM32M RAM_reg_0_31_60_62
@@ -4851,8 +4881,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem
         .WCLK(s_aclk),
         .WE(EN));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "6" *) 
   (* ram_slice_end = "11" *) 
   RAM32M RAM_reg_0_31_6_11
@@ -5478,8 +5511,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem_17
   wire [1:0]NLW_RAM_reg_0_31_6_11_DOD_UNCONNECTED;
 
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "0" *) 
   (* ram_slice_end = "5" *) 
   RAM32M RAM_reg_0_31_0_5
@@ -5498,8 +5534,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem_17
         .WCLK(s_aclk),
         .WE(I40));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "12" *) 
   (* ram_slice_end = "17" *) 
   RAM32M RAM_reg_0_31_12_17
@@ -5518,8 +5557,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem_17
         .WCLK(s_aclk),
         .WE(I40));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "18" *) 
   (* ram_slice_end = "23" *) 
   RAM32M RAM_reg_0_31_18_23
@@ -5538,8 +5580,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem_17
         .WCLK(s_aclk),
         .WE(I40));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "24" *) 
   (* ram_slice_end = "29" *) 
   RAM32M RAM_reg_0_31_24_29
@@ -5558,8 +5603,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem_17
         .WCLK(s_aclk),
         .WE(I40));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "30" *) 
   (* ram_slice_end = "35" *) 
   RAM32M RAM_reg_0_31_30_35
@@ -5578,8 +5626,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem_17
         .WCLK(s_aclk),
         .WE(I40));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "36" *) 
   (* ram_slice_end = "41" *) 
   RAM32M RAM_reg_0_31_36_41
@@ -5598,8 +5649,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem_17
         .WCLK(s_aclk),
         .WE(I40));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "42" *) 
   (* ram_slice_end = "47" *) 
   RAM32M RAM_reg_0_31_42_47
@@ -5618,8 +5672,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem_17
         .WCLK(s_aclk),
         .WE(I40));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "48" *) 
   (* ram_slice_end = "53" *) 
   RAM32M RAM_reg_0_31_48_53
@@ -5638,8 +5695,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem_17
         .WCLK(s_aclk),
         .WE(I40));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "54" *) 
   (* ram_slice_end = "59" *) 
   RAM32M RAM_reg_0_31_54_59
@@ -5658,8 +5718,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem_17
         .WCLK(s_aclk),
         .WE(I40));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "60" *) 
   (* ram_slice_end = "62" *) 
   RAM32M RAM_reg_0_31_60_62
@@ -5678,8 +5741,11 @@ module Fast_IP_Clock_s02_data_fifo_0_dmem_17
         .WCLK(s_aclk),
         .WE(I40));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "2016" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "31" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "6" *) 
   (* ram_slice_end = "11" *) 
   RAM32M RAM_reg_0_31_6_11
@@ -7194,7 +7260,7 @@ endmodule
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "5" *) (* C_WR_PNTR_WIDTH_RDCH = "9" *) 
 (* C_WR_PNTR_WIDTH_WACH = "5" *) (* C_WR_PNTR_WIDTH_WDCH = "9" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
 (* C_WR_RESPONSE_LATENCY = "1" *) 
-module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3
+module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_4
    (backup,
     backup_marker,
     clk,
@@ -7659,7 +7725,6 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3
   output axis_prog_empty;
 
   wire \<const0> ;
-  wire m_aclk;
   wire [31:0]m_axi_araddr;
   wire [1:0]m_axi_arburst;
   wire [3:0]m_axi_arcache;
@@ -8083,7 +8148,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3
   assign wr_rst_busy = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth inst_fifo_gen
+  Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_4_synth inst_fifo_gen
        (.\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram ({m_axi_rresp,m_axi_ruser,m_axi_rlast}),
         .DI({s_axi_awid,s_axi_awaddr,s_axi_awlen,s_axi_awsize,s_axi_awburst,s_axi_awlock,s_axi_awcache,s_axi_awprot,s_axi_awqos,s_axi_awregion,s_axi_awuser}),
         .DIADI({s_axi_wdata[12:0],s_axi_wstrb,s_axi_wuser,s_axi_wlast}),
@@ -8094,7 +8159,6 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3
         .\gfwd_rev_pipeline1.storage_data1_reg[62] ({m_axi_awid,m_axi_awaddr,m_axi_awlen,m_axi_awsize,m_axi_awburst,m_axi_awlock,m_axi_awcache,m_axi_awprot,m_axi_awqos,m_axi_awregion,m_axi_awuser}),
         .\gfwd_rev_pipeline1.storage_data1_reg[62]_0 ({m_axi_arid,m_axi_araddr,m_axi_arlen,m_axi_arsize,m_axi_arburst,m_axi_arlock,m_axi_arcache,m_axi_arprot,m_axi_arqos,m_axi_arregion,m_axi_aruser}),
         .\goreg_bm.dout_i_reg[36] ({s_axi_rid,s_axi_rdata,s_axi_rresp,s_axi_ruser,s_axi_rlast}),
-        .m_aclk(m_aclk),
         .m_axi_arready(m_axi_arready),
         .m_axi_awready(m_axi_awready),
         .m_axi_rdata(m_axi_rdata),
@@ -8116,7 +8180,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
+module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_4_synth
    (Q,
     \goreg_bm.dout_i_reg[36] ,
     \gfwd_rev_pipeline1.storage_data1_reg[62] ,
@@ -8132,7 +8196,6 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
     s_aclk,
     s_axi_wvalid,
     DIADI,
-    m_aclk,
     s_axi_wdata,
     m_axi_rdata,
     \DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram ,
@@ -8162,7 +8225,6 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
   input s_aclk;
   input s_axi_wvalid;
   input [18:0]DIADI;
-  input m_aclk;
   input [18:0]s_axi_wdata;
   input [31:0]m_axi_rdata;
   input [3:0]\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram ;
@@ -8301,7 +8363,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
   wire \gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_4_n_0 ;
   wire \gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_5_n_0 ;
   wire \gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[9]_i_3_n_0 ;
-  wire [9:0]\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 ;
+  wire [9:0]\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg ;
   wire \gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_10 ;
   wire \gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_11 ;
   wire \gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_12 ;
@@ -8384,7 +8446,6 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
   wire \grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/ENB_dly_D ;
   wire \grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/POR_B ;
   wire inverted_reset;
-  wire m_aclk;
   wire m_axi_arready;
   wire m_axi_awready;
   wire [31:0]m_axi_rdata;
@@ -8598,7 +8659,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
   (* XPM_CDC = "SINGLE" *) 
   (* XPM_MODULE = "TRUE" *) 
   Fast_IP_Clock_s02_data_fifo_0_xpm_cdc_single \gaxi_full_lite.gread_ch.grach2.xpm_cdc_single_inst3 
-       (.dest_clk(m_aclk),
+       (.dest_clk(s_aclk),
         .dest_out(wr_rst_busy_rach_sync),
         .src_clk(s_aclk),
         .src_in(wr_rst_busy_rach));
@@ -8627,60 +8688,60 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
   LUT1 #(
     .INIT(2'h1)) 
     \gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[0]_i_1 
-       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [0]),
+       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [0]),
         .O(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[0]_i_1_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[4]_i_2 
-       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [1]),
+       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [1]),
         .O(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[4]_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[4]_i_3 
-       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [3]),
-        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [4]),
+       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [3]),
+        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [4]),
         .O(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[4]_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[4]_i_4 
-       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [2]),
-        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [3]),
+       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [2]),
+        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [3]),
         .O(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[4]_i_4_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[4]_i_5 
-       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [1]),
-        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [2]),
+       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [1]),
+        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [2]),
         .O(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[4]_i_5_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_2 
-       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [7]),
-        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [8]),
+       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [7]),
+        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [8]),
         .O(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_3 
-       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [6]),
-        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [7]),
+       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [6]),
+        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [7]),
         .O(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_4 
-       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [5]),
-        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [6]),
+       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [5]),
+        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [6]),
         .O(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_4_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_5 
-       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [4]),
-        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [5]),
+       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [4]),
+        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [5]),
         .O(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_5_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[9]_i_3 
-       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [8]),
-        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [9]),
+       (.I0(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [8]),
+        .I1(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [9]),
         .O(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[9]_i_3_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -8688,7 +8749,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
        (.C(s_aclk),
         .CE(\gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch_n_3 ),
         .D(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[0]_i_1_n_0 ),
-        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [0]),
+        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [0]),
         .R(p_7_out));
   FDRE #(
     .INIT(1'b0)) 
@@ -8696,7 +8757,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
        (.C(s_aclk),
         .CE(\gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch_n_3 ),
         .D(\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_11 ),
-        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [1]),
+        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [1]),
         .R(p_7_out));
   FDRE #(
     .INIT(1'b0)) 
@@ -8704,7 +8765,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
        (.C(s_aclk),
         .CE(\gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch_n_3 ),
         .D(\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_10 ),
-        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [2]),
+        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [2]),
         .R(p_7_out));
   FDRE #(
     .INIT(1'b0)) 
@@ -8712,7 +8773,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
        (.C(s_aclk),
         .CE(\gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch_n_3 ),
         .D(\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_9 ),
-        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [3]),
+        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [3]),
         .R(p_7_out));
   FDRE #(
     .INIT(1'b0)) 
@@ -8720,7 +8781,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
        (.C(s_aclk),
         .CE(\gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch_n_3 ),
         .D(\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_8 ),
-        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [4]),
+        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [4]),
         .R(p_7_out));
   FDRE #(
     .INIT(1'b0)) 
@@ -8728,7 +8789,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
        (.C(s_aclk),
         .CE(\gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch_n_3 ),
         .D(\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_7 ),
-        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [5]),
+        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [5]),
         .R(p_7_out));
   FDRE #(
     .INIT(1'b0)) 
@@ -8736,7 +8797,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
        (.C(s_aclk),
         .CE(\gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch_n_3 ),
         .D(\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_6 ),
-        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [6]),
+        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [6]),
         .R(p_7_out));
   FDRE #(
     .INIT(1'b0)) 
@@ -8744,7 +8805,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
        (.C(s_aclk),
         .CE(\gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch_n_3 ),
         .D(\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_5 ),
-        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [7]),
+        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [7]),
         .R(p_7_out));
   FDRE #(
     .INIT(1'b0)) 
@@ -8752,7 +8813,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
        (.C(s_aclk),
         .CE(\gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch_n_3 ),
         .D(\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_4 ),
-        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [8]),
+        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [8]),
         .R(p_7_out));
   FDRE #(
     .INIT(1'b0)) 
@@ -8760,13 +8821,13 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
        (.C(s_aclk),
         .CE(\gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch_n_3 ),
         .D(\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_3 ),
-        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 [9]),
+        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg [9]),
         .R(p_7_out));
   Fast_IP_Clock_s02_data_fifo_0_fifo_generator_top__xdcDup__1 \gaxi_full_lite.gwrite_ch.gwach2.axi_wach 
        (.D({\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_3 ,\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_4 ,\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_5 ,\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_6 ,\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_7 ,\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_8 ,\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_9 ,\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_10 ,\gaxi_full_lite.gwrite_ch.gwach2.axi_wach_n_11 }),
         .DI(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[4]_i_2_n_0 ),
         .DIADI(DIADI[0]),
-        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg__0 ),
+        .Q(\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg ),
         .S({\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[4]_i_3_n_0 ,\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[4]_i_4_n_0 ,\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[4]_i_5_n_0 }),
         .awready_pkt(awready_pkt),
         .\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count_reg[8] ({\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_2_n_0 ,\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_3_n_0 ,\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_4_n_0 ,\gaxi_full_lite.gwrite_ch.gaxi_pkt_fifo_wr.gaxi_mm_cc_pkt_wr.wr_pkt_count[8]_i_5_n_0 }),
@@ -8798,7 +8859,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
   (* XPM_CDC = "SINGLE" *) 
   (* XPM_MODULE = "TRUE" *) 
   Fast_IP_Clock_s02_data_fifo_0_xpm_cdc_single__1 \gaxi_full_lite.gwrite_ch.gwach2.xpm_cdc_single_inst1 
-       (.dest_clk(m_aclk),
+       (.dest_clk(s_aclk),
         .dest_out(dest_out),
         .src_clk(s_aclk),
         .src_in(wr_rst_busy_wach));
@@ -8828,7 +8889,7 @@ module Fast_IP_Clock_s02_data_fifo_0_fifo_generator_v13_2_3_synth
   (* XPM_CDC = "SINGLE" *) 
   (* XPM_MODULE = "TRUE" *) 
   Fast_IP_Clock_s02_data_fifo_0_xpm_cdc_single__2 \gaxi_full_lite.gwrite_ch.gwdch2.xpm_cdc_single_inst2 
-       (.dest_clk(m_aclk),
+       (.dest_clk(s_aclk),
         .dest_out(dest_out40_out),
         .src_clk(s_aclk),
         .src_in(wr_rst_busy_wdch));
@@ -10424,7 +10485,7 @@ module Fast_IP_Clock_s02_data_fifo_0_memory__parameterized0
   wire s_aclk;
   wire [18:0]s_axi_wdata;
 
-  Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_2 \gbm.gbmg.gbmga.ngecc.bmg 
+  Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_3 \gbm.gbmg.gbmga.ngecc.bmg 
        (.D(doutb),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram ),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 ),
@@ -10797,7 +10858,7 @@ module Fast_IP_Clock_s02_data_fifo_0_memory__parameterized1
   wire s_aclk;
   wire s_axi_wvalid;
 
-  Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_2__parameterized1 \gbm.gbmg.gbmga.ngecc.bmg 
+  Fast_IP_Clock_s02_data_fifo_0_blk_mem_gen_v8_4_3__parameterized1 \gbm.gbmg.gbmga.ngecc.bmg 
        (.D(doutb),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram ),
         .\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 (\DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_0 ),

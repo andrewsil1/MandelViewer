@@ -286,10 +286,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="52" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:49  %tmp_1 = xor i1 %p_Result_5, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:49  %xor_ln786_1 = xor i1 %p_Result_5, true
 
 ]]></Node>
-<StgValue><ssdm name="tmp_1"/></StgValue>
+<StgValue><ssdm name="xor_ln786_1"/></StgValue>
 </operation>
 
 <operation id="32" st_id="2" stage="1" lat="1">
@@ -301,7 +301,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="53" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:50  %underflow_1 = and i1 %p_Result_4, %tmp_1
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:50  %underflow_1 = and i1 %p_Result_4, %xor_ln786_1
 
 ]]></Node>
 <StgValue><ssdm name="underflow_1"/></StgValue>
@@ -316,10 +316,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="54" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:51  %brmerge5 = xor i1 %p_Result_4, %p_Result_5
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:51  %xor_ln340 = xor i1 %p_Result_4, %p_Result_5
 
 ]]></Node>
-<StgValue><ssdm name="brmerge5"/></StgValue>
+<StgValue><ssdm name="xor_ln340"/></StgValue>
 </operation>
 
 <operation id="34" st_id="2" stage="1" lat="1">
@@ -331,10 +331,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="55" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:52  %signbit_i_i_i_i169 = xor i1 %p_Result_4, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:52  %xor_ln340_1 = xor i1 %p_Result_4, true
 
 ]]></Node>
-<StgValue><ssdm name="signbit_i_i_i_i169"/></StgValue>
+<StgValue><ssdm name="xor_ln340_1"/></StgValue>
 </operation>
 
 <operation id="35" st_id="2" stage="1" lat="1">
@@ -346,10 +346,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="56" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:53  %brmerge6 = or i1 %p_Result_5, %signbit_i_i_i_i169
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:53  %or_ln340_3 = or i1 %p_Result_5, %xor_ln340_1
 
 ]]></Node>
-<StgValue><ssdm name="brmerge6"/></StgValue>
+<StgValue><ssdm name="or_ln340_3"/></StgValue>
 </operation>
 
 <operation id="36" st_id="2" stage="1" lat="1">
@@ -361,10 +361,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="57" bw="40" op_0_bw="1" op_1_bw="40" op_2_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:54  %p_mux1 = select i1 %brmerge5, i40 549755813887, i40 %x_1_V
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:54  %select_ln340_1 = select i1 %xor_ln340, i40 549755813887, i40 %x_1_V
 
 ]]></Node>
-<StgValue><ssdm name="p_mux1"/></StgValue>
+<StgValue><ssdm name="select_ln340_1"/></StgValue>
 </operation>
 
 <operation id="37" st_id="2" stage="1" lat="1">
@@ -376,10 +376,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="58" bw="40" op_0_bw="1" op_1_bw="40" op_2_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:55  %p_6 = select i1 %underflow_1, i40 -549755813888, i40 %x_1_V
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:55  %select_ln388_1 = select i1 %underflow_1, i40 -549755813888, i40 %x_1_V
 
 ]]></Node>
-<StgValue><ssdm name="p_6"/></StgValue>
+<StgValue><ssdm name="select_ln388_1"/></StgValue>
 </operation>
 
 <operation id="38" st_id="2" stage="1" lat="1">
@@ -391,7 +391,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="59" bw="40" op_0_bw="1" op_1_bw="40" op_2_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:56  %p_Val2_13 = select i1 %brmerge6, i40 %p_mux1, i40 %p_6
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:56  %p_Val2_13 = select i1 %or_ln340_3, i40 %select_ln340_1, i40 %select_ln388_1
 
 ]]></Node>
 <StgValue><ssdm name="p_Val2_13"/></StgValue>
@@ -466,10 +466,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="109" bw="1" op_0_bw="1" op_1_bw="41" op_2_bw="32">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:106  %tmp_31 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %ret_V_7, i32 40)
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:106  %tmp_20 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %ret_V_7, i32 40)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_31"/></StgValue>
+<StgValue><ssdm name="tmp_20"/></StgValue>
 </operation>
 </state>
 
@@ -499,10 +499,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="110" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:107  %brmerge1 = or i1 %p_Result_10, %tmp_31
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:107  %or_ln785_2 = or i1 %p_Result_10, %tmp_20
 
 ]]></Node>
-<StgValue><ssdm name="brmerge1"/></StgValue>
+<StgValue><ssdm name="or_ln785_2"/></StgValue>
 </operation>
 
 <operation id="46" st_id="3" stage="1" lat="1">
@@ -514,10 +514,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="111" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:108  %tmp_10 = xor i1 %p_Result_9, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:108  %xor_ln785_4 = xor i1 %p_Result_9, true
 
 ]]></Node>
-<StgValue><ssdm name="tmp_10"/></StgValue>
+<StgValue><ssdm name="xor_ln785_4"/></StgValue>
 </operation>
 
 <operation id="47" st_id="3" stage="1" lat="1">
@@ -529,7 +529,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="112" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:109  %overflow_2 = and i1 %brmerge1, %tmp_10
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:109  %overflow_2 = and i1 %or_ln785_2, %xor_ln785_4
 
 ]]></Node>
 <StgValue><ssdm name="overflow_2"/></StgValue>
@@ -544,10 +544,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="113" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:110  %brmerge12_demorgan = and i1 %tmp_31, %p_Result_10
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:110  %and_ln786_5 = and i1 %tmp_20, %p_Result_10
 
 ]]></Node>
-<StgValue><ssdm name="brmerge12_demorgan"/></StgValue>
+<StgValue><ssdm name="and_ln786_5"/></StgValue>
 </operation>
 
 <operation id="49" st_id="3" stage="1" lat="1">
@@ -559,10 +559,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="114" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:111  %brmerge3 = xor i1 %brmerge12_demorgan, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:111  %xor_ln786_3 = xor i1 %and_ln786_5, true
 
 ]]></Node>
-<StgValue><ssdm name="brmerge3"/></StgValue>
+<StgValue><ssdm name="xor_ln786_3"/></StgValue>
 </operation>
 
 <operation id="50" st_id="3" stage="1" lat="1">
@@ -574,7 +574,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="115" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:112  %underflow_3 = and i1 %p_Result_9, %brmerge3
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:112  %underflow_3 = and i1 %p_Result_9, %xor_ln786_3
 
 ]]></Node>
 <StgValue><ssdm name="underflow_3"/></StgValue>
@@ -589,10 +589,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="116" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:113  %brmerge4 = or i1 %underflow_3, %overflow_2
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:113  %or_ln340_7 = or i1 %underflow_3, %overflow_2
 
 ]]></Node>
-<StgValue><ssdm name="brmerge4"/></StgValue>
+<StgValue><ssdm name="or_ln340_7"/></StgValue>
 </operation>
 
 <operation id="52" st_id="3" stage="1" lat="1">
@@ -604,10 +604,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="117" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:114  %p_997_not = or i1 %brmerge12_demorgan, %tmp_10
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:114  %or_ln340_8 = or i1 %and_ln786_5, %xor_ln785_4
 
 ]]></Node>
-<StgValue><ssdm name="p_997_not"/></StgValue>
+<StgValue><ssdm name="or_ln340_8"/></StgValue>
 </operation>
 
 <operation id="53" st_id="3" stage="1" lat="1">
@@ -619,10 +619,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="118" bw="40" op_0_bw="1" op_1_bw="40" op_2_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:115  %p_mux3 = select i1 %brmerge4, i40 549755813887, i40 %xp1_V
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:115  %select_ln340_3 = select i1 %or_ln340_7, i40 549755813887, i40 %xp1_V
 
 ]]></Node>
-<StgValue><ssdm name="p_mux3"/></StgValue>
+<StgValue><ssdm name="select_ln340_3"/></StgValue>
 </operation>
 
 <operation id="54" st_id="3" stage="1" lat="1">
@@ -634,10 +634,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="119" bw="40" op_0_bw="1" op_1_bw="40" op_2_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:116  %p_2 = select i1 %underflow_3, i40 -549755813888, i40 %xp1_V
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:116  %select_ln388_3 = select i1 %underflow_3, i40 -549755813888, i40 %xp1_V
 
 ]]></Node>
-<StgValue><ssdm name="p_2"/></StgValue>
+<StgValue><ssdm name="select_ln388_3"/></StgValue>
 </operation>
 
 <operation id="55" st_id="3" stage="1" lat="1">
@@ -649,10 +649,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="120" bw="40" op_0_bw="1" op_1_bw="40" op_2_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:117  %p_0424_1 = select i1 %p_997_not, i40 %p_mux3, i40 %p_2
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:117  %select_ln340_7 = select i1 %or_ln340_8, i40 %select_ln340_3, i40 %select_ln388_3
 
 ]]></Node>
-<StgValue><ssdm name="p_0424_1"/></StgValue>
+<StgValue><ssdm name="select_ln340_7"/></StgValue>
 </operation>
 </state>
 
@@ -712,7 +712,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="129" bw="80" op_0_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:126  %r_V_7 = sext i40 %p_0424_1 to i80
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:126  %r_V_7 = sext i40 %select_ln340_7 to i80
 
 ]]></Node>
 <StgValue><ssdm name="r_V_7"/></StgValue>
@@ -823,10 +823,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="10" bw="34" op_0_bw="80">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:7  %tmp_3 = trunc i80 %r_V_9 to i34
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:7  %trunc_ln718 = trunc i80 %r_V_9 to i34
 
 ]]></Node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="trunc_ln718"/></StgValue>
 </operation>
 
 <operation id="67" st_id="6" stage="1" lat="1">
@@ -901,7 +901,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="11" bw="1" op_0_bw="34" op_1_bw="34">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:8  %r_1 = icmp ne i34 %tmp_3, 0
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:8  %r_1 = icmp ne i34 %trunc_ln718, 0
 
 ]]></Node>
 <StgValue><ssdm name="r_1"/></StgValue>
@@ -1009,10 +1009,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="9" bw="1" op_0_bw="1" op_1_bw="80" op_2_bw="32">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:6  %tmp = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 35)
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:6  %tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 35)
 
 ]]></Node>
-<StgValue><ssdm name="tmp"/></StgValue>
+<StgValue><ssdm name="tmp_3"/></StgValue>
 </operation>
 
 <operation id="79" st_id="8" stage="1" lat="1">
@@ -1039,7 +1039,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="13" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:10  %r = or i1 %r_1, %tmp
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:10  %r = or i1 %r_1, %tmp_3
 
 ]]></Node>
 <StgValue><ssdm name="r"/></StgValue>
@@ -1054,10 +1054,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="14" bw="1" op_0_bw="1" op_1_bw="80" op_2_bw="32">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:11  %tmp_11 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 34)
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:11  %tmp_5 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 34)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_11"/></StgValue>
+<StgValue><ssdm name="tmp_5"/></StgValue>
 </operation>
 
 <operation id="82" st_id="8" stage="1" lat="1">
@@ -1069,10 +1069,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="15" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:12  %tmp_7 = and i1 %tmp_11, %r
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:12  %and_ln412 = and i1 %tmp_5, %r
 
 ]]></Node>
-<StgValue><ssdm name="tmp_7"/></StgValue>
+<StgValue><ssdm name="and_ln412"/></StgValue>
 </operation>
 
 <operation id="83" st_id="8" stage="1" lat="1">
@@ -1084,10 +1084,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="16" bw="40" op_0_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:13  %tmp_8 = zext i1 %tmp_7 to i40
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:13  %zext_ln415 = zext i1 %and_ln412 to i40
 
 ]]></Node>
-<StgValue><ssdm name="tmp_8"/></StgValue>
+<StgValue><ssdm name="zext_ln415"/></StgValue>
 </operation>
 
 <operation id="84" st_id="8" stage="1" lat="1">
@@ -1099,7 +1099,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="17" bw="40" op_0_bw="40" op_1_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:14  %y2_V_1 = add nsw i40 %y2_V, %tmp_8
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:14  %y2_V_1 = add nsw i40 %y2_V, %zext_ln415
 
 ]]></Node>
 <StgValue><ssdm name="y2_V_1"/></StgValue>
@@ -1114,10 +1114,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="18" bw="1" op_0_bw="1" op_1_bw="40" op_2_bw="32">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:15  %tmp_13 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %y2_V_1, i32 39)
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:15  %tmp_6 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %y2_V_1, i32 39)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_13"/></StgValue>
+<StgValue><ssdm name="tmp_6"/></StgValue>
 </operation>
 
 <operation id="86" st_id="8" stage="1" lat="1">
@@ -1129,10 +1129,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="19" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:16  %rev = xor i1 %tmp_13, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:16  %xor_ln416 = xor i1 %tmp_6, true
 
 ]]></Node>
-<StgValue><ssdm name="rev"/></StgValue>
+<StgValue><ssdm name="xor_ln416"/></StgValue>
 </operation>
 
 <operation id="87" st_id="8" stage="1" lat="1">
@@ -1144,7 +1144,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="20" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:17  %carry_1 = and i1 %p_Result_2, %rev
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:17  %carry_1 = and i1 %p_Result_2, %xor_ln416
 
 ]]></Node>
 <StgValue><ssdm name="carry_1"/></StgValue>
@@ -1174,10 +1174,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="28" bw="1" op_0_bw="1" op_1_bw="80" op_2_bw="32">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:25  %tmp_18 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 75)
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:25  %tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 75)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_18"/></StgValue>
+<StgValue><ssdm name="tmp_8"/></StgValue>
 </operation>
 
 <operation id="90" st_id="8" stage="1" lat="1">
@@ -1189,10 +1189,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="29" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:26  %rev1 = xor i1 %tmp_18, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:26  %xor_ln779 = xor i1 %tmp_8, true
 
 ]]></Node>
-<StgValue><ssdm name="rev1"/></StgValue>
+<StgValue><ssdm name="xor_ln779"/></StgValue>
 </operation>
 
 <operation id="91" st_id="8" stage="1" lat="1">
@@ -1204,10 +1204,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="30" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:27  %p_s = and i1 %Range2_all_ones, %rev1
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:27  %and_ln779 = and i1 %Range2_all_ones, %xor_ln779
 
 ]]></Node>
-<StgValue><ssdm name="p_s"/></StgValue>
+<StgValue><ssdm name="and_ln779"/></StgValue>
 </operation>
 
 <operation id="92" st_id="8" stage="1" lat="1">
@@ -1219,7 +1219,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="31" bw="1" op_0_bw="1" op_1_bw="1" op_2_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:28  %deleted_ones = select i1 %carry_1, i1 %p_s, i1 %Range1_all_ones
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:28  %deleted_ones = select i1 %carry_1, i1 %and_ln779, i1 %Range1_all_ones
 
 ]]></Node>
 <StgValue><ssdm name="deleted_ones"/></StgValue>
@@ -1234,10 +1234,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="37" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:34  %brmerge968_demorgan = and i1 %p_Result_3, %deleted_ones
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:34  %and_ln786 = and i1 %p_Result_3, %deleted_ones
 
 ]]></Node>
-<StgValue><ssdm name="brmerge968_demorgan"/></StgValue>
+<StgValue><ssdm name="and_ln786"/></StgValue>
 </operation>
 
 <operation id="94" st_id="8" stage="2" lat="6">
@@ -1297,10 +1297,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="32" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:29  %phitmp966_demorgan = and i1 %carry_1, %Range1_all_ones
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:29  %and_ln781 = and i1 %carry_1, %Range1_all_ones
 
 ]]></Node>
-<StgValue><ssdm name="phitmp966_demorgan"/></StgValue>
+<StgValue><ssdm name="and_ln781"/></StgValue>
 </operation>
 
 <operation id="98" st_id="9" stage="1" lat="1">
@@ -1312,10 +1312,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="33" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:30  %p_not = xor i1 %deleted_zeros, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:30  %xor_ln785 = xor i1 %deleted_zeros, true
 
 ]]></Node>
-<StgValue><ssdm name="p_not"/></StgValue>
+<StgValue><ssdm name="xor_ln785"/></StgValue>
 </operation>
 
 <operation id="99" st_id="9" stage="1" lat="1">
@@ -1327,10 +1327,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="34" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:31  %brmerge = or i1 %p_Result_3, %p_not
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:31  %or_ln785 = or i1 %p_Result_3, %xor_ln785
 
 ]]></Node>
-<StgValue><ssdm name="brmerge"/></StgValue>
+<StgValue><ssdm name="or_ln785"/></StgValue>
 </operation>
 
 <operation id="100" st_id="9" stage="1" lat="1">
@@ -1342,10 +1342,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="35" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:32  %tmp_9 = xor i1 %p_Result_s, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:32  %xor_ln785_1 = xor i1 %p_Result_s, true
 
 ]]></Node>
-<StgValue><ssdm name="tmp_9"/></StgValue>
+<StgValue><ssdm name="xor_ln785_1"/></StgValue>
 </operation>
 
 <operation id="101" st_id="9" stage="1" lat="1">
@@ -1357,7 +1357,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="36" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:33  %overflow = and i1 %brmerge, %tmp_9
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:33  %overflow = and i1 %or_ln785, %xor_ln785_1
 
 ]]></Node>
 <StgValue><ssdm name="overflow"/></StgValue>
@@ -1372,10 +1372,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="38" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:35  %tmp2_demorgan = or i1 %phitmp966_demorgan, %brmerge968_demorgan
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:35  %or_ln786 = or i1 %and_ln781, %and_ln786
 
 ]]></Node>
-<StgValue><ssdm name="tmp2_demorgan"/></StgValue>
+<StgValue><ssdm name="or_ln786"/></StgValue>
 </operation>
 
 <operation id="103" st_id="9" stage="1" lat="1">
@@ -1387,10 +1387,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="39" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:36  %tmp2 = xor i1 %tmp2_demorgan, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:36  %xor_ln786 = xor i1 %or_ln786, true
 
 ]]></Node>
-<StgValue><ssdm name="tmp2"/></StgValue>
+<StgValue><ssdm name="xor_ln786"/></StgValue>
 </operation>
 
 <operation id="104" st_id="9" stage="1" lat="1">
@@ -1402,7 +1402,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="40" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:37  %underflow = and i1 %p_Result_s, %tmp2
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:37  %underflow = and i1 %p_Result_s, %xor_ln786
 
 ]]></Node>
 <StgValue><ssdm name="underflow"/></StgValue>
@@ -1417,10 +1417,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="41" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:38  %brmerge2 = or i1 %underflow, %overflow
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:38  %or_ln340 = or i1 %underflow, %overflow
 
 ]]></Node>
-<StgValue><ssdm name="brmerge2"/></StgValue>
+<StgValue><ssdm name="or_ln340"/></StgValue>
 </operation>
 
 <operation id="106" st_id="9" stage="1" lat="1">
@@ -1432,10 +1432,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="42" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:39  %tmp3 = or i1 %brmerge968_demorgan, %tmp_9
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:39  %or_ln340_2 = or i1 %and_ln786, %xor_ln785_1
 
 ]]></Node>
-<StgValue><ssdm name="tmp3"/></StgValue>
+<StgValue><ssdm name="or_ln340_2"/></StgValue>
 </operation>
 
 <operation id="107" st_id="9" stage="1" lat="1">
@@ -1447,10 +1447,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="43" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:40  %p_1000_not = or i1 %tmp3, %phitmp966_demorgan
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:40  %or_ln340_1 = or i1 %or_ln340_2, %and_ln781
 
 ]]></Node>
-<StgValue><ssdm name="p_1000_not"/></StgValue>
+<StgValue><ssdm name="or_ln340_1"/></StgValue>
 </operation>
 
 <operation id="108" st_id="9" stage="1" lat="1">
@@ -1462,10 +1462,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="44" bw="40" op_0_bw="1" op_1_bw="40" op_2_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:41  %p_mux = select i1 %brmerge2, i40 549755813887, i40 %y2_V_1
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:41  %select_ln340 = select i1 %or_ln340, i40 549755813887, i40 %y2_V_1
 
 ]]></Node>
-<StgValue><ssdm name="p_mux"/></StgValue>
+<StgValue><ssdm name="select_ln340"/></StgValue>
 </operation>
 
 <operation id="109" st_id="9" stage="1" lat="1">
@@ -1477,10 +1477,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="45" bw="40" op_0_bw="1" op_1_bw="40" op_2_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:42  %p_3 = select i1 %underflow, i40 -549755813888, i40 %y2_V_1
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:42  %select_ln388 = select i1 %underflow, i40 -549755813888, i40 %y2_V_1
 
 ]]></Node>
-<StgValue><ssdm name="p_3"/></StgValue>
+<StgValue><ssdm name="select_ln388"/></StgValue>
 </operation>
 
 <operation id="110" st_id="9" stage="1" lat="1">
@@ -1492,7 +1492,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="46" bw="40" op_0_bw="1" op_1_bw="40" op_2_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:43  %p_Val2_6 = select i1 %p_1000_not, i40 %p_mux, i40 %p_3
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:43  %p_Val2_6 = select i1 %or_ln340_1, i40 %select_ln340, i40 %select_ln388
 
 ]]></Node>
 <StgValue><ssdm name="p_Val2_6"/></StgValue>
@@ -1522,10 +1522,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="68" bw="34" op_0_bw="80">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:65  %tmp_23 = trunc i80 %r_V_10 to i34
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:65  %trunc_ln718_1 = trunc i80 %r_V_10 to i34
 
 ]]></Node>
-<StgValue><ssdm name="tmp_23"/></StgValue>
+<StgValue><ssdm name="trunc_ln718_1"/></StgValue>
 </operation>
 
 <operation id="113" st_id="9" stage="1" lat="6">
@@ -1570,10 +1570,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="63" bw="80" op_0_bw="75">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:60  %rhs_V_1_cast = sext i75 %rhs_V to i80
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:60  %sext_ln728 = sext i75 %rhs_V to i80
 
 ]]></Node>
-<StgValue><ssdm name="rhs_V_1_cast"/></StgValue>
+<StgValue><ssdm name="sext_ln728"/></StgValue>
 </operation>
 
 <operation id="116" st_id="10" stage="1" lat="1">
@@ -1585,7 +1585,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="64" bw="80" op_0_bw="80" op_1_bw="80">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:61  %ret_V_6 = add i80 %rhs_V_1_cast, %r_V_10
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:61  %ret_V_6 = add i80 %sext_ln728, %r_V_10
 
 ]]></Node>
 <StgValue><ssdm name="ret_V_6"/></StgValue>
@@ -1615,10 +1615,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="69" bw="1" op_0_bw="34" op_1_bw="34">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:66  %r_3 = icmp ne i34 %tmp_23, 0
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:66  %r_2 = icmp ne i34 %trunc_ln718_1, 0
 
 ]]></Node>
-<StgValue><ssdm name="r_3"/></StgValue>
+<StgValue><ssdm name="r_2"/></StgValue>
 </operation>
 
 <operation id="119" st_id="10" stage="1" lat="1">
@@ -1630,10 +1630,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="80" bw="4" op_0_bw="4" op_1_bw="80" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:77  %tmp_5 = call i4 @_ssdm_op_PartSelect.i4.i80.i32.i32(i80 %ret_V_6, i32 76, i32 79)
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:77  %tmp = call i4 @_ssdm_op_PartSelect.i4.i80.i32.i32(i80 %ret_V_6, i32 76, i32 79)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_5"/></StgValue>
+<StgValue><ssdm name="tmp"/></StgValue>
 </operation>
 
 <operation id="120" st_id="10" stage="1" lat="1">
@@ -1645,10 +1645,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="82" bw="5" op_0_bw="5" op_1_bw="80" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:79  %tmp_s = call i5 @_ssdm_op_PartSelect.i5.i80.i32.i32(i80 %ret_V_6, i32 75, i32 79)
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:79  %tmp_1 = call i5 @_ssdm_op_PartSelect.i5.i80.i32.i32(i80 %ret_V_6, i32 75, i32 79)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_s"/></StgValue>
+<StgValue><ssdm name="tmp_1"/></StgValue>
 </operation>
 
 <operation id="121" st_id="10" stage="1" lat="1">
@@ -1660,10 +1660,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="131" bw="80" op_0_bw="80" op_1_bw="80">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:128  %ret_V_1 = add i80 %rhs_V_1_cast, %r_V_11
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:128  %ret_V_4 = add i80 %sext_ln728, %r_V_11
 
 ]]></Node>
-<StgValue><ssdm name="ret_V_1"/></StgValue>
+<StgValue><ssdm name="ret_V_4"/></StgValue>
 </operation>
 </state>
 
@@ -1693,10 +1693,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="67" bw="1" op_0_bw="1" op_1_bw="80" op_2_bw="32">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:64  %tmp_22 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 35)
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:64  %tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 35)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_22"/></StgValue>
+<StgValue><ssdm name="tmp_12"/></StgValue>
 </operation>
 
 <operation id="124" st_id="11" stage="1" lat="1">
@@ -1723,10 +1723,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="71" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:68  %r_2 = or i1 %r_3, %tmp_22
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:68  %r_3 = or i1 %r_2, %tmp_12
 
 ]]></Node>
-<StgValue><ssdm name="r_2"/></StgValue>
+<StgValue><ssdm name="r_3"/></StgValue>
 </operation>
 
 <operation id="126" st_id="11" stage="1" lat="1">
@@ -1738,10 +1738,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="72" bw="1" op_0_bw="1" op_1_bw="80" op_2_bw="32">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:69  %tmp_25 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 34)
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:69  %tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 34)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_25"/></StgValue>
+<StgValue><ssdm name="tmp_14"/></StgValue>
 </operation>
 
 <operation id="127" st_id="11" stage="1" lat="1">
@@ -1753,10 +1753,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="73" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:70  %tmp_6 = and i1 %tmp_25, %r_2
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:70  %and_ln412_1 = and i1 %tmp_14, %r_3
 
 ]]></Node>
-<StgValue><ssdm name="tmp_6"/></StgValue>
+<StgValue><ssdm name="and_ln412_1"/></StgValue>
 </operation>
 
 <operation id="128" st_id="11" stage="1" lat="1">
@@ -1768,10 +1768,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="74" bw="40" op_0_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:71  %tmp_2 = zext i1 %tmp_6 to i40
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:71  %zext_ln415_1 = zext i1 %and_ln412_1 to i40
 
 ]]></Node>
-<StgValue><ssdm name="tmp_2"/></StgValue>
+<StgValue><ssdm name="zext_ln415_1"/></StgValue>
 </operation>
 
 <operation id="129" st_id="11" stage="1" lat="1">
@@ -1783,7 +1783,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="75" bw="40" op_0_bw="40" op_1_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:72  %q_V_1 = add nsw i40 %q_V, %tmp_2
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:72  %q_V_1 = add nsw i40 %q_V, %zext_ln415_1
 
 ]]></Node>
 <StgValue><ssdm name="q_V_1"/></StgValue>
@@ -1798,10 +1798,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="76" bw="1" op_0_bw="1" op_1_bw="40" op_2_bw="32">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:73  %tmp_26 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %q_V_1, i32 39)
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:73  %tmp_15 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %q_V_1, i32 39)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_26"/></StgValue>
+<StgValue><ssdm name="tmp_15"/></StgValue>
 </operation>
 
 <operation id="131" st_id="11" stage="1" lat="1">
@@ -1813,10 +1813,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="77" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:74  %rev2 = xor i1 %tmp_26, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:74  %xor_ln416_1 = xor i1 %tmp_15, true
 
 ]]></Node>
-<StgValue><ssdm name="rev2"/></StgValue>
+<StgValue><ssdm name="xor_ln416_1"/></StgValue>
 </operation>
 
 <operation id="132" st_id="11" stage="1" lat="1">
@@ -1828,7 +1828,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="78" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:75  %carry_3 = and i1 %p_Result_7, %rev2
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:75  %carry_3 = and i1 %p_Result_7, %xor_ln416_1
 
 ]]></Node>
 <StgValue><ssdm name="carry_3"/></StgValue>
@@ -1858,7 +1858,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="81" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:78  %Range2_all_ones_1 = icmp eq i4 %tmp_5, -1
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:78  %Range2_all_ones_1 = icmp eq i4 %tmp, -1
 
 ]]></Node>
 <StgValue><ssdm name="Range2_all_ones_1"/></StgValue>
@@ -1873,7 +1873,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="83" bw="1" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:80  %Range1_all_ones_2 = icmp eq i5 %tmp_s, -1
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:80  %Range1_all_ones_2 = icmp eq i5 %tmp_1, -1
 
 ]]></Node>
 <StgValue><ssdm name="Range1_all_ones_2"/></StgValue>
@@ -1888,7 +1888,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="84" bw="1" op_0_bw="5" op_1_bw="5">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:81  %Range1_all_zeros_1 = icmp eq i5 %tmp_s, 0
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:81  %Range1_all_zeros_1 = icmp eq i5 %tmp_1, 0
 
 ]]></Node>
 <StgValue><ssdm name="Range1_all_zeros_1"/></StgValue>
@@ -1903,10 +1903,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="86" bw="1" op_0_bw="1" op_1_bw="80" op_2_bw="32">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:83  %tmp_28 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 75)
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:83  %tmp_17 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 75)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_28"/></StgValue>
+<StgValue><ssdm name="tmp_17"/></StgValue>
 </operation>
 
 <operation id="138" st_id="11" stage="1" lat="1">
@@ -1918,10 +1918,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="87" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:84  %rev3 = xor i1 %tmp_28, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:84  %xor_ln779_1 = xor i1 %tmp_17, true
 
 ]]></Node>
-<StgValue><ssdm name="rev3"/></StgValue>
+<StgValue><ssdm name="xor_ln779_1"/></StgValue>
 </operation>
 
 <operation id="139" st_id="11" stage="1" lat="1">
@@ -1933,10 +1933,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="88" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:85  %p_7 = and i1 %Range2_all_ones_1, %rev3
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:85  %and_ln779_1 = and i1 %Range2_all_ones_1, %xor_ln779_1
 
 ]]></Node>
-<StgValue><ssdm name="p_7"/></StgValue>
+<StgValue><ssdm name="and_ln779_1"/></StgValue>
 </operation>
 
 <operation id="140" st_id="11" stage="1" lat="1">
@@ -1948,7 +1948,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="89" bw="1" op_0_bw="1" op_1_bw="1" op_2_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:86  %deleted_ones_2 = select i1 %carry_3, i1 %p_7, i1 %Range1_all_ones_2
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:86  %deleted_ones_2 = select i1 %carry_3, i1 %and_ln779_1, i1 %Range1_all_ones_2
 
 ]]></Node>
 <StgValue><ssdm name="deleted_ones_2"/></StgValue>
@@ -1963,10 +1963,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="95" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:92  %brmerge980_demorgan = and i1 %p_Result_8, %deleted_ones_2
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:92  %and_ln786_3 = and i1 %p_Result_8, %deleted_ones_2
 
 ]]></Node>
-<StgValue><ssdm name="brmerge980_demorgan"/></StgValue>
+<StgValue><ssdm name="and_ln786_3"/></StgValue>
 </operation>
 
 <operation id="142" st_id="11" stage="1" lat="1">
@@ -1978,10 +1978,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="134" bw="1" op_0_bw="80" op_1_bw="80">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:131  %notrhs = icmp slt i80 %ret_V_1, 73786976294838206465
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:131  %icmp_ln1497_1 = icmp slt i80 %ret_V_4, 73786976294838206465
 
 ]]></Node>
-<StgValue><ssdm name="notrhs"/></StgValue>
+<StgValue><ssdm name="icmp_ln1497_1"/></StgValue>
 </operation>
 </state>
 
@@ -2011,10 +2011,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="90" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:87  %phitmp964_demorgan = and i1 %carry_3, %Range1_all_ones_2
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:87  %and_ln781_1 = and i1 %carry_3, %Range1_all_ones_2
 
 ]]></Node>
-<StgValue><ssdm name="phitmp964_demorgan"/></StgValue>
+<StgValue><ssdm name="and_ln781_1"/></StgValue>
 </operation>
 
 <operation id="145" st_id="12" stage="1" lat="1">
@@ -2026,10 +2026,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="91" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:88  %p_not2 = xor i1 %deleted_zeros_1, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:88  %xor_ln785_2 = xor i1 %deleted_zeros_1, true
 
 ]]></Node>
-<StgValue><ssdm name="p_not2"/></StgValue>
+<StgValue><ssdm name="xor_ln785_2"/></StgValue>
 </operation>
 
 <operation id="146" st_id="12" stage="1" lat="1">
@@ -2041,10 +2041,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="92" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:89  %brmerge7 = or i1 %p_Result_8, %p_not2
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:89  %or_ln785_1 = or i1 %p_Result_8, %xor_ln785_2
 
 ]]></Node>
-<StgValue><ssdm name="brmerge7"/></StgValue>
+<StgValue><ssdm name="or_ln785_1"/></StgValue>
 </operation>
 
 <operation id="147" st_id="12" stage="1" lat="1">
@@ -2056,10 +2056,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="93" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:90  %tmp_4 = xor i1 %p_Result_6, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:90  %xor_ln785_3 = xor i1 %p_Result_6, true
 
 ]]></Node>
-<StgValue><ssdm name="tmp_4"/></StgValue>
+<StgValue><ssdm name="xor_ln785_3"/></StgValue>
 </operation>
 
 <operation id="148" st_id="12" stage="1" lat="1">
@@ -2071,7 +2071,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="94" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:91  %overflow_1 = and i1 %brmerge7, %tmp_4
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:91  %overflow_1 = and i1 %or_ln785_1, %xor_ln785_3
 
 ]]></Node>
 <StgValue><ssdm name="overflow_1"/></StgValue>
@@ -2086,10 +2086,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="96" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:93  %tmp4_demorgan = or i1 %phitmp964_demorgan, %brmerge980_demorgan
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:93  %or_ln786_1 = or i1 %and_ln781_1, %and_ln786_3
 
 ]]></Node>
-<StgValue><ssdm name="tmp4_demorgan"/></StgValue>
+<StgValue><ssdm name="or_ln786_1"/></StgValue>
 </operation>
 
 <operation id="150" st_id="12" stage="1" lat="1">
@@ -2101,10 +2101,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="97" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:94  %tmp4 = xor i1 %tmp4_demorgan, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:94  %xor_ln786_2 = xor i1 %or_ln786_1, true
 
 ]]></Node>
-<StgValue><ssdm name="tmp4"/></StgValue>
+<StgValue><ssdm name="xor_ln786_2"/></StgValue>
 </operation>
 
 <operation id="151" st_id="12" stage="1" lat="1">
@@ -2116,7 +2116,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="98" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:95  %underflow_2 = and i1 %p_Result_6, %tmp4
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:95  %underflow_2 = and i1 %p_Result_6, %xor_ln786_2
 
 ]]></Node>
 <StgValue><ssdm name="underflow_2"/></StgValue>
@@ -2131,10 +2131,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="99" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:96  %brmerge9 = or i1 %underflow_2, %overflow_1
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:96  %or_ln340_4 = or i1 %underflow_2, %overflow_1
 
 ]]></Node>
-<StgValue><ssdm name="brmerge9"/></StgValue>
+<StgValue><ssdm name="or_ln340_4"/></StgValue>
 </operation>
 
 <operation id="153" st_id="12" stage="1" lat="1">
@@ -2146,10 +2146,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="100" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:97  %tmp5 = or i1 %brmerge980_demorgan, %tmp_4
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:97  %or_ln340_5 = or i1 %and_ln786_3, %xor_ln785_3
 
 ]]></Node>
-<StgValue><ssdm name="tmp5"/></StgValue>
+<StgValue><ssdm name="or_ln340_5"/></StgValue>
 </operation>
 
 <operation id="154" st_id="12" stage="1" lat="1">
@@ -2161,10 +2161,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="101" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:98  %p_1001_not = or i1 %tmp5, %phitmp964_demorgan
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:98  %or_ln340_6 = or i1 %or_ln340_5, %and_ln781_1
 
 ]]></Node>
-<StgValue><ssdm name="p_1001_not"/></StgValue>
+<StgValue><ssdm name="or_ln340_6"/></StgValue>
 </operation>
 
 <operation id="155" st_id="12" stage="1" lat="1">
@@ -2176,10 +2176,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="102" bw="40" op_0_bw="1" op_1_bw="40" op_2_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:99  %p_mux2 = select i1 %brmerge9, i40 549755813887, i40 %q_V_1
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:99  %select_ln340_2 = select i1 %or_ln340_4, i40 549755813887, i40 %q_V_1
 
 ]]></Node>
-<StgValue><ssdm name="p_mux2"/></StgValue>
+<StgValue><ssdm name="select_ln340_2"/></StgValue>
 </operation>
 
 <operation id="156" st_id="12" stage="1" lat="1">
@@ -2191,10 +2191,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="103" bw="40" op_0_bw="1" op_1_bw="40" op_2_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:100  %p_1 = select i1 %underflow_2, i40 -549755813888, i40 %q_V_1
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:100  %select_ln388_2 = select i1 %underflow_2, i40 -549755813888, i40 %q_V_1
 
 ]]></Node>
-<StgValue><ssdm name="p_1"/></StgValue>
+<StgValue><ssdm name="select_ln388_2"/></StgValue>
 </operation>
 
 <operation id="157" st_id="12" stage="1" lat="1">
@@ -2206,10 +2206,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="104" bw="40" op_0_bw="1" op_1_bw="40" op_2_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:101  %p_Val2_10 = select i1 %p_1001_not, i40 %p_mux2, i40 %p_1
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:101  %p_Val2_12 = select i1 %or_ln340_6, i40 %select_ln340_2, i40 %select_ln388_2
 
 ]]></Node>
-<StgValue><ssdm name="p_Val2_10"/></StgValue>
+<StgValue><ssdm name="p_Val2_12"/></StgValue>
 </operation>
 </state>
 
@@ -2224,7 +2224,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="121" bw="41" op_0_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:118  %lhs_V_1 = sext i40 %p_Val2_10 to i41
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:118  %lhs_V_1 = sext i40 %p_Val2_12 to i41
 
 ]]></Node>
 <StgValue><ssdm name="lhs_V_1"/></StgValue>
@@ -2272,7 +2272,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="124" bw="81" op_0_bw="40">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:121  %r_V_4 = sext i40 %p_Val2_10 to i81
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:121  %r_V_4 = sext i40 %p_Val2_12 to i81
 
 ]]></Node>
 <StgValue><ssdm name="r_V_4"/></StgValue>
@@ -2287,10 +2287,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="125" bw="81" op_0_bw="41">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:122  %tmp_12 = sext i41 %ret_V to i81
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:122  %sext_ln1118 = sext i41 %ret_V to i81
 
 ]]></Node>
-<StgValue><ssdm name="tmp_12"/></StgValue>
+<StgValue><ssdm name="sext_ln1118"/></StgValue>
 </operation>
 
 <operation id="163" st_id="14" stage="6" lat="6">
@@ -2302,7 +2302,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="126" bw="81" op_0_bw="81" op_1_bw="81">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:123  %r_V_5 = mul nsw i81 %tmp_12, %r_V_4
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:123  %r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4
 
 ]]></Node>
 <StgValue><ssdm name="r_V_5"/></StgValue>
@@ -2320,7 +2320,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="126" bw="81" op_0_bw="81" op_1_bw="81">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:123  %r_V_5 = mul nsw i81 %tmp_12, %r_V_4
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:123  %r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4
 
 ]]></Node>
 <StgValue><ssdm name="r_V_5"/></StgValue>
@@ -2338,7 +2338,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="126" bw="81" op_0_bw="81" op_1_bw="81">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:123  %r_V_5 = mul nsw i81 %tmp_12, %r_V_4
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:123  %r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4
 
 ]]></Node>
 <StgValue><ssdm name="r_V_5"/></StgValue>
@@ -2356,7 +2356,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="126" bw="81" op_0_bw="81" op_1_bw="81">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:123  %r_V_5 = mul nsw i81 %tmp_12, %r_V_4
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:123  %r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4
 
 ]]></Node>
 <StgValue><ssdm name="r_V_5"/></StgValue>
@@ -2374,7 +2374,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="126" bw="81" op_0_bw="81" op_1_bw="81">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:123  %r_V_5 = mul nsw i81 %tmp_12, %r_V_4
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:123  %r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4
 
 ]]></Node>
 <StgValue><ssdm name="r_V_5"/></StgValue>
@@ -2392,7 +2392,7 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="126" bw="81" op_0_bw="81" op_1_bw="81">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:123  %r_V_5 = mul nsw i81 %tmp_12, %r_V_4
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:123  %r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4
 
 ]]></Node>
 <StgValue><ssdm name="r_V_5"/></StgValue>
@@ -2425,10 +2425,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="128" bw="81" op_0_bw="73">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:125  %tmp_14 = sext i73 %r_V_6 to i81
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:125  %sext_ln1497 = sext i73 %r_V_6 to i81
 
 ]]></Node>
-<StgValue><ssdm name="tmp_14"/></StgValue>
+<StgValue><ssdm name="sext_ln1497"/></StgValue>
 </operation>
 
 <operation id="171" st_id="20" stage="1" lat="1">
@@ -2440,10 +2440,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="132" bw="1" op_0_bw="81" op_1_bw="81">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:129  %slt = icmp slt i81 %tmp_14, %r_V_5
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:129  %icmp_ln1497 = icmp slt i81 %sext_ln1497, %r_V_5
 
 ]]></Node>
-<StgValue><ssdm name="slt"/></StgValue>
+<StgValue><ssdm name="icmp_ln1497"/></StgValue>
 </operation>
 
 <operation id="172" st_id="20" stage="1" lat="1">
@@ -2455,10 +2455,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="133" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:130  %rev4 = xor i1 %slt, true
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:130  %xor_ln1497 = xor i1 %icmp_ln1497, true
 
 ]]></Node>
-<StgValue><ssdm name="rev4"/></StgValue>
+<StgValue><ssdm name="xor_ln1497"/></StgValue>
 </operation>
 
 <operation id="173" st_id="20" stage="1" lat="1">
@@ -2470,10 +2470,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="135" bw="1" op_0_bw="1" op_1_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:132  %not_sel_tmp = or i1 %notrhs, %rev4
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:132  %or_ln1497 = or i1 %icmp_ln1497_1, %xor_ln1497
 
 ]]></Node>
-<StgValue><ssdm name="not_sel_tmp"/></StgValue>
+<StgValue><ssdm name="or_ln1497"/></StgValue>
 </operation>
 
 <operation id="174" st_id="20" stage="1" lat="1">
@@ -2485,10 +2485,10 @@ _ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="136" bw="0" op_0_bw="1">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:133  ret i1 %not_sel_tmp
+_ZN13ap_fixed_baseILi40ELi5ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:133  ret i1 %or_ln1497
 
 ]]></Node>
-<StgValue><ssdm name=""/></StgValue>
+<StgValue><ssdm name="ret_ln27"/></StgValue>
 </operation>
 </state>
 </state_list>

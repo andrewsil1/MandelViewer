@@ -272,4 +272,4 @@ MandelRTL/project_1/project_1.srcs/utils_1/imports/impl_1
 *.a
 *.o
 *.elf
-*.bc
+

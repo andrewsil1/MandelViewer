@@ -371,7 +371,7 @@
             <Obj>
               <type>0</type>
               <id>9</id>
-              <name>tmp</name>
+              <name>tmp_3</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -395,7 +395,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_fu_353_p3</rtlName>
+              <rtlName>tmp_3_fu_353_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -421,7 +421,7 @@
             <Obj>
               <type>0</type>
               <id>10</id>
-              <name>tmp_3</name>
+              <name>trunc_ln718</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -445,7 +445,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_3_fu_300_p1</rtlName>
+              <rtlName>trunc_ln718_fu_300_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>34</bitwidth>
@@ -617,7 +617,7 @@
             <Obj>
               <type>0</type>
               <id>14</id>
-              <name>tmp_11</name>
+              <name>tmp_5</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -641,7 +641,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_11_fu_372_p3</rtlName>
+              <rtlName>tmp_5_fu_372_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -667,7 +667,7 @@
             <Obj>
               <type>0</type>
               <id>15</id>
-              <name>tmp_7</name>
+              <name>and_ln412</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -691,7 +691,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_7_fu_379_p2</rtlName>
+              <rtlName>and_ln412_fu_379_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -716,7 +716,7 @@
             <Obj>
               <type>0</type>
               <id>16</id>
-              <name>tmp_8</name>
+              <name>zext_ln415</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -740,7 +740,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_8_fu_385_p1</rtlName>
+              <rtlName>zext_ln415_fu_385_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>40</bitwidth>
@@ -813,7 +813,7 @@
             <Obj>
               <type>0</type>
               <id>18</id>
-              <name>tmp_13</name>
+              <name>tmp_6</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -863,7 +863,7 @@
             <Obj>
               <type>0</type>
               <id>19</id>
-              <name>rev</name>
+              <name>xor_ln416</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -1310,7 +1310,7 @@
             <Obj>
               <type>0</type>
               <id>28</id>
-              <name>tmp_18</name>
+              <name>tmp_8</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -1334,7 +1334,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_18_fu_423_p3</rtlName>
+              <rtlName>tmp_8_fu_423_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1360,7 +1360,7 @@
             <Obj>
               <type>0</type>
               <id>29</id>
-              <name>rev1</name>
+              <name>xor_ln779</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -1384,7 +1384,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>rev1_fu_430_p2</rtlName>
+              <rtlName>xor_ln779_fu_430_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1409,7 +1409,7 @@
             <Obj>
               <type>0</type>
               <id>30</id>
-              <name>p_s</name>
+              <name>and_ln779</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -1433,7 +1433,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>p_s_fu_436_p2</rtlName>
+              <rtlName>and_ln779_fu_436_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1508,7 +1508,7 @@
             <Obj>
               <type>0</type>
               <id>32</id>
-              <name>phitmp966_demorgan</name>
+              <name>and_ln781</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -1532,7 +1532,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>phitmp966_demorgan_fu_459_p2</rtlName>
+              <rtlName>and_ln781_fu_459_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1557,7 +1557,7 @@
             <Obj>
               <type>0</type>
               <id>33</id>
-              <name>p_not</name>
+              <name>xor_ln785</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -1581,7 +1581,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>p_not_fu_463_p2</rtlName>
+              <rtlName>xor_ln785_fu_463_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1606,7 +1606,7 @@
             <Obj>
               <type>0</type>
               <id>34</id>
-              <name>brmerge</name>
+              <name>or_ln785</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -1630,7 +1630,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>brmerge_fu_469_p2</rtlName>
+              <rtlName>or_ln785_fu_469_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1655,7 +1655,7 @@
             <Obj>
               <type>0</type>
               <id>35</id>
-              <name>tmp_9</name>
+              <name>xor_ln785_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -1679,7 +1679,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_9_fu_474_p2</rtlName>
+              <rtlName>xor_ln785_1_fu_474_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1753,7 +1753,7 @@
             <Obj>
               <type>0</type>
               <id>37</id>
-              <name>brmerge968_demorgan</name>
+              <name>and_ln786</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -1777,7 +1777,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>brmerge968_demorgan_fu_448_p2</rtlName>
+              <rtlName>and_ln786_fu_448_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1802,7 +1802,7 @@
             <Obj>
               <type>0</type>
               <id>38</id>
-              <name>tmp2_demorgan</name>
+              <name>or_ln786</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -1826,7 +1826,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp2_demorgan_fu_485_p2</rtlName>
+              <rtlName>or_ln786_fu_485_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1851,7 +1851,7 @@
             <Obj>
               <type>0</type>
               <id>39</id>
-              <name>tmp2</name>
+              <name>xor_ln786</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -1875,7 +1875,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp2_fu_490_p2</rtlName>
+              <rtlName>xor_ln786_fu_490_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1949,7 +1949,7 @@
             <Obj>
               <type>0</type>
               <id>41</id>
-              <name>brmerge2</name>
+              <name>or_ln340</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -1973,7 +1973,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>brmerge2_fu_501_p2</rtlName>
+              <rtlName>or_ln340_fu_501_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -1998,7 +1998,7 @@
             <Obj>
               <type>0</type>
               <id>42</id>
-              <name>tmp3</name>
+              <name>or_ln340_2</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -2022,7 +2022,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp3_fu_507_p2</rtlName>
+              <rtlName>or_ln340_2_fu_507_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2047,7 +2047,7 @@
             <Obj>
               <type>0</type>
               <id>43</id>
-              <name>p_1000_not</name>
+              <name>or_ln340_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -2071,7 +2071,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>p_1000_not_fu_512_p2</rtlName>
+              <rtlName>or_ln340_1_fu_512_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2096,7 +2096,7 @@
             <Obj>
               <type>0</type>
               <id>44</id>
-              <name>p_mux</name>
+              <name>select_ln340</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -2146,7 +2146,7 @@
             <Obj>
               <type>0</type>
               <id>45</id>
-              <name>p_3</name>
+              <name>select_ln388</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>13</lineNumber>
@@ -2492,7 +2492,7 @@
             <Obj>
               <type>0</type>
               <id>52</id>
-              <name>tmp_1</name>
+              <name>xor_ln786_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>14</lineNumber>
@@ -2516,7 +2516,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_1_fu_120_p2</rtlName>
+              <rtlName>xor_ln786_1_fu_120_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2590,7 +2590,7 @@
             <Obj>
               <type>0</type>
               <id>54</id>
-              <name>brmerge5</name>
+              <name>xor_ln340</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>14</lineNumber>
@@ -2614,7 +2614,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>brmerge5_fu_132_p2</rtlName>
+              <rtlName>xor_ln340_fu_132_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2639,7 +2639,7 @@
             <Obj>
               <type>0</type>
               <id>55</id>
-              <name>signbit_i_i_i_i169</name>
+              <name>xor_ln340_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>14</lineNumber>
@@ -2663,7 +2663,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>signbit_i_i_i_i169_fu_138_p2</rtlName>
+              <rtlName>xor_ln340_1_fu_138_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2688,7 +2688,7 @@
             <Obj>
               <type>0</type>
               <id>56</id>
-              <name>brmerge6</name>
+              <name>or_ln340_3</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>14</lineNumber>
@@ -2712,7 +2712,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>brmerge6_fu_144_p2</rtlName>
+              <rtlName>or_ln340_3_fu_144_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -2737,7 +2737,7 @@
             <Obj>
               <type>0</type>
               <id>57</id>
-              <name>p_mux1</name>
+              <name>select_ln340_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>14</lineNumber>
@@ -2787,7 +2787,7 @@
             <Obj>
               <type>0</type>
               <id>58</id>
-              <name>p_6</name>
+              <name>select_ln388_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>14</lineNumber>
@@ -3034,7 +3034,7 @@
             <Obj>
               <type>0</type>
               <id>63</id>
-              <name>rhs_V_1_cast</name>
+              <name>sext_ln728</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -3058,7 +3058,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>rhs_V_1_cast_fu_551_p1</rtlName>
+              <rtlName>sext_ln728_fu_551_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>80</bitwidth>
@@ -3232,7 +3232,7 @@
             <Obj>
               <type>0</type>
               <id>67</id>
-              <name>tmp_22</name>
+              <name>tmp_12</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -3256,7 +3256,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_22_fu_607_p3</rtlName>
+              <rtlName>tmp_12_fu_607_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -3282,7 +3282,7 @@
             <Obj>
               <type>0</type>
               <id>68</id>
-              <name>tmp_23</name>
+              <name>trunc_ln718_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -3306,7 +3306,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_23_fu_540_p1</rtlName>
+              <rtlName>trunc_ln718_1_fu_540_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>34</bitwidth>
@@ -3330,7 +3330,7 @@
             <Obj>
               <type>0</type>
               <id>69</id>
-              <name>r_3</name>
+              <name>r_2</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -3429,7 +3429,7 @@
             <Obj>
               <type>0</type>
               <id>71</id>
-              <name>r_2</name>
+              <name>r_3</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -3453,7 +3453,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>r</originalName>
-              <rtlName>r_2_fu_621_p2</rtlName>
+              <rtlName>r_3_fu_621_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -3478,7 +3478,7 @@
             <Obj>
               <type>0</type>
               <id>72</id>
-              <name>tmp_25</name>
+              <name>tmp_14</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -3502,7 +3502,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_25_fu_626_p3</rtlName>
+              <rtlName>tmp_14_fu_626_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -3528,7 +3528,7 @@
             <Obj>
               <type>0</type>
               <id>73</id>
-              <name>tmp_6</name>
+              <name>and_ln412_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -3552,7 +3552,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_6_fu_633_p2</rtlName>
+              <rtlName>and_ln412_1_fu_633_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -3577,7 +3577,7 @@
             <Obj>
               <type>0</type>
               <id>74</id>
-              <name>tmp_2</name>
+              <name>zext_ln415_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -3601,7 +3601,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_2_fu_639_p1</rtlName>
+              <rtlName>zext_ln415_1_fu_639_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>40</bitwidth>
@@ -3674,7 +3674,7 @@
             <Obj>
               <type>0</type>
               <id>76</id>
-              <name>tmp_26</name>
+              <name>tmp_15</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -3724,7 +3724,7 @@
             <Obj>
               <type>0</type>
               <id>77</id>
-              <name>rev2</name>
+              <name>xor_ln416_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -3872,7 +3872,7 @@
             <Obj>
               <type>0</type>
               <id>80</id>
-              <name>tmp_5</name>
+              <name>tmp</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -3972,7 +3972,7 @@
             <Obj>
               <type>0</type>
               <id>82</id>
-              <name>tmp_s</name>
+              <name>tmp_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4171,7 +4171,7 @@
             <Obj>
               <type>0</type>
               <id>86</id>
-              <name>tmp_28</name>
+              <name>tmp_17</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4195,7 +4195,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_28_fu_692_p3</rtlName>
+              <rtlName>tmp_17_fu_692_p3</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4221,7 +4221,7 @@
             <Obj>
               <type>0</type>
               <id>87</id>
-              <name>rev3</name>
+              <name>xor_ln779_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4245,7 +4245,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>rev3_fu_699_p2</rtlName>
+              <rtlName>xor_ln779_1_fu_699_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4270,7 +4270,7 @@
             <Obj>
               <type>0</type>
               <id>88</id>
-              <name>p_7</name>
+              <name>and_ln779_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4294,7 +4294,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>p_7_fu_705_p2</rtlName>
+              <rtlName>and_ln779_1_fu_705_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4369,7 +4369,7 @@
             <Obj>
               <type>0</type>
               <id>90</id>
-              <name>phitmp964_demorgan</name>
+              <name>and_ln781_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4393,7 +4393,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>phitmp964_demorgan_fu_735_p2</rtlName>
+              <rtlName>and_ln781_1_fu_735_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4418,7 +4418,7 @@
             <Obj>
               <type>0</type>
               <id>91</id>
-              <name>p_not2</name>
+              <name>xor_ln785_2</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4442,7 +4442,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>p_not2_fu_739_p2</rtlName>
+              <rtlName>xor_ln785_2_fu_739_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4467,7 +4467,7 @@
             <Obj>
               <type>0</type>
               <id>92</id>
-              <name>brmerge7</name>
+              <name>or_ln785_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4491,7 +4491,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>brmerge7_fu_745_p2</rtlName>
+              <rtlName>or_ln785_1_fu_745_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4516,7 +4516,7 @@
             <Obj>
               <type>0</type>
               <id>93</id>
-              <name>tmp_4</name>
+              <name>xor_ln785_3</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4540,7 +4540,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_4_fu_750_p2</rtlName>
+              <rtlName>xor_ln785_3_fu_750_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4614,7 +4614,7 @@
             <Obj>
               <type>0</type>
               <id>95</id>
-              <name>brmerge980_demorgan</name>
+              <name>and_ln786_3</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4638,7 +4638,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>brmerge980_demorgan_fu_719_p2</rtlName>
+              <rtlName>and_ln786_3_fu_719_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4663,7 +4663,7 @@
             <Obj>
               <type>0</type>
               <id>96</id>
-              <name>tmp4_demorgan</name>
+              <name>or_ln786_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4687,7 +4687,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp4_demorgan_fu_761_p2</rtlName>
+              <rtlName>or_ln786_1_fu_761_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4712,7 +4712,7 @@
             <Obj>
               <type>0</type>
               <id>97</id>
-              <name>tmp4</name>
+              <name>xor_ln786_2</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4736,7 +4736,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp4_fu_766_p2</rtlName>
+              <rtlName>xor_ln786_2_fu_766_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4810,7 +4810,7 @@
             <Obj>
               <type>0</type>
               <id>99</id>
-              <name>brmerge9</name>
+              <name>or_ln340_4</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4834,7 +4834,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>brmerge9_fu_777_p2</rtlName>
+              <rtlName>or_ln340_4_fu_777_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4859,7 +4859,7 @@
             <Obj>
               <type>0</type>
               <id>100</id>
-              <name>tmp5</name>
+              <name>or_ln340_5</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4883,7 +4883,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp5_fu_783_p2</rtlName>
+              <rtlName>or_ln340_5_fu_783_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4908,7 +4908,7 @@
             <Obj>
               <type>0</type>
               <id>101</id>
-              <name>p_1001_not</name>
+              <name>or_ln340_6</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -4932,7 +4932,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>p_1001_not_fu_788_p2</rtlName>
+              <rtlName>or_ln340_6_fu_788_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -4957,7 +4957,7 @@
             <Obj>
               <type>0</type>
               <id>102</id>
-              <name>p_mux2</name>
+              <name>select_ln340_2</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -5007,7 +5007,7 @@
             <Obj>
               <type>0</type>
               <id>103</id>
-              <name>p_1</name>
+              <name>select_ln388_2</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -5057,7 +5057,7 @@
             <Obj>
               <type>0</type>
               <id>104</id>
-              <name>p_Val2_10</name>
+              <name>p_Val2_12</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>15</lineNumber>
@@ -5305,7 +5305,7 @@
             <Obj>
               <type>0</type>
               <id>109</id>
-              <name>tmp_31</name>
+              <name>tmp_20</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>16</lineNumber>
@@ -5329,7 +5329,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_31_reg_891</rtlName>
+              <rtlName>tmp_20_reg_891</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -5355,7 +5355,7 @@
             <Obj>
               <type>0</type>
               <id>110</id>
-              <name>brmerge1</name>
+              <name>or_ln785_2</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>16</lineNumber>
@@ -5379,7 +5379,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>brmerge1_fu_210_p2</rtlName>
+              <rtlName>or_ln785_2_fu_210_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -5404,7 +5404,7 @@
             <Obj>
               <type>0</type>
               <id>111</id>
-              <name>tmp_10</name>
+              <name>xor_ln785_4</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>16</lineNumber>
@@ -5428,7 +5428,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_10_fu_214_p2</rtlName>
+              <rtlName>xor_ln785_4_fu_214_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -5502,7 +5502,7 @@
             <Obj>
               <type>0</type>
               <id>113</id>
-              <name>brmerge12_demorgan</name>
+              <name>and_ln786_5</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>16</lineNumber>
@@ -5526,7 +5526,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>brmerge12_demorgan_fu_225_p2</rtlName>
+              <rtlName>and_ln786_5_fu_225_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -5551,7 +5551,7 @@
             <Obj>
               <type>0</type>
               <id>114</id>
-              <name>brmerge3</name>
+              <name>xor_ln786_3</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>16</lineNumber>
@@ -5575,7 +5575,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>brmerge3_fu_229_p2</rtlName>
+              <rtlName>xor_ln786_3_fu_229_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -5649,7 +5649,7 @@
             <Obj>
               <type>0</type>
               <id>116</id>
-              <name>brmerge4</name>
+              <name>or_ln340_7</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>16</lineNumber>
@@ -5673,7 +5673,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>brmerge4_fu_240_p2</rtlName>
+              <rtlName>or_ln340_7_fu_240_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -5698,7 +5698,7 @@
             <Obj>
               <type>0</type>
               <id>117</id>
-              <name>p_997_not</name>
+              <name>or_ln340_8</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>16</lineNumber>
@@ -5722,7 +5722,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>p_997_not_fu_246_p2</rtlName>
+              <rtlName>or_ln340_8_fu_246_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -5747,7 +5747,7 @@
             <Obj>
               <type>0</type>
               <id>118</id>
-              <name>p_mux3</name>
+              <name>select_ln340_3</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>16</lineNumber>
@@ -5797,7 +5797,7 @@
             <Obj>
               <type>0</type>
               <id>119</id>
-              <name>p_2</name>
+              <name>select_ln388_3</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>16</lineNumber>
@@ -5847,7 +5847,7 @@
             <Obj>
               <type>0</type>
               <id>120</id>
-              <name>p_0424_1</name>
+              <name>select_ln340_7</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>16</lineNumber>
@@ -6090,7 +6090,7 @@
             <Obj>
               <type>0</type>
               <id>125</id>
-              <name>tmp_12</name>
+              <name>sext_ln1118</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>18</lineNumber>
@@ -6114,7 +6114,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_12_fu_831_p1</rtlName>
+              <rtlName>sext_ln1118_fu_831_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>81</bitwidth>
@@ -6237,7 +6237,7 @@
             <Obj>
               <type>0</type>
               <id>128</id>
-              <name>tmp_14</name>
+              <name>sext_ln1497</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>18</lineNumber>
@@ -6261,7 +6261,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_14_fu_847_p1</rtlName>
+              <rtlName>sext_ln1497_fu_847_p1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>81</bitwidth>
@@ -6382,7 +6382,7 @@
             <Obj>
               <type>0</type>
               <id>131</id>
-              <name>ret_V_1</name>
+              <name>ret_V_4</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>18</lineNumber>
@@ -6431,7 +6431,7 @@
             <Obj>
               <type>0</type>
               <id>132</id>
-              <name>slt</name>
+              <name>icmp_ln1497</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>18</lineNumber>
@@ -6480,7 +6480,7 @@
             <Obj>
               <type>0</type>
               <id>133</id>
-              <name>rev4</name>
+              <name>xor_ln1497</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>18</lineNumber>
@@ -6504,7 +6504,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>rev4_fu_856_p2</rtlName>
+              <rtlName>xor_ln1497_fu_856_p2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -6529,7 +6529,7 @@
             <Obj>
               <type>0</type>
               <id>134</id>
-              <name>notrhs</name>
+              <name>icmp_ln1497_1</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>18</lineNumber>
@@ -6578,7 +6578,7 @@
             <Obj>
               <type>0</type>
               <id>135</id>
-              <name>not_sel_tmp</name>
+              <name>or_ln1497</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>18</lineNumber>
@@ -6627,7 +6627,7 @@
             <Obj>
               <type>0</type>
               <id>136</id>
-              <name/>
+              <name>_ln27</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>27</lineNumber>
@@ -10535,283 +10535,214 @@
         <count>66</count>
         <item_version>0</item_version>
         <item>
+          <first>and_ln412_1_fu_633_p2 ( and ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>and_ln412_fu_379_p2 ( and ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>and_ln779_1_fu_705_p2 ( and ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>and_ln779_fu_436_p2 ( and ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>and_ln781_1_fu_735_p2 ( and ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>and_ln781_fu_459_p2 ( and ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>and_ln786_3_fu_719_p2 ( and ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>and_ln786_5_fu_225_p2 ( and ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>and_ln786_fu_448_p2 ( and ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
           <first>ap_return ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge12_demorgan_fu_225_p2 ( and ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge1_fu_210_p2 ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge2_fu_501_p2 ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge3_fu_229_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge4_fu_240_p2 ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge5_fu_132_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge6_fu_144_p2 ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge7_fu_745_p2 ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge968_demorgan_fu_448_p2 ( and ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge980_demorgan_fu_719_p2 ( and ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge9_fu_777_p2 ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge_fu_469_p2 ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -11253,6 +11184,328 @@
           </second>
         </item>
         <item>
+          <first>or_ln340_1_fu_512_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_2_fu_507_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_3_fu_144_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_4_fu_777_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_5_fu_783_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_6_fu_788_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_7_fu_240_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_8_fu_246_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_fu_501_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln785_1_fu_745_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln785_2_fu_210_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln785_fu_469_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln786_1_fu_761_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln786_fu_485_p2 ( or ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
           <first>overflow_1_fu_755_p2 ( and ) </first>
           <second>
             <count>4</count>
@@ -11322,214 +11575,7 @@
           </second>
         </item>
         <item>
-          <first>p_1000_not_fu_512_p2 ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>p_1001_not_fu_788_p2 ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>p_7_fu_705_p2 ( and ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>p_997_not_fu_246_p2 ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>p_not2_fu_739_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>p_not_fu_463_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>p_s_fu_436_p2 ( and ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>phitmp964_demorgan_fu_735_p2 ( and ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>phitmp966_demorgan_fu_459_p2 ( and ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>r_2_fu_621_p2 ( or ) </first>
+          <first>r_3_fu_621_p2 ( or ) </first>
           <second>
             <count>4</count>
             <item_version>0</item_version>
@@ -11621,374 +11667,6 @@
           </second>
         </item>
         <item>
-          <first>rev1_fu_430_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>rev3_fu_699_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>rev4_fu_856_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>signbit_i_i_i_i169_fu_138_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp2_demorgan_fu_485_p2 ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp2_fu_490_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp3_fu_507_p2 ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp4_demorgan_fu_761_p2 ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp4_fu_766_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp5_fu_783_p2 ( or ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_10_fu_214_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_1_fu_120_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_4_fu_750_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_6_fu_633_p2 ( and ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_7_fu_379_p2 ( and ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_9_fu_474_p2 ( xor ) </first>
-          <second>
-            <count>4</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(0P0)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(1P1)</first>
-              <second>2</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>LUT</first>
-              <second>2</second>
-            </item>
-          </second>
-        </item>
-        <item>
           <first>underflow_1_fu_126_p2 ( and ) </first>
           <second>
             <count>4</count>
@@ -12069,6 +11747,328 @@
             <item>
               <first>(1P1)</first>
               <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln1497_fu_856_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln340_1_fu_138_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln340_fu_132_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln779_1_fu_699_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln779_fu_430_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln785_1_fu_474_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln785_2_fu_739_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln785_3_fu_750_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln785_4_fu_214_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln785_fu_463_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln786_1_fu_120_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln786_2_fu_766_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln786_3_fu_229_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>2</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>LUT</first>
+              <second>2</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln786_fu_490_p2 ( xor ) </first>
+          <second>
+            <count>4</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(0P0)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(1P1)</first>
+              <second>2</second>
             </item>
             <item>
               <first>FF</first>
@@ -12652,6 +12652,44 @@
           </second>
         </item>
         <item>
+          <first>and_ln786_3_reg_1087</first>
+          <second>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(Bits)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(Consts)</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>1</second>
+            </item>
+          </second>
+        </item>
+        <item>
+          <first>and_ln786_reg_990</first>
+          <second>
+            <count>3</count>
+            <item_version>0</item_version>
+            <item>
+              <first>(Bits)</first>
+              <second>1</second>
+            </item>
+            <item>
+              <first>(Consts)</first>
+              <second>0</second>
+            </item>
+            <item>
+              <first>FF</first>
+              <second>1</second>
+            </item>
+          </second>
+        </item>
+        <item>
           <first>ap_CS_fsm</first>
           <second>
             <count>3</count>
@@ -12667,44 +12705,6 @@
             <item>
               <first>FF</first>
               <second>20</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge968_demorgan_reg_990</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>1</second>
-            </item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge980_demorgan_reg_1087</first>
-          <second>
-            <count>3</count>
-            <item_version>0</item_version>
-            <item>
-              <first>(Bits)</first>
-              <second>1</second>
-            </item>
-            <item>
-              <first>(Consts)</first>
-              <second>0</second>
-            </item>
-            <item>
-              <first>FF</first>
-              <second>1</second>
             </item>
           </second>
         </item>
@@ -12747,7 +12747,7 @@
           </second>
         </item>
         <item>
-          <first>notrhs_reg_1081</first>
+          <first>icmp_ln1497_1_reg_1081</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -12918,7 +12918,7 @@
           </second>
         </item>
         <item>
-          <first>r_3_reg_1026</first>
+          <first>r_2_reg_1026</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -13051,7 +13051,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_31_reg_891</first>
+          <first>tmp_20_reg_891</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -13114,87 +13114,55 @@
         <count>66</count>
         <item_version>0</item_version>
         <item>
-          <first>ap_return ( or ) </first>
+          <first>and_ln412_1_fu_633_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>135</item>
+            <item>73</item>
           </second>
         </item>
         <item>
-          <first>brmerge12_demorgan_fu_225_p2 ( and ) </first>
+          <first>and_ln412_fu_379_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>113</item>
+            <item>15</item>
           </second>
         </item>
         <item>
-          <first>brmerge1_fu_210_p2 ( or ) </first>
+          <first>and_ln779_1_fu_705_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>110</item>
+            <item>88</item>
           </second>
         </item>
         <item>
-          <first>brmerge2_fu_501_p2 ( or ) </first>
+          <first>and_ln779_fu_436_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>41</item>
+            <item>30</item>
           </second>
         </item>
         <item>
-          <first>brmerge3_fu_229_p2 ( xor ) </first>
+          <first>and_ln781_1_fu_735_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>114</item>
+            <item>90</item>
           </second>
         </item>
         <item>
-          <first>brmerge4_fu_240_p2 ( or ) </first>
+          <first>and_ln781_fu_459_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>116</item>
+            <item>32</item>
           </second>
         </item>
         <item>
-          <first>brmerge5_fu_132_p2 ( xor ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>54</item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge6_fu_144_p2 ( or ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>56</item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge7_fu_745_p2 ( or ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>92</item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge968_demorgan_fu_448_p2 ( and ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>37</item>
-          </second>
-        </item>
-        <item>
-          <first>brmerge980_demorgan_fu_719_p2 ( and ) </first>
+          <first>and_ln786_3_fu_719_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -13202,19 +13170,27 @@
           </second>
         </item>
         <item>
-          <first>brmerge9_fu_777_p2 ( or ) </first>
+          <first>and_ln786_5_fu_225_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>99</item>
+            <item>113</item>
           </second>
         </item>
         <item>
-          <first>brmerge_fu_469_p2 ( or ) </first>
+          <first>and_ln786_fu_448_p2 ( and ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>34</item>
+            <item>37</item>
+          </second>
+        </item>
+        <item>
+          <first>ap_return ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>135</item>
           </second>
         </item>
         <item>
@@ -13374,6 +13350,118 @@
           </second>
         </item>
         <item>
+          <first>or_ln340_1_fu_512_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>43</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_2_fu_507_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>42</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_3_fu_144_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>56</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_4_fu_777_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>99</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_5_fu_783_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>100</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_6_fu_788_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>101</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_7_fu_240_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>116</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_8_fu_246_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>117</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln340_fu_501_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>41</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln785_1_fu_745_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>92</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln785_2_fu_210_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>110</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln785_fu_469_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>34</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln786_1_fu_761_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>96</item>
+          </second>
+        </item>
+        <item>
+          <first>or_ln786_fu_485_p2 ( or ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>38</item>
+          </second>
+        </item>
+        <item>
           <first>overflow_1_fu_755_p2 ( and ) </first>
           <second>
             <count>1</count>
@@ -13398,79 +13486,7 @@
           </second>
         </item>
         <item>
-          <first>p_1000_not_fu_512_p2 ( or ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>43</item>
-          </second>
-        </item>
-        <item>
-          <first>p_1001_not_fu_788_p2 ( or ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>101</item>
-          </second>
-        </item>
-        <item>
-          <first>p_7_fu_705_p2 ( and ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>88</item>
-          </second>
-        </item>
-        <item>
-          <first>p_997_not_fu_246_p2 ( or ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>117</item>
-          </second>
-        </item>
-        <item>
-          <first>p_not2_fu_739_p2 ( xor ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>91</item>
-          </second>
-        </item>
-        <item>
-          <first>p_not_fu_463_p2 ( xor ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>33</item>
-          </second>
-        </item>
-        <item>
-          <first>p_s_fu_436_p2 ( and ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>30</item>
-          </second>
-        </item>
-        <item>
-          <first>phitmp964_demorgan_fu_735_p2 ( and ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>90</item>
-          </second>
-        </item>
-        <item>
-          <first>phitmp966_demorgan_fu_459_p2 ( and ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>32</item>
-          </second>
-        </item>
-        <item>
-          <first>r_2_fu_621_p2 ( or ) </first>
+          <first>r_3_fu_621_p2 ( or ) </first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -13499,134 +13515,6 @@
             <count>1</count>
             <item_version>0</item_version>
             <item>105</item>
-          </second>
-        </item>
-        <item>
-          <first>rev1_fu_430_p2 ( xor ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>29</item>
-          </second>
-        </item>
-        <item>
-          <first>rev3_fu_699_p2 ( xor ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>87</item>
-          </second>
-        </item>
-        <item>
-          <first>rev4_fu_856_p2 ( xor ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>133</item>
-          </second>
-        </item>
-        <item>
-          <first>signbit_i_i_i_i169_fu_138_p2 ( xor ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>55</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp2_demorgan_fu_485_p2 ( or ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>38</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp2_fu_490_p2 ( xor ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>39</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp3_fu_507_p2 ( or ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>42</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp4_demorgan_fu_761_p2 ( or ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>96</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp4_fu_766_p2 ( xor ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>97</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp5_fu_783_p2 ( or ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>100</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_10_fu_214_p2 ( xor ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>111</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_1_fu_120_p2 ( xor ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>52</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_4_fu_750_p2 ( xor ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>93</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_6_fu_633_p2 ( and ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>73</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_7_fu_379_p2 ( and ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>15</item>
-          </second>
-        </item>
-        <item>
-          <first>tmp_9_fu_474_p2 ( xor ) </first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>35</item>
           </second>
         </item>
         <item>
@@ -13659,6 +13547,118 @@
             <count>1</count>
             <item_version>0</item_version>
             <item>40</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln1497_fu_856_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>133</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln340_1_fu_138_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>55</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln340_fu_132_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>54</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln779_1_fu_699_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>87</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln779_fu_430_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>29</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln785_1_fu_474_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>35</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln785_2_fu_739_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>91</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln785_3_fu_750_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>93</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln785_4_fu_214_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>111</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln785_fu_463_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>33</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln786_1_fu_120_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>52</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln786_2_fu_766_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>97</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln786_3_fu_229_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>114</item>
+          </second>
+        </item>
+        <item>
+          <first>xor_ln786_fu_490_p2 ( xor ) </first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>39</item>
           </second>
         </item>
       </dp_expression_map>
@@ -15552,79 +15552,55 @@
       <count>105</count>
       <item_version>0</item_version>
       <item class_id="52" tracking_level="0" version="0">
-        <first>brmerge12_demorgan_fu_225</first>
+        <first>and_ln412_1_fu_633</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>113</item>
+          <item>73</item>
         </second>
       </item>
       <item>
-        <first>brmerge1_fu_210</first>
+        <first>and_ln412_fu_379</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>110</item>
+          <item>15</item>
         </second>
       </item>
       <item>
-        <first>brmerge2_fu_501</first>
+        <first>and_ln779_1_fu_705</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>41</item>
+          <item>88</item>
         </second>
       </item>
       <item>
-        <first>brmerge3_fu_229</first>
+        <first>and_ln779_fu_436</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>114</item>
+          <item>30</item>
         </second>
       </item>
       <item>
-        <first>brmerge4_fu_240</first>
+        <first>and_ln781_1_fu_735</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>116</item>
+          <item>90</item>
         </second>
       </item>
       <item>
-        <first>brmerge5_fu_132</first>
+        <first>and_ln781_fu_459</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>54</item>
+          <item>32</item>
         </second>
       </item>
       <item>
-        <first>brmerge6_fu_144</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>56</item>
-        </second>
-      </item>
-      <item>
-        <first>brmerge7_fu_745</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>92</item>
-        </second>
-      </item>
-      <item>
-        <first>brmerge968_demorgan_fu_448</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>37</item>
-        </second>
-      </item>
-      <item>
-        <first>brmerge980_demorgan_fu_719</first>
+        <first>and_ln786_3_fu_719</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -15632,19 +15608,19 @@
         </second>
       </item>
       <item>
-        <first>brmerge9_fu_777</first>
+        <first>and_ln786_5_fu_225</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>99</item>
+          <item>113</item>
         </second>
       </item>
       <item>
-        <first>brmerge_fu_469</first>
+        <first>and_ln786_fu_448</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>34</item>
+          <item>37</item>
         </second>
       </item>
       <item>
@@ -15838,11 +15814,123 @@
         </second>
       </item>
       <item>
-        <first>not_sel_tmp_fu_862</first>
+        <first>or_ln1497_fu_862</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>135</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln340_1_fu_512</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>43</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln340_2_fu_507</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>42</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln340_3_fu_144</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>56</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln340_4_fu_777</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>99</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln340_5_fu_783</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>100</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln340_6_fu_788</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>101</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln340_7_fu_240</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>116</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln340_8_fu_246</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>117</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln340_fu_501</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>41</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln785_1_fu_745</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>92</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln785_2_fu_210</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>110</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln785_fu_469</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>34</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln786_1_fu_761</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>96</item>
+        </second>
+      </item>
+      <item>
+        <first>or_ln786_fu_485</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>38</item>
         </second>
       </item>
       <item>
@@ -15867,38 +15955,6 @@
           <count>1</count>
           <item_version>0</item_version>
           <item>36</item>
-        </second>
-      </item>
-      <item>
-        <first>p_1000_not_fu_512</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>43</item>
-        </second>
-      </item>
-      <item>
-        <first>p_1001_not_fu_788</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>101</item>
-        </second>
-      </item>
-      <item>
-        <first>p_7_fu_705</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>88</item>
-        </second>
-      </item>
-      <item>
-        <first>p_997_not_fu_246</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>117</item>
         </second>
       </item>
       <item>
@@ -15982,46 +16038,6 @@
         </second>
       </item>
       <item>
-        <first>p_not2_fu_739</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>91</item>
-        </second>
-      </item>
-      <item>
-        <first>p_not_fu_463</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>33</item>
-        </second>
-      </item>
-      <item>
-        <first>p_s_fu_436</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>30</item>
-        </second>
-      </item>
-      <item>
-        <first>phitmp964_demorgan_fu_735</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>90</item>
-        </second>
-      </item>
-      <item>
-        <first>phitmp966_demorgan_fu_459</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>32</item>
-        </second>
-      </item>
-      <item>
         <first>q_V_fu_598</first>
         <second>
           <count>1</count>
@@ -16030,7 +16046,7 @@
         </second>
       </item>
       <item>
-        <first>r_2_fu_621</first>
+        <first>r_3_fu_621</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16102,38 +16118,6 @@
         </second>
       </item>
       <item>
-        <first>rev1_fu_430</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>29</item>
-        </second>
-      </item>
-      <item>
-        <first>rev3_fu_699</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>87</item>
-        </second>
-      </item>
-      <item>
-        <first>rev4_fu_856</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>133</item>
-        </second>
-      </item>
-      <item>
-        <first>rhs_V_1_cast_fu_551</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>63</item>
-        </second>
-      </item>
-      <item>
         <first>rhs_V_1_fu_819</first>
         <second>
           <count>1</count>
@@ -16150,79 +16134,7 @@
         </second>
       </item>
       <item>
-        <first>signbit_i_i_i_i169_fu_138</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>55</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp2_demorgan_fu_485</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>38</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp2_fu_490</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>39</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp3_fu_507</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>42</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp4_demorgan_fu_761</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>96</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp4_fu_766</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>97</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp5_fu_783</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>100</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_10_fu_214</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>111</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_11_fu_372</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>14</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_12_fu_831</first>
+        <first>sext_ln1118_fu_831</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16230,7 +16142,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_14_fu_847</first>
+        <first>sext_ln1497_fu_847</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16238,23 +16150,15 @@
         </second>
       </item>
       <item>
-        <first>tmp_18_fu_423</first>
+        <first>sext_ln728_fu_551</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>28</item>
+          <item>63</item>
         </second>
       </item>
       <item>
-        <first>tmp_1_fu_120</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>52</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_22_fu_607</first>
+        <first>tmp_12_fu_607</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16262,15 +16166,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_23_fu_540</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>68</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_25_fu_626</first>
+        <first>tmp_14_fu_626</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16278,7 +16174,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_28_fu_692</first>
+        <first>tmp_17_fu_692</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16286,15 +16182,15 @@
         </second>
       </item>
       <item>
-        <first>tmp_2_fu_639</first>
+        <first>tmp_1_fu_583</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>74</item>
+          <item>82</item>
         </second>
       </item>
       <item>
-        <first>tmp_31_fu_202</first>
+        <first>tmp_20_fu_202</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16302,63 +16198,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_3_fu_300</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>10</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_4_fu_750</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>93</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_5_fu_573</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>80</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_6_fu_633</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>73</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_7_fu_379</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>15</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_8_fu_385</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>16</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_9_fu_474</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>35</item>
-        </second>
-      </item>
-      <item>
-        <first>tmp_fu_353</first>
+        <first>tmp_3_fu_353</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16366,11 +16206,43 @@
         </second>
       </item>
       <item>
-        <first>tmp_s_fu_583</first>
+        <first>tmp_5_fu_372</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
-          <item>82</item>
+          <item>14</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_8_fu_423</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>28</item>
+        </second>
+      </item>
+      <item>
+        <first>tmp_fu_573</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>80</item>
+        </second>
+      </item>
+      <item>
+        <first>trunc_ln718_1_fu_540</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>68</item>
+        </second>
+      </item>
+      <item>
+        <first>trunc_ln718_fu_300</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>10</item>
         </second>
       </item>
       <item>
@@ -16406,11 +16278,139 @@
         </second>
       </item>
       <item>
+        <first>xor_ln1497_fu_856</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>133</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln340_1_fu_138</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>55</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln340_fu_132</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>54</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln779_1_fu_699</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>87</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln779_fu_430</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>29</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln785_1_fu_474</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>35</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln785_2_fu_739</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>91</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln785_3_fu_750</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>93</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln785_4_fu_214</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>111</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln785_fu_463</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>33</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln786_1_fu_120</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>52</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln786_2_fu_766</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>97</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln786_3_fu_229</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>114</item>
+        </second>
+      </item>
+      <item>
+        <first>xor_ln786_fu_490</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>39</item>
+        </second>
+      </item>
+      <item>
         <first>y2_V_fu_344</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>8</item>
+        </second>
+      </item>
+      <item>
+        <first>zext_ln415_1_fu_639</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>74</item>
+        </second>
+      </item>
+      <item>
+        <first>zext_ln415_fu_385</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>16</item>
         </second>
       </item>
     </dp_fu_nodes_expression>
@@ -16766,19 +16766,19 @@
         </second>
       </item>
       <item>
-        <first>brmerge968_demorgan_reg_990</first>
-        <second>
-          <count>1</count>
-          <item_version>0</item_version>
-          <item>37</item>
-        </second>
-      </item>
-      <item>
-        <first>brmerge980_demorgan_reg_1087</first>
+        <first>and_ln786_3_reg_1087</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
           <item>95</item>
+        </second>
+      </item>
+      <item>
+        <first>and_ln786_reg_990</first>
+        <second>
+          <count>1</count>
+          <item_version>0</item_version>
+          <item>37</item>
         </second>
       </item>
       <item>
@@ -16798,7 +16798,7 @@
         </second>
       </item>
       <item>
-        <first>notrhs_reg_1081</first>
+        <first>icmp_ln1497_1_reg_1081</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16870,7 +16870,7 @@
         </second>
       </item>
       <item>
-        <first>r_3_reg_1026</first>
+        <first>r_2_reg_1026</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -16944,7 +16944,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_31_reg_891</first>
+        <first>tmp_20_reg_891</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

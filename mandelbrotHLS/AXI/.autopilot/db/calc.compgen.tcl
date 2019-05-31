@@ -380,6 +380,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
     AESL_LIB_XILADAPTER::native_axis_begin
 }
 
+set axilite_register_dict [dict create]
 set port_in_parms {
 ap_start { }
 ap_done { }
@@ -426,6 +427,7 @@ maxIter {
 	offset_end 67
 }
 }
+dict set axilite_register_dict in_parms $port_in_parms
 
 
 # Native S_AXILite:

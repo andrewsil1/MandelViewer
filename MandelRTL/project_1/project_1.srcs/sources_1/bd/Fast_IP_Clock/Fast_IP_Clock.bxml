@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Root MajorVersion="0" MinorVersion="36">
+<Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="Fast_IP_Clock" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1551745113"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1551745113"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1551745113"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1551745113"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1559335383"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1559335383"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1559335383"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1559335383"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\Fast_IP_Clock_mdm_1_0\Fast_IP_Clock_mdm_1_0.xci" Type="IP">
         <Instance HierarchyPath="mdm_1"/>
@@ -127,14 +127,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\Fast_IP_Clock_xbar_1\Fast_IP_Clock_xbar_1.xci" Type="IP">
-        <Instance HierarchyPath="microblaze_0_axi_periph/xbar"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\Fast_IP_Clock_microblaze_0_axi_periph_1\Fast_IP_Clock_microblaze_0_axi_periph_1.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -153,6 +145,14 @@
       </File>
       <File Name="ip\Fast_IP_Clock_proc_sys_reset_2_0\Fast_IP_Clock_proc_sys_reset_2_0.xci" Type="IP">
         <Instance HierarchyPath="proc_sys_reset_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\Fast_IP_Clock_xbar_0\Fast_IP_Clock_xbar_0.xci" Type="IP">
+        <Instance HierarchyPath="microblaze_0_axi_periph/xbar"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

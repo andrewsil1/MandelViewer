@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:axi_data_fifo:2.1
-// IP Revision: 17
+// IP Revision: 18
 
 `timescale 1ns/1ps
 
@@ -279,7 +279,7 @@ SER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *)
 output wire m_axi_rready;
 
-  axi_data_fifo_v2_1_17_axi_data_fifo #(
+  axi_data_fifo_v2_1_18_axi_data_fifo #(
     .C_FAMILY("artix7"),
     .C_AXI_PROTOCOL(0),
     .C_AXI_ID_WIDTH(1),

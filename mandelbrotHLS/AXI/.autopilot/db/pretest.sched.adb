@@ -371,7 +371,7 @@
 					<Obj>
 						<type>0</type>
 						<id>9</id>
-						<name>tmp</name>
+						<name>tmp_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -421,7 +421,7 @@
 					<Obj>
 						<type>0</type>
 						<id>10</id>
-						<name>tmp_3</name>
+						<name>trunc_ln718</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -617,7 +617,7 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>tmp_11</name>
+						<name>tmp_5</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -667,7 +667,7 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>tmp_7</name>
+						<name>and_ln412</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -716,7 +716,7 @@
 					<Obj>
 						<type>0</type>
 						<id>16</id>
-						<name>tmp_8</name>
+						<name>zext_ln415</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -813,7 +813,7 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>tmp_13</name>
+						<name>tmp_6</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -863,7 +863,7 @@
 					<Obj>
 						<type>0</type>
 						<id>19</id>
-						<name>rev</name>
+						<name>xor_ln416</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1310,7 +1310,7 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>tmp_18</name>
+						<name>tmp_8</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1360,7 +1360,7 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>rev1</name>
+						<name>xor_ln779</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1409,7 +1409,7 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>p_s</name>
+						<name>and_ln779</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1508,7 +1508,7 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>phitmp966_demorgan</name>
+						<name>and_ln781</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1557,7 +1557,7 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>p_not</name>
+						<name>xor_ln785</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1606,7 +1606,7 @@
 					<Obj>
 						<type>0</type>
 						<id>34</id>
-						<name>brmerge</name>
+						<name>or_ln785</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1655,7 +1655,7 @@
 					<Obj>
 						<type>0</type>
 						<id>35</id>
-						<name>tmp_9</name>
+						<name>xor_ln785_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1753,7 +1753,7 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>brmerge968_demorgan</name>
+						<name>and_ln786</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1802,7 +1802,7 @@
 					<Obj>
 						<type>0</type>
 						<id>38</id>
-						<name>tmp2_demorgan</name>
+						<name>or_ln786</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1851,7 +1851,7 @@
 					<Obj>
 						<type>0</type>
 						<id>39</id>
-						<name>tmp2</name>
+						<name>xor_ln786</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1949,7 +1949,7 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name>brmerge2</name>
+						<name>or_ln340</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -1998,7 +1998,7 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>tmp3</name>
+						<name>or_ln340_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -2047,7 +2047,7 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>p_1000_not</name>
+						<name>or_ln340_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -2096,7 +2096,7 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>p_mux</name>
+						<name>select_ln340</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -2146,7 +2146,7 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>p_3</name>
+						<name>select_ln388</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
@@ -2492,7 +2492,7 @@
 					<Obj>
 						<type>0</type>
 						<id>52</id>
-						<name>tmp_1</name>
+						<name>xor_ln786_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>14</lineNumber>
@@ -2590,7 +2590,7 @@
 					<Obj>
 						<type>0</type>
 						<id>54</id>
-						<name>brmerge5</name>
+						<name>xor_ln340</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>14</lineNumber>
@@ -2639,7 +2639,7 @@
 					<Obj>
 						<type>0</type>
 						<id>55</id>
-						<name>signbit_i_i_i_i169</name>
+						<name>xor_ln340_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>14</lineNumber>
@@ -2688,7 +2688,7 @@
 					<Obj>
 						<type>0</type>
 						<id>56</id>
-						<name>brmerge6</name>
+						<name>or_ln340_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>14</lineNumber>
@@ -2737,7 +2737,7 @@
 					<Obj>
 						<type>0</type>
 						<id>57</id>
-						<name>p_mux1</name>
+						<name>select_ln340_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>14</lineNumber>
@@ -2787,7 +2787,7 @@
 					<Obj>
 						<type>0</type>
 						<id>58</id>
-						<name>p_6</name>
+						<name>select_ln388_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>14</lineNumber>
@@ -3034,7 +3034,7 @@
 					<Obj>
 						<type>0</type>
 						<id>63</id>
-						<name>rhs_V_1_cast</name>
+						<name>sext_ln728</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -3232,7 +3232,7 @@
 					<Obj>
 						<type>0</type>
 						<id>67</id>
-						<name>tmp_22</name>
+						<name>tmp_12</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -3282,7 +3282,7 @@
 					<Obj>
 						<type>0</type>
 						<id>68</id>
-						<name>tmp_23</name>
+						<name>trunc_ln718_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -3330,7 +3330,7 @@
 					<Obj>
 						<type>0</type>
 						<id>69</id>
-						<name>r_3</name>
+						<name>r_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -3429,7 +3429,7 @@
 					<Obj>
 						<type>0</type>
 						<id>71</id>
-						<name>r_2</name>
+						<name>r_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -3478,7 +3478,7 @@
 					<Obj>
 						<type>0</type>
 						<id>72</id>
-						<name>tmp_25</name>
+						<name>tmp_14</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -3528,7 +3528,7 @@
 					<Obj>
 						<type>0</type>
 						<id>73</id>
-						<name>tmp_6</name>
+						<name>and_ln412_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -3577,7 +3577,7 @@
 					<Obj>
 						<type>0</type>
 						<id>74</id>
-						<name>tmp_2</name>
+						<name>zext_ln415_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -3674,7 +3674,7 @@
 					<Obj>
 						<type>0</type>
 						<id>76</id>
-						<name>tmp_26</name>
+						<name>tmp_15</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -3724,7 +3724,7 @@
 					<Obj>
 						<type>0</type>
 						<id>77</id>
-						<name>rev2</name>
+						<name>xor_ln416_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -3872,7 +3872,7 @@
 					<Obj>
 						<type>0</type>
 						<id>80</id>
-						<name>tmp_5</name>
+						<name>tmp</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -3972,7 +3972,7 @@
 					<Obj>
 						<type>0</type>
 						<id>82</id>
-						<name>tmp_s</name>
+						<name>tmp_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4171,7 +4171,7 @@
 					<Obj>
 						<type>0</type>
 						<id>86</id>
-						<name>tmp_28</name>
+						<name>tmp_17</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4221,7 +4221,7 @@
 					<Obj>
 						<type>0</type>
 						<id>87</id>
-						<name>rev3</name>
+						<name>xor_ln779_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4270,7 +4270,7 @@
 					<Obj>
 						<type>0</type>
 						<id>88</id>
-						<name>p_7</name>
+						<name>and_ln779_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4369,7 +4369,7 @@
 					<Obj>
 						<type>0</type>
 						<id>90</id>
-						<name>phitmp964_demorgan</name>
+						<name>and_ln781_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4418,7 +4418,7 @@
 					<Obj>
 						<type>0</type>
 						<id>91</id>
-						<name>p_not2</name>
+						<name>xor_ln785_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4467,7 +4467,7 @@
 					<Obj>
 						<type>0</type>
 						<id>92</id>
-						<name>brmerge7</name>
+						<name>or_ln785_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4516,7 +4516,7 @@
 					<Obj>
 						<type>0</type>
 						<id>93</id>
-						<name>tmp_4</name>
+						<name>xor_ln785_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4614,7 +4614,7 @@
 					<Obj>
 						<type>0</type>
 						<id>95</id>
-						<name>brmerge980_demorgan</name>
+						<name>and_ln786_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4663,7 +4663,7 @@
 					<Obj>
 						<type>0</type>
 						<id>96</id>
-						<name>tmp4_demorgan</name>
+						<name>or_ln786_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4712,7 +4712,7 @@
 					<Obj>
 						<type>0</type>
 						<id>97</id>
-						<name>tmp4</name>
+						<name>xor_ln786_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4810,7 +4810,7 @@
 					<Obj>
 						<type>0</type>
 						<id>99</id>
-						<name>brmerge9</name>
+						<name>or_ln340_4</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4859,7 +4859,7 @@
 					<Obj>
 						<type>0</type>
 						<id>100</id>
-						<name>tmp5</name>
+						<name>or_ln340_5</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4908,7 +4908,7 @@
 					<Obj>
 						<type>0</type>
 						<id>101</id>
-						<name>p_1001_not</name>
+						<name>or_ln340_6</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -4957,7 +4957,7 @@
 					<Obj>
 						<type>0</type>
 						<id>102</id>
-						<name>p_mux2</name>
+						<name>select_ln340_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -5007,7 +5007,7 @@
 					<Obj>
 						<type>0</type>
 						<id>103</id>
-						<name>p_1</name>
+						<name>select_ln388_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -5057,7 +5057,7 @@
 					<Obj>
 						<type>0</type>
 						<id>104</id>
-						<name>p_Val2_10</name>
+						<name>p_Val2_12</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
@@ -5305,7 +5305,7 @@
 					<Obj>
 						<type>0</type>
 						<id>109</id>
-						<name>tmp_31</name>
+						<name>tmp_20</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -5355,7 +5355,7 @@
 					<Obj>
 						<type>0</type>
 						<id>110</id>
-						<name>brmerge1</name>
+						<name>or_ln785_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -5404,7 +5404,7 @@
 					<Obj>
 						<type>0</type>
 						<id>111</id>
-						<name>tmp_10</name>
+						<name>xor_ln785_4</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -5502,7 +5502,7 @@
 					<Obj>
 						<type>0</type>
 						<id>113</id>
-						<name>brmerge12_demorgan</name>
+						<name>and_ln786_5</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -5551,7 +5551,7 @@
 					<Obj>
 						<type>0</type>
 						<id>114</id>
-						<name>brmerge3</name>
+						<name>xor_ln786_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -5649,7 +5649,7 @@
 					<Obj>
 						<type>0</type>
 						<id>116</id>
-						<name>brmerge4</name>
+						<name>or_ln340_7</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -5698,7 +5698,7 @@
 					<Obj>
 						<type>0</type>
 						<id>117</id>
-						<name>p_997_not</name>
+						<name>or_ln340_8</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -5747,7 +5747,7 @@
 					<Obj>
 						<type>0</type>
 						<id>118</id>
-						<name>p_mux3</name>
+						<name>select_ln340_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -5797,7 +5797,7 @@
 					<Obj>
 						<type>0</type>
 						<id>119</id>
-						<name>p_2</name>
+						<name>select_ln388_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -5847,7 +5847,7 @@
 					<Obj>
 						<type>0</type>
 						<id>120</id>
-						<name>p_0424_1</name>
+						<name>select_ln340_7</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>16</lineNumber>
@@ -6090,7 +6090,7 @@
 					<Obj>
 						<type>0</type>
 						<id>125</id>
-						<name>tmp_12</name>
+						<name>sext_ln1118</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -6237,7 +6237,7 @@
 					<Obj>
 						<type>0</type>
 						<id>128</id>
-						<name>tmp_14</name>
+						<name>sext_ln1497</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -6382,7 +6382,7 @@
 					<Obj>
 						<type>0</type>
 						<id>131</id>
-						<name>ret_V_1</name>
+						<name>ret_V_4</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -6431,7 +6431,7 @@
 					<Obj>
 						<type>0</type>
 						<id>132</id>
-						<name>slt</name>
+						<name>icmp_ln1497</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -6480,7 +6480,7 @@
 					<Obj>
 						<type>0</type>
 						<id>133</id>
-						<name>rev4</name>
+						<name>xor_ln1497</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -6529,7 +6529,7 @@
 					<Obj>
 						<type>0</type>
 						<id>134</id>
-						<name>notrhs</name>
+						<name>icmp_ln1497_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -6578,7 +6578,7 @@
 					<Obj>
 						<type>0</type>
 						<id>135</id>
-						<name>not_sel_tmp</name>
+						<name>or_ln1497</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>18</lineNumber>
@@ -6627,7 +6627,7 @@
 					<Obj>
 						<type>0</type>
 						<id>136</id>
-						<name></name>
+						<name>_ln27</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>27</lineNumber>

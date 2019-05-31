@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:ip:axi_data_fifo:2.1
-// IP Revision: 17
+// IP Revision: 18
 
-(* X_CORE_INFO = "axi_data_fifo_v2_1_17_axi_data_fifo,Vivado 2018.3" *)
-(* CHECK_LICENSE_TYPE = "Fast_IP_Clock_s00_data_fifo_0,axi_data_fifo_v2_1_17_axi_data_fifo,{}" *)
-(* CORE_GENERATION_INFO = "Fast_IP_Clock_s00_data_fifo_0,axi_data_fifo_v2_1_17_axi_data_fifo,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_data_fifo,x_ipVersion=2.1,x_ipCoreRevision=17,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_AXI_PROTOCOL=0,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=32,C_AXI_SUPPORTS_USER_SIGNALS=0,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_WRITE_FIFO_DEPTH=512,C_AXI_WRITE_FIFO_TY\
+(* X_CORE_INFO = "axi_data_fifo_v2_1_18_axi_data_fifo,Vivado 2019.1" *)
+(* CHECK_LICENSE_TYPE = "Fast_IP_Clock_s00_data_fifo_0,axi_data_fifo_v2_1_18_axi_data_fifo,{}" *)
+(* CORE_GENERATION_INFO = "Fast_IP_Clock_s00_data_fifo_0,axi_data_fifo_v2_1_18_axi_data_fifo,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_data_fifo,x_ipVersion=2.1,x_ipCoreRevision=18,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_AXI_PROTOCOL=0,C_AXI_ID_WIDTH=1,C_AXI_ADDR_WIDTH=32,C_AXI_DATA_WIDTH=32,C_AXI_SUPPORTS_USER_SIGNALS=0,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_AXI_WRITE_FIFO_DEPTH=512,C_AXI_WRITE_FIFO_TY\
 PE=bram,C_AXI_WRITE_FIFO_DELAY=1,C_AXI_READ_FIFO_DEPTH=512,C_AXI_READ_FIFO_TYPE=bram,C_AXI_READ_FIFO_DELAY=1}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Fast_IP_Clock_s00_data_fifo_0 (
@@ -281,7 +281,7 @@ SER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *)
 output wire m_axi_rready;
 
-  axi_data_fifo_v2_1_17_axi_data_fifo #(
+  axi_data_fifo_v2_1_18_axi_data_fifo #(
     .C_FAMILY("artix7"),
     .C_AXI_PROTOCOL(0),
     .C_AXI_ID_WIDTH(1),

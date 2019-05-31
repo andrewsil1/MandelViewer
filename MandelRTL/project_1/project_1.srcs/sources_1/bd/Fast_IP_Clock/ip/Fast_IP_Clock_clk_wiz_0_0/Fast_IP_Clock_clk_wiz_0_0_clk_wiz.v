@@ -56,9 +56,9 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// __AXIclk___100.000______0.000______50.0______121.458_____91.100
-// ___MBClk____80.357______0.000______50.0______126.903_____91.100
-// _CalcClk___125.000______0.000______50.0______116.571_____91.100
+// __AXIclk___100.000______0.000______50.0______144.719____114.212
+// ___MBClk____80.000______0.000______50.0______151.652____114.212
+// _CalcClk___133.333______0.000______50.0______136.421____114.212
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -99,8 +99,8 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
   wire        AXIclk_Fast_IP_Clock_clk_wiz_0_0;
   wire        MBClk_Fast_IP_Clock_clk_wiz_0_0;
   wire        CalcClk_Fast_IP_Clock_clk_wiz_0_0;
-  wire        NetClk_Fast_IP_Clock_clk_wiz_0_0;
-  wire        NetClkSkew_Fast_IP_Clock_clk_wiz_0_0;
+  wire        clk_out4_Fast_IP_Clock_clk_wiz_0_0;
+  wire        clk_out5_Fast_IP_Clock_clk_wiz_0_0;
   wire        clk_out6_Fast_IP_Clock_clk_wiz_0_0;
   wire        clk_out7_Fast_IP_Clock_clk_wiz_0_0;
 
@@ -137,18 +137,18 @@ wire clk_in2_Fast_IP_Clock_clk_wiz_0_0;
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
     .DIVCLK_DIVIDE        (1),
-    .CLKFBOUT_MULT_F      (11.250),
+    .CLKFBOUT_MULT_F      (8.000),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (11.250),
+    .CLKOUT0_DIVIDE_F     (8.000),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (14),
+    .CLKOUT1_DIVIDE       (10),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
-    .CLKOUT2_DIVIDE       (9),
+    .CLKOUT2_DIVIDE       (6),
     .CLKOUT2_PHASE        (0.000),
     .CLKOUT2_DUTY_CYCLE   (0.500),
     .CLKOUT2_USE_FINE_PS  ("FALSE"),

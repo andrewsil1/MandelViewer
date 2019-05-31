@@ -3,13 +3,13 @@
 ================================================================
 == Vivado HLS Report for 'pretest'
 ================================================================
-* Date:           Mon Mar  4 15:01:49 2019
+* Date:           Fri May 31 11:24:11 2019
 
-* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
 * Project:        mandelbrotHLS
 * Solution:       AXI
 * Product family: artix7
-* Target device:  xc7a100tcsg324-1
+* Target device:  xc7a100t-csg324-1
 
 
 ================================================================
@@ -70,44 +70,25 @@ IsGatedGlobalClock: 0
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
-1 --> 
-	2  / true
-2 --> 
-	3  / true
-3 --> 
-	4  / true
-4 --> 
-	5  / true
-5 --> 
-	6  / true
-6 --> 
-	7  / true
-7 --> 
-	8  / true
-8 --> 
-	9  / true
-9 --> 
-	10  / true
-10 --> 
-	11  / true
-11 --> 
-	12  / true
-12 --> 
-	13  / true
-13 --> 
-	14  / true
-14 --> 
-	15  / true
-15 --> 
-	16  / true
-16 --> 
-	17  / true
-17 --> 
-	18  / true
-18 --> 
-	19  / true
-19 --> 
-	20  / true
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
 20 --> 
 
 * FSM state operations: 
@@ -125,39 +106,39 @@ ST_2 : Operation 27 [1/1] (2.88ns)   --->   "%ret_V_5 = add nsw i41 -8589934592,
 ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%p_Result_4 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %ret_V_5, i32 40)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 28 'bitselect' 'p_Result_4' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 29 [1/1] (2.88ns)   --->   "%x_1_V = add i40 -8589934592, %x_V_read" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 29 'add' 'x_1_V' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%p_Result_5 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %x_1_V, i32 39)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 30 'bitselect' 'p_Result_5' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node p_6)   --->   "%tmp_1 = xor i1 %p_Result_5, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 31 'xor' 'tmp_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node p_6)   --->   "%underflow_1 = and i1 %p_Result_4, %tmp_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 32 'and' 'underflow_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%brmerge5 = xor i1 %p_Result_4, %p_Result_5" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 33 'xor' 'brmerge5' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%signbit_i_i_i_i169 = xor i1 %p_Result_4, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 34 'xor' 'signbit_i_i_i_i169' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%brmerge6 = or i1 %p_Result_5, %signbit_i_i_i_i169" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 35 'or' 'brmerge6' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%p_mux1 = select i1 %brmerge5, i40 549755813887, i40 %x_1_V" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 36 'select' 'p_mux1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 37 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_6 = select i1 %underflow_1, i40 -549755813888, i40 %x_1_V" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 37 'select' 'p_6' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 38 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_Val2_13 = select i1 %brmerge6, i40 %p_mux1, i40 %p_6" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 38 'select' 'p_Val2_13' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node select_ln388_1)   --->   "%xor_ln786_1 = xor i1 %p_Result_5, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 31 'xor' 'xor_ln786_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node select_ln388_1)   --->   "%underflow_1 = and i1 %p_Result_4, %xor_ln786_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 32 'and' 'underflow_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%xor_ln340 = xor i1 %p_Result_4, %p_Result_5" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 33 'xor' 'xor_ln340' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%xor_ln340_1 = xor i1 %p_Result_4, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 34 'xor' 'xor_ln340_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%or_ln340_3 = or i1 %p_Result_5, %xor_ln340_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 35 'or' 'or_ln340_3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%select_ln340_1 = select i1 %xor_ln340, i40 549755813887, i40 %x_1_V" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 36 'select' 'select_ln340_1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (1.07ns) (out node of the LUT)   --->   "%select_ln388_1 = select i1 %underflow_1, i40 -549755813888, i40 %x_1_V" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 37 'select' 'select_ln388_1' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_Val2_13 = select i1 %or_ln340_3, i40 %select_ln340_1, i40 %select_ln388_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 38 'select' 'p_Val2_13' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_2 : Operation 39 [1/1] (2.88ns)   --->   "%ret_V_7 = add i41 34359738368, %lhs_V" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 39 'add' 'ret_V_7' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%p_Result_9 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %ret_V_7, i32 40)" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 40 'bitselect' 'p_Result_9' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 41 [1/1] (2.88ns)   --->   "%xp1_V = add i40 34359738368, %x_V_read" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 41 'add' 'xp1_V' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%p_Result_10 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %xp1_V, i32 39)" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 42 'bitselect' 'p_Result_10' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_31 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %ret_V_7, i32 40)" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 43 'bitselect' 'tmp_31' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_20 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %ret_V_7, i32 40)" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 43 'bitselect' 'tmp_20' <Predicate = true> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 4.10>
 ST_3 : Operation 44 [4/6] (3.89ns)   --->   "%r_V_9 = mul nsw i80 %r_V, %r_V" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 44 'mul' 'r_V_9' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node p_mux3)   --->   "%brmerge1 = or i1 %p_Result_10, %tmp_31" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 45 'or' 'brmerge1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 46 [1/1] (0.97ns)   --->   "%tmp_10 = xor i1 %p_Result_9, true" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 46 'xor' 'tmp_10' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node p_mux3)   --->   "%overflow_2 = and i1 %brmerge1, %tmp_10" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 47 'and' 'overflow_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 48 [1/1] (0.97ns)   --->   "%brmerge12_demorgan = and i1 %tmp_31, %p_Result_10" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 48 'and' 'brmerge12_demorgan' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node underflow_3)   --->   "%brmerge3 = xor i1 %brmerge12_demorgan, true" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 49 'xor' 'brmerge3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 50 [1/1] (0.97ns) (out node of the LUT)   --->   "%underflow_3 = and i1 %p_Result_9, %brmerge3" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 50 'and' 'underflow_3' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node p_mux3)   --->   "%brmerge4 = or i1 %underflow_3, %overflow_2" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 51 'or' 'brmerge4' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 52 [1/1] (0.00ns) (grouped into LUT with out node p_0424_1)   --->   "%p_997_not = or i1 %brmerge12_demorgan, %tmp_10" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 52 'or' 'p_997_not' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 53 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_mux3 = select i1 %brmerge4, i40 549755813887, i40 %xp1_V" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 53 'select' 'p_mux3' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_3 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node p_0424_1)   --->   "%p_2 = select i1 %underflow_3, i40 -549755813888, i40 %xp1_V" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 54 'select' 'p_2' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_3 : Operation 55 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_0424_1 = select i1 %p_997_not, i40 %p_mux3, i40 %p_2" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 55 'select' 'p_0424_1' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_3)   --->   "%or_ln785_2 = or i1 %p_Result_10, %tmp_20" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 45 'or' 'or_ln785_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (0.97ns)   --->   "%xor_ln785_4 = xor i1 %p_Result_9, true" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 46 'xor' 'xor_ln785_4' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_3)   --->   "%overflow_2 = and i1 %or_ln785_2, %xor_ln785_4" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 47 'and' 'overflow_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/1] (0.97ns)   --->   "%and_ln786_5 = and i1 %tmp_20, %p_Result_10" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 48 'and' 'and_ln786_5' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node underflow_3)   --->   "%xor_ln786_3 = xor i1 %and_ln786_5, true" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 49 'xor' 'xor_ln786_3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 50 [1/1] (0.97ns) (out node of the LUT)   --->   "%underflow_3 = and i1 %p_Result_9, %xor_ln786_3" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 50 'and' 'underflow_3' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_3)   --->   "%or_ln340_7 = or i1 %underflow_3, %overflow_2" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 51 'or' 'or_ln340_7' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_7)   --->   "%or_ln340_8 = or i1 %and_ln786_5, %xor_ln785_4" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 52 'or' 'or_ln340_8' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 53 [1/1] (1.07ns) (out node of the LUT)   --->   "%select_ln340_3 = select i1 %or_ln340_7, i40 549755813887, i40 %xp1_V" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 53 'select' 'select_ln340_3' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_7)   --->   "%select_ln388_3 = select i1 %underflow_3, i40 -549755813888, i40 %xp1_V" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 54 'select' 'select_ln388_3' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 55 [1/1] (1.07ns) (out node of the LUT)   --->   "%select_ln340_7 = select i1 %or_ln340_8, i40 %select_ln340_3, i40 %select_ln388_3" [mandelbrotHLS/pretest.cpp:16]   --->   Operation 55 'select' 'select_ln340_7' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
 State 4 <SV = 3> <Delay = 3.89>
 ST_4 : Operation 56 [3/6] (3.89ns)   --->   "%r_V_9 = mul nsw i80 %r_V, %r_V" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 56 'mul' 'r_V_9' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%r_V_2 = sext i40 %p_Val2_13 to i80" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 57 'sext' 'r_V_2' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 58 [6/6] (3.89ns)   --->   "%r_V_10 = mul nsw i80 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 58 'mul' 'r_V_10' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%r_V_7 = sext i40 %p_0424_1 to i80" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 59 'sext' 'r_V_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%r_V_7 = sext i40 %select_ln340_7 to i80" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 59 'sext' 'r_V_7' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 60 [6/6] (3.89ns)   --->   "%r_V_11 = mul nsw i80 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 60 'mul' 'r_V_11' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 5 <SV = 4> <Delay = 3.89>
@@ -168,14 +149,14 @@ ST_5 : Operation 63 [5/6] (3.89ns)   --->   "%r_V_11 = mul nsw i80 %r_V_7, %r_V_
 State 6 <SV = 5> <Delay = 3.89>
 ST_6 : Operation 64 [1/6] (3.89ns)   --->   "%r_V_9 = mul nsw i80 %r_V, %r_V" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 64 'mul' 'r_V_9' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 79)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 65 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_3 = trunc i80 %r_V_9 to i34" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 66 'trunc' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%trunc_ln718 = trunc i80 %r_V_9 to i34" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 66 'trunc' 'trunc_ln718' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%p_Result_s_15 = call i4 @_ssdm_op_PartSelect.i4.i80.i32.i32(i80 %r_V_9, i32 76, i32 79)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 67 'partselect' 'p_Result_s_15' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 68 [1/1] (0.00ns)   --->   "%p_Result_1 = call i5 @_ssdm_op_PartSelect.i5.i80.i32.i32(i80 %r_V_9, i32 75, i32 79)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 68 'partselect' 'p_Result_1' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 69 [4/6] (3.89ns)   --->   "%r_V_10 = mul nsw i80 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 69 'mul' 'r_V_10' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 ST_6 : Operation 70 [4/6] (3.89ns)   --->   "%r_V_11 = mul nsw i80 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 70 'mul' 'r_V_11' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 7 <SV = 6> <Delay = 3.89>
-ST_7 : Operation 71 [1/1] (2.49ns)   --->   "%r_1 = icmp ne i34 %tmp_3, 0" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 71 'icmp' 'r_1' <Predicate = true> <Delay = 2.49> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 71 [1/1] (2.49ns)   --->   "%r_1 = icmp ne i34 %trunc_ln718, 0" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 71 'icmp' 'r_1' <Predicate = true> <Delay = 2.49> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_7 : Operation 72 [1/1] (1.44ns)   --->   "%Range2_all_ones = icmp eq i4 %p_Result_s_15, -1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 72 'icmp' 'Range2_all_ones' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_7 : Operation 73 [1/1] (1.44ns)   --->   "%Range1_all_ones = icmp eq i5 %p_Result_1, -1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 73 'icmp' 'Range1_all_ones' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_7 : Operation 74 [1/1] (1.44ns)   --->   "%Range1_all_zeros = icmp eq i5 %p_Result_1, 0" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 74 'icmp' 'Range1_all_zeros' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
@@ -184,127 +165,127 @@ ST_7 : Operation 76 [3/6] (3.89ns)   --->   "%r_V_11 = mul nsw i80 %r_V_7, %r_V_
 
 State 8 <SV = 7> <Delay = 4.85>
 ST_8 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%y2_V = call i40 @_ssdm_op_PartSelect.i40.i80.i32.i32(i80 %r_V_9, i32 35, i32 74)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 77 'partselect' 'y2_V' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 35)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 78 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 35)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 78 'bitselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 79 [1/1] (0.00ns) (grouped into LUT with out node carry_1)   --->   "%p_Result_2 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 74)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 79 'bitselect' 'p_Result_2' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 80 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%r = or i1 %r_1, %tmp" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 80 'or' 'r' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 81 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%tmp_11 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 34)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 81 'bitselect' 'tmp_11' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 82 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%tmp_7 = and i1 %tmp_11, %r" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 82 'and' 'tmp_7' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 83 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%tmp_8 = zext i1 %tmp_7 to i40" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 83 'zext' 'tmp_8' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 84 [1/1] (2.88ns) (out node of the LUT)   --->   "%y2_V_1 = add nsw i40 %y2_V, %tmp_8" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 84 'add' 'y2_V_1' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 85 [1/1] (0.00ns) (grouped into LUT with out node carry_1)   --->   "%tmp_13 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %y2_V_1, i32 39)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 85 'bitselect' 'tmp_13' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 86 [1/1] (0.00ns) (grouped into LUT with out node carry_1)   --->   "%rev = xor i1 %tmp_13, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 86 'xor' 'rev' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 87 [1/1] (0.97ns) (out node of the LUT)   --->   "%carry_1 = and i1 %p_Result_2, %rev" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 87 'and' 'carry_1' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 80 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%r = or i1 %r_1, %tmp_3" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 80 'or' 'r' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 81 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%tmp_5 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 34)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 81 'bitselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 82 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%and_ln412 = and i1 %tmp_5, %r" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 82 'and' 'and_ln412' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 83 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%zext_ln415 = zext i1 %and_ln412 to i40" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 83 'zext' 'zext_ln415' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 84 [1/1] (2.88ns) (out node of the LUT)   --->   "%y2_V_1 = add nsw i40 %y2_V, %zext_ln415" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 84 'add' 'y2_V_1' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 85 [1/1] (0.00ns) (grouped into LUT with out node carry_1)   --->   "%tmp_6 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %y2_V_1, i32 39)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 85 'bitselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 86 [1/1] (0.00ns) (grouped into LUT with out node carry_1)   --->   "%xor_ln416 = xor i1 %tmp_6, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 86 'xor' 'xor_ln416' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 87 [1/1] (0.97ns) (out node of the LUT)   --->   "%carry_1 = and i1 %p_Result_2, %xor_ln416" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 87 'and' 'carry_1' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%p_Result_3 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %y2_V_1, i32 39)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 88 'bitselect' 'p_Result_3' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 89 [1/1] (0.00ns) (grouped into LUT with out node brmerge968_demorgan)   --->   "%tmp_18 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 75)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 89 'bitselect' 'tmp_18' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node brmerge968_demorgan)   --->   "%rev1 = xor i1 %tmp_18, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 90 'xor' 'rev1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 91 [1/1] (0.00ns) (grouped into LUT with out node brmerge968_demorgan)   --->   "%p_s = and i1 %Range2_all_ones, %rev1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 91 'and' 'p_s' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 92 [1/1] (0.00ns) (grouped into LUT with out node brmerge968_demorgan)   --->   "%deleted_ones = select i1 %carry_1, i1 %p_s, i1 %Range1_all_ones" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 92 'select' 'deleted_ones' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_8 : Operation 93 [1/1] (0.99ns) (out node of the LUT)   --->   "%brmerge968_demorgan = and i1 %p_Result_3, %deleted_ones" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 93 'and' 'brmerge968_demorgan' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 89 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 75)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 89 'bitselect' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%xor_ln779 = xor i1 %tmp_8, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 90 'xor' 'xor_ln779' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 91 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%and_ln779 = and i1 %Range2_all_ones, %xor_ln779" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 91 'and' 'and_ln779' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 92 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%deleted_ones = select i1 %carry_1, i1 %and_ln779, i1 %Range1_all_ones" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 92 'select' 'deleted_ones' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 93 [1/1] (0.99ns) (out node of the LUT)   --->   "%and_ln786 = and i1 %p_Result_3, %deleted_ones" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 93 'and' 'and_ln786' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_8 : Operation 94 [2/6] (3.89ns)   --->   "%r_V_10 = mul nsw i80 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 94 'mul' 'r_V_10' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 ST_8 : Operation 95 [2/6] (3.89ns)   --->   "%r_V_11 = mul nsw i80 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 95 'mul' 'r_V_11' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 9 <SV = 8> <Delay = 5.09>
-ST_9 : Operation 96 [1/1] (0.00ns) (grouped into LUT with out node brmerge2)   --->   "%deleted_zeros = select i1 %carry_1, i1 %Range1_all_ones, i1 %Range1_all_zeros" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 96 'select' 'deleted_zeros' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_9 : Operation 97 [1/1] (0.97ns)   --->   "%phitmp966_demorgan = and i1 %carry_1, %Range1_all_ones" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 97 'and' 'phitmp966_demorgan' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 98 [1/1] (0.00ns) (grouped into LUT with out node brmerge2)   --->   "%p_not = xor i1 %deleted_zeros, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 98 'xor' 'p_not' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 99 [1/1] (0.00ns) (grouped into LUT with out node brmerge2)   --->   "%brmerge = or i1 %p_Result_3, %p_not" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 99 'or' 'brmerge' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 100 [1/1] (0.97ns)   --->   "%tmp_9 = xor i1 %p_Result_s, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 100 'xor' 'tmp_9' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 101 [1/1] (0.00ns) (grouped into LUT with out node brmerge2)   --->   "%overflow = and i1 %brmerge, %tmp_9" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 101 'and' 'overflow' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 102 [1/1] (0.00ns) (grouped into LUT with out node underflow)   --->   "%tmp2_demorgan = or i1 %phitmp966_demorgan, %brmerge968_demorgan" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 102 'or' 'tmp2_demorgan' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 103 [1/1] (0.00ns) (grouped into LUT with out node underflow)   --->   "%tmp2 = xor i1 %tmp2_demorgan, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 103 'xor' 'tmp2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 104 [1/1] (0.97ns) (out node of the LUT)   --->   "%underflow = and i1 %p_Result_s, %tmp2" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 104 'and' 'underflow' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 105 [1/1] (0.99ns) (out node of the LUT)   --->   "%brmerge2 = or i1 %underflow, %overflow" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 105 'or' 'brmerge2' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 106 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6)   --->   "%tmp3 = or i1 %brmerge968_demorgan, %tmp_9" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 106 'or' 'tmp3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 107 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6)   --->   "%p_1000_not = or i1 %tmp3, %phitmp966_demorgan" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 107 'or' 'p_1000_not' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 108 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_mux = select i1 %brmerge2, i40 549755813887, i40 %y2_V_1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 108 'select' 'p_mux' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_9 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6)   --->   "%p_3 = select i1 %underflow, i40 -549755813888, i40 %y2_V_1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 109 'select' 'p_3' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_9 : Operation 110 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_Val2_6 = select i1 %p_1000_not, i40 %p_mux, i40 %p_3" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 110 'select' 'p_Val2_6' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 96 [1/1] (0.00ns) (grouped into LUT with out node or_ln340)   --->   "%deleted_zeros = select i1 %carry_1, i1 %Range1_all_ones, i1 %Range1_all_zeros" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 96 'select' 'deleted_zeros' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 97 [1/1] (0.97ns)   --->   "%and_ln781 = and i1 %carry_1, %Range1_all_ones" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 97 'and' 'and_ln781' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 98 [1/1] (0.00ns) (grouped into LUT with out node or_ln340)   --->   "%xor_ln785 = xor i1 %deleted_zeros, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 98 'xor' 'xor_ln785' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 99 [1/1] (0.00ns) (grouped into LUT with out node or_ln340)   --->   "%or_ln785 = or i1 %p_Result_3, %xor_ln785" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 99 'or' 'or_ln785' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 100 [1/1] (0.97ns)   --->   "%xor_ln785_1 = xor i1 %p_Result_s, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 100 'xor' 'xor_ln785_1' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 101 [1/1] (0.00ns) (grouped into LUT with out node or_ln340)   --->   "%overflow = and i1 %or_ln785, %xor_ln785_1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 101 'and' 'overflow' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 102 [1/1] (0.00ns) (grouped into LUT with out node underflow)   --->   "%or_ln786 = or i1 %and_ln781, %and_ln786" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 102 'or' 'or_ln786' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 103 [1/1] (0.00ns) (grouped into LUT with out node underflow)   --->   "%xor_ln786 = xor i1 %or_ln786, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 103 'xor' 'xor_ln786' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 104 [1/1] (0.97ns) (out node of the LUT)   --->   "%underflow = and i1 %p_Result_s, %xor_ln786" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 104 'and' 'underflow' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 105 [1/1] (0.99ns) (out node of the LUT)   --->   "%or_ln340 = or i1 %underflow, %overflow" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 105 'or' 'or_ln340' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 106 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6)   --->   "%or_ln340_2 = or i1 %and_ln786, %xor_ln785_1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 106 'or' 'or_ln340_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 107 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6)   --->   "%or_ln340_1 = or i1 %or_ln340_2, %and_ln781" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 107 'or' 'or_ln340_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 108 [1/1] (1.07ns) (out node of the LUT)   --->   "%select_ln340 = select i1 %or_ln340, i40 549755813887, i40 %y2_V_1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 108 'select' 'select_ln340' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6)   --->   "%select_ln388 = select i1 %underflow, i40 -549755813888, i40 %y2_V_1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 109 'select' 'select_ln388' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 110 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_Val2_6 = select i1 %or_ln340_1, i40 %select_ln340, i40 %select_ln388" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 110 'select' 'p_Val2_6' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_9 : Operation 111 [1/6] (3.89ns)   --->   "%r_V_10 = mul nsw i80 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 111 'mul' 'r_V_10' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 112 [1/1] (0.00ns)   --->   "%tmp_23 = trunc i80 %r_V_10 to i34" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 112 'trunc' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 112 [1/1] (0.00ns)   --->   "%trunc_ln718_1 = trunc i80 %r_V_10 to i34" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 112 'trunc' 'trunc_ln718_1' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 113 [1/6] (3.89ns)   --->   "%r_V_11 = mul nsw i80 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 113 'mul' 'r_V_11' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 10 <SV = 9> <Delay = 4.01>
 ST_10 : Operation 114 [1/1] (0.00ns)   --->   "%rhs_V = call i75 @_ssdm_op_BitConcatenate.i75.i40.i35(i40 %p_Val2_6, i35 0)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 114 'bitconcatenate' 'rhs_V' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 115 [1/1] (0.00ns)   --->   "%rhs_V_1_cast = sext i75 %rhs_V to i80" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 115 'sext' 'rhs_V_1_cast' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 116 [1/1] (4.01ns)   --->   "%ret_V_6 = add i80 %rhs_V_1_cast, %r_V_10" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 116 'add' 'ret_V_6' <Predicate = true> <Delay = 4.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 115 [1/1] (0.00ns)   --->   "%sext_ln728 = sext i75 %rhs_V to i80" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 115 'sext' 'sext_ln728' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 116 [1/1] (4.01ns)   --->   "%ret_V_6 = add i80 %sext_ln728, %r_V_10" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 116 'add' 'ret_V_6' <Predicate = true> <Delay = 4.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_10 : Operation 117 [1/1] (0.00ns)   --->   "%p_Result_6 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 79)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 117 'bitselect' 'p_Result_6' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 118 [1/1] (2.49ns)   --->   "%r_3 = icmp ne i34 %tmp_23, 0" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 118 'icmp' 'r_3' <Predicate = true> <Delay = 2.49> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_10 : Operation 119 [1/1] (0.00ns)   --->   "%tmp_5 = call i4 @_ssdm_op_PartSelect.i4.i80.i32.i32(i80 %ret_V_6, i32 76, i32 79)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 119 'partselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 120 [1/1] (0.00ns)   --->   "%tmp_s = call i5 @_ssdm_op_PartSelect.i5.i80.i32.i32(i80 %ret_V_6, i32 75, i32 79)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 120 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
-ST_10 : Operation 121 [1/1] (4.01ns)   --->   "%ret_V_1 = add i80 %rhs_V_1_cast, %r_V_11" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 121 'add' 'ret_V_1' <Predicate = true> <Delay = 4.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 118 [1/1] (2.49ns)   --->   "%r_2 = icmp ne i34 %trunc_ln718_1, 0" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 118 'icmp' 'r_2' <Predicate = true> <Delay = 2.49> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 119 [1/1] (0.00ns)   --->   "%tmp = call i4 @_ssdm_op_PartSelect.i4.i80.i32.i32(i80 %ret_V_6, i32 76, i32 79)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 119 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 120 [1/1] (0.00ns)   --->   "%tmp_1 = call i5 @_ssdm_op_PartSelect.i5.i80.i32.i32(i80 %ret_V_6, i32 75, i32 79)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 120 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 121 [1/1] (4.01ns)   --->   "%ret_V_4 = add i80 %sext_ln728, %r_V_11" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 121 'add' 'ret_V_4' <Predicate = true> <Delay = 4.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
 State 11 <SV = 10> <Delay = 4.85>
 ST_11 : Operation 122 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%q_V = call i40 @_ssdm_op_PartSelect.i40.i80.i32.i32(i80 %ret_V_6, i32 35, i32 74)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 122 'partselect' 'q_V' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 123 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%tmp_22 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 35)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 123 'bitselect' 'tmp_22' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 123 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 35)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 123 'bitselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 124 [1/1] (0.00ns) (grouped into LUT with out node carry_3)   --->   "%p_Result_7 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 74)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 124 'bitselect' 'p_Result_7' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 125 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%r_2 = or i1 %r_3, %tmp_22" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 125 'or' 'r_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 126 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%tmp_25 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 34)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 126 'bitselect' 'tmp_25' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 127 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%tmp_6 = and i1 %tmp_25, %r_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 127 'and' 'tmp_6' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 128 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%tmp_2 = zext i1 %tmp_6 to i40" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 128 'zext' 'tmp_2' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 129 [1/1] (2.88ns) (out node of the LUT)   --->   "%q_V_1 = add nsw i40 %q_V, %tmp_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 129 'add' 'q_V_1' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 130 [1/1] (0.00ns) (grouped into LUT with out node carry_3)   --->   "%tmp_26 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %q_V_1, i32 39)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 130 'bitselect' 'tmp_26' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 131 [1/1] (0.00ns) (grouped into LUT with out node carry_3)   --->   "%rev2 = xor i1 %tmp_26, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 131 'xor' 'rev2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 132 [1/1] (0.97ns) (out node of the LUT)   --->   "%carry_3 = and i1 %p_Result_7, %rev2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 132 'and' 'carry_3' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 125 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%r_3 = or i1 %r_2, %tmp_12" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 125 'or' 'r_3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 126 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 34)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 126 'bitselect' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 127 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%and_ln412_1 = and i1 %tmp_14, %r_3" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 127 'and' 'and_ln412_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 128 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%zext_ln415_1 = zext i1 %and_ln412_1 to i40" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 128 'zext' 'zext_ln415_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 129 [1/1] (2.88ns) (out node of the LUT)   --->   "%q_V_1 = add nsw i40 %q_V, %zext_ln415_1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 129 'add' 'q_V_1' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 130 [1/1] (0.00ns) (grouped into LUT with out node carry_3)   --->   "%tmp_15 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %q_V_1, i32 39)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 130 'bitselect' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 131 [1/1] (0.00ns) (grouped into LUT with out node carry_3)   --->   "%xor_ln416_1 = xor i1 %tmp_15, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 131 'xor' 'xor_ln416_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 132 [1/1] (0.97ns) (out node of the LUT)   --->   "%carry_3 = and i1 %p_Result_7, %xor_ln416_1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 132 'and' 'carry_3' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_11 : Operation 133 [1/1] (0.00ns)   --->   "%p_Result_8 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %q_V_1, i32 39)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 133 'bitselect' 'p_Result_8' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 134 [1/1] (1.44ns)   --->   "%Range2_all_ones_1 = icmp eq i4 %tmp_5, -1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 134 'icmp' 'Range2_all_ones_1' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 135 [1/1] (1.44ns)   --->   "%Range1_all_ones_2 = icmp eq i5 %tmp_s, -1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 135 'icmp' 'Range1_all_ones_2' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 136 [1/1] (1.44ns)   --->   "%Range1_all_zeros_1 = icmp eq i5 %tmp_s, 0" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 136 'icmp' 'Range1_all_zeros_1' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 137 [1/1] (0.00ns) (grouped into LUT with out node brmerge980_demorgan)   --->   "%tmp_28 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 75)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 137 'bitselect' 'tmp_28' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 138 [1/1] (0.00ns) (grouped into LUT with out node brmerge980_demorgan)   --->   "%rev3 = xor i1 %tmp_28, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 138 'xor' 'rev3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 139 [1/1] (0.00ns) (grouped into LUT with out node brmerge980_demorgan)   --->   "%p_7 = and i1 %Range2_all_ones_1, %rev3" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 139 'and' 'p_7' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 140 [1/1] (0.00ns) (grouped into LUT with out node brmerge980_demorgan)   --->   "%deleted_ones_2 = select i1 %carry_3, i1 %p_7, i1 %Range1_all_ones_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 140 'select' 'deleted_ones_2' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_11 : Operation 141 [1/1] (0.99ns) (out node of the LUT)   --->   "%brmerge980_demorgan = and i1 %p_Result_8, %deleted_ones_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 141 'and' 'brmerge980_demorgan' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_11 : Operation 142 [1/1] (2.98ns)   --->   "%notrhs = icmp slt i80 %ret_V_1, 73786976294838206465" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 142 'icmp' 'notrhs' <Predicate = true> <Delay = 2.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 134 [1/1] (1.44ns)   --->   "%Range2_all_ones_1 = icmp eq i4 %tmp, -1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 134 'icmp' 'Range2_all_ones_1' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 135 [1/1] (1.44ns)   --->   "%Range1_all_ones_2 = icmp eq i5 %tmp_1, -1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 135 'icmp' 'Range1_all_ones_2' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 136 [1/1] (1.44ns)   --->   "%Range1_all_zeros_1 = icmp eq i5 %tmp_1, 0" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 136 'icmp' 'Range1_all_zeros_1' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 137 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_3)   --->   "%tmp_17 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 75)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 137 'bitselect' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 138 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_3)   --->   "%xor_ln779_1 = xor i1 %tmp_17, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 138 'xor' 'xor_ln779_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 139 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_3)   --->   "%and_ln779_1 = and i1 %Range2_all_ones_1, %xor_ln779_1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 139 'and' 'and_ln779_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 140 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_3)   --->   "%deleted_ones_2 = select i1 %carry_3, i1 %and_ln779_1, i1 %Range1_all_ones_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 140 'select' 'deleted_ones_2' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 141 [1/1] (0.99ns) (out node of the LUT)   --->   "%and_ln786_3 = and i1 %p_Result_8, %deleted_ones_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 141 'and' 'and_ln786_3' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 142 [1/1] (2.98ns)   --->   "%icmp_ln1497_1 = icmp slt i80 %ret_V_4, 73786976294838206465" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 142 'icmp' 'icmp_ln1497_1' <Predicate = true> <Delay = 2.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 
 State 12 <SV = 11> <Delay = 5.09>
-ST_12 : Operation 143 [1/1] (0.00ns) (grouped into LUT with out node brmerge9)   --->   "%deleted_zeros_1 = select i1 %carry_3, i1 %Range1_all_ones_2, i1 %Range1_all_zeros_1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 143 'select' 'deleted_zeros_1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_12 : Operation 144 [1/1] (0.97ns)   --->   "%phitmp964_demorgan = and i1 %carry_3, %Range1_all_ones_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 144 'and' 'phitmp964_demorgan' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 145 [1/1] (0.00ns) (grouped into LUT with out node brmerge9)   --->   "%p_not2 = xor i1 %deleted_zeros_1, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 145 'xor' 'p_not2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 146 [1/1] (0.00ns) (grouped into LUT with out node brmerge9)   --->   "%brmerge7 = or i1 %p_Result_8, %p_not2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 146 'or' 'brmerge7' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 147 [1/1] (0.97ns)   --->   "%tmp_4 = xor i1 %p_Result_6, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 147 'xor' 'tmp_4' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 148 [1/1] (0.00ns) (grouped into LUT with out node brmerge9)   --->   "%overflow_1 = and i1 %brmerge7, %tmp_4" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 148 'and' 'overflow_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 149 [1/1] (0.00ns) (grouped into LUT with out node underflow_2)   --->   "%tmp4_demorgan = or i1 %phitmp964_demorgan, %brmerge980_demorgan" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 149 'or' 'tmp4_demorgan' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 150 [1/1] (0.00ns) (grouped into LUT with out node underflow_2)   --->   "%tmp4 = xor i1 %tmp4_demorgan, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 150 'xor' 'tmp4' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 151 [1/1] (0.97ns) (out node of the LUT)   --->   "%underflow_2 = and i1 %p_Result_6, %tmp4" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 151 'and' 'underflow_2' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 152 [1/1] (0.99ns) (out node of the LUT)   --->   "%brmerge9 = or i1 %underflow_2, %overflow_1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 152 'or' 'brmerge9' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 153 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_10)   --->   "%tmp5 = or i1 %brmerge980_demorgan, %tmp_4" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 153 'or' 'tmp5' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 154 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_10)   --->   "%p_1001_not = or i1 %tmp5, %phitmp964_demorgan" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 154 'or' 'p_1001_not' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 155 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_mux2 = select i1 %brmerge9, i40 549755813887, i40 %q_V_1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 155 'select' 'p_mux2' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_12 : Operation 156 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_10)   --->   "%p_1 = select i1 %underflow_2, i40 -549755813888, i40 %q_V_1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 156 'select' 'p_1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_12 : Operation 157 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_Val2_10 = select i1 %p_1001_not, i40 %p_mux2, i40 %p_1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 157 'select' 'p_Val2_10' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 143 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_4)   --->   "%deleted_zeros_1 = select i1 %carry_3, i1 %Range1_all_ones_2, i1 %Range1_all_zeros_1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 143 'select' 'deleted_zeros_1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 144 [1/1] (0.97ns)   --->   "%and_ln781_1 = and i1 %carry_3, %Range1_all_ones_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 144 'and' 'and_ln781_1' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 145 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_4)   --->   "%xor_ln785_2 = xor i1 %deleted_zeros_1, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 145 'xor' 'xor_ln785_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 146 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_4)   --->   "%or_ln785_1 = or i1 %p_Result_8, %xor_ln785_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 146 'or' 'or_ln785_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 147 [1/1] (0.97ns)   --->   "%xor_ln785_3 = xor i1 %p_Result_6, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 147 'xor' 'xor_ln785_3' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 148 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_4)   --->   "%overflow_1 = and i1 %or_ln785_1, %xor_ln785_3" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 148 'and' 'overflow_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 149 [1/1] (0.00ns) (grouped into LUT with out node underflow_2)   --->   "%or_ln786_1 = or i1 %and_ln781_1, %and_ln786_3" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 149 'or' 'or_ln786_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 150 [1/1] (0.00ns) (grouped into LUT with out node underflow_2)   --->   "%xor_ln786_2 = xor i1 %or_ln786_1, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 150 'xor' 'xor_ln786_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 151 [1/1] (0.97ns) (out node of the LUT)   --->   "%underflow_2 = and i1 %p_Result_6, %xor_ln786_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 151 'and' 'underflow_2' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 152 [1/1] (0.99ns) (out node of the LUT)   --->   "%or_ln340_4 = or i1 %underflow_2, %overflow_1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 152 'or' 'or_ln340_4' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 153 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%or_ln340_5 = or i1 %and_ln786_3, %xor_ln785_3" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 153 'or' 'or_ln340_5' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 154 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%or_ln340_6 = or i1 %or_ln340_5, %and_ln781_1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 154 'or' 'or_ln340_6' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 155 [1/1] (1.07ns) (out node of the LUT)   --->   "%select_ln340_2 = select i1 %or_ln340_4, i40 549755813887, i40 %q_V_1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 155 'select' 'select_ln340_2' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 156 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%select_ln388_2 = select i1 %underflow_2, i40 -549755813888, i40 %q_V_1" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 156 'select' 'select_ln388_2' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 157 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_Val2_12 = select i1 %or_ln340_6, i40 %select_ln340_2, i40 %select_ln388_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 157 'select' 'p_Val2_12' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
 State 13 <SV = 12> <Delay = 2.88>
-ST_13 : Operation 158 [1/1] (0.00ns)   --->   "%lhs_V_1 = sext i40 %p_Val2_10 to i41" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 158 'sext' 'lhs_V_1' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 158 [1/1] (0.00ns)   --->   "%lhs_V_1 = sext i40 %p_Val2_12 to i41" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 158 'sext' 'lhs_V_1' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 159 [1/1] (0.00ns)   --->   "%rhs_V_1 = sext i40 %p_Val2_13 to i41" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 159 'sext' 'rhs_V_1' <Predicate = true> <Delay = 0.00>
 ST_13 : Operation 160 [1/1] (2.88ns)   --->   "%ret_V = add nsw i41 %lhs_V_1, %rhs_V_1" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 160 'add' 'ret_V' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
 State 14 <SV = 13> <Delay = 3.89>
-ST_14 : Operation 161 [1/1] (0.00ns)   --->   "%r_V_4 = sext i40 %p_Val2_10 to i81" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 161 'sext' 'r_V_4' <Predicate = true> <Delay = 0.00>
-ST_14 : Operation 162 [1/1] (0.00ns)   --->   "%tmp_12 = sext i41 %ret_V to i81" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 162 'sext' 'tmp_12' <Predicate = true> <Delay = 0.00>
-ST_14 : Operation 163 [6/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %tmp_12, %r_V_4" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 163 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 161 [1/1] (0.00ns)   --->   "%r_V_4 = sext i40 %p_Val2_12 to i81" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 161 'sext' 'r_V_4' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 162 [1/1] (0.00ns)   --->   "%sext_ln1118 = sext i41 %ret_V to i81" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 162 'sext' 'sext_ln1118' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 163 [6/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 163 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 15 <SV = 14> <Delay = 3.89>
-ST_15 : Operation 164 [5/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %tmp_12, %r_V_4" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 164 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 164 [5/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 164 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 16 <SV = 15> <Delay = 3.89>
-ST_16 : Operation 165 [4/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %tmp_12, %r_V_4" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 165 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 165 [4/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 165 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 17 <SV = 16> <Delay = 3.89>
-ST_17 : Operation 166 [3/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %tmp_12, %r_V_4" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 166 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 166 [3/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 166 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 18 <SV = 17> <Delay = 3.89>
-ST_18 : Operation 167 [2/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %tmp_12, %r_V_4" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 167 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 167 [2/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 167 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 19 <SV = 18> <Delay = 3.89>
-ST_19 : Operation 168 [1/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %tmp_12, %r_V_4" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 168 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 168 [1/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 168 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
 State 20 <SV = 19> <Delay = 3.97>
 ST_20 : Operation 169 [1/1] (0.00ns)   --->   "%r_V_6 = call i73 @_ssdm_op_BitConcatenate.i73.i40.i33(i40 %p_Val2_6, i33 0)" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 169 'bitconcatenate' 'r_V_6' <Predicate = true> <Delay = 0.00>
-ST_20 : Operation 170 [1/1] (0.00ns)   --->   "%tmp_14 = sext i73 %r_V_6 to i81" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 170 'sext' 'tmp_14' <Predicate = true> <Delay = 0.00>
-ST_20 : Operation 171 [1/1] (2.99ns)   --->   "%slt = icmp slt i81 %tmp_14, %r_V_5" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 171 'icmp' 'slt' <Predicate = true> <Delay = 2.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_20 : Operation 172 [1/1] (0.00ns) (grouped into LUT with out node not_sel_tmp)   --->   "%rev4 = xor i1 %slt, true" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 172 'xor' 'rev4' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_20 : Operation 173 [1/1] (0.97ns) (out node of the LUT)   --->   "%not_sel_tmp = or i1 %notrhs, %rev4" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 173 'or' 'not_sel_tmp' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_20 : Operation 174 [1/1] (0.00ns)   --->   "ret i1 %not_sel_tmp" [mandelbrotHLS/pretest.cpp:27]   --->   Operation 174 'ret' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 170 [1/1] (0.00ns)   --->   "%sext_ln1497 = sext i73 %r_V_6 to i81" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 170 'sext' 'sext_ln1497' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 171 [1/1] (2.99ns)   --->   "%icmp_ln1497 = icmp slt i81 %sext_ln1497, %r_V_5" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 171 'icmp' 'icmp_ln1497' <Predicate = true> <Delay = 2.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 172 [1/1] (0.00ns) (grouped into LUT with out node or_ln1497)   --->   "%xor_ln1497 = xor i1 %icmp_ln1497, true" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 172 'xor' 'xor_ln1497' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 173 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln1497 = or i1 %icmp_ln1497_1, %xor_ln1497" [mandelbrotHLS/pretest.cpp:18]   --->   Operation 173 'or' 'or_ln1497' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 174 [1/1] (0.00ns)   --->   "ret i1 %or_ln1497" [mandelbrotHLS/pretest.cpp:27]   --->   Operation 174 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -326,140 +307,140 @@ Port [ y_V]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern
 
 <LifeTime>
 <method=bitvector/>
-y_V_read            (read          ) [ 000000000000000000000]
-r_V                 (sext          ) [ 001111100000000000000]
-x_V_read            (read          ) [ 000000000000000000000]
-lhs_V               (sext          ) [ 000000000000000000000]
-ret_V_5             (add           ) [ 000000000000000000000]
-p_Result_4          (bitselect     ) [ 000000000000000000000]
-x_1_V               (add           ) [ 000000000000000000000]
-p_Result_5          (bitselect     ) [ 000000000000000000000]
-tmp_1               (xor           ) [ 000000000000000000000]
-underflow_1         (and           ) [ 000000000000000000000]
-brmerge5            (xor           ) [ 000000000000000000000]
-signbit_i_i_i_i169  (xor           ) [ 000000000000000000000]
-brmerge6            (or            ) [ 000000000000000000000]
-p_mux1              (select        ) [ 000000000000000000000]
-p_6                 (select        ) [ 000000000000000000000]
-p_Val2_13           (select        ) [ 000111111111110000000]
-ret_V_7             (add           ) [ 000000000000000000000]
-p_Result_9          (bitselect     ) [ 000100000000000000000]
-xp1_V               (add           ) [ 000100000000000000000]
-p_Result_10         (bitselect     ) [ 000100000000000000000]
-tmp_31              (bitselect     ) [ 000100000000000000000]
-brmerge1            (or            ) [ 000000000000000000000]
-tmp_10              (xor           ) [ 000000000000000000000]
-overflow_2          (and           ) [ 000000000000000000000]
-brmerge12_demorgan  (and           ) [ 000000000000000000000]
-brmerge3            (xor           ) [ 000000000000000000000]
-underflow_3         (and           ) [ 000000000000000000000]
-brmerge4            (or            ) [ 000000000000000000000]
-p_997_not           (or            ) [ 000000000000000000000]
-p_mux3              (select        ) [ 000000000000000000000]
-p_2                 (select        ) [ 000000000000000000000]
-p_0424_1            (select        ) [ 000010000000000000000]
-r_V_2               (sext          ) [ 000001111100000000000]
-r_V_7               (sext          ) [ 000001111100000000000]
-r_V_9               (mul           ) [ 000000011000000000000]
-p_Result_s          (bitselect     ) [ 000000011100000000000]
-tmp_3               (trunc         ) [ 000000010000000000000]
-p_Result_s_15       (partselect    ) [ 000000010000000000000]
-p_Result_1          (partselect    ) [ 000000010000000000000]
-r_1                 (icmp          ) [ 000000001000000000000]
-Range2_all_ones     (icmp          ) [ 000000001000000000000]
-Range1_all_ones     (icmp          ) [ 000000001100000000000]
-Range1_all_zeros    (icmp          ) [ 000000001100000000000]
-y2_V                (partselect    ) [ 000000000000000000000]
-tmp                 (bitselect     ) [ 000000000000000000000]
-p_Result_2          (bitselect     ) [ 000000000000000000000]
-r                   (or            ) [ 000000000000000000000]
-tmp_11              (bitselect     ) [ 000000000000000000000]
-tmp_7               (and           ) [ 000000000000000000000]
-tmp_8               (zext          ) [ 000000000000000000000]
-y2_V_1              (add           ) [ 000000000100000000000]
-tmp_13              (bitselect     ) [ 000000000000000000000]
-rev                 (xor           ) [ 000000000000000000000]
-carry_1             (and           ) [ 000000000100000000000]
-p_Result_3          (bitselect     ) [ 000000000100000000000]
-tmp_18              (bitselect     ) [ 000000000000000000000]
-rev1                (xor           ) [ 000000000000000000000]
-p_s                 (and           ) [ 000000000000000000000]
-deleted_ones        (select        ) [ 000000000000000000000]
-brmerge968_demorgan (and           ) [ 000000000100000000000]
-deleted_zeros       (select        ) [ 000000000000000000000]
-phitmp966_demorgan  (and           ) [ 000000000000000000000]
-p_not               (xor           ) [ 000000000000000000000]
-brmerge             (or            ) [ 000000000000000000000]
-tmp_9               (xor           ) [ 000000000000000000000]
-overflow            (and           ) [ 000000000000000000000]
-tmp2_demorgan       (or            ) [ 000000000000000000000]
-tmp2                (xor           ) [ 000000000000000000000]
-underflow           (and           ) [ 000000000000000000000]
-brmerge2            (or            ) [ 000000000000000000000]
-tmp3                (or            ) [ 000000000000000000000]
-p_1000_not          (or            ) [ 000000000000000000000]
-p_mux               (select        ) [ 000000000000000000000]
-p_3                 (select        ) [ 000000000000000000000]
-p_Val2_6            (select        ) [ 000000000011111111111]
-r_V_10              (mul           ) [ 000000000010000000000]
-tmp_23              (trunc         ) [ 000000000010000000000]
-r_V_11              (mul           ) [ 000000000010000000000]
-rhs_V               (bitconcatenate) [ 000000000000000000000]
-rhs_V_1_cast        (sext          ) [ 000000000000000000000]
-ret_V_6             (add           ) [ 000000000001000000000]
-p_Result_6          (bitselect     ) [ 000000000001100000000]
-r_3                 (icmp          ) [ 000000000001000000000]
-tmp_5               (partselect    ) [ 000000000001000000000]
-tmp_s               (partselect    ) [ 000000000001000000000]
-ret_V_1             (add           ) [ 000000000001000000000]
-q_V                 (partselect    ) [ 000000000000000000000]
-tmp_22              (bitselect     ) [ 000000000000000000000]
-p_Result_7          (bitselect     ) [ 000000000000000000000]
-r_2                 (or            ) [ 000000000000000000000]
-tmp_25              (bitselect     ) [ 000000000000000000000]
-tmp_6               (and           ) [ 000000000000000000000]
-tmp_2               (zext          ) [ 000000000000000000000]
-q_V_1               (add           ) [ 000000000000100000000]
-tmp_26              (bitselect     ) [ 000000000000000000000]
-rev2                (xor           ) [ 000000000000000000000]
-carry_3             (and           ) [ 000000000000100000000]
-p_Result_8          (bitselect     ) [ 000000000000100000000]
-Range2_all_ones_1   (icmp          ) [ 000000000000000000000]
-Range1_all_ones_2   (icmp          ) [ 000000000000100000000]
-Range1_all_zeros_1  (icmp          ) [ 000000000000100000000]
-tmp_28              (bitselect     ) [ 000000000000000000000]
-rev3                (xor           ) [ 000000000000000000000]
-p_7                 (and           ) [ 000000000000000000000]
-deleted_ones_2      (select        ) [ 000000000000000000000]
-brmerge980_demorgan (and           ) [ 000000000000100000000]
-notrhs              (icmp          ) [ 000000000000111111111]
-deleted_zeros_1     (select        ) [ 000000000000000000000]
-phitmp964_demorgan  (and           ) [ 000000000000000000000]
-p_not2              (xor           ) [ 000000000000000000000]
-brmerge7            (or            ) [ 000000000000000000000]
-tmp_4               (xor           ) [ 000000000000000000000]
-overflow_1          (and           ) [ 000000000000000000000]
-tmp4_demorgan       (or            ) [ 000000000000000000000]
-tmp4                (xor           ) [ 000000000000000000000]
-underflow_2         (and           ) [ 000000000000000000000]
-brmerge9            (or            ) [ 000000000000000000000]
-tmp5                (or            ) [ 000000000000000000000]
-p_1001_not          (or            ) [ 000000000000000000000]
-p_mux2              (select        ) [ 000000000000000000000]
-p_1                 (select        ) [ 000000000000000000000]
-p_Val2_10           (select        ) [ 000000000000011000000]
-lhs_V_1             (sext          ) [ 000000000000000000000]
-rhs_V_1             (sext          ) [ 000000000000000000000]
-ret_V               (add           ) [ 000000000000001000000]
-r_V_4               (sext          ) [ 000000000000000111110]
-tmp_12              (sext          ) [ 000000000000000111110]
-r_V_5               (mul           ) [ 000000000000000000001]
-r_V_6               (bitconcatenate) [ 000000000000000000000]
-tmp_14              (sext          ) [ 000000000000000000000]
-slt                 (icmp          ) [ 000000000000000000000]
-rev4                (xor           ) [ 000000000000000000000]
-not_sel_tmp         (or            ) [ 000000000000000000000]
-StgValue_174        (ret           ) [ 000000000000000000000]
+y_V_read           (read          ) [ 000000000000000000000]
+r_V                (sext          ) [ 001111100000000000000]
+x_V_read           (read          ) [ 000000000000000000000]
+lhs_V              (sext          ) [ 000000000000000000000]
+ret_V_5            (add           ) [ 000000000000000000000]
+p_Result_4         (bitselect     ) [ 000000000000000000000]
+x_1_V              (add           ) [ 000000000000000000000]
+p_Result_5         (bitselect     ) [ 000000000000000000000]
+xor_ln786_1        (xor           ) [ 000000000000000000000]
+underflow_1        (and           ) [ 000000000000000000000]
+xor_ln340          (xor           ) [ 000000000000000000000]
+xor_ln340_1        (xor           ) [ 000000000000000000000]
+or_ln340_3         (or            ) [ 000000000000000000000]
+select_ln340_1     (select        ) [ 000000000000000000000]
+select_ln388_1     (select        ) [ 000000000000000000000]
+p_Val2_13          (select        ) [ 000111111111110000000]
+ret_V_7            (add           ) [ 000000000000000000000]
+p_Result_9         (bitselect     ) [ 000100000000000000000]
+xp1_V              (add           ) [ 000100000000000000000]
+p_Result_10        (bitselect     ) [ 000100000000000000000]
+tmp_20             (bitselect     ) [ 000100000000000000000]
+or_ln785_2         (or            ) [ 000000000000000000000]
+xor_ln785_4        (xor           ) [ 000000000000000000000]
+overflow_2         (and           ) [ 000000000000000000000]
+and_ln786_5        (and           ) [ 000000000000000000000]
+xor_ln786_3        (xor           ) [ 000000000000000000000]
+underflow_3        (and           ) [ 000000000000000000000]
+or_ln340_7         (or            ) [ 000000000000000000000]
+or_ln340_8         (or            ) [ 000000000000000000000]
+select_ln340_3     (select        ) [ 000000000000000000000]
+select_ln388_3     (select        ) [ 000000000000000000000]
+select_ln340_7     (select        ) [ 000010000000000000000]
+r_V_2              (sext          ) [ 000001111100000000000]
+r_V_7              (sext          ) [ 000001111100000000000]
+r_V_9              (mul           ) [ 000000011000000000000]
+p_Result_s         (bitselect     ) [ 000000011100000000000]
+trunc_ln718        (trunc         ) [ 000000010000000000000]
+p_Result_s_15      (partselect    ) [ 000000010000000000000]
+p_Result_1         (partselect    ) [ 000000010000000000000]
+r_1                (icmp          ) [ 000000001000000000000]
+Range2_all_ones    (icmp          ) [ 000000001000000000000]
+Range1_all_ones    (icmp          ) [ 000000001100000000000]
+Range1_all_zeros   (icmp          ) [ 000000001100000000000]
+y2_V               (partselect    ) [ 000000000000000000000]
+tmp_3              (bitselect     ) [ 000000000000000000000]
+p_Result_2         (bitselect     ) [ 000000000000000000000]
+r                  (or            ) [ 000000000000000000000]
+tmp_5              (bitselect     ) [ 000000000000000000000]
+and_ln412          (and           ) [ 000000000000000000000]
+zext_ln415         (zext          ) [ 000000000000000000000]
+y2_V_1             (add           ) [ 000000000100000000000]
+tmp_6              (bitselect     ) [ 000000000000000000000]
+xor_ln416          (xor           ) [ 000000000000000000000]
+carry_1            (and           ) [ 000000000100000000000]
+p_Result_3         (bitselect     ) [ 000000000100000000000]
+tmp_8              (bitselect     ) [ 000000000000000000000]
+xor_ln779          (xor           ) [ 000000000000000000000]
+and_ln779          (and           ) [ 000000000000000000000]
+deleted_ones       (select        ) [ 000000000000000000000]
+and_ln786          (and           ) [ 000000000100000000000]
+deleted_zeros      (select        ) [ 000000000000000000000]
+and_ln781          (and           ) [ 000000000000000000000]
+xor_ln785          (xor           ) [ 000000000000000000000]
+or_ln785           (or            ) [ 000000000000000000000]
+xor_ln785_1        (xor           ) [ 000000000000000000000]
+overflow           (and           ) [ 000000000000000000000]
+or_ln786           (or            ) [ 000000000000000000000]
+xor_ln786          (xor           ) [ 000000000000000000000]
+underflow          (and           ) [ 000000000000000000000]
+or_ln340           (or            ) [ 000000000000000000000]
+or_ln340_2         (or            ) [ 000000000000000000000]
+or_ln340_1         (or            ) [ 000000000000000000000]
+select_ln340       (select        ) [ 000000000000000000000]
+select_ln388       (select        ) [ 000000000000000000000]
+p_Val2_6           (select        ) [ 000000000011111111111]
+r_V_10             (mul           ) [ 000000000010000000000]
+trunc_ln718_1      (trunc         ) [ 000000000010000000000]
+r_V_11             (mul           ) [ 000000000010000000000]
+rhs_V              (bitconcatenate) [ 000000000000000000000]
+sext_ln728         (sext          ) [ 000000000000000000000]
+ret_V_6            (add           ) [ 000000000001000000000]
+p_Result_6         (bitselect     ) [ 000000000001100000000]
+r_2                (icmp          ) [ 000000000001000000000]
+tmp                (partselect    ) [ 000000000001000000000]
+tmp_1              (partselect    ) [ 000000000001000000000]
+ret_V_4            (add           ) [ 000000000001000000000]
+q_V                (partselect    ) [ 000000000000000000000]
+tmp_12             (bitselect     ) [ 000000000000000000000]
+p_Result_7         (bitselect     ) [ 000000000000000000000]
+r_3                (or            ) [ 000000000000000000000]
+tmp_14             (bitselect     ) [ 000000000000000000000]
+and_ln412_1        (and           ) [ 000000000000000000000]
+zext_ln415_1       (zext          ) [ 000000000000000000000]
+q_V_1              (add           ) [ 000000000000100000000]
+tmp_15             (bitselect     ) [ 000000000000000000000]
+xor_ln416_1        (xor           ) [ 000000000000000000000]
+carry_3            (and           ) [ 000000000000100000000]
+p_Result_8         (bitselect     ) [ 000000000000100000000]
+Range2_all_ones_1  (icmp          ) [ 000000000000000000000]
+Range1_all_ones_2  (icmp          ) [ 000000000000100000000]
+Range1_all_zeros_1 (icmp          ) [ 000000000000100000000]
+tmp_17             (bitselect     ) [ 000000000000000000000]
+xor_ln779_1        (xor           ) [ 000000000000000000000]
+and_ln779_1        (and           ) [ 000000000000000000000]
+deleted_ones_2     (select        ) [ 000000000000000000000]
+and_ln786_3        (and           ) [ 000000000000100000000]
+icmp_ln1497_1      (icmp          ) [ 000000000000111111111]
+deleted_zeros_1    (select        ) [ 000000000000000000000]
+and_ln781_1        (and           ) [ 000000000000000000000]
+xor_ln785_2        (xor           ) [ 000000000000000000000]
+or_ln785_1         (or            ) [ 000000000000000000000]
+xor_ln785_3        (xor           ) [ 000000000000000000000]
+overflow_1         (and           ) [ 000000000000000000000]
+or_ln786_1         (or            ) [ 000000000000000000000]
+xor_ln786_2        (xor           ) [ 000000000000000000000]
+underflow_2        (and           ) [ 000000000000000000000]
+or_ln340_4         (or            ) [ 000000000000000000000]
+or_ln340_5         (or            ) [ 000000000000000000000]
+or_ln340_6         (or            ) [ 000000000000000000000]
+select_ln340_2     (select        ) [ 000000000000000000000]
+select_ln388_2     (select        ) [ 000000000000000000000]
+p_Val2_12          (select        ) [ 000000000000011000000]
+lhs_V_1            (sext          ) [ 000000000000000000000]
+rhs_V_1            (sext          ) [ 000000000000000000000]
+ret_V              (add           ) [ 000000000000001000000]
+r_V_4              (sext          ) [ 000000000000000111110]
+sext_ln1118        (sext          ) [ 000000000000000111110]
+r_V_5              (mul           ) [ 000000000000000000001]
+r_V_6              (bitconcatenate) [ 000000000000000000000]
+sext_ln1497        (sext          ) [ 000000000000000000000]
+icmp_ln1497        (icmp          ) [ 000000000000000000000]
+xor_ln1497         (xor           ) [ 000000000000000000000]
+or_ln1497          (or            ) [ 000000000000000000000]
+ret_ln27           (ret           ) [ 000000000000000000000]
 </LifeTime>
 
 <model>
@@ -858,7 +839,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="120" class="1004" name="tmp_1_fu_120">
+<comp id="120" class="1004" name="xor_ln786_1_fu_120">
 <pin_list>
 <pin id="658201" dir="0" index="0" bw="1" slack="0"/>
 <pin id="658202" dir="0" index="1" bw="1" slack="0"/>
@@ -866,7 +847,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="tmp_1/2 "/>
+<opset="xor_ln786_1/2 "/>
 </bind>
 </comp>
 
@@ -882,7 +863,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="132" class="1004" name="brmerge5_fu_132">
+<comp id="132" class="1004" name="xor_ln340_fu_132">
 <pin_list>
 <pin id="658207" dir="0" index="0" bw="1" slack="0"/>
 <pin id="658208" dir="0" index="1" bw="1" slack="0"/>
@@ -890,11 +871,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="brmerge5/2 "/>
+<opset="xor_ln340/2 "/>
 </bind>
 </comp>
 
-<comp id="138" class="1004" name="signbit_i_i_i_i169_fu_138">
+<comp id="138" class="1004" name="xor_ln340_1_fu_138">
 <pin_list>
 <pin id="663884" dir="0" index="0" bw="1" slack="0"/>
 <pin id="663885" dir="0" index="1" bw="1" slack="0"/>
@@ -902,11 +883,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="signbit_i_i_i_i169/2 "/>
+<opset="xor_ln340_1/2 "/>
 </bind>
 </comp>
 
-<comp id="144" class="1004" name="brmerge6_fu_144">
+<comp id="144" class="1004" name="or_ln340_3_fu_144">
 <pin_list>
 <pin id="670522" dir="0" index="0" bw="1" slack="0"/>
 <pin id="670523" dir="0" index="1" bw="1" slack="0"/>
@@ -914,7 +895,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="brmerge6/2 "/>
+<opset="or_ln340_3/2 "/>
 </bind>
 </comp>
 
@@ -927,7 +908,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="p_Val2_13/2 p_0424_1/3 p_Val2_6/9 p_Val2_10/12 "/>
+<opset="p_Val2_13/2 select_ln340_7/3 p_Val2_6/9 p_Val2_12/12 "/>
 </bind>
 </comp>
 
@@ -977,11 +958,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_13/8 tmp_26/11 "/>
+<opset="tmp_6/8 tmp_15/11 "/>
 </bind>
 </comp>
 
-<comp id="202" class="1004" name="tmp_31_fu_202">
+<comp id="202" class="1004" name="tmp_20_fu_202">
 <pin_list>
 <pin id="667506" dir="0" index="0" bw="1" slack="0"/>
 <pin id="667507" dir="0" index="1" bw="41" slack="0"/>
@@ -990,11 +971,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_31/2 "/>
+<opset="tmp_20/2 "/>
 </bind>
 </comp>
 
-<comp id="210" class="1004" name="brmerge1_fu_210">
+<comp id="210" class="1004" name="or_ln785_2_fu_210">
 <pin_list>
 <pin id="659048" dir="0" index="0" bw="1" slack="1"/>
 <pin id="659049" dir="0" index="1" bw="1" slack="1"/>
@@ -1002,11 +983,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="brmerge1/3 "/>
+<opset="or_ln785_2/3 "/>
 </bind>
 </comp>
 
-<comp id="214" class="1004" name="tmp_10_fu_214">
+<comp id="214" class="1004" name="xor_ln785_4_fu_214">
 <pin_list>
 <pin id="659515" dir="0" index="0" bw="1" slack="1"/>
 <pin id="659516" dir="0" index="1" bw="1" slack="0"/>
@@ -1014,7 +995,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="tmp_10/3 "/>
+<opset="xor_ln785_4/3 "/>
 </bind>
 </comp>
 
@@ -1030,7 +1011,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="225" class="1004" name="brmerge12_demorgan_fu_225">
+<comp id="225" class="1004" name="and_ln786_5_fu_225">
 <pin_list>
 <pin id="659846" dir="0" index="0" bw="1" slack="1"/>
 <pin id="659847" dir="0" index="1" bw="1" slack="1"/>
@@ -1038,11 +1019,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="brmerge12_demorgan/3 "/>
+<opset="and_ln786_5/3 "/>
 </bind>
 </comp>
 
-<comp id="229" class="1004" name="brmerge3_fu_229">
+<comp id="229" class="1004" name="xor_ln786_3_fu_229">
 <pin_list>
 <pin id="659522" dir="0" index="0" bw="1" slack="0"/>
 <pin id="659523" dir="0" index="1" bw="1" slack="0"/>
@@ -1050,7 +1031,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="brmerge3/3 "/>
+<opset="xor_ln786_3/3 "/>
 </bind>
 </comp>
 
@@ -1066,7 +1047,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="240" class="1004" name="brmerge4_fu_240">
+<comp id="240" class="1004" name="or_ln340_7_fu_240">
 <pin_list>
 <pin id="664296" dir="0" index="0" bw="1" slack="0"/>
 <pin id="664297" dir="0" index="1" bw="1" slack="0"/>
@@ -1074,11 +1055,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="brmerge4/3 "/>
+<opset="or_ln340_7/3 "/>
 </bind>
 </comp>
 
-<comp id="246" class="1004" name="p_997_not_fu_246">
+<comp id="246" class="1004" name="or_ln340_8_fu_246">
 <pin_list>
 <pin id="659054" dir="0" index="0" bw="1" slack="0"/>
 <pin id="659055" dir="0" index="1" bw="1" slack="0"/>
@@ -1086,7 +1067,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="p_997_not/3 "/>
+<opset="or_ln340_8/3 "/>
 </bind>
 </comp>
 
@@ -1150,14 +1131,14 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="300" class="1004" name="tmp_3_fu_300">
+<comp id="300" class="1004" name="trunc_ln718_fu_300">
 <pin_list>
 <pin id="660074" dir="0" index="0" bw="80" slack="0"/>
 <pin id="660075" dir="1" index="1" bw="34" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_3/6 "/>
+<opset="trunc_ln718/6 "/>
 </bind>
 </comp>
 
@@ -1203,7 +1184,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="353" class="1004" name="tmp_fu_353">
+<comp id="353" class="1004" name="tmp_3_fu_353">
 <pin_list>
 <pin id="660482" dir="0" index="0" bw="1" slack="0"/>
 <pin id="660483" dir="0" index="1" bw="80" slack="2"/>
@@ -1212,7 +1193,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp/8 "/>
+<opset="tmp_3/8 "/>
 </bind>
 </comp>
 
@@ -1241,7 +1222,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="372" class="1004" name="tmp_11_fu_372">
+<comp id="372" class="1004" name="tmp_5_fu_372">
 <pin_list>
 <pin id="667517" dir="0" index="0" bw="1" slack="0"/>
 <pin id="667518" dir="0" index="1" bw="80" slack="2"/>
@@ -1250,11 +1231,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_11/8 "/>
+<opset="tmp_5/8 "/>
 </bind>
 </comp>
 
-<comp id="379" class="1004" name="tmp_7_fu_379">
+<comp id="379" class="1004" name="and_ln412_fu_379">
 <pin_list>
 <pin id="660712" dir="0" index="0" bw="1" slack="0"/>
 <pin id="660713" dir="0" index="1" bw="1" slack="0"/>
@@ -1262,18 +1243,18 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="tmp_7/8 "/>
+<opset="and_ln412/8 "/>
 </bind>
 </comp>
 
-<comp id="385" class="1004" name="tmp_8_fu_385">
+<comp id="385" class="1004" name="zext_ln415_fu_385">
 <pin_list>
 <pin id="661062" dir="0" index="0" bw="1" slack="0"/>
 <pin id="661063" dir="1" index="1" bw="40" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_8/8 "/>
+<opset="zext_ln415/8 "/>
 </bind>
 </comp>
 
@@ -1285,7 +1266,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="x_1_V/2 ret_V/13 ret_V_1/10 "/>
+<opset="x_1_V/2 ret_V/13 ret_V_4/10 "/>
 </bind>
 </comp>
 
@@ -1314,7 +1295,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="423" class="1004" name="tmp_18_fu_423">
+<comp id="423" class="1004" name="tmp_8_fu_423">
 <pin_list>
 <pin id="667532" dir="0" index="0" bw="1" slack="0"/>
 <pin id="667533" dir="0" index="1" bw="80" slack="2"/>
@@ -1323,11 +1304,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_18/8 "/>
+<opset="tmp_8/8 "/>
 </bind>
 </comp>
 
-<comp id="430" class="1004" name="rev1_fu_430">
+<comp id="430" class="1004" name="xor_ln779_fu_430">
 <pin_list>
 <pin id="670566" dir="0" index="0" bw="1" slack="0"/>
 <pin id="670567" dir="0" index="1" bw="1" slack="0"/>
@@ -1335,11 +1316,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="rev1/8 "/>
+<opset="xor_ln779/8 "/>
 </bind>
 </comp>
 
-<comp id="436" class="1004" name="p_s_fu_436">
+<comp id="436" class="1004" name="and_ln779_fu_436">
 <pin_list>
 <pin id="660718" dir="0" index="0" bw="1" slack="1"/>
 <pin id="660719" dir="0" index="1" bw="1" slack="0"/>
@@ -1347,7 +1328,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="p_s/8 "/>
+<opset="and_ln779/8 "/>
 </bind>
 </comp>
 
@@ -1364,7 +1345,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="448" class="1004" name="brmerge968_demorgan_fu_448">
+<comp id="448" class="1004" name="and_ln786_fu_448">
 <pin_list>
 <pin id="670538" dir="0" index="0" bw="1" slack="0"/>
 <pin id="670539" dir="0" index="1" bw="1" slack="0"/>
@@ -1372,7 +1353,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="brmerge968_demorgan/8 "/>
+<opset="and_ln786/8 "/>
 </bind>
 </comp>
 
@@ -1385,11 +1366,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="p_2/3 p_6/2 p_1/12 p_3/9 "/>
+<opset="select_ln388_3/3 select_ln388_1/2 select_ln388_2/12 select_ln388/9 "/>
 </bind>
 </comp>
 
-<comp id="459" class="1004" name="phitmp966_demorgan_fu_459">
+<comp id="459" class="1004" name="and_ln781_fu_459">
 <pin_list>
 <pin id="661455" dir="0" index="0" bw="1" slack="1"/>
 <pin id="661456" dir="0" index="1" bw="1" slack="2"/>
@@ -1397,11 +1378,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="phitmp966_demorgan/9 "/>
+<opset="and_ln781/9 "/>
 </bind>
 </comp>
 
-<comp id="463" class="1004" name="p_not_fu_463">
+<comp id="463" class="1004" name="xor_ln785_fu_463">
 <pin_list>
 <pin id="661935" dir="0" index="0" bw="1" slack="0"/>
 <pin id="661936" dir="0" index="1" bw="1" slack="0"/>
@@ -1409,11 +1390,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="p_not/9 "/>
+<opset="xor_ln785/9 "/>
 </bind>
 </comp>
 
-<comp id="469" class="1004" name="brmerge_fu_469">
+<comp id="469" class="1004" name="or_ln785_fu_469">
 <pin_list>
 <pin id="662282" dir="0" index="0" bw="1" slack="1"/>
 <pin id="662283" dir="0" index="1" bw="1" slack="0"/>
@@ -1421,11 +1402,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="brmerge/9 "/>
+<opset="or_ln785/9 "/>
 </bind>
 </comp>
 
-<comp id="474" class="1004" name="tmp_9_fu_474">
+<comp id="474" class="1004" name="xor_ln785_1_fu_474">
 <pin_list>
 <pin id="661941" dir="0" index="0" bw="1" slack="3"/>
 <pin id="661942" dir="0" index="1" bw="1" slack="0"/>
@@ -1433,7 +1414,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="tmp_9/9 "/>
+<opset="xor_ln785_1/9 "/>
 </bind>
 </comp>
 
@@ -1449,7 +1430,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="485" class="1004" name="tmp2_demorgan_fu_485">
+<comp id="485" class="1004" name="or_ln786_fu_485">
 <pin_list>
 <pin id="662288" dir="0" index="0" bw="1" slack="0"/>
 <pin id="662289" dir="0" index="1" bw="1" slack="1"/>
@@ -1457,11 +1438,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="tmp2_demorgan/9 "/>
+<opset="or_ln786/9 "/>
 </bind>
 </comp>
 
-<comp id="490" class="1004" name="tmp2_fu_490">
+<comp id="490" class="1004" name="xor_ln786_fu_490">
 <pin_list>
 <pin id="663903" dir="0" index="0" bw="1" slack="0"/>
 <pin id="663904" dir="0" index="1" bw="1" slack="0"/>
@@ -1469,7 +1450,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="tmp2/9 "/>
+<opset="xor_ln786/9 "/>
 </bind>
 </comp>
 
@@ -1485,7 +1466,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="501" class="1004" name="brmerge2_fu_501">
+<comp id="501" class="1004" name="or_ln340_fu_501">
 <pin_list>
 <pin id="662392" dir="0" index="0" bw="1" slack="0"/>
 <pin id="662393" dir="0" index="1" bw="1" slack="0"/>
@@ -1493,11 +1474,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="brmerge2/9 "/>
+<opset="or_ln340/9 "/>
 </bind>
 </comp>
 
-<comp id="507" class="1004" name="tmp3_fu_507">
+<comp id="507" class="1004" name="or_ln340_2_fu_507">
 <pin_list>
 <pin id="662398" dir="0" index="0" bw="1" slack="1"/>
 <pin id="662399" dir="0" index="1" bw="1" slack="0"/>
@@ -1505,11 +1486,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="tmp3/9 "/>
+<opset="or_ln340_2/9 "/>
 </bind>
 </comp>
 
-<comp id="512" class="1004" name="p_1000_not_fu_512">
+<comp id="512" class="1004" name="or_ln340_1_fu_512">
 <pin_list>
 <pin id="664314" dir="0" index="0" bw="1" slack="0"/>
 <pin id="664315" dir="0" index="1" bw="1" slack="0"/>
@@ -1517,18 +1498,18 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="p_1000_not/9 "/>
+<opset="or_ln340_1/9 "/>
 </bind>
 </comp>
 
-<comp id="540" class="1004" name="tmp_23_fu_540">
+<comp id="540" class="1004" name="trunc_ln718_1_fu_540">
 <pin_list>
 <pin id="660078" dir="0" index="0" bw="80" slack="0"/>
 <pin id="660079" dir="1" index="1" bw="34" slack="1"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="tmp_23/9 "/>
+<opset="trunc_ln718_1/9 "/>
 </bind>
 </comp>
 
@@ -1545,14 +1526,14 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="551" class="1004" name="rhs_V_1_cast_fu_551">
+<comp id="551" class="1004" name="sext_ln728_fu_551">
 <pin_list>
 <pin id="657197" dir="0" index="0" bw="75" slack="0"/>
 <pin id="657198" dir="1" index="1" bw="80" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="rhs_V_1_cast/10 "/>
+<opset="sext_ln728/10 "/>
 </bind>
 </comp>
 
@@ -1577,11 +1558,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="r_1/7 r_3/10 "/>
+<opset="r_1/7 r_2/10 "/>
 </bind>
 </comp>
 
-<comp id="573" class="1004" name="tmp_5_fu_573">
+<comp id="573" class="1004" name="tmp_fu_573">
 <pin_list>
 <pin id="662725" dir="0" index="0" bw="4" slack="0"/>
 <pin id="662726" dir="0" index="1" bw="80" slack="0"/>
@@ -1591,11 +1572,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_5/10 "/>
+<opset="tmp/10 "/>
 </bind>
 </comp>
 
-<comp id="583" class="1004" name="tmp_s_fu_583">
+<comp id="583" class="1004" name="tmp_1_fu_583">
 <pin_list>
 <pin id="662875" dir="0" index="0" bw="5" slack="0"/>
 <pin id="662876" dir="0" index="1" bw="80" slack="0"/>
@@ -1605,7 +1586,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_s/10 "/>
+<opset="tmp_1/10 "/>
 </bind>
 </comp>
 
@@ -1623,7 +1604,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="607" class="1004" name="tmp_22_fu_607">
+<comp id="607" class="1004" name="tmp_12_fu_607">
 <pin_list>
 <pin id="663036" dir="0" index="0" bw="1" slack="0"/>
 <pin id="663037" dir="0" index="1" bw="80" slack="1"/>
@@ -1632,7 +1613,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_22/11 "/>
+<opset="tmp_12/11 "/>
 </bind>
 </comp>
 
@@ -1649,7 +1630,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="621" class="1004" name="r_2_fu_621">
+<comp id="621" class="1004" name="r_3_fu_621">
 <pin_list>
 <pin id="670510" dir="0" index="0" bw="1" slack="1"/>
 <pin id="670511" dir="0" index="1" bw="1" slack="0"/>
@@ -1657,11 +1638,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="r_2/11 "/>
+<opset="r_3/11 "/>
 </bind>
 </comp>
 
-<comp id="626" class="1004" name="tmp_25_fu_626">
+<comp id="626" class="1004" name="tmp_14_fu_626">
 <pin_list>
 <pin id="667543" dir="0" index="0" bw="1" slack="0"/>
 <pin id="667544" dir="0" index="1" bw="80" slack="1"/>
@@ -1670,11 +1651,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_25/11 "/>
+<opset="tmp_14/11 "/>
 </bind>
 </comp>
 
-<comp id="633" class="1004" name="tmp_6_fu_633">
+<comp id="633" class="1004" name="and_ln412_1_fu_633">
 <pin_list>
 <pin id="663245" dir="0" index="0" bw="1" slack="0"/>
 <pin id="663246" dir="0" index="1" bw="1" slack="0"/>
@@ -1682,18 +1663,18 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="tmp_6/11 "/>
+<opset="and_ln412_1/11 "/>
 </bind>
 </comp>
 
-<comp id="639" class="1004" name="tmp_2_fu_639">
+<comp id="639" class="1004" name="zext_ln415_1_fu_639">
 <pin_list>
 <pin id="661066" dir="0" index="0" bw="1" slack="0"/>
 <pin id="661067" dir="1" index="1" bw="40" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="tmp_2/11 "/>
+<opset="zext_ln415_1/11 "/>
 </bind>
 </comp>
 
@@ -1705,7 +1686,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="rev/8 rev2/11 "/>
+<opset="xor_ln416/8 xor_ln416_1/11 "/>
 </bind>
 </comp>
 
@@ -1770,7 +1751,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="692" class="1004" name="tmp_28_fu_692">
+<comp id="692" class="1004" name="tmp_17_fu_692">
 <pin_list>
 <pin id="667558" dir="0" index="0" bw="1" slack="0"/>
 <pin id="667559" dir="0" index="1" bw="80" slack="1"/>
@@ -1779,11 +1760,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
-<opset="tmp_28/11 "/>
+<opset="tmp_17/11 "/>
 </bind>
 </comp>
 
-<comp id="699" class="1004" name="rev3_fu_699">
+<comp id="699" class="1004" name="xor_ln779_1_fu_699">
 <pin_list>
 <pin id="670560" dir="0" index="0" bw="1" slack="0"/>
 <pin id="670561" dir="0" index="1" bw="1" slack="0"/>
@@ -1791,11 +1772,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="rev3/11 "/>
+<opset="xor_ln779_1/11 "/>
 </bind>
 </comp>
 
-<comp id="705" class="1004" name="p_7_fu_705">
+<comp id="705" class="1004" name="and_ln779_1_fu_705">
 <pin_list>
 <pin id="663251" dir="0" index="0" bw="1" slack="0"/>
 <pin id="663252" dir="0" index="1" bw="1" slack="0"/>
@@ -1803,7 +1784,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="p_7/11 "/>
+<opset="and_ln779_1/11 "/>
 </bind>
 </comp>
 
@@ -1820,7 +1801,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="719" class="1004" name="brmerge980_demorgan_fu_719">
+<comp id="719" class="1004" name="and_ln786_3_fu_719">
 <pin_list>
 <pin id="670504" dir="0" index="0" bw="1" slack="0"/>
 <pin id="670505" dir="0" index="1" bw="1" slack="0"/>
@@ -1828,7 +1809,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="brmerge980_demorgan/11 "/>
+<opset="and_ln786_3/11 "/>
 </bind>
 </comp>
 
@@ -1845,7 +1826,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="735" class="1004" name="phitmp964_demorgan_fu_735">
+<comp id="735" class="1004" name="and_ln781_1_fu_735">
 <pin_list>
 <pin id="663429" dir="0" index="0" bw="1" slack="1"/>
 <pin id="663430" dir="0" index="1" bw="1" slack="1"/>
@@ -1853,11 +1834,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="phitmp964_demorgan/12 "/>
+<opset="and_ln781_1/12 "/>
 </bind>
 </comp>
 
-<comp id="739" class="1004" name="p_not2_fu_739">
+<comp id="739" class="1004" name="xor_ln785_2_fu_739">
 <pin_list>
 <pin id="663869" dir="0" index="0" bw="1" slack="0"/>
 <pin id="663870" dir="0" index="1" bw="1" slack="0"/>
@@ -1865,11 +1846,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="p_not2/12 "/>
+<opset="xor_ln785_2/12 "/>
 </bind>
 </comp>
 
-<comp id="745" class="1004" name="brmerge7_fu_745">
+<comp id="745" class="1004" name="or_ln785_1_fu_745">
 <pin_list>
 <pin id="664198" dir="0" index="0" bw="1" slack="1"/>
 <pin id="664199" dir="0" index="1" bw="1" slack="0"/>
@@ -1877,11 +1858,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="brmerge7/12 "/>
+<opset="or_ln785_1/12 "/>
 </bind>
 </comp>
 
-<comp id="750" class="1004" name="tmp_4_fu_750">
+<comp id="750" class="1004" name="xor_ln785_3_fu_750">
 <pin_list>
 <pin id="663875" dir="0" index="0" bw="1" slack="2"/>
 <pin id="663876" dir="0" index="1" bw="1" slack="0"/>
@@ -1889,7 +1870,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="tmp_4/12 "/>
+<opset="xor_ln785_3/12 "/>
 </bind>
 </comp>
 
@@ -1905,7 +1886,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="761" class="1004" name="tmp4_demorgan_fu_761">
+<comp id="761" class="1004" name="or_ln786_1_fu_761">
 <pin_list>
 <pin id="664204" dir="0" index="0" bw="1" slack="0"/>
 <pin id="664205" dir="0" index="1" bw="1" slack="1"/>
@@ -1913,11 +1894,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="tmp4_demorgan/12 "/>
+<opset="or_ln786_1/12 "/>
 </bind>
 </comp>
 
-<comp id="766" class="1004" name="tmp4_fu_766">
+<comp id="766" class="1004" name="xor_ln786_2_fu_766">
 <pin_list>
 <pin id="661998" dir="0" index="0" bw="1" slack="0"/>
 <pin id="661999" dir="0" index="1" bw="1" slack="0"/>
@@ -1925,7 +1906,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="tmp4/12 "/>
+<opset="xor_ln786_2/12 "/>
 </bind>
 </comp>
 
@@ -1941,7 +1922,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="777" class="1004" name="brmerge9_fu_777">
+<comp id="777" class="1004" name="or_ln340_4_fu_777">
 <pin_list>
 <pin id="664272" dir="0" index="0" bw="1" slack="0"/>
 <pin id="664273" dir="0" index="1" bw="1" slack="0"/>
@@ -1949,11 +1930,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="brmerge9/12 "/>
+<opset="or_ln340_4/12 "/>
 </bind>
 </comp>
 
-<comp id="783" class="1004" name="tmp5_fu_783">
+<comp id="783" class="1004" name="or_ln340_5_fu_783">
 <pin_list>
 <pin id="664278" dir="0" index="0" bw="1" slack="1"/>
 <pin id="664279" dir="0" index="1" bw="1" slack="0"/>
@@ -1961,11 +1942,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="tmp5/12 "/>
+<opset="or_ln340_5/12 "/>
 </bind>
 </comp>
 
-<comp id="788" class="1004" name="p_1001_not_fu_788">
+<comp id="788" class="1004" name="or_ln340_6_fu_788">
 <pin_list>
 <pin id="664180" dir="0" index="0" bw="1" slack="0"/>
 <pin id="664181" dir="0" index="1" bw="1" slack="0"/>
@@ -1973,7 +1954,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="p_1001_not/12 "/>
+<opset="or_ln340_6/12 "/>
 </bind>
 </comp>
 
@@ -1986,7 +1967,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="p_mux3/3 p_mux1/2 p_mux2/12 p_mux/9 "/>
+<opset="select_ln340_3/3 select_ln340_1/2 select_ln340_2/12 select_ln340/9 "/>
 </bind>
 </comp>
 
@@ -2023,14 +2004,14 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="831" class="1004" name="tmp_12_fu_831">
+<comp id="831" class="1004" name="sext_ln1118_fu_831">
 <pin_list>
 <pin id="656430" dir="0" index="0" bw="41" slack="1"/>
 <pin id="656431" dir="1" index="1" bw="81" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="tmp_12/14 "/>
+<opset="sext_ln1118/14 "/>
 </bind>
 </comp>
 
@@ -2047,14 +2028,14 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="847" class="1004" name="tmp_14_fu_847">
+<comp id="847" class="1004" name="sext_ln1497_fu_847">
 <pin_list>
 <pin id="656481" dir="0" index="0" bw="73" slack="0"/>
 <pin id="656482" dir="1" index="1" bw="81" slack="0"/>
 </pin_list>
 <bind>
 <opcode="sext(35) " fcode="sext"/>
-<opset="tmp_14/20 "/>
+<opset="sext_ln1497/20 "/>
 </bind>
 </comp>
 
@@ -2066,11 +2047,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="notrhs/11 slt/20 "/>
+<opset="icmp_ln1497_1/11 icmp_ln1497/20 "/>
 </bind>
 </comp>
 
-<comp id="856" class="1004" name="rev4_fu_856">
+<comp id="856" class="1004" name="xor_ln1497_fu_856">
 <pin_list>
 <pin id="670572" dir="0" index="0" bw="1" slack="0"/>
 <pin id="670573" dir="0" index="1" bw="1" slack="0"/>
@@ -2078,11 +2059,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="xor(25) " fcode="xor"/>
-<opset="rev4/20 "/>
+<opset="xor_ln1497/20 "/>
 </bind>
 </comp>
 
-<comp id="862" class="1004" name="not_sel_tmp_fu_862">
+<comp id="862" class="1004" name="or_ln1497_fu_862">
 <pin_list>
 <pin id="669457" dir="0" index="0" bw="1" slack="9"/>
 <pin id="669458" dir="0" index="1" bw="1" slack="0"/>
@@ -2090,7 +2071,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </pin_list>
 <bind>
 <opcode="or(24) " fcode="or"/>
-<opset="not_sel_tmp/20 "/>
+<opset="or_ln1497/20 "/>
 </bind>
 </comp>
 
@@ -2114,13 +2095,13 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="891" class="1005" name="tmp_31_reg_891">
+<comp id="891" class="1005" name="tmp_20_reg_891">
 <pin_list>
 <pin id="892" dir="0" index="0" bw="1" slack="1"/>
 <pin id="893" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_31 "/>
+<opset="tmp_20 "/>
 </bind>
 </comp>
 
@@ -2140,7 +2121,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 <pin id="905" dir="1" index="1" bw="80" slack="1"/>
 </pin_list>
 <bind>
-<opset="r_V_2 p_0424_1 p_Val2_6 "/>
+<opset="r_V_2 select_ln340_7 p_Val2_6 "/>
 </bind>
 </comp>
 
@@ -2150,7 +2131,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 <pin id="916" dir="1" index="1" bw="5" slack="1"/>
 </pin_list>
 <bind>
-<opset="p_Result_1 tmp_s "/>
+<opset="p_Result_1 tmp_1 "/>
 </bind>
 </comp>
 
@@ -2160,7 +2141,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 <pin id="931" dir="1" index="1" bw="40" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_3 p_Val2_10 tmp_23 y2_V_1 q_V_1 xp1_V "/>
+<opset="trunc_ln718 p_Val2_12 trunc_ln718_1 y2_V_1 q_V_1 xp1_V "/>
 </bind>
 </comp>
 
@@ -2234,13 +2215,13 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="990" class="1005" name="brmerge968_demorgan_reg_990">
+<comp id="990" class="1005" name="and_ln786_reg_990">
 <pin_list>
 <pin id="991" dir="0" index="0" bw="1" slack="1"/>
 <pin id="992" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="brmerge968_demorgan "/>
+<opset="and_ln786 "/>
 </bind>
 </comp>
 
@@ -2254,13 +2235,13 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="1026" class="1005" name="r_3_reg_1026">
+<comp id="1026" class="1005" name="r_2_reg_1026">
 <pin_list>
 <pin id="1027" dir="0" index="0" bw="1" slack="1"/>
 <pin id="1028" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="r_3 "/>
+<opset="r_2 "/>
 </bind>
 </comp>
 
@@ -2280,7 +2261,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 <pin id="1039" dir="1" index="1" bw="4" slack="1"/>
 </pin_list>
 <bind>
-<opset="p_Result_s_15 tmp_5 "/>
+<opset="p_Result_s_15 tmp "/>
 </bind>
 </comp>
 
@@ -2324,23 +2305,23 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 </bind>
 </comp>
 
-<comp id="1081" class="1005" name="notrhs_reg_1081">
+<comp id="1081" class="1005" name="icmp_ln1497_1_reg_1081">
 <pin_list>
 <pin id="1082" dir="0" index="0" bw="1" slack="9"/>
 <pin id="1083" dir="1" index="1" bw="1" slack="9"/>
 </pin_list>
 <bind>
-<opset="notrhs "/>
+<opset="icmp_ln1497_1 "/>
 </bind>
 </comp>
 
-<comp id="1087" class="1005" name="brmerge980_demorgan_reg_1087">
+<comp id="1087" class="1005" name="and_ln786_3_reg_1087">
 <pin_list>
 <pin id="1088" dir="0" index="0" bw="1" slack="1"/>
 <pin id="1089" dir="1" index="1" bw="1" slack="1"/>
 </pin_list>
 <bind>
-<opset="brmerge980_demorgan "/>
+<opset="and_ln786_3 "/>
 </bind>
 </comp>
 
@@ -2350,7 +2331,7 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 <pin id="1115" dir="1" index="1" bw="81" slack="1"/>
 </pin_list>
 <bind>
-<opset="r_V_10 r_V_9 r_V r_V_5 ret_V tmp_12 ret_V_1 "/>
+<opset="r_V_10 r_V_9 r_V r_V_5 ret_V sext_ln1118 ret_V_4 "/>
 </bind>
 </comp>
 
@@ -3000,74 +2981,74 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 		ret_V_5 : 1
 		p_Result_4 : 2
 		p_Result_5 : 1
-		tmp_1 : 2
+		xor_ln786_1 : 2
 		underflow_1 : 2
-		brmerge5 : 3
-		signbit_i_i_i_i169 : 3
-		brmerge6 : 3
-		p_mux1 : 3
-		p_6 : 2
+		xor_ln340 : 3
+		xor_ln340_1 : 3
+		or_ln340_3 : 3
+		select_ln340_1 : 3
+		select_ln388_1 : 2
 		p_Val2_13 : 3
 		ret_V_7 : 1
 		p_Result_9 : 2
 		p_Result_10 : 1
-		tmp_31 : 2
+		tmp_20 : 2
 	State 3
-		p_0424_1 : 1
+		select_ln340_7 : 1
 	State 4
 		r_V_10 : 1
 		r_V_11 : 1
 	State 5
 	State 6
 		p_Result_s : 1
-		tmp_3 : 1
+		trunc_ln718 : 1
 		p_Result_s_15 : 1
 		p_Result_1 : 1
 	State 7
 	State 8
 		r : 1
-		tmp_7 : 1
-		tmp_8 : 1
+		and_ln412 : 1
+		zext_ln415 : 1
 		y2_V_1 : 2
-		tmp_13 : 3
-		rev : 4
+		tmp_6 : 3
+		xor_ln416 : 4
 		carry_1 : 4
 		p_Result_3 : 3
-		rev1 : 1
-		p_s : 1
+		xor_ln779 : 1
+		and_ln779 : 1
 		deleted_ones : 4
-		brmerge968_demorgan : 5
+		and_ln786 : 5
 	State 9
-		p_not : 1
-		brmerge : 1
+		xor_ln785 : 1
+		or_ln785 : 1
 		overflow : 1
 		p_Val2_6 : 1
-		tmp_23 : 1
+		trunc_ln718_1 : 1
 	State 10
-		rhs_V_1_cast : 1
+		sext_ln728 : 1
 		ret_V_6 : 2
 		p_Result_6 : 3
-		tmp_5 : 3
-		tmp_s : 3
-		ret_V_1 : 2
+		tmp : 3
+		tmp_1 : 3
+		ret_V_4 : 2
 	State 11
-		r_2 : 1
-		tmp_6 : 1
-		tmp_2 : 1
+		r_3 : 1
+		and_ln412_1 : 1
+		zext_ln415_1 : 1
 		q_V_1 : 2
-		tmp_26 : 3
-		rev2 : 4
+		tmp_15 : 3
+		xor_ln416_1 : 4
 		carry_3 : 4
 		p_Result_8 : 3
-		rev3 : 1
-		p_7 : 1
+		xor_ln779_1 : 1
+		and_ln779_1 : 1
 		deleted_ones_2 : 4
-		brmerge980_demorgan : 5
+		and_ln786_3 : 5
 	State 12
-		p_not2 : 1
-		brmerge7 : 1
+		xor_ln785_2 : 1
+		or_ln785_1 : 1
 		overflow_1 : 1
-		p_Val2_10 : 1
+		p_Val2_12 : 1
 	State 13
 		ret_V : 1
 	State 14
@@ -3078,11 +3059,11 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 	State 18
 	State 19
 	State 20
-		tmp_14 : 1
-		slt : 2
-		rev4 : 3
-		not_sel_tmp : 3
-		StgValue_174 : 3
+		sext_ln1497 : 1
+		icmp_ln1497 : 2
+		xor_ln1497 : 3
+		or_ln1497 : 3
+		ret_ln27 : 3
 
 
 ============================================================
@@ -3090,171 +3071,171 @@ StgValue_174        (ret           ) [ 000000000000000000000]
 ============================================================
 
 * Functional unit list:
-|----------|----------------------------|---------|---------|---------|
-| Operation|       Functional Unit      |  DSP48E |    FF   |   LUT   |
-|----------|----------------------------|---------|---------|---------|
-|    mul   |          grp_fu_82         |    5    |   287   |    19   |
-|          |         grp_fu_277         |    5    |   281   |    19   |
-|----------|----------------------------|---------|---------|---------|
-|          |          grp_fu_92         |    0    |    0    |    87   |
-|    add   |       ret_V_7_fu_174       |    0    |    0    |    47   |
-|          |       ret_V_5_fu_188       |    0    |    0    |    47   |
-|          |         grp_fu_389         |    0    |    0    |    87   |
-|----------|----------------------------|---------|---------|---------|
-|          |         grp_fu_150         |    0    |    0    |    40   |
-|          |    deleted_zeros_fu_252    |    0    |    0    |    2    |
-|          |     deleted_ones_fu_441    |    0    |    0    |    2    |
-|  select  |         grp_fu_454         |    0    |    0    |    40   |
-|          |    deleted_ones_2_fu_711   |    0    |    0    |    2    |
-|          |   deleted_zeros_1_fu_730   |    0    |    0    |    2    |
-|          |         grp_fu_794         |    0    |    0    |    40   |
-|----------|----------------------------|---------|---------|---------|
-|          |         grp_fu_568         |    0    |    0    |    21   |
-|          |         grp_fu_677         |    0    |    0    |    11   |
-|   icmp   |         grp_fu_682         |    0    |    0    |    11   |
-|          |         grp_fu_687         |    0    |    0    |    9    |
-|          |         grp_fu_851         |    0    |    0    |    50   |
-|----------|----------------------------|---------|---------|---------|
-|          |     underflow_1_fu_126     |    0    |    0    |    2    |
-|          |      overflow_2_fu_219     |    0    |    0    |    2    |
-|          |  brmerge12_demorgan_fu_225 |    0    |    0    |    2    |
-|          |     underflow_3_fu_235     |    0    |    0    |    2    |
-|          |        tmp_7_fu_379        |    0    |    0    |    2    |
-|          |       carry_1_fu_409       |    0    |    0    |    2    |
-|          |         p_s_fu_436         |    0    |    0    |    2    |
-|          | brmerge968_demorgan_fu_448 |    0    |    0    |    2    |
-|    and   |  phitmp966_demorgan_fu_459 |    0    |    0    |    2    |
-|          |       overflow_fu_479      |    0    |    0    |    2    |
-|          |      underflow_fu_496      |    0    |    0    |    2    |
-|          |        tmp_6_fu_633        |    0    |    0    |    2    |
-|          |       carry_3_fu_663       |    0    |    0    |    2    |
-|          |         p_7_fu_705         |    0    |    0    |    2    |
-|          | brmerge980_demorgan_fu_719 |    0    |    0    |    2    |
-|          |  phitmp964_demorgan_fu_735 |    0    |    0    |    2    |
-|          |      overflow_1_fu_755     |    0    |    0    |    2    |
-|          |     underflow_2_fu_772     |    0    |    0    |    2    |
-|----------|----------------------------|---------|---------|---------|
-|          |       brmerge6_fu_144      |    0    |    0    |    2    |
-|          |       brmerge1_fu_210      |    0    |    0    |    2    |
-|          |       brmerge4_fu_240      |    0    |    0    |    2    |
-|          |      p_997_not_fu_246      |    0    |    0    |    2    |
-|          |          r_fu_367          |    0    |    0    |    2    |
-|          |       brmerge_fu_469       |    0    |    0    |    2    |
-|          |    tmp2_demorgan_fu_485    |    0    |    0    |    2    |
-|          |       brmerge2_fu_501      |    0    |    0    |    2    |
-|    or    |         tmp3_fu_507        |    0    |    0    |    2    |
-|          |      p_1000_not_fu_512     |    0    |    0    |    2    |
-|          |         r_2_fu_621         |    0    |    0    |    2    |
-|          |       brmerge7_fu_745      |    0    |    0    |    2    |
-|          |    tmp4_demorgan_fu_761    |    0    |    0    |    2    |
-|          |       brmerge9_fu_777      |    0    |    0    |    2    |
-|          |         tmp5_fu_783        |    0    |    0    |    2    |
-|          |      p_1001_not_fu_788     |    0    |    0    |    2    |
-|          |     not_sel_tmp_fu_862     |    0    |    0    |    2    |
-|----------|----------------------------|---------|---------|---------|
-|          |        tmp_1_fu_120        |    0    |    0    |    2    |
-|          |       brmerge5_fu_132      |    0    |    0    |    2    |
-|          |  signbit_i_i_i_i169_fu_138 |    0    |    0    |    2    |
-|          |        tmp_10_fu_214       |    0    |    0    |    2    |
-|          |       brmerge3_fu_229      |    0    |    0    |    2    |
-|          |         rev1_fu_430        |    0    |    0    |    2    |
-|          |        p_not_fu_463        |    0    |    0    |    2    |
-|    xor   |        tmp_9_fu_474        |    0    |    0    |    2    |
-|          |         tmp2_fu_490        |    0    |    0    |    2    |
-|          |         grp_fu_657         |    0    |    0    |    2    |
-|          |         rev3_fu_699        |    0    |    0    |    2    |
-|          |        p_not2_fu_739       |    0    |    0    |    2    |
-|          |        tmp_4_fu_750        |    0    |    0    |    2    |
-|          |         tmp4_fu_766        |    0    |    0    |    2    |
-|          |         rev4_fu_856        |    0    |    0    |    2    |
-|----------|----------------------------|---------|---------|---------|
-|   read   |     y_V_read_read_fu_66    |    0    |    0    |    0    |
-|          |     x_V_read_read_fu_72    |    0    |    0    |    0    |
-|----------|----------------------------|---------|---------|---------|
-|          |          r_V_fu_78         |    0    |    0    |    0    |
-|          |         lhs_V_fu_88        |    0    |    0    |    0    |
-|          |        r_V_2_fu_274        |    0    |    0    |    0    |
-|          |        r_V_7_fu_283        |    0    |    0    |    0    |
-|   sext   |     rhs_V_1_cast_fu_551    |    0    |    0    |    0    |
-|          |       lhs_V_1_fu_816       |    0    |    0    |    0    |
-|          |       rhs_V_1_fu_819       |    0    |    0    |    0    |
-|          |        r_V_4_fu_828        |    0    |    0    |    0    |
-|          |        tmp_12_fu_831       |    0    |    0    |    0    |
-|          |        tmp_14_fu_847       |    0    |    0    |    0    |
-|----------|----------------------------|---------|---------|---------|
-|          |      p_Result_4_fu_98      |    0    |    0    |    0    |
-|          |      p_Result_5_fu_112     |    0    |    0    |    0    |
-|          |      p_Result_9_fu_180     |    0    |    0    |    0    |
-|          |         grp_fu_194         |    0    |    0    |    0    |
-|          |        tmp_31_fu_202       |    0    |    0    |    0    |
-|          |      p_Result_s_fu_292     |    0    |    0    |    0    |
-|          |         tmp_fu_353         |    0    |    0    |    0    |
-|          |      p_Result_2_fu_360     |    0    |    0    |    0    |
-| bitselect|        tmp_11_fu_372       |    0    |    0    |    0    |
-|          |         grp_fu_415         |    0    |    0    |    0    |
-|          |        tmp_18_fu_423       |    0    |    0    |    0    |
-|          |      p_Result_6_fu_560     |    0    |    0    |    0    |
-|          |        tmp_22_fu_607       |    0    |    0    |    0    |
-|          |      p_Result_7_fu_614     |    0    |    0    |    0    |
-|          |        tmp_25_fu_626       |    0    |    0    |    0    |
-|          |      p_Result_3_fu_669     |    0    |    0    |    0    |
-|          |        tmp_28_fu_692       |    0    |    0    |    0    |
-|----------|----------------------------|---------|---------|---------|
-|   trunc  |        tmp_3_fu_300        |    0    |    0    |    0    |
-|          |        tmp_23_fu_540       |    0    |    0    |    0    |
-|----------|----------------------------|---------|---------|---------|
-|          |    p_Result_s_15_fu_304    |    0    |    0    |    0    |
-|          |      p_Result_1_fu_314     |    0    |    0    |    0    |
-|partselect|         y2_V_fu_344        |    0    |    0    |    0    |
-|          |        tmp_5_fu_573        |    0    |    0    |    0    |
-|          |        tmp_s_fu_583        |    0    |    0    |    0    |
-|          |         q_V_fu_598         |    0    |    0    |    0    |
-|----------|----------------------------|---------|---------|---------|
-|   zext   |        tmp_8_fu_385        |    0    |    0    |    0    |
-|          |        tmp_2_fu_639        |    0    |    0    |    0    |
-|----------|----------------------------|---------|---------|---------|
-|bitconcatenate|        rhs_V_fu_544        |    0    |    0    |    0    |
-|          |        r_V_6_fu_840        |    0    |    0    |    0    |
-|----------|----------------------------|---------|---------|---------|
-|   Total  |                            |    10   |   568   |   636   |
-|----------|----------------------------|---------|---------|---------|
+|----------|------------------------|---------|---------|---------|
+| Operation|     Functional Unit    |  DSP48E |    FF   |   LUT   |
+|----------|------------------------|---------|---------|---------|
+|    mul   |        grp_fu_82       |    5    |   287   |    19   |
+|          |       grp_fu_277       |    5    |   281   |    19   |
+|----------|------------------------|---------|---------|---------|
+|          |        grp_fu_92       |    0    |    0    |    87   |
+|    add   |     ret_V_7_fu_174     |    0    |    0    |    47   |
+|          |     ret_V_5_fu_188     |    0    |    0    |    47   |
+|          |       grp_fu_389       |    0    |    0    |    87   |
+|----------|------------------------|---------|---------|---------|
+|          |       grp_fu_150       |    0    |    0    |    40   |
+|          |  deleted_zeros_fu_252  |    0    |    0    |    2    |
+|          |   deleted_ones_fu_441  |    0    |    0    |    2    |
+|  select  |       grp_fu_454       |    0    |    0    |    40   |
+|          |  deleted_ones_2_fu_711 |    0    |    0    |    2    |
+|          | deleted_zeros_1_fu_730 |    0    |    0    |    2    |
+|          |       grp_fu_794       |    0    |    0    |    40   |
+|----------|------------------------|---------|---------|---------|
+|          |       grp_fu_568       |    0    |    0    |    21   |
+|          |       grp_fu_677       |    0    |    0    |    11   |
+|   icmp   |       grp_fu_682       |    0    |    0    |    11   |
+|          |       grp_fu_687       |    0    |    0    |    9    |
+|          |       grp_fu_851       |    0    |    0    |    50   |
+|----------|------------------------|---------|---------|---------|
+|          |   underflow_1_fu_126   |    0    |    0    |    2    |
+|          |    overflow_2_fu_219   |    0    |    0    |    2    |
+|          |   and_ln786_5_fu_225   |    0    |    0    |    2    |
+|          |   underflow_3_fu_235   |    0    |    0    |    2    |
+|          |    and_ln412_fu_379    |    0    |    0    |    2    |
+|          |     carry_1_fu_409     |    0    |    0    |    2    |
+|          |    and_ln779_fu_436    |    0    |    0    |    2    |
+|          |    and_ln786_fu_448    |    0    |    0    |    2    |
+|    and   |    and_ln781_fu_459    |    0    |    0    |    2    |
+|          |     overflow_fu_479    |    0    |    0    |    2    |
+|          |    underflow_fu_496    |    0    |    0    |    2    |
+|          |   and_ln412_1_fu_633   |    0    |    0    |    2    |
+|          |     carry_3_fu_663     |    0    |    0    |    2    |
+|          |   and_ln779_1_fu_705   |    0    |    0    |    2    |
+|          |   and_ln786_3_fu_719   |    0    |    0    |    2    |
+|          |   and_ln781_1_fu_735   |    0    |    0    |    2    |
+|          |    overflow_1_fu_755   |    0    |    0    |    2    |
+|          |   underflow_2_fu_772   |    0    |    0    |    2    |
+|----------|------------------------|---------|---------|---------|
+|          |    or_ln340_3_fu_144   |    0    |    0    |    2    |
+|          |    or_ln785_2_fu_210   |    0    |    0    |    2    |
+|          |    or_ln340_7_fu_240   |    0    |    0    |    2    |
+|          |    or_ln340_8_fu_246   |    0    |    0    |    2    |
+|          |        r_fu_367        |    0    |    0    |    2    |
+|          |     or_ln785_fu_469    |    0    |    0    |    2    |
+|          |     or_ln786_fu_485    |    0    |    0    |    2    |
+|          |     or_ln340_fu_501    |    0    |    0    |    2    |
+|    or    |    or_ln340_2_fu_507   |    0    |    0    |    2    |
+|          |    or_ln340_1_fu_512   |    0    |    0    |    2    |
+|          |       r_3_fu_621       |    0    |    0    |    2    |
+|          |    or_ln785_1_fu_745   |    0    |    0    |    2    |
+|          |    or_ln786_1_fu_761   |    0    |    0    |    2    |
+|          |    or_ln340_4_fu_777   |    0    |    0    |    2    |
+|          |    or_ln340_5_fu_783   |    0    |    0    |    2    |
+|          |    or_ln340_6_fu_788   |    0    |    0    |    2    |
+|          |    or_ln1497_fu_862    |    0    |    0    |    2    |
+|----------|------------------------|---------|---------|---------|
+|          |   xor_ln786_1_fu_120   |    0    |    0    |    2    |
+|          |    xor_ln340_fu_132    |    0    |    0    |    2    |
+|          |   xor_ln340_1_fu_138   |    0    |    0    |    2    |
+|          |   xor_ln785_4_fu_214   |    0    |    0    |    2    |
+|          |   xor_ln786_3_fu_229   |    0    |    0    |    2    |
+|          |    xor_ln779_fu_430    |    0    |    0    |    2    |
+|          |    xor_ln785_fu_463    |    0    |    0    |    2    |
+|    xor   |   xor_ln785_1_fu_474   |    0    |    0    |    2    |
+|          |    xor_ln786_fu_490    |    0    |    0    |    2    |
+|          |       grp_fu_657       |    0    |    0    |    2    |
+|          |   xor_ln779_1_fu_699   |    0    |    0    |    2    |
+|          |   xor_ln785_2_fu_739   |    0    |    0    |    2    |
+|          |   xor_ln785_3_fu_750   |    0    |    0    |    2    |
+|          |   xor_ln786_2_fu_766   |    0    |    0    |    2    |
+|          |    xor_ln1497_fu_856   |    0    |    0    |    2    |
+|----------|------------------------|---------|---------|---------|
+|   read   |   y_V_read_read_fu_66  |    0    |    0    |    0    |
+|          |   x_V_read_read_fu_72  |    0    |    0    |    0    |
+|----------|------------------------|---------|---------|---------|
+|          |        r_V_fu_78       |    0    |    0    |    0    |
+|          |       lhs_V_fu_88      |    0    |    0    |    0    |
+|          |      r_V_2_fu_274      |    0    |    0    |    0    |
+|          |      r_V_7_fu_283      |    0    |    0    |    0    |
+|   sext   |    sext_ln728_fu_551   |    0    |    0    |    0    |
+|          |     lhs_V_1_fu_816     |    0    |    0    |    0    |
+|          |     rhs_V_1_fu_819     |    0    |    0    |    0    |
+|          |      r_V_4_fu_828      |    0    |    0    |    0    |
+|          |   sext_ln1118_fu_831   |    0    |    0    |    0    |
+|          |   sext_ln1497_fu_847   |    0    |    0    |    0    |
+|----------|------------------------|---------|---------|---------|
+|          |    p_Result_4_fu_98    |    0    |    0    |    0    |
+|          |    p_Result_5_fu_112   |    0    |    0    |    0    |
+|          |    p_Result_9_fu_180   |    0    |    0    |    0    |
+|          |       grp_fu_194       |    0    |    0    |    0    |
+|          |      tmp_20_fu_202     |    0    |    0    |    0    |
+|          |    p_Result_s_fu_292   |    0    |    0    |    0    |
+|          |      tmp_3_fu_353      |    0    |    0    |    0    |
+|          |    p_Result_2_fu_360   |    0    |    0    |    0    |
+| bitselect|      tmp_5_fu_372      |    0    |    0    |    0    |
+|          |       grp_fu_415       |    0    |    0    |    0    |
+|          |      tmp_8_fu_423      |    0    |    0    |    0    |
+|          |    p_Result_6_fu_560   |    0    |    0    |    0    |
+|          |      tmp_12_fu_607     |    0    |    0    |    0    |
+|          |    p_Result_7_fu_614   |    0    |    0    |    0    |
+|          |      tmp_14_fu_626     |    0    |    0    |    0    |
+|          |    p_Result_3_fu_669   |    0    |    0    |    0    |
+|          |      tmp_17_fu_692     |    0    |    0    |    0    |
+|----------|------------------------|---------|---------|---------|
+|   trunc  |   trunc_ln718_fu_300   |    0    |    0    |    0    |
+|          |  trunc_ln718_1_fu_540  |    0    |    0    |    0    |
+|----------|------------------------|---------|---------|---------|
+|          |  p_Result_s_15_fu_304  |    0    |    0    |    0    |
+|          |    p_Result_1_fu_314   |    0    |    0    |    0    |
+|partselect|       y2_V_fu_344      |    0    |    0    |    0    |
+|          |       tmp_fu_573       |    0    |    0    |    0    |
+|          |      tmp_1_fu_583      |    0    |    0    |    0    |
+|          |       q_V_fu_598       |    0    |    0    |    0    |
+|----------|------------------------|---------|---------|---------|
+|   zext   |    zext_ln415_fu_385   |    0    |    0    |    0    |
+|          |   zext_ln415_1_fu_639  |    0    |    0    |    0    |
+|----------|------------------------|---------|---------|---------|
+|bitconcatenate|      rhs_V_fu_544      |    0    |    0    |    0    |
+|          |      r_V_6_fu_840      |    0    |    0    |    0    |
+|----------|------------------------|---------|---------|---------|
+|   Total  |                        |    10   |   568   |   636   |
+|----------|------------------------|---------|---------|---------|
 
 Memories:
 N/A
 
 * Register list:
-+----------------------------+--------+
-|                            |   FF   |
-+----------------------------+--------+
-| Range1_all_ones_2_reg_1076 |    1   |
-|   Range1_all_ones_reg_968  |    1   |
-| Range1_all_zeros_1_reg_1070|    1   |
-|  Range1_all_zeros_reg_961  |    1   |
-|   Range2_all_ones_reg_951  |    1   |
-| brmerge968_demorgan_reg_990|    1   |
-|brmerge980_demorgan_reg_1087|    1   |
-|       carry_1_reg_985      |    1   |
-|      carry_3_reg_1065      |    1   |
-|       notrhs_reg_1081      |    1   |
-|     p_Result_10_reg_897    |    1   |
-|     p_Result_3_reg_979     |    1   |
-|     p_Result_6_reg_1032    |    1   |
-|     p_Result_8_reg_1059    |    1   |
-|     p_Result_9_reg_867     |    1   |
-|     p_Result_s_reg_935     |    1   |
-|      p_Val2_13_reg_879     |   40   |
-|         r_1_reg_956        |    1   |
-|        r_3_reg_1026        |    1   |
-|          reg_1002          |   81   |
-|          reg_1037          |    4   |
-|          reg_1113          |   81   |
-|           reg_903          |   80   |
-|           reg_914          |    5   |
-|           reg_929          |   40   |
-|       tmp_31_reg_891       |    1   |
-+----------------------------+--------+
-|            Total           |   350  |
-+----------------------------+--------+
++---------------------------+--------+
+|                           |   FF   |
++---------------------------+--------+
+| Range1_all_ones_2_reg_1076|    1   |
+|  Range1_all_ones_reg_968  |    1   |
+|Range1_all_zeros_1_reg_1070|    1   |
+|  Range1_all_zeros_reg_961 |    1   |
+|  Range2_all_ones_reg_951  |    1   |
+|    and_ln786_3_reg_1087   |    1   |
+|     and_ln786_reg_990     |    1   |
+|      carry_1_reg_985      |    1   |
+|      carry_3_reg_1065     |    1   |
+|   icmp_ln1497_1_reg_1081  |    1   |
+|    p_Result_10_reg_897    |    1   |
+|     p_Result_3_reg_979    |    1   |
+|    p_Result_6_reg_1032    |    1   |
+|    p_Result_8_reg_1059    |    1   |
+|     p_Result_9_reg_867    |    1   |
+|     p_Result_s_reg_935    |    1   |
+|     p_Val2_13_reg_879     |   40   |
+|        r_1_reg_956        |    1   |
+|        r_2_reg_1026       |    1   |
+|          reg_1002         |   81   |
+|          reg_1037         |    4   |
+|          reg_1113         |   81   |
+|          reg_903          |   80   |
+|          reg_914          |    5   |
+|          reg_929          |   40   |
+|       tmp_20_reg_891      |    1   |
++---------------------------+--------+
+|           Total           |   350  |
++---------------------------+--------+
 
 * Multiplexer (MUX) list: 
 |------------|------|------|------|--------||---------||---------|

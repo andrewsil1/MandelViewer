@@ -1,7 +1,7 @@
--- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Feb 10 20:41:13 2019
+-- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+-- Date        : Fri May 31 11:55:24 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top Fast_IP_Clock_auto_pc_5 -prefix
 --               Fast_IP_Clock_auto_pc_5_ Fast_IP_Clock_auto_pc_5_sim_netlist.vhdl
@@ -14,7 +14,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter is
+entity Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -110,60 +110,60 @@ entity Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_conve
     m_axi_rready : out STD_LOGIC
   );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 32;
   attribute C_AXI_ARUSER_WIDTH : integer;
-  attribute C_AXI_ARUSER_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 1;
+  attribute C_AXI_ARUSER_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
-  attribute C_AXI_AWUSER_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 1;
+  attribute C_AXI_AWUSER_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 1;
   attribute C_AXI_BUSER_WIDTH : integer;
-  attribute C_AXI_BUSER_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 1;
+  attribute C_AXI_BUSER_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 1;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 32;
+  attribute C_AXI_DATA_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 32;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 1;
+  attribute C_AXI_ID_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 1;
   attribute C_AXI_RUSER_WIDTH : integer;
-  attribute C_AXI_RUSER_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 1;
+  attribute C_AXI_RUSER_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 1;
   attribute C_AXI_SUPPORTS_READ : integer;
-  attribute C_AXI_SUPPORTS_READ of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 1;
+  attribute C_AXI_SUPPORTS_READ of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 1;
   attribute C_AXI_SUPPORTS_USER_SIGNALS : integer;
-  attribute C_AXI_SUPPORTS_USER_SIGNALS of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 0;
+  attribute C_AXI_SUPPORTS_USER_SIGNALS of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 0;
   attribute C_AXI_SUPPORTS_WRITE : integer;
-  attribute C_AXI_SUPPORTS_WRITE of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 1;
+  attribute C_AXI_SUPPORTS_WRITE of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 1;
   attribute C_AXI_WUSER_WIDTH : integer;
-  attribute C_AXI_WUSER_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 1;
+  attribute C_AXI_WUSER_WIDTH of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 1;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is "artix7";
+  attribute C_FAMILY of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is "artix7";
   attribute C_IGNORE_ID : integer;
-  attribute C_IGNORE_ID of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 1;
+  attribute C_IGNORE_ID of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 1;
   attribute C_M_AXI_PROTOCOL : integer;
-  attribute C_M_AXI_PROTOCOL of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 0;
+  attribute C_M_AXI_PROTOCOL of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 0;
   attribute C_S_AXI_PROTOCOL : integer;
-  attribute C_S_AXI_PROTOCOL of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 2;
+  attribute C_S_AXI_PROTOCOL of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 2;
   attribute C_TRANSLATION_MODE : integer;
-  attribute C_TRANSLATION_MODE of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 2;
+  attribute C_TRANSLATION_MODE of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 2;
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is "yes";
   attribute P_AXI3 : integer;
-  attribute P_AXI3 of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 1;
+  attribute P_AXI3 of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 1;
   attribute P_AXI4 : integer;
-  attribute P_AXI4 of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 0;
+  attribute P_AXI4 of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 0;
   attribute P_AXILITE : integer;
-  attribute P_AXILITE of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 2;
+  attribute P_AXILITE of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 2;
   attribute P_AXILITE_SIZE : string;
-  attribute P_AXILITE_SIZE of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is "3'b010";
+  attribute P_AXILITE_SIZE of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is "3'b010";
   attribute P_CONVERSION : integer;
-  attribute P_CONVERSION of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 2;
+  attribute P_CONVERSION of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 2;
   attribute P_DECERR : string;
-  attribute P_DECERR of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is "2'b11";
+  attribute P_DECERR of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is "2'b11";
   attribute P_INCR : string;
-  attribute P_INCR of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is "2'b01";
+  attribute P_INCR of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is "2'b01";
   attribute P_PROTECTION : integer;
-  attribute P_PROTECTION of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 1;
+  attribute P_PROTECTION of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is 1;
   attribute P_SLVERR : string;
-  attribute P_SLVERR of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is "2'b10";
-end Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter;
+  attribute P_SLVERR of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter : entity is "2'b10";
+end Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter;
 
-architecture STRUCTURE of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter is
+architecture STRUCTURE of Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
   signal \^m_axi_arready\ : STD_LOGIC;
@@ -363,11 +363,11 @@ entity Fast_IP_Clock_auto_pc_5 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of Fast_IP_Clock_auto_pc_5 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of Fast_IP_Clock_auto_pc_5 : entity is "Fast_IP_Clock_auto_pc_5,axi_protocol_converter_v2_1_18_axi_protocol_converter,{}";
+  attribute CHECK_LICENSE_TYPE of Fast_IP_Clock_auto_pc_5 : entity is "Fast_IP_Clock_auto_pc_5,axi_protocol_converter_v2_1_19_axi_protocol_converter,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Fast_IP_Clock_auto_pc_5 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of Fast_IP_Clock_auto_pc_5 : entity is "axi_protocol_converter_v2_1_18_axi_protocol_converter,Vivado 2018.3";
+  attribute X_CORE_INFO of Fast_IP_Clock_auto_pc_5 : entity is "axi_protocol_converter_v2_1_19_axi_protocol_converter,Vivado 2019.1";
 end Fast_IP_Clock_auto_pc_5;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_pc_5 is
@@ -496,7 +496,7 @@ architecture STRUCTURE of Fast_IP_Clock_auto_pc_5 is
   attribute X_INTERFACE_INFO of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI WDATA";
   attribute X_INTERFACE_INFO of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S_AXI WSTRB";
 begin
-inst: entity work.Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter
+inst: entity work.Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter
      port map (
       aclk => aclk,
       aresetn => aresetn,

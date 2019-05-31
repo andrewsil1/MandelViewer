@@ -188,7 +188,7 @@ ARCHITECTURE Fast_IP_Clock_psram_ip_0_0_arch OF Fast_IP_Clock_psram_ip_0_0 IS
     );
   END COMPONENT psram_ip_v1_0;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF Fast_IP_Clock_psram_ip_0_0_arch: ARCHITECTURE IS "psram_ip_v1_0,Vivado 2018.3";
+  ATTRIBUTE X_CORE_INFO OF Fast_IP_Clock_psram_ip_0_0_arch: ARCHITECTURE IS "psram_ip_v1_0,Vivado 2019.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF Fast_IP_Clock_psram_ip_0_0_arch : ARCHITECTURE IS "Fast_IP_Clock_psram_ip_0_0,psram_ip_v1_0,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;

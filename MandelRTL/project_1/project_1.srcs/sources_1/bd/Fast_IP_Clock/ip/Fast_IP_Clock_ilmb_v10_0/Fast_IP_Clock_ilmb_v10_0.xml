@@ -2762,7 +2762,7 @@
           <spirit:name>FREQ_HZ</spirit:name>
           <spirit:displayName>LMB_Clk frequency</spirit:displayName>
           <spirit:description>LMB_Clk frequency</spirit:description>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK.LMB_CLK.FREQ_HZ">80357142</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.CLK.LMB_CLK.FREQ_HZ">80000000</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
@@ -2867,11 +2867,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 11 04:33:08 UTC 2019</spirit:value>
+            <spirit:value>Fri May 31 18:48:48 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fa9fcb98</spirit:value>
+            <spirit:value>9:17937736</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2885,11 +2885,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 05 00:18:23 UTC 2019</spirit:value>
+            <spirit:value>Fri May 31 20:42:57 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fa9fcb98</spirit:value>
+            <spirit:value>9:17937736</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2905,11 +2905,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 05 00:18:23 UTC 2019</spirit:value>
+            <spirit:value>Fri May 31 20:42:57 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fa9fcb98</spirit:value>
+            <spirit:value>9:17937736</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2925,11 +2925,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 11 04:33:08 UTC 2019</spirit:value>
+            <spirit:value>Fri May 31 18:48:48 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5e9bc666</spirit:value>
+            <spirit:value>9:51efd46e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2945,11 +2945,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 05 00:18:23 UTC 2019</spirit:value>
+            <spirit:value>Fri May 31 20:42:57 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5e9bc666</spirit:value>
+            <spirit:value>9:51efd46e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2963,11 +2963,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Mar 05 00:20:03 UTC 2019</spirit:value>
+            <spirit:value>Fri May 31 20:45:32 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fa9fcb98</spirit:value>
+            <spirit:value>9:17937736</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>

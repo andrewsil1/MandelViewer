@@ -1,10 +1,10 @@
--- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Feb 10 20:38:25 2019
+-- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+-- Date        : Fri May 31 11:50:52 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {C:/Users/andrewsi/OneDrive/Documents/Visual Studio
---               2017/Projects/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_proc_sys_reset_1_0/Fast_IP_Clock_proc_sys_reset_1_0_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_proc_sys_reset_1_0/Fast_IP_Clock_proc_sys_reset_1_0_sim_netlist.vhdl
 -- Design      : Fast_IP_Clock_proc_sys_reset_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -1056,7 +1056,7 @@ entity Fast_IP_Clock_proc_sys_reset_1_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Fast_IP_Clock_proc_sys_reset_1_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of Fast_IP_Clock_proc_sys_reset_1_0 : entity is "proc_sys_reset,Vivado 2018.3";
+  attribute x_core_info of Fast_IP_Clock_proc_sys_reset_1_0 : entity is "proc_sys_reset,Vivado 2019.1";
 end Fast_IP_Clock_proc_sys_reset_1_0;
 
 architecture STRUCTURE of Fast_IP_Clock_proc_sys_reset_1_0 is

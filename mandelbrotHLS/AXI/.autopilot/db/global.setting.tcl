@@ -39,7 +39,7 @@ set ExportMCPathFlag 0
 set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
-set TargetInfo xc7a100t:csg324:-1
+set TargetInfo xc7a100t:-csg324:-1
 set SourceFiles {sc {} c {../pretest.cpp ../mandel.cpp}}
 set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/AXI/AXI.directive

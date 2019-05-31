@@ -19,4 +19,688 @@
       <ValueColumnWidth column_width="84"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc//AESL_inst_calc_activity">
+         <obj_property name="label">AESL_inst_calc_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_calc_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_calc_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc//AESL_inst_calc_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc//AESL_inst_calc_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc//AESL_inst_calc_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/grp_mandel_calc_fu_449_activity">
+            <obj_property name="label">grp_mandel_calc_fu_449_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mandel_calc_fu_449_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mandel_calc_fu_449_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/grp_mandel_calc_fu_449_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/grp_mandel_calc_fu_449_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/grp_mandel_calc_fu_449_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+               <obj_property name="label">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/grp_mandel_calc_fu_457_activity">
+            <obj_property name="label">grp_mandel_calc_fu_457_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mandel_calc_fu_457_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mandel_calc_fu_457_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/grp_mandel_calc_fu_457_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/grp_mandel_calc_fu_457_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/grp_mandel_calc_fu_457_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+               <obj_property name="label">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/grp_mandel_calc_fu_465_activity">
+            <obj_property name="label">grp_mandel_calc_fu_465_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mandel_calc_fu_465_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mandel_calc_fu_465_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/grp_mandel_calc_fu_465_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/grp_mandel_calc_fu_465_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/grp_mandel_calc_fu_465_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+               <obj_property name="label">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/grp_mandel_calc_fu_473_activity">
+            <obj_property name="label">grp_mandel_calc_fu_473_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mandel_calc_fu_473_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mandel_calc_fu_473_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/grp_mandel_calc_fu_473_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/grp_mandel_calc_fu_473_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/grp_mandel_calc_fu_473_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+               <obj_property name="label">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/grp_mandel_calc_fu_481_activity">
+            <obj_property name="label">grp_mandel_calc_fu_481_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mandel_calc_fu_481_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mandel_calc_fu_481_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/grp_mandel_calc_fu_481_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/grp_mandel_calc_fu_481_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/grp_mandel_calc_fu_481_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+               <obj_property name="label">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/grp_mandel_calc_fu_489_activity">
+            <obj_property name="label">grp_mandel_calc_fu_489_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mandel_calc_fu_489_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mandel_calc_fu_489_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/grp_mandel_calc_fu_489_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/grp_mandel_calc_fu_489_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/grp_mandel_calc_fu_489_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+               <obj_property name="label">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/grp_mandel_calc_fu_497_activity">
+            <obj_property name="label">grp_mandel_calc_fu_497_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mandel_calc_fu_497_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mandel_calc_fu_497_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/grp_mandel_calc_fu_497_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/grp_mandel_calc_fu_497_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/grp_mandel_calc_fu_497_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+               <obj_property name="label">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/grp_mandel_calc_fu_505_activity">
+            <obj_property name="label">grp_mandel_calc_fu_505_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_mandel_calc_fu_505_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_mandel_calc_fu_505_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/grp_mandel_calc_fu_505_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/grp_mandel_calc_fu_505_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/grp_mandel_calc_fu_505_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+               <obj_property name="label">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="UseFullPath">true</obj_property>
+               <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="CustomSignalColor">turquoise</obj_property>
+               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+               <obj_property name="Render_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/grp_pretest_fu_187/grp_pretest_fu_187_activity.dataflowTxTooltipData</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc//AESL_inst_calc_activity">
+      <obj_property name="ElementShortName">AESL_inst_calc_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_calc_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_calc_group">
+      <obj_property name="label">AESL_inst_calc</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/grp_mandel_calc_fu_449_activity">
+         <obj_property name="ElementShortName">grp_mandel_calc_fu_449_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mandel_calc_fu_449_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/grp_mandel_calc_fu_457_activity">
+         <obj_property name="ElementShortName">grp_mandel_calc_fu_457_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mandel_calc_fu_457_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/grp_mandel_calc_fu_465_activity">
+         <obj_property name="ElementShortName">grp_mandel_calc_fu_465_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mandel_calc_fu_465_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/grp_mandel_calc_fu_473_activity">
+         <obj_property name="ElementShortName">grp_mandel_calc_fu_473_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mandel_calc_fu_473_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/grp_mandel_calc_fu_481_activity">
+         <obj_property name="ElementShortName">grp_mandel_calc_fu_481_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mandel_calc_fu_481_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/grp_mandel_calc_fu_489_activity">
+         <obj_property name="ElementShortName">grp_mandel_calc_fu_489_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mandel_calc_fu_489_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/grp_mandel_calc_fu_497_activity">
+         <obj_property name="ElementShortName">grp_mandel_calc_fu_497_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mandel_calc_fu_497_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/grp_mandel_calc_fu_505_activity">
+         <obj_property name="ElementShortName">grp_mandel_calc_fu_505_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_mandel_calc_fu_505_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_calc_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mandel_calc_fu_449_group">
+         <obj_property name="label">grp_mandel_calc_fu_449</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+            <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_mandel_calc_fu_449_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_pretest_fu_187_group">
+            <obj_property name="label">grp_pretest_fu_187</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_pretest_fu_187_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/grp_pretest_fu_187/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/grp_pretest_fu_187/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_449/grp_pretest_fu_187/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mandel_calc_fu_457_group">
+         <obj_property name="label">grp_mandel_calc_fu_457</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+            <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_mandel_calc_fu_457_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_pretest_fu_187_group">
+            <obj_property name="label">grp_pretest_fu_187</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_pretest_fu_187_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/grp_pretest_fu_187/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/grp_pretest_fu_187/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_457/grp_pretest_fu_187/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mandel_calc_fu_465_group">
+         <obj_property name="label">grp_mandel_calc_fu_465</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+            <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_mandel_calc_fu_465_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_pretest_fu_187_group">
+            <obj_property name="label">grp_pretest_fu_187</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_pretest_fu_187_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/grp_pretest_fu_187/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/grp_pretest_fu_187/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_465/grp_pretest_fu_187/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mandel_calc_fu_473_group">
+         <obj_property name="label">grp_mandel_calc_fu_473</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+            <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_mandel_calc_fu_473_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_pretest_fu_187_group">
+            <obj_property name="label">grp_pretest_fu_187</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_pretest_fu_187_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/grp_pretest_fu_187/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/grp_pretest_fu_187/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_473/grp_pretest_fu_187/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mandel_calc_fu_481_group">
+         <obj_property name="label">grp_mandel_calc_fu_481</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+            <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_mandel_calc_fu_481_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_pretest_fu_187_group">
+            <obj_property name="label">grp_pretest_fu_187</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_pretest_fu_187_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/grp_pretest_fu_187/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/grp_pretest_fu_187/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_481/grp_pretest_fu_187/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mandel_calc_fu_489_group">
+         <obj_property name="label">grp_mandel_calc_fu_489</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+            <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_mandel_calc_fu_489_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_pretest_fu_187_group">
+            <obj_property name="label">grp_pretest_fu_187</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_pretest_fu_187_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/grp_pretest_fu_187/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/grp_pretest_fu_187/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_489/grp_pretest_fu_187/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mandel_calc_fu_497_group">
+         <obj_property name="label">grp_mandel_calc_fu_497</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+            <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_mandel_calc_fu_497_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_pretest_fu_187_group">
+            <obj_property name="label">grp_pretest_fu_187</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_pretest_fu_187_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/grp_pretest_fu_187/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/grp_pretest_fu_187/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_497/grp_pretest_fu_187/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_mandel_calc_fu_505_group">
+         <obj_property name="label">grp_mandel_calc_fu_505</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/grp_pretest_fu_187/grp_pretest_fu_187_activity">
+            <obj_property name="ElementShortName">grp_pretest_fu_187_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_pretest_fu_187_activity</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_mandel_calc_fu_505_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="grp_pretest_fu_187_group">
+            <obj_property name="label">grp_pretest_fu_187</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="grp_pretest_fu_187_Handshake_group">
+               <obj_property name="label">Block-level handshake</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/grp_pretest_fu_187/ap_start">
+                  <obj_property name="ElementShortName">ap_start</obj_property>
+                  <obj_property name="ObjectShortName">ap_start</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/grp_pretest_fu_187/ap_ready">
+                  <obj_property name="ElementShortName">ap_ready</obj_property>
+                  <obj_property name="ObjectShortName">ap_ready</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_calc_top/AESL_inst_calc/grp_mandel_calc_fu_505/grp_pretest_fu_187/ap_done">
+                  <obj_property name="ElementShortName">ap_done</obj_property>
+                  <obj_property name="ObjectShortName">ap_done</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
 </wave_config>

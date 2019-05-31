@@ -842,7 +842,7 @@
 					<Obj>
 						<type>0</type>
 						<id>36</id>
-						<name>ret_V_14</name>
+						<name>ret_V_16</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>61</lineNumber>
@@ -891,7 +891,7 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>tmp_s</name>
+						<name>zext_ln1148</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>61</lineNumber>
@@ -939,7 +939,7 @@
 					<Obj>
 						<type>0</type>
 						<id>38</id>
-						<name>r_V_20</name>
+						<name>r_V</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>61</lineNumber>
@@ -1038,7 +1038,7 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>p_Val2_28</name>
+						<name>p_Val2_29</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>61</lineNumber>
@@ -1136,7 +1136,7 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>tmp_30</name>
+						<name>xor_ln786</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>61</lineNumber>
@@ -1234,7 +1234,7 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>brmerge</name>
+						<name>xor_ln340_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>61</lineNumber>
@@ -1283,7 +1283,7 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>signbit_i_i_i_i27_0_s</name>
+						<name>xor_ln340</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>61</lineNumber>
@@ -1332,7 +1332,7 @@
 					<Obj>
 						<type>0</type>
 						<id>46</id>
-						<name>brmerge9</name>
+						<name>or_ln340</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>61</lineNumber>
@@ -1381,7 +1381,7 @@
 					<Obj>
 						<type>0</type>
 						<id>47</id>
-						<name>p_mux</name>
+						<name>select_ln340</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>61</lineNumber>
@@ -1431,7 +1431,7 @@
 					<Obj>
 						<type>0</type>
 						<id>48</id>
-						<name>p_s</name>
+						<name>select_ln388</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>61</lineNumber>
@@ -1531,7 +1531,7 @@
 					<Obj>
 						<type>0</type>
 						<id>50</id>
-						<name>lhs_V_7_cast</name>
+						<name>zext_ln215</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>66</lineNumber>
@@ -1579,7 +1579,7 @@
 					<Obj>
 						<type>0</type>
 						<id>51</id>
-						<name>p_shl</name>
+						<name>shl_ln</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>66</lineNumber>
@@ -1729,7 +1729,7 @@
 					<Obj>
 						<type>0</type>
 						<id>54</id>
-						<name>tmp_cast</name>
+						<name>zext_ln1118</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -1777,7 +1777,7 @@
 					<Obj>
 						<type>0</type>
 						<id>55</id>
-						<name>tmp_31</name>
+						<name>sext_ln1118</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -1825,7 +1825,7 @@
 					<Obj>
 						<type>0</type>
 						<id>56</id>
-						<name>lhs_V_8_cast</name>
+						<name>sext_ln703</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>91</lineNumber>
@@ -1921,7 +1921,7 @@
 					<Obj>
 						<type>0</type>
 						<id>58</id>
-						<name></name>
+						<name>_ln70</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>70</lineNumber>
@@ -2020,7 +2020,7 @@
 					<Obj>
 						<type>0</type>
 						<id>61</id>
-						<name>p_Val2_29</name>
+						<name>p_Val2_30</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>91</lineNumber>
@@ -2108,7 +2108,7 @@
 					<Obj>
 						<type>0</type>
 						<id>63</id>
-						<name>index</name>
+						<name>index_0</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -2145,7 +2145,7 @@
 					<Obj>
 						<type>0</type>
 						<id>64</id>
-						<name>exitcond</name>
+						<name>icmp_ln70</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>70</lineNumber>
@@ -2243,7 +2243,7 @@
 					<Obj>
 						<type>0</type>
 						<id>67</id>
-						<name></name>
+						<name>_ln70</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>70</lineNumber>
@@ -2293,7 +2293,7 @@
 					<Obj>
 						<type>0</type>
 						<id>71</id>
-						<name></name>
+						<name>_ln72</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>72</lineNumber>
@@ -2341,7 +2341,7 @@
 					<Obj>
 						<type>0</type>
 						<id>73</id>
-						<name>tmp_V_1</name>
+						<name>tmp_V_1_0</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>73</lineNumber>
@@ -2392,7 +2392,7 @@
 					<Obj>
 						<type>0</type>
 						<id>75</id>
-						<name>exitcond3</name>
+						<name>icmp_ln73</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>73</lineNumber>
@@ -2441,7 +2441,7 @@
 					<Obj>
 						<type>0</type>
 						<id>76</id>
-						<name></name>
+						<name>_ln73</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>73</lineNumber>
@@ -2491,7 +2491,7 @@
 					<Obj>
 						<type>0</type>
 						<id>79</id>
-						<name>r_V</name>
+						<name>zext_ln1116</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -2539,7 +2539,7 @@
 					<Obj>
 						<type>0</type>
 						<id>80</id>
-						<name>r_V_s</name>
+						<name>mul_ln1118</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -2588,7 +2588,7 @@
 					<Obj>
 						<type>0</type>
 						<id>81</id>
-						<name>tmp_66</name>
+						<name>trunc_ln1192</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -2636,7 +2636,7 @@
 					<Obj>
 						<type>0</type>
 						<id>82</id>
-						<name>ret_V_s</name>
+						<name>add_ln1192</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -2685,7 +2685,7 @@
 					<Obj>
 						<type>0</type>
 						<id>83</id>
-						<name>tmp_67</name>
+						<name>tmp_46</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -2735,7 +2735,7 @@
 					<Obj>
 						<type>0</type>
 						<id>84</id>
-						<name>p_Val2_12</name>
+						<name>add_ln703</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -2784,7 +2784,7 @@
 					<Obj>
 						<type>0</type>
 						<id>85</id>
-						<name>tmp_68</name>
+						<name>tmp_47</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -2834,7 +2834,7 @@
 					<Obj>
 						<type>0</type>
 						<id>86</id>
-						<name>tmp</name>
+						<name>tmp_9</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -2885,7 +2885,7 @@
 					<Obj>
 						<type>0</type>
 						<id>87</id>
-						<name>p_not</name>
+						<name>icmp_ln785</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -2934,7 +2934,7 @@
 					<Obj>
 						<type>0</type>
 						<id>88</id>
-						<name>brmerge1</name>
+						<name>or_ln785</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -2983,7 +2983,7 @@
 					<Obj>
 						<type>0</type>
 						<id>89</id>
-						<name>tmp_32</name>
+						<name>xor_ln785</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3032,7 +3032,7 @@
 					<Obj>
 						<type>0</type>
 						<id>90</id>
-						<name>overflow_7</name>
+						<name>and_ln785</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3081,7 +3081,7 @@
 					<Obj>
 						<type>0</type>
 						<id>91</id>
-						<name>newsignbit_i_i_i_i</name>
+						<name>xor_ln786_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3130,7 +3130,7 @@
 					<Obj>
 						<type>0</type>
 						<id>92</id>
-						<name>p_not4</name>
+						<name>icmp_ln786</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3179,7 +3179,7 @@
 					<Obj>
 						<type>0</type>
 						<id>93</id>
-						<name>brmerge2</name>
+						<name>or_ln786</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3228,7 +3228,7 @@
 					<Obj>
 						<type>0</type>
 						<id>94</id>
-						<name>underflow_7</name>
+						<name>and_ln786</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3277,7 +3277,7 @@
 					<Obj>
 						<type>0</type>
 						<id>95</id>
-						<name>brmerge3</name>
+						<name>or_ln340_19</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3326,7 +3326,7 @@
 					<Obj>
 						<type>0</type>
 						<id>96</id>
-						<name>p_707_not</name>
+						<name>xor_ln340_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3375,7 +3375,7 @@
 					<Obj>
 						<type>0</type>
 						<id>97</id>
-						<name>brmerge4</name>
+						<name>or_ln340_20</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3424,7 +3424,7 @@
 					<Obj>
 						<type>0</type>
 						<id>98</id>
-						<name>p_mux7</name>
+						<name>select_ln340_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3474,7 +3474,7 @@
 					<Obj>
 						<type>0</type>
 						<id>99</id>
-						<name>p_1</name>
+						<name>select_ln388_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3524,7 +3524,7 @@
 					<Obj>
 						<type>0</type>
 						<id>100</id>
-						<name>p_0</name>
+						<name>select_ln340_17</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3574,7 +3574,7 @@
 					<Obj>
 						<type>0</type>
 						<id>101</id>
-						<name>tmp_33</name>
+						<name>tmp1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -3625,7 +3625,7 @@
 					<Obj>
 						<type>0</type>
 						<id>102</id>
-						<name>newIndex2</name>
+						<name>lshr_ln</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -3676,7 +3676,7 @@
 					<Obj>
 						<type>0</type>
 						<id>103</id>
-						<name>newIndex3</name>
+						<name>zext_ln79</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -3774,7 +3774,7 @@
 					<Obj>
 						<type>0</type>
 						<id>105</id>
-						<name></name>
+						<name>mem_0_addr_write_ln79</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -3823,7 +3823,7 @@
 					<Obj>
 						<type>0</type>
 						<id>106</id>
-						<name>pix_x_V_s</name>
+						<name>or_ln700</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>73</lineNumber>
@@ -3872,7 +3872,7 @@
 					<Obj>
 						<type>0</type>
 						<id>107</id>
-						<name>r_V_1</name>
+						<name>zext_ln1116_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3920,7 +3920,7 @@
 					<Obj>
 						<type>0</type>
 						<id>108</id>
-						<name>r_V_25_1</name>
+						<name>mul_ln1118_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -3969,7 +3969,7 @@
 					<Obj>
 						<type>0</type>
 						<id>109</id>
-						<name>tmp_69</name>
+						<name>trunc_ln1192_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4017,7 +4017,7 @@
 					<Obj>
 						<type>0</type>
 						<id>110</id>
-						<name>ret_V_21_1</name>
+						<name>add_ln1192_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4066,7 +4066,7 @@
 					<Obj>
 						<type>0</type>
 						<id>111</id>
-						<name>tmp_70</name>
+						<name>tmp_48</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4116,7 +4116,7 @@
 					<Obj>
 						<type>0</type>
 						<id>112</id>
-						<name>p_Val2_13_1</name>
+						<name>add_ln703_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4165,7 +4165,7 @@
 					<Obj>
 						<type>0</type>
 						<id>113</id>
-						<name>tmp_71</name>
+						<name>tmp_49</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4215,7 +4215,7 @@
 					<Obj>
 						<type>0</type>
 						<id>114</id>
-						<name>tmp_34</name>
+						<name>tmp_s</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4266,7 +4266,7 @@
 					<Obj>
 						<type>0</type>
 						<id>115</id>
-						<name>p_not_1</name>
+						<name>icmp_ln785_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4315,7 +4315,7 @@
 					<Obj>
 						<type>0</type>
 						<id>116</id>
-						<name>brmerge32_1</name>
+						<name>or_ln785_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4364,7 +4364,7 @@
 					<Obj>
 						<type>0</type>
 						<id>117</id>
-						<name>tmp_76_1</name>
+						<name>xor_ln785_11</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4413,7 +4413,7 @@
 					<Obj>
 						<type>0</type>
 						<id>118</id>
-						<name>overflow_7_1</name>
+						<name>and_ln785_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4462,7 +4462,7 @@
 					<Obj>
 						<type>0</type>
 						<id>119</id>
-						<name>newsignbit_i_i_i_i_0_1</name>
+						<name>xor_ln786_9</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4511,7 +4511,7 @@
 					<Obj>
 						<type>0</type>
 						<id>120</id>
-						<name>p_not4_1</name>
+						<name>icmp_ln786_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4560,7 +4560,7 @@
 					<Obj>
 						<type>0</type>
 						<id>121</id>
-						<name>brmerge33_1</name>
+						<name>or_ln786_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4609,7 +4609,7 @@
 					<Obj>
 						<type>0</type>
 						<id>122</id>
-						<name>underflow_7_1</name>
+						<name>and_ln786_13</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4658,7 +4658,7 @@
 					<Obj>
 						<type>0</type>
 						<id>123</id>
-						<name>brmerge34_1</name>
+						<name>or_ln340_21</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4707,7 +4707,7 @@
 					<Obj>
 						<type>0</type>
 						<id>124</id>
-						<name>p_707_not_1</name>
+						<name>xor_ln340_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4756,7 +4756,7 @@
 					<Obj>
 						<type>0</type>
 						<id>125</id>
-						<name>brmerge35_1</name>
+						<name>or_ln340_22</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4805,7 +4805,7 @@
 					<Obj>
 						<type>0</type>
 						<id>126</id>
-						<name>p_mux7_1</name>
+						<name>select_ln340_9</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4855,7 +4855,7 @@
 					<Obj>
 						<type>0</type>
 						<id>127</id>
-						<name>p_11_1</name>
+						<name>select_ln388_9</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4905,7 +4905,7 @@
 					<Obj>
 						<type>0</type>
 						<id>128</id>
-						<name>p_0_1</name>
+						<name>select_ln340_18</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -4955,7 +4955,7 @@
 					<Obj>
 						<type>0</type>
 						<id>129</id>
-						<name>tmp_79_1</name>
+						<name>tmp_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -5056,7 +5056,7 @@
 					<Obj>
 						<type>0</type>
 						<id>131</id>
-						<name></name>
+						<name>mem_1_addr_write_ln79</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -5105,7 +5105,7 @@
 					<Obj>
 						<type>0</type>
 						<id>132</id>
-						<name>pix_x_V_1</name>
+						<name>or_ln700_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>73</lineNumber>
@@ -5154,7 +5154,7 @@
 					<Obj>
 						<type>0</type>
 						<id>133</id>
-						<name>r_V_2</name>
+						<name>zext_ln1116_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5202,7 +5202,7 @@
 					<Obj>
 						<type>0</type>
 						<id>134</id>
-						<name>r_V_25_2</name>
+						<name>mul_ln1118_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5251,7 +5251,7 @@
 					<Obj>
 						<type>0</type>
 						<id>135</id>
-						<name>tmp_72</name>
+						<name>trunc_ln1192_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5299,7 +5299,7 @@
 					<Obj>
 						<type>0</type>
 						<id>136</id>
-						<name>ret_V_21_2</name>
+						<name>add_ln1192_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5348,7 +5348,7 @@
 					<Obj>
 						<type>0</type>
 						<id>137</id>
-						<name>tmp_73</name>
+						<name>tmp_50</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5398,7 +5398,7 @@
 					<Obj>
 						<type>0</type>
 						<id>138</id>
-						<name>p_Val2_13_2</name>
+						<name>add_ln703_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5447,7 +5447,7 @@
 					<Obj>
 						<type>0</type>
 						<id>139</id>
-						<name>tmp_74</name>
+						<name>tmp_51</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5497,7 +5497,7 @@
 					<Obj>
 						<type>0</type>
 						<id>140</id>
-						<name>tmp_35</name>
+						<name>tmp_10</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5548,7 +5548,7 @@
 					<Obj>
 						<type>0</type>
 						<id>141</id>
-						<name>p_not_2</name>
+						<name>icmp_ln785_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5597,7 +5597,7 @@
 					<Obj>
 						<type>0</type>
 						<id>142</id>
-						<name>brmerge32_2</name>
+						<name>or_ln785_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5646,7 +5646,7 @@
 					<Obj>
 						<type>0</type>
 						<id>143</id>
-						<name>tmp_76_2</name>
+						<name>xor_ln785_12</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5695,7 +5695,7 @@
 					<Obj>
 						<type>0</type>
 						<id>144</id>
-						<name>overflow_7_2</name>
+						<name>and_ln785_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5744,7 +5744,7 @@
 					<Obj>
 						<type>0</type>
 						<id>145</id>
-						<name>newsignbit_i_i_i_i_0_2</name>
+						<name>xor_ln786_10</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5793,7 +5793,7 @@
 					<Obj>
 						<type>0</type>
 						<id>146</id>
-						<name>p_not4_2</name>
+						<name>icmp_ln786_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5842,7 +5842,7 @@
 					<Obj>
 						<type>0</type>
 						<id>147</id>
-						<name>brmerge33_2</name>
+						<name>or_ln786_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5891,7 +5891,7 @@
 					<Obj>
 						<type>0</type>
 						<id>148</id>
-						<name>underflow_7_2</name>
+						<name>and_ln786_14</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5940,7 +5940,7 @@
 					<Obj>
 						<type>0</type>
 						<id>149</id>
-						<name>brmerge34_2</name>
+						<name>or_ln340_23</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -5989,7 +5989,7 @@
 					<Obj>
 						<type>0</type>
 						<id>150</id>
-						<name>p_707_not_2</name>
+						<name>xor_ln340_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6038,7 +6038,7 @@
 					<Obj>
 						<type>0</type>
 						<id>151</id>
-						<name>brmerge35_2</name>
+						<name>or_ln340_24</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6087,7 +6087,7 @@
 					<Obj>
 						<type>0</type>
 						<id>152</id>
-						<name>p_mux7_2</name>
+						<name>select_ln340_10</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6137,7 +6137,7 @@
 					<Obj>
 						<type>0</type>
 						<id>153</id>
-						<name>p_11_2</name>
+						<name>select_ln388_10</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6187,7 +6187,7 @@
 					<Obj>
 						<type>0</type>
 						<id>154</id>
-						<name>p_0_2</name>
+						<name>select_ln340_19</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6237,7 +6237,7 @@
 					<Obj>
 						<type>0</type>
 						<id>155</id>
-						<name>tmp_79_2</name>
+						<name>tmp_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -6338,7 +6338,7 @@
 					<Obj>
 						<type>0</type>
 						<id>157</id>
-						<name></name>
+						<name>mem_2_addr_write_ln79</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -6387,7 +6387,7 @@
 					<Obj>
 						<type>0</type>
 						<id>158</id>
-						<name>pix_x_V_2</name>
+						<name>or_ln700_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>73</lineNumber>
@@ -6436,7 +6436,7 @@
 					<Obj>
 						<type>0</type>
 						<id>159</id>
-						<name>r_V_3</name>
+						<name>zext_ln1116_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6484,7 +6484,7 @@
 					<Obj>
 						<type>0</type>
 						<id>160</id>
-						<name>r_V_25_3</name>
+						<name>mul_ln1118_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6533,7 +6533,7 @@
 					<Obj>
 						<type>0</type>
 						<id>161</id>
-						<name>tmp_75</name>
+						<name>trunc_ln1192_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6581,7 +6581,7 @@
 					<Obj>
 						<type>0</type>
 						<id>162</id>
-						<name>ret_V_21_3</name>
+						<name>add_ln1192_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6630,7 +6630,7 @@
 					<Obj>
 						<type>0</type>
 						<id>163</id>
-						<name>tmp_76</name>
+						<name>tmp_52</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6680,7 +6680,7 @@
 					<Obj>
 						<type>0</type>
 						<id>164</id>
-						<name>p_Val2_13_3</name>
+						<name>add_ln703_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6729,7 +6729,7 @@
 					<Obj>
 						<type>0</type>
 						<id>165</id>
-						<name>tmp_77</name>
+						<name>tmp_53</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6779,7 +6779,7 @@
 					<Obj>
 						<type>0</type>
 						<id>166</id>
-						<name>tmp_36</name>
+						<name>tmp_11</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6830,7 +6830,7 @@
 					<Obj>
 						<type>0</type>
 						<id>167</id>
-						<name>p_not_3</name>
+						<name>icmp_ln785_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6879,7 +6879,7 @@
 					<Obj>
 						<type>0</type>
 						<id>168</id>
-						<name>brmerge32_3</name>
+						<name>or_ln785_8</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6928,7 +6928,7 @@
 					<Obj>
 						<type>0</type>
 						<id>169</id>
-						<name>tmp_76_3</name>
+						<name>xor_ln785_13</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -6977,7 +6977,7 @@
 					<Obj>
 						<type>0</type>
 						<id>170</id>
-						<name>overflow_7_3</name>
+						<name>and_ln785_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7026,7 +7026,7 @@
 					<Obj>
 						<type>0</type>
 						<id>171</id>
-						<name>newsignbit_i_i_i_i_0_3</name>
+						<name>xor_ln786_11</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7075,7 +7075,7 @@
 					<Obj>
 						<type>0</type>
 						<id>172</id>
-						<name>p_not4_3</name>
+						<name>icmp_ln786_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7124,7 +7124,7 @@
 					<Obj>
 						<type>0</type>
 						<id>173</id>
-						<name>brmerge33_3</name>
+						<name>or_ln786_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7173,7 +7173,7 @@
 					<Obj>
 						<type>0</type>
 						<id>174</id>
-						<name>underflow_7_3</name>
+						<name>and_ln786_15</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7222,7 +7222,7 @@
 					<Obj>
 						<type>0</type>
 						<id>175</id>
-						<name>brmerge34_3</name>
+						<name>or_ln340_25</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7271,7 +7271,7 @@
 					<Obj>
 						<type>0</type>
 						<id>176</id>
-						<name>p_707_not_3</name>
+						<name>xor_ln340_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7320,7 +7320,7 @@
 					<Obj>
 						<type>0</type>
 						<id>177</id>
-						<name>brmerge35_3</name>
+						<name>or_ln340_26</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7369,7 +7369,7 @@
 					<Obj>
 						<type>0</type>
 						<id>178</id>
-						<name>p_mux7_3</name>
+						<name>select_ln340_11</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7419,7 +7419,7 @@
 					<Obj>
 						<type>0</type>
 						<id>179</id>
-						<name>p_11_3</name>
+						<name>select_ln388_11</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7469,7 +7469,7 @@
 					<Obj>
 						<type>0</type>
 						<id>180</id>
-						<name>p_0_3</name>
+						<name>select_ln340_20</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7519,7 +7519,7 @@
 					<Obj>
 						<type>0</type>
 						<id>181</id>
-						<name>tmp_79_3</name>
+						<name>tmp_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -7620,7 +7620,7 @@
 					<Obj>
 						<type>0</type>
 						<id>183</id>
-						<name></name>
+						<name>mem_3_addr_write_ln79</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -7669,7 +7669,7 @@
 					<Obj>
 						<type>0</type>
 						<id>184</id>
-						<name>pix_x_V_3</name>
+						<name>or_ln700_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>73</lineNumber>
@@ -7718,7 +7718,7 @@
 					<Obj>
 						<type>0</type>
 						<id>185</id>
-						<name>r_V_4</name>
+						<name>zext_ln1116_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7766,7 +7766,7 @@
 					<Obj>
 						<type>0</type>
 						<id>186</id>
-						<name>r_V_25_4</name>
+						<name>mul_ln1118_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7815,7 +7815,7 @@
 					<Obj>
 						<type>0</type>
 						<id>187</id>
-						<name>tmp_78</name>
+						<name>trunc_ln1192_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7863,7 +7863,7 @@
 					<Obj>
 						<type>0</type>
 						<id>188</id>
-						<name>ret_V_21_4</name>
+						<name>add_ln1192_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7912,7 +7912,7 @@
 					<Obj>
 						<type>0</type>
 						<id>189</id>
-						<name>tmp_79</name>
+						<name>tmp_54</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -7962,7 +7962,7 @@
 					<Obj>
 						<type>0</type>
 						<id>190</id>
-						<name>p_Val2_13_4</name>
+						<name>add_ln703_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8011,7 +8011,7 @@
 					<Obj>
 						<type>0</type>
 						<id>191</id>
-						<name>tmp_80</name>
+						<name>tmp_55</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8061,7 +8061,7 @@
 					<Obj>
 						<type>0</type>
 						<id>192</id>
-						<name>tmp_37</name>
+						<name>tmp_12</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8112,7 +8112,7 @@
 					<Obj>
 						<type>0</type>
 						<id>193</id>
-						<name>p_not_4</name>
+						<name>icmp_ln785_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8161,7 +8161,7 @@
 					<Obj>
 						<type>0</type>
 						<id>194</id>
-						<name>brmerge32_4</name>
+						<name>or_ln785_9</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8210,7 +8210,7 @@
 					<Obj>
 						<type>0</type>
 						<id>195</id>
-						<name>tmp_76_4</name>
+						<name>xor_ln785_14</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8259,7 +8259,7 @@
 					<Obj>
 						<type>0</type>
 						<id>196</id>
-						<name>overflow_7_4</name>
+						<name>and_ln785_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8308,7 +8308,7 @@
 					<Obj>
 						<type>0</type>
 						<id>197</id>
-						<name>newsignbit_i_i_i_i_0_4</name>
+						<name>xor_ln786_12</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8357,7 +8357,7 @@
 					<Obj>
 						<type>0</type>
 						<id>198</id>
-						<name>p_not4_4</name>
+						<name>icmp_ln786_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8406,7 +8406,7 @@
 					<Obj>
 						<type>0</type>
 						<id>199</id>
-						<name>brmerge33_4</name>
+						<name>or_ln786_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8455,7 +8455,7 @@
 					<Obj>
 						<type>0</type>
 						<id>200</id>
-						<name>underflow_7_4</name>
+						<name>and_ln786_16</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8504,7 +8504,7 @@
 					<Obj>
 						<type>0</type>
 						<id>201</id>
-						<name>brmerge34_4</name>
+						<name>or_ln340_28</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8553,7 +8553,7 @@
 					<Obj>
 						<type>0</type>
 						<id>202</id>
-						<name>p_707_not_4</name>
+						<name>xor_ln340_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8602,7 +8602,7 @@
 					<Obj>
 						<type>0</type>
 						<id>203</id>
-						<name>brmerge35_4</name>
+						<name>or_ln340_29</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8651,7 +8651,7 @@
 					<Obj>
 						<type>0</type>
 						<id>204</id>
-						<name>p_mux7_4</name>
+						<name>select_ln340_12</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8701,7 +8701,7 @@
 					<Obj>
 						<type>0</type>
 						<id>205</id>
-						<name>p_11_4</name>
+						<name>select_ln388_12</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8751,7 +8751,7 @@
 					<Obj>
 						<type>0</type>
 						<id>206</id>
-						<name>p_0_4</name>
+						<name>select_ln340_21</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -8801,7 +8801,7 @@
 					<Obj>
 						<type>0</type>
 						<id>207</id>
-						<name>tmp_79_4</name>
+						<name>tmp_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -8902,7 +8902,7 @@
 					<Obj>
 						<type>0</type>
 						<id>209</id>
-						<name></name>
+						<name>mem_4_addr_write_ln79</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -8951,7 +8951,7 @@
 					<Obj>
 						<type>0</type>
 						<id>210</id>
-						<name>pix_x_V_4</name>
+						<name>or_ln700_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>73</lineNumber>
@@ -9000,7 +9000,7 @@
 					<Obj>
 						<type>0</type>
 						<id>211</id>
-						<name>r_V_5</name>
+						<name>zext_ln1116_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9048,7 +9048,7 @@
 					<Obj>
 						<type>0</type>
 						<id>212</id>
-						<name>r_V_25_5</name>
+						<name>mul_ln1118_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9097,7 +9097,7 @@
 					<Obj>
 						<type>0</type>
 						<id>213</id>
-						<name>tmp_81</name>
+						<name>trunc_ln1192_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9145,7 +9145,7 @@
 					<Obj>
 						<type>0</type>
 						<id>214</id>
-						<name>ret_V_21_5</name>
+						<name>add_ln1192_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9194,7 +9194,7 @@
 					<Obj>
 						<type>0</type>
 						<id>215</id>
-						<name>tmp_82</name>
+						<name>tmp_56</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9244,7 +9244,7 @@
 					<Obj>
 						<type>0</type>
 						<id>216</id>
-						<name>p_Val2_13_5</name>
+						<name>add_ln703_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9293,7 +9293,7 @@
 					<Obj>
 						<type>0</type>
 						<id>217</id>
-						<name>tmp_83</name>
+						<name>tmp_57</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9343,7 +9343,7 @@
 					<Obj>
 						<type>0</type>
 						<id>218</id>
-						<name>tmp_38</name>
+						<name>tmp_13</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9394,7 +9394,7 @@
 					<Obj>
 						<type>0</type>
 						<id>219</id>
-						<name>p_not_5</name>
+						<name>icmp_ln785_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9443,7 +9443,7 @@
 					<Obj>
 						<type>0</type>
 						<id>220</id>
-						<name>brmerge32_5</name>
+						<name>or_ln785_10</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9492,7 +9492,7 @@
 					<Obj>
 						<type>0</type>
 						<id>221</id>
-						<name>tmp_76_5</name>
+						<name>xor_ln785_15</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9541,7 +9541,7 @@
 					<Obj>
 						<type>0</type>
 						<id>222</id>
-						<name>overflow_7_5</name>
+						<name>and_ln785_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9590,7 +9590,7 @@
 					<Obj>
 						<type>0</type>
 						<id>223</id>
-						<name>newsignbit_i_i_i_i_0_5</name>
+						<name>xor_ln786_13</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9639,7 +9639,7 @@
 					<Obj>
 						<type>0</type>
 						<id>224</id>
-						<name>p_not4_5</name>
+						<name>icmp_ln786_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9688,7 +9688,7 @@
 					<Obj>
 						<type>0</type>
 						<id>225</id>
-						<name>brmerge33_5</name>
+						<name>or_ln786_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9737,7 +9737,7 @@
 					<Obj>
 						<type>0</type>
 						<id>226</id>
-						<name>underflow_7_5</name>
+						<name>and_ln786_17</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9786,7 +9786,7 @@
 					<Obj>
 						<type>0</type>
 						<id>227</id>
-						<name>brmerge34_5</name>
+						<name>or_ln340_30</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9835,7 +9835,7 @@
 					<Obj>
 						<type>0</type>
 						<id>228</id>
-						<name>p_707_not_5</name>
+						<name>xor_ln340_9</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9884,7 +9884,7 @@
 					<Obj>
 						<type>0</type>
 						<id>229</id>
-						<name>brmerge35_5</name>
+						<name>or_ln340_31</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9933,7 +9933,7 @@
 					<Obj>
 						<type>0</type>
 						<id>230</id>
-						<name>p_mux7_5</name>
+						<name>select_ln340_13</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -9983,7 +9983,7 @@
 					<Obj>
 						<type>0</type>
 						<id>231</id>
-						<name>p_11_5</name>
+						<name>select_ln388_13</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10033,7 +10033,7 @@
 					<Obj>
 						<type>0</type>
 						<id>232</id>
-						<name>p_0_5</name>
+						<name>select_ln340_22</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10083,7 +10083,7 @@
 					<Obj>
 						<type>0</type>
 						<id>233</id>
-						<name>tmp_79_5</name>
+						<name>tmp_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -10184,7 +10184,7 @@
 					<Obj>
 						<type>0</type>
 						<id>235</id>
-						<name></name>
+						<name>mem_5_addr_write_ln79</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -10233,7 +10233,7 @@
 					<Obj>
 						<type>0</type>
 						<id>236</id>
-						<name>pix_x_V_5</name>
+						<name>or_ln700_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>73</lineNumber>
@@ -10282,7 +10282,7 @@
 					<Obj>
 						<type>0</type>
 						<id>237</id>
-						<name>r_V_6</name>
+						<name>zext_ln1116_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10330,7 +10330,7 @@
 					<Obj>
 						<type>0</type>
 						<id>238</id>
-						<name>r_V_25_6</name>
+						<name>mul_ln1118_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10379,7 +10379,7 @@
 					<Obj>
 						<type>0</type>
 						<id>239</id>
-						<name>tmp_84</name>
+						<name>trunc_ln1192_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10427,7 +10427,7 @@
 					<Obj>
 						<type>0</type>
 						<id>240</id>
-						<name>ret_V_21_6</name>
+						<name>add_ln1192_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10476,7 +10476,7 @@
 					<Obj>
 						<type>0</type>
 						<id>241</id>
-						<name>tmp_85</name>
+						<name>tmp_58</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10526,7 +10526,7 @@
 					<Obj>
 						<type>0</type>
 						<id>242</id>
-						<name>p_Val2_13_6</name>
+						<name>add_ln703_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10575,7 +10575,7 @@
 					<Obj>
 						<type>0</type>
 						<id>243</id>
-						<name>tmp_86</name>
+						<name>tmp_59</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10625,7 +10625,7 @@
 					<Obj>
 						<type>0</type>
 						<id>244</id>
-						<name>tmp_39</name>
+						<name>tmp_14</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10676,7 +10676,7 @@
 					<Obj>
 						<type>0</type>
 						<id>245</id>
-						<name>p_not_6</name>
+						<name>icmp_ln785_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10725,7 +10725,7 @@
 					<Obj>
 						<type>0</type>
 						<id>246</id>
-						<name>brmerge32_6</name>
+						<name>or_ln785_11</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10774,7 +10774,7 @@
 					<Obj>
 						<type>0</type>
 						<id>247</id>
-						<name>tmp_76_6</name>
+						<name>xor_ln785_16</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10823,7 +10823,7 @@
 					<Obj>
 						<type>0</type>
 						<id>248</id>
-						<name>overflow_7_6</name>
+						<name>and_ln785_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10872,7 +10872,7 @@
 					<Obj>
 						<type>0</type>
 						<id>249</id>
-						<name>newsignbit_i_i_i_i_0_6</name>
+						<name>xor_ln786_14</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10921,7 +10921,7 @@
 					<Obj>
 						<type>0</type>
 						<id>250</id>
-						<name>p_not4_6</name>
+						<name>icmp_ln786_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -10970,7 +10970,7 @@
 					<Obj>
 						<type>0</type>
 						<id>251</id>
-						<name>brmerge33_6</name>
+						<name>or_ln786_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11019,7 +11019,7 @@
 					<Obj>
 						<type>0</type>
 						<id>252</id>
-						<name>underflow_7_6</name>
+						<name>and_ln786_18</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11068,7 +11068,7 @@
 					<Obj>
 						<type>0</type>
 						<id>253</id>
-						<name>brmerge34_6</name>
+						<name>or_ln340_32</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11117,7 +11117,7 @@
 					<Obj>
 						<type>0</type>
 						<id>254</id>
-						<name>p_707_not_6</name>
+						<name>xor_ln340_10</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11166,7 +11166,7 @@
 					<Obj>
 						<type>0</type>
 						<id>255</id>
-						<name>brmerge35_6</name>
+						<name>or_ln340_33</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11215,7 +11215,7 @@
 					<Obj>
 						<type>0</type>
 						<id>256</id>
-						<name>p_mux7_6</name>
+						<name>select_ln340_14</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11265,7 +11265,7 @@
 					<Obj>
 						<type>0</type>
 						<id>257</id>
-						<name>p_11_6</name>
+						<name>select_ln388_14</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11315,7 +11315,7 @@
 					<Obj>
 						<type>0</type>
 						<id>258</id>
-						<name>p_0_6</name>
+						<name>select_ln340_23</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11365,7 +11365,7 @@
 					<Obj>
 						<type>0</type>
 						<id>259</id>
-						<name>tmp_79_6</name>
+						<name>tmp_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -11466,7 +11466,7 @@
 					<Obj>
 						<type>0</type>
 						<id>261</id>
-						<name></name>
+						<name>mem_6_addr_write_ln79</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -11515,7 +11515,7 @@
 					<Obj>
 						<type>0</type>
 						<id>262</id>
-						<name>pix_x_V_6</name>
+						<name>or_ln700_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>73</lineNumber>
@@ -11564,7 +11564,7 @@
 					<Obj>
 						<type>0</type>
 						<id>263</id>
-						<name>r_V_7</name>
+						<name>zext_ln1116_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11612,7 +11612,7 @@
 					<Obj>
 						<type>0</type>
 						<id>264</id>
-						<name>r_V_25_7</name>
+						<name>mul_ln1118_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11661,7 +11661,7 @@
 					<Obj>
 						<type>0</type>
 						<id>265</id>
-						<name>tmp_87</name>
+						<name>trunc_ln1192_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11709,7 +11709,7 @@
 					<Obj>
 						<type>0</type>
 						<id>266</id>
-						<name>ret_V_21_7</name>
+						<name>add_ln1192_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11758,7 +11758,7 @@
 					<Obj>
 						<type>0</type>
 						<id>267</id>
-						<name>tmp_88</name>
+						<name>tmp_60</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11808,7 +11808,7 @@
 					<Obj>
 						<type>0</type>
 						<id>268</id>
-						<name>p_Val2_13_7</name>
+						<name>add_ln703_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11857,7 +11857,7 @@
 					<Obj>
 						<type>0</type>
 						<id>269</id>
-						<name>tmp_89</name>
+						<name>tmp_61</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11907,7 +11907,7 @@
 					<Obj>
 						<type>0</type>
 						<id>270</id>
-						<name>tmp_40</name>
+						<name>tmp_15</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -11958,7 +11958,7 @@
 					<Obj>
 						<type>0</type>
 						<id>271</id>
-						<name>p_not_7</name>
+						<name>icmp_ln785_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12007,7 +12007,7 @@
 					<Obj>
 						<type>0</type>
 						<id>272</id>
-						<name>brmerge32_7</name>
+						<name>or_ln785_12</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12056,7 +12056,7 @@
 					<Obj>
 						<type>0</type>
 						<id>273</id>
-						<name>tmp_76_7</name>
+						<name>xor_ln785_17</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12105,7 +12105,7 @@
 					<Obj>
 						<type>0</type>
 						<id>274</id>
-						<name>overflow_7_7</name>
+						<name>and_ln785_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12154,7 +12154,7 @@
 					<Obj>
 						<type>0</type>
 						<id>275</id>
-						<name>newsignbit_i_i_i_i_0_7</name>
+						<name>xor_ln786_15</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12203,7 +12203,7 @@
 					<Obj>
 						<type>0</type>
 						<id>276</id>
-						<name>p_not4_7</name>
+						<name>icmp_ln786_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12252,7 +12252,7 @@
 					<Obj>
 						<type>0</type>
 						<id>277</id>
-						<name>brmerge33_7</name>
+						<name>or_ln786_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12301,7 +12301,7 @@
 					<Obj>
 						<type>0</type>
 						<id>278</id>
-						<name>underflow_7_7</name>
+						<name>and_ln786_19</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12350,7 +12350,7 @@
 					<Obj>
 						<type>0</type>
 						<id>279</id>
-						<name>brmerge34_7</name>
+						<name>or_ln340_34</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12399,7 +12399,7 @@
 					<Obj>
 						<type>0</type>
 						<id>280</id>
-						<name>p_707_not_7</name>
+						<name>xor_ln340_11</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12448,7 +12448,7 @@
 					<Obj>
 						<type>0</type>
 						<id>281</id>
-						<name>brmerge35_7</name>
+						<name>or_ln340_35</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12497,7 +12497,7 @@
 					<Obj>
 						<type>0</type>
 						<id>282</id>
-						<name>p_mux7_7</name>
+						<name>select_ln340_15</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12547,7 +12547,7 @@
 					<Obj>
 						<type>0</type>
 						<id>283</id>
-						<name>p_11_7</name>
+						<name>select_ln388_15</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12597,7 +12597,7 @@
 					<Obj>
 						<type>0</type>
 						<id>284</id>
-						<name>p_0_7</name>
+						<name>select_ln340_24</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>77</lineNumber>
@@ -12647,7 +12647,7 @@
 					<Obj>
 						<type>0</type>
 						<id>285</id>
-						<name>tmp_79_7</name>
+						<name>tmp_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -12748,7 +12748,7 @@
 					<Obj>
 						<type>0</type>
 						<id>287</id>
-						<name></name>
+						<name>mem_7_addr_write_ln79</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>79</lineNumber>
@@ -12797,7 +12797,7 @@
 					<Obj>
 						<type>0</type>
 						<id>288</id>
-						<name>pix_x_V_7</name>
+						<name>add_ln700</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>73</lineNumber>
@@ -12846,7 +12846,7 @@
 					<Obj>
 						<type>0</type>
 						<id>289</id>
-						<name></name>
+						<name>_ln73</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>73</lineNumber>
@@ -12894,7 +12894,7 @@
 					<Obj>
 						<type>0</type>
 						<id>291</id>
-						<name>index_3</name>
+						<name>index</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>87</lineNumber>
@@ -12943,7 +12943,7 @@
 					<Obj>
 						<type>0</type>
 						<id>292</id>
-						<name></name>
+						<name>_ln84</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>84</lineNumber>
@@ -13079,7 +13079,7 @@
 					<Obj>
 						<type>0</type>
 						<id>296</id>
-						<name>exitcond2</name>
+						<name>icmp_ln84</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>84</lineNumber>
@@ -13177,7 +13177,7 @@
 					<Obj>
 						<type>0</type>
 						<id>299</id>
-						<name></name>
+						<name>_ln84</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>84</lineNumber>
@@ -13227,7 +13227,7 @@
 					<Obj>
 						<type>0</type>
 						<id>304</id>
-						<name>tmp_93</name>
+						<name>trunc_ln87</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>87</lineNumber>
@@ -13275,7 +13275,7 @@
 					<Obj>
 						<type>0</type>
 						<id>305</id>
-						<name>arrayNo</name>
+						<name>zext_ln87</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>87</lineNumber>
@@ -13323,7 +13323,7 @@
 					<Obj>
 						<type>0</type>
 						<id>306</id>
-						<name>newIndex</name>
+						<name>lshr_ln1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>87</lineNumber>
@@ -13374,7 +13374,7 @@
 					<Obj>
 						<type>0</type>
 						<id>307</id>
-						<name>newIndex1</name>
+						<name>zext_ln87_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>87</lineNumber>
@@ -14206,7 +14206,7 @@
 					<Obj>
 						<type>0</type>
 						<id>324</id>
-						<name>tmp_42</name>
+						<name>tmp_16</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>87</lineNumber>
@@ -14263,7 +14263,7 @@
 					<Obj>
 						<type>0</type>
 						<id>325</id>
-						<name>index_2</name>
+						<name>add_ln87</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>87</lineNumber>
@@ -14312,7 +14312,7 @@
 					<Obj>
 						<type>0</type>
 						<id>326</id>
-						<name>tmp_43</name>
+						<name>zext_ln87_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>87</lineNumber>
@@ -14459,7 +14459,7 @@
 					<Obj>
 						<type>0</type>
 						<id>329</id>
-						<name></name>
+						<name>buf_addr_write_ln87</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>87</lineNumber>
@@ -14561,7 +14561,7 @@
 					<Obj>
 						<type>0</type>
 						<id>332</id>
-						<name></name>
+						<name>_ln84</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>84</lineNumber>
@@ -14657,7 +14657,7 @@
 					<Obj>
 						<type>0</type>
 						<id>335</id>
-						<name>ret_V_15</name>
+						<name>ret_V_17</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>91</lineNumber>
@@ -14854,7 +14854,7 @@
 					<Obj>
 						<type>0</type>
 						<id>339</id>
-						<name>tmp_41</name>
+						<name>xor_ln786_8</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>91</lineNumber>
@@ -14903,7 +14903,7 @@
 					<Obj>
 						<type>0</type>
 						<id>340</id>
-						<name>underflow_8</name>
+						<name>underflow_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>91</lineNumber>
@@ -14952,7 +14952,7 @@
 					<Obj>
 						<type>0</type>
 						<id>341</id>
-						<name>brmerge5</name>
+						<name>xor_ln340_12</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>91</lineNumber>
@@ -15001,7 +15001,7 @@
 					<Obj>
 						<type>0</type>
 						<id>342</id>
-						<name>signbit_i_i_0_not</name>
+						<name>xor_ln340_8</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>91</lineNumber>
@@ -15050,7 +15050,7 @@
 					<Obj>
 						<type>0</type>
 						<id>343</id>
-						<name>brmerge6</name>
+						<name>or_ln340_27</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>91</lineNumber>
@@ -15099,7 +15099,7 @@
 					<Obj>
 						<type>0</type>
 						<id>344</id>
-						<name>p_mux8</name>
+						<name>select_ln340_8</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>91</lineNumber>
@@ -15149,7 +15149,7 @@
 					<Obj>
 						<type>0</type>
 						<id>345</id>
-						<name>p_2</name>
+						<name>select_ln388_8</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>91</lineNumber>
@@ -15199,7 +15199,7 @@
 					<Obj>
 						<type>0</type>
 						<id>346</id>
-						<name>p_0285_2</name>
+						<name>select_ln340_25</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>91</lineNumber>
@@ -15249,7 +15249,7 @@
 					<Obj>
 						<type>0</type>
 						<id>348</id>
-						<name>indvars_iv_next</name>
+						<name>add_ln70</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>70</lineNumber>
@@ -15298,7 +15298,7 @@
 					<Obj>
 						<type>0</type>
 						<id>349</id>
-						<name></name>
+						<name>_ln70</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>70</lineNumber>
@@ -15346,7 +15346,7 @@
 					<Obj>
 						<type>0</type>
 						<id>351</id>
-						<name></name>
+						<name>_ln98</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>98</lineNumber>
@@ -16133,7 +16133,7 @@
 				<Obj>
 					<type>3</type>
 					<id>72</id>
-					<name>._crit_edge</name>
+					<name>y_for_begin</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -16465,7 +16465,7 @@
 				<Obj>
 					<type>3</type>
 					<id>333</id>
-					<name></name>
+					<name>burst_out</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -16515,7 +16515,7 @@
 				<Obj>
 					<type>3</type>
 					<id>350</id>
-					<name>_ZN13ap_fixed_baseILi41ELi6ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi40ELi5ELb1ELS0_4ELS1_0ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit9.i.i_ifconv</name>
+					<name>y_for_end</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>

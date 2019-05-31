@@ -1,7 +1,7 @@
-// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Mon Mar  4 16:22:12 2019
+// Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+// Date        : Fri May 31 13:48:13 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_cc_0_1/Fast_IP_Clock_auto_cc_0_sim_netlist.v
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Fast_IP_Clock_auto_cc_0,axi_clock_converter_v2_1_17_axi_clock_converter,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_clock_converter_v2_1_17_axi_clock_converter,Vivado 2018.3" *) 
+(* CHECK_LICENSE_TYPE = "Fast_IP_Clock_auto_cc_0,axi_clock_converter_v2_1_18_axi_clock_converter,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_clock_converter_v2_1_18_axi_clock_converter,Vivado 2019.1" *) 
 (* NotValidForBitStream *)
 module Fast_IP_Clock_auto_cc_0
    (s_axi_aclk,
@@ -138,7 +138,7 @@ module Fast_IP_Clock_auto_cc_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RLAST" *) output s_axi_rlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 2, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s_axi_rready;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 MI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME MI_CLK, FREQ_HZ 80357142, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, ASSOCIATED_BUSIF M_AXI, ASSOCIATED_RESET M_AXI_ARESETN, INSERT_VIP 0" *) input m_axi_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 MI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME MI_CLK, FREQ_HZ 80000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, ASSOCIATED_BUSIF M_AXI, ASSOCIATED_RESET M_AXI_ARESETN, INSERT_VIP 0" *) input m_axi_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 MI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME MI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT" *) input m_axi_aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWID" *) output [1:0]m_axi_awid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWADDR" *) output [31:0]m_axi_awaddr;
@@ -178,7 +178,7 @@ module Fast_IP_Clock_auto_cc_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RRESP" *) input [1:0]m_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RLAST" *) input m_axi_rlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RVALID" *) input m_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 80357142, ID_WIDTH 2, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output m_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 80000000, ID_WIDTH 2, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output m_axi_rready;
 
   wire m_axi_aclk;
   wire [31:0]m_axi_araddr;
@@ -376,7 +376,7 @@ module Fast_IP_Clock_auto_cc_0
   (* P_ROUNDING_OFFSET = "0" *) 
   (* P_SI_LT_MI = "1'b1" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
-  Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_17_axi_clock_converter inst
+  Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter inst
        (.m_axi_aclk(m_axi_aclk),
         .m_axi_araddr(m_axi_araddr),
         .m_axi_arburst(m_axi_arburst),
@@ -505,11 +505,11 @@ endmodule
 (* C_WDATA_WIDTH = "32" *) (* C_WID_RIGHT = "37" *) (* C_WID_WIDTH = "0" *) 
 (* C_WLAST_RIGHT = "0" *) (* C_WLAST_WIDTH = "1" *) (* C_WSTRB_RIGHT = "1" *) 
 (* C_WSTRB_WIDTH = "4" *) (* C_WUSER_RIGHT = "0" *) (* C_WUSER_WIDTH = "0" *) 
-(* C_W_WIDTH = "37" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_clock_converter_v2_1_17_axi_clock_converter" *) 
+(* C_W_WIDTH = "37" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_clock_converter_v2_1_18_axi_clock_converter" *) 
 (* P_ACLK_RATIO = "2" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
 (* P_AXILITE = "2" *) (* P_FULLY_REG = "1" *) (* P_LIGHT_WT = "0" *) 
 (* P_LUTRAM_ASYNC = "12" *) (* P_ROUNDING_OFFSET = "0" *) (* P_SI_LT_MI = "1'b1" *) 
-module Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_17_axi_clock_converter
+module Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter
    (s_axi_aclk,
     s_axi_aresetn,
     s_axi_awid,
@@ -1082,7 +1082,7 @@ module Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_17_axi_clock_converter
   (* C_WR_PNTR_WIDTH_WDCH = "4" *) 
   (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
   (* C_WR_RESPONSE_LATENCY = "1" *) 
-  Fast_IP_Clock_auto_cc_0_fifo_generator_v13_2_3 \gen_clock_conv.gen_async_conv.asyncfifo_axi 
+  Fast_IP_Clock_auto_cc_0_fifo_generator_v13_2_4 \gen_clock_conv.gen_async_conv.asyncfifo_axi 
        (.almost_empty(\NLW_gen_clock_conv.gen_async_conv.asyncfifo_axi_almost_empty_UNCONNECTED ),
         .almost_full(\NLW_gen_clock_conv.gen_async_conv.asyncfifo_axi_almost_full_UNCONNECTED ),
         .axi_ar_data_count(\NLW_gen_clock_conv.gen_async_conv.asyncfifo_axi_axi_ar_data_count_UNCONNECTED [4:0]),
@@ -5267,8 +5267,11 @@ module Fast_IP_Clock_auto_cc_0_dmem
   wire [1:0]NLW_RAM_reg_0_15_6_11_DOD_UNCONNECTED;
 
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "0" *) 
   (* ram_slice_end = "5" *) 
   RAM32M RAM_reg_0_15_0_5
@@ -5287,8 +5290,11 @@ module Fast_IP_Clock_auto_cc_0_dmem
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "12" *) 
   (* ram_slice_end = "17" *) 
   RAM32M RAM_reg_0_15_12_17
@@ -5307,8 +5313,11 @@ module Fast_IP_Clock_auto_cc_0_dmem
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "18" *) 
   (* ram_slice_end = "23" *) 
   RAM32M RAM_reg_0_15_18_23
@@ -5327,8 +5336,11 @@ module Fast_IP_Clock_auto_cc_0_dmem
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "24" *) 
   (* ram_slice_end = "29" *) 
   RAM32M RAM_reg_0_15_24_29
@@ -5347,8 +5359,11 @@ module Fast_IP_Clock_auto_cc_0_dmem
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "30" *) 
   (* ram_slice_end = "35" *) 
   RAM32M RAM_reg_0_15_30_35
@@ -5367,8 +5382,11 @@ module Fast_IP_Clock_auto_cc_0_dmem
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "36" *) 
   (* ram_slice_end = "41" *) 
   RAM32M RAM_reg_0_15_36_41
@@ -5387,8 +5405,11 @@ module Fast_IP_Clock_auto_cc_0_dmem
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "42" *) 
   (* ram_slice_end = "47" *) 
   RAM32M RAM_reg_0_15_42_47
@@ -5407,8 +5428,11 @@ module Fast_IP_Clock_auto_cc_0_dmem
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "48" *) 
   (* ram_slice_end = "53" *) 
   RAM32M RAM_reg_0_15_48_53
@@ -5427,8 +5451,11 @@ module Fast_IP_Clock_auto_cc_0_dmem
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "54" *) 
   (* ram_slice_end = "59" *) 
   RAM32M RAM_reg_0_15_54_59
@@ -5447,8 +5474,11 @@ module Fast_IP_Clock_auto_cc_0_dmem
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "60" *) 
   (* ram_slice_end = "62" *) 
   RAM32M RAM_reg_0_15_60_62
@@ -5467,8 +5497,11 @@ module Fast_IP_Clock_auto_cc_0_dmem
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "6" *) 
   (* ram_slice_end = "11" *) 
   RAM32M RAM_reg_0_15_6_11
@@ -6097,8 +6130,11 @@ module Fast_IP_Clock_auto_cc_0_dmem_26
   wire [1:0]NLW_RAM_reg_0_15_6_11_DOD_UNCONNECTED;
 
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "0" *) 
   (* ram_slice_end = "5" *) 
   RAM32M RAM_reg_0_15_0_5
@@ -6117,8 +6153,11 @@ module Fast_IP_Clock_auto_cc_0_dmem_26
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "12" *) 
   (* ram_slice_end = "17" *) 
   RAM32M RAM_reg_0_15_12_17
@@ -6137,8 +6176,11 @@ module Fast_IP_Clock_auto_cc_0_dmem_26
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "18" *) 
   (* ram_slice_end = "23" *) 
   RAM32M RAM_reg_0_15_18_23
@@ -6157,8 +6199,11 @@ module Fast_IP_Clock_auto_cc_0_dmem_26
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "24" *) 
   (* ram_slice_end = "29" *) 
   RAM32M RAM_reg_0_15_24_29
@@ -6177,8 +6222,11 @@ module Fast_IP_Clock_auto_cc_0_dmem_26
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "30" *) 
   (* ram_slice_end = "35" *) 
   RAM32M RAM_reg_0_15_30_35
@@ -6197,8 +6245,11 @@ module Fast_IP_Clock_auto_cc_0_dmem_26
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "36" *) 
   (* ram_slice_end = "41" *) 
   RAM32M RAM_reg_0_15_36_41
@@ -6217,8 +6268,11 @@ module Fast_IP_Clock_auto_cc_0_dmem_26
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "42" *) 
   (* ram_slice_end = "47" *) 
   RAM32M RAM_reg_0_15_42_47
@@ -6237,8 +6291,11 @@ module Fast_IP_Clock_auto_cc_0_dmem_26
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "48" *) 
   (* ram_slice_end = "53" *) 
   RAM32M RAM_reg_0_15_48_53
@@ -6257,8 +6314,11 @@ module Fast_IP_Clock_auto_cc_0_dmem_26
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "54" *) 
   (* ram_slice_end = "59" *) 
   RAM32M RAM_reg_0_15_54_59
@@ -6277,8 +6337,11 @@ module Fast_IP_Clock_auto_cc_0_dmem_26
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "60" *) 
   (* ram_slice_end = "62" *) 
   RAM32M RAM_reg_0_15_60_62
@@ -6297,8 +6360,11 @@ module Fast_IP_Clock_auto_cc_0_dmem_26
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "1008" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "6" *) 
   (* ram_slice_end = "11" *) 
   RAM32M RAM_reg_0_15_6_11
@@ -6898,8 +6964,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0
   wire [1:0]NLW_RAM_reg_0_15_6_11_DOD_UNCONNECTED;
 
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "0" *) 
   (* ram_slice_end = "5" *) 
   RAM32M RAM_reg_0_15_0_5
@@ -6918,8 +6987,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "12" *) 
   (* ram_slice_end = "17" *) 
   RAM32M RAM_reg_0_15_12_17
@@ -6938,8 +7010,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "18" *) 
   (* ram_slice_end = "23" *) 
   RAM32M RAM_reg_0_15_18_23
@@ -6958,8 +7033,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "24" *) 
   (* ram_slice_end = "29" *) 
   RAM32M RAM_reg_0_15_24_29
@@ -6978,8 +7056,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "30" *) 
   (* ram_slice_end = "35" *) 
   RAM32M RAM_reg_0_15_30_35
@@ -6998,8 +7079,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "36" *) 
   (* ram_slice_end = "36" *) 
   RAM32M RAM_reg_0_15_36_36
@@ -7018,8 +7102,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0
         .WCLK(s_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "6" *) 
   (* ram_slice_end = "11" *) 
   RAM32M RAM_reg_0_15_6_11
@@ -7411,8 +7498,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0_17
   wire [1:0]NLW_RAM_reg_0_15_6_11_DOD_UNCONNECTED;
 
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "0" *) 
   (* ram_slice_end = "5" *) 
   RAM32M RAM_reg_0_15_0_5
@@ -7431,8 +7521,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0_17
         .WCLK(m_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "12" *) 
   (* ram_slice_end = "17" *) 
   RAM32M RAM_reg_0_15_12_17
@@ -7451,8 +7544,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0_17
         .WCLK(m_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "18" *) 
   (* ram_slice_end = "23" *) 
   RAM32M RAM_reg_0_15_18_23
@@ -7471,8 +7567,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0_17
         .WCLK(m_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "24" *) 
   (* ram_slice_end = "29" *) 
   RAM32M RAM_reg_0_15_24_29
@@ -7491,8 +7590,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0_17
         .WCLK(m_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "30" *) 
   (* ram_slice_end = "35" *) 
   RAM32M RAM_reg_0_15_30_35
@@ -7511,8 +7613,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0_17
         .WCLK(m_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "36" *) 
   (* ram_slice_end = "36" *) 
   RAM32M RAM_reg_0_15_36_36
@@ -7531,8 +7636,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized0_17
         .WCLK(m_aclk),
         .WE(\gpr1.dout_i_reg[1]_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "592" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "6" *) 
   (* ram_slice_end = "11" *) 
   RAM32M RAM_reg_0_15_6_11
@@ -7883,8 +7991,11 @@ module Fast_IP_Clock_auto_cc_0_dmem__parameterized1
   wire [1:0]NLW_RAM_reg_0_15_0_3_DOD_UNCONNECTED;
 
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* RTL_RAM_BITS = "64" *) 
+  (* RTL_RAM_NAME = "inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM" *) 
   (* ram_addr_begin = "0" *) 
   (* ram_addr_end = "15" *) 
+  (* ram_offset = "0" *) 
   (* ram_slice_begin = "0" *) 
   (* ram_slice_end = "3" *) 
   RAM32M RAM_reg_0_15_0_3
@@ -8750,8 +8861,8 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "10" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "4" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "4" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_2_3" *) 
-module Fast_IP_Clock_auto_cc_0_fifo_generator_v13_2_3
+(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_2_4" *) 
+module Fast_IP_Clock_auto_cc_0_fifo_generator_v13_2_4
    (backup,
     backup_marker,
     clk,
@@ -9532,7 +9643,7 @@ module Fast_IP_Clock_auto_cc_0_fifo_generator_v13_2_3
   assign wr_rst_busy = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  Fast_IP_Clock_auto_cc_0_fifo_generator_v13_2_3_synth inst_fifo_gen
+  Fast_IP_Clock_auto_cc_0_fifo_generator_v13_2_4_synth inst_fifo_gen
        (.DI({s_axi_awid,s_axi_awaddr,s_axi_awlen,s_axi_awsize,s_axi_awburst,s_axi_awlock,s_axi_awcache,s_axi_awprot,s_axi_awqos,s_axi_awregion}),
         .I78({s_axi_wdata,s_axi_wstrb,s_axi_wlast}),
         .I82({m_axi_bid,m_axi_bresp}),
@@ -9568,8 +9679,8 @@ module Fast_IP_Clock_auto_cc_0_fifo_generator_v13_2_3
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_2_3_synth" *) 
-module Fast_IP_Clock_auto_cc_0_fifo_generator_v13_2_3_synth
+(* ORIG_REF_NAME = "fifo_generator_v13_2_4_synth" *) 
+module Fast_IP_Clock_auto_cc_0_fifo_generator_v13_2_4_synth
    (Q,
     \goreg_dm.dout_i_reg[36] ,
     \goreg_dm.dout_i_reg[3] ,

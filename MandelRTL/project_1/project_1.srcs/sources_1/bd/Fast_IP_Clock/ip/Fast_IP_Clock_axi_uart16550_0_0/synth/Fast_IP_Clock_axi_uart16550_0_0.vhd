@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:axi_uart16550:2.0
--- IP Revision: 20
+-- IP Revision: 21
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY axi_uart16550_v2_0_20;
-USE axi_uart16550_v2_0_20.axi_uart16550;
+LIBRARY axi_uart16550_v2_0_21;
+USE axi_uart16550_v2_0_21.axi_uart16550;
 
 ENTITY Fast_IP_Clock_axi_uart16550_0_0 IS
   PORT (
@@ -152,11 +152,11 @@ ARCHITECTURE Fast_IP_Clock_axi_uart16550_0_0_arch OF Fast_IP_Clock_axi_uart16550
     );
   END COMPONENT axi_uart16550;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF Fast_IP_Clock_axi_uart16550_0_0_arch: ARCHITECTURE IS "axi_uart16550,Vivado 2018.3";
+  ATTRIBUTE X_CORE_INFO OF Fast_IP_Clock_axi_uart16550_0_0_arch: ARCHITECTURE IS "axi_uart16550,Vivado 2019.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF Fast_IP_Clock_axi_uart16550_0_0_arch : ARCHITECTURE IS "Fast_IP_Clock_axi_uart16550_0_0,axi_uart16550,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF Fast_IP_Clock_axi_uart16550_0_0_arch: ARCHITECTURE IS "Fast_IP_Clock_axi_uart16550_0_0,axi_uart16550,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_uart16550,x_ipVersion=2.0,x_ipCoreRevision=20,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_S_AXI_ACLK_FREQ_HZ=100000000,C_S_AXI_ADDR_WIDTH=13,C_S_AXI_DATA_WIDTH=32,C_IS_A_16550=1,C_HAS_EXTERNAL_XIN=0,C_HAS_EXTERNAL_RCLK=0,C_EXTERNAL_XIN_CLK_HZ=25000000}";
+  ATTRIBUTE CORE_GENERATION_INFO OF Fast_IP_Clock_axi_uart16550_0_0_arch: ARCHITECTURE IS "Fast_IP_Clock_axi_uart16550_0_0,axi_uart16550,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_uart16550,x_ipVersion=2.0,x_ipCoreRevision=21,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_S_AXI_ACLK_FREQ_HZ=100000000,C_S_AXI_ADDR_WIDTH=13,C_S_AXI_DATA_WIDTH=32,C_IS_A_16550=1,C_HAS_EXTERNAL_XIN=0,C_HAS_EXTERNAL_RCLK=0,C_EXTERNAL_XIN_CLK_HZ=25000000}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF txrdyn: SIGNAL IS "xilinx.com:interface:uart:1.0 UART TXRDYn";

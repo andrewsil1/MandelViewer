@@ -1,10 +1,10 @@
-// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Feb 10 20:34:44 2019
+// Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+// Date        : Fri May 31 11:50:57 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim {C:/Users/andrewsi/OneDrive/Documents/Visual Studio
-//               2017/Projects/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_psram_ip_0_0/Fast_IP_Clock_psram_ip_0_0_sim_netlist.v}
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_psram_ip_0_0/Fast_IP_Clock_psram_ip_0_0_sim_netlist.v
 // Design      : Fast_IP_Clock_psram_ip_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Fast_IP_Clock_psram_ip_0_0,psram_ip_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "psram_ip_v1_0,Vivado 2018.3" *) 
+(* CHECK_LICENSE_TYPE = "Fast_IP_Clock_psram_ip_0_0,psram_ip_v1_0,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "psram_ip_v1_0,Vivado 2019.1" *) 
 (* NotValidForBitStream *)
 module Fast_IP_Clock_psram_ip_0_0
    (MEM_ADDR_OUT,
@@ -372,7 +372,7 @@ module Fast_IP_Clock_psram_ip_0_0_AsyncPSRAM
   wire \ce_cycle_counter[8]_i_4_n_0 ;
   wire \ce_cycle_counter[8]_i_5_n_0 ;
   wire \ce_cycle_counter[8]_i_6_n_0 ;
-  wire [8:0]ce_cycle_counter_reg__0;
+  wire [8:0]ce_cycle_counter_reg;
   wire cem_time_expired_i_1_n_0;
   wire cem_time_expired_reg_n_0;
   wire cen_old;
@@ -859,78 +859,78 @@ module Fast_IP_Clock_psram_ip_0_0_AsyncPSRAM
   LUT1 #(
     .INIT(2'h1)) 
     \ce_cycle_counter[0]_i_1 
-       (.I0(ce_cycle_counter_reg__0[0]),
+       (.I0(ce_cycle_counter_reg[0]),
         .O(p_0_in[0]));
   (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \ce_cycle_counter[1]_i_1 
-       (.I0(ce_cycle_counter_reg__0[0]),
-        .I1(ce_cycle_counter_reg__0[1]),
+       (.I0(ce_cycle_counter_reg[0]),
+        .I1(ce_cycle_counter_reg[1]),
         .O(p_0_in[1]));
   (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \ce_cycle_counter[2]_i_1 
-       (.I0(ce_cycle_counter_reg__0[1]),
-        .I1(ce_cycle_counter_reg__0[0]),
-        .I2(ce_cycle_counter_reg__0[2]),
+       (.I0(ce_cycle_counter_reg[1]),
+        .I1(ce_cycle_counter_reg[0]),
+        .I2(ce_cycle_counter_reg[2]),
         .O(p_0_in[2]));
   (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \ce_cycle_counter[3]_i_1 
-       (.I0(ce_cycle_counter_reg__0[2]),
-        .I1(ce_cycle_counter_reg__0[0]),
-        .I2(ce_cycle_counter_reg__0[1]),
-        .I3(ce_cycle_counter_reg__0[3]),
+       (.I0(ce_cycle_counter_reg[2]),
+        .I1(ce_cycle_counter_reg[0]),
+        .I2(ce_cycle_counter_reg[1]),
+        .I3(ce_cycle_counter_reg[3]),
         .O(p_0_in[3]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h6CCCCCCC)) 
     \ce_cycle_counter[4]_i_1 
-       (.I0(ce_cycle_counter_reg__0[2]),
-        .I1(ce_cycle_counter_reg__0[4]),
-        .I2(ce_cycle_counter_reg__0[1]),
-        .I3(ce_cycle_counter_reg__0[0]),
-        .I4(ce_cycle_counter_reg__0[3]),
+       (.I0(ce_cycle_counter_reg[2]),
+        .I1(ce_cycle_counter_reg[4]),
+        .I2(ce_cycle_counter_reg[1]),
+        .I3(ce_cycle_counter_reg[0]),
+        .I4(ce_cycle_counter_reg[3]),
         .O(p_0_in[4]));
   LUT6 #(
     .INIT(64'h7FFFFFFF80000000)) 
     \ce_cycle_counter[5]_i_1 
-       (.I0(ce_cycle_counter_reg__0[1]),
-        .I1(ce_cycle_counter_reg__0[0]),
-        .I2(ce_cycle_counter_reg__0[3]),
-        .I3(ce_cycle_counter_reg__0[2]),
-        .I4(ce_cycle_counter_reg__0[4]),
-        .I5(ce_cycle_counter_reg__0[5]),
+       (.I0(ce_cycle_counter_reg[1]),
+        .I1(ce_cycle_counter_reg[0]),
+        .I2(ce_cycle_counter_reg[3]),
+        .I3(ce_cycle_counter_reg[2]),
+        .I4(ce_cycle_counter_reg[4]),
+        .I5(ce_cycle_counter_reg[5]),
         .O(p_0_in[5]));
   LUT5 #(
     .INIT(32'hFF7F0080)) 
     \ce_cycle_counter[6]_i_1 
-       (.I0(ce_cycle_counter_reg__0[5]),
-        .I1(ce_cycle_counter_reg__0[4]),
-        .I2(ce_cycle_counter_reg__0[2]),
+       (.I0(ce_cycle_counter_reg[5]),
+        .I1(ce_cycle_counter_reg[4]),
+        .I2(ce_cycle_counter_reg[2]),
         .I3(\ce_cycle_counter[7]_i_2_n_0 ),
-        .I4(ce_cycle_counter_reg__0[6]),
+        .I4(ce_cycle_counter_reg[6]),
         .O(p_0_in[6]));
   LUT6 #(
     .INIT(64'hF7FFFFFF08000000)) 
     \ce_cycle_counter[7]_i_1 
-       (.I0(ce_cycle_counter_reg__0[4]),
-        .I1(ce_cycle_counter_reg__0[2]),
+       (.I0(ce_cycle_counter_reg[4]),
+        .I1(ce_cycle_counter_reg[2]),
         .I2(\ce_cycle_counter[7]_i_2_n_0 ),
-        .I3(ce_cycle_counter_reg__0[6]),
-        .I4(ce_cycle_counter_reg__0[5]),
-        .I5(ce_cycle_counter_reg__0[7]),
+        .I3(ce_cycle_counter_reg[6]),
+        .I4(ce_cycle_counter_reg[5]),
+        .I5(ce_cycle_counter_reg[7]),
         .O(p_0_in[7]));
   (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \ce_cycle_counter[7]_i_2 
-       (.I0(ce_cycle_counter_reg__0[1]),
-        .I1(ce_cycle_counter_reg__0[0]),
-        .I2(ce_cycle_counter_reg__0[3]),
+       (.I0(ce_cycle_counter_reg[1]),
+        .I1(ce_cycle_counter_reg[0]),
+        .I2(ce_cycle_counter_reg[3]),
         .O(\ce_cycle_counter[7]_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h2)) 
@@ -948,38 +948,38 @@ module Fast_IP_Clock_psram_ip_0_0_AsyncPSRAM
   LUT5 #(
     .INIT(32'h6CCCCCCC)) 
     \ce_cycle_counter[8]_i_3 
-       (.I0(ce_cycle_counter_reg__0[7]),
-        .I1(ce_cycle_counter_reg__0[8]),
-        .I2(ce_cycle_counter_reg__0[5]),
-        .I3(ce_cycle_counter_reg__0[6]),
+       (.I0(ce_cycle_counter_reg[7]),
+        .I1(ce_cycle_counter_reg[8]),
+        .I2(ce_cycle_counter_reg[5]),
+        .I3(ce_cycle_counter_reg[6]),
         .I4(\ce_cycle_counter[8]_i_5_n_0 ),
         .O(p_0_in[8]));
   LUT6 #(
     .INIT(64'hFFFFFFEFFFFFFFFF)) 
     \ce_cycle_counter[8]_i_4 
        (.I0(\ce_cycle_counter[7]_i_2_n_0 ),
-        .I1(ce_cycle_counter_reg__0[2]),
-        .I2(ce_cycle_counter_reg__0[4]),
+        .I1(ce_cycle_counter_reg[2]),
+        .I2(ce_cycle_counter_reg[4]),
         .I3(\ce_cycle_counter[8]_i_6_n_0 ),
-        .I4(ce_cycle_counter_reg__0[7]),
-        .I5(ce_cycle_counter_reg__0[8]),
+        .I4(ce_cycle_counter_reg[7]),
+        .I5(ce_cycle_counter_reg[8]),
         .O(\ce_cycle_counter[8]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     \ce_cycle_counter[8]_i_5 
-       (.I0(ce_cycle_counter_reg__0[4]),
-        .I1(ce_cycle_counter_reg__0[2]),
-        .I2(ce_cycle_counter_reg__0[3]),
-        .I3(ce_cycle_counter_reg__0[0]),
-        .I4(ce_cycle_counter_reg__0[1]),
+       (.I0(ce_cycle_counter_reg[4]),
+        .I1(ce_cycle_counter_reg[2]),
+        .I2(ce_cycle_counter_reg[3]),
+        .I3(ce_cycle_counter_reg[0]),
+        .I4(ce_cycle_counter_reg[1]),
         .O(\ce_cycle_counter[8]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \ce_cycle_counter[8]_i_6 
-       (.I0(ce_cycle_counter_reg__0[6]),
-        .I1(ce_cycle_counter_reg__0[5]),
+       (.I0(ce_cycle_counter_reg[6]),
+        .I1(ce_cycle_counter_reg[5]),
         .O(\ce_cycle_counter[8]_i_6_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -987,7 +987,7 @@ module Fast_IP_Clock_psram_ip_0_0_AsyncPSRAM
        (.C(s00_axi_aclk),
         .CE(\ce_cycle_counter[8]_i_2_n_0 ),
         .D(p_0_in[0]),
-        .Q(ce_cycle_counter_reg__0[0]),
+        .Q(ce_cycle_counter_reg[0]),
         .R(ce_cycle_counter0));
   FDRE #(
     .INIT(1'b0)) 
@@ -995,7 +995,7 @@ module Fast_IP_Clock_psram_ip_0_0_AsyncPSRAM
        (.C(s00_axi_aclk),
         .CE(\ce_cycle_counter[8]_i_2_n_0 ),
         .D(p_0_in[1]),
-        .Q(ce_cycle_counter_reg__0[1]),
+        .Q(ce_cycle_counter_reg[1]),
         .R(ce_cycle_counter0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1003,7 +1003,7 @@ module Fast_IP_Clock_psram_ip_0_0_AsyncPSRAM
        (.C(s00_axi_aclk),
         .CE(\ce_cycle_counter[8]_i_2_n_0 ),
         .D(p_0_in[2]),
-        .Q(ce_cycle_counter_reg__0[2]),
+        .Q(ce_cycle_counter_reg[2]),
         .R(ce_cycle_counter0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1011,7 +1011,7 @@ module Fast_IP_Clock_psram_ip_0_0_AsyncPSRAM
        (.C(s00_axi_aclk),
         .CE(\ce_cycle_counter[8]_i_2_n_0 ),
         .D(p_0_in[3]),
-        .Q(ce_cycle_counter_reg__0[3]),
+        .Q(ce_cycle_counter_reg[3]),
         .R(ce_cycle_counter0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1019,7 +1019,7 @@ module Fast_IP_Clock_psram_ip_0_0_AsyncPSRAM
        (.C(s00_axi_aclk),
         .CE(\ce_cycle_counter[8]_i_2_n_0 ),
         .D(p_0_in[4]),
-        .Q(ce_cycle_counter_reg__0[4]),
+        .Q(ce_cycle_counter_reg[4]),
         .R(ce_cycle_counter0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1027,7 +1027,7 @@ module Fast_IP_Clock_psram_ip_0_0_AsyncPSRAM
        (.C(s00_axi_aclk),
         .CE(\ce_cycle_counter[8]_i_2_n_0 ),
         .D(p_0_in[5]),
-        .Q(ce_cycle_counter_reg__0[5]),
+        .Q(ce_cycle_counter_reg[5]),
         .R(ce_cycle_counter0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1035,7 +1035,7 @@ module Fast_IP_Clock_psram_ip_0_0_AsyncPSRAM
        (.C(s00_axi_aclk),
         .CE(\ce_cycle_counter[8]_i_2_n_0 ),
         .D(p_0_in[6]),
-        .Q(ce_cycle_counter_reg__0[6]),
+        .Q(ce_cycle_counter_reg[6]),
         .R(ce_cycle_counter0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1043,7 +1043,7 @@ module Fast_IP_Clock_psram_ip_0_0_AsyncPSRAM
        (.C(s00_axi_aclk),
         .CE(\ce_cycle_counter[8]_i_2_n_0 ),
         .D(p_0_in[7]),
-        .Q(ce_cycle_counter_reg__0[7]),
+        .Q(ce_cycle_counter_reg[7]),
         .R(ce_cycle_counter0));
   FDRE #(
     .INIT(1'b0)) 
@@ -1051,7 +1051,7 @@ module Fast_IP_Clock_psram_ip_0_0_AsyncPSRAM
        (.C(s00_axi_aclk),
         .CE(\ce_cycle_counter[8]_i_2_n_0 ),
         .D(p_0_in[8]),
-        .Q(ce_cycle_counter_reg__0[8]),
+        .Q(ce_cycle_counter_reg[8]),
         .R(ce_cycle_counter0));
   LUT4 #(
     .INIT(16'hC0C5)) 
@@ -2552,7 +2552,7 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
   wire \axi_arlen_cntr[6]_i_2_n_0 ;
   wire \axi_arlen_cntr[7]_i_1_n_0 ;
   wire \axi_arlen_cntr[7]_i_4_n_0 ;
-  wire [7:0]axi_arlen_cntr_reg__0;
+  wire [7:0]axi_arlen_cntr_reg;
   wire axi_arready_i_1_n_0;
   wire axi_arready_i_2_n_0;
   wire axi_arready_i_3_n_0;
@@ -2617,7 +2617,7 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
   wire \axi_awlen_cntr[7]_i_1_n_0 ;
   wire \axi_awlen_cntr[7]_i_2_n_0 ;
   wire \axi_awlen_cntr[7]_i_4_n_0 ;
-  wire [7:0]axi_awlen_cntr_reg__0;
+  wire [7:0]axi_awlen_cntr_reg;
   wire axi_awready_i_1_n_0;
   wire axi_awready_reg_0;
   wire axi_awv_awr_flag;
@@ -3463,68 +3463,68 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
   LUT1 #(
     .INIT(2'h1)) 
     \axi_arlen_cntr[0]_i_1 
-       (.I0(axi_arlen_cntr_reg__0[0]),
+       (.I0(axi_arlen_cntr_reg[0]),
         .O(plusOp[0]));
   (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \axi_arlen_cntr[1]_i_1 
-       (.I0(axi_arlen_cntr_reg__0[0]),
-        .I1(axi_arlen_cntr_reg__0[1]),
+       (.I0(axi_arlen_cntr_reg[0]),
+        .I1(axi_arlen_cntr_reg[1]),
         .O(plusOp[1]));
   (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \axi_arlen_cntr[2]_i_1 
-       (.I0(axi_arlen_cntr_reg__0[0]),
-        .I1(axi_arlen_cntr_reg__0[1]),
-        .I2(axi_arlen_cntr_reg__0[2]),
+       (.I0(axi_arlen_cntr_reg[0]),
+        .I1(axi_arlen_cntr_reg[1]),
+        .I2(axi_arlen_cntr_reg[2]),
         .O(plusOp[2]));
   (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \axi_arlen_cntr[3]_i_1 
-       (.I0(axi_arlen_cntr_reg__0[2]),
-        .I1(axi_arlen_cntr_reg__0[1]),
-        .I2(axi_arlen_cntr_reg__0[0]),
-        .I3(axi_arlen_cntr_reg__0[3]),
+       (.I0(axi_arlen_cntr_reg[2]),
+        .I1(axi_arlen_cntr_reg[1]),
+        .I2(axi_arlen_cntr_reg[0]),
+        .I3(axi_arlen_cntr_reg[3]),
         .O(plusOp[3]));
   (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \axi_arlen_cntr[4]_i_1 
-       (.I0(axi_arlen_cntr_reg__0[3]),
-        .I1(axi_arlen_cntr_reg__0[0]),
-        .I2(axi_arlen_cntr_reg__0[1]),
-        .I3(axi_arlen_cntr_reg__0[2]),
-        .I4(axi_arlen_cntr_reg__0[4]),
+       (.I0(axi_arlen_cntr_reg[3]),
+        .I1(axi_arlen_cntr_reg[0]),
+        .I2(axi_arlen_cntr_reg[1]),
+        .I3(axi_arlen_cntr_reg[2]),
+        .I4(axi_arlen_cntr_reg[4]),
         .O(plusOp[4]));
   LUT6 #(
     .INIT(64'h7FFFFFFF80000000)) 
     \axi_arlen_cntr[5]_i_1 
-       (.I0(axi_arlen_cntr_reg__0[2]),
-        .I1(axi_arlen_cntr_reg__0[1]),
-        .I2(axi_arlen_cntr_reg__0[0]),
-        .I3(axi_arlen_cntr_reg__0[3]),
-        .I4(axi_arlen_cntr_reg__0[4]),
-        .I5(axi_arlen_cntr_reg__0[5]),
+       (.I0(axi_arlen_cntr_reg[2]),
+        .I1(axi_arlen_cntr_reg[1]),
+        .I2(axi_arlen_cntr_reg[0]),
+        .I3(axi_arlen_cntr_reg[3]),
+        .I4(axi_arlen_cntr_reg[4]),
+        .I5(axi_arlen_cntr_reg[5]),
         .O(plusOp[5]));
   LUT6 #(
     .INIT(64'hFF7FFFFF00800000)) 
     \axi_arlen_cntr[6]_i_1 
-       (.I0(axi_arlen_cntr_reg__0[5]),
-        .I1(axi_arlen_cntr_reg__0[4]),
-        .I2(axi_arlen_cntr_reg__0[3]),
+       (.I0(axi_arlen_cntr_reg[5]),
+        .I1(axi_arlen_cntr_reg[4]),
+        .I2(axi_arlen_cntr_reg[3]),
         .I3(\axi_arlen_cntr[6]_i_2_n_0 ),
-        .I4(axi_arlen_cntr_reg__0[2]),
-        .I5(axi_arlen_cntr_reg__0[6]),
+        .I4(axi_arlen_cntr_reg[2]),
+        .I5(axi_arlen_cntr_reg[6]),
         .O(plusOp[6]));
   (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \axi_arlen_cntr[6]_i_2 
-       (.I0(axi_arlen_cntr_reg__0[1]),
-        .I1(axi_arlen_cntr_reg__0[0]),
+       (.I0(axi_arlen_cntr_reg[1]),
+        .I1(axi_arlen_cntr_reg[0]),
         .O(\axi_arlen_cntr[6]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'h02FF)) 
@@ -3544,67 +3544,67 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
   LUT3 #(
     .INIT(8'hD2)) 
     \axi_arlen_cntr[7]_i_3 
-       (.I0(axi_arlen_cntr_reg__0[6]),
+       (.I0(axi_arlen_cntr_reg[6]),
         .I1(\axi_arlen_cntr[7]_i_4_n_0 ),
-        .I2(axi_arlen_cntr_reg__0[7]),
+        .I2(axi_arlen_cntr_reg[7]),
         .O(plusOp[7]));
   LUT6 #(
     .INIT(64'h7FFFFFFFFFFFFFFF)) 
     \axi_arlen_cntr[7]_i_4 
-       (.I0(axi_arlen_cntr_reg__0[2]),
-        .I1(axi_arlen_cntr_reg__0[1]),
-        .I2(axi_arlen_cntr_reg__0[0]),
-        .I3(axi_arlen_cntr_reg__0[3]),
-        .I4(axi_arlen_cntr_reg__0[4]),
-        .I5(axi_arlen_cntr_reg__0[5]),
+       (.I0(axi_arlen_cntr_reg[2]),
+        .I1(axi_arlen_cntr_reg[1]),
+        .I2(axi_arlen_cntr_reg[0]),
+        .I3(axi_arlen_cntr_reg[3]),
+        .I4(axi_arlen_cntr_reg[4]),
+        .I5(axi_arlen_cntr_reg[5]),
         .O(\axi_arlen_cntr[7]_i_4_n_0 ));
   FDRE \axi_arlen_cntr_reg[0] 
        (.C(s00_axi_aclk),
         .CE(axi_araddr1),
         .D(plusOp[0]),
-        .Q(axi_arlen_cntr_reg__0[0]),
+        .Q(axi_arlen_cntr_reg[0]),
         .R(\axi_arlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_arlen_cntr_reg[1] 
        (.C(s00_axi_aclk),
         .CE(axi_araddr1),
         .D(plusOp[1]),
-        .Q(axi_arlen_cntr_reg__0[1]),
+        .Q(axi_arlen_cntr_reg[1]),
         .R(\axi_arlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_arlen_cntr_reg[2] 
        (.C(s00_axi_aclk),
         .CE(axi_araddr1),
         .D(plusOp[2]),
-        .Q(axi_arlen_cntr_reg__0[2]),
+        .Q(axi_arlen_cntr_reg[2]),
         .R(\axi_arlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_arlen_cntr_reg[3] 
        (.C(s00_axi_aclk),
         .CE(axi_araddr1),
         .D(plusOp[3]),
-        .Q(axi_arlen_cntr_reg__0[3]),
+        .Q(axi_arlen_cntr_reg[3]),
         .R(\axi_arlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_arlen_cntr_reg[4] 
        (.C(s00_axi_aclk),
         .CE(axi_araddr1),
         .D(plusOp[4]),
-        .Q(axi_arlen_cntr_reg__0[4]),
+        .Q(axi_arlen_cntr_reg[4]),
         .R(\axi_arlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_arlen_cntr_reg[5] 
        (.C(s00_axi_aclk),
         .CE(axi_araddr1),
         .D(plusOp[5]),
-        .Q(axi_arlen_cntr_reg__0[5]),
+        .Q(axi_arlen_cntr_reg[5]),
         .R(\axi_arlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_arlen_cntr_reg[6] 
        (.C(s00_axi_aclk),
         .CE(axi_araddr1),
         .D(plusOp[6]),
-        .Q(axi_arlen_cntr_reg__0[6]),
+        .Q(axi_arlen_cntr_reg[6]),
         .R(\axi_arlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_arlen_cntr_reg[7] 
        (.C(s00_axi_aclk),
         .CE(axi_araddr1),
         .D(plusOp[7]),
-        .Q(axi_arlen_cntr_reg__0[7]),
+        .Q(axi_arlen_cntr_reg[7]),
         .R(\axi_arlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_arlen_reg[0] 
        (.C(s00_axi_aclk),
@@ -3668,8 +3668,8 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
     .INIT(64'hFFFFFFFFFFFF6FF6)) 
     axi_arready_i_2
        (.I0(axi_arlen[7]),
-        .I1(axi_arlen_cntr_reg__0[7]),
-        .I2(axi_arlen_cntr_reg__0[6]),
+        .I1(axi_arlen_cntr_reg[7]),
+        .I2(axi_arlen_cntr_reg[6]),
         .I3(axi_arlen[6]),
         .I4(axi_arready_i_3_n_0),
         .I5(axi_arready_i_4_n_0),
@@ -3678,21 +3678,21 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
     .INIT(64'h6FF6FFFFFFFF6FF6)) 
     axi_arready_i_3
        (.I0(axi_arlen[4]),
-        .I1(axi_arlen_cntr_reg__0[4]),
+        .I1(axi_arlen_cntr_reg[4]),
         .I2(axi_arlen[0]),
-        .I3(axi_arlen_cntr_reg__0[0]),
+        .I3(axi_arlen_cntr_reg[0]),
         .I4(axi_arlen[3]),
-        .I5(axi_arlen_cntr_reg__0[3]),
+        .I5(axi_arlen_cntr_reg[3]),
         .O(axi_arready_i_3_n_0));
   LUT6 #(
     .INIT(64'h6FF6FFFFFFFF6FF6)) 
     axi_arready_i_4
        (.I0(axi_arlen[5]),
-        .I1(axi_arlen_cntr_reg__0[5]),
+        .I1(axi_arlen_cntr_reg[5]),
         .I2(axi_arlen[1]),
-        .I3(axi_arlen_cntr_reg__0[1]),
+        .I3(axi_arlen_cntr_reg[1]),
         .I4(axi_arlen[2]),
-        .I5(axi_arlen_cntr_reg__0[2]),
+        .I5(axi_arlen_cntr_reg[2]),
         .O(axi_arready_i_4_n_0));
   FDRE axi_arready_reg
        (.C(s00_axi_aclk),
@@ -4141,68 +4141,68 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
   LUT1 #(
     .INIT(2'h1)) 
     \axi_awlen_cntr[0]_i_1 
-       (.I0(axi_awlen_cntr_reg__0[0]),
+       (.I0(axi_awlen_cntr_reg[0]),
         .O(\axi_awlen_cntr[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \axi_awlen_cntr[1]_i_1 
-       (.I0(axi_awlen_cntr_reg__0[0]),
-        .I1(axi_awlen_cntr_reg__0[1]),
+       (.I0(axi_awlen_cntr_reg[0]),
+        .I1(axi_awlen_cntr_reg[1]),
         .O(plusOp__0[1]));
   (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \axi_awlen_cntr[2]_i_1 
-       (.I0(axi_awlen_cntr_reg__0[0]),
-        .I1(axi_awlen_cntr_reg__0[1]),
-        .I2(axi_awlen_cntr_reg__0[2]),
+       (.I0(axi_awlen_cntr_reg[0]),
+        .I1(axi_awlen_cntr_reg[1]),
+        .I2(axi_awlen_cntr_reg[2]),
         .O(plusOp__0[2]));
   (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \axi_awlen_cntr[3]_i_1 
-       (.I0(axi_awlen_cntr_reg__0[2]),
-        .I1(axi_awlen_cntr_reg__0[1]),
-        .I2(axi_awlen_cntr_reg__0[0]),
-        .I3(axi_awlen_cntr_reg__0[3]),
+       (.I0(axi_awlen_cntr_reg[2]),
+        .I1(axi_awlen_cntr_reg[1]),
+        .I2(axi_awlen_cntr_reg[0]),
+        .I3(axi_awlen_cntr_reg[3]),
         .O(plusOp__0[3]));
   (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \axi_awlen_cntr[4]_i_1 
-       (.I0(axi_awlen_cntr_reg__0[3]),
-        .I1(axi_awlen_cntr_reg__0[0]),
-        .I2(axi_awlen_cntr_reg__0[1]),
-        .I3(axi_awlen_cntr_reg__0[2]),
-        .I4(axi_awlen_cntr_reg__0[4]),
+       (.I0(axi_awlen_cntr_reg[3]),
+        .I1(axi_awlen_cntr_reg[0]),
+        .I2(axi_awlen_cntr_reg[1]),
+        .I3(axi_awlen_cntr_reg[2]),
+        .I4(axi_awlen_cntr_reg[4]),
         .O(plusOp__0[4]));
   LUT6 #(
     .INIT(64'h7FFFFFFF80000000)) 
     \axi_awlen_cntr[5]_i_1 
-       (.I0(axi_awlen_cntr_reg__0[2]),
-        .I1(axi_awlen_cntr_reg__0[1]),
-        .I2(axi_awlen_cntr_reg__0[0]),
-        .I3(axi_awlen_cntr_reg__0[3]),
-        .I4(axi_awlen_cntr_reg__0[4]),
-        .I5(axi_awlen_cntr_reg__0[5]),
+       (.I0(axi_awlen_cntr_reg[2]),
+        .I1(axi_awlen_cntr_reg[1]),
+        .I2(axi_awlen_cntr_reg[0]),
+        .I3(axi_awlen_cntr_reg[3]),
+        .I4(axi_awlen_cntr_reg[4]),
+        .I5(axi_awlen_cntr_reg[5]),
         .O(plusOp__0[5]));
   LUT6 #(
     .INIT(64'hF7FFFFFF08000000)) 
     \axi_awlen_cntr[6]_i_1 
-       (.I0(axi_awlen_cntr_reg__0[4]),
-        .I1(axi_awlen_cntr_reg__0[3]),
+       (.I0(axi_awlen_cntr_reg[4]),
+        .I1(axi_awlen_cntr_reg[3]),
         .I2(\axi_awlen_cntr[6]_i_2_n_0 ),
-        .I3(axi_awlen_cntr_reg__0[2]),
-        .I4(axi_awlen_cntr_reg__0[5]),
-        .I5(axi_awlen_cntr_reg__0[6]),
+        .I3(axi_awlen_cntr_reg[2]),
+        .I4(axi_awlen_cntr_reg[5]),
+        .I5(axi_awlen_cntr_reg[6]),
         .O(plusOp__0[6]));
   (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \axi_awlen_cntr[6]_i_2 
-       (.I0(axi_awlen_cntr_reg__0[1]),
-        .I1(axi_awlen_cntr_reg__0[0]),
+       (.I0(axi_awlen_cntr_reg[1]),
+        .I1(axi_awlen_cntr_reg[0]),
         .O(\axi_awlen_cntr[6]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'h04FF)) 
@@ -4222,67 +4222,67 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
   LUT3 #(
     .INIT(8'hD2)) 
     \axi_awlen_cntr[7]_i_3 
-       (.I0(axi_awlen_cntr_reg__0[6]),
+       (.I0(axi_awlen_cntr_reg[6]),
         .I1(\axi_awlen_cntr[7]_i_4_n_0 ),
-        .I2(axi_awlen_cntr_reg__0[7]),
+        .I2(axi_awlen_cntr_reg[7]),
         .O(plusOp__0[7]));
   LUT6 #(
     .INIT(64'h7FFFFFFFFFFFFFFF)) 
     \axi_awlen_cntr[7]_i_4 
-       (.I0(axi_awlen_cntr_reg__0[5]),
-        .I1(axi_awlen_cntr_reg__0[2]),
-        .I2(axi_awlen_cntr_reg__0[1]),
-        .I3(axi_awlen_cntr_reg__0[0]),
-        .I4(axi_awlen_cntr_reg__0[3]),
-        .I5(axi_awlen_cntr_reg__0[4]),
+       (.I0(axi_awlen_cntr_reg[5]),
+        .I1(axi_awlen_cntr_reg[2]),
+        .I2(axi_awlen_cntr_reg[1]),
+        .I3(axi_awlen_cntr_reg[0]),
+        .I4(axi_awlen_cntr_reg[3]),
+        .I5(axi_awlen_cntr_reg[4]),
         .O(\axi_awlen_cntr[7]_i_4_n_0 ));
   FDRE \axi_awlen_cntr_reg[0] 
        (.C(s00_axi_aclk),
         .CE(\axi_awlen_cntr[7]_i_2_n_0 ),
         .D(\axi_awlen_cntr[0]_i_1_n_0 ),
-        .Q(axi_awlen_cntr_reg__0[0]),
+        .Q(axi_awlen_cntr_reg[0]),
         .R(\axi_awlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_awlen_cntr_reg[1] 
        (.C(s00_axi_aclk),
         .CE(\axi_awlen_cntr[7]_i_2_n_0 ),
         .D(plusOp__0[1]),
-        .Q(axi_awlen_cntr_reg__0[1]),
+        .Q(axi_awlen_cntr_reg[1]),
         .R(\axi_awlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_awlen_cntr_reg[2] 
        (.C(s00_axi_aclk),
         .CE(\axi_awlen_cntr[7]_i_2_n_0 ),
         .D(plusOp__0[2]),
-        .Q(axi_awlen_cntr_reg__0[2]),
+        .Q(axi_awlen_cntr_reg[2]),
         .R(\axi_awlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_awlen_cntr_reg[3] 
        (.C(s00_axi_aclk),
         .CE(\axi_awlen_cntr[7]_i_2_n_0 ),
         .D(plusOp__0[3]),
-        .Q(axi_awlen_cntr_reg__0[3]),
+        .Q(axi_awlen_cntr_reg[3]),
         .R(\axi_awlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_awlen_cntr_reg[4] 
        (.C(s00_axi_aclk),
         .CE(\axi_awlen_cntr[7]_i_2_n_0 ),
         .D(plusOp__0[4]),
-        .Q(axi_awlen_cntr_reg__0[4]),
+        .Q(axi_awlen_cntr_reg[4]),
         .R(\axi_awlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_awlen_cntr_reg[5] 
        (.C(s00_axi_aclk),
         .CE(\axi_awlen_cntr[7]_i_2_n_0 ),
         .D(plusOp__0[5]),
-        .Q(axi_awlen_cntr_reg__0[5]),
+        .Q(axi_awlen_cntr_reg[5]),
         .R(\axi_awlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_awlen_cntr_reg[6] 
        (.C(s00_axi_aclk),
         .CE(\axi_awlen_cntr[7]_i_2_n_0 ),
         .D(plusOp__0[6]),
-        .Q(axi_awlen_cntr_reg__0[6]),
+        .Q(axi_awlen_cntr_reg[6]),
         .R(\axi_awlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_awlen_cntr_reg[7] 
        (.C(s00_axi_aclk),
         .CE(\axi_awlen_cntr[7]_i_2_n_0 ),
         .D(plusOp__0[7]),
-        .Q(axi_awlen_cntr_reg__0[7]),
+        .Q(axi_awlen_cntr_reg[7]),
         .R(\axi_awlen_cntr[7]_i_1_n_0 ));
   FDRE \axi_awlen_reg[0] 
        (.C(s00_axi_aclk),
@@ -4811,9 +4811,9 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
     .INIT(16'h22B2)) 
     i__carry_i_1__0
        (.I0(axi_awlen[7]),
-        .I1(axi_awlen_cntr_reg__0[7]),
+        .I1(axi_awlen_cntr_reg[7]),
         .I2(axi_awlen[6]),
-        .I3(axi_awlen_cntr_reg__0[6]),
+        .I3(axi_awlen_cntr_reg[6]),
         .O(i__carry_i_1__0_n_0));
   LUT2 #(
     .INIT(4'h2)) 
@@ -4825,9 +4825,9 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
     .INIT(16'h22B2)) 
     i__carry_i_2__0
        (.I0(axi_awlen[5]),
-        .I1(axi_awlen_cntr_reg__0[5]),
+        .I1(axi_awlen_cntr_reg[5]),
         .I2(axi_awlen[4]),
-        .I3(axi_awlen_cntr_reg__0[4]),
+        .I3(axi_awlen_cntr_reg[4]),
         .O(i__carry_i_2__0_n_0));
   LUT2 #(
     .INIT(4'hB)) 
@@ -4839,17 +4839,17 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
     .INIT(16'h22B2)) 
     i__carry_i_3__0
        (.I0(axi_awlen[3]),
-        .I1(axi_awlen_cntr_reg__0[3]),
+        .I1(axi_awlen_cntr_reg[3]),
         .I2(axi_awlen[2]),
-        .I3(axi_awlen_cntr_reg__0[2]),
+        .I3(axi_awlen_cntr_reg[2]),
         .O(i__carry_i_3__0_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
     i__carry_i_4
        (.I0(axi_awlen[1]),
-        .I1(axi_awlen_cntr_reg__0[1]),
+        .I1(axi_awlen_cntr_reg[1]),
         .I2(axi_awlen[0]),
-        .I3(axi_awlen_cntr_reg__0[0]),
+        .I3(axi_awlen_cntr_reg[0]),
         .O(i__carry_i_4_n_0));
   LUT4 #(
     .INIT(16'hB44B)) 
@@ -4863,9 +4863,9 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
     .INIT(16'h9009)) 
     i__carry_i_5
        (.I0(axi_awlen[6]),
-        .I1(axi_awlen_cntr_reg__0[6]),
+        .I1(axi_awlen_cntr_reg[6]),
         .I2(axi_awlen[7]),
-        .I3(axi_awlen_cntr_reg__0[7]),
+        .I3(axi_awlen_cntr_reg[7]),
         .O(i__carry_i_5_n_0));
   LUT4 #(
     .INIT(16'hB44B)) 
@@ -4879,9 +4879,9 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
     .INIT(16'h9009)) 
     i__carry_i_6
        (.I0(axi_awlen[4]),
-        .I1(axi_awlen_cntr_reg__0[4]),
+        .I1(axi_awlen_cntr_reg[4]),
         .I2(axi_awlen[5]),
-        .I3(axi_awlen_cntr_reg__0[5]),
+        .I3(axi_awlen_cntr_reg[5]),
         .O(i__carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h2DD2)) 
@@ -4901,15 +4901,15 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
     .INIT(16'h9009)) 
     i__carry_i_7__0
        (.I0(axi_awlen[2]),
-        .I1(axi_awlen_cntr_reg__0[2]),
+        .I1(axi_awlen_cntr_reg[2]),
         .I2(axi_awlen[3]),
-        .I3(axi_awlen_cntr_reg__0[3]),
+        .I3(axi_awlen_cntr_reg[3]),
         .O(i__carry_i_7__0_n_0));
   LUT4 #(
     .INIT(16'h8421)) 
     i__carry_i_8
-       (.I0(axi_awlen_cntr_reg__0[1]),
-        .I1(axi_awlen_cntr_reg__0[0]),
+       (.I0(axi_awlen_cntr_reg[1]),
+        .I1(axi_awlen_cntr_reg[0]),
         .I2(axi_awlen[1]),
         .I3(axi_awlen[0]),
         .O(i__carry_i_8_n_0));
@@ -4924,63 +4924,63 @@ module Fast_IP_Clock_psram_ip_0_0_psram_ip_v1_0_S00_AXI
     .INIT(16'h22B2)) 
     leqOp_carry_i_1
        (.I0(axi_arlen[7]),
-        .I1(axi_arlen_cntr_reg__0[7]),
+        .I1(axi_arlen_cntr_reg[7]),
         .I2(axi_arlen[6]),
-        .I3(axi_arlen_cntr_reg__0[6]),
+        .I3(axi_arlen_cntr_reg[6]),
         .O(leqOp_carry_i_1_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
     leqOp_carry_i_2
        (.I0(axi_arlen[5]),
-        .I1(axi_arlen_cntr_reg__0[5]),
+        .I1(axi_arlen_cntr_reg[5]),
         .I2(axi_arlen[4]),
-        .I3(axi_arlen_cntr_reg__0[4]),
+        .I3(axi_arlen_cntr_reg[4]),
         .O(leqOp_carry_i_2_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
     leqOp_carry_i_3
        (.I0(axi_arlen[3]),
-        .I1(axi_arlen_cntr_reg__0[3]),
+        .I1(axi_arlen_cntr_reg[3]),
         .I2(axi_arlen[2]),
-        .I3(axi_arlen_cntr_reg__0[2]),
+        .I3(axi_arlen_cntr_reg[2]),
         .O(leqOp_carry_i_3_n_0));
   LUT4 #(
     .INIT(16'h22B2)) 
     leqOp_carry_i_4
        (.I0(axi_arlen[1]),
-        .I1(axi_arlen_cntr_reg__0[1]),
+        .I1(axi_arlen_cntr_reg[1]),
         .I2(axi_arlen[0]),
-        .I3(axi_arlen_cntr_reg__0[0]),
+        .I3(axi_arlen_cntr_reg[0]),
         .O(leqOp_carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     leqOp_carry_i_5
        (.I0(axi_arlen[6]),
-        .I1(axi_arlen_cntr_reg__0[6]),
+        .I1(axi_arlen_cntr_reg[6]),
         .I2(axi_arlen[7]),
-        .I3(axi_arlen_cntr_reg__0[7]),
+        .I3(axi_arlen_cntr_reg[7]),
         .O(leqOp_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     leqOp_carry_i_6
        (.I0(axi_arlen[4]),
-        .I1(axi_arlen_cntr_reg__0[4]),
+        .I1(axi_arlen_cntr_reg[4]),
         .I2(axi_arlen[5]),
-        .I3(axi_arlen_cntr_reg__0[5]),
+        .I3(axi_arlen_cntr_reg[5]),
         .O(leqOp_carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
     leqOp_carry_i_7
        (.I0(axi_arlen[3]),
-        .I1(axi_arlen_cntr_reg__0[3]),
+        .I1(axi_arlen_cntr_reg[3]),
         .I2(axi_arlen[2]),
-        .I3(axi_arlen_cntr_reg__0[2]),
+        .I3(axi_arlen_cntr_reg[2]),
         .O(leqOp_carry_i_7_n_0));
   LUT4 #(
     .INIT(16'h8421)) 
     leqOp_carry_i_8
-       (.I0(axi_arlen_cntr_reg__0[1]),
-        .I1(axi_arlen_cntr_reg__0[0]),
+       (.I0(axi_arlen_cntr_reg[1]),
+        .I1(axi_arlen_cntr_reg[0]),
         .I2(axi_arlen[1]),
         .I3(axi_arlen[0]),
         .O(leqOp_carry_i_8_n_0));

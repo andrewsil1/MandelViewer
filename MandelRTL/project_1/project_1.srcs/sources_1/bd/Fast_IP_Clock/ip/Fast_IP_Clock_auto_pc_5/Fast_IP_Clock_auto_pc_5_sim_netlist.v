@@ -1,7 +1,7 @@
-// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Feb 10 20:41:13 2019
+// Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+// Date        : Fri May 31 11:55:24 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_auto_pc_5 -prefix
 //               Fast_IP_Clock_auto_pc_5_ Fast_IP_Clock_auto_pc_5_sim_netlist.v
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "Fast_IP_Clock_auto_pc_5,axi_protocol_converter_v2_1_18_axi_protocol_converter,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_protocol_converter_v2_1_18_axi_protocol_converter,Vivado 2018.3" *) 
+(* CHECK_LICENSE_TYPE = "Fast_IP_Clock_auto_pc_5,axi_protocol_converter_v2_1_19_axi_protocol_converter,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_protocol_converter_v2_1_19_axi_protocol_converter,Vivado 2019.1" *) 
 (* NotValidForBitStream *)
 module Fast_IP_Clock_auto_pc_5
    (aclk,
@@ -222,7 +222,7 @@ module Fast_IP_Clock_auto_pc_5
   (* P_INCR = "2'b01" *) 
   (* P_PROTECTION = "1" *) 
   (* P_SLVERR = "2'b10" *) 
-  Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter inst
+  Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter inst
        (.aclk(aclk),
         .aresetn(aresetn),
         .m_axi_araddr(m_axi_araddr),
@@ -326,7 +326,7 @@ endmodule
 (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_AXILITE_SIZE = "3'b010" *) 
 (* P_CONVERSION = "2" *) (* P_DECERR = "2'b11" *) (* P_INCR = "2'b01" *) 
 (* P_PROTECTION = "1" *) (* P_SLVERR = "2'b10" *) 
-module Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_18_axi_protocol_converter
+module Fast_IP_Clock_auto_pc_5_axi_protocol_converter_v2_1_19_axi_protocol_converter
    (aclk,
     aresetn,
     s_axi_awid,

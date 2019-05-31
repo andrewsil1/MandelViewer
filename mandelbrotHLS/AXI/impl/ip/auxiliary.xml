@@ -8,5 +8,5 @@
   <xd:arg xd:name="maxIter" xd:originalName="maxIter" xd:direction="in" xd:interfaceRef="s_axi_in_parms" xd:busTypeRef="axilite" xd:offset="0x3C" xd:handshakeRef="ap_none" xd:dataWidth="16"/>
   <xd:arg xd:name="*(buf)" xd:originalName="buf" xd:direction="inout" xd:interfaceRef="m_axi_buf_r" xd:busTypeRef="aximm" xd:arraySize="7500" xd:dataWidth="16" xd:bufferDirection="out"/>
   <xd:latencyEstimates xd:best-case="47" xd:worst-case="475648259087" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="24974" xd:FF="22082" xd:BRAM="12" xd:DSP="176"/>
+  <xd:resourceEstimates xd:LUT="24956" xd:FF="22080" xd:BRAM="12" xd:DSP="176"/>
 </xd:acceleratorMap>

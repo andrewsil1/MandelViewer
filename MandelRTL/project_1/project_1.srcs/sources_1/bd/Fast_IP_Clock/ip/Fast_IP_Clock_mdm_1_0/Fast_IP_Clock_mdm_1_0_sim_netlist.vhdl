@@ -1,7 +1,7 @@
--- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Mon Mar  4 16:21:32 2019
+-- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+-- Date        : Fri May 31 13:45:51 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_mdm_1_0/Fast_IP_Clock_mdm_1_0_sim_netlist.vhdl
@@ -1590,7 +1590,7 @@ architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY is
   signal \NLW_Using_FPGA.Native_I1_CARRY4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_Using_FPGA.Native_I1_CARRY4_DI_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute OPT_MODIFIED : string;
-  attribute OPT_MODIFIED of \Using_FPGA.Native_I1_CARRY4\ : label is "MLO ";
+  attribute OPT_MODIFIED of \Using_FPGA.Native_I1_CARRY4\ : label is "MLO";
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of \Using_FPGA.Native_I1_CARRY4\ : label is "(MUXCY,XORCY)";
   attribute XILINX_TRANSFORM_PINMAP : string;
@@ -1670,7 +1670,7 @@ architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY_16 is
   signal \NLW_Using_FPGA.Native_I1_CARRY4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_Using_FPGA.Native_I1_CARRY4_DI_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute OPT_MODIFIED : string;
-  attribute OPT_MODIFIED of \Using_FPGA.Native_I1_CARRY4\ : label is "MLO ";
+  attribute OPT_MODIFIED of \Using_FPGA.Native_I1_CARRY4\ : label is "MLO";
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of \Using_FPGA.Native_I1_CARRY4\ : label is "(MUXCY,XORCY)";
   attribute XILINX_TRANSFORM_PINMAP : string;
@@ -3931,8 +3931,8 @@ architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_JTAG_CONTROL is
   signal \Use_Serial_Unified_Completion.count[0]__0_i_4_n_0\ : STD_LOGIC;
   signal \Use_Serial_Unified_Completion.count[0]_i_1_n_0\ : STD_LOGIC;
   signal \Use_Serial_Unified_Completion.count[1]_i_1_n_0\ : STD_LOGIC;
+  signal \Use_Serial_Unified_Completion.count_reg\ : STD_LOGIC_VECTOR ( 0 to 4 );
   signal \^use_serial_unified_completion.count_reg[5]_0\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \Use_Serial_Unified_Completion.count_reg__0__0\ : STD_LOGIC_VECTOR ( 0 to 4 );
   signal \Use_Serial_Unified_Completion.count_reg_n_0_[0]\ : STD_LOGIC;
   signal \Use_Serial_Unified_Completion.count_reg_n_0_[1]\ : STD_LOGIC;
   signal \Use_Serial_Unified_Completion.mb_data_overrun_i_2_n_0\ : STD_LOGIC;
@@ -3993,7 +3993,7 @@ architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_JTAG_CONTROL is
   signal sel_n0 : STD_LOGIC;
   signal sel_with_scan_reset24_out : STD_LOGIC;
   signal set_Ext_BRK : STD_LOGIC;
-  signal \shift_Count_reg__0\ : STD_LOGIC_VECTOR ( 4 to 4 );
+  signal shift_Count_reg : STD_LOGIC_VECTOR ( 4 to 4 );
   signal \shifting_Data1__0\ : STD_LOGIC;
   signal sync : STD_LOGIC;
   signal tdi_shifter0 : STD_LOGIC;
@@ -4413,7 +4413,7 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
 \Use_ID_SRL16E.SRL16E_ID_2\: entity work.\Fast_IP_Clock_mdm_1_0_MB_SRL16E__parameterized5\
      port map (
       Dbg_TDO_0 => Dbg_TDO_0,
-      Q(4) => \shift_Count_reg__0\(4),
+      Q(4) => shift_Count_reg(4),
       Q(3) => A3,
       Q(2) => A2,
       Q(1) => A1,
@@ -4766,9 +4766,9 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
       INIT => X"0078"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.count_reg__0__0\(1),
+      I0 => \Use_Serial_Unified_Completion.count_reg\(1),
       I1 => \Use_Serial_Unified_Completion.count[0]__0_i_4_n_0\,
-      I2 => \Use_Serial_Unified_Completion.count_reg__0__0\(0),
+      I2 => \Use_Serial_Unified_Completion.count_reg\(0),
       I3 => sel_n_reg_0,
       O => p_0_in(5)
     );
@@ -4777,10 +4777,10 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
       INIT => X"8000"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.count_reg__0__0\(2),
-      I1 => \Use_Serial_Unified_Completion.count_reg__0__0\(4),
+      I0 => \Use_Serial_Unified_Completion.count_reg\(2),
+      I1 => \Use_Serial_Unified_Completion.count_reg\(4),
       I2 => \^use_serial_unified_completion.count_reg[5]_0\(0),
-      I3 => \Use_Serial_Unified_Completion.count_reg__0__0\(3),
+      I3 => \Use_Serial_Unified_Completion.count_reg\(3),
       O => \Use_Serial_Unified_Completion.count[0]__0_i_4_n_0\
     );
 \Use_Serial_Unified_Completion.count[0]_i_1\: unisim.vcomponents.LUT6
@@ -4801,11 +4801,11 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
       INIT => X"000000007FFF8000"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.count_reg__0__0\(2),
-      I1 => \Use_Serial_Unified_Completion.count_reg__0__0\(4),
+      I0 => \Use_Serial_Unified_Completion.count_reg\(2),
+      I1 => \Use_Serial_Unified_Completion.count_reg\(4),
       I2 => \^use_serial_unified_completion.count_reg[5]_0\(0),
-      I3 => \Use_Serial_Unified_Completion.count_reg__0__0\(3),
-      I4 => \Use_Serial_Unified_Completion.count_reg__0__0\(1),
+      I3 => \Use_Serial_Unified_Completion.count_reg\(3),
+      I4 => \Use_Serial_Unified_Completion.count_reg\(1),
       I5 => sel_n_reg_0,
       O => p_0_in(4)
     );
@@ -4827,10 +4827,10 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
       INIT => X"00007F80"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.count_reg__0__0\(3),
+      I0 => \Use_Serial_Unified_Completion.count_reg\(3),
       I1 => \^use_serial_unified_completion.count_reg[5]_0\(0),
-      I2 => \Use_Serial_Unified_Completion.count_reg__0__0\(4),
-      I3 => \Use_Serial_Unified_Completion.count_reg__0__0\(2),
+      I2 => \Use_Serial_Unified_Completion.count_reg\(4),
+      I3 => \Use_Serial_Unified_Completion.count_reg\(2),
       I4 => sel_n_reg_0,
       O => p_0_in(3)
     );
@@ -4839,9 +4839,9 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
       INIT => X"0078"
     )
         port map (
-      I0 => \Use_Serial_Unified_Completion.count_reg__0__0\(4),
+      I0 => \Use_Serial_Unified_Completion.count_reg\(4),
       I1 => \^use_serial_unified_completion.count_reg[5]_0\(0),
-      I2 => \Use_Serial_Unified_Completion.count_reg__0__0\(3),
+      I2 => \Use_Serial_Unified_Completion.count_reg\(3),
       I3 => sel_n_reg_0,
       O => p_0_in(2)
     );
@@ -4851,7 +4851,7 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \^use_serial_unified_completion.count_reg[5]_0\(0),
-      I1 => \Use_Serial_Unified_Completion.count_reg__0__0\(4),
+      I1 => \Use_Serial_Unified_Completion.count_reg\(4),
       I2 => sel_n_reg_0,
       O => p_0_in(1)
     );
@@ -4875,7 +4875,7 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
       CE => \Use_Serial_Unified_Completion.count_reg[5]_1\(0),
       CLR => \^ar\(0),
       D => p_0_in(5),
-      Q => \Use_Serial_Unified_Completion.count_reg__0__0\(0)
+      Q => \Use_Serial_Unified_Completion.count_reg\(0)
     );
 \Use_Serial_Unified_Completion.count_reg[1]\: unisim.vcomponents.FDCE
     generic map(
@@ -4897,7 +4897,7 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
       CE => \Use_Serial_Unified_Completion.count_reg[5]_1\(0),
       CLR => \^ar\(0),
       D => p_0_in(4),
-      Q => \Use_Serial_Unified_Completion.count_reg__0__0\(1)
+      Q => \Use_Serial_Unified_Completion.count_reg\(1)
     );
 \Use_Serial_Unified_Completion.count_reg[2]\: unisim.vcomponents.FDCE
     generic map(
@@ -4908,7 +4908,7 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
       CE => \Use_Serial_Unified_Completion.count_reg[5]_1\(0),
       CLR => \^ar\(0),
       D => p_0_in(3),
-      Q => \Use_Serial_Unified_Completion.count_reg__0__0\(2)
+      Q => \Use_Serial_Unified_Completion.count_reg\(2)
     );
 \Use_Serial_Unified_Completion.count_reg[3]\: unisim.vcomponents.FDCE
     generic map(
@@ -4919,7 +4919,7 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
       CE => \Use_Serial_Unified_Completion.count_reg[5]_1\(0),
       CLR => \^ar\(0),
       D => p_0_in(2),
-      Q => \Use_Serial_Unified_Completion.count_reg__0__0\(3)
+      Q => \Use_Serial_Unified_Completion.count_reg\(3)
     );
 \Use_Serial_Unified_Completion.count_reg[4]\: unisim.vcomponents.FDCE
     generic map(
@@ -4930,7 +4930,7 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
       CE => \Use_Serial_Unified_Completion.count_reg[5]_1\(0),
       CLR => \^ar\(0),
       D => p_0_in(1),
-      Q => \Use_Serial_Unified_Completion.count_reg__0__0\(4)
+      Q => \Use_Serial_Unified_Completion.count_reg\(4)
     );
 \Use_Serial_Unified_Completion.count_reg[5]\: unisim.vcomponents.FDCE
     generic map(
@@ -4950,8 +4950,8 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
         port map (
       I0 => \Use_Serial_Unified_Completion.mb_data_overrun_i_3_n_0\,
       I1 => \^use_serial_unified_completion.count_reg[5]_0\(0),
-      I2 => \Use_Serial_Unified_Completion.count_reg__0__0\(4),
-      I3 => \Use_Serial_Unified_Completion.count_reg__0__0\(3),
+      I2 => \Use_Serial_Unified_Completion.count_reg\(4),
+      I3 => \Use_Serial_Unified_Completion.count_reg\(3),
       O => \Use_Serial_Unified_Completion.mb_data_overrun_i_2_n_0\
     );
 \Use_Serial_Unified_Completion.mb_data_overrun_i_3\: unisim.vcomponents.LUT4
@@ -4960,9 +4960,9 @@ Ext_NM_BRK_i_reg: unisim.vcomponents.FDCE
     )
         port map (
       I0 => \Use_UART.fifo_Din_reg[7]_0\,
-      I1 => \Use_Serial_Unified_Completion.count_reg__0__0\(0),
-      I2 => \Use_Serial_Unified_Completion.count_reg__0__0\(1),
-      I3 => \Use_Serial_Unified_Completion.count_reg__0__0\(2),
+      I1 => \Use_Serial_Unified_Completion.count_reg\(0),
+      I2 => \Use_Serial_Unified_Completion.count_reg\(1),
+      I3 => \Use_Serial_Unified_Completion.count_reg\(2),
       O => \Use_Serial_Unified_Completion.mb_data_overrun_i_3_n_0\
     );
 \Use_Serial_Unified_Completion.mb_data_overrun_reg\: unisim.vcomponents.FDCE
@@ -5686,7 +5686,7 @@ set_Ext_BRK_reg: unisim.vcomponents.FDCE
       I2 => \^q\(0),
       I3 => A2,
       I4 => \Use_UART.fifo_Din_reg[7]_0\,
-      I5 => \shift_Count_reg__0\(4),
+      I5 => shift_Count_reg(4),
       O => \p_0_in__0\(4)
     );
 \shift_Count_reg[0]\: unisim.vcomponents.FDCE
@@ -5742,7 +5742,7 @@ set_Ext_BRK_reg: unisim.vcomponents.FDCE
       CE => '1',
       CLR => \^ar\(0),
       D => \p_0_in__0\(4),
-      Q => \shift_Count_reg__0\(4)
+      Q => shift_Count_reg(4)
     );
 \tdi_shifter[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -8643,7 +8643,7 @@ entity Fast_IP_Clock_mdm_1_0_MDM is
   attribute C_M_AXI_THREAD_ID_WIDTH : integer;
   attribute C_M_AXI_THREAD_ID_WIDTH of Fast_IP_Clock_mdm_1_0_MDM : entity is 1;
   attribute C_S_AXI_ACLK_FREQ_HZ : integer;
-  attribute C_S_AXI_ACLK_FREQ_HZ of Fast_IP_Clock_mdm_1_0_MDM : entity is 80357142;
+  attribute C_S_AXI_ACLK_FREQ_HZ of Fast_IP_Clock_mdm_1_0_MDM : entity is 80000000;
   attribute C_S_AXI_ADDR_WIDTH : integer;
   attribute C_S_AXI_ADDR_WIDTH of Fast_IP_Clock_mdm_1_0_MDM : entity is 4;
   attribute C_S_AXI_DATA_WIDTH : integer;
@@ -8688,7 +8688,7 @@ architecture STRUCTURE of Fast_IP_Clock_mdm_1_0_MDM is
   signal \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\ : STD_LOGIC;
   signal \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\ : STD_LOGIC;
   signal \JTAG_CONTROL_I/FIFO_Write\ : STD_LOGIC;
-  signal \JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg__0\ : STD_LOGIC_VECTOR ( 5 to 5 );
+  signal \JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg\ : STD_LOGIC_VECTOR ( 5 to 5 );
   signal \JTAG_CONTROL_I/fifo_Data_Present\ : STD_LOGIC;
   signal \JTAG_CONTROL_I/p_0_in32_in\ : STD_LOGIC;
   signal \JTAG_CONTROL_I/p_35_out__0\ : STD_LOGIC;
@@ -14371,7 +14371,7 @@ MDM_Core_I1: entity work.Fast_IP_Clock_mdm_1_0_MDM_Core
       Scan_Reset_Sel => Scan_Reset_Sel,
       \Use_Serial_Unified_Completion.completion_status_reg[10]\(0) => \Use_E2.BSCAN_I_n_10\,
       \Use_Serial_Unified_Completion.completion_status_reg[15]\(0) => \Use_E2.BSCAN_I_n_14\,
-      \Use_Serial_Unified_Completion.count_reg[5]\(0) => \JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg__0\(5),
+      \Use_Serial_Unified_Completion.count_reg[5]\(0) => \JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg\(5),
       \Use_Serial_Unified_Completion.count_reg[5]_0\(0) => \JTAG_CONTROL_I/sel\,
       \Use_Serial_Unified_Completion.sample_1_reg[15]\(0) => MDM_Core_I1_n_34,
       \Use_UART.fifo_Din_reg[7]\ => \^ext_jtag_shift\,
@@ -14457,7 +14457,7 @@ MDM_Core_I1: entity work.Fast_IP_Clock_mdm_1_0_MDM_Core
       \Use_BSCAN.command_reg[5]\(0) => \JTAG_CONTROL_I/sel\,
       \Use_E2.BSCANE2_I_0\(0) => \Use_E2.BSCAN_I_n_11\,
       \Use_Serial_Unified_Completion.completion_status_reg[15]\(0) => MDM_Core_I1_n_34,
-      \Use_Serial_Unified_Completion.count_reg[5]\(0) => \JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg__0\(5),
+      \Use_Serial_Unified_Completion.count_reg[5]\(0) => \JTAG_CONTROL_I/Use_Serial_Unified_Completion.count_reg\(5),
       \Use_Serial_Unified_Completion.sample_1_reg[15]\(0) => \Use_E2.BSCAN_I_n_14\,
       \Using_FPGA.Native\(0) => \Use_E2.BSCAN_I_n_10\,
       \p_35_out__0\ => \JTAG_CONTROL_I/p_35_out__0\,
@@ -14515,7 +14515,7 @@ entity Fast_IP_Clock_mdm_1_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Fast_IP_Clock_mdm_1_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of Fast_IP_Clock_mdm_1_0 : entity is "MDM,Vivado 2018.3";
+  attribute x_core_info of Fast_IP_Clock_mdm_1_0 : entity is "MDM,Vivado 2019.1";
 end Fast_IP_Clock_mdm_1_0;
 
 architecture STRUCTURE of Fast_IP_Clock_mdm_1_0 is
@@ -15428,7 +15428,7 @@ architecture STRUCTURE of Fast_IP_Clock_mdm_1_0 is
   attribute C_M_AXI_THREAD_ID_WIDTH : integer;
   attribute C_M_AXI_THREAD_ID_WIDTH of U0 : label is 1;
   attribute C_S_AXI_ACLK_FREQ_HZ : integer;
-  attribute C_S_AXI_ACLK_FREQ_HZ of U0 : label is 80357142;
+  attribute C_S_AXI_ACLK_FREQ_HZ of U0 : label is 80000000;
   attribute C_S_AXI_ADDR_WIDTH : integer;
   attribute C_S_AXI_ADDR_WIDTH of U0 : label is 4;
   attribute C_S_AXI_DATA_WIDTH : integer;
@@ -15470,7 +15470,7 @@ architecture STRUCTURE of Fast_IP_Clock_mdm_1_0 is
   attribute x_interface_info of Interrupt : signal is "xilinx.com:signal:interrupt:1.0 INTERRUPT.INTERRUPT INTERRUPT";
   attribute x_interface_parameter of Interrupt : signal is "XIL_INTERFACENAME INTERRUPT.INTERRUPT, SENSITIVITY EDGE_RISING, SUGGESTED_PRIORITY HIGH, PortWidth 1";
   attribute x_interface_info of S_AXI_ACLK : signal is "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK";
-  attribute x_interface_parameter of S_AXI_ACLK : signal is "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI:MBDEBUG_AXI_0:MBDEBUG_AXI_1:MBDEBUG_AXI_2:MBDEBUG_AXI_3:MBDEBUG_AXI_4:MBDEBUG_AXI_5:MBDEBUG_AXI_6:MBDEBUG_AXI_7:MBDEBUG_AXI_8:MBDEBUG_AXI_9:MBDEBUG_AXI_10:MBDEBUG_AXI_11:MBDEBUG_AXI_12:MBDEBUG_AXI_13:MBDEBUG_AXI_14:MBDEBUG_AXI_15:MBDEBUG_AXI_16:MBDEBUG_AXI_17:MBDEBUG_AXI_18:MBDEBUG_AXI_19:MBDEBUG_AXI_20:MBDEBUG_AXI_21:MBDEBUG_AXI_22:MBDEBUG_AXI_23:MBDEBUG_AXI_24:MBDEBUG_AXI_25:MBDEBUG_AXI_26:MBDEBUG_AXI_27:MBDEBUG_AXI_28:MBDEBUG_AXI_29:MBDEBUG_AXI_30:MBDEBUG_AXI_31, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 80357142, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
+  attribute x_interface_parameter of S_AXI_ACLK : signal is "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI:MBDEBUG_AXI_0:MBDEBUG_AXI_1:MBDEBUG_AXI_2:MBDEBUG_AXI_3:MBDEBUG_AXI_4:MBDEBUG_AXI_5:MBDEBUG_AXI_6:MBDEBUG_AXI_7:MBDEBUG_AXI_8:MBDEBUG_AXI_9:MBDEBUG_AXI_10:MBDEBUG_AXI_11:MBDEBUG_AXI_12:MBDEBUG_AXI_13:MBDEBUG_AXI_14:MBDEBUG_AXI_15:MBDEBUG_AXI_16:MBDEBUG_AXI_17:MBDEBUG_AXI_18:MBDEBUG_AXI_19:MBDEBUG_AXI_20:MBDEBUG_AXI_21:MBDEBUG_AXI_22:MBDEBUG_AXI_23:MBDEBUG_AXI_24:MBDEBUG_AXI_25:MBDEBUG_AXI_26:MBDEBUG_AXI_27:MBDEBUG_AXI_28:MBDEBUG_AXI_29:MBDEBUG_AXI_30:MBDEBUG_AXI_31, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 80000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
   attribute x_interface_info of S_AXI_ARESETN : signal is "xilinx.com:signal:reset:1.0 RST.S_AXI_ARESETN RST";
   attribute x_interface_parameter of S_AXI_ARESETN : signal is "XIL_INTERFACENAME RST.S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute x_interface_info of S_AXI_ARREADY : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARREADY";
@@ -15486,7 +15486,7 @@ architecture STRUCTURE of Fast_IP_Clock_mdm_1_0 is
   attribute x_interface_info of Dbg_Reg_En_0 : signal is "xilinx.com:interface:mbdebug:3.0 MBDEBUG_0 REG_EN";
   attribute x_interface_info of S_AXI_ARADDR : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARADDR";
   attribute x_interface_info of S_AXI_AWADDR : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
-  attribute x_interface_parameter of S_AXI_AWADDR : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 80357142, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of S_AXI_AWADDR : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 80000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of S_AXI_BRESP : signal is "xilinx.com:interface:aximm:1.0 S_AXI BRESP";
   attribute x_interface_info of S_AXI_RDATA : signal is "xilinx.com:interface:aximm:1.0 S_AXI RDATA";
   attribute x_interface_info of S_AXI_RRESP : signal is "xilinx.com:interface:aximm:1.0 S_AXI RRESP";

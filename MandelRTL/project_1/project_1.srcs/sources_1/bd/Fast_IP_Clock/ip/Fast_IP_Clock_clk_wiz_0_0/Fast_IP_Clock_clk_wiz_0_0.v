@@ -56,9 +56,9 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// __AXIclk___100.000______0.000______50.0______121.458_____91.100
-// ___MBClk____80.357______0.000______50.0______126.903_____91.100
-// _CalcClk___125.000______0.000______50.0______116.571_____91.100
+// __AXIclk___100.000______0.000______50.0______144.719____114.212
+// ___MBClk____80.000______0.000______50.0______151.652____114.212
+// _CalcClk___133.333______0.000______50.0______136.421____114.212
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -67,7 +67,7 @@
 
 `timescale 1ps/1ps
 
-(* CORE_GENERATION_INFO = "Fast_IP_Clock_clk_wiz_0_0,clk_wiz_v6_0_2_0_0,{component_name=Fast_IP_Clock_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=3,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=false,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
+(* CORE_GENERATION_INFO = "Fast_IP_Clock_clk_wiz_0_0,clk_wiz_v6_0_3_0_0,{component_name=Fast_IP_Clock_clk_wiz_0_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=3,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=false,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
 
 module Fast_IP_Clock_clk_wiz_0_0 
  (
