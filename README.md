@@ -5,7 +5,7 @@ This is a personal project that was meant to self-educate me on usage of the Viv
 accelerated IP for a Xilinx FPGA.  In particular, it performs calculation of Mandelbrot set values (pixels) up to a user-
 defined maximum number of iterations, and stores a 2D buffer of those values for use in generating graphical images.
 The project has dependencies on the Digilent Nexys-4 board, which has a 16MB PSRAM rather than DDR, and also makes use
-of an IP I created several years ago to interface that PSRAM to AXI4LITE, allowing it to be used transparently with a
+of an [IP I created several years ago](https://github.com/andrewsil1/NexysPsram) to interface that PSRAM to AXI4LITE, allowing it to be used transparently with a
 Microblaze design or any other IP that needs access to the RAM via AXI.
 
 The project is made up of four main sections:
