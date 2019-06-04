@@ -28,7 +28,7 @@ minor computational time cost. In most cases this seems to generally be win for 
 visualized Mandelbrot set with a histogram-based color selection algorithm, and allowing the user to zoom and pan to
 regions of interest in the image, and recalculate.
 
-The calculator itself makes use of 40-bit fixed point math with only 5 bits dedicated to the integer portion, given the limited
+The calculator itself makes use of 36-bit fixed point math with only 4 bits dedicated to the signed integer portion, given the limited
 range of complex values required for the application.  This provides a reasonable tradeoff between maximum zoom depth, chip area
 required for the math (only 240 DSP blocks are available in the Artix-7), and the performance of the calculation.  The
 algorithm was adapted initially from the Wikipedia pseudocode, including a few simple optimizations mentioned there. These include
@@ -36,12 +36,12 @@ first-order periodicity checking to allow early loop termination, as well as pre
 is located within the primary cardioid bulbs of the set, which allows the calc loop to be skipped altogether for many points which
 would otherwise require a maximum-duration calculation.
 
-While a modern desktop CPU that makes use of vector floating point operations and/or a GPU to perform similar calculations can
+While a modern desktop CPU with vector floating point or a GPU to perform similar calculations can
 easily outstrip the performance of this FPGA, that wasn't really the point of the exercise.  However, given the slow speed
 grade and extremely small power consumption of the FPGA in comparison to the big iron, the performance achieved still feels 
-pretty satisfying to me.
+quite satisfying to me.
 
 There are three clock domains used in the design: one for the Microblaze (which is notably cranky about meeting timing at
 frequencies much above 80Mhz when when a lot of BRAM is needed for the application), one for the AXI bus and most peripherals 
-at 100Mhz, and one for the Mandelbrot calculator IP, which has been tuned to run at 133Mhz, a bit quicker than the rest of 
+at 100Mhz, and one for the Mandelbrot calculator IP, which has been tuned to run at ~110Mhz, a bit quicker than the rest of 
 the design.  The AXI bus crossbar automatically inserts the necessary synchronizers to move data between the different clock domains.
