@@ -366,7 +366,7 @@
          */
         private void DoCalculation(object stateInfo)
         {
-            int packetSize = 65536;                     //BUGBUG: Get this size from the FPGA.
+            int packetSize = 65536 * 2;                     //BUGBUG: Get this size from the FPGA.
             int payloadBytes = 0;                       //This will be a running count of how many compressed payload bytes we've received, not counting headers/CRCs.
             int failedAttempts = 0;
             byte[] buffer = new byte[packetSize];

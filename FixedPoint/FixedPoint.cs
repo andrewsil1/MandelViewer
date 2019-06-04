@@ -85,7 +85,7 @@
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             FixedPoint input = (FixedPoint)value;
-            return (input.Value / (double) (1L << input.FracBits)).ToString("G17");
+            return (input.Value / (double) (1L << input.FracBits)).ToString("F9");
         }
 
         /* Converts string back into Fixed Point */

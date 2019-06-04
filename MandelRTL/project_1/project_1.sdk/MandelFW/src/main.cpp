@@ -44,14 +44,14 @@
  * and received with the Uart device.
  */
 #define TEST_BUFFER_SIZE        100
-#define FRAC_BITS				35
+//#define FRAC_BITS				32
 #define BAUD_RATE				3000000U //3Mbps is the maximum the FTDI USB UART can handle.
-#define	CHUNK_SIZE				32768 //Serial packet chunks for sending image data
+#define	CHUNK_SIZE				65536    //Serial packet chunks for sending image data
+//TODO: Tell receiver how big the chunks are over the wire so the rx buffer can be sized appropriately.
 
 /************************** Function Prototypes ******************************/
 
 int CalcMandelbrot(XIntc *IntcInstancePtr,	XUartNs550 *UartInstancePtr, u16 UartDeviceId, u16 UartIntrId);
-
 uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
 
 /************************** Variable Definitions *****************************/
@@ -68,8 +68,11 @@ uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
  u8 ReceiveBuffer[TEST_BUFFER_SIZE];
  u8* ReceiveBufferPtr = &ReceiveBuffer[0];
 
- // Space to compress data prior to transmission.
-u8* compressBuffer = (u8*) (PSRAM_BASE + 0x200000);
+
+/* Addresses of various spaces in PSRAM */
+u8* compressBuffer = (u8*) (PSRAM_BASE + 0x200000);		 // Space to compress data prior to transmission.
+u8* heap = (u8*) (PSRAM_BASE + 0xC00000);				 // Location of heap, as defined in lscript.ld
+
 
  /*
   * The following counters are used to determine when the entire buffer has
@@ -83,7 +86,7 @@ u8* compressBuffer = (u8*) (PSRAM_BASE + 0x200000);
  // Coordinates for Mandelbrot set calculation to pass to the hardware - Upper left X/Y, Upper right X.
  u64 X0, X1, Y0;
  u32 maxIter = 2000;
- u32 WIDTH = 1024;  // Hardware supports up to 1920 wide. Do not exceed.
+ u32 WIDTH = 1024;  // Hardware supports up to 1920 wide. Do not exceed, and ensure it remains divisible by 8.
  u32 HEIGHT = WIDTH * 3U / 4U;
 
  // For the serial port...
@@ -92,7 +95,7 @@ u8* compressBuffer = (u8*) (PSRAM_BASE + 0x200000);
 
  u32 CompressOutput() {
 	 LZ4F_cctx* cctxPtr;	//compressionContext object
-	 u32 compressCapacity = 0x80C00000L - (u32)compressBuffer; // Space above 80D00000 is reserved for program heap.
+	 u32 compressCapacity = (u32)heap - (u32)compressBuffer; // Space above 80C00000 is reserved for program heap.
 
 	 LZ4F_errorCode_t error = LZ4F_createCompressionContext(&cctxPtr, LZ4F_VERSION);
 	 if (error != 0) {
@@ -219,7 +222,7 @@ u8* compressBuffer = (u8*) (PSRAM_BASE + 0x200000);
 
  void SerialSend(XUartNs550 *UartInstancePtr, u8* sendBuffer, u32 TotalToSend) {
 /* This function returns the entire calculated image (iteration) buffer over the serial port
- * using chunks of a few kilobytes, with a CRC appended at the end to guarantee data integrity.
+ * using chunks of about 64K, with a CRC appended at the end to guarantee data integrity, Xmodem style.
  */
 
 	 uint totalSent = 0;
@@ -264,11 +267,21 @@ u8* compressBuffer = (u8*) (PSRAM_BASE + 0x200000);
 			 if (*ReceiveBufferPtr == '@') {
 				 receivedOK = true;
 			 }
+			 #ifdef DEBUG
+			 else {
+				 //Not received OK.
+				 if (*ReceiveBufferPtr == 'Z') {
+					 xil_printf("Receiver indicated CRC failure, retrying.");
+				 } else
+			     Xil_AssertVoidAlways(); //We got some kind of garbage from the receiver, must bail and fail.
+
+			 #endif
+			 }
 			 if (sendAttempts > 5) {
 				 #ifdef DEBUG
 				 xil_printf("5 send attempts failed.");
 				 #endif
-				 Xil_AssertVoidAlways();
+				 Xil_AssertVoidAlways(); //Bail and fail.
 			 }
 		 }
 
@@ -293,7 +306,7 @@ u8* compressBuffer = (u8*) (PSRAM_BASE + 0x200000);
 
  	/*	The set goes from -2 to 2 on the X axis, and -1 to 1 on the Y axis.
  		Pick a 4:3 window specified by Top Left X/Y coordinate, Top Right X value. The rest is calculated.
- 		Values are 5.35-bit fixed point: Uppermost bytes of ULL are not used.
+ 		Values are 4.32-bit fixed point: Uppermost bytes of ULL are not used.
  	*/
 
  	XCalc_Set_X0_V(&Calc, X0);
