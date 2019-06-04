@@ -14,6 +14,7 @@
   },
   "HlsSolution": {"Config": [
       "config_bind -effort=high",
+      "config_sdx -target=none",
       "config_rtl -encoding=onehot",
       "config_rtl -kernel_profile=0",
       "config_rtl -module_auto_prefix=0",
@@ -22,28 +23,27 @@
       "config_rtl -reset_async=0",
       "config_rtl -reset_level=high",
       "config_rtl -verbose=0",
-      "config_export -description {Mandelbrot Calculator Core}",
-      "config_export -display_name=calc",
-      "config_export -format=ip_catalog",
-      "config_export -rtl=verilog",
-      "config_export -vendor=QuickSilver",
-      "config_export -version=1.01",
-      "config_export -vivado_optimization_level=2",
-      "config_export -vivado_phys_opt=place",
-      "config_export -vivado_report_level=0",
       "config_schedule -effort=high",
       "config_schedule -enable_dsp_full_reg=0",
       "config_schedule -relax_ii_for_timing=1",
       "config_schedule -verbose=1",
-      "config_sdx -optimization_level=none",
-      "config_sdx -target=none"
+      "config_export -description {Mandelbrot Calculator Core}",
+      "config_export -display_name=calc",
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog",
+      "config_export -use_netlist=none",
+      "config_export -vendor=QuickSilver",
+      "config_export -version=1.01",
+      "config_export -vivado_optimization_level=2",
+      "config_export -vivado_phys_opt=place",
+      "config_export -vivado_report_level=0"
     ]},
   "Args": {
     "X0": {
       "index": "0",
       "type": {
         "dataType": "ap_fixed",
-        "dataWidth": "40",
+        "dataWidth": "36",
         "interfaceRef": "s_axi_in_parms",
         "registerRefs": [
           "X0_V_1",
@@ -55,7 +55,7 @@
       "index": "1",
       "type": {
         "dataType": "ap_fixed",
-        "dataWidth": "40",
+        "dataWidth": "36",
         "interfaceRef": "s_axi_in_parms",
         "registerRefs": [
           "Y0_V_1",
@@ -67,7 +67,7 @@
       "index": "2",
       "type": {
         "dataType": "ap_fixed",
-        "dataWidth": "40",
+        "dataWidth": "36",
         "interfaceRef": "s_axi_in_parms",
         "registerRefs": [
           "X1_V_1",
@@ -109,13 +109,13 @@
   },
   "ClockInfo": {
     "ClockName": "ap_clk",
-    "ClockPeriod": "6",
+    "ClockPeriod": "8",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "47",
-    "Uncertainty": "0.75"
+    "Latency": "2067498",
+    "Uncertainty": "1.5"
   },
-  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 6.000 [get_ports ap_clk]"]},
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 8.000 [get_ports ap_clk]"]},
   "Ipx": {
     "Vendor": "QuickSilver",
     "Library": "hls",
@@ -129,19 +129,19 @@
   },
   "Files": {
     "CSource": [
-      "..\/pretest.cpp",
-      "..\/mandel.cpp"
+      "..\/mandel.cpp",
+      "..\/pretest.cpp"
     ],
     "Vhdl": [
       "impl\/vhdl\/calc_buf_r_m_axi.vhd",
       "impl\/vhdl\/calc_in_parms_s_axi.vhd",
       "impl\/vhdl\/calc_mem_0.vhd",
-      "impl\/vhdl\/calc_mul_12ns_40sfYi.vhd",
-      "impl\/vhdl\/calc_mul_40s_40s_cud.vhd",
-      "impl\/vhdl\/calc_mul_40s_41s_dEe.vhd",
-      "impl\/vhdl\/calc_mul_41s_40s_bkb.vhd",
+      "impl\/vhdl\/calc_mul_12ns_36sfYi.vhd",
+      "impl\/vhdl\/calc_mul_36s_36s_bkb.vhd",
+      "impl\/vhdl\/calc_mul_36s_37s_dEe.vhd",
+      "impl\/vhdl\/calc_mul_37s_36s_cud.vhd",
       "impl\/vhdl\/calc_mux_832_16_1_1.vhd",
-      "impl\/vhdl\/calc_sdiv_41ns_13eOg.vhd",
+      "impl\/vhdl\/calc_sdiv_37ns_13eOg.vhd",
       "impl\/vhdl\/mandel_calc.vhd",
       "impl\/vhdl\/pretest.vhd",
       "impl\/vhdl\/calc.vhd"
@@ -150,12 +150,12 @@
       "impl\/verilog\/calc_buf_r_m_axi.v",
       "impl\/verilog\/calc_in_parms_s_axi.v",
       "impl\/verilog\/calc_mem_0.v",
-      "impl\/verilog\/calc_mul_12ns_40sfYi.v",
-      "impl\/verilog\/calc_mul_40s_40s_cud.v",
-      "impl\/verilog\/calc_mul_40s_41s_dEe.v",
-      "impl\/verilog\/calc_mul_41s_40s_bkb.v",
+      "impl\/verilog\/calc_mul_12ns_36sfYi.v",
+      "impl\/verilog\/calc_mul_36s_36s_bkb.v",
+      "impl\/verilog\/calc_mul_36s_37s_dEe.v",
+      "impl\/verilog\/calc_mul_37s_36s_cud.v",
       "impl\/verilog\/calc_mux_832_16_1_1.v",
-      "impl\/verilog\/calc_sdiv_41ns_13eOg.v",
+      "impl\/verilog\/calc_sdiv_37ns_13eOg.v",
       "impl\/verilog\/mandel_calc.v",
       "impl\/verilog\/pretest.v",
       "impl\/verilog\/calc.v"
@@ -568,15 +568,15 @@
           "fields": [
             {
               "offset": "0",
-              "width": "8",
+              "width": "4",
               "name": "X0_V",
               "access": "W",
               "reset_value": "0",
-              "description": "Bit 39 to 32 Data signal of X0_V"
+              "description": "Bit 35 to 32 Data signal of X0_V"
             },
             {
-              "offset": "8",
-              "width": "24",
+              "offset": "4",
+              "width": "28",
               "name": "RESERVED",
               "access": "R",
               "reset_value": "0",
@@ -608,15 +608,15 @@
           "fields": [
             {
               "offset": "0",
-              "width": "8",
+              "width": "4",
               "name": "Y0_V",
               "access": "W",
               "reset_value": "0",
-              "description": "Bit 39 to 32 Data signal of Y0_V"
+              "description": "Bit 35 to 32 Data signal of Y0_V"
             },
             {
-              "offset": "8",
-              "width": "24",
+              "offset": "4",
+              "width": "28",
               "name": "RESERVED",
               "access": "R",
               "reset_value": "0",
@@ -648,15 +648,15 @@
           "fields": [
             {
               "offset": "0",
-              "width": "8",
+              "width": "4",
               "name": "X1_V",
               "access": "W",
               "reset_value": "0",
-              "description": "Bit 39 to 32 Data signal of X1_V"
+              "description": "Bit 35 to 32 Data signal of X1_V"
             },
             {
-              "offset": "8",
-              "width": "24",
+              "offset": "4",
+              "width": "28",
               "name": "RESERVED",
               "access": "R",
               "reset_value": "0",
@@ -1044,66 +1044,66 @@
       "Instances": [
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_465",
+          "InstanceName": "grp_mandel_calc_fu_469",
           "Instances": [{
               "ModuleName": "pretest",
-              "InstanceName": "grp_pretest_fu_187"
+              "InstanceName": "grp_pretest_fu_185"
             }]
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_473",
+          "InstanceName": "grp_mandel_calc_fu_477",
           "Instances": [{
               "ModuleName": "pretest",
-              "InstanceName": "grp_pretest_fu_187"
+              "InstanceName": "grp_pretest_fu_185"
             }]
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_481",
+          "InstanceName": "grp_mandel_calc_fu_485",
           "Instances": [{
               "ModuleName": "pretest",
-              "InstanceName": "grp_pretest_fu_187"
+              "InstanceName": "grp_pretest_fu_185"
             }]
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_489",
+          "InstanceName": "grp_mandel_calc_fu_493",
           "Instances": [{
               "ModuleName": "pretest",
-              "InstanceName": "grp_pretest_fu_187"
+              "InstanceName": "grp_pretest_fu_185"
             }]
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_505",
+          "InstanceName": "grp_mandel_calc_fu_509",
           "Instances": [{
               "ModuleName": "pretest",
-              "InstanceName": "grp_pretest_fu_187"
+              "InstanceName": "grp_pretest_fu_185"
             }]
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_497",
+          "InstanceName": "grp_mandel_calc_fu_501",
           "Instances": [{
               "ModuleName": "pretest",
-              "InstanceName": "grp_pretest_fu_187"
+              "InstanceName": "grp_pretest_fu_185"
             }]
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_449",
+          "InstanceName": "grp_mandel_calc_fu_453",
           "Instances": [{
               "ModuleName": "pretest",
-              "InstanceName": "grp_pretest_fu_187"
+              "InstanceName": "grp_pretest_fu_185"
             }]
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_457",
+          "InstanceName": "grp_mandel_calc_fu_461",
           "Instances": [{
               "ModuleName": "pretest",
-              "InstanceName": "grp_pretest_fu_187"
+              "InstanceName": "grp_pretest_fu_185"
             }]
         }
       ]
@@ -1134,113 +1134,113 @@
     "Metrics": {
       "pretest": {
         "Latency": {
-          "LatencyBest": "19",
-          "LatencyAvg": "19",
-          "LatencyWorst": "19",
-          "PipelineII": "19",
+          "LatencyBest": "11",
+          "LatencyAvg": "11",
+          "LatencyWorst": "11",
+          "PipelineII": "11",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
-          "Target": "6.00",
-          "Uncertainty": "0.75",
-          "Estimate": "5.097"
+          "Target": "8.00",
+          "Uncertainty": "1.50",
+          "Estimate": "6.204"
         },
         "Area": {
-          "DSP48E": "10",
-          "FF": "938",
-          "LUT": "1109",
+          "DSP48E": "8",
+          "FF": "822",
+          "LUT": "1235",
           "BRAM_18K": "0",
           "URAM": "0"
         }
       },
       "mandel_calc": {
         "Latency": {
-          "LatencyBest": "22",
-          "LatencyAvg": "21028",
-          "LatencyWorst": "1376278",
-          "PipelineIIMin": "22",
-          "PipelineIIMax": "1376278",
-          "PipelineII": "22 ~ 1376278",
+          "LatencyBest": "13",
+          "LatencyAvg": "342",
+          "LatencyWorst": "26026",
+          "PipelineIIMin": "13",
+          "PipelineIIMax": "26026",
+          "PipelineII": "13 ~ 26026",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
-          "Target": "6.00",
-          "Uncertainty": "0.75",
-          "Estimate": "5.097"
+          "Target": "8.00",
+          "Uncertainty": "1.50",
+          "Estimate": "6.427"
         },
         "Loops": [{
             "Name": "mandel_calc_loop",
             "TripCount": "",
             "LatencyMin": "0",
-            "LatencyMax": "1376255",
-            "Latency": "0 ~ 1376255",
+            "LatencyMax": "26012",
+            "Latency": "0 ~ 26012",
             "PipelineII": "",
-            "PipelineDepth": "21"
+            "PipelineDepth": "13"
           }],
         "Area": {
-          "DSP48E": "20",
-          "FF": "2144",
-          "LUT": "2491",
+          "DSP48E": "16",
+          "FF": "1863",
+          "LUT": "2722",
           "BRAM_18K": "0",
           "URAM": "0"
         }
       },
       "calc": {
         "Latency": {
-          "LatencyBest": "47",
+          "LatencyBest": "2067498",
           "LatencyAvg": "",
-          "LatencyWorst": "475648259087",
-          "PipelineIIMin": "48",
-          "PipelineIIMax": "475648259088",
-          "PipelineII": "48 ~ 475648259088",
+          "LatencyWorst": "9003261642",
+          "PipelineIIMin": "2067499",
+          "PipelineIIMax": "9003261643",
+          "PipelineII": "2067499 ~ 9003261643",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
-          "Target": "6.00",
-          "Uncertainty": "0.75",
-          "Estimate": "5.250"
+          "Target": "8.00",
+          "Uncertainty": "1.50",
+          "Estimate": "6.500"
         },
         "Loops": [{
             "Name": "y_for",
             "TripCount": "",
-            "LatencyMin": "0",
-            "LatencyMax": "475648259040",
-            "Latency": "0 ~ 475648259040",
+            "LatencyMin": "2067456",
+            "LatencyMax": "9003261600",
+            "Latency": "2067456 ~ 9003261600",
             "PipelineII": "",
-            "PipelineDepthMin": "4",
-            "PipelineDepthMax": "330311291",
-            "PipelineDepth": "4 ~ 330311291",
+            "PipelineDepthMin": "2692",
+            "PipelineDepthMax": "6252265",
+            "PipelineDepth": "2692 ~ 6252265",
             "Loops": [
               {
                 "Name": "x_for",
                 "TripCount": "",
-                "LatencyMin": "0",
-                "LatencyMax": "330309360",
-                "Latency": "0 ~ 330309360",
+                "LatencyMin": "2688",
+                "LatencyMax": "6248160",
+                "Latency": "2688 ~ 6248160",
                 "PipelineII": "",
-                "PipelineDepthMin": "33",
-                "PipelineDepthMax": "1376289",
-                "PipelineDepth": "33 ~ 1376289"
+                "PipelineDepthMin": "21",
+                "PipelineDepthMax": "26034",
+                "PipelineDepth": "21 ~ 26034"
               },
               {
                 "Name": "burst_out",
                 "TripCount": "",
                 "LatencyMin": "0",
-                "LatencyMax": "1927",
-                "Latency": "0 ~ 1927",
+                "LatencyMax": "4101",
+                "Latency": "0 ~ 4101",
                 "PipelineII": "1",
-                "PipelineDepth": "9"
+                "PipelineDepth": "8"
               }
             ]
           }],
         "Area": {
-          "BRAM_18K": "12",
-          "DSP48E": "176",
-          "FF": "22080",
-          "LUT": "24956",
+          "BRAM_18K": "10",
+          "DSP48E": "144",
+          "FF": "19148",
+          "LUT": "27023",
           "URAM": "0"
         }
       }
@@ -1256,7 +1256,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2019-05-31 11:27:09 -0700",
+    "Time": "2019-06-04 11:34:28 -0700",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.1"
   }

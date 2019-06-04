@@ -35086,7 +35086,7 @@ _ssdm_op_SpecDataflowPipeline(-1, 0, "");
 # 11 "mandelbrotHLS/mandel.h"
 using namespace hls;
 
-typedef ap_fixed<40,5,AP_RND_CONV,AP_SAT> real;
+typedef ap_fixed<36,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
@@ -35097,7 +35097,7 @@ void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf);
 # 11 "mandelbrotHLS/mandel.h"
 using namespace hls;
 
-typedef ap_fixed<40,5,AP_RND_CONV,AP_SAT> real;
+typedef ap_fixed<36,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
@@ -49785,7 +49785,7 @@ namespace std {
 # 6 "mandelbrotHLS/mandel.cpp" 2
 
 using namespace std;
-
+# 19 "mandelbrotHLS/mandel.cpp"
 pixval mandel_calc(real x_in, real y_in, pixval maxIter) {
 
     real x = 0.0;
@@ -49797,8 +49797,8 @@ pixval mandel_calc(real x_in, real y_in, pixval maxIter) {
         iter = maxIter;
    } else {
         mandel_calc_loop:for (iter = 0; iter < maxIter; iter++) {
-#pragma HLS LOOP_TRIPCOUNT min=0 max=65535 avg=2000
-# 19 "mandelbrotHLS/mandel.cpp"
+#pragma HLS LOOP_TRIPCOUNT min=0 max=2000 avg=50
+# 29 "mandelbrotHLS/mandel.cpp"
 
             real x2 = x*x;
             real y2 = y*y;
@@ -49828,26 +49828,26 @@ pixval mandel_calc(real x_in, real y_in, pixval maxIter) {
 
 
 void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf) {
-#pragma HLS INTERFACE m_axi depth=7500 port=&buf offset=off
-# 47 "mandelbrotHLS/mandel.cpp"
+#pragma HLS INTERFACE m_axi depth=8112 port=&buf offset=off
+# 57 "mandelbrotHLS/mandel.cpp"
 
 #pragma HLS INTERFACE s_axilite port=&X0 bundle=in_parms
-# 47 "mandelbrotHLS/mandel.cpp"
+# 57 "mandelbrotHLS/mandel.cpp"
 
 #pragma HLS INTERFACE s_axilite port=&X1 bundle=in_parms
-# 47 "mandelbrotHLS/mandel.cpp"
+# 57 "mandelbrotHLS/mandel.cpp"
 
 #pragma HLS INTERFACE s_axilite port=&Y0 bundle=in_parms
-# 47 "mandelbrotHLS/mandel.cpp"
+# 57 "mandelbrotHLS/mandel.cpp"
 
 #pragma HLS INTERFACE s_axilite port=&maxIter bundle=in_parms
-# 47 "mandelbrotHLS/mandel.cpp"
+# 57 "mandelbrotHLS/mandel.cpp"
 
 #pragma HLS INTERFACE s_axilite port=return bundle=in_parms
-# 47 "mandelbrotHLS/mandel.cpp"
+# 57 "mandelbrotHLS/mandel.cpp"
 
 #pragma HLS INTERFACE s_axilite port=&width bundle=in_parms
-# 47 "mandelbrotHLS/mandel.cpp"
+# 57 "mandelbrotHLS/mandel.cpp"
 
 
     real delta = (real) 0.0;
@@ -49856,10 +49856,7 @@ void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf) {
     int index;
     pixval mem[1920];
 #pragma HLS ARRAY_PARTITION variable=&mem cyclic factor=8 dim=1
-# 53 "mandelbrotHLS/mandel.cpp"
-
-
-
+# 63 "mandelbrotHLS/mandel.cpp"
 
 
 
@@ -49873,33 +49870,46 @@ void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf) {
         height = width * 3 / 4;
         index = 0;
      y = Y0;
-     (void) ((!!(height <= 1920 * 3 / 4)) || (_assert("height <= MAXWIDTH * 3 / 4","mandelbrotHLS/mandel.cpp",69),0));
-  y_for:for (res line = 0; line < height; line++) {
-            (void) ((!!(width % 8 == 0)) || (_assert("width % 8 == 0","mandelbrotHLS/mandel.cpp",71),0));
-            (void) ((!!(width <= 1920)) || (_assert("width <= MAXWIDTH","mandelbrotHLS/mandel.cpp",72),0));
-      x_for:for (res pix_x = 0; pix_x < width; pix_x++) {
+
+
+
+y_for: for (res line = 0; line < height; line++) {
+#pragma HLS LOOP_TRIPCOUNT min=768 max=1440 avg=768
+# 79 "mandelbrotHLS/mandel.cpp"
+
+
+
+
+
+
+x_for: for (res pix_x = 0; pix_x < width; pix_x++) {
+#pragma HLS LOOP_TRIPCOUNT min=1024 max=1920 avg=1024
+# 85 "mandelbrotHLS/mandel.cpp"
+
 #pragma HLS UNROLL skip_exit_check factor=8
-# 73 "mandelbrotHLS/mandel.cpp"
-
-
+# 85 "mandelbrotHLS/mandel.cpp"
 
 
                 x = X0 + (pix_x * delta);
 
+
+
                 mem[pix_x] = mandel_calc(x,y,maxIter);
+
             }
 
-        (void) ((!!(width <= 1920)) || (_assert("width <= MAXWIDTH","mandelbrotHLS/mandel.cpp",82),0));
 
-        burst_out:for (int i = 0; i < width; i++)
-        {
+burst_out: for (int i = 0; i < width; i++)
+            {
 #pragma HLS PIPELINE
  buf[index++] = mem[i];
-        }
 
 
-        y -= delta;
- }
+            }
+
+
+            y -= delta;
+     }
 
 
 

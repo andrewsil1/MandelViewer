@@ -2,7 +2,7 @@
 #include <iostream>
 #include "ap_fixed.h"
 
-#define WIDTH 100
+#define WIDTH 104 // Must be divisible by 8 or cosim will fail.
 
 using namespace std;
 
@@ -10,7 +10,7 @@ int main() {
 
 	real X0, Y0, X1;
 	const int HEIGHT = WIDTH * 3 / 4;
-	const pixval maxIter = 2000;
+	const pixval maxIter = 500;
 
 	pixval mem[HEIGHT * WIDTH];
 
@@ -25,9 +25,9 @@ int main() {
 	for (int y = 0; y < HEIGHT; y++) {
 	   for (int x = 0; x < WIDTH; x++)
 	   {
-	       string foo = mem[y*WIDTH + x] == maxIter ? "B" : (mem[y*WIDTH + x] > 500 ? "X" : std::to_string(mem[y*WIDTH + x])); // Replace points with iter > 500 with "X"
+	       string foo = mem[y*WIDTH + x] == maxIter ? "B" : (mem[y*WIDTH + x] > 500 ? "X" : (mem[y*WIDTH + x] > 9 ? "+" : std::to_string(mem[y*WIDTH + x]))); // Replace points with iter > 10 with a single character
 	       cout << foo;
-	       }
+       }
 	   cout << endl;
     }
 

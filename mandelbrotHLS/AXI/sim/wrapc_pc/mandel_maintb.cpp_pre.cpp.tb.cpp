@@ -100442,7 +100442,7 @@ void FindStereoCorrespondenceBM(
 # 11 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.h"
 using namespace hls;
 
-typedef ap_fixed<40,5,AP_RND_CONV,AP_SAT> real;
+typedef ap_fixed<36,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
@@ -100463,10 +100463,10 @@ using namespace std;
 int main() {
 
  real X0, Y0, X1;
- const int HEIGHT = 100 * 3 / 4;
- const pixval maxIter = 2000;
+ const int HEIGHT = 104 * 3 / 4;
+ const pixval maxIter = 500;
 
- pixval mem[HEIGHT * 100];
+ pixval mem[HEIGHT * 104];
 
 
  X0 = -2;
@@ -100479,17 +100479,17 @@ int main() {
 #define calc AESL_WRAP_calc
 #endif
 # 23 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel_maintb.cpp"
-calc(X0, Y0, X1, 100, maxIter, mem);
+calc(X0, Y0, X1, 104, maxIter, mem);
 #undef calc
 # 23 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel_maintb.cpp"
 
 
  for (int y = 0; y < HEIGHT; y++) {
-    for (int x = 0; x < 100; x++)
+    for (int x = 0; x < 104; x++)
     {
-        string foo = mem[y*100 + x] == maxIter ? "B" : (mem[y*100 + x] > 500 ? "X" : std::to_string(mem[y*100 + x]));
+        string foo = mem[y*104 + x] == maxIter ? "B" : (mem[y*104 + x] > 500 ? "X" : (mem[y*104 + x] > 9 ? "+" : std::to_string(mem[y*104 + x])));
         cout << foo;
-        }
+       }
     cout << endl;
     }
 

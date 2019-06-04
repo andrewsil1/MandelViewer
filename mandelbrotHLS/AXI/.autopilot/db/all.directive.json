@@ -62,7 +62,7 @@
               },
               {
                 "name": "depth",
-                "value": "7500"
+                "value": "8112"
               },
               {
                 "name": "port",
@@ -233,11 +233,55 @@
               },
               {
                 "name": "max",
-                "value": "65535"
+                "value": "2000"
               },
               {
                 "name": "avg",
-                "value": "2000"
+                "value": "50"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "y_for",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [
+              {
+                "name": "min",
+                "value": "768"
+              },
+              {
+                "name": "max",
+                "value": "1440"
+              },
+              {
+                "name": "avg",
+                "value": "768"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "x_for",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [
+              {
+                "name": "min",
+                "value": "1024"
+              },
+              {
+                "name": "max",
+                "value": "1920"
+              },
+              {
+                "name": "avg",
+                "value": "1024"
               }
             ]
           }

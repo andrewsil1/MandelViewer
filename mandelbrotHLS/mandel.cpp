@@ -6,6 +6,16 @@
 
 using namespace std;
 
+// This is the base Mandelbrot set calculation algorithm for a given complex coordinate Z given as euclidean X/Y,
+// and a maximum number of iterations to use prior to giving up.  Higher iteration counts reveal more detail in the image
+// at the expense of computation time.
+// This version of the algorithm includes two optimizations to minimize calculation time:
+// 1. A "pretest" that determines whether the input coordinate is inside the bounds of the two primary cardioid bulbs
+//    of the Mandelbrot set, in which case we know we will reach the maximum number of iterations without having to do
+//    anything more.
+// 2. Checking for first-order periodicity (i.e. the results of iteration n are the same as iteration n-1), in which case
+//    we can also assume we will reach maximum iterations and can stop immediately.
+
 pixval mandel_calc(real x_in, real y_in, pixval maxIter) {
 
     real x = 0.0;
@@ -55,9 +65,6 @@ void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf) {
 
 	//Divide the specified X range of the desired image by the pixel count to figure out how much to step the
     //coordinates by in each iteration. We assume square pixels, so delta is the same for both axes.
-    //We want to save the delta between calls (lines calculated) unless the width changes, so we use statics to
-    //hold onto the old values and avoid an expensive division for every line.
-
 	    delta = (X1 - X0) /  width;
         #ifndef __SYNTHESIS__
 	        cout << "Delta:" << std::setprecision(16) << delta << endl;
@@ -66,30 +73,37 @@ void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf) {
         height = width * 3 / 4;
         index = 0;
 	    y = Y0;
-	    assert (height <= MAXWIDTH * 3 / 4);
-  y_for:for (res line = 0; line < height; line++) {
-            assert (width % 8 == 0); // Line width must be multiple of 4 or it is not safe to turn off exit check on partial unroll of factor 4.
-            assert (width <= MAXWIDTH);
-      x_for:for (res pix_x = 0; pix_x < width; pix_x++) {
-                // -X,+Y (quadrant II), across each line, then finally down to +X,-Y (quadrant IV)
-                // Calculate Mandelbrot escape value, using the current x,y real values.
 
-                x = X0 + (pix_x * delta); // This form allows parallelism in unrolling, switching to an incremental add of delta to the initial x during each iteration seems to ruin parallel unrolling.
+        // Begin in the -X,+Y quadrant (II), iterate across each line, then down, and finally end in +X,-Y quadrant (IV)
+        // Calculate the Mandelbrot escape value at each pixel, using the corresponding x/y fixed point values.
+y_for:  for (res line = 0; line < height; line++) {
+            #ifndef __SYNTHESIS__ // These asserts break Cosimulation for some reason if not kept out during synthesis.
+                assert (height <= MAXWIDTH * 3 / 4);
+                assert (width % 8 == 0); // Line width must be multiple of 8 or it is not safe to turn off exit check on partial unroll of factor 8.
+                assert (width <= MAXWIDTH);
+            #endif
+x_for:      for (res pix_x = 0; pix_x < width; pix_x++) {
 
-                mem[pix_x] = mandel_calc(x,y,maxIter); // When pre-test is performed inside function call, parallelism from loop unrolling works.  When outside, it breaks.
+                x = X0 + (pix_x * delta); // This form (multiply the pixel x value by delta) allows parallelism in unrolling.
+                // Trying to lower the cost of a multiplier by instead using an incremental add of delta during each iteration
+                // seems to ruin parallel unrolling, probably due to each iteration relying on the addition result from the prior iteration.
+
+                mem[pix_x] = mandel_calc(x,y,maxIter);
+                // When pre-test is performed inside this function call, parallelism from loop unrolling works.  When trying to do it outside, it serializes all of the calls.
             }
 
-        assert (width <= MAXWIDTH);
-        //Write the line of computed data from internal BRAM out to the larger PSRAM.
-        burst_out:for (int i = 0; i < width; i++)
-        {
-            #pragma HLS PIPELINE
-            buf[index++] = mem[i];
-        }
+            //Write this line of computed data from internal BRAM out to the larger PSRAM.
+burst_out:  for (int i = 0; i < width; i++)
+            {
+                #pragma HLS PIPELINE
+                buf[index++] = mem[i];
+                // Index remains valid after loop ends so we can pick up where we leave off in destination RAM next time around.
+                // TODO: Write current index to an output register so we can start picking up results without waiting for the whole thing.
+            }
 
-        // Continue with the next line
-        y -= delta;
-	}
+            // Continue with the next line
+            y -= delta;
+	    }
 
     #ifndef __SYNTHESIS__
         cout << "Bottom right X:" << std::setprecision(14) << x << endl;

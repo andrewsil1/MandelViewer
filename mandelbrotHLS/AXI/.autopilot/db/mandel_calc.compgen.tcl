@@ -1,23 +1,23 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 7
-set name calc_mul_40s_41s_dEe
+set id 8
+set name calc_mul_36s_37s_dEe
 set corename simcore_mul
 set op mul
-set stage_num 6
+set stage_num 3
 set max_latency -1
 set registered_input 1
 set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 40
+set in0_width 36
 set in0_signed 1
-set in1_width 41
+set in1_width 37
 set in1_signed 1
 set ce_width 1
 set ce_signed 0
-set out_width 81
+set out_width 73
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
 eval "ap_gen_simcore_mul { \
@@ -103,7 +103,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_x_in_V \
     op interface \
-    ports { x_in_V { I 40 vector } } \
+    ports { x_in_V { I 36 vector } } \
 } "
 }
 
@@ -118,7 +118,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_y_in_V \
     op interface \
-    ports { y_in_V { I 40 vector } } \
+    ports { y_in_V { I 36 vector } } \
 } "
 }
 

@@ -9,31 +9,31 @@
 <ProductFamily>artix7</ProductFamily>
 <Part>xc7a100t-csg324-1</Part>
 <TopModelName>pretest</TopModelName>
-<TargetClockPeriod>6.00</TargetClockPeriod>
-<ClockUncertainty>0.75</ClockUncertainty>
+<TargetClockPeriod>8.00</TargetClockPeriod>
+<ClockUncertainty>1.50</ClockUncertainty>
 </UserAssignments>
 
 <PerformanceEstimates>
 <PipelineType>none</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>5.097</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.204</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>19</Best-caseLatency>
-<Average-caseLatency>19</Average-caseLatency>
-<Worst-caseLatency>19</Worst-caseLatency>
-<Interval-min>19</Interval-min>
-<Interval-max>19</Interval-max>
+<Best-caseLatency>11</Best-caseLatency>
+<Average-caseLatency>11</Average-caseLatency>
+<Worst-caseLatency>11</Worst-caseLatency>
+<Interval-min>11</Interval-min>
+<Interval-max>11</Interval-max>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<DSP48E>10</DSP48E>
-<FF>938</FF>
-<LUT>1109</LUT>
+<DSP48E>8</DSP48E>
+<FF>822</FF>
+<LUT>1235</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
@@ -132,7 +132,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>40</Bits>
+<Bits>36</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -143,7 +143,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>40</Bits>
+<Bits>36</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 </InterfaceSummary>

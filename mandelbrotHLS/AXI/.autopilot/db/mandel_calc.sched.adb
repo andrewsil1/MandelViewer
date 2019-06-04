@@ -28,7 +28,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -56,7 +56,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -106,7 +106,7 @@
 						<name>maxIter_read</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>9</lineNumber>
+						<lineNumber>19</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -121,7 +121,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>9</second>
+										<second>19</second>
 									</item>
 								</second>
 							</item>
@@ -155,7 +155,7 @@
 						<name>y_in_V_read</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>9</lineNumber>
+						<lineNumber>19</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -170,7 +170,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>9</second>
+										<second>19</second>
 									</item>
 								</second>
 							</item>
@@ -179,7 +179,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -204,7 +204,7 @@
 						<name>x_in_V_read</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>9</lineNumber>
+						<lineNumber>19</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -219,7 +219,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>9</second>
+										<second>19</second>
 									</item>
 								</second>
 							</item>
@@ -228,7 +228,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -253,7 +253,7 @@
 						<name>tmp</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>26</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -268,7 +268,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>16</second>
+										<second>26</second>
 									</item>
 								</second>
 							</item>
@@ -291,7 +291,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>5.03</m_delay>
+				<m_delay>5.69</m_delay>
 				<m_topoIndex>3</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -300,10 +300,10 @@
 					<Obj>
 						<type>0</type>
 						<id>8</id>
-						<name>_ln16</name>
+						<name>_ln26</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>26</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -318,7 +318,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>16</second>
+										<second>26</second>
 									</item>
 								</second>
 							</item>
@@ -353,7 +353,7 @@
 						<name>rhs_V_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -368,7 +368,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -377,7 +377,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>42</bitwidth>
+					<bitwidth>38</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -401,7 +401,7 @@
 						<name>rhs_V_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -416,7 +416,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -425,7 +425,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>75</bitwidth>
+					<bitwidth>68</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -451,7 +451,7 @@
 						<name>sext_ln728</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -466,7 +466,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -475,7 +475,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>81</bitwidth>
+					<bitwidth>73</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -496,10 +496,10 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>_ln19</name>
+						<name>_ln29</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>19</lineNumber>
+						<lineNumber>29</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -514,7 +514,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>19</second>
+										<second>29</second>
 									</item>
 								</second>
 							</item>
@@ -557,7 +557,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -594,7 +594,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -655,10 +655,10 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>icmp_ln19</name>
+						<name>icmp_ln29</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>19</lineNumber>
+						<lineNumber>29</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -673,7 +673,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>19</second>
+										<second>29</second>
 									</item>
 								</second>
 							</item>
@@ -707,7 +707,7 @@
 						<name>iter</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>19</lineNumber>
+						<lineNumber>29</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -722,7 +722,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>19</second>
+										<second>29</second>
 									</item>
 								</second>
 							</item>
@@ -753,10 +753,10 @@
 					<Obj>
 						<type>0</type>
 						<id>20</id>
-						<name>_ln19</name>
+						<name>_ln29</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>19</lineNumber>
+						<lineNumber>29</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -771,7 +771,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>19</second>
+										<second>29</second>
 									</item>
 								</second>
 							</item>
@@ -806,7 +806,7 @@
 						<name>r_V</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -821,7 +821,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -830,7 +830,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -854,7 +854,7 @@
 						<name>r_V_17</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -869,7 +869,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -878,7 +878,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -891,7 +891,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.89</m_delay>
+				<m_delay>5.69</m_delay>
 				<m_topoIndex>17</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -903,7 +903,7 @@
 						<name>p_Result_s</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -918,7 +918,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -953,7 +953,7 @@
 						<name>x2_V</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -968,7 +968,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -977,7 +977,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -1004,7 +1004,7 @@
 						<name>tmp_22</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1019,7 +1019,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1054,7 +1054,7 @@
 						<name>trunc_ln718</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1069,7 +1069,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1078,7 +1078,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>34</bitwidth>
+					<bitwidth>31</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -1102,7 +1102,7 @@
 						<name>r_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1117,7 +1117,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1139,7 +1139,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.49</m_delay>
+				<m_delay>2.43</m_delay>
 				<m_topoIndex>28</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -1151,7 +1151,7 @@
 						<name>p_Result_11</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1166,7 +1166,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1201,7 +1201,7 @@
 						<name>r</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1216,7 +1216,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1250,7 +1250,7 @@
 						<name>tmp_24</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1265,7 +1265,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1300,7 +1300,7 @@
 						<name>and_ln412</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1315,7 +1315,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1349,7 +1349,7 @@
 						<name>zext_ln415</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1364,7 +1364,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1373,7 +1373,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -1397,7 +1397,7 @@
 						<name>x2_V_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1412,7 +1412,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1421,7 +1421,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -1434,7 +1434,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.88</m_delay>
+				<m_delay>2.79</m_delay>
 				<m_topoIndex>43</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
@@ -1446,7 +1446,7 @@
 						<name>tmp_25</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1461,7 +1461,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1496,7 +1496,7 @@
 						<name>xor_ln416</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1511,7 +1511,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1545,7 +1545,7 @@
 						<name>carry_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1560,7 +1560,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1594,7 +1594,7 @@
 						<name>p_Result_12</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1609,7 +1609,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1644,7 +1644,7 @@
 						<name>p_Result_s_16</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1659,7 +1659,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1668,7 +1668,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>4</bitwidth>
+					<bitwidth>3</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -1695,7 +1695,7 @@
 						<name>Range2_all_ones</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1710,7 +1710,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1732,7 +1732,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.44</m_delay>
+				<m_delay>1.18</m_delay>
 				<m_topoIndex>29</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -1744,7 +1744,7 @@
 						<name>p_Result_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1759,7 +1759,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1768,7 +1768,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -1795,7 +1795,7 @@
 						<name>Range1_all_ones</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1810,7 +1810,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1844,7 +1844,7 @@
 						<name>Range1_all_zeros</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1859,7 +1859,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1893,7 +1893,7 @@
 						<name>deleted_zeros</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1908,7 +1908,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1932,7 +1932,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>70</m_topoIndex>
+				<m_topoIndex>80</m_topoIndex>
 				<m_clusterGroupNumber>3</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_42">
@@ -1943,7 +1943,7 @@
 						<name>tmp_27</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1958,7 +1958,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -1993,7 +1993,7 @@
 						<name>xor_ln779</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2008,7 +2008,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2042,7 +2042,7 @@
 						<name>and_ln779</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2057,7 +2057,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2091,7 +2091,7 @@
 						<name>deleted_ones</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2106,7 +2106,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2141,7 +2141,7 @@
 						<name>and_ln781</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2156,7 +2156,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2179,7 +2179,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>71</m_topoIndex>
+				<m_topoIndex>52</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_47">
@@ -2190,7 +2190,7 @@
 						<name>xor_ln785</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2205,7 +2205,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2228,7 +2228,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>72</m_topoIndex>
+				<m_topoIndex>81</m_topoIndex>
 				<m_clusterGroupNumber>3</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_48">
@@ -2239,7 +2239,7 @@
 						<name>or_ln785</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2254,7 +2254,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2277,7 +2277,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>73</m_topoIndex>
+				<m_topoIndex>82</m_topoIndex>
 				<m_clusterGroupNumber>3</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_49">
@@ -2288,7 +2288,7 @@
 						<name>xor_ln785_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2303,7 +2303,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2326,7 +2326,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>74</m_topoIndex>
+				<m_topoIndex>53</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_50">
@@ -2337,7 +2337,7 @@
 						<name>overflow</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2352,7 +2352,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2375,7 +2375,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>75</m_topoIndex>
+				<m_topoIndex>83</m_topoIndex>
 				<m_clusterGroupNumber>3</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_51">
@@ -2386,7 +2386,7 @@
 						<name>and_ln786</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2401,7 +2401,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2424,7 +2424,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.99</m_delay>
-				<m_topoIndex>52</m_topoIndex>
+				<m_topoIndex>54</m_topoIndex>
 				<m_clusterGroupNumber>4</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_52">
@@ -2435,7 +2435,7 @@
 						<name>or_ln786_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2450,7 +2450,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2473,7 +2473,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>76</m_topoIndex>
+				<m_topoIndex>55</m_topoIndex>
 				<m_clusterGroupNumber>5</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_53">
@@ -2484,7 +2484,7 @@
 						<name>xor_ln786</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2499,7 +2499,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2522,7 +2522,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>77</m_topoIndex>
+				<m_topoIndex>56</m_topoIndex>
 				<m_clusterGroupNumber>5</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_54">
@@ -2533,7 +2533,7 @@
 						<name>underflow</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2548,7 +2548,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2571,7 +2571,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>78</m_topoIndex>
+				<m_topoIndex>57</m_topoIndex>
 				<m_clusterGroupNumber>5</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_55">
@@ -2582,7 +2582,7 @@
 						<name>or_ln340</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2597,7 +2597,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2620,7 +2620,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.99</m_delay>
-				<m_topoIndex>79</m_topoIndex>
+				<m_topoIndex>84</m_topoIndex>
 				<m_clusterGroupNumber>3</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_56">
@@ -2631,7 +2631,7 @@
 						<name>or_ln340_9</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2646,7 +2646,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2669,7 +2669,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>80</m_topoIndex>
+				<m_topoIndex>85</m_topoIndex>
 				<m_clusterGroupNumber>6</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_57">
@@ -2680,7 +2680,7 @@
 						<name>or_ln340_10</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2695,7 +2695,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2718,7 +2718,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>81</m_topoIndex>
+				<m_topoIndex>86</m_topoIndex>
 				<m_clusterGroupNumber>6</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_58">
@@ -2729,7 +2729,7 @@
 						<name>select_ln340</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2744,7 +2744,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2753,7 +2753,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2767,8 +2767,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
-				<m_topoIndex>82</m_topoIndex>
+				<m_delay>0.93</m_delay>
+				<m_topoIndex>87</m_topoIndex>
 				<m_clusterGroupNumber>7</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_59">
@@ -2779,7 +2779,7 @@
 						<name>select_ln388</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2794,7 +2794,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2803,7 +2803,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2818,7 +2818,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>83</m_topoIndex>
+				<m_topoIndex>88</m_topoIndex>
 				<m_clusterGroupNumber>6</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_60">
@@ -2829,7 +2829,7 @@
 						<name>p_Val2_20</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>30</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2844,7 +2844,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>20</second>
+										<second>30</second>
 									</item>
 								</second>
 							</item>
@@ -2853,7 +2853,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2867,8 +2867,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
-				<m_topoIndex>84</m_topoIndex>
+				<m_delay>0.97</m_delay>
+				<m_topoIndex>89</m_topoIndex>
 				<m_clusterGroupNumber>6</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_61">
@@ -2879,7 +2879,7 @@
 						<name>r_V_13</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2894,7 +2894,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -2903,7 +2903,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -2927,7 +2927,7 @@
 						<name>r_V_18</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2942,7 +2942,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -2951,7 +2951,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -2964,7 +2964,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.89</m_delay>
+				<m_delay>5.69</m_delay>
 				<m_topoIndex>19</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -2976,7 +2976,7 @@
 						<name>p_Result_13</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2991,7 +2991,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3026,7 +3026,7 @@
 						<name>y2_V</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3041,7 +3041,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3050,7 +3050,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -3066,7 +3066,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>53</m_topoIndex>
+				<m_topoIndex>58</m_topoIndex>
 				<m_clusterGroupNumber>8</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_65">
@@ -3077,7 +3077,7 @@
 						<name>tmp_29</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3092,7 +3092,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3116,7 +3116,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>54</m_topoIndex>
+				<m_topoIndex>59</m_topoIndex>
 				<m_clusterGroupNumber>8</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_66">
@@ -3127,7 +3127,7 @@
 						<name>trunc_ln718_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3142,7 +3142,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3151,7 +3151,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>34</bitwidth>
+					<bitwidth>31</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -3175,7 +3175,7 @@
 						<name>r_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3190,7 +3190,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3212,7 +3212,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.49</m_delay>
+				<m_delay>2.43</m_delay>
 				<m_topoIndex>32</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -3224,7 +3224,7 @@
 						<name>p_Result_14</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3239,7 +3239,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3263,7 +3263,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>55</m_topoIndex>
+				<m_topoIndex>60</m_topoIndex>
 				<m_clusterGroupNumber>9</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_69">
@@ -3274,7 +3274,7 @@
 						<name>or_ln412</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3289,7 +3289,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3312,7 +3312,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>56</m_topoIndex>
+				<m_topoIndex>61</m_topoIndex>
 				<m_clusterGroupNumber>8</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_70">
@@ -3323,7 +3323,7 @@
 						<name>tmp_31</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3338,7 +3338,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3362,7 +3362,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>57</m_topoIndex>
+				<m_topoIndex>62</m_topoIndex>
 				<m_clusterGroupNumber>8</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_71">
@@ -3373,7 +3373,7 @@
 						<name>and_ln412_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3388,7 +3388,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3411,7 +3411,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>58</m_topoIndex>
+				<m_topoIndex>63</m_topoIndex>
 				<m_clusterGroupNumber>8</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_72">
@@ -3422,7 +3422,7 @@
 						<name>zext_ln415_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3437,7 +3437,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3446,7 +3446,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -3459,7 +3459,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>59</m_topoIndex>
+				<m_topoIndex>64</m_topoIndex>
 				<m_clusterGroupNumber>8</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_73">
@@ -3470,7 +3470,7 @@
 						<name>y2_V_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3485,7 +3485,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3494,7 +3494,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -3507,8 +3507,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.88</m_delay>
-				<m_topoIndex>60</m_topoIndex>
+				<m_delay>2.79</m_delay>
+				<m_topoIndex>65</m_topoIndex>
 				<m_clusterGroupNumber>8</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_74">
@@ -3519,7 +3519,7 @@
 						<name>tmp_32</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3534,7 +3534,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3558,7 +3558,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>61</m_topoIndex>
+				<m_topoIndex>66</m_topoIndex>
 				<m_clusterGroupNumber>9</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_75">
@@ -3569,7 +3569,7 @@
 						<name>xor_ln416_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3584,7 +3584,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3607,7 +3607,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>62</m_topoIndex>
+				<m_topoIndex>67</m_topoIndex>
 				<m_clusterGroupNumber>9</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_76">
@@ -3618,7 +3618,7 @@
 						<name>carry_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3633,7 +3633,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3656,7 +3656,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>63</m_topoIndex>
+				<m_topoIndex>68</m_topoIndex>
 				<m_clusterGroupNumber>9</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_77">
@@ -3667,7 +3667,7 @@
 						<name>p_Result_15</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3682,7 +3682,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3706,7 +3706,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>64</m_topoIndex>
+				<m_topoIndex>69</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_78">
@@ -3717,7 +3717,7 @@
 						<name>p_Result_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3732,7 +3732,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3741,7 +3741,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>4</bitwidth>
+					<bitwidth>3</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -3768,7 +3768,7 @@
 						<name>Range2_all_ones_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3783,7 +3783,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3805,7 +3805,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.44</m_delay>
+				<m_delay>1.18</m_delay>
 				<m_topoIndex>33</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -3817,7 +3817,7 @@
 						<name>p_Result_8</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3832,7 +3832,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3841,7 +3841,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -3868,7 +3868,7 @@
 						<name>Range1_all_ones_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3883,7 +3883,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3917,7 +3917,7 @@
 						<name>Range1_all_zeros_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3932,7 +3932,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -3966,7 +3966,7 @@
 						<name>deleted_zeros_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3981,7 +3981,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4005,7 +4005,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>85</m_topoIndex>
+				<m_topoIndex>90</m_topoIndex>
 				<m_clusterGroupNumber>10</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_84">
@@ -4016,7 +4016,7 @@
 						<name>tmp_34</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4031,7 +4031,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4055,7 +4055,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>65</m_topoIndex>
+				<m_topoIndex>70</m_topoIndex>
 				<m_clusterGroupNumber>11</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_85">
@@ -4066,7 +4066,7 @@
 						<name>xor_ln779_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4081,7 +4081,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4104,7 +4104,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>66</m_topoIndex>
+				<m_topoIndex>71</m_topoIndex>
 				<m_clusterGroupNumber>11</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_86">
@@ -4115,7 +4115,7 @@
 						<name>and_ln779_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4130,7 +4130,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4153,7 +4153,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>67</m_topoIndex>
+				<m_topoIndex>72</m_topoIndex>
 				<m_clusterGroupNumber>11</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_87">
@@ -4164,7 +4164,7 @@
 						<name>deleted_ones_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4179,7 +4179,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4203,7 +4203,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>68</m_topoIndex>
+				<m_topoIndex>73</m_topoIndex>
 				<m_clusterGroupNumber>11</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_88">
@@ -4214,7 +4214,7 @@
 						<name>and_ln781_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4229,7 +4229,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4252,7 +4252,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>86</m_topoIndex>
+				<m_topoIndex>74</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_89">
@@ -4263,7 +4263,7 @@
 						<name>xor_ln785_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4278,7 +4278,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4301,7 +4301,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>87</m_topoIndex>
+				<m_topoIndex>91</m_topoIndex>
 				<m_clusterGroupNumber>10</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_90">
@@ -4312,7 +4312,7 @@
 						<name>or_ln785_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4327,7 +4327,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4350,7 +4350,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>88</m_topoIndex>
+				<m_topoIndex>92</m_topoIndex>
 				<m_clusterGroupNumber>10</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_91">
@@ -4361,7 +4361,7 @@
 						<name>xor_ln785_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4376,7 +4376,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4399,7 +4399,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>89</m_topoIndex>
+				<m_topoIndex>75</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_92">
@@ -4410,7 +4410,7 @@
 						<name>overflow_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4425,7 +4425,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4448,7 +4448,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>90</m_topoIndex>
+				<m_topoIndex>93</m_topoIndex>
 				<m_clusterGroupNumber>10</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_93">
@@ -4459,7 +4459,7 @@
 						<name>and_ln786_7</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4474,7 +4474,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4497,7 +4497,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.99</m_delay>
-				<m_topoIndex>69</m_topoIndex>
+				<m_topoIndex>76</m_topoIndex>
 				<m_clusterGroupNumber>11</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_94">
@@ -4508,7 +4508,7 @@
 						<name>or_ln786_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4523,7 +4523,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4546,7 +4546,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>91</m_topoIndex>
+				<m_topoIndex>77</m_topoIndex>
 				<m_clusterGroupNumber>12</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_95">
@@ -4557,7 +4557,7 @@
 						<name>xor_ln786_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4572,7 +4572,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4595,7 +4595,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>92</m_topoIndex>
+				<m_topoIndex>78</m_topoIndex>
 				<m_clusterGroupNumber>12</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_96">
@@ -4606,7 +4606,7 @@
 						<name>underflow_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4621,7 +4621,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4644,7 +4644,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>93</m_topoIndex>
+				<m_topoIndex>79</m_topoIndex>
 				<m_clusterGroupNumber>12</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_97">
@@ -4655,7 +4655,7 @@
 						<name>or_ln340_11</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4670,7 +4670,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4704,7 +4704,7 @@
 						<name>or_ln340_12</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4719,7 +4719,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4753,7 +4753,7 @@
 						<name>or_ln340_13</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4768,7 +4768,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4802,7 +4802,7 @@
 						<name>select_ln340_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4817,7 +4817,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4826,7 +4826,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -4840,7 +4840,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
+				<m_delay>0.93</m_delay>
 				<m_topoIndex>97</m_topoIndex>
 				<m_clusterGroupNumber>14</m_clusterGroupNumber>
 			</item>
@@ -4852,7 +4852,7 @@
 						<name>select_ln388_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4867,7 +4867,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4876,7 +4876,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -4902,7 +4902,7 @@
 						<name>p_Val2_21</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>21</lineNumber>
+						<lineNumber>31</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4917,7 +4917,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>21</second>
+										<second>31</second>
 									</item>
 								</second>
 							</item>
@@ -4926,7 +4926,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -4940,7 +4940,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
+				<m_delay>0.97</m_delay>
 				<m_topoIndex>99</m_topoIndex>
 				<m_clusterGroupNumber>13</m_clusterGroupNumber>
 			</item>
@@ -4952,7 +4952,7 @@
 						<name>lhs_V</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>24</lineNumber>
+						<lineNumber>34</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4967,7 +4967,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>24</second>
+										<second>34</second>
 									</item>
 								</second>
 							</item>
@@ -4976,7 +4976,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -5000,7 +5000,7 @@
 						<name>rhs_V</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>24</lineNumber>
+						<lineNumber>34</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5015,7 +5015,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>24</second>
+										<second>34</second>
 									</item>
 								</second>
 							</item>
@@ -5024,7 +5024,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -5048,7 +5048,7 @@
 						<name>ret_V</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>24</lineNumber>
+						<lineNumber>34</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5063,7 +5063,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>24</second>
+										<second>34</second>
 									</item>
 								</second>
 							</item>
@@ -5072,7 +5072,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -5085,7 +5085,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.88</m_delay>
+				<m_delay>2.79</m_delay>
 				<m_topoIndex>102</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -5097,7 +5097,7 @@
 						<name>icmp_ln1497</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>24</lineNumber>
+						<lineNumber>34</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5112,7 +5112,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>24</second>
+										<second>34</second>
 									</item>
 								</second>
 							</item>
@@ -5134,7 +5134,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.65</m_delay>
+				<m_delay>2.56</m_delay>
 				<m_topoIndex>103</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -5143,10 +5143,10 @@
 					<Obj>
 						<type>0</type>
 						<id>113</id>
-						<name>_ln24</name>
+						<name>_ln34</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>24</lineNumber>
+						<lineNumber>34</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5161,7 +5161,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>24</second>
+										<second>34</second>
 									</item>
 								</second>
 							</item>
@@ -5196,7 +5196,7 @@
 						<name>ret_V_11</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5211,7 +5211,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5220,7 +5220,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -5233,7 +5233,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.88</m_delay>
+				<m_delay>2.79</m_delay>
 				<m_topoIndex>105</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -5245,7 +5245,7 @@
 						<name>lhs_V_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5260,7 +5260,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5269,7 +5269,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>42</bitwidth>
+					<bitwidth>38</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -5282,7 +5282,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>111</m_topoIndex>
+				<m_topoIndex>106</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_110">
@@ -5293,7 +5293,7 @@
 						<name>trunc_ln1192</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5308,7 +5308,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5317,7 +5317,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -5330,7 +5330,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>106</m_topoIndex>
+				<m_topoIndex>107</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_111">
@@ -5341,7 +5341,7 @@
 						<name>ret_V_12</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5356,7 +5356,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5365,7 +5365,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>42</bitwidth>
+					<bitwidth>38</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -5378,8 +5378,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.91</m_delay>
-				<m_topoIndex>112</m_topoIndex>
+				<m_delay>2.81</m_delay>
+				<m_topoIndex>108</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_112">
@@ -5390,7 +5390,7 @@
 						<name>p_Result_16</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5405,7 +5405,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5429,7 +5429,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>113</m_topoIndex>
+				<m_topoIndex>109</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_113">
@@ -5440,7 +5440,7 @@
 						<name>xtemp_V</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5455,7 +5455,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5464,7 +5464,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -5477,8 +5477,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.88</m_delay>
-				<m_topoIndex>114</m_topoIndex>
+				<m_delay>2.79</m_delay>
+				<m_topoIndex>110</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_114">
@@ -5489,7 +5489,7 @@
 						<name>p_Result_17</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5504,7 +5504,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5528,7 +5528,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>115</m_topoIndex>
+				<m_topoIndex>111</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_115">
@@ -5539,7 +5539,7 @@
 						<name>p_Result_9</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5554,7 +5554,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5579,7 +5579,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>116</m_topoIndex>
+				<m_topoIndex>112</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_116">
@@ -5590,7 +5590,7 @@
 						<name>icmp_ln785</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5605,7 +5605,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5639,7 +5639,7 @@
 						<name>or_ln785_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5654,7 +5654,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5688,7 +5688,7 @@
 						<name>xor_ln785_8</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5703,7 +5703,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5737,7 +5737,7 @@
 						<name>overflow_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5752,7 +5752,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5786,7 +5786,7 @@
 						<name>xor_ln786_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5801,7 +5801,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5835,7 +5835,7 @@
 						<name>icmp_ln786</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5850,7 +5850,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5884,7 +5884,7 @@
 						<name>or_ln786</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5899,7 +5899,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5933,7 +5933,7 @@
 						<name>underflow_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5948,7 +5948,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -5982,7 +5982,7 @@
 						<name>or_ln340_14</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5997,7 +5997,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -6031,7 +6031,7 @@
 						<name>xor_ln340</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6046,7 +6046,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -6080,7 +6080,7 @@
 						<name>or_ln340_15</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6095,7 +6095,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -6129,7 +6129,7 @@
 						<name>select_ln340_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6144,7 +6144,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -6153,7 +6153,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -6167,7 +6167,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
+				<m_delay>0.97</m_delay>
 				<m_topoIndex>128</m_topoIndex>
 				<m_clusterGroupNumber>17</m_clusterGroupNumber>
 			</item>
@@ -6179,7 +6179,7 @@
 						<name>select_ln388_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6194,7 +6194,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -6203,7 +6203,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -6229,7 +6229,7 @@
 						<name>x_V</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>36</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6244,7 +6244,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>26</second>
+										<second>36</second>
 									</item>
 								</second>
 							</item>
@@ -6253,7 +6253,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -6267,7 +6267,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
+				<m_delay>0.97</m_delay>
 				<m_topoIndex>130</m_topoIndex>
 				<m_clusterGroupNumber>18</m_clusterGroupNumber>
 			</item>
@@ -6279,7 +6279,7 @@
 						<name>r_V_15</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6294,7 +6294,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6303,7 +6303,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -6318,7 +6318,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>107</m_topoIndex>
+				<m_topoIndex>113</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_131">
@@ -6329,7 +6329,7 @@
 						<name>sext_ln1116</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6344,7 +6344,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6353,7 +6353,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>81</bitwidth>
+					<bitwidth>73</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -6366,7 +6366,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>108</m_topoIndex>
+				<m_topoIndex>114</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_132">
@@ -6377,7 +6377,7 @@
 						<name>sext_ln1118</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6392,7 +6392,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6401,7 +6401,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>81</bitwidth>
+					<bitwidth>73</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -6414,7 +6414,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>109</m_topoIndex>
+				<m_topoIndex>115</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_133">
@@ -6425,7 +6425,7 @@
 						<name>r_V_19</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6440,7 +6440,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6449,7 +6449,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>81</bitwidth>
+					<bitwidth>73</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -6462,8 +6462,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.89</m_delay>
-				<m_topoIndex>110</m_topoIndex>
+				<m_delay>5.69</m_delay>
+				<m_topoIndex>116</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_134">
@@ -6474,7 +6474,7 @@
 						<name>ret_V_13</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6489,7 +6489,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6498,7 +6498,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>81</bitwidth>
+					<bitwidth>73</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -6511,7 +6511,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>4.04</m_delay>
+				<m_delay>3.81</m_delay>
 				<m_topoIndex>133</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -6523,7 +6523,7 @@
 						<name>p_Result_18</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6538,7 +6538,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6573,7 +6573,7 @@
 						<name>ytemp_V</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6588,7 +6588,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6597,7 +6597,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -6613,7 +6613,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>138</m_topoIndex>
+				<m_topoIndex>141</m_topoIndex>
 				<m_clusterGroupNumber>19</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_137">
@@ -6624,7 +6624,7 @@
 						<name>tmp_38</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6639,7 +6639,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6663,7 +6663,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>139</m_topoIndex>
+				<m_topoIndex>142</m_topoIndex>
 				<m_clusterGroupNumber>19</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_138">
@@ -6674,7 +6674,7 @@
 						<name>trunc_ln718_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6689,7 +6689,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6698,7 +6698,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>34</bitwidth>
+					<bitwidth>31</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -6722,7 +6722,7 @@
 						<name>r_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6737,7 +6737,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6759,7 +6759,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.49</m_delay>
+				<m_delay>2.43</m_delay>
 				<m_topoIndex>135</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -6771,7 +6771,7 @@
 						<name>p_Result_19</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6786,7 +6786,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6810,7 +6810,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>140</m_topoIndex>
+				<m_topoIndex>143</m_topoIndex>
 				<m_clusterGroupNumber>20</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_141">
@@ -6821,7 +6821,7 @@
 						<name>or_ln412_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6836,7 +6836,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6859,7 +6859,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>141</m_topoIndex>
+				<m_topoIndex>144</m_topoIndex>
 				<m_clusterGroupNumber>19</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_142">
@@ -6870,7 +6870,7 @@
 						<name>tmp_40</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6885,7 +6885,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6909,7 +6909,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>142</m_topoIndex>
+				<m_topoIndex>145</m_topoIndex>
 				<m_clusterGroupNumber>19</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_143">
@@ -6920,7 +6920,7 @@
 						<name>and_ln412_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6935,7 +6935,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6958,7 +6958,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>143</m_topoIndex>
+				<m_topoIndex>146</m_topoIndex>
 				<m_clusterGroupNumber>19</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_144">
@@ -6969,7 +6969,7 @@
 						<name>zext_ln415_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6984,7 +6984,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -6993,7 +6993,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -7006,7 +7006,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>144</m_topoIndex>
+				<m_topoIndex>147</m_topoIndex>
 				<m_clusterGroupNumber>19</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_145">
@@ -7017,7 +7017,7 @@
 						<name>ytemp_V_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7032,7 +7032,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7041,7 +7041,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -7054,8 +7054,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.88</m_delay>
-				<m_topoIndex>145</m_topoIndex>
+				<m_delay>2.79</m_delay>
+				<m_topoIndex>148</m_topoIndex>
 				<m_clusterGroupNumber>19</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_146">
@@ -7066,7 +7066,7 @@
 						<name>tmp_41</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7081,7 +7081,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7105,7 +7105,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>146</m_topoIndex>
+				<m_topoIndex>149</m_topoIndex>
 				<m_clusterGroupNumber>20</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_147">
@@ -7116,7 +7116,7 @@
 						<name>xor_ln416_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7131,7 +7131,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7154,7 +7154,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>147</m_topoIndex>
+				<m_topoIndex>150</m_topoIndex>
 				<m_clusterGroupNumber>20</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_148">
@@ -7165,7 +7165,7 @@
 						<name>carry_8</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7180,7 +7180,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7203,7 +7203,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>148</m_topoIndex>
+				<m_topoIndex>151</m_topoIndex>
 				<m_clusterGroupNumber>20</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_149">
@@ -7214,7 +7214,7 @@
 						<name>p_Result_20</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7229,7 +7229,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7253,7 +7253,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>149</m_topoIndex>
+				<m_topoIndex>152</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_150">
@@ -7264,7 +7264,7 @@
 						<name>tmp_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7279,7 +7279,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7288,7 +7288,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -7315,7 +7315,7 @@
 						<name>Range2_all_ones_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7330,7 +7330,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7353,7 +7353,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>1.44</m_delay>
-				<m_topoIndex>150</m_topoIndex>
+				<m_topoIndex>137</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_152">
@@ -7364,7 +7364,7 @@
 						<name>tmp_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7379,7 +7379,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7388,7 +7388,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>6</bitwidth>
+					<bitwidth>5</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -7404,7 +7404,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>137</m_topoIndex>
+				<m_topoIndex>138</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_153">
@@ -7415,7 +7415,7 @@
 						<name>Range1_all_ones_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7430,7 +7430,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7452,8 +7452,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.45</m_delay>
-				<m_topoIndex>151</m_topoIndex>
+				<m_delay>1.44</m_delay>
+				<m_topoIndex>139</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_154">
@@ -7464,7 +7464,7 @@
 						<name>Range1_all_zeros_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7479,7 +7479,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7501,8 +7501,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.45</m_delay>
-				<m_topoIndex>152</m_topoIndex>
+				<m_delay>1.44</m_delay>
+				<m_topoIndex>140</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_155">
@@ -7513,7 +7513,7 @@
 						<name>deleted_zeros_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7528,7 +7528,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7552,7 +7552,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>158</m_topoIndex>
+				<m_topoIndex>159</m_topoIndex>
 				<m_clusterGroupNumber>21</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_156">
@@ -7563,7 +7563,7 @@
 						<name>tmp_43</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7578,7 +7578,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7613,7 +7613,7 @@
 						<name>xor_ln779_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7628,7 +7628,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7662,7 +7662,7 @@
 						<name>and_ln779_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7677,7 +7677,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7711,7 +7711,7 @@
 						<name>deleted_ones_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7726,7 +7726,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7761,7 +7761,7 @@
 						<name>and_ln781_3</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7776,7 +7776,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7799,7 +7799,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>159</m_topoIndex>
+				<m_topoIndex>157</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_161">
@@ -7810,7 +7810,7 @@
 						<name>xor_ln785_9</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7825,7 +7825,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7859,7 +7859,7 @@
 						<name>or_ln785_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7874,7 +7874,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7908,7 +7908,7 @@
 						<name>xor_ln785_10</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7923,7 +7923,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -7957,7 +7957,7 @@
 						<name>overflow_5</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -7972,7 +7972,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -8006,7 +8006,7 @@
 						<name>and_ln786_10</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8021,7 +8021,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -8044,7 +8044,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.99</m_delay>
-				<m_topoIndex>157</m_topoIndex>
+				<m_topoIndex>158</m_topoIndex>
 				<m_clusterGroupNumber>22</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_166">
@@ -8055,7 +8055,7 @@
 						<name>or_ln786_4</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8070,7 +8070,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -8104,7 +8104,7 @@
 						<name>xor_ln786_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8119,7 +8119,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -8153,7 +8153,7 @@
 						<name>underflow_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8168,7 +8168,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -8202,7 +8202,7 @@
 						<name>or_ln340_16</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8217,7 +8217,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -8251,7 +8251,7 @@
 						<name>or_ln340_17</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8266,7 +8266,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -8300,7 +8300,7 @@
 						<name>or_ln340_18</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8315,7 +8315,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -8349,7 +8349,7 @@
 						<name>select_ln340_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8364,7 +8364,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -8373,7 +8373,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -8387,7 +8387,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
+				<m_delay>0.93</m_delay>
 				<m_topoIndex>170</m_topoIndex>
 				<m_clusterGroupNumber>25</m_clusterGroupNumber>
 			</item>
@@ -8399,7 +8399,7 @@
 						<name>select_ln388_6</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8414,7 +8414,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -8423,7 +8423,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -8449,7 +8449,7 @@
 						<name>y_V</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>37</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8464,7 +8464,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>27</second>
+										<second>37</second>
 									</item>
 								</second>
 							</item>
@@ -8473,7 +8473,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -8487,7 +8487,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
+				<m_delay>0.97</m_delay>
 				<m_topoIndex>172</m_topoIndex>
 				<m_clusterGroupNumber>24</m_clusterGroupNumber>
 			</item>
@@ -8499,7 +8499,7 @@
 						<name>icmp_ln1498</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>28</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8514,7 +8514,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>28</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -8536,7 +8536,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.64</m_delay>
+				<m_delay>2.54</m_delay>
 				<m_topoIndex>131</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -8548,7 +8548,7 @@
 						<name>icmp_ln1498_1</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>28</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8563,7 +8563,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>28</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -8585,7 +8585,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.64</m_delay>
+				<m_delay>2.54</m_delay>
 				<m_topoIndex>173</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -8594,10 +8594,10 @@
 					<Obj>
 						<type>0</type>
 						<id>184</id>
-						<name>and_ln28</name>
+						<name>and_ln38</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>28</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8612,7 +8612,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>28</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -8643,10 +8643,10 @@
 					<Obj>
 						<type>0</type>
 						<id>185</id>
-						<name>_ln28</name>
+						<name>_ln38</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>28</lineNumber>
+						<lineNumber>38</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8661,7 +8661,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>28</second>
+										<second>38</second>
 									</item>
 								</second>
 							</item>
@@ -8693,10 +8693,10 @@
 					<Obj>
 						<type>0</type>
 						<id>188</id>
-						<name>_ln19</name>
+						<name>_ln29</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>19</lineNumber>
+						<lineNumber>29</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8711,7 +8711,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>19</second>
+										<second>29</second>
 									</item>
 								</second>
 							</item>
@@ -8744,7 +8744,7 @@
 						<name>iter_2_ph</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>19</lineNumber>
+						<lineNumber>29</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8759,7 +8759,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>19</second>
+										<second>29</second>
 									</item>
 								</second>
 							</item>
@@ -8831,7 +8831,7 @@
 						<name>iter_2</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>9</lineNumber>
+						<lineNumber>19</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8846,7 +8846,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>9</second>
+										<second>19</second>
 									</item>
 								</second>
 							</item>
@@ -8879,10 +8879,10 @@
 					<Obj>
 						<type>0</type>
 						<id>194</id>
-						<name>_ln43</name>
+						<name>_ln53</name>
 						<fileName>mandelbrotHLS/mandel.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>43</lineNumber>
+						<lineNumber>53</lineNumber>
 						<contextFuncName>mandel_calc</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -8897,7 +8897,7 @@
 											<first>mandelbrotHLS/mandel.cpp</first>
 											<second>mandel_calc</second>
 										</first>
-										<second>43</second>
+										<second>53</second>
 									</item>
 								</second>
 							</item>
@@ -8967,7 +8967,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>35</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -8990,7 +8990,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -9062,7 +9062,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>79</content>
+				<content>71</content>
 			</item>
 			<item class_id_reference="16" object_id="_190">
 				<Value>
@@ -9085,7 +9085,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>35</content>
+				<content>32</content>
 			</item>
 			<item class_id_reference="16" object_id="_191">
 				<Value>
@@ -9108,7 +9108,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>74</content>
+				<content>67</content>
 			</item>
 			<item class_id_reference="16" object_id="_192">
 				<Value>
@@ -9128,7 +9128,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>34</bitwidth>
+					<bitwidth>31</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -9154,7 +9154,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>34</content>
+				<content>31</content>
 			</item>
 			<item class_id_reference="16" object_id="_194">
 				<Value>
@@ -9177,7 +9177,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>39</content>
+				<content>35</content>
 			</item>
 			<item class_id_reference="16" object_id="_195">
 				<Value>
@@ -9223,7 +9223,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>76</content>
+				<content>69</content>
 			</item>
 			<item class_id_reference="16" object_id="_197">
 				<Value>
@@ -9243,10 +9243,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>4</bitwidth>
+					<bitwidth>3</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>15</content>
+				<content>7</content>
 			</item>
 			<item class_id_reference="16" object_id="_198">
 				<Value>
@@ -9269,7 +9269,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>75</content>
+				<content>68</content>
 			</item>
 			<item class_id_reference="16" object_id="_199">
 				<Value>
@@ -9289,10 +9289,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>31</content>
+				<content>15</content>
 			</item>
 			<item class_id_reference="16" object_id="_200">
 				<Value>
@@ -9312,7 +9312,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -9335,10 +9335,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>549755813887</content>
+				<content>34359738367</content>
 			</item>
 			<item class_id_reference="16" object_id="_202">
 				<Value>
@@ -9358,10 +9358,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>549755813888</content>
+				<content>34359738368</content>
 			</item>
 			<item class_id_reference="16" object_id="_203">
 				<Value>
@@ -9381,10 +9381,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>137438953472</content>
+				<content>17179869184</content>
 			</item>
 			<item class_id_reference="16" object_id="_204">
 				<Value>
@@ -9407,7 +9407,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>41</content>
+				<content>37</content>
 			</item>
 			<item class_id_reference="16" object_id="_205">
 				<Value>
@@ -9430,7 +9430,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>40</content>
+				<content>36</content>
 			</item>
 			<item class_id_reference="16" object_id="_206">
 				<Value>
@@ -9522,7 +9522,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>80</content>
+				<content>72</content>
 			</item>
 			<item class_id_reference="16" object_id="_210">
 				<Value>
@@ -9542,10 +9542,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>6</bitwidth>
+					<bitwidth>5</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>63</content>
+				<content>31</content>
 			</item>
 			<item class_id_reference="16" object_id="_211">
 				<Value>
@@ -9565,7 +9565,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>6</bitwidth>
+					<bitwidth>5</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -9770,7 +9770,7 @@
 				<Obj>
 					<type>3</type>
 					<id>186</id>
-					<name>_ZN13ap_fixed_baseILi41ELi6ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi40ELi5ELb1ELS0_4ELS1_0ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit9.i_ifconv</name>
+					<name>_ZN13ap_fixed_baseILi37ELi5ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi36ELi4ELb1ELS0_4ELS1_0ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit9.i_ifconv</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
 					<lineNumber>0</lineNumber>
@@ -10322,14 +10322,14 @@
 			<item class_id_reference="20" object_id="_275">
 				<id>275</id>
 				<edge_type>1</edge_type>
-				<source_obj>36</source_obj>
+				<source_obj>28</source_obj>
 				<sink_obj>37</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_276">
 				<id>276</id>
 				<edge_type>1</edge_type>
-				<source_obj>28</source_obj>
+				<source_obj>36</source_obj>
 				<sink_obj>37</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
@@ -10945,14 +10945,14 @@
 			<item class_id_reference="20" object_id="_364">
 				<id>386</id>
 				<edge_type>1</edge_type>
-				<source_obj>78</source_obj>
+				<source_obj>70</source_obj>
 				<sink_obj>79</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_365">
 				<id>387</id>
 				<edge_type>1</edge_type>
-				<source_obj>70</source_obj>
+				<source_obj>78</source_obj>
 				<sink_obj>79</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
@@ -11428,14 +11428,14 @@
 			<item class_id_reference="20" object_id="_433">
 				<id>460</id>
 				<edge_type>1</edge_type>
-				<source_obj>109</source_obj>
+				<source_obj>110</source_obj>
 				<sink_obj>111</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_434">
 				<id>461</id>
 				<edge_type>1</edge_type>
-				<source_obj>110</source_obj>
+				<source_obj>109</source_obj>
 				<sink_obj>111</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
@@ -11953,7 +11953,7 @@
 			<item class_id_reference="20" object_id="_508">
 				<id>556</id>
 				<edge_type>1</edge_type>
-				<source_obj>141</source_obj>
+				<source_obj>140</source_obj>
 				<sink_obj>149</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
@@ -12609,77 +12609,77 @@
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_602">
-				<id>680</id>
+				<id>679</id>
 				<edge_type>2</edge_type>
 				<source_obj>9</source_obj>
 				<sink_obj>195</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_603">
-				<id>681</id>
+				<id>680</id>
 				<edge_type>2</edge_type>
 				<source_obj>9</source_obj>
 				<sink_obj>14</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_604">
-				<id>682</id>
+				<id>681</id>
 				<edge_type>2</edge_type>
 				<source_obj>14</source_obj>
 				<sink_obj>21</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_605">
-				<id>683</id>
+				<id>682</id>
 				<edge_type>2</edge_type>
 				<source_obj>21</source_obj>
 				<sink_obj>114</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_606">
-				<id>684</id>
+				<id>683</id>
 				<edge_type>2</edge_type>
 				<source_obj>21</source_obj>
 				<sink_obj>192</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_607">
-				<id>685</id>
+				<id>684</id>
 				<edge_type>2</edge_type>
 				<source_obj>114</source_obj>
 				<sink_obj>192</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_608">
-				<id>686</id>
+				<id>685</id>
 				<edge_type>2</edge_type>
 				<source_obj>114</source_obj>
 				<sink_obj>186</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_609">
-				<id>687</id>
+				<id>686</id>
 				<edge_type>2</edge_type>
 				<source_obj>186</source_obj>
 				<sink_obj>192</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_610">
-				<id>688</id>
+				<id>687</id>
 				<edge_type>2</edge_type>
 				<source_obj>186</source_obj>
 				<sink_obj>189</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_611">
-				<id>689</id>
+				<id>688</id>
 				<edge_type>2</edge_type>
 				<source_obj>189</source_obj>
 				<sink_obj>21</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_612">
-				<id>690</id>
+				<id>689</id>
 				<edge_type>2</edge_type>
 				<source_obj>192</source_obj>
 				<sink_obj>195</sink_obj>
@@ -12710,8 +12710,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>22</mMinLatency>
-			<mMaxLatency>1376278</mMaxLatency>
+			<mMinLatency>13</mMinLatency>
+			<mMaxLatency>26026</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -12733,8 +12733,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>21</mMinLatency>
-			<mMaxLatency>21</mMaxLatency>
+			<mMinLatency>12</mMinLatency>
+			<mMaxLatency>12</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -12757,9 +12757,9 @@
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
 			<mMinTripCount>0</mMinTripCount>
-			<mMaxTripCount>65535</mMaxTripCount>
+			<mMaxTripCount>2000</mMaxTripCount>
 			<mMinLatency>0</mMinLatency>
-			<mMaxLatency>1376255</mMaxLatency>
+			<mMaxLatency>26012</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -12816,7 +12816,7 @@
 		<item class_id="27" tracking_level="0" version="0">
 			<first>4</first>
 			<second class_id="28" tracking_level="0" version="0">
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -12844,1232 +12844,1232 @@
 		<item>
 			<first>8</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>10</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>11</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>12</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>13</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>15</first>
 			<second>
-				<first>3</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>16</first>
 			<second>
-				<first>3</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>17</first>
 			<second>
-				<first>3</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>18</first>
 			<second>
-				<first>3</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>19</first>
 			<second>
-				<first>3</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>20</first>
 			<second>
-				<first>3</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>25</first>
 			<second>
-				<first>3</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>26</first>
 			<second>
-				<first>3</first>
-				<second>5</second>
+				<first>2</first>
+				<second>2</second>
 			</second>
 		</item>
 		<item>
 			<first>27</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>28</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>29</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>30</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>31</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>32</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>33</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>34</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>35</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>36</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>37</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>38</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>39</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>40</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>41</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>42</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>43</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>44</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>45</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>46</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>47</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>48</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>49</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>50</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>51</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>52</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>53</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>54</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>55</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>56</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>57</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>58</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>59</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>60</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>61</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>62</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>63</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>64</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>65</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>66</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>67</first>
 			<second>
-				<first>3</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>68</first>
 			<second>
-				<first>3</first>
-				<second>5</second>
+				<first>2</first>
+				<second>2</second>
 			</second>
 		</item>
 		<item>
 			<first>69</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>70</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>71</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>72</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>73</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>74</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>75</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>76</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>77</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>78</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>79</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>80</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>81</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>82</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>83</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>84</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>85</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>86</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>87</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>88</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>89</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>90</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>91</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>92</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>93</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>94</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>95</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>96</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>97</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>98</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>99</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>100</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>101</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>102</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>103</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>104</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>105</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>106</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>107</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>108</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>109</first>
 			<second>
-				<first>12</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>110</first>
 			<second>
-				<first>12</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>111</first>
 			<second>
-				<first>12</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>112</first>
 			<second>
-				<first>13</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>113</first>
 			<second>
-				<first>13</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>115</first>
 			<second>
-				<first>13</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>116</first>
 			<second>
-				<first>14</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>117</first>
 			<second>
-				<first>13</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>118</first>
 			<second>
-				<first>14</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>119</first>
 			<second>
-				<first>14</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>120</first>
 			<second>
-				<first>14</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>121</first>
 			<second>
-				<first>14</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>122</first>
 			<second>
-				<first>14</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>123</first>
 			<second>
-				<first>14</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>124</first>
 			<second>
-				<first>14</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>125</first>
 			<second>
-				<first>14</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>126</first>
 			<second>
-				<first>14</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>127</first>
 			<second>
-				<first>14</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>128</first>
 			<second>
-				<first>14</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>129</first>
 			<second>
-				<first>14</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>130</first>
 			<second>
-				<first>14</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>131</first>
 			<second>
-				<first>15</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>132</first>
 			<second>
-				<first>15</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>133</first>
 			<second>
-				<first>15</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>134</first>
 			<second>
-				<first>15</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>135</first>
 			<second>
-				<first>15</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>136</first>
 			<second>
-				<first>15</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>137</first>
 			<second>
-				<first>13</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>138</first>
 			<second>
-				<first>13</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>139</first>
 			<second>
-				<first>13</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>140</first>
 			<second>
-				<first>13</first>
-				<second>5</second>
+				<first>8</first>
+				<second>2</second>
 			</second>
 		</item>
 		<item>
 			<first>141</first>
 			<second>
-				<first>19</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>142</first>
 			<second>
-				<first>19</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>143</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>144</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>145</first>
 			<second>
-				<first>18</first>
+				<first>10</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>146</first>
 			<second>
-				<first>19</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>147</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>148</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>149</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>150</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>151</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>152</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>153</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>154</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>155</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>156</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>157</first>
 			<second>
-				<first>19</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>158</first>
 			<second>
-				<first>20</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>159</first>
 			<second>
-				<first>19</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>160</first>
 			<second>
-				<first>20</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>161</first>
 			<second>
-				<first>20</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>162</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>163</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>164</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>165</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>166</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>167</first>
 			<second>
-				<first>21</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>168</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>169</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>170</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>171</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>172</first>
 			<second>
-				<first>20</first>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>173</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>174</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>175</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>176</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>177</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>178</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>179</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>180</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>181</first>
 			<second>
-				<first>21</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>182</first>
 			<second>
-				<first>15</first>
+				<first>9</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>183</first>
 			<second>
-				<first>22</first>
+				<first>13</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>184</first>
 			<second>
-				<first>22</first>
+				<first>14</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>185</first>
 			<second>
-				<first>23</first>
+				<first>14</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>188</first>
 			<second>
-				<first>23</first>
+				<first>14</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>190</first>
 			<second>
-				<first>23</first>
+				<first>14</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>191</first>
 			<second>
-				<first>23</first>
+				<first>14</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>193</first>
 			<second>
-				<first>23</first>
+				<first>14</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>194</first>
 			<second>
-				<first>23</first>
+				<first>14</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -14081,56 +14081,56 @@
 			<first>9</first>
 			<second class_id="31" tracking_level="0" version="0">
 				<first>0</first>
-				<second>2</second>
+				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>14</first>
+			<second>
+				<first>1</first>
+				<second>1</second>
+			</second>
+		</item>
+		<item>
+			<first>21</first>
 			<second>
 				<first>2</first>
 				<second>2</second>
 			</second>
 		</item>
 		<item>
-			<first>21</first>
-			<second>
-				<first>3</first>
-				<second>3</second>
-			</second>
-		</item>
-		<item>
 			<first>114</first>
 			<second>
-				<first>3</first>
-				<second>13</second>
+				<first>2</first>
+				<second>8</second>
 			</second>
 		</item>
 		<item>
 			<first>186</first>
 			<second>
-				<first>13</first>
-				<second>23</second>
+				<first>8</first>
+				<second>14</second>
 			</second>
 		</item>
 		<item>
 			<first>189</first>
 			<second>
-				<first>23</first>
-				<second>23</second>
+				<first>14</first>
+				<second>14</second>
 			</second>
 		</item>
 		<item>
 			<first>192</first>
 			<second>
-				<first>23</first>
-				<second>23</second>
+				<first>14</first>
+				<second>14</second>
 			</second>
 		</item>
 		<item>
 			<first>195</first>
 			<second>
-				<first>23</first>
-				<second>23</second>
+				<first>14</first>
+				<second>14</second>
 			</second>
 		</item>
 	</bblk_ent_exit>

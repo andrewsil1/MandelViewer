@@ -7,4 +7,4 @@ Family       : artix7
 Device       : xc7a100t
 Package      : -csg324
 Speed Grade  : -1
-Clock Period : 6.000 ns
+Clock Period : 8.000 ns

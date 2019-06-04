@@ -35086,7 +35086,7 @@ _ssdm_op_SpecDataflowPipeline(-1, 0, "");
 # 11 "mandelbrotHLS/mandel.h"
 using namespace hls;
 
-typedef ap_fixed<40,5,AP_RND_CONV,AP_SAT> real;
+typedef ap_fixed<36,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
@@ -49771,7 +49771,6 @@ using namespace std;
 
 bool pretest(real x, real y) {
 _ssdm_InlineRegion(1, "");
-
 
 
 

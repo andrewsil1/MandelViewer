@@ -17,7 +17,7 @@
         <directive functionName="calc" label="" functionLabel="">
             <pragma name="INTERFACE">
                 <option name="m_axi" value="" positionalBoolean="mode"/>
-                <option name="depth" value="7500"/>
+                <option name="depth" value="8112"/>
                 <option name="port" value="buf" positionalBoolean="4"/>
                 <option name="offset" value="off"/>
             </pragma>
@@ -67,8 +67,22 @@
         <directive functionName="mandel_calc" label="mandel_calc_loop" functionLabel="">
             <pragma name="LOOP_TRIPCOUNT">
                 <option name="min" value="0"/>
-                <option name="max" value="65535"/>
-                <option name="avg" value="2000"/>
+                <option name="max" value="2000"/>
+                <option name="avg" value="50"/>
+            </pragma>
+        </directive>
+        <directive functionName="calc" label="y_for" functionLabel="">
+            <pragma name="LOOP_TRIPCOUNT">
+                <option name="min" value="768"/>
+                <option name="max" value="1440"/>
+                <option name="avg" value="768"/>
+            </pragma>
+        </directive>
+        <directive functionName="calc" label="x_for" functionLabel="">
+            <pragma name="LOOP_TRIPCOUNT">
+                <option name="min" value="1024"/>
+                <option name="max" value="1920"/>
+                <option name="avg" value="1024"/>
             </pragma>
         </directive>
     </sourceFile>

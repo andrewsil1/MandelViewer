@@ -2,8 +2,8 @@
 #include "ap_fixed.h"
 
 //Raising COORD_WIDTH will exceed available 240 DSPs for an Artix-7A100T
-#define COORD_WIDTH 40	//5 bits for integer portion (+15d/-16d), 35 bits for fractional portion
-#define COORD_INT 5
+#define COORD_WIDTH 36	//4 bits for integer portion (+7/-8d), 32 bits for fractional portion
+#define COORD_INT 4
 #define MAXWIDTH 1920
 //#define MAXITER 2000 -- No longer hardcoded but passed to IP as a parameter.
 

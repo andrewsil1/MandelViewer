@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri May 31 11:31:08 2019
+| Date         : Tue Jun  4 11:38:42 2019
 | Host         : AndrewSi64 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -file ./report/calc_timing_synth.rpt
 | Design       : bd_0_wrapper
@@ -127,7 +127,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-     -1.435     -837.556                   1157                34997        0.202        0.000                      0                34997        2.020        0.000                       0                 13070  
+     -0.830      -11.460                     16                31893        0.202        0.000                      0                31893        3.020        0.000                       0                 11800  
 
 
 Timing constraints are not met.
@@ -140,7 +140,7 @@ Timing constraints are not met.
 
 Clock   Waveform(ns)         Period(ns)      Frequency(MHz)
 -----   ------------         ----------      --------------
-ap_clk  {0.000 3.000}        6.000           166.667         
+ap_clk  {0.000 4.000}        8.000           125.000         
 
 
 ------------------------------------------------------------------------------------------------
@@ -150,7 +150,7 @@ ap_clk  {0.000 3.000}        6.000           166.667
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-ap_clk             -1.435     -837.556                   1157                34997        0.202        0.000                      0                34997        2.020        0.000                       0                 13070  
+ap_clk             -0.830      -11.460                     16                31893        0.202        0.000                      0                31893        3.020        0.000                       0                 11800  
 
 
 ------------------------------------------------------------------------------------------------
@@ -181,26 +181,26 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  ap_clk
   To Clock:  ap_clk
 
-Setup :         1157  Failing Endpoints,  Worst Slack       -1.435ns,  Total Violation     -837.556ns
+Setup :           16  Failing Endpoints,  Worst Slack       -0.830ns,  Total Violation      -11.460ns
 Hold  :            0  Failing Endpoints,  Worst Slack        0.202ns,  Total Violation        0.000ns
-PW    :            0  Failing Endpoints,  Worst Slack        2.020ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.020ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (VIOLATED) :        -1.435ns  (required time - arrival time)
-  Source:                 bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/rhs_V_2_reg_1174_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@3.000ns period=6.000ns})
-  Destination:            bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1229_reg[4]/D
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@3.000ns period=6.000ns})
+Slack (VIOLATED) :        -0.830ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/reg_2107_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/Range1_all_zeros_1_reg_1045_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             ap_clk
   Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            6.000ns  (ap_clk rise@6.000ns - ap_clk rise@0.000ns)
-  Data Path Delay:        7.395ns  (logic 4.439ns (60.027%)  route 2.956ns (39.973%))
-  Logic Levels:           25  (CARRY4=20 LUT3=1 LUT5=3 LUT6=1)
+  Requirement:            8.000ns  (ap_clk rise@8.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        8.790ns  (logic 5.141ns (58.487%)  route 3.649ns (41.513%))
+  Logic Levels:           25  (CARRY4=20 LUT3=1 LUT5=2 LUT6=2)
   Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    0.924ns = ( 6.924 - 6.000 ) 
+    Destination Clock Delay (DCD):    0.924ns = ( 8.924 - 8.000 ) 
     Source Clock Delay      (SCD):    0.973ns
     Clock Pessimism Removal (CPR):    0.000ns
   Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
@@ -213,96 +213,96 @@ Slack (VIOLATED) :        -1.435ns  (required time - arrival time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=13069, unset)        0.973     0.973    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/rhs_V_2_reg_1174_reg[0]/C
+                         net (fo=11863, unset)        0.973     0.973    bd_0_i/hls_inst/inst/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/reg_2107_reg[30]/C
   -------------------------------------------------------------------    -------------------
-                         FDRE (Prop_fdre_C_Q)         0.478     1.451 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/rhs_V_2_reg_1174_reg[0]/Q
-                         net (fo=1, unplaced)         0.806     2.257    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/rhs_V_2_reg_1174[0]
-                         LUT5 (Prop_lut5_I0_O)        0.295     2.552 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459[3]_i_12/O
-                         net (fo=2, unplaced)         0.460     3.012    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459[3]_i_12_n_0
-                         LUT3 (Prop_lut3_I2_O)        0.124     3.136 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459[3]_i_7/O
-                         net (fo=1, unplaced)         0.333     3.469    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/grp_fu_914_p0[0]
-                         CARRY4 (Prop_carry4_DI[0]_CO[3])
-                                                      0.550     4.019 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[3]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     4.019    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[3]_i_3_n_0
+                         FDRE (Prop_fdre_C_Q)         0.478     1.451 f  bd_0_i/hls_inst/inst/reg_2107_reg[30]/Q
+                         net (fo=12, unplaced)        0.811     2.262    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/Q[30]
+                         LUT3 (Prop_lut3_I0_O)        0.295     2.557 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/p_Val2_13_reg_879[35]_i_42__2/O
+                         net (fo=1, unplaced)         0.000     2.557    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/p_Val2_13_reg_879[35]_i_42__2_n_0
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.090 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/p_Val2_13_reg_879_reg[35]_i_27__2/CO[3]
+                         net (fo=1, unplaced)         0.000     3.090    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/p_Val2_13_reg_879_reg[35]_i_27__2_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.256     3.346 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/p_Val2_13_reg_879_reg[35]_i_21__2/O[2]
+                         net (fo=3, unplaced)         0.440     3.786    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/p_Result_5_fu_112_p3
+                         LUT5 (Prop_lut5_I3_O)        0.301     4.087 f  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/p_Val2_13_reg_879[35]_i_18__2/O
+                         net (fo=37, unplaced)        0.524     4.611    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/p_Val2_13_reg_879[35]_i_18__2_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.124     4.735 f  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/p_Val2_13_reg_879[35]_i_6__2/O
+                         net (fo=140, unplaced)       0.557     5.292    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/p_Val2_13_reg_879[35]_i_6__2_n_0
+                         LUT6 (Prop_lut6_I1_O)        0.124     5.416 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917[3]_i_5__2/O
+                         net (fo=1, unplaced)         0.469     5.885    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917[3]_i_5__2_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.520     6.405 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[3]_i_2__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.405    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[3]_i_2__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     4.136 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[7]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     4.136    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[7]_i_3_n_0
+                                                      0.117     6.522 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[7]_i_2__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.522    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[7]_i_2__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     4.253 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[11]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     4.253    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[11]_i_3_n_0
+                                                      0.117     6.639 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[11]_i_2__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.639    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[11]_i_2__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     4.370 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[15]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     4.370    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[15]_i_3_n_0
+                                                      0.117     6.756 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[15]_i_2__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.756    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[15]_i_2__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     4.487 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[19]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     4.487    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[19]_i_3_n_0
+                                                      0.117     6.873 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[19]_i_2__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.873    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[19]_i_2__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     4.604 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[23]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     4.604    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[23]_i_3_n_0
+                                                      0.117     6.990 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[23]_i_2__2/CO[3]
+                         net (fo=1, unplaced)         0.000     6.990    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[23]_i_2__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     4.721 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[27]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     4.721    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[27]_i_3_n_0
+                                                      0.117     7.107 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[27]_i_2__2/CO[3]
+                         net (fo=1, unplaced)         0.000     7.107    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[27]_i_2__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     4.838 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[31]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     4.838    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[31]_i_3_n_0
+                                                      0.117     7.224 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[31]_i_1__2/CO[3]
+                         net (fo=1, unplaced)         0.000     7.224    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[31]_i_1__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     4.955 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/p_Result_15_reg_1364_reg[0]_i_2/CO[3]
-                         net (fo=1, unplaced)         0.000     4.955    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/p_Result_15_reg_1364_reg[0]_i_2_n_0
+                                                      0.117     7.341 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[35]_i_1__2/CO[3]
+                         net (fo=1, unplaced)         0.000     7.341    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[35]_i_1__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     5.072 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/p_Result_15_reg_1364_reg[0]_i_1/CO[3]
-                         net (fo=1, unplaced)         0.000     5.072    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/p_Result_15_reg_1364_reg[0]_i_1_n_0
+                                                      0.117     7.458 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[39]_i_1__2/CO[3]
+                         net (fo=1, unplaced)         0.000     7.458    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[39]_i_1__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     5.189 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/underflow_5_reg_1436_reg[0]_i_2/CO[3]
-                         net (fo=1, unplaced)         0.000     5.189    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/underflow_5_reg_1436_reg[0]_i_2_n_0
+                                                      0.117     7.575 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[43]_i_1__2/CO[3]
+                         net (fo=1, unplaced)         0.000     7.575    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[43]_i_1__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     5.306 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[47]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     5.306    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[47]_i_3_n_0
+                                                      0.117     7.692 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[47]_i_1__2/CO[3]
+                         net (fo=1, unplaced)         0.000     7.692    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[47]_i_1__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     5.423 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[51]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     5.423    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[51]_i_3_n_0
+                                                      0.117     7.809 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[51]_i_1__2/CO[3]
+                         net (fo=1, unplaced)         0.000     7.809    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[51]_i_1__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     5.540 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[55]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     5.540    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[55]_i_3_n_0
+                                                      0.117     7.926 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[55]_i_1__2/CO[3]
+                         net (fo=1, unplaced)         0.000     7.926    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[55]_i_1__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     5.657 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[59]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     5.657    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[59]_i_3_n_0
+                                                      0.117     8.043 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[59]_i_1__2/CO[3]
+                         net (fo=1, unplaced)         0.000     8.043    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[59]_i_1__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     5.774 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[63]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     5.774    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[63]_i_3_n_0
+                                                      0.117     8.160 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[63]_i_1__2/CO[3]
+                         net (fo=1, unplaced)         0.000     8.160    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[63]_i_1__2_n_0
                          CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     5.891 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[67]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     5.891    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[67]_i_3_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     6.008 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[71]_i_3/CO[3]
-                         net (fo=1, unplaced)         0.000     6.008    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[71]_i_3_n_0
-                         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     6.125 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[74]_i_5/CO[3]
-                         net (fo=1, unplaced)         0.000     6.125    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1459_reg[74]_i_5_n_0
+                                                      0.117     8.277 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[67]_i_3__2/CO[3]
+                         net (fo=1, unplaced)         0.000     8.277    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/reg_917_reg[67]_i_3__2_n_0
                          CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.331     6.456 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/p_Result_18_reg_1484_reg[0]_i_2/O[3]
-                         net (fo=2, unplaced)         0.459     6.915    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/data4__0[3]
-                         LUT5 (Prop_lut5_I4_O)        0.307     7.222 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1229[4]_i_4/O
-                         net (fo=1, unplaced)         0.449     7.671    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1229[4]_i_4_n_0
-                         LUT5 (Prop_lut5_I4_O)        0.124     7.795 f  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1229[4]_i_2/O
-                         net (fo=1, unplaced)         0.449     8.244    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/calc_mul_40s_41s_dEe_U7/calc_mul_40s_41s_dEe_MulnS_2_U/reg_1229_reg[4]
-                         LUT6 (Prop_lut6_I1_O)        0.124     8.368 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/calc_mul_40s_41s_dEe_U7/calc_mul_40s_41s_dEe_MulnS_2_U/reg_1229[4]_i_1/O
-                         net (fo=1, unplaced)         0.000     8.368    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/calc_mul_40s_41s_dEe_U7_n_81
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1229_reg[4]/D
+                                                      0.331     8.608 f  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/p_Result_6_reg_1023_reg[0]_i_1__2/O[3]
+                         net (fo=3, unplaced)         0.848     9.456    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/tmp_1_fu_590_p4[3]
+                         LUT6 (Prop_lut6_I1_O)        0.307     9.763 r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/Range1_all_zeros_1_reg_1045[0]_i_1__2/O
+                         net (fo=1, unplaced)         0.000     9.763    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/Range1_all_zeros_1_reg_1045[0]_i_1__2_n_0
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/Range1_all_zeros_1_reg_1045_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock ap_clk rise edge)     6.000     6.000 r  
-                                                      0.000     6.000 r  ap_clk (IN)
-                         net (fo=13069, unset)        0.924     6.924    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/ap_clk
-                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1229_reg[4]/C
-                         clock pessimism              0.000     6.924    
-                         clock uncertainty           -0.035     6.889    
-                         FDRE (Setup_fdre_C_D)        0.044     6.933    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/reg_1229_reg[4]
+                         (clock ap_clk rise edge)     8.000     8.000 r  
+                                                      0.000     8.000 r  ap_clk (IN)
+                         net (fo=11863, unset)        0.924     8.924    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/Range1_all_zeros_1_reg_1045_reg[0]/C
+                         clock pessimism              0.000     8.924    
+                         clock uncertainty           -0.035     8.889    
+                         FDRE (Setup_fdre_C_D)        0.044     8.933    bd_0_i/hls_inst/inst/grp_mandel_calc_fu_477/grp_pretest_fu_185/Range1_all_zeros_1_reg_1045_reg[0]
   -------------------------------------------------------------------
-                         required time                          6.933    
-                         arrival time                          -8.368    
+                         required time                          8.933    
+                         arrival time                          -9.763    
   -------------------------------------------------------------------
-                         slack                                 -1.435    
+                         slack                                 -0.830    
 
 
 
@@ -312,9 +312,9 @@ Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.202ns  (arrival time - required time)
   Source:                 bd_0_i/hls_inst/inst/calc_buf_r_m_axi_U/bus_write/rs_wreq/data_p1_reg[0]/C
-                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@3.000ns period=6.000ns})
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Destination:            bd_0_i/hls_inst/inst/calc_buf_r_m_axi_U/bus_write/fifo_wreq/mem_reg[4][0]_srl5/D
-                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@3.000ns period=6.000ns})
+                            (rising edge-triggered cell SRL16E clocked by ap_clk  {rise@0.000ns fall@4.000ns period=8.000ns})
   Path Group:             ap_clk
   Path Type:              Hold (Min at Fast Process Corner)
   Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
@@ -329,7 +329,7 @@ Slack (MET) :             0.202ns  (arrival time - required time)
   -------------------------------------------------------------------    -------------------
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=13069, unset)        0.410     0.410    bd_0_i/hls_inst/inst/calc_buf_r_m_axi_U/bus_write/rs_wreq/ap_clk
+                         net (fo=11863, unset)        0.410     0.410    bd_0_i/hls_inst/inst/calc_buf_r_m_axi_U/bus_write/rs_wreq/ap_clk
                          FDRE                                         r  bd_0_i/hls_inst/inst/calc_buf_r_m_axi_U/bus_write/rs_wreq/data_p1_reg[0]/C
   -------------------------------------------------------------------    -------------------
                          FDRE (Prop_fdre_C_Q)         0.147     0.557 r  bd_0_i/hls_inst/inst/calc_buf_r_m_axi_U/bus_write/rs_wreq/data_p1_reg[0]/Q
@@ -339,7 +339,7 @@ Slack (MET) :             0.202ns  (arrival time - required time)
 
                          (clock ap_clk rise edge)     0.000     0.000 r  
                                                       0.000     0.000 r  ap_clk (IN)
-                         net (fo=13069, unset)        0.432     0.432    bd_0_i/hls_inst/inst/calc_buf_r_m_axi_U/bus_write/fifo_wreq/ap_clk
+                         net (fo=11863, unset)        0.432     0.432    bd_0_i/hls_inst/inst/calc_buf_r_m_axi_U/bus_write/fifo_wreq/ap_clk
                          SRL16E                                       r  bd_0_i/hls_inst/inst/calc_buf_r_m_axi_U/bus_write/fifo_wreq/mem_reg[4][0]_srl5/CLK
                          clock pessimism              0.000     0.432    
                          SRL16E (Hold_srl16e_CLK_D)
@@ -357,14 +357,14 @@ Slack (MET) :             0.202ns  (arrival time - required time)
 Pulse Width Checks
 --------------------------------------------------------------------------------------
 Clock Name:         ap_clk
-Waveform(ns):       { 0.000 3.000 }
-Period(ns):         6.000
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
 Sources:            { ap_clk }
 
 Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
-Min Period        n/a     DSP48E1/CLK  n/a            3.884         6.000       2.116                bd_0_i/hls_inst/inst/grp_mandel_calc_fu_473/calc_mul_40s_41s_dEe_U7/calc_mul_40s_41s_dEe_MulnS_2_U/buff0_reg/CLK
-Low Pulse Width   Slow    SRL16E/CLK   n/a            0.980         3.000       2.020                bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/calc_mul_40s_41s_dEe_U7/calc_mul_40s_41s_dEe_MulnS_2_U/buff2_reg[0]_srl2/CLK
-High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         3.000       2.020                bd_0_i/hls_inst/inst/grp_mandel_calc_fu_449/calc_mul_40s_41s_dEe_U7/calc_mul_40s_41s_dEe_MulnS_2_U/buff2_reg[0]_srl2/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         8.000       4.116                bd_0_i/hls_inst/inst/grp_mandel_calc_fu_453/grp_pretest_fu_185/calc_mul_37s_36s_cud_U2/calc_mul_37s_36s_cud_MulnS_1_U/buff0_reg__0/CLK
+Low Pulse Width   Fast    SRL16E/CLK   n/a            0.980         4.000       3.020                bd_0_i/hls_inst/inst/calc_buf_r_m_axi_U/bus_write/bus_wide_gen.fifo_burst/mem_reg[4][0]_srl5/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         4.000       3.020                bd_0_i/hls_inst/inst/calc_buf_r_m_axi_U/bus_write/bus_wide_gen.fifo_burst/mem_reg[4][0]_srl5/CLK
 
 
 

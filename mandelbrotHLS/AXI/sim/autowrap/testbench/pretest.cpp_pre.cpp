@@ -100438,7 +100438,7 @@ void FindStereoCorrespondenceBM(
 # 11 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.h"
 using namespace hls;
 
-typedef ap_fixed<40,5,AP_RND_CONV,AP_SAT> real;
+typedef ap_fixed<36,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
@@ -100450,7 +100450,6 @@ using namespace std;
 
 bool pretest(real x, real y) {
 #pragma HLS INLINE region recursive
-
 
 
 

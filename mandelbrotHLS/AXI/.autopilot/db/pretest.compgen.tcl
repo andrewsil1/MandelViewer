@@ -1,23 +1,23 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 1
-set name calc_mul_41s_40s_bkb
+set name calc_mul_36s_36s_bkb
 set corename simcore_mul
 set op mul
-set stage_num 6
+set stage_num 3
 set max_latency -1
 set registered_input 1
 set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 41
+set in0_width 36
 set in0_signed 1
-set in1_width 40
+set in1_width 36
 set in1_signed 1
 set ce_width 1
 set ce_signed 0
-set out_width 81
+set out_width 72
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
 eval "ap_gen_simcore_mul { \
@@ -86,23 +86,23 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, che
 
 
 set id 2
-set name calc_mul_40s_40s_cud
+set name calc_mul_37s_36s_cud
 set corename simcore_mul
 set op mul
-set stage_num 6
+set stage_num 3
 set max_latency -1
 set registered_input 1
 set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 40
+set in0_width 37
 set in0_signed 1
-set in1_width 40
+set in1_width 36
 set in1_signed 1
 set ce_width 1
 set ce_signed 0
-set out_width 80
+set out_width 73
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
 eval "ap_gen_simcore_mul { \
@@ -188,7 +188,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_x_V \
     op interface \
-    ports { x_V { I 40 vector } } \
+    ports { x_V { I 36 vector } } \
 } "
 }
 
@@ -203,7 +203,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_y_V \
     op interface \
-    ports { y_V { I 40 vector } } \
+    ports { y_V { I 36 vector } } \
 } "
 }
 

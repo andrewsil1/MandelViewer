@@ -35086,7 +35086,7 @@ _ssdm_op_SpecDataflowPipeline(-1, 0, "");
 # 11 "mandelbrotHLS/mandel.h"
 using namespace hls;
 
-typedef ap_fixed<40,5,AP_RND_CONV,AP_SAT> real;
+typedef ap_fixed<36,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
@@ -35097,7 +35097,7 @@ void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf);
 # 11 "mandelbrotHLS/mandel.h"
 using namespace hls;
 
-typedef ap_fixed<40,5,AP_RND_CONV,AP_SAT> real;
+typedef ap_fixed<36,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
@@ -49785,7 +49785,7 @@ namespace std {
 # 6 "mandelbrotHLS/mandel.cpp" 2
 
 using namespace std;
-
+# 19 "mandelbrotHLS/mandel.cpp"
 pixval mandel_calc(real x_in, real y_in, pixval maxIter) {
 
     real x = 0.0;
@@ -49797,8 +49797,8 @@ pixval mandel_calc(real x_in, real y_in, pixval maxIter) {
         iter = maxIter;
    } else {
         mandel_calc_loop:for (iter = 0; iter < maxIter; iter++) {
-_ssdm_op_SpecLoopTripCount(0, 65535, 2000, "");
-# 19 "mandelbrotHLS/mandel.cpp"
+_ssdm_op_SpecLoopTripCount(0, 2000, 50, "");
+# 29 "mandelbrotHLS/mandel.cpp"
 
             real x2 = x*x;
             real y2 = y*y;
@@ -49828,26 +49828,26 @@ _ssdm_op_SpecLoopTripCount(0, 65535, 2000, "");
 
 
 void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf) {
-_ssdm_op_SpecInterface(buf, "m_axi", 0, 0, "", 0, 7500, "", "off", "", 16, 16, 16, 16, "", "");
-# 47 "mandelbrotHLS/mandel.cpp"
+_ssdm_op_SpecInterface(buf, "m_axi", 0, 0, "", 0, 8112, "", "off", "", 16, 16, 16, 16, "", "");
+# 57 "mandelbrotHLS/mandel.cpp"
 
 _ssdm_op_SpecInterface(&X0, "s_axilite", 0, 0, "", 0, 0, "in_parms", "", "", 0, 0, 0, 0, "", "");
-# 47 "mandelbrotHLS/mandel.cpp"
+# 57 "mandelbrotHLS/mandel.cpp"
 
 _ssdm_op_SpecInterface(&X1, "s_axilite", 0, 0, "", 0, 0, "in_parms", "", "", 0, 0, 0, 0, "", "");
-# 47 "mandelbrotHLS/mandel.cpp"
+# 57 "mandelbrotHLS/mandel.cpp"
 
 _ssdm_op_SpecInterface(&Y0, "s_axilite", 0, 0, "", 0, 0, "in_parms", "", "", 0, 0, 0, 0, "", "");
-# 47 "mandelbrotHLS/mandel.cpp"
+# 57 "mandelbrotHLS/mandel.cpp"
 
 _ssdm_op_SpecInterface(maxIter, "s_axilite", 0, 0, "", 0, 0, "in_parms", "", "", 0, 0, 0, 0, "", "");
-# 47 "mandelbrotHLS/mandel.cpp"
+# 57 "mandelbrotHLS/mandel.cpp"
 
 _ssdm_op_SpecInterface(0, "s_axilite", 0, 0, "", 0, 0, "in_parms", "", "", 0, 0, 0, 0, "", "");
-# 47 "mandelbrotHLS/mandel.cpp"
+# 57 "mandelbrotHLS/mandel.cpp"
 
 _ssdm_op_SpecInterface(&width, "s_axilite", 0, 0, "", 0, 0, "in_parms", "", "", 0, 0, 0, 0, "", "");
-# 47 "mandelbrotHLS/mandel.cpp"
+# 57 "mandelbrotHLS/mandel.cpp"
 
 
     real delta = (real) 0.0;
@@ -49856,10 +49856,7 @@ _ssdm_op_SpecInterface(&width, "s_axilite", 0, 0, "", 0, 0, "in_parms", "", "", 
     int index;
     pixval mem[1920];
 _ssdm_SpecArrayPartition( mem, 1, "CYCLIC", 8, "");
-# 53 "mandelbrotHLS/mandel.cpp"
-
-
-
+# 63 "mandelbrotHLS/mandel.cpp"
 
 
 
@@ -49873,33 +49870,46 @@ _ssdm_SpecArrayPartition( mem, 1, "CYCLIC", 8, "");
         height = width * 3 / 4;
         index = 0;
      y = Y0;
-     (void) ((!!(height <= 1920 * 3 / 4)) || (_assert("height <= MAXWIDTH * 3 / 4","mandelbrotHLS/mandel.cpp",69),0));
-  y_for:for (res line = 0; line < height; line++) {
-            (void) ((!!(width % 8 == 0)) || (_assert("width % 8 == 0","mandelbrotHLS/mandel.cpp",71),0));
-            (void) ((!!(width <= 1920)) || (_assert("width <= MAXWIDTH","mandelbrotHLS/mandel.cpp",72),0));
-      x_for:for (res pix_x = 0; pix_x < width; pix_x++) {
+
+
+
+y_for: for (res line = 0; line < height; line++) {
+_ssdm_op_SpecLoopTripCount(768, 1440, 768, "");
+# 79 "mandelbrotHLS/mandel.cpp"
+
+
+
+
+
+
+x_for: for (res pix_x = 0; pix_x < width; pix_x++) {
+_ssdm_op_SpecLoopTripCount(1024, 1920, 1024, "");
+# 85 "mandelbrotHLS/mandel.cpp"
+
 _ssdm_Unroll(1, 4, 8, "");
-# 73 "mandelbrotHLS/mandel.cpp"
-
-
+# 85 "mandelbrotHLS/mandel.cpp"
 
 
                 x = X0 + (pix_x * delta);
 
+
+
                 mem[pix_x] = mandel_calc(x,y,maxIter);
+
             }
 
-        (void) ((!!(width <= 1920)) || (_assert("width <= MAXWIDTH","mandelbrotHLS/mandel.cpp",82),0));
 
-        burst_out:for (int i = 0; i < width; i++)
-        {
+burst_out: for (int i = 0; i < width; i++)
+            {
 _ssdm_op_SpecPipeline(-1, 1, 1, 0, "");
  buf[index++] = mem[i];
-        }
 
 
-        y -= delta;
- }
+            }
+
+
+            y -= delta;
+     }
 
 
 

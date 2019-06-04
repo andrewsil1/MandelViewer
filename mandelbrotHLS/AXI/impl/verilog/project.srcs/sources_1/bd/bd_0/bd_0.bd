@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x6C994CE3F5B2375F",
+      "boundary_crc": "0x6C994CE3566CEFD4",
       "device": "xc7a100tcsg324-1",
       "name": "bd_0",
       "synth_flow_mode": "Hierarchical",
@@ -39,7 +39,7 @@
             "value": "32"
           },
           "FREQ_HZ": {
-            "value": "166000000.0"
+            "value": "125000000.0"
           },
           "HAS_BRESP": {
             "value": "1",
@@ -159,7 +159,7 @@
             "value": "32"
           },
           "FREQ_HZ": {
-            "value": "166000000.0"
+            "value": "125000000.0"
           },
           "HAS_BRESP": {
             "value": "1"
@@ -256,7 +256,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "166000000.0"
+            "value": "125000000.0"
           },
           "INSERT_VIP": {
             "value": "0",

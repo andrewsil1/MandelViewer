@@ -4,9 +4,9 @@
 // ==============================================================
 
 extern void AESL_WRAP_calc (
-ap_fixed<40, 5, (ap_q_mode) 4, (ap_o_mode)0, 0> X0,
-ap_fixed<40, 5, (ap_q_mode) 4, (ap_o_mode)0, 0> Y0,
-ap_fixed<40, 5, (ap_q_mode) 4, (ap_o_mode)0, 0> X1,
+ap_fixed<36, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X0,
+ap_fixed<36, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> Y0,
+ap_fixed<36, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X1,
 ap_uint<12> width,
 unsigned short maxIter,
 unsigned short* buf);

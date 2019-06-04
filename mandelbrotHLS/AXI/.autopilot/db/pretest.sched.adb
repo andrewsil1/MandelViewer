@@ -28,7 +28,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -56,7 +56,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -78,7 +78,7 @@
 						<name>y_V_read</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -93,7 +93,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -102,7 +102,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -127,7 +127,7 @@
 						<name>x_V_read</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -142,7 +142,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -151,7 +151,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -165,7 +165,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>4</m_topoIndex>
+				<m_topoIndex>2</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_5">
@@ -176,7 +176,7 @@
 						<name>r_V</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -191,7 +191,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -200,7 +200,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -213,7 +213,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>2</m_topoIndex>
+				<m_topoIndex>3</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_6">
@@ -224,7 +224,7 @@
 						<name>r_V_9</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -239,7 +239,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -248,7 +248,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -261,8 +261,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.89</m_delay>
-				<m_topoIndex>3</m_topoIndex>
+				<m_delay>5.69</m_delay>
+				<m_topoIndex>4</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_7">
@@ -273,7 +273,7 @@
 						<name>p_Result_s</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -288,7 +288,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -312,7 +312,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>38</m_topoIndex>
+				<m_topoIndex>34</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_8">
@@ -323,7 +323,7 @@
 						<name>y2_V</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -338,7 +338,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -347,7 +347,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -363,7 +363,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>46</m_topoIndex>
+				<m_topoIndex>42</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_9">
@@ -374,7 +374,7 @@
 						<name>tmp_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -389,7 +389,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -413,7 +413,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>47</m_topoIndex>
+				<m_topoIndex>43</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_10">
@@ -424,7 +424,7 @@
 						<name>trunc_ln718</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -439,7 +439,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -448,7 +448,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>34</bitwidth>
+					<bitwidth>31</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -461,7 +461,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>39</m_topoIndex>
+				<m_topoIndex>35</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_11">
@@ -472,7 +472,7 @@
 						<name>r_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -487,7 +487,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -509,8 +509,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.49</m_delay>
-				<m_topoIndex>42</m_topoIndex>
+				<m_delay>2.43</m_delay>
+				<m_topoIndex>44</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_12">
@@ -521,7 +521,7 @@
 						<name>p_Result_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -536,7 +536,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -560,7 +560,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>48</m_topoIndex>
+				<m_topoIndex>45</m_topoIndex>
 				<m_clusterGroupNumber>2</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_13">
@@ -571,7 +571,7 @@
 						<name>r</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -586,7 +586,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -609,7 +609,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>49</m_topoIndex>
+				<m_topoIndex>46</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_14">
@@ -620,7 +620,7 @@
 						<name>tmp_5</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -635,7 +635,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -659,7 +659,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>50</m_topoIndex>
+				<m_topoIndex>47</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_15">
@@ -670,7 +670,7 @@
 						<name>and_ln412</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -685,7 +685,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -708,7 +708,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>51</m_topoIndex>
+				<m_topoIndex>48</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_16">
@@ -719,7 +719,7 @@
 						<name>zext_ln415</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -734,7 +734,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -743,7 +743,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -756,7 +756,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>52</m_topoIndex>
+				<m_topoIndex>49</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_17">
@@ -767,7 +767,7 @@
 						<name>y2_V_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -782,7 +782,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -791,7 +791,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -804,8 +804,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.88</m_delay>
-				<m_topoIndex>53</m_topoIndex>
+				<m_delay>2.79</m_delay>
+				<m_topoIndex>50</m_topoIndex>
 				<m_clusterGroupNumber>1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_18">
@@ -816,7 +816,7 @@
 						<name>tmp_6</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -831,7 +831,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -855,7 +855,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>54</m_topoIndex>
+				<m_topoIndex>51</m_topoIndex>
 				<m_clusterGroupNumber>2</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_19">
@@ -866,7 +866,7 @@
 						<name>xor_ln416</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -881,7 +881,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -904,7 +904,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>55</m_topoIndex>
+				<m_topoIndex>52</m_topoIndex>
 				<m_clusterGroupNumber>2</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_20">
@@ -915,7 +915,7 @@
 						<name>carry_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -930,7 +930,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -953,7 +953,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>56</m_topoIndex>
+				<m_topoIndex>53</m_topoIndex>
 				<m_clusterGroupNumber>2</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_21">
@@ -964,7 +964,7 @@
 						<name>p_Result_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -979,7 +979,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1003,7 +1003,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>57</m_topoIndex>
+				<m_topoIndex>54</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_22">
@@ -1014,7 +1014,7 @@
 						<name>p_Result_s_15</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1029,7 +1029,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1038,7 +1038,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>4</bitwidth>
+					<bitwidth>3</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -1054,7 +1054,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>40</m_topoIndex>
+				<m_topoIndex>36</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_23">
@@ -1065,7 +1065,7 @@
 						<name>Range2_all_ones</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1080,7 +1080,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1102,8 +1102,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.44</m_delay>
-				<m_topoIndex>43</m_topoIndex>
+				<m_delay>1.18</m_delay>
+				<m_topoIndex>55</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_24">
@@ -1114,7 +1114,7 @@
 						<name>p_Result_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1129,7 +1129,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1138,7 +1138,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -1154,7 +1154,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>41</m_topoIndex>
+				<m_topoIndex>37</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_25">
@@ -1165,7 +1165,7 @@
 						<name>Range1_all_ones</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1180,7 +1180,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1203,7 +1203,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>1.44</m_delay>
-				<m_topoIndex>44</m_topoIndex>
+				<m_topoIndex>56</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_26">
@@ -1214,7 +1214,7 @@
 						<name>Range1_all_zeros</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1229,7 +1229,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1252,7 +1252,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>1.44</m_delay>
-				<m_topoIndex>45</m_topoIndex>
+				<m_topoIndex>57</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_27">
@@ -1263,7 +1263,7 @@
 						<name>deleted_zeros</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1278,7 +1278,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1302,7 +1302,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>63</m_topoIndex>
+				<m_topoIndex>58</m_topoIndex>
 				<m_clusterGroupNumber>3</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_28">
@@ -1313,7 +1313,7 @@
 						<name>tmp_8</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1328,7 +1328,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1352,7 +1352,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>58</m_topoIndex>
+				<m_topoIndex>59</m_topoIndex>
 				<m_clusterGroupNumber>4</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_29">
@@ -1363,7 +1363,7 @@
 						<name>xor_ln779</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1378,7 +1378,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1401,7 +1401,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>59</m_topoIndex>
+				<m_topoIndex>60</m_topoIndex>
 				<m_clusterGroupNumber>4</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_30">
@@ -1412,7 +1412,7 @@
 						<name>and_ln779</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1427,7 +1427,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1450,7 +1450,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>60</m_topoIndex>
+				<m_topoIndex>61</m_topoIndex>
 				<m_clusterGroupNumber>4</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_31">
@@ -1461,7 +1461,7 @@
 						<name>deleted_ones</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1476,7 +1476,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1500,7 +1500,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>61</m_topoIndex>
+				<m_topoIndex>62</m_topoIndex>
 				<m_clusterGroupNumber>4</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_32">
@@ -1511,7 +1511,7 @@
 						<name>and_ln781</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1526,7 +1526,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1549,7 +1549,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>64</m_topoIndex>
+				<m_topoIndex>63</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_33">
@@ -1560,7 +1560,7 @@
 						<name>xor_ln785</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1575,7 +1575,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1598,7 +1598,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>65</m_topoIndex>
+				<m_topoIndex>64</m_topoIndex>
 				<m_clusterGroupNumber>3</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_34">
@@ -1609,7 +1609,7 @@
 						<name>or_ln785</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1624,7 +1624,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1647,7 +1647,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>66</m_topoIndex>
+				<m_topoIndex>65</m_topoIndex>
 				<m_clusterGroupNumber>3</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_35">
@@ -1658,7 +1658,7 @@
 						<name>xor_ln785_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1673,7 +1673,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1696,7 +1696,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>67</m_topoIndex>
+				<m_topoIndex>66</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_36">
@@ -1707,7 +1707,7 @@
 						<name>overflow</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1722,7 +1722,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1745,7 +1745,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>68</m_topoIndex>
+				<m_topoIndex>67</m_topoIndex>
 				<m_clusterGroupNumber>3</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_37">
@@ -1756,7 +1756,7 @@
 						<name>and_ln786</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1771,7 +1771,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1794,7 +1794,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.99</m_delay>
-				<m_topoIndex>62</m_topoIndex>
+				<m_topoIndex>68</m_topoIndex>
 				<m_clusterGroupNumber>4</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_38">
@@ -1805,7 +1805,7 @@
 						<name>or_ln786</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1820,7 +1820,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1854,7 +1854,7 @@
 						<name>xor_ln786</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1869,7 +1869,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1903,7 +1903,7 @@
 						<name>underflow</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1918,7 +1918,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -1952,7 +1952,7 @@
 						<name>or_ln340</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -1967,7 +1967,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -2001,7 +2001,7 @@
 						<name>or_ln340_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2016,7 +2016,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -2050,7 +2050,7 @@
 						<name>or_ln340_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2065,7 +2065,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -2099,7 +2099,7 @@
 						<name>select_ln340</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2114,7 +2114,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -2123,7 +2123,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2137,7 +2137,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
+				<m_delay>0.93</m_delay>
 				<m_topoIndex>75</m_topoIndex>
 				<m_clusterGroupNumber>7</m_clusterGroupNumber>
 			</item>
@@ -2149,7 +2149,7 @@
 						<name>select_ln388</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>13</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2164,7 +2164,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>13</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -2173,7 +2173,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2199,6 +2199,56 @@
 						<name>p_Val2_6</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
+						<lineNumber>12</lineNumber>
+						<contextFuncName>pretest</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Users\andrewsi\Documents\GitHub\MandelViewer</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>mandelbrotHLS/pretest.cpp</first>
+											<second>pretest</second>
+										</first>
+										<second>12</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>__Val2__</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>36</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>258</item>
+					<item>259</item>
+					<item>260</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.97</m_delay>
+				<m_topoIndex>77</m_topoIndex>
+				<m_clusterGroupNumber>6</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_47">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>47</id>
+						<name>lhs_V</name>
+						<fileName>mandelbrotHLS/pretest.cpp</fileName>
+						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>13</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
@@ -2219,61 +2269,11 @@
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>__Val2__</originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>40</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>258</item>
-					<item>259</item>
-					<item>260</item>
-				</oprand_edges>
-				<opcode>select</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
-				<m_topoIndex>77</m_topoIndex>
-				<m_clusterGroupNumber>6</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_47">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>47</id>
-						<name>lhs_V</name>
-						<fileName>mandelbrotHLS/pretest.cpp</fileName>
-						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>14</lineNumber>
-						<contextFuncName>pretest</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Users\andrewsi\Documents\GitHub\MandelViewer</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>mandelbrotHLS/pretest.cpp</first>
-											<second>pretest</second>
-										</first>
-										<second>14</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
 						<originalName>lhs.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -2297,7 +2297,7 @@
 						<name>ret_V_5</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>14</lineNumber>
+						<lineNumber>13</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2312,7 +2312,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>14</second>
+										<second>13</second>
 									</item>
 								</second>
 							</item>
@@ -2321,7 +2321,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -2334,7 +2334,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.88</m_delay>
+				<m_delay>2.79</m_delay>
 				<m_topoIndex>6</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -2346,7 +2346,7 @@
 						<name>p_Result_4</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>14</lineNumber>
+						<lineNumber>13</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2361,7 +2361,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>14</second>
+										<second>13</second>
 									</item>
 								</second>
 							</item>
@@ -2396,7 +2396,7 @@
 						<name>x_1_V</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>14</lineNumber>
+						<lineNumber>13</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2411,7 +2411,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>14</second>
+										<second>13</second>
 									</item>
 								</second>
 							</item>
@@ -2420,7 +2420,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -2433,7 +2433,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.88</m_delay>
+				<m_delay>2.79</m_delay>
 				<m_topoIndex>8</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -2445,7 +2445,7 @@
 						<name>p_Result_5</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>14</lineNumber>
+						<lineNumber>13</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2460,7 +2460,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>14</second>
+										<second>13</second>
 									</item>
 								</second>
 							</item>
@@ -2495,7 +2495,7 @@
 						<name>xor_ln786_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>14</lineNumber>
+						<lineNumber>13</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2510,7 +2510,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>14</second>
+										<second>13</second>
 									</item>
 								</second>
 							</item>
@@ -2544,7 +2544,7 @@
 						<name>underflow_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>14</lineNumber>
+						<lineNumber>13</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2559,7 +2559,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>14</second>
+										<second>13</second>
 									</item>
 								</second>
 							</item>
@@ -2593,7 +2593,7 @@
 						<name>xor_ln340</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>14</lineNumber>
+						<lineNumber>13</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2608,7 +2608,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>14</second>
+										<second>13</second>
 									</item>
 								</second>
 							</item>
@@ -2642,7 +2642,7 @@
 						<name>xor_ln340_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>14</lineNumber>
+						<lineNumber>13</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2657,7 +2657,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>14</second>
+										<second>13</second>
 									</item>
 								</second>
 							</item>
@@ -2691,7 +2691,7 @@
 						<name>or_ln340_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>14</lineNumber>
+						<lineNumber>13</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2706,7 +2706,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>14</second>
+										<second>13</second>
 									</item>
 								</second>
 							</item>
@@ -2740,7 +2740,7 @@
 						<name>select_ln340_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>14</lineNumber>
+						<lineNumber>13</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2755,7 +2755,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>14</second>
+										<second>13</second>
 									</item>
 								</second>
 							</item>
@@ -2764,7 +2764,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2790,7 +2790,7 @@
 						<name>select_ln388_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>14</lineNumber>
+						<lineNumber>13</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2805,7 +2805,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>14</second>
+										<second>13</second>
 									</item>
 								</second>
 							</item>
@@ -2814,7 +2814,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2828,7 +2828,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
+				<m_delay>0.97</m_delay>
 				<m_topoIndex>16</m_topoIndex>
 				<m_clusterGroupNumber>8</m_clusterGroupNumber>
 			</item>
@@ -2838,6 +2838,56 @@
 						<type>0</type>
 						<id>59</id>
 						<name>p_Val2_13</name>
+						<fileName>mandelbrotHLS/pretest.cpp</fileName>
+						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
+						<lineNumber>13</lineNumber>
+						<contextFuncName>pretest</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Users\andrewsi\Documents\GitHub\MandelViewer</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>mandelbrotHLS/pretest.cpp</first>
+											<second>pretest</second>
+										</first>
+										<second>13</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>__Val2__</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>36</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>292</item>
+					<item>293</item>
+					<item>294</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.97</m_delay>
+				<m_topoIndex>17</m_topoIndex>
+				<m_clusterGroupNumber>9</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_60">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>60</id>
+						<name>r_V_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>14</lineNumber>
@@ -2860,61 +2910,11 @@
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>__Val2__</originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>40</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>292</item>
-					<item>293</item>
-					<item>294</item>
-				</oprand_edges>
-				<opcode>select</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
-				<m_topoIndex>17</m_topoIndex>
-				<m_clusterGroupNumber>9</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_60">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>60</id>
-						<name>r_V_2</name>
-						<fileName>mandelbrotHLS/pretest.cpp</fileName>
-						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
-						<contextFuncName>pretest</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Users\andrewsi\Documents\GitHub\MandelViewer</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>mandelbrotHLS/pretest.cpp</first>
-											<second>pretest</second>
-										</first>
-										<second>15</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
 						<originalName>r.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -2927,7 +2927,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>34</m_topoIndex>
+				<m_topoIndex>38</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_61">
@@ -2938,7 +2938,7 @@
 						<name>r_V_10</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -2953,7 +2953,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -2962,7 +2962,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -2975,8 +2975,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.89</m_delay>
-				<m_topoIndex>35</m_topoIndex>
+				<m_delay>5.69</m_delay>
+				<m_topoIndex>39</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_62">
@@ -2987,7 +2987,7 @@
 						<name>rhs_V</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3002,7 +3002,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3011,7 +3011,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>75</bitwidth>
+					<bitwidth>68</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -3037,7 +3037,7 @@
 						<name>sext_ln728</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3052,7 +3052,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3061,7 +3061,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -3085,7 +3085,7 @@
 						<name>ret_V_6</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3100,7 +3100,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3109,7 +3109,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -3122,7 +3122,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>4.01</m_delay>
+				<m_delay>3.78</m_delay>
 				<m_topoIndex>81</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -3134,7 +3134,7 @@
 						<name>p_Result_6</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3149,7 +3149,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3184,7 +3184,7 @@
 						<name>q_V</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3199,7 +3199,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3208,7 +3208,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -3224,7 +3224,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>87</m_topoIndex>
+				<m_topoIndex>90</m_topoIndex>
 				<m_clusterGroupNumber>10</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_67">
@@ -3235,7 +3235,7 @@
 						<name>tmp_12</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3250,7 +3250,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3274,7 +3274,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>88</m_topoIndex>
+				<m_topoIndex>91</m_topoIndex>
 				<m_clusterGroupNumber>10</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_68">
@@ -3285,7 +3285,7 @@
 						<name>trunc_ln718_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3300,7 +3300,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3309,7 +3309,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>34</bitwidth>
+					<bitwidth>31</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -3333,7 +3333,7 @@
 						<name>r_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3348,7 +3348,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3370,7 +3370,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.49</m_delay>
+				<m_delay>2.43</m_delay>
 				<m_topoIndex>83</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -3382,7 +3382,7 @@
 						<name>p_Result_7</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3397,7 +3397,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3421,7 +3421,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>89</m_topoIndex>
+				<m_topoIndex>92</m_topoIndex>
 				<m_clusterGroupNumber>11</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_71">
@@ -3432,7 +3432,7 @@
 						<name>r_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3447,7 +3447,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3470,7 +3470,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>90</m_topoIndex>
+				<m_topoIndex>93</m_topoIndex>
 				<m_clusterGroupNumber>10</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_72">
@@ -3481,7 +3481,7 @@
 						<name>tmp_14</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3496,7 +3496,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3520,7 +3520,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>91</m_topoIndex>
+				<m_topoIndex>94</m_topoIndex>
 				<m_clusterGroupNumber>10</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_73">
@@ -3531,7 +3531,7 @@
 						<name>and_ln412_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3546,7 +3546,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3569,7 +3569,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>92</m_topoIndex>
+				<m_topoIndex>95</m_topoIndex>
 				<m_clusterGroupNumber>10</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_74">
@@ -3580,7 +3580,7 @@
 						<name>zext_ln415_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3595,7 +3595,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3604,7 +3604,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -3617,7 +3617,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>93</m_topoIndex>
+				<m_topoIndex>96</m_topoIndex>
 				<m_clusterGroupNumber>10</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_75">
@@ -3628,7 +3628,7 @@
 						<name>q_V_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3643,7 +3643,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3652,7 +3652,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -3665,8 +3665,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.88</m_delay>
-				<m_topoIndex>94</m_topoIndex>
+				<m_delay>2.79</m_delay>
+				<m_topoIndex>97</m_topoIndex>
 				<m_clusterGroupNumber>10</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_76">
@@ -3677,7 +3677,7 @@
 						<name>tmp_15</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3692,7 +3692,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3716,7 +3716,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>95</m_topoIndex>
+				<m_topoIndex>98</m_topoIndex>
 				<m_clusterGroupNumber>11</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_77">
@@ -3727,7 +3727,7 @@
 						<name>xor_ln416_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3742,7 +3742,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3765,7 +3765,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>96</m_topoIndex>
+				<m_topoIndex>99</m_topoIndex>
 				<m_clusterGroupNumber>11</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_78">
@@ -3776,7 +3776,7 @@
 						<name>carry_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3791,7 +3791,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3814,7 +3814,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>97</m_topoIndex>
+				<m_topoIndex>100</m_topoIndex>
 				<m_clusterGroupNumber>11</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_79">
@@ -3825,7 +3825,7 @@
 						<name>p_Result_8</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3840,7 +3840,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3864,7 +3864,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>98</m_topoIndex>
+				<m_topoIndex>101</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_80">
@@ -3875,7 +3875,7 @@
 						<name>tmp</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3890,7 +3890,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3899,7 +3899,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>4</bitwidth>
+					<bitwidth>3</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -3926,7 +3926,7 @@
 						<name>Range2_all_ones_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3941,7 +3941,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3963,8 +3963,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.44</m_delay>
-				<m_topoIndex>99</m_topoIndex>
+				<m_delay>1.18</m_delay>
+				<m_topoIndex>85</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_82">
@@ -3975,7 +3975,7 @@
 						<name>tmp_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -3990,7 +3990,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -3999,7 +3999,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -4015,7 +4015,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>85</m_topoIndex>
+				<m_topoIndex>86</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_83">
@@ -4026,7 +4026,7 @@
 						<name>Range1_all_ones_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4041,7 +4041,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4064,7 +4064,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>1.44</m_delay>
-				<m_topoIndex>100</m_topoIndex>
+				<m_topoIndex>87</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_84">
@@ -4075,7 +4075,7 @@
 						<name>Range1_all_zeros_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4090,7 +4090,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4113,7 +4113,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>1.44</m_delay>
-				<m_topoIndex>101</m_topoIndex>
+				<m_topoIndex>88</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_85">
@@ -4124,7 +4124,7 @@
 						<name>deleted_zeros_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4139,7 +4139,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4163,7 +4163,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>108</m_topoIndex>
+				<m_topoIndex>113</m_topoIndex>
 				<m_clusterGroupNumber>12</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_86">
@@ -4174,7 +4174,7 @@
 						<name>tmp_17</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4189,7 +4189,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4224,7 +4224,7 @@
 						<name>xor_ln779_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4239,7 +4239,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4273,7 +4273,7 @@
 						<name>and_ln779_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4288,7 +4288,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4322,7 +4322,7 @@
 						<name>deleted_ones_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4337,7 +4337,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4372,7 +4372,7 @@
 						<name>and_ln781_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4387,7 +4387,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4410,7 +4410,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>109</m_topoIndex>
+				<m_topoIndex>106</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_91">
@@ -4421,7 +4421,7 @@
 						<name>xor_ln785_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4436,7 +4436,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4459,7 +4459,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>110</m_topoIndex>
+				<m_topoIndex>114</m_topoIndex>
 				<m_clusterGroupNumber>12</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_92">
@@ -4470,7 +4470,7 @@
 						<name>or_ln785_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4485,7 +4485,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4508,7 +4508,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>111</m_topoIndex>
+				<m_topoIndex>115</m_topoIndex>
 				<m_clusterGroupNumber>12</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_93">
@@ -4519,7 +4519,7 @@
 						<name>xor_ln785_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4534,7 +4534,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4557,7 +4557,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>112</m_topoIndex>
+				<m_topoIndex>107</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_94">
@@ -4568,7 +4568,7 @@
 						<name>overflow_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4583,7 +4583,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4606,7 +4606,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>113</m_topoIndex>
+				<m_topoIndex>116</m_topoIndex>
 				<m_clusterGroupNumber>12</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_95">
@@ -4617,7 +4617,7 @@
 						<name>and_ln786_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4632,7 +4632,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4655,7 +4655,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.99</m_delay>
-				<m_topoIndex>106</m_topoIndex>
+				<m_topoIndex>108</m_topoIndex>
 				<m_clusterGroupNumber>13</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_96">
@@ -4666,7 +4666,7 @@
 						<name>or_ln786_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4681,7 +4681,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4704,7 +4704,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>114</m_topoIndex>
+				<m_topoIndex>109</m_topoIndex>
 				<m_clusterGroupNumber>14</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_97">
@@ -4715,7 +4715,7 @@
 						<name>xor_ln786_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4730,7 +4730,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4753,7 +4753,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>115</m_topoIndex>
+				<m_topoIndex>110</m_topoIndex>
 				<m_clusterGroupNumber>14</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_98">
@@ -4764,7 +4764,7 @@
 						<name>underflow_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4779,7 +4779,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4802,7 +4802,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.97</m_delay>
-				<m_topoIndex>116</m_topoIndex>
+				<m_topoIndex>111</m_topoIndex>
 				<m_clusterGroupNumber>14</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_99">
@@ -4813,7 +4813,7 @@
 						<name>or_ln340_4</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4828,7 +4828,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4862,7 +4862,7 @@
 						<name>or_ln340_5</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4877,7 +4877,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4911,7 +4911,7 @@
 						<name>or_ln340_6</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4926,7 +4926,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4960,7 +4960,7 @@
 						<name>select_ln340_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -4975,7 +4975,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -4984,7 +4984,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -4998,7 +4998,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
+				<m_delay>0.93</m_delay>
 				<m_topoIndex>120</m_topoIndex>
 				<m_clusterGroupNumber>16</m_clusterGroupNumber>
 			</item>
@@ -5010,7 +5010,7 @@
 						<name>select_ln388_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>15</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5025,7 +5025,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>15</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -5034,7 +5034,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -5060,6 +5060,56 @@
 						<name>p_Val2_12</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
+						<lineNumber>14</lineNumber>
+						<contextFuncName>pretest</contextFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>C:\Users\andrewsi\Documents\GitHub\MandelViewer</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>mandelbrotHLS/pretest.cpp</first>
+											<second>pretest</second>
+										</first>
+										<second>14</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>__Val2__</originalName>
+						<rtlName></rtlName>
+						<coreName></coreName>
+					</Obj>
+					<bitwidth>36</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>3</count>
+					<item_version>0</item_version>
+					<item>399</item>
+					<item>400</item>
+					<item>401</item>
+				</oprand_edges>
+				<opcode>select</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.97</m_delay>
+				<m_topoIndex>122</m_topoIndex>
+				<m_clusterGroupNumber>15</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_105">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>105</id>
+						<name>ret_V_7</name>
+						<fileName>mandelbrotHLS/pretest.cpp</fileName>
+						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
@@ -5080,61 +5130,11 @@
 								</second>
 							</item>
 						</inlineStackInfo>
-						<originalName>__Val2__</originalName>
-						<rtlName></rtlName>
-						<coreName></coreName>
-					</Obj>
-					<bitwidth>40</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>3</count>
-					<item_version>0</item_version>
-					<item>399</item>
-					<item>400</item>
-					<item>401</item>
-				</oprand_edges>
-				<opcode>select</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
-				<m_topoIndex>122</m_topoIndex>
-				<m_clusterGroupNumber>15</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_105">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>105</id>
-						<name>ret_V_7</name>
-						<fileName>mandelbrotHLS/pretest.cpp</fileName>
-						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
-						<contextFuncName>pretest</contextFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Users\andrewsi\Documents\GitHub\MandelViewer</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>mandelbrotHLS/pretest.cpp</first>
-											<second>pretest</second>
-										</first>
-										<second>16</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
 						<originalName>ret.V</originalName>
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -5147,7 +5147,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.88</m_delay>
+				<m_delay>2.79</m_delay>
 				<m_topoIndex>18</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -5159,7 +5159,7 @@
 						<name>p_Result_9</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5174,7 +5174,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5209,7 +5209,7 @@
 						<name>xp1_V</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5224,7 +5224,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5233,7 +5233,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -5246,7 +5246,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.88</m_delay>
+				<m_delay>2.79</m_delay>
 				<m_topoIndex>20</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -5258,7 +5258,7 @@
 						<name>p_Result_10</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5273,7 +5273,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5308,7 +5308,7 @@
 						<name>tmp_20</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5323,7 +5323,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5358,7 +5358,7 @@
 						<name>or_ln785_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5373,7 +5373,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5407,7 +5407,7 @@
 						<name>xor_ln785_4</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5422,7 +5422,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5456,7 +5456,7 @@
 						<name>overflow_2</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5471,7 +5471,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5505,7 +5505,7 @@
 						<name>and_ln786_5</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5520,7 +5520,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5554,7 +5554,7 @@
 						<name>xor_ln786_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5569,7 +5569,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5603,7 +5603,7 @@
 						<name>underflow_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5618,7 +5618,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5652,7 +5652,7 @@
 						<name>or_ln340_7</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5667,7 +5667,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5701,7 +5701,7 @@
 						<name>or_ln340_8</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5716,7 +5716,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5750,7 +5750,7 @@
 						<name>select_ln340_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5765,7 +5765,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5774,7 +5774,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -5788,7 +5788,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
+				<m_delay>0.97</m_delay>
 				<m_topoIndex>31</m_topoIndex>
 				<m_clusterGroupNumber>17</m_clusterGroupNumber>
 			</item>
@@ -5800,7 +5800,7 @@
 						<name>select_ln388_3</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5815,7 +5815,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5824,7 +5824,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -5850,7 +5850,7 @@
 						<name>select_ln340_7</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>16</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5865,7 +5865,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>16</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -5874,7 +5874,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -5888,7 +5888,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.07</m_delay>
+				<m_delay>0.97</m_delay>
 				<m_topoIndex>33</m_topoIndex>
 				<m_clusterGroupNumber>19</m_clusterGroupNumber>
 			</item>
@@ -5900,7 +5900,7 @@
 						<name>lhs_V_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5915,7 +5915,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -5924,7 +5924,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -5948,7 +5948,7 @@
 						<name>rhs_V_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -5963,7 +5963,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -5972,7 +5972,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -5996,7 +5996,7 @@
 						<name>ret_V</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6011,7 +6011,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -6020,7 +6020,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -6033,7 +6033,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.88</m_delay>
+				<m_delay>2.79</m_delay>
 				<m_topoIndex>125</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -6045,7 +6045,7 @@
 						<name>r_V_4</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6060,7 +6060,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -6069,7 +6069,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>81</bitwidth>
+					<bitwidth>73</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -6093,7 +6093,7 @@
 						<name>sext_ln1118</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6108,7 +6108,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -6117,7 +6117,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>81</bitwidth>
+					<bitwidth>73</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -6141,7 +6141,7 @@
 						<name>r_V_5</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6156,7 +6156,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -6165,7 +6165,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>81</bitwidth>
+					<bitwidth>73</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -6178,7 +6178,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.89</m_delay>
+				<m_delay>5.69</m_delay>
 				<m_topoIndex>128</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -6190,7 +6190,7 @@
 						<name>r_V_6</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6205,7 +6205,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -6214,7 +6214,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>73</bitwidth>
+					<bitwidth>66</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -6240,7 +6240,7 @@
 						<name>sext_ln1497</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6255,7 +6255,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -6264,7 +6264,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>81</bitwidth>
+					<bitwidth>73</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -6288,7 +6288,7 @@
 						<name>r_V_7</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6303,7 +6303,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -6312,7 +6312,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -6325,7 +6325,7 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>36</m_topoIndex>
+				<m_topoIndex>40</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_130">
@@ -6336,7 +6336,7 @@
 						<name>r_V_11</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6351,7 +6351,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -6360,7 +6360,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -6373,8 +6373,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.89</m_delay>
-				<m_topoIndex>37</m_topoIndex>
+				<m_delay>5.69</m_delay>
+				<m_topoIndex>41</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_131">
@@ -6385,7 +6385,7 @@
 						<name>ret_V_4</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6400,7 +6400,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -6409,7 +6409,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -6422,8 +6422,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>4.01</m_delay>
-				<m_topoIndex>86</m_topoIndex>
+				<m_delay>3.78</m_delay>
+				<m_topoIndex>89</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_132">
@@ -6434,7 +6434,7 @@
 						<name>icmp_ln1497</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6449,7 +6449,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -6471,7 +6471,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.99</m_delay>
+				<m_delay>2.92</m_delay>
 				<m_topoIndex>131</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -6483,7 +6483,7 @@
 						<name>xor_ln1497</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6498,7 +6498,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -6532,7 +6532,7 @@
 						<name>icmp_ln1497_1</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6547,7 +6547,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -6569,8 +6569,8 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.98</m_delay>
-				<m_topoIndex>107</m_topoIndex>
+				<m_delay>2.91</m_delay>
+				<m_topoIndex>112</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
 			<item class_id_reference="9" object_id="_135">
@@ -6581,7 +6581,7 @@
 						<name>or_ln1497</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6596,7 +6596,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>18</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -6627,10 +6627,10 @@
 					<Obj>
 						<type>0</type>
 						<id>136</id>
-						<name>_ln27</name>
+						<name>_ln26</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
-						<lineNumber>27</lineNumber>
+						<lineNumber>26</lineNumber>
 						<contextFuncName>pretest</contextFuncName>
 						<inlineStackInfo>
 							<count>1</count>
@@ -6645,7 +6645,7 @@
 											<first>mandelbrotHLS/pretest.cpp</first>
 											<second>pretest</second>
 										</first>
-										<second>27</second>
+										<second>26</second>
 									</item>
 								</second>
 							</item>
@@ -6695,7 +6695,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>79</content>
+				<content>71</content>
 			</item>
 			<item class_id_reference="16" object_id="_138">
 				<Value>
@@ -6718,7 +6718,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>35</content>
+				<content>32</content>
 			</item>
 			<item class_id_reference="16" object_id="_139">
 				<Value>
@@ -6741,7 +6741,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>74</content>
+				<content>67</content>
 			</item>
 			<item class_id_reference="16" object_id="_140">
 				<Value>
@@ -6761,7 +6761,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>34</bitwidth>
+					<bitwidth>31</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -6787,7 +6787,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>34</content>
+				<content>31</content>
 			</item>
 			<item class_id_reference="16" object_id="_142">
 				<Value>
@@ -6810,7 +6810,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>39</content>
+				<content>35</content>
 			</item>
 			<item class_id_reference="16" object_id="_143">
 				<Value>
@@ -6856,7 +6856,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>76</content>
+				<content>69</content>
 			</item>
 			<item class_id_reference="16" object_id="_145">
 				<Value>
@@ -6876,10 +6876,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>4</bitwidth>
+					<bitwidth>3</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>15</content>
+				<content>7</content>
 			</item>
 			<item class_id_reference="16" object_id="_146">
 				<Value>
@@ -6902,7 +6902,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>75</content>
+				<content>68</content>
 			</item>
 			<item class_id_reference="16" object_id="_147">
 				<Value>
@@ -6922,10 +6922,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>31</content>
+				<content>15</content>
 			</item>
 			<item class_id_reference="16" object_id="_148">
 				<Value>
@@ -6945,7 +6945,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>5</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -6968,10 +6968,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>549755813887</content>
+				<content>34359738367</content>
 			</item>
 			<item class_id_reference="16" object_id="_150">
 				<Value>
@@ -6991,10 +6991,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>549755813888</content>
+				<content>34359738368</content>
 			</item>
 			<item class_id_reference="16" object_id="_151">
 				<Value>
@@ -7014,10 +7014,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>2190433320960</content>
+				<content>136365211648</content>
 			</item>
 			<item class_id_reference="16" object_id="_152">
 				<Value>
@@ -7040,7 +7040,7 @@
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>40</content>
+				<content>36</content>
 			</item>
 			<item class_id_reference="16" object_id="_153">
 				<Value>
@@ -7060,10 +7060,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>1090921693184</content>
+				<content>67645734912</content>
 			</item>
 			<item class_id_reference="16" object_id="_154">
 				<Value>
@@ -7083,7 +7083,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>35</bitwidth>
+					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -7106,10 +7106,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>41</bitwidth>
+					<bitwidth>37</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>34359738368</content>
+				<content>4294967296</content>
 			</item>
 			<item class_id_reference="16" object_id="_156">
 				<Value>
@@ -7129,10 +7129,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>40</bitwidth>
+					<bitwidth>36</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>34359738368</content>
+				<content>4294967296</content>
 			</item>
 			<item class_id_reference="16" object_id="_157">
 				<Value>
@@ -7152,7 +7152,7 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>33</bitwidth>
+					<bitwidth>30</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -7175,10 +7175,10 @@
 						<rtlName></rtlName>
 						<coreName></coreName>
 					</Obj>
-					<bitwidth>80</bitwidth>
+					<bitwidth>72</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>73786976294838206465</content>
+				<content>1152921504606846977</content>
 			</item>
 		</consts>
 		<blocks class_id="17" tracking_level="0" version="0">
@@ -8334,7 +8334,7 @@
 			<item class_id_reference="20" object_id="_301">
 				<id>325</id>
 				<edge_type>1</edge_type>
-				<source_obj>64</source_obj>
+				<source_obj>61</source_obj>
 				<sink_obj>72</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
@@ -9277,8 +9277,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>19</mMinLatency>
-			<mMaxLatency>19</mMaxLatency>
+			<mMinLatency>11</mMinLatency>
+			<mMaxLatency>11</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -9298,7 +9298,7 @@
 		<item>
 			<first>4</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -9313,916 +9313,916 @@
 			<first>6</first>
 			<second>
 				<first>0</first>
-				<second>5</second>
+				<second>2</second>
 			</second>
 		</item>
 		<item>
 			<first>7</first>
 			<second>
-				<first>5</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>8</first>
 			<second>
-				<first>7</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>9</first>
 			<second>
-				<first>7</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>10</first>
 			<second>
-				<first>5</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>11</first>
 			<second>
-				<first>6</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>12</first>
 			<second>
-				<first>7</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>13</first>
 			<second>
-				<first>7</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>14</first>
 			<second>
-				<first>7</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>15</first>
 			<second>
-				<first>7</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>16</first>
 			<second>
-				<first>7</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>17</first>
 			<second>
-				<first>7</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>18</first>
 			<second>
-				<first>7</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>19</first>
 			<second>
-				<first>7</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>20</first>
 			<second>
-				<first>7</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>21</first>
 			<second>
-				<first>7</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>22</first>
 			<second>
-				<first>5</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>23</first>
 			<second>
-				<first>6</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>24</first>
 			<second>
-				<first>5</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>25</first>
 			<second>
-				<first>6</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>26</first>
 			<second>
-				<first>6</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>27</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>28</first>
 			<second>
-				<first>7</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>29</first>
 			<second>
-				<first>7</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>30</first>
 			<second>
-				<first>7</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>31</first>
 			<second>
-				<first>7</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>32</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>33</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>34</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>35</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>36</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>37</first>
 			<second>
-				<first>7</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>38</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>39</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>40</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>41</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>42</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>43</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>44</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>45</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>46</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>47</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>48</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>49</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>50</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>51</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>52</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>53</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>54</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>55</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>56</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>57</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>58</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>59</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>60</first>
 			<second>
-				<first>3</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>61</first>
 			<second>
-				<first>3</first>
-				<second>5</second>
+				<first>2</first>
+				<second>2</second>
 			</second>
 		</item>
 		<item>
 			<first>62</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>63</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>64</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>65</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>66</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>67</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>68</first>
 			<second>
-				<first>8</first>
+				<first>4</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>69</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>70</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>71</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>72</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>73</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>74</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>75</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>76</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>77</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>78</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>79</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>80</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>81</first>
 			<second>
-				<first>10</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>82</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>83</first>
 			<second>
-				<first>10</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>84</first>
 			<second>
-				<first>10</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>85</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>86</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>87</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>88</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>89</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>90</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>91</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>92</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>93</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>94</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>95</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>96</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>97</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>98</first>
 			<second>
-				<first>11</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>99</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>100</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>101</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>102</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>103</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>104</first>
 			<second>
-				<first>11</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>105</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>106</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>107</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>108</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>109</first>
 			<second>
-				<first>1</first>
+				<first>0</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>110</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>111</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>112</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>113</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>114</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>115</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>116</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>117</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>118</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>119</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>120</first>
 			<second>
-				<first>2</first>
+				<first>1</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>121</first>
 			<second>
-				<first>12</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>122</first>
 			<second>
-				<first>12</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>123</first>
 			<second>
-				<first>12</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>124</first>
 			<second>
-				<first>13</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>125</first>
 			<second>
-				<first>13</first>
+				<first>8</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>126</first>
 			<second>
-				<first>13</first>
-				<second>5</second>
+				<first>8</first>
+				<second>2</second>
 			</second>
 		</item>
 		<item>
 			<first>127</first>
 			<second>
-				<first>19</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>128</first>
 			<second>
-				<first>19</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>129</first>
 			<second>
-				<first>3</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>130</first>
 			<second>
-				<first>3</first>
-				<second>5</second>
+				<first>2</first>
+				<second>2</second>
 			</second>
 		</item>
 		<item>
 			<first>131</first>
 			<second>
-				<first>9</first>
+				<first>5</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>132</first>
 			<second>
-				<first>19</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>133</first>
 			<second>
-				<first>19</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>134</first>
 			<second>
-				<first>10</first>
+				<first>6</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>135</first>
 			<second>
-				<first>19</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>136</first>
 			<second>
-				<first>19</first>
+				<first>11</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -10234,7 +10234,7 @@
 			<first>137</first>
 			<second class_id="31" tracking_level="0" version="0">
 				<first>0</first>
-				<second>19</second>
+				<second>11</second>
 			</second>
 		</item>
 	</bblk_ent_exit>

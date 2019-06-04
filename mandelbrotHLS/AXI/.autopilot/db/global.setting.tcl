@@ -1,6 +1,6 @@
 
 set TopModule "calc"
-set ClockPeriod 6
+set ClockPeriod 8
 set ClockList ap_clk
 set HasVivadoClockPeriod 0
 set CombLogicFlag 0
@@ -40,7 +40,7 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7a100t:-csg324:-1
-set SourceFiles {sc {} c {../pretest.cpp ../mandel.cpp}}
+set SourceFiles {sc {} c {../mandel.cpp ../pretest.cpp}}
 set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/AXI/AXI.directive
 set TBFiles {verilog ../mandel_maintb.cpp bc ../mandel_maintb.cpp vhdl ../mandel_maintb.cpp sc ../mandel_maintb.cpp cas ../mandel_maintb.cpp c {}}

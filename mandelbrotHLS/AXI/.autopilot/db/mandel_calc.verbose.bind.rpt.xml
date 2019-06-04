@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'mandel_calc'" level="0">
-<item name = "Date">Fri May 31 11:24:19 2019
+<item name = "Date">Tue Jun  4 11:19:42 2019
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">mandelbrotHLS</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">6.00, 5.097, 0.75</column>
+<column name="ap_clk">8.00, 6.427, 1.50</column>
 </table>
 </item>
 </section>
@@ -24,19 +24,19 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">22, 1376278, 22, 1376278, none</column>
+<column name="">13, 26026, 13, 26026, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_pretest_fu_187">pretest, 19, 19, 19, 19, none</column>
+<column name="grp_pretest_fu_185">pretest, 11, 11, 11, 11, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- mandel_calc_loop">0, 1376255, 21, -, -, 0 ~ 65535, no</column>
+<column name="- mandel_calc_loop">0, 26012, 13, -, -, 0 ~ 2000, no</column>
 </table>
 </item>
 </section>

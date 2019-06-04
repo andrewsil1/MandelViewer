@@ -33,9 +33,9 @@ module calc_in_parms_s_axi
     input  wire                          ap_done,
     input  wire                          ap_ready,
     input  wire                          ap_idle,
-    output wire [39:0]                   X0_V,
-    output wire [39:0]                   Y0_V,
-    output wire [39:0]                   X1_V,
+    output wire [35:0]                   X0_V,
+    output wire [35:0]                   Y0_V,
+    output wire [35:0]                   X1_V,
     output wire [11:0]                   width_V,
     output wire [15:0]                   maxIter
 );
@@ -61,19 +61,19 @@ module calc_in_parms_s_axi
 // 0x10 : Data signal of X0_V
 //        bit 31~0 - X0_V[31:0] (Read/Write)
 // 0x14 : Data signal of X0_V
-//        bit 7~0 - X0_V[39:32] (Read/Write)
+//        bit 3~0 - X0_V[35:32] (Read/Write)
 //        others  - reserved
 // 0x18 : reserved
 // 0x1c : Data signal of Y0_V
 //        bit 31~0 - Y0_V[31:0] (Read/Write)
 // 0x20 : Data signal of Y0_V
-//        bit 7~0 - Y0_V[39:32] (Read/Write)
+//        bit 3~0 - Y0_V[35:32] (Read/Write)
 //        others  - reserved
 // 0x24 : reserved
 // 0x28 : Data signal of X1_V
 //        bit 31~0 - X1_V[31:0] (Read/Write)
 // 0x2c : Data signal of X1_V
-//        bit 7~0 - X1_V[39:32] (Read/Write)
+//        bit 3~0 - X1_V[35:32] (Read/Write)
 //        others  - reserved
 // 0x30 : reserved
 // 0x34 : Data signal of width_V
@@ -135,9 +135,9 @@ localparam
     reg                           int_gie = 1'b0;
     reg  [1:0]                    int_ier = 2'b0;
     reg  [1:0]                    int_isr = 2'b0;
-    reg  [39:0]                   int_X0_V = 'b0;
-    reg  [39:0]                   int_Y0_V = 'b0;
-    reg  [39:0]                   int_X1_V = 'b0;
+    reg  [35:0]                   int_X0_V = 'b0;
+    reg  [35:0]                   int_Y0_V = 'b0;
+    reg  [35:0]                   int_X1_V = 'b0;
     reg  [11:0]                   int_width_V = 'b0;
     reg  [15:0]                   int_maxIter = 'b0;
 
@@ -251,19 +251,19 @@ always @(posedge ACLK) begin
                     rdata <= int_X0_V[31:0];
                 end
                 ADDR_X0_V_DATA_1: begin
-                    rdata <= int_X0_V[39:32];
+                    rdata <= int_X0_V[35:32];
                 end
                 ADDR_Y0_V_DATA_0: begin
                     rdata <= int_Y0_V[31:0];
                 end
                 ADDR_Y0_V_DATA_1: begin
-                    rdata <= int_Y0_V[39:32];
+                    rdata <= int_Y0_V[35:32];
                 end
                 ADDR_X1_V_DATA_0: begin
                     rdata <= int_X1_V[31:0];
                 end
                 ADDR_X1_V_DATA_1: begin
-                    rdata <= int_X1_V[39:32];
+                    rdata <= int_X1_V[35:32];
                 end
                 ADDR_WIDTH_V_DATA_0: begin
                     rdata <= int_width_V[11:0];
@@ -391,13 +391,13 @@ always @(posedge ACLK) begin
     end
 end
 
-// int_X0_V[39:32]
+// int_X0_V[35:32]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_X0_V[39:32] <= 0;
+        int_X0_V[35:32] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_X0_V_DATA_1)
-            int_X0_V[39:32] <= (WDATA[31:0] & wmask) | (int_X0_V[39:32] & ~wmask);
+            int_X0_V[35:32] <= (WDATA[31:0] & wmask) | (int_X0_V[35:32] & ~wmask);
     end
 end
 
@@ -411,13 +411,13 @@ always @(posedge ACLK) begin
     end
 end
 
-// int_Y0_V[39:32]
+// int_Y0_V[35:32]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_Y0_V[39:32] <= 0;
+        int_Y0_V[35:32] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_Y0_V_DATA_1)
-            int_Y0_V[39:32] <= (WDATA[31:0] & wmask) | (int_Y0_V[39:32] & ~wmask);
+            int_Y0_V[35:32] <= (WDATA[31:0] & wmask) | (int_Y0_V[35:32] & ~wmask);
     end
 end
 
@@ -431,13 +431,13 @@ always @(posedge ACLK) begin
     end
 end
 
-// int_X1_V[39:32]
+// int_X1_V[35:32]
 always @(posedge ACLK) begin
     if (ARESET)
-        int_X1_V[39:32] <= 0;
+        int_X1_V[35:32] <= 0;
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_X1_V_DATA_1)
-            int_X1_V[39:32] <= (WDATA[31:0] & wmask) | (int_X1_V[39:32] & ~wmask);
+            int_X1_V[35:32] <= (WDATA[31:0] & wmask) | (int_X1_V[35:32] & ~wmask);
     end
 end
 

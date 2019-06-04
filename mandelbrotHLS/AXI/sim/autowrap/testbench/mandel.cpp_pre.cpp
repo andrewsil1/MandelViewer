@@ -100438,7 +100438,7 @@ void FindStereoCorrespondenceBM(
 # 11 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.h"
 using namespace hls;
 
-typedef ap_fixed<40,5,AP_RND_CONV,AP_SAT> real;
+typedef ap_fixed<36,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
@@ -100449,7 +100449,7 @@ void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf);
 # 11 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.h"
 using namespace hls;
 
-typedef ap_fixed<40,5,AP_RND_CONV,AP_SAT> real;
+typedef ap_fixed<36,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
@@ -100464,7 +100464,7 @@ bool pretest(real x, real y);
 # 6 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 2
 
 using namespace std;
-
+# 19 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
 pixval mandel_calc(real x_in, real y_in, pixval maxIter) {
 
     real x = 0.0;
@@ -100514,9 +100514,6 @@ void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf) {
 
 
 
-
-
-
      delta = (X1 - X0) / width;
 
          cout << "Delta:" << std::setprecision(16) << delta << endl;
@@ -100525,78 +100522,73 @@ void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf) {
         height = width * 3 / 4;
         index = 0;
      y = Y0;
-     
-# 69 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
-    (void) ((!!(
-# 69 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
-    height <= 1920 * 3 / 4
-# 69 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
-    )) || (_assert(
-# 69 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
-    "height <= MAXWIDTH * 3 / 4"
-# 69 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
-    ,"C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp",69),0))
-# 69 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
-                                       ;
-  y_for:for (res line = 0; line < height; line++) {
-            
-# 71 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
-           (void) ((!!(
-# 71 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
-           width % 8 == 0
-# 71 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
-           )) || (_assert(
-# 71 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
-           "width % 8 == 0"
-# 71 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
-           ,"C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp",71),0))
-# 71 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
-                                  ;
-            
-# 72 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
-           (void) ((!!(
-# 72 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
-           width <= 1920
-# 72 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
-           )) || (_assert(
-# 72 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
-           "width <= MAXWIDTH"
-# 72 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
-           ,"C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp",72),0))
-# 72 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
-                                     ;
-      x_for:for (res pix_x = 0; pix_x < width; pix_x++) {
 
 
+
+y_for: for (res line = 0; line < height; line++) {
+
+                
+# 81 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
+               (void) ((!!(
+# 81 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
+               height <= 1920 * 3 / 4
+# 81 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
+               )) || (_assert(
+# 81 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
+               "height <= MAXWIDTH * 3 / 4"
+# 81 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
+               ,"C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp",81),0))
+# 81 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
+                                                  ;
+                
+# 82 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
+               (void) ((!!(
+# 82 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
+               width % 8 == 0
+# 82 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
+               )) || (_assert(
+# 82 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
+               "width % 8 == 0"
+# 82 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
+               ,"C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp",82),0))
+# 82 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
+                                      ;
+                
+# 83 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
+               (void) ((!!(
+# 83 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
+               width <= 1920
+# 83 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
+               )) || (_assert(
+# 83 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
+               "width <= MAXWIDTH"
+# 83 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
+               ,"C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp",83),0))
+# 83 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
+                                         ;
+
+x_for: for (res pix_x = 0; pix_x < width; pix_x++) {
 
                 x = X0 + (pix_x * delta);
 
+
+
                 mem[pix_x] = mandel_calc(x,y,maxIter);
+
             }
 
-        
-# 82 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
-       (void) ((!!(
-# 82 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
-       width <= 1920
-# 82 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
-       )) || (_assert(
-# 82 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
-       "width <= MAXWIDTH"
-# 82 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp" 3
-       ,"C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp",82),0))
-# 82 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel.cpp"
-                                 ;
 
-        burst_out:for (int i = 0; i < width; i++)
-        {
+burst_out: for (int i = 0; i < width; i++)
+            {
 #pragma HLS PIPELINE
-            buf[index++] = mem[i];
-        }
+                buf[index++] = mem[i];
 
 
-        y -= delta;
- }
+            }
+
+
+            y -= delta;
+     }
 
 
         cout << "Bottom right X:" << std::setprecision(14) << x << endl;

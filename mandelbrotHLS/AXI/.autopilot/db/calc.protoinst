@@ -13,7 +13,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_449/grp_mandel_calc_fu_449_activity": {
+				"grp_mandel_calc_fu_453/grp_mandel_calc_fu_453_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -23,7 +23,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_449/grp_pretest_fu_187/grp_pretest_fu_187_activity": {
+				"grp_mandel_calc_fu_453/grp_pretest_fu_185/grp_pretest_fu_185_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -33,7 +33,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_457/grp_mandel_calc_fu_457_activity": {
+				"grp_mandel_calc_fu_461/grp_mandel_calc_fu_461_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -43,7 +43,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_457/grp_pretest_fu_187/grp_pretest_fu_187_activity": {
+				"grp_mandel_calc_fu_461/grp_pretest_fu_185/grp_pretest_fu_185_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -53,7 +53,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_465/grp_mandel_calc_fu_465_activity": {
+				"grp_mandel_calc_fu_469/grp_mandel_calc_fu_469_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -63,7 +63,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_465/grp_pretest_fu_187/grp_pretest_fu_187_activity": {
+				"grp_mandel_calc_fu_469/grp_pretest_fu_185/grp_pretest_fu_185_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -73,7 +73,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_473/grp_mandel_calc_fu_473_activity": {
+				"grp_mandel_calc_fu_477/grp_mandel_calc_fu_477_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -83,7 +83,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_473/grp_pretest_fu_187/grp_pretest_fu_187_activity": {
+				"grp_mandel_calc_fu_477/grp_pretest_fu_185/grp_pretest_fu_185_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -93,7 +93,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_481/grp_mandel_calc_fu_481_activity": {
+				"grp_mandel_calc_fu_485/grp_mandel_calc_fu_485_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -103,7 +103,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_481/grp_pretest_fu_187/grp_pretest_fu_187_activity": {
+				"grp_mandel_calc_fu_485/grp_pretest_fu_185/grp_pretest_fu_185_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -113,7 +113,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_489/grp_mandel_calc_fu_489_activity": {
+				"grp_mandel_calc_fu_493/grp_mandel_calc_fu_493_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -123,7 +123,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_489/grp_pretest_fu_187/grp_pretest_fu_187_activity": {
+				"grp_mandel_calc_fu_493/grp_pretest_fu_185/grp_pretest_fu_185_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -133,7 +133,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_497/grp_mandel_calc_fu_497_activity": {
+				"grp_mandel_calc_fu_501/grp_mandel_calc_fu_501_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -143,7 +143,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_497/grp_pretest_fu_187/grp_pretest_fu_187_activity": {
+				"grp_mandel_calc_fu_501/grp_pretest_fu_185/grp_pretest_fu_185_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -153,7 +153,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_505/grp_mandel_calc_fu_505_activity": {
+				"grp_mandel_calc_fu_509/grp_mandel_calc_fu_509_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
@@ -163,7 +163,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"grp_mandel_calc_fu_505/grp_pretest_fu_187/grp_pretest_fu_187_activity": {
+				"grp_mandel_calc_fu_509/grp_pretest_fu_185/grp_pretest_fu_185_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},
