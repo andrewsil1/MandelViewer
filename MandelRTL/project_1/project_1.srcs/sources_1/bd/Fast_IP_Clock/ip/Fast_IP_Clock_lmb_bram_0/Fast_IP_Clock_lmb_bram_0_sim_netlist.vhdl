@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri May 31 11:56:20 2019
+-- Date        : Tue Jun  4 12:42:26 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_lmb_bram_0/Fast_IP_Clock_lmb_bram_0_sim_netlist.vhdl
@@ -18631,7 +18631,7 @@ entity Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3 is
   attribute C_MUX_PIPELINE_STAGES : integer;
   attribute C_MUX_PIPELINE_STAGES of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3 : entity is 0;
   attribute C_PRIM_TYPE : integer;
-  attribute C_PRIM_TYPE of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3 : entity is 1;
+  attribute C_PRIM_TYPE of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3 : entity is 3;
   attribute C_READ_DEPTH_A : integer;
   attribute C_READ_DEPTH_A of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3 : entity is 65536;
   attribute C_READ_DEPTH_B : integer;
@@ -18983,7 +18983,7 @@ architecture STRUCTURE of Fast_IP_Clock_lmb_bram_0 is
   attribute C_MUX_PIPELINE_STAGES : integer;
   attribute C_MUX_PIPELINE_STAGES of U0 : label is 0;
   attribute C_PRIM_TYPE : integer;
-  attribute C_PRIM_TYPE of U0 : label is 1;
+  attribute C_PRIM_TYPE of U0 : label is 3;
   attribute C_READ_DEPTH_A : integer;
   attribute C_READ_DEPTH_A of U0 : label is 65536;
   attribute C_READ_DEPTH_B : integer;

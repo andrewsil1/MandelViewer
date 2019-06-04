@@ -1458,11 +1458,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 31 18:48:48 UTC 2019</spirit:value>
+            <spirit:value>Fri May 31 22:04:08 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3b4b46a0</spirit:value>
+            <spirit:value>9:4816ca17</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1473,7 +1473,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3b4b46a0</spirit:value>
+            <spirit:value>9:4816ca17</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1489,11 +1489,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 31 18:48:48 UTC 2019</spirit:value>
+            <spirit:value>Tue Jun 04 19:39:40 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3b4b46a0</spirit:value>
+            <spirit:value>9:4816ca17</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1508,11 +1508,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 31 18:48:48 UTC 2019</spirit:value>
+            <spirit:value>Fri May 31 22:04:08 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a3371168</spirit:value>
+            <spirit:value>9:6efbbfb0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1528,11 +1528,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 31 18:48:48 UTC 2019</spirit:value>
+            <spirit:value>Tue Jun 04 19:39:40 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a3371168</spirit:value>
+            <spirit:value>9:6efbbfb0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1546,11 +1546,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 31 18:56:21 UTC 2019</spirit:value>
+            <spirit:value>Tue Jun 04 19:42:26 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3b4b46a0</spirit:value>
+            <spirit:value>9:4816ca17</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3110,7 +3110,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_PRIM_TYPE</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PRIM_TYPE">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PRIM_TYPE">3</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_LOAD_INIT_FILE</spirit:name>
@@ -3642,7 +3642,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PRIM_type_to_Implement">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PRIM_type_to_Implement">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -3814,7 +3814,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Primitive</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Primitive" spirit:choiceRef="choice_list_302d3091" spirit:order="21">8kx2</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Primitive" spirit:choiceRef="choice_list_302d3091" spirit:order="21">2kx9</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>

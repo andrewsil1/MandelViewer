@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri May 31 11:56:20 2019
+// Date        : Tue Jun  4 12:42:26 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_lmb_bram_0/Fast_IP_Clock_lmb_bram_0_sim_netlist.v
@@ -129,7 +129,7 @@ module Fast_IP_Clock_lmb_bram_0
   (* C_LOAD_INIT_FILE = "0" *) 
   (* C_MEM_TYPE = "2" *) 
   (* C_MUX_PIPELINE_STAGES = "0" *) 
-  (* C_PRIM_TYPE = "1" *) 
+  (* C_PRIM_TYPE = "3" *) 
   (* C_READ_DEPTH_A = "65536" *) 
   (* C_READ_DEPTH_B = "65536" *) 
   (* C_READ_LATENCY_A = "1" *) 
@@ -18906,7 +18906,7 @@ endmodule
 (* C_HAS_RSTB = "1" *) (* C_HAS_SOFTECC_INPUT_REGS_A = "0" *) (* C_HAS_SOFTECC_OUTPUT_REGS_B = "0" *) 
 (* C_INITA_VAL = "0" *) (* C_INITB_VAL = "0" *) (* C_INIT_FILE = "Fast_IP_Clock_lmb_bram_0.mem" *) 
 (* C_INIT_FILE_NAME = "no_coe_file_loaded" *) (* C_INTERFACE_TYPE = "0" *) (* C_LOAD_INIT_FILE = "0" *) 
-(* C_MEM_TYPE = "2" *) (* C_MUX_PIPELINE_STAGES = "0" *) (* C_PRIM_TYPE = "1" *) 
+(* C_MEM_TYPE = "2" *) (* C_MUX_PIPELINE_STAGES = "0" *) (* C_PRIM_TYPE = "3" *) 
 (* C_READ_DEPTH_A = "65536" *) (* C_READ_DEPTH_B = "65536" *) (* C_READ_LATENCY_A = "1" *) 
 (* C_READ_LATENCY_B = "1" *) (* C_READ_WIDTH_A = "32" *) (* C_READ_WIDTH_B = "32" *) 
 (* C_RSTRAM_A = "0" *) (* C_RSTRAM_B = "0" *) (* C_RST_PRIORITY_A = "CE" *) 
