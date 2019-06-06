@@ -4,16 +4,16 @@ Implementation tool: Xilinx Vivado v.2019.1
 Project:             mandelbrotHLS
 Solution:            AXI
 Device target:       xc7a100t-csg324-1
-Report date:         Tue Jun 04 11:38:42 -0700 2019
+Report date:         Wed Jun 05 13:55:42 -0700 2019
 
 #=== Post-Synthesis Resource usage ===
 SLICE:            0
-LUT:          20011
-FF:           11669
-DSP:            144
+LUT:          20242
+FF:           12276
+DSP:            176
 BRAM:             9
-SRL:             41
+SRL:            585
 #=== Final timing ===
-CP required:    8.000
-CP achieved post-synthesis:    8.830
+CP required:    6.000
+CP achieved post-synthesis:    7.358
 Timing not met

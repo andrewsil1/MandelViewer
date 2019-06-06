@@ -24,19 +24,19 @@
 // 0x10 : Data signal of X0_V
 //        bit 31~0 - X0_V[31:0] (Read/Write)
 // 0x14 : Data signal of X0_V
-//        bit 3~0 - X0_V[35:32] (Read/Write)
+//        bit 7~0 - X0_V[39:32] (Read/Write)
 //        others  - reserved
 // 0x18 : reserved
 // 0x1c : Data signal of Y0_V
 //        bit 31~0 - Y0_V[31:0] (Read/Write)
 // 0x20 : Data signal of Y0_V
-//        bit 3~0 - Y0_V[35:32] (Read/Write)
+//        bit 7~0 - Y0_V[39:32] (Read/Write)
 //        others  - reserved
 // 0x24 : reserved
 // 0x28 : Data signal of X1_V
 //        bit 31~0 - X1_V[31:0] (Read/Write)
 // 0x2c : Data signal of X1_V
-//        bit 3~0 - X1_V[35:32] (Read/Write)
+//        bit 7~0 - X1_V[39:32] (Read/Write)
 //        others  - reserved
 // 0x30 : reserved
 // 0x34 : Data signal of width_V
@@ -54,11 +54,11 @@
 #define XCALC_IN_PARMS_ADDR_IER          0x08
 #define XCALC_IN_PARMS_ADDR_ISR          0x0c
 #define XCALC_IN_PARMS_ADDR_X0_V_DATA    0x10
-#define XCALC_IN_PARMS_BITS_X0_V_DATA    36
+#define XCALC_IN_PARMS_BITS_X0_V_DATA    40
 #define XCALC_IN_PARMS_ADDR_Y0_V_DATA    0x1c
-#define XCALC_IN_PARMS_BITS_Y0_V_DATA    36
+#define XCALC_IN_PARMS_BITS_Y0_V_DATA    40
 #define XCALC_IN_PARMS_ADDR_X1_V_DATA    0x28
-#define XCALC_IN_PARMS_BITS_X1_V_DATA    36
+#define XCALC_IN_PARMS_BITS_X1_V_DATA    40
 #define XCALC_IN_PARMS_ADDR_WIDTH_V_DATA 0x34
 #define XCALC_IN_PARMS_BITS_WIDTH_V_DATA 12
 #define XCALC_IN_PARMS_ADDR_MAXITER_DATA 0x3c

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_ext_xsim.xml'  majorVersion='1' minorVersion='0' timeStamp='Tue Jun  4 11:27:16 2019'>
+<webTalkData  fileName='usage_statistics_ext_xsim.xml'  majorVersion='1' minorVersion='0' timeStamp='Wed Jun  5 12:50:52 2019'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="2552052" description="" />
-  <keyValuePair key="date_generated" value="Tue Jun  4 11:27:15 2019" description="" />
+  <keyValuePair key="date_generated" value="Wed Jun  5 12:50:50 2019" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="XSIM v2019.1 (64-bit)" description="" />
-  <keyValuePair key="project_id" value="43ed6089-fa66-407a-a165-5fbd0f127082" description="" />
+  <keyValuePair key="project_id" value="83580208-ada2-45d8-a7f8-4120d65498c7" description="" />
   <keyValuePair key="project_iteration" value="2" description="" />
   <keyValuePair key="random_id" value="1f7fa499-e22c-49ab-b447-256ece1eb46f" description="" />
   <keyValuePair key="registration_id" value="1f7fa499-e22c-49ab-b447-256ece1eb46f" description="" />
@@ -35,9 +35,9 @@
   </section>
   <section name="usage" level="2" order="2" description="">
    <keyValuePair key="iteration" value="0" description="" />
-   <keyValuePair key="runtime" value="4089548 ns" description="" />
-   <keyValuePair key="simulation_memory" value="20664_KB" description="" />
-   <keyValuePair key="simulation_time" value="51.98_sec" description="" />
+   <keyValuePair key="runtime" value="3204708 ns" description="" />
+   <keyValuePair key="simulation_memory" value="19208_KB" description="" />
+   <keyValuePair key="simulation_time" value="46.47_sec" description="" />
    <keyValuePair key="trace_waveform" value="true" description="" />
   </section>
  </section>

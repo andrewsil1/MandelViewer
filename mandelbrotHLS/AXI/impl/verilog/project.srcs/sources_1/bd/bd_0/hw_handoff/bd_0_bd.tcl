@@ -159,7 +159,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {32} \
    CONFIG.DATA_WIDTH {32} \
-   CONFIG.FREQ_HZ {125000000.0} \
+   CONFIG.FREQ_HZ {166000000.0} \
    CONFIG.HAS_BURST {0} \
    CONFIG.NUM_READ_OUTSTANDING {16} \
    CONFIG.NUM_WRITE_OUTSTANDING {16} \
@@ -173,7 +173,7 @@ proc create_root_design { parentCell } {
    CONFIG.AWUSER_WIDTH {0} \
    CONFIG.BUSER_WIDTH {0} \
    CONFIG.DATA_WIDTH {32} \
-   CONFIG.FREQ_HZ {125000000.0} \
+   CONFIG.FREQ_HZ {166000000.0} \
    CONFIG.HAS_BRESP {1} \
    CONFIG.HAS_BURST {0} \
    CONFIG.HAS_CACHE {0} \
@@ -202,7 +202,7 @@ proc create_root_design { parentCell } {
   # Create ports
   set ap_clk [ create_bd_port -dir I -type clk ap_clk ]
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {125000000.0} \
+   CONFIG.FREQ_HZ {166000000.0} \
  ] $ap_clk
   set ap_rst_n [ create_bd_port -dir I -type rst ap_rst_n ]
   set interrupt [ create_bd_port -dir O -type intr interrupt ]

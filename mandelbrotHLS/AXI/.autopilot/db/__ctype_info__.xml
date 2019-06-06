@@ -2,31 +2,31 @@
 <RtlPorts>
 <name>X0_V</name>
 <CType>
-<TypeName>ap_fixed 36 4 4 0 0</TypeName>
-<TypeWidth>36</TypeWidth>
-<PhysicalWidth>36</PhysicalWidth>
+<TypeName>ap_fixed 40 4 4 0 0</TypeName>
+<TypeWidth>40</TypeWidth>
+<PhysicalWidth>40</PhysicalWidth>
 </CType>
-<CFractionWidth>32</CFractionWidth>
+<CFractionWidth>36</CFractionWidth>
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
 <name>Y0_V</name>
 <CType>
-<TypeName>ap_fixed 36 4 4 0 0</TypeName>
-<TypeWidth>36</TypeWidth>
-<PhysicalWidth>36</PhysicalWidth>
+<TypeName>ap_fixed 40 4 4 0 0</TypeName>
+<TypeWidth>40</TypeWidth>
+<PhysicalWidth>40</PhysicalWidth>
 </CType>
-<CFractionWidth>32</CFractionWidth>
+<CFractionWidth>36</CFractionWidth>
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
 <name>X1_V</name>
 <CType>
-<TypeName>ap_fixed 36 4 4 0 0</TypeName>
-<TypeWidth>36</TypeWidth>
-<PhysicalWidth>36</PhysicalWidth>
+<TypeName>ap_fixed 40 4 4 0 0</TypeName>
+<TypeWidth>40</TypeWidth>
+<PhysicalWidth>40</PhysicalWidth>
 </CType>
-<CFractionWidth>32</CFractionWidth>
+<CFractionWidth>36</CFractionWidth>
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>

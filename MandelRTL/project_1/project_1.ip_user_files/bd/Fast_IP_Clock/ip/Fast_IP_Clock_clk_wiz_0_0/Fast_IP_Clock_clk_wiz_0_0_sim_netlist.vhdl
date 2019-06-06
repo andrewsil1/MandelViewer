@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri May 31 16:40:24 2019
+-- Date        : Wed Jun  5 14:41:28 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top Fast_IP_Clock_clk_wiz_0_0 -prefix
---               Fast_IP_Clock_clk_wiz_0_0_ Fast_IP_Clock_clk_wiz_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_clk_wiz_0_0/Fast_IP_Clock_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : Fast_IP_Clock_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,6 +22,8 @@ entity Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz is
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz : entity is "Fast_IP_Clock_clk_wiz_0_0_clk_wiz";
 end Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz;
 
 architecture STRUCTURE of Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz is
@@ -221,20 +223,20 @@ clkout3_buf_en: unisim.vcomponents.BUFH
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT_F => 8.750000,
+      CLKFBOUT_MULT_F => 11.250000,
       CLKFBOUT_PHASE => 0.000000,
       CLKFBOUT_USE_FINE_PS => false,
       CLKIN1_PERIOD => 10.000000,
       CLKIN2_PERIOD => 0.000000,
-      CLKOUT0_DIVIDE_F => 8.750000,
+      CLKOUT0_DIVIDE_F => 11.250000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
       CLKOUT0_USE_FINE_PS => false,
-      CLKOUT1_DIVIDE => 11,
+      CLKOUT1_DIVIDE => 14,
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
       CLKOUT1_USE_FINE_PS => false,
-      CLKOUT2_DIVIDE => 8,
+      CLKOUT2_DIVIDE => 9,
       CLKOUT2_DUTY_CYCLE => 0.500000,
       CLKOUT2_PHASE => 0.000000,
       CLKOUT2_USE_FINE_PS => false,

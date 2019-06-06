@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'pretest'" level="0">
-<item name = "Date">Tue Jun  4 11:19:26 2019
+<item name = "Date">Wed Jun  5 13:49:38 2019
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">mandelbrotHLS</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">8.00, 6.204, 1.50</column>
+<column name="ap_clk">6.00, 5.206, 0.75</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">11, 11, 11, 11, none</column>
+<column name="">19, 19, 19, 19, none</column>
 </table>
 </item>
 <item name = "Detail">

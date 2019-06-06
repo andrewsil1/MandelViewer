@@ -106,17 +106,17 @@ class INTER_TCL_FILE {
 };
 
 extern void calc (
-ap_fixed<36, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X0,
-ap_fixed<36, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> Y0,
-ap_fixed<36, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X1,
+ap_fixed<40, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X0,
+ap_fixed<40, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> Y0,
+ap_fixed<40, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X1,
 ap_uint<12> width,
 unsigned short maxIter,
 unsigned short* buf);
 
 void AESL_WRAP_calc (
-ap_fixed<36, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X0,
-ap_fixed<36, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> Y0,
-ap_fixed<36, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X1,
+ap_fixed<40, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X0,
+ap_fixed<40, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> Y0,
+ap_fixed<40, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X1,
 ap_uint<12> width,
 unsigned short maxIter,
 unsigned short* buf)
@@ -312,13 +312,13 @@ unsigned short* buf)
 		sprintf(tvin_X0_V, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_X0_V, tvin_X0_V);
 
-		sc_bv<36> X0_V_tvin_wrapc_buffer;
+		sc_bv<40> X0_V_tvin_wrapc_buffer;
 
 		// RTL Name: X0_V
 		{
-			// bitslice(35, 0)
+			// bitslice(39, 0)
 			{
-				// celement: X0.V(35, 0)
+				// celement: X0.V(39, 0)
 				{
 					// carray: (0) => (0) @ (0)
 					{
@@ -330,9 +330,9 @@ unsigned short* buf)
 						// input_type_conversion : (X0).range().to_string(SC_BIN).c_str()
 						if (&(X0) != NULL) // check the null address if the c port is array or others
 						{
-							sc_lv<36> X0_V_tmp_mem;
+							sc_lv<40> X0_V_tmp_mem;
 							X0_V_tmp_mem = (X0).range().to_string(SC_BIN).c_str();
-							X0_V_tvin_wrapc_buffer.range(35, 0) = X0_V_tmp_mem.range(35, 0);
+							X0_V_tvin_wrapc_buffer.range(39, 0) = X0_V_tmp_mem.range(39, 0);
 						}
 					}
 				}
@@ -354,13 +354,13 @@ unsigned short* buf)
 		sprintf(tvin_Y0_V, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_Y0_V, tvin_Y0_V);
 
-		sc_bv<36> Y0_V_tvin_wrapc_buffer;
+		sc_bv<40> Y0_V_tvin_wrapc_buffer;
 
 		// RTL Name: Y0_V
 		{
-			// bitslice(35, 0)
+			// bitslice(39, 0)
 			{
-				// celement: Y0.V(35, 0)
+				// celement: Y0.V(39, 0)
 				{
 					// carray: (0) => (0) @ (0)
 					{
@@ -372,9 +372,9 @@ unsigned short* buf)
 						// input_type_conversion : (Y0).range().to_string(SC_BIN).c_str()
 						if (&(Y0) != NULL) // check the null address if the c port is array or others
 						{
-							sc_lv<36> Y0_V_tmp_mem;
+							sc_lv<40> Y0_V_tmp_mem;
 							Y0_V_tmp_mem = (Y0).range().to_string(SC_BIN).c_str();
-							Y0_V_tvin_wrapc_buffer.range(35, 0) = Y0_V_tmp_mem.range(35, 0);
+							Y0_V_tvin_wrapc_buffer.range(39, 0) = Y0_V_tmp_mem.range(39, 0);
 						}
 					}
 				}
@@ -396,13 +396,13 @@ unsigned short* buf)
 		sprintf(tvin_X1_V, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_X1_V, tvin_X1_V);
 
-		sc_bv<36> X1_V_tvin_wrapc_buffer;
+		sc_bv<40> X1_V_tvin_wrapc_buffer;
 
 		// RTL Name: X1_V
 		{
-			// bitslice(35, 0)
+			// bitslice(39, 0)
 			{
-				// celement: X1.V(35, 0)
+				// celement: X1.V(39, 0)
 				{
 					// carray: (0) => (0) @ (0)
 					{
@@ -414,9 +414,9 @@ unsigned short* buf)
 						// input_type_conversion : (X1).range().to_string(SC_BIN).c_str()
 						if (&(X1) != NULL) // check the null address if the c port is array or others
 						{
-							sc_lv<36> X1_V_tmp_mem;
+							sc_lv<40> X1_V_tmp_mem;
 							X1_V_tmp_mem = (X1).range().to_string(SC_BIN).c_str();
-							X1_V_tvin_wrapc_buffer.range(35, 0) = X1_V_tmp_mem.range(35, 0);
+							X1_V_tvin_wrapc_buffer.range(39, 0) = X1_V_tmp_mem.range(39, 0);
 						}
 					}
 				}

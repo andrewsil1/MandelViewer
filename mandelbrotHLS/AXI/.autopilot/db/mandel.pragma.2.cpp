@@ -35086,7 +35086,7 @@ _ssdm_op_SpecDataflowPipeline(-1, 0, "");
 # 11 "mandelbrotHLS/mandel.h"
 using namespace hls;
 
-typedef ap_fixed<36,4,AP_RND_CONV,AP_SAT> real;
+typedef ap_fixed<40,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
@@ -35097,7 +35097,7 @@ void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf);
 # 11 "mandelbrotHLS/mandel.h"
 using namespace hls;
 
-typedef ap_fixed<36,4,AP_RND_CONV,AP_SAT> real;
+typedef ap_fixed<40,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 

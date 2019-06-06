@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'pretest'
 ================================================================
-* Date:           Tue Jun  4 11:19:18 2019
+* Date:           Wed Jun  5 13:49:33 2019
 
 * Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
 * Project:        mandelbrotHLS
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |   8.00|     6.204|        1.50|
+    |ap_clk  |   6.00|     5.206|        0.75|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline|
     | min | max | min | max |   Type  |
     +-----+-----+-----+-----+---------+
-    |   11|   11|   11|   11|   none  |
+    |   19|   19|   19|   19|   none  |
     +-----+-----+-----+-----+---------+
 
     + Detail: 
@@ -65,7 +65,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 12
+* Number of FSM states : 20
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
@@ -81,250 +81,328 @@ IsGatedGlobalClock: 0
 9 --> 10 
 10 --> 11 
 11 --> 12 
-12 --> 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 5.69>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%y_V_read = call i36 @_ssdm_op_Read.ap_auto.i36(i36 %y_V)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 13 'read' 'y_V_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%x_V_read = call i36 @_ssdm_op_Read.ap_auto.i36(i36 %x_V)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 14 'read' 'x_V_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%r_V = sext i36 %y_V_read to i72" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 15 'sext' 'r_V' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [3/3] (5.69ns)   --->   "%r_V_9 = mul nsw i72 %r_V, %r_V" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 16 'mul' 'r_V_9' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%lhs_V = sext i36 %x_V_read to i37" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 17 'sext' 'lhs_V' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (2.79ns)   --->   "%ret_V_5 = add nsw i37 -1073741824, %lhs_V" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 18 'add' 'ret_V_5' <Predicate = true> <Delay = 2.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_Result_4 = call i1 @_ssdm_op_BitSelect.i1.i37.i32(i37 %ret_V_5, i32 36)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 19 'bitselect' 'p_Result_4' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (2.79ns)   --->   "%x_1_V = add i36 -1073741824, %x_V_read" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 20 'add' 'x_1_V' <Predicate = true> <Delay = 2.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%p_Result_5 = call i1 @_ssdm_op_BitSelect.i1.i36.i32(i36 %x_1_V, i32 35)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 21 'bitselect' 'p_Result_5' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns) (grouped into LUT with out node select_ln388_1)   --->   "%xor_ln786_1 = xor i1 %p_Result_5, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 22 'xor' 'xor_ln786_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 23 [1/1] (0.00ns) (grouped into LUT with out node select_ln388_1)   --->   "%underflow_1 = and i1 %p_Result_4, %xor_ln786_1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 23 'and' 'underflow_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 24 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%xor_ln340 = xor i1 %p_Result_4, %p_Result_5" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 24 'xor' 'xor_ln340' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 25 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%xor_ln340_1 = xor i1 %p_Result_4, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 25 'xor' 'xor_ln340_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 26 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%or_ln340_3 = or i1 %p_Result_5, %xor_ln340_1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 26 'or' 'or_ln340_3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 27 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%select_ln340_1 = select i1 %xor_ln340, i36 34359738367, i36 %x_1_V" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 27 'select' 'select_ln340_1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_1 : Operation 28 [1/1] (0.97ns) (out node of the LUT)   --->   "%select_ln388_1 = select i1 %underflow_1, i36 -34359738368, i36 %x_1_V" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 28 'select' 'select_ln388_1' <Predicate = true> <Delay = 0.97> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_1 : Operation 29 [1/1] (0.97ns) (out node of the LUT)   --->   "%p_Val2_13 = select i1 %or_ln340_3, i36 %select_ln340_1, i36 %select_ln388_1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 29 'select' 'p_Val2_13' <Predicate = true> <Delay = 0.97> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_1 : Operation 30 [1/1] (2.79ns)   --->   "%ret_V_7 = add i37 4294967296, %lhs_V" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 30 'add' 'ret_V_7' <Predicate = true> <Delay = 2.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%p_Result_9 = call i1 @_ssdm_op_BitSelect.i1.i37.i32(i37 %ret_V_7, i32 36)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 31 'bitselect' 'p_Result_9' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 32 [1/1] (2.79ns)   --->   "%xp1_V = add i36 4294967296, %x_V_read" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 32 'add' 'xp1_V' <Predicate = true> <Delay = 2.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%p_Result_10 = call i1 @_ssdm_op_BitSelect.i1.i36.i32(i36 %xp1_V, i32 35)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 33 'bitselect' 'p_Result_10' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_20 = call i1 @_ssdm_op_BitSelect.i1.i37.i32(i37 %ret_V_7, i32 36)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 34 'bitselect' 'tmp_20' <Predicate = true> <Delay = 0.00>
+State 1 <SV = 0> <Delay = 3.89>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%y_V_read = call i40 @_ssdm_op_Read.ap_auto.i40(i40 %y_V)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 21 'read' 'y_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%r_V = sext i40 %y_V_read to i80" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 22 'sext' 'r_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [6/6] (3.89ns)   --->   "%r_V_9 = mul nsw i80 %r_V, %r_V" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 23 'mul' 'r_V_9' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
-State 2 <SV = 1> <Delay = 5.69>
-ST_2 : Operation 35 [2/3] (5.69ns)   --->   "%r_V_9 = mul nsw i72 %r_V, %r_V" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 35 'mul' 'r_V_9' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_3)   --->   "%or_ln785_2 = or i1 %p_Result_10, %tmp_20" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 36 'or' 'or_ln785_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 37 [1/1] (0.97ns)   --->   "%xor_ln785_4 = xor i1 %p_Result_9, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 37 'xor' 'xor_ln785_4' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 38 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_3)   --->   "%overflow_2 = and i1 %or_ln785_2, %xor_ln785_4" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 38 'and' 'overflow_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 39 [1/1] (0.97ns)   --->   "%and_ln786_5 = and i1 %tmp_20, %p_Result_10" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 39 'and' 'and_ln786_5' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 40 [1/1] (0.00ns) (grouped into LUT with out node underflow_3)   --->   "%xor_ln786_3 = xor i1 %and_ln786_5, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 40 'xor' 'xor_ln786_3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 41 [1/1] (0.97ns) (out node of the LUT)   --->   "%underflow_3 = and i1 %p_Result_9, %xor_ln786_3" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 41 'and' 'underflow_3' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_3)   --->   "%or_ln340_7 = or i1 %underflow_3, %overflow_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 42 'or' 'or_ln340_7' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 43 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_7)   --->   "%or_ln340_8 = or i1 %and_ln786_5, %xor_ln785_4" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 43 'or' 'or_ln340_8' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 44 [1/1] (0.97ns) (out node of the LUT)   --->   "%select_ln340_3 = select i1 %or_ln340_7, i36 34359738367, i36 %xp1_V" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 44 'select' 'select_ln340_3' <Predicate = true> <Delay = 0.97> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_7)   --->   "%select_ln388_3 = select i1 %underflow_3, i36 -34359738368, i36 %xp1_V" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 45 'select' 'select_ln388_3' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 46 [1/1] (0.97ns) (out node of the LUT)   --->   "%select_ln340_7 = select i1 %or_ln340_8, i36 %select_ln340_3, i36 %select_ln388_3" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 46 'select' 'select_ln340_7' <Predicate = true> <Delay = 0.97> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+State 2 <SV = 1> <Delay = 5.03>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%x_V_read = call i40 @_ssdm_op_Read.ap_auto.i40(i40 %x_V)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 24 'read' 'x_V_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [5/6] (3.89ns)   --->   "%r_V_9 = mul nsw i80 %r_V, %r_V" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 25 'mul' 'r_V_9' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%lhs_V = sext i40 %x_V_read to i41" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 26 'sext' 'lhs_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (2.88ns)   --->   "%ret_V_5 = add nsw i41 -17179869184, %lhs_V" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 27 'add' 'ret_V_5' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%p_Result_4 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %ret_V_5, i32 40)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 28 'bitselect' 'p_Result_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (2.88ns)   --->   "%x_1_V = add i40 -17179869184, %x_V_read" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 29 'add' 'x_1_V' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%p_Result_5 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %x_1_V, i32 39)" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 30 'bitselect' 'p_Result_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns) (grouped into LUT with out node select_ln388_1)   --->   "%xor_ln786_1 = xor i1 %p_Result_5, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 31 'xor' 'xor_ln786_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node select_ln388_1)   --->   "%underflow_1 = and i1 %p_Result_4, %xor_ln786_1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 32 'and' 'underflow_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%xor_ln340 = xor i1 %p_Result_4, %p_Result_5" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 33 'xor' 'xor_ln340' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%xor_ln340_1 = xor i1 %p_Result_4, true" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 34 'xor' 'xor_ln340_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%or_ln340_3 = or i1 %p_Result_5, %xor_ln340_1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 35 'or' 'or_ln340_3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_13)   --->   "%select_ln340_1 = select i1 %xor_ln340, i40 549755813887, i40 %x_1_V" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 36 'select' 'select_ln340_1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (1.07ns) (out node of the LUT)   --->   "%select_ln388_1 = select i1 %underflow_1, i40 -549755813888, i40 %x_1_V" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 37 'select' 'select_ln388_1' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_Val2_13 = select i1 %or_ln340_3, i40 %select_ln340_1, i40 %select_ln388_1" [mandelbrotHLS/pretest.cpp:13]   --->   Operation 38 'select' 'p_Val2_13' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 39 [1/1] (2.88ns)   --->   "%ret_V_7 = add i41 68719476736, %lhs_V" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 39 'add' 'ret_V_7' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%p_Result_9 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %ret_V_7, i32 40)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 40 'bitselect' 'p_Result_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (2.88ns)   --->   "%xp1_V = add i40 68719476736, %x_V_read" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 41 'add' 'xp1_V' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%p_Result_10 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %xp1_V, i32 39)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 42 'bitselect' 'p_Result_10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_20 = call i1 @_ssdm_op_BitSelect.i1.i41.i32(i41 %ret_V_7, i32 40)" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 43 'bitselect' 'tmp_20' <Predicate = true> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 5.69>
-ST_3 : Operation 47 [1/3] (5.69ns)   --->   "%r_V_9 = mul nsw i72 %r_V, %r_V" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 47 'mul' 'r_V_9' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i72.i32(i72 %r_V_9, i32 71)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 48 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%trunc_ln718 = trunc i72 %r_V_9 to i31" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 49 'trunc' 'trunc_ln718' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%p_Result_s_15 = call i3 @_ssdm_op_PartSelect.i3.i72.i32.i32(i72 %r_V_9, i32 69, i32 71)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 50 'partselect' 'p_Result_s_15' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%p_Result_1 = call i4 @_ssdm_op_PartSelect.i4.i72.i32.i32(i72 %r_V_9, i32 68, i32 71)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 51 'partselect' 'p_Result_1' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%r_V_2 = sext i36 %p_Val2_13 to i72" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 52 'sext' 'r_V_2' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 53 [3/3] (5.69ns)   --->   "%r_V_10 = mul nsw i72 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 53 'mul' 'r_V_10' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%r_V_7 = sext i36 %select_ln340_7 to i72" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 54 'sext' 'r_V_7' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 55 [3/3] (5.69ns)   --->   "%r_V_11 = mul nsw i72 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 55 'mul' 'r_V_11' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+State 3 <SV = 2> <Delay = 4.10>
+ST_3 : Operation 44 [4/6] (3.89ns)   --->   "%r_V_9 = mul nsw i80 %r_V, %r_V" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 44 'mul' 'r_V_9' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_3)   --->   "%or_ln785_2 = or i1 %p_Result_10, %tmp_20" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 45 'or' 'or_ln785_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (0.97ns)   --->   "%xor_ln785_4 = xor i1 %p_Result_9, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 46 'xor' 'xor_ln785_4' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 47 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_3)   --->   "%overflow_2 = and i1 %or_ln785_2, %xor_ln785_4" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 47 'and' 'overflow_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/1] (0.97ns)   --->   "%and_ln786_5 = and i1 %tmp_20, %p_Result_10" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 48 'and' 'and_ln786_5' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node underflow_3)   --->   "%xor_ln786_3 = xor i1 %and_ln786_5, true" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 49 'xor' 'xor_ln786_3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 50 [1/1] (0.97ns) (out node of the LUT)   --->   "%underflow_3 = and i1 %p_Result_9, %xor_ln786_3" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 50 'and' 'underflow_3' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_3)   --->   "%or_ln340_7 = or i1 %underflow_3, %overflow_2" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 51 'or' 'or_ln340_7' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_7)   --->   "%or_ln340_8 = or i1 %and_ln786_5, %xor_ln785_4" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 52 'or' 'or_ln340_8' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 53 [1/1] (1.07ns) (out node of the LUT)   --->   "%select_ln340_3 = select i1 %or_ln340_7, i40 549755813887, i40 %xp1_V" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 53 'select' 'select_ln340_3' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 54 [1/1] (0.00ns) (grouped into LUT with out node select_ln340_7)   --->   "%select_ln388_3 = select i1 %underflow_3, i40 -549755813888, i40 %xp1_V" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 54 'select' 'select_ln388_3' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 55 [1/1] (1.07ns) (out node of the LUT)   --->   "%select_ln340_7 = select i1 %or_ln340_8, i40 %select_ln340_3, i40 %select_ln388_3" [mandelbrotHLS/pretest.cpp:15]   --->   Operation 55 'select' 'select_ln340_7' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
-State 4 <SV = 3> <Delay = 6.20>
-ST_4 : Operation 56 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%y2_V = call i36 @_ssdm_op_PartSelect.i36.i72.i32.i32(i72 %r_V_9, i32 32, i32 67)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 56 'partselect' 'y2_V' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 57 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i72.i32(i72 %r_V_9, i32 32)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 57 'bitselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 58 [1/1] (2.43ns)   --->   "%r_1 = icmp ne i31 %trunc_ln718, 0" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 58 'icmp' 'r_1' <Predicate = true> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 59 [1/1] (0.00ns) (grouped into LUT with out node carry_1)   --->   "%p_Result_2 = call i1 @_ssdm_op_BitSelect.i1.i72.i32(i72 %r_V_9, i32 67)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 59 'bitselect' 'p_Result_2' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 60 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%r = or i1 %r_1, %tmp_3" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 60 'or' 'r' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 61 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%tmp_5 = call i1 @_ssdm_op_BitSelect.i1.i72.i32(i72 %r_V_9, i32 31)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 61 'bitselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 62 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%and_ln412 = and i1 %tmp_5, %r" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 62 'and' 'and_ln412' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 63 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%zext_ln415 = zext i1 %and_ln412 to i36" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 63 'zext' 'zext_ln415' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 64 [1/1] (2.79ns) (out node of the LUT)   --->   "%y2_V_1 = add nsw i36 %y2_V, %zext_ln415" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 64 'add' 'y2_V_1' <Predicate = true> <Delay = 2.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 65 [1/1] (0.00ns) (grouped into LUT with out node carry_1)   --->   "%tmp_6 = call i1 @_ssdm_op_BitSelect.i1.i36.i32(i36 %y2_V_1, i32 35)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 65 'bitselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 66 [1/1] (0.00ns) (grouped into LUT with out node carry_1)   --->   "%xor_ln416 = xor i1 %tmp_6, true" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 66 'xor' 'xor_ln416' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 67 [1/1] (0.97ns) (out node of the LUT)   --->   "%carry_1 = and i1 %p_Result_2, %xor_ln416" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 67 'and' 'carry_1' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%p_Result_3 = call i1 @_ssdm_op_BitSelect.i1.i36.i32(i36 %y2_V_1, i32 35)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 68 'bitselect' 'p_Result_3' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 69 [1/1] (1.18ns)   --->   "%Range2_all_ones = icmp eq i3 %p_Result_s_15, -1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 69 'icmp' 'Range2_all_ones' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 70 [1/1] (1.44ns)   --->   "%Range1_all_ones = icmp eq i4 %p_Result_1, -1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 70 'icmp' 'Range1_all_ones' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 71 [1/1] (1.44ns)   --->   "%Range1_all_zeros = icmp eq i4 %p_Result_1, 0" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 71 'icmp' 'Range1_all_zeros' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 72 [2/3] (5.69ns)   --->   "%r_V_10 = mul nsw i72 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 72 'mul' 'r_V_10' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_4 : Operation 73 [2/3] (5.69ns)   --->   "%r_V_11 = mul nsw i72 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 73 'mul' 'r_V_11' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+State 4 <SV = 3> <Delay = 3.89>
+ST_4 : Operation 56 [3/6] (3.89ns)   --->   "%r_V_9 = mul nsw i80 %r_V, %r_V" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 56 'mul' 'r_V_9' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%r_V_2 = sext i40 %p_Val2_13 to i80" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 57 'sext' 'r_V_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [6/6] (3.89ns)   --->   "%r_V_10 = mul nsw i80 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 58 'mul' 'r_V_10' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%r_V_7 = sext i40 %select_ln340_7 to i80" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 59 'sext' 'r_V_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 60 [6/6] (3.89ns)   --->   "%r_V_11 = mul nsw i80 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 60 'mul' 'r_V_11' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
-State 5 <SV = 4> <Delay = 5.69>
-ST_5 : Operation 74 [1/1] (0.00ns) (grouped into LUT with out node or_ln340)   --->   "%deleted_zeros = select i1 %carry_1, i1 %Range1_all_ones, i1 %Range1_all_zeros" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 74 'select' 'deleted_zeros' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_5 : Operation 75 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i72.i32(i72 %r_V_9, i32 68)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 75 'bitselect' 'tmp_8' <Predicate = (carry_1)> <Delay = 0.00>
-ST_5 : Operation 76 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%xor_ln779 = xor i1 %tmp_8, true" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 76 'xor' 'xor_ln779' <Predicate = (carry_1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%and_ln779 = and i1 %Range2_all_ones, %xor_ln779" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 77 'and' 'and_ln779' <Predicate = (carry_1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%deleted_ones = select i1 %carry_1, i1 %and_ln779, i1 %Range1_all_ones" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 78 'select' 'deleted_ones' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_5 : Operation 79 [1/1] (0.97ns)   --->   "%and_ln781 = and i1 %carry_1, %Range1_all_ones" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 79 'and' 'and_ln781' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 80 [1/1] (0.00ns) (grouped into LUT with out node or_ln340)   --->   "%xor_ln785 = xor i1 %deleted_zeros, true" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 80 'xor' 'xor_ln785' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 81 [1/1] (0.00ns) (grouped into LUT with out node or_ln340)   --->   "%or_ln785 = or i1 %p_Result_3, %xor_ln785" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 81 'or' 'or_ln785' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 82 [1/1] (0.97ns)   --->   "%xor_ln785_1 = xor i1 %p_Result_s, true" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 82 'xor' 'xor_ln785_1' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 83 [1/1] (0.00ns) (grouped into LUT with out node or_ln340)   --->   "%overflow = and i1 %or_ln785, %xor_ln785_1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 83 'and' 'overflow' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 84 [1/1] (0.99ns) (out node of the LUT)   --->   "%and_ln786 = and i1 %p_Result_3, %deleted_ones" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 84 'and' 'and_ln786' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 85 [1/1] (0.00ns) (grouped into LUT with out node underflow)   --->   "%or_ln786 = or i1 %and_ln781, %and_ln786" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 85 'or' 'or_ln786' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 86 [1/1] (0.00ns) (grouped into LUT with out node underflow)   --->   "%xor_ln786 = xor i1 %or_ln786, true" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 86 'xor' 'xor_ln786' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 87 [1/1] (0.97ns) (out node of the LUT)   --->   "%underflow = and i1 %p_Result_s, %xor_ln786" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 87 'and' 'underflow' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 88 [1/1] (0.99ns) (out node of the LUT)   --->   "%or_ln340 = or i1 %underflow, %overflow" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 88 'or' 'or_ln340' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 89 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6)   --->   "%or_ln340_2 = or i1 %and_ln786, %xor_ln785_1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 89 'or' 'or_ln340_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6)   --->   "%or_ln340_1 = or i1 %or_ln340_2, %and_ln781" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 90 'or' 'or_ln340_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 91 [1/1] (0.93ns) (out node of the LUT)   --->   "%select_ln340 = select i1 %or_ln340, i36 34359738367, i36 %y2_V_1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 91 'select' 'select_ln340' <Predicate = true> <Delay = 0.93> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_5 : Operation 92 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6)   --->   "%select_ln388 = select i1 %underflow, i36 -34359738368, i36 %y2_V_1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 92 'select' 'select_ln388' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_5 : Operation 93 [1/1] (0.97ns) (out node of the LUT)   --->   "%p_Val2_6 = select i1 %or_ln340_1, i36 %select_ln340, i36 %select_ln388" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 93 'select' 'p_Val2_6' <Predicate = true> <Delay = 0.97> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_5 : Operation 94 [1/3] (5.69ns)   --->   "%r_V_10 = mul nsw i72 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 94 'mul' 'r_V_10' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 95 [1/1] (0.00ns)   --->   "%trunc_ln718_1 = trunc i72 %r_V_10 to i31" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 95 'trunc' 'trunc_ln718_1' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 96 [1/3] (5.69ns)   --->   "%r_V_11 = mul nsw i72 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 96 'mul' 'r_V_11' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+State 5 <SV = 4> <Delay = 3.89>
+ST_5 : Operation 61 [2/6] (3.89ns)   --->   "%r_V_9 = mul nsw i80 %r_V, %r_V" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 61 'mul' 'r_V_9' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 62 [5/6] (3.89ns)   --->   "%r_V_10 = mul nsw i80 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 62 'mul' 'r_V_10' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 63 [5/6] (3.89ns)   --->   "%r_V_11 = mul nsw i80 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 63 'mul' 'r_V_11' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
-State 6 <SV = 5> <Delay = 5.22>
-ST_6 : Operation 97 [1/1] (0.00ns)   --->   "%rhs_V = call i68 @_ssdm_op_BitConcatenate.i68.i36.i32(i36 %p_Val2_6, i32 0)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 97 'bitconcatenate' 'rhs_V' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 98 [1/1] (0.00ns)   --->   "%sext_ln728 = sext i68 %rhs_V to i72" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 98 'sext' 'sext_ln728' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 99 [1/1] (3.78ns)   --->   "%ret_V_6 = add i72 %sext_ln728, %r_V_10" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 99 'add' 'ret_V_6' <Predicate = true> <Delay = 3.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 100 [1/1] (0.00ns)   --->   "%p_Result_6 = call i1 @_ssdm_op_BitSelect.i1.i72.i32(i72 %ret_V_6, i32 71)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 100 'bitselect' 'p_Result_6' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 101 [1/1] (2.43ns)   --->   "%r_2 = icmp ne i31 %trunc_ln718_1, 0" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 101 'icmp' 'r_2' <Predicate = true> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 102 [1/1] (0.00ns)   --->   "%tmp = call i3 @_ssdm_op_PartSelect.i3.i72.i32.i32(i72 %ret_V_6, i32 69, i32 71)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 102 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 103 [1/1] (1.18ns)   --->   "%Range2_all_ones_1 = icmp eq i3 %tmp, -1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 103 'icmp' 'Range2_all_ones_1' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_1 = call i4 @_ssdm_op_PartSelect.i4.i72.i32.i32(i72 %ret_V_6, i32 68, i32 71)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 104 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 105 [1/1] (1.44ns)   --->   "%Range1_all_ones_2 = icmp eq i4 %tmp_1, -1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 105 'icmp' 'Range1_all_ones_2' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 106 [1/1] (1.44ns)   --->   "%Range1_all_zeros_1 = icmp eq i4 %tmp_1, 0" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 106 'icmp' 'Range1_all_zeros_1' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_6 : Operation 107 [1/1] (3.78ns)   --->   "%ret_V_4 = add i72 %sext_ln728, %r_V_11" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 107 'add' 'ret_V_4' <Predicate = true> <Delay = 3.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+State 6 <SV = 5> <Delay = 5.08>
+ST_6 : Operation 64 [1/6] (3.89ns)   --->   "%r_V_9 = mul nsw i80 %r_V, %r_V" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 64 'mul' 'r_V_9' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 79)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 65 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%trunc_ln718 = trunc i80 %r_V_9 to i35" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 66 'trunc' 'trunc_ln718' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%p_Result_s_15 = call i3 @_ssdm_op_PartSelect.i3.i80.i32.i32(i80 %r_V_9, i32 77, i32 79)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 67 'partselect' 'p_Result_s_15' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 68 [1/1] (1.18ns)   --->   "%Range2_all_ones = icmp eq i3 %p_Result_s_15, -1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 68 'icmp' 'Range2_all_ones' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 69 [1/1] (0.00ns)   --->   "%p_Result_1 = call i4 @_ssdm_op_PartSelect.i4.i80.i32.i32(i80 %r_V_9, i32 76, i32 79)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 69 'partselect' 'p_Result_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 70 [4/6] (3.89ns)   --->   "%r_V_10 = mul nsw i80 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 70 'mul' 'r_V_10' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 71 [4/6] (3.89ns)   --->   "%r_V_11 = mul nsw i80 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 71 'mul' 'r_V_11' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
-State 7 <SV = 6> <Delay = 5.74>
-ST_7 : Operation 108 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%q_V = call i36 @_ssdm_op_PartSelect.i36.i72.i32.i32(i72 %ret_V_6, i32 32, i32 67)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 108 'partselect' 'q_V' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i72.i32(i72 %ret_V_6, i32 32)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 109 'bitselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 110 [1/1] (0.00ns) (grouped into LUT with out node carry_3)   --->   "%p_Result_7 = call i1 @_ssdm_op_BitSelect.i1.i72.i32(i72 %ret_V_6, i32 67)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 110 'bitselect' 'p_Result_7' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 111 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%r_3 = or i1 %r_2, %tmp_12" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 111 'or' 'r_3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 112 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i72.i32(i72 %r_V_10, i32 31)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 112 'bitselect' 'tmp_14' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 113 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%and_ln412_1 = and i1 %tmp_14, %r_3" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 113 'and' 'and_ln412_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 114 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%zext_ln415_1 = zext i1 %and_ln412_1 to i36" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 114 'zext' 'zext_ln415_1' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 115 [1/1] (2.79ns) (out node of the LUT)   --->   "%q_V_1 = add nsw i36 %q_V, %zext_ln415_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 115 'add' 'q_V_1' <Predicate = true> <Delay = 2.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 116 [1/1] (0.00ns) (grouped into LUT with out node carry_3)   --->   "%tmp_15 = call i1 @_ssdm_op_BitSelect.i1.i36.i32(i36 %q_V_1, i32 35)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 116 'bitselect' 'tmp_15' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 117 [1/1] (0.00ns) (grouped into LUT with out node carry_3)   --->   "%xor_ln416_1 = xor i1 %tmp_15, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 117 'xor' 'xor_ln416_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 118 [1/1] (0.97ns) (out node of the LUT)   --->   "%carry_3 = and i1 %p_Result_7, %xor_ln416_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 118 'and' 'carry_3' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 119 [1/1] (0.00ns)   --->   "%p_Result_8 = call i1 @_ssdm_op_BitSelect.i1.i36.i32(i36 %q_V_1, i32 35)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 119 'bitselect' 'p_Result_8' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 120 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_3)   --->   "%tmp_17 = call i1 @_ssdm_op_BitSelect.i1.i72.i32(i72 %ret_V_6, i32 68)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 120 'bitselect' 'tmp_17' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 121 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_3)   --->   "%xor_ln779_1 = xor i1 %tmp_17, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 121 'xor' 'xor_ln779_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 122 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_3)   --->   "%and_ln779_1 = and i1 %Range2_all_ones_1, %xor_ln779_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 122 'and' 'and_ln779_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 123 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_3)   --->   "%deleted_ones_2 = select i1 %carry_3, i1 %and_ln779_1, i1 %Range1_all_ones_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 123 'select' 'deleted_ones_2' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_7 : Operation 124 [1/1] (0.97ns)   --->   "%and_ln781_1 = and i1 %carry_3, %Range1_all_ones_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 124 'and' 'and_ln781_1' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 125 [1/1] (0.97ns)   --->   "%xor_ln785_3 = xor i1 %p_Result_6, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 125 'xor' 'xor_ln785_3' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 126 [1/1] (0.99ns) (out node of the LUT)   --->   "%and_ln786_3 = and i1 %p_Result_8, %deleted_ones_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 126 'and' 'and_ln786_3' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 127 [1/1] (0.00ns) (grouped into LUT with out node underflow_2)   --->   "%or_ln786_1 = or i1 %and_ln781_1, %and_ln786_3" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 127 'or' 'or_ln786_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 128 [1/1] (0.00ns) (grouped into LUT with out node underflow_2)   --->   "%xor_ln786_2 = xor i1 %or_ln786_1, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 128 'xor' 'xor_ln786_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 129 [1/1] (0.97ns) (out node of the LUT)   --->   "%underflow_2 = and i1 %p_Result_6, %xor_ln786_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 129 'and' 'underflow_2' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 130 [1/1] (2.91ns)   --->   "%icmp_ln1497_1 = icmp slt i72 %ret_V_4, 1152921504606846977" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 130 'icmp' 'icmp_ln1497_1' <Predicate = true> <Delay = 2.91> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+State 7 <SV = 6> <Delay = 3.89>
+ST_7 : Operation 72 [1/1] (2.51ns)   --->   "%r_1 = icmp ne i35 %trunc_ln718, 0" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 72 'icmp' 'r_1' <Predicate = true> <Delay = 2.51> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 73 [1/1] (1.44ns)   --->   "%Range1_all_ones = icmp eq i4 %p_Result_1, -1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 73 'icmp' 'Range1_all_ones' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 74 [1/1] (1.44ns)   --->   "%Range1_all_zeros = icmp eq i4 %p_Result_1, 0" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 74 'icmp' 'Range1_all_zeros' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 75 [3/6] (3.89ns)   --->   "%r_V_10 = mul nsw i80 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 75 'mul' 'r_V_10' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 76 [3/6] (3.89ns)   --->   "%r_V_11 = mul nsw i80 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 76 'mul' 'r_V_11' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
-State 8 <SV = 7> <Delay = 5.69>
-ST_8 : Operation 131 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_4)   --->   "%deleted_zeros_1 = select i1 %carry_3, i1 %Range1_all_ones_2, i1 %Range1_all_zeros_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 131 'select' 'deleted_zeros_1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_8 : Operation 132 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_4)   --->   "%xor_ln785_2 = xor i1 %deleted_zeros_1, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 132 'xor' 'xor_ln785_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 133 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_4)   --->   "%or_ln785_1 = or i1 %p_Result_8, %xor_ln785_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 133 'or' 'or_ln785_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 134 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_4)   --->   "%overflow_1 = and i1 %or_ln785_1, %xor_ln785_3" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 134 'and' 'overflow_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 135 [1/1] (0.99ns) (out node of the LUT)   --->   "%or_ln340_4 = or i1 %underflow_2, %overflow_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 135 'or' 'or_ln340_4' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 136 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%or_ln340_5 = or i1 %and_ln786_3, %xor_ln785_3" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 136 'or' 'or_ln340_5' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 137 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%or_ln340_6 = or i1 %or_ln340_5, %and_ln781_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 137 'or' 'or_ln340_6' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 138 [1/1] (0.93ns) (out node of the LUT)   --->   "%select_ln340_2 = select i1 %or_ln340_4, i36 34359738367, i36 %q_V_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 138 'select' 'select_ln340_2' <Predicate = true> <Delay = 0.93> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_8 : Operation 139 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%select_ln388_2 = select i1 %underflow_2, i36 -34359738368, i36 %q_V_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 139 'select' 'select_ln388_2' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_8 : Operation 140 [1/1] (0.97ns) (out node of the LUT)   --->   "%p_Val2_12 = select i1 %or_ln340_6, i36 %select_ln340_2, i36 %select_ln388_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 140 'select' 'p_Val2_12' <Predicate = true> <Delay = 0.97> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.93> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_8 : Operation 141 [1/1] (0.00ns)   --->   "%lhs_V_1 = sext i36 %p_Val2_12 to i37" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 141 'sext' 'lhs_V_1' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 142 [1/1] (0.00ns)   --->   "%rhs_V_1 = sext i36 %p_Val2_13 to i37" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 142 'sext' 'rhs_V_1' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 143 [1/1] (2.79ns)   --->   "%ret_V = add nsw i37 %lhs_V_1, %rhs_V_1" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 143 'add' 'ret_V' <Predicate = true> <Delay = 2.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 3.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+State 8 <SV = 7> <Delay = 4.85>
+ST_8 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%y2_V = call i40 @_ssdm_op_PartSelect.i40.i80.i32.i32(i80 %r_V_9, i32 36, i32 75)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 77 'partselect' 'y2_V' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 78 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%tmp_3 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 36)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 78 'bitselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 79 [1/1] (0.00ns) (grouped into LUT with out node carry_1)   --->   "%p_Result_2 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 75)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 79 'bitselect' 'p_Result_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 80 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%r = or i1 %r_1, %tmp_3" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 80 'or' 'r' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 81 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%tmp_5 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 35)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 81 'bitselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 82 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%and_ln412 = and i1 %tmp_5, %r" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 82 'and' 'and_ln412' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 83 [1/1] (0.00ns) (grouped into LUT with out node y2_V_1)   --->   "%zext_ln415 = zext i1 %and_ln412 to i40" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 83 'zext' 'zext_ln415' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 84 [1/1] (2.88ns) (out node of the LUT)   --->   "%y2_V_1 = add nsw i40 %y2_V, %zext_ln415" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 84 'add' 'y2_V_1' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 85 [1/1] (0.00ns) (grouped into LUT with out node carry_1)   --->   "%tmp_6 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %y2_V_1, i32 39)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 85 'bitselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 86 [1/1] (0.00ns) (grouped into LUT with out node carry_1)   --->   "%xor_ln416 = xor i1 %tmp_6, true" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 86 'xor' 'xor_ln416' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 87 [1/1] (0.97ns) (out node of the LUT)   --->   "%carry_1 = and i1 %p_Result_2, %xor_ln416" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 87 'and' 'carry_1' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%p_Result_3 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %y2_V_1, i32 39)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 88 'bitselect' 'p_Result_3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 89 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%tmp_8 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 76)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 89 'bitselect' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%xor_ln779 = xor i1 %tmp_8, true" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 90 'xor' 'xor_ln779' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 91 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%and_ln779 = and i1 %Range2_all_ones, %xor_ln779" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 91 'and' 'and_ln779' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 92 [1/1] (0.00ns) (grouped into LUT with out node and_ln786)   --->   "%deleted_ones = select i1 %carry_1, i1 %and_ln779, i1 %Range1_all_ones" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 92 'select' 'deleted_ones' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 93 [1/1] (0.99ns) (out node of the LUT)   --->   "%and_ln786 = and i1 %p_Result_3, %deleted_ones" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 93 'and' 'and_ln786' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 94 [2/6] (3.89ns)   --->   "%r_V_10 = mul nsw i80 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 94 'mul' 'r_V_10' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 95 [2/6] (3.89ns)   --->   "%r_V_11 = mul nsw i80 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 95 'mul' 'r_V_11' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
-State 9 <SV = 8> <Delay = 5.69>
-ST_9 : Operation 144 [1/1] (0.00ns)   --->   "%r_V_4 = sext i36 %p_Val2_12 to i73" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 144 'sext' 'r_V_4' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 145 [1/1] (0.00ns)   --->   "%sext_ln1118 = sext i37 %ret_V to i73" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 145 'sext' 'sext_ln1118' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 146 [3/3] (5.69ns)   --->   "%r_V_5 = mul nsw i73 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 146 'mul' 'r_V_5' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+State 9 <SV = 8> <Delay = 5.09>
+ST_9 : Operation 96 [1/1] (0.00ns) (grouped into LUT with out node or_ln340)   --->   "%deleted_zeros = select i1 %carry_1, i1 %Range1_all_ones, i1 %Range1_all_zeros" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 96 'select' 'deleted_zeros' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 97 [1/1] (0.97ns)   --->   "%and_ln781 = and i1 %carry_1, %Range1_all_ones" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 97 'and' 'and_ln781' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 98 [1/1] (0.00ns) (grouped into LUT with out node or_ln340)   --->   "%xor_ln785 = xor i1 %deleted_zeros, true" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 98 'xor' 'xor_ln785' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 99 [1/1] (0.00ns) (grouped into LUT with out node or_ln340)   --->   "%or_ln785 = or i1 %p_Result_3, %xor_ln785" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 99 'or' 'or_ln785' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 100 [1/1] (0.97ns)   --->   "%xor_ln785_1 = xor i1 %p_Result_s, true" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 100 'xor' 'xor_ln785_1' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 101 [1/1] (0.00ns) (grouped into LUT with out node or_ln340)   --->   "%overflow = and i1 %or_ln785, %xor_ln785_1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 101 'and' 'overflow' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 102 [1/1] (0.00ns) (grouped into LUT with out node underflow)   --->   "%or_ln786 = or i1 %and_ln781, %and_ln786" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 102 'or' 'or_ln786' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 103 [1/1] (0.00ns) (grouped into LUT with out node underflow)   --->   "%xor_ln786 = xor i1 %or_ln786, true" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 103 'xor' 'xor_ln786' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 104 [1/1] (0.97ns) (out node of the LUT)   --->   "%underflow = and i1 %p_Result_s, %xor_ln786" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 104 'and' 'underflow' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 105 [1/1] (0.99ns) (out node of the LUT)   --->   "%or_ln340 = or i1 %underflow, %overflow" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 105 'or' 'or_ln340' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 106 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6)   --->   "%or_ln340_2 = or i1 %and_ln786, %xor_ln785_1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 106 'or' 'or_ln340_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 107 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6)   --->   "%or_ln340_1 = or i1 %or_ln340_2, %and_ln781" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 107 'or' 'or_ln340_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 108 [1/1] (1.07ns) (out node of the LUT)   --->   "%select_ln340 = select i1 %or_ln340, i40 549755813887, i40 %y2_V_1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 108 'select' 'select_ln340' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_6)   --->   "%select_ln388 = select i1 %underflow, i40 -549755813888, i40 %y2_V_1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 109 'select' 'select_ln388' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 110 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_Val2_6 = select i1 %or_ln340_1, i40 %select_ln340, i40 %select_ln388" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 110 'select' 'p_Val2_6' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 111 [1/6] (3.89ns)   --->   "%r_V_10 = mul nsw i80 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 111 'mul' 'r_V_10' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 112 [1/1] (0.00ns)   --->   "%trunc_ln718_1 = trunc i80 %r_V_10 to i35" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 112 'trunc' 'trunc_ln718_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 113 [1/6] (3.89ns)   --->   "%r_V_11 = mul nsw i80 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 113 'mul' 'r_V_11' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 
-State 10 <SV = 9> <Delay = 5.69>
-ST_10 : Operation 147 [2/3] (5.69ns)   --->   "%r_V_5 = mul nsw i73 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 147 'mul' 'r_V_5' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+State 10 <SV = 9> <Delay = 5.20>
+ST_10 : Operation 114 [1/1] (0.00ns)   --->   "%rhs_V = call i76 @_ssdm_op_BitConcatenate.i76.i40.i36(i40 %p_Val2_6, i36 0)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 114 'bitconcatenate' 'rhs_V' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 115 [1/1] (0.00ns)   --->   "%sext_ln728 = sext i76 %rhs_V to i80" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 115 'sext' 'sext_ln728' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 116 [1/1] (4.01ns)   --->   "%ret_V_6 = add i80 %sext_ln728, %r_V_10" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 116 'add' 'ret_V_6' <Predicate = true> <Delay = 4.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 117 [1/1] (0.00ns)   --->   "%p_Result_6 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 79)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 117 'bitselect' 'p_Result_6' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 118 [1/1] (2.51ns)   --->   "%r_2 = icmp ne i35 %trunc_ln718_1, 0" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 118 'icmp' 'r_2' <Predicate = true> <Delay = 2.51> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 119 [1/1] (0.00ns)   --->   "%tmp = call i3 @_ssdm_op_PartSelect.i3.i80.i32.i32(i80 %ret_V_6, i32 77, i32 79)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 119 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 120 [1/1] (1.18ns)   --->   "%Range2_all_ones_1 = icmp eq i3 %tmp, -1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 120 'icmp' 'Range2_all_ones_1' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 121 [1/1] (0.00ns)   --->   "%tmp_1 = call i4 @_ssdm_op_PartSelect.i4.i80.i32.i32(i80 %ret_V_6, i32 76, i32 79)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 121 'partselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 122 [1/1] (4.01ns)   --->   "%ret_V_4 = add i80 %sext_ln728, %r_V_11" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 122 'add' 'ret_V_4' <Predicate = true> <Delay = 4.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 
-State 11 <SV = 10> <Delay = 5.69>
-ST_11 : Operation 148 [1/3] (5.69ns)   --->   "%r_V_5 = mul nsw i73 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 148 'mul' 'r_V_5' <Predicate = true> <Delay = 5.69> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 5.69> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+State 11 <SV = 10> <Delay = 4.85>
+ST_11 : Operation 123 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%q_V = call i40 @_ssdm_op_PartSelect.i40.i80.i32.i32(i80 %ret_V_6, i32 36, i32 75)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 123 'partselect' 'q_V' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 124 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 36)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 124 'bitselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 125 [1/1] (0.00ns) (grouped into LUT with out node carry_3)   --->   "%p_Result_7 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 75)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 125 'bitselect' 'p_Result_7' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 126 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%r_3 = or i1 %r_2, %tmp_12" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 126 'or' 'r_3' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 127 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%tmp_14 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 35)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 127 'bitselect' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 128 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%and_ln412_1 = and i1 %tmp_14, %r_3" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 128 'and' 'and_ln412_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 129 [1/1] (0.00ns) (grouped into LUT with out node q_V_1)   --->   "%zext_ln415_1 = zext i1 %and_ln412_1 to i40" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 129 'zext' 'zext_ln415_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 130 [1/1] (2.88ns) (out node of the LUT)   --->   "%q_V_1 = add nsw i40 %q_V, %zext_ln415_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 130 'add' 'q_V_1' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 131 [1/1] (0.00ns) (grouped into LUT with out node carry_3)   --->   "%tmp_15 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %q_V_1, i32 39)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 131 'bitselect' 'tmp_15' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 132 [1/1] (0.00ns) (grouped into LUT with out node carry_3)   --->   "%xor_ln416_1 = xor i1 %tmp_15, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 132 'xor' 'xor_ln416_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 133 [1/1] (0.97ns) (out node of the LUT)   --->   "%carry_3 = and i1 %p_Result_7, %xor_ln416_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 133 'and' 'carry_3' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 134 [1/1] (0.00ns)   --->   "%p_Result_8 = call i1 @_ssdm_op_BitSelect.i1.i40.i32(i40 %q_V_1, i32 39)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 134 'bitselect' 'p_Result_8' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 135 [1/1] (1.44ns)   --->   "%Range1_all_ones_2 = icmp eq i4 %tmp_1, -1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 135 'icmp' 'Range1_all_ones_2' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 136 [1/1] (1.44ns)   --->   "%Range1_all_zeros_1 = icmp eq i4 %tmp_1, 0" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 136 'icmp' 'Range1_all_zeros_1' <Predicate = true> <Delay = 1.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 137 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_3)   --->   "%tmp_17 = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %ret_V_6, i32 76)" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 137 'bitselect' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 138 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_3)   --->   "%xor_ln779_1 = xor i1 %tmp_17, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 138 'xor' 'xor_ln779_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 139 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_3)   --->   "%and_ln779_1 = and i1 %Range2_all_ones_1, %xor_ln779_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 139 'and' 'and_ln779_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 140 [1/1] (0.00ns) (grouped into LUT with out node and_ln786_3)   --->   "%deleted_ones_2 = select i1 %carry_3, i1 %and_ln779_1, i1 %Range1_all_ones_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 140 'select' 'deleted_ones_2' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 141 [1/1] (0.99ns) (out node of the LUT)   --->   "%and_ln786_3 = and i1 %p_Result_8, %deleted_ones_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 141 'and' 'and_ln786_3' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 142 [1/1] (2.98ns)   --->   "%icmp_ln1497_1 = icmp slt i80 %ret_V_4, 295147905179352825857" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 142 'icmp' 'icmp_ln1497_1' <Predicate = true> <Delay = 2.98> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 
-State 12 <SV = 11> <Delay = 3.89>
-ST_12 : Operation 149 [1/1] (0.00ns)   --->   "%r_V_6 = call i66 @_ssdm_op_BitConcatenate.i66.i36.i30(i36 %p_Val2_6, i30 0)" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 149 'bitconcatenate' 'r_V_6' <Predicate = true> <Delay = 0.00>
-ST_12 : Operation 150 [1/1] (0.00ns)   --->   "%sext_ln1497 = sext i66 %r_V_6 to i73" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 150 'sext' 'sext_ln1497' <Predicate = true> <Delay = 0.00>
-ST_12 : Operation 151 [1/1] (2.92ns)   --->   "%icmp_ln1497 = icmp slt i73 %sext_ln1497, %r_V_5" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 151 'icmp' 'icmp_ln1497' <Predicate = true> <Delay = 2.92> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.91> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 152 [1/1] (0.00ns) (grouped into LUT with out node or_ln1497)   --->   "%xor_ln1497 = xor i1 %icmp_ln1497, true" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 152 'xor' 'xor_ln1497' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 153 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln1497 = or i1 %icmp_ln1497_1, %xor_ln1497" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 153 'or' 'or_ln1497' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_12 : Operation 154 [1/1] (0.00ns)   --->   "ret i1 %or_ln1497" [mandelbrotHLS/pretest.cpp:26]   --->   Operation 154 'ret' <Predicate = true> <Delay = 0.00>
+State 12 <SV = 11> <Delay = 5.09>
+ST_12 : Operation 143 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_4)   --->   "%deleted_zeros_1 = select i1 %carry_3, i1 %Range1_all_ones_2, i1 %Range1_all_zeros_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 143 'select' 'deleted_zeros_1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 144 [1/1] (0.97ns)   --->   "%and_ln781_1 = and i1 %carry_3, %Range1_all_ones_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 144 'and' 'and_ln781_1' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 145 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_4)   --->   "%xor_ln785_2 = xor i1 %deleted_zeros_1, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 145 'xor' 'xor_ln785_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 146 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_4)   --->   "%or_ln785_1 = or i1 %p_Result_8, %xor_ln785_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 146 'or' 'or_ln785_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 147 [1/1] (0.97ns)   --->   "%xor_ln785_3 = xor i1 %p_Result_6, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 147 'xor' 'xor_ln785_3' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 148 [1/1] (0.00ns) (grouped into LUT with out node or_ln340_4)   --->   "%overflow_1 = and i1 %or_ln785_1, %xor_ln785_3" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 148 'and' 'overflow_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 149 [1/1] (0.00ns) (grouped into LUT with out node underflow_2)   --->   "%or_ln786_1 = or i1 %and_ln781_1, %and_ln786_3" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 149 'or' 'or_ln786_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 150 [1/1] (0.00ns) (grouped into LUT with out node underflow_2)   --->   "%xor_ln786_2 = xor i1 %or_ln786_1, true" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 150 'xor' 'xor_ln786_2' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 151 [1/1] (0.97ns) (out node of the LUT)   --->   "%underflow_2 = and i1 %p_Result_6, %xor_ln786_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 151 'and' 'underflow_2' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 152 [1/1] (0.99ns) (out node of the LUT)   --->   "%or_ln340_4 = or i1 %underflow_2, %overflow_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 152 'or' 'or_ln340_4' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 153 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%or_ln340_5 = or i1 %and_ln786_3, %xor_ln785_3" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 153 'or' 'or_ln340_5' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 154 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%or_ln340_6 = or i1 %or_ln340_5, %and_ln781_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 154 'or' 'or_ln340_6' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 155 [1/1] (1.07ns) (out node of the LUT)   --->   "%select_ln340_2 = select i1 %or_ln340_4, i40 549755813887, i40 %q_V_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 155 'select' 'select_ln340_2' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 156 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_12)   --->   "%select_ln388_2 = select i1 %underflow_2, i40 -549755813888, i40 %q_V_1" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 156 'select' 'select_ln388_2' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 157 [1/1] (1.07ns) (out node of the LUT)   --->   "%p_Val2_12 = select i1 %or_ln340_6, i40 %select_ln340_2, i40 %select_ln388_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 157 'select' 'p_Val2_12' <Predicate = true> <Delay = 1.07> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 2.88>
+ST_13 : Operation 158 [1/1] (0.00ns)   --->   "%lhs_V_1 = sext i40 %p_Val2_12 to i41" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 158 'sext' 'lhs_V_1' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 159 [1/1] (0.00ns)   --->   "%rhs_V_1 = sext i40 %p_Val2_13 to i41" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 159 'sext' 'rhs_V_1' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 160 [1/1] (2.88ns)   --->   "%ret_V = add nsw i41 %lhs_V_1, %rhs_V_1" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 160 'add' 'ret_V' <Predicate = true> <Delay = 2.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 4.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 3.89>
+ST_14 : Operation 161 [1/1] (0.00ns)   --->   "%r_V_4 = sext i40 %p_Val2_12 to i81" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 161 'sext' 'r_V_4' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 162 [1/1] (0.00ns)   --->   "%sext_ln1118 = sext i41 %ret_V to i81" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 162 'sext' 'sext_ln1118' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 163 [6/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 163 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 3.89>
+ST_15 : Operation 164 [5/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 164 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 3.89>
+ST_16 : Operation 165 [4/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 165 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 3.89>
+ST_17 : Operation 166 [3/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 166 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 3.89>
+ST_18 : Operation 167 [2/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 167 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 3.89>
+ST_19 : Operation 168 [1/6] (3.89ns)   --->   "%r_V_5 = mul nsw i81 %sext_ln1118, %r_V_4" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 168 'mul' 'r_V_5' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 3.97>
+ST_20 : Operation 169 [1/1] (0.00ns)   --->   "%r_V_6 = call i74 @_ssdm_op_BitConcatenate.i74.i40.i34(i40 %p_Val2_6, i34 0)" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 169 'bitconcatenate' 'r_V_6' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 170 [1/1] (0.00ns)   --->   "%sext_ln1497 = sext i74 %r_V_6 to i81" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 170 'sext' 'sext_ln1497' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 171 [1/1] (2.99ns)   --->   "%icmp_ln1497 = icmp slt i81 %sext_ln1497, %r_V_5" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 171 'icmp' 'icmp_ln1497' <Predicate = true> <Delay = 2.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 172 [1/1] (0.00ns) (grouped into LUT with out node or_ln1497)   --->   "%xor_ln1497 = xor i1 %icmp_ln1497, true" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 172 'xor' 'xor_ln1497' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 173 [1/1] (0.97ns) (out node of the LUT)   --->   "%or_ln1497 = or i1 %icmp_ln1497_1, %xor_ln1497" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 173 'or' 'or_ln1497' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 174 [1/1] (0.00ns)   --->   "ret i1 %or_ln1497" [mandelbrotHLS/pretest.cpp:26]   --->   Operation 174 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
 + Verbose Summary: Timing violations
 ============================================================
-Target clock period: 8ns, clock uncertainty: 1.5ns.
+Target clock period: 6ns, clock uncertainty: 0.75ns.
 
- <State 1>: 5.69ns
+ <State 1>: 3.9ns
 The critical path consists of the following:
 	wire read on port 'y_V' (mandelbrotHLS/pretest.cpp:12) [3]  (0 ns)
-	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:12) [6]  (5.69 ns)
+	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:12) [6]  (3.9 ns)
 
- <State 2>: 5.69ns
+ <State 2>: 5.03ns
 The critical path consists of the following:
-	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:12) [6]  (5.69 ns)
+	wire read on port 'x_V' (mandelbrotHLS/pretest.cpp:12) [4]  (0 ns)
+	'add' operation ('x_1.V', mandelbrotHLS/pretest.cpp:13) [50]  (2.88 ns)
+	'select' operation ('select_ln388_1', mandelbrotHLS/pretest.cpp:13) [58]  (1.07 ns)
+	'select' operation ('__Val2__', mandelbrotHLS/pretest.cpp:13) [59]  (1.07 ns)
 
- <State 3>: 5.69ns
+ <State 3>: 4.1ns
 The critical path consists of the following:
-	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:12) [6]  (5.69 ns)
+	'and' operation ('and_ln786_5', mandelbrotHLS/pretest.cpp:15) [113]  (0.978 ns)
+	'xor' operation ('xor_ln786_3', mandelbrotHLS/pretest.cpp:15) [114]  (0 ns)
+	'and' operation ('underflow', mandelbrotHLS/pretest.cpp:15) [115]  (0.978 ns)
+	'or' operation ('or_ln340_7', mandelbrotHLS/pretest.cpp:15) [116]  (0 ns)
+	'select' operation ('select_ln340_3', mandelbrotHLS/pretest.cpp:15) [118]  (1.07 ns)
+	'select' operation ('select_ln340_7', mandelbrotHLS/pretest.cpp:15) [120]  (1.07 ns)
 
- <State 4>: 6.2ns
+ <State 4>: 3.9ns
 The critical path consists of the following:
-	'icmp' operation ('r', mandelbrotHLS/pretest.cpp:12) [11]  (2.43 ns)
-	'or' operation ('r', mandelbrotHLS/pretest.cpp:12) [13]  (0 ns)
-	'and' operation ('and_ln412', mandelbrotHLS/pretest.cpp:12) [15]  (0 ns)
-	'add' operation ('y2.V', mandelbrotHLS/pretest.cpp:12) [17]  (2.79 ns)
+	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:12) [6]  (3.9 ns)
+
+ <State 5>: 3.9ns
+The critical path consists of the following:
+	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:12) [6]  (3.9 ns)
+
+ <State 6>: 5.08ns
+The critical path consists of the following:
+	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:12) [6]  (3.9 ns)
+	'icmp' operation ('Range2_all_ones', mandelbrotHLS/pretest.cpp:12) [23]  (1.19 ns)
+
+ <State 7>: 3.9ns
+The critical path consists of the following:
+	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:14) [61]  (3.9 ns)
+
+ <State 8>: 4.85ns
+The critical path consists of the following:
+	'add' operation ('y2.V', mandelbrotHLS/pretest.cpp:12) [17]  (2.88 ns)
 	'xor' operation ('xor_ln416', mandelbrotHLS/pretest.cpp:12) [19]  (0 ns)
 	'and' operation ('carry', mandelbrotHLS/pretest.cpp:12) [20]  (0.978 ns)
+	'select' operation ('deleted_ones', mandelbrotHLS/pretest.cpp:12) [31]  (0 ns)
+	'and' operation ('and_ln786', mandelbrotHLS/pretest.cpp:12) [37]  (0.993 ns)
 
- <State 5>: 5.69ns
+ <State 9>: 5.1ns
 The critical path consists of the following:
-	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:14) [61]  (5.69 ns)
+	'and' operation ('and_ln781', mandelbrotHLS/pretest.cpp:12) [32]  (0.978 ns)
+	'or' operation ('or_ln786', mandelbrotHLS/pretest.cpp:12) [38]  (0 ns)
+	'xor' operation ('xor_ln786', mandelbrotHLS/pretest.cpp:12) [39]  (0 ns)
+	'and' operation ('underflow', mandelbrotHLS/pretest.cpp:12) [40]  (0.978 ns)
+	'or' operation ('or_ln340', mandelbrotHLS/pretest.cpp:12) [41]  (0.993 ns)
+	'select' operation ('select_ln340', mandelbrotHLS/pretest.cpp:12) [44]  (1.07 ns)
+	'select' operation ('__Val2__', mandelbrotHLS/pretest.cpp:12) [46]  (1.07 ns)
 
- <State 6>: 5.23ns
+ <State 10>: 5.21ns
 The critical path consists of the following:
-	'add' operation ('ret.V', mandelbrotHLS/pretest.cpp:14) [64]  (3.79 ns)
-	'icmp' operation ('Range1_all_ones', mandelbrotHLS/pretest.cpp:14) [83]  (1.44 ns)
+	'add' operation ('ret.V', mandelbrotHLS/pretest.cpp:14) [64]  (4.02 ns)
+	'icmp' operation ('Range2_all_ones', mandelbrotHLS/pretest.cpp:14) [81]  (1.19 ns)
 
- <State 7>: 5.74ns
+ <State 11>: 4.85ns
 The critical path consists of the following:
-	'add' operation ('q.V', mandelbrotHLS/pretest.cpp:14) [75]  (2.79 ns)
+	'add' operation ('q.V', mandelbrotHLS/pretest.cpp:14) [75]  (2.88 ns)
 	'xor' operation ('xor_ln416_1', mandelbrotHLS/pretest.cpp:14) [77]  (0 ns)
 	'and' operation ('carry', mandelbrotHLS/pretest.cpp:14) [78]  (0.978 ns)
 	'select' operation ('deleted_ones', mandelbrotHLS/pretest.cpp:14) [89]  (0 ns)
 	'and' operation ('and_ln786_3', mandelbrotHLS/pretest.cpp:14) [95]  (0.993 ns)
+
+ <State 12>: 5.1ns
+The critical path consists of the following:
+	'and' operation ('and_ln781_1', mandelbrotHLS/pretest.cpp:14) [90]  (0.978 ns)
 	'or' operation ('or_ln786_1', mandelbrotHLS/pretest.cpp:14) [96]  (0 ns)
 	'xor' operation ('xor_ln786_2', mandelbrotHLS/pretest.cpp:14) [97]  (0 ns)
 	'and' operation ('underflow', mandelbrotHLS/pretest.cpp:14) [98]  (0.978 ns)
-
- <State 8>: 5.7ns
-The critical path consists of the following:
-	'select' operation ('deleted_zeros', mandelbrotHLS/pretest.cpp:14) [85]  (0 ns)
-	'xor' operation ('xor_ln785_2', mandelbrotHLS/pretest.cpp:14) [91]  (0 ns)
-	'or' operation ('or_ln785_1', mandelbrotHLS/pretest.cpp:14) [92]  (0 ns)
-	'and' operation ('overflow', mandelbrotHLS/pretest.cpp:14) [94]  (0 ns)
 	'or' operation ('or_ln340_4', mandelbrotHLS/pretest.cpp:14) [99]  (0.993 ns)
-	'select' operation ('select_ln340_2', mandelbrotHLS/pretest.cpp:14) [102]  (0.935 ns)
-	'select' operation ('__Val2__', mandelbrotHLS/pretest.cpp:14) [104]  (0.978 ns)
-	'add' operation ('ret.V', mandelbrotHLS/pretest.cpp:17) [123]  (2.79 ns)
+	'select' operation ('select_ln340_2', mandelbrotHLS/pretest.cpp:14) [102]  (1.07 ns)
+	'select' operation ('__Val2__', mandelbrotHLS/pretest.cpp:14) [104]  (1.07 ns)
 
- <State 9>: 5.69ns
+ <State 13>: 2.88ns
 The critical path consists of the following:
-	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:17) [126]  (5.69 ns)
+	'add' operation ('ret.V', mandelbrotHLS/pretest.cpp:17) [123]  (2.88 ns)
 
- <State 10>: 5.69ns
+ <State 14>: 3.9ns
 The critical path consists of the following:
-	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:17) [126]  (5.69 ns)
+	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:17) [126]  (3.9 ns)
 
- <State 11>: 5.69ns
+ <State 15>: 3.9ns
 The critical path consists of the following:
-	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:17) [126]  (5.69 ns)
+	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:17) [126]  (3.9 ns)
 
- <State 12>: 3.9ns
+ <State 16>: 3.9ns
 The critical path consists of the following:
-	'icmp' operation ('icmp_ln1497', mandelbrotHLS/pretest.cpp:17) [132]  (2.92 ns)
+	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:17) [126]  (3.9 ns)
+
+ <State 17>: 3.9ns
+The critical path consists of the following:
+	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:17) [126]  (3.9 ns)
+
+ <State 18>: 3.9ns
+The critical path consists of the following:
+	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:17) [126]  (3.9 ns)
+
+ <State 19>: 3.9ns
+The critical path consists of the following:
+	'mul' operation ('r.V', mandelbrotHLS/pretest.cpp:17) [126]  (3.9 ns)
+
+ <State 20>: 3.97ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln1497', mandelbrotHLS/pretest.cpp:17) [132]  (2.99 ns)
 	'xor' operation ('xor_ln1497', mandelbrotHLS/pretest.cpp:17) [133]  (0 ns)
 	'or' operation ('or_ln1497', mandelbrotHLS/pretest.cpp:17) [135]  (0.978 ns)
 
@@ -349,6 +427,14 @@ N/A
 	State 10
 	State 11
 	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
 
 
 ============================================================

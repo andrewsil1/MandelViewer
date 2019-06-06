@@ -11,10 +11,10 @@
 <ID>469</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_pretest_fu_185</InstName>
+<InstName>grp_pretest_fu_187</InstName>
 <ModuleName>pretest</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>185</ID>
+<ID>187</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -25,10 +25,10 @@
 <ID>477</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_pretest_fu_185</InstName>
+<InstName>grp_pretest_fu_187</InstName>
 <ModuleName>pretest</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>185</ID>
+<ID>187</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -39,10 +39,10 @@
 <ID>485</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_pretest_fu_185</InstName>
+<InstName>grp_pretest_fu_187</InstName>
 <ModuleName>pretest</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>185</ID>
+<ID>187</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -53,10 +53,10 @@
 <ID>493</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_pretest_fu_185</InstName>
+<InstName>grp_pretest_fu_187</InstName>
 <ModuleName>pretest</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>185</ID>
+<ID>187</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -67,10 +67,10 @@
 <ID>509</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_pretest_fu_185</InstName>
+<InstName>grp_pretest_fu_187</InstName>
 <ModuleName>pretest</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>185</ID>
+<ID>187</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -81,10 +81,10 @@
 <ID>501</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_pretest_fu_185</InstName>
+<InstName>grp_pretest_fu_187</InstName>
 <ModuleName>pretest</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>185</ID>
+<ID>187</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -95,10 +95,10 @@
 <ID>453</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_pretest_fu_185</InstName>
+<InstName>grp_pretest_fu_187</InstName>
 <ModuleName>pretest</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>185</ID>
+<ID>187</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -109,10 +109,10 @@
 <ID>461</ID>
 <InstancesList>
 <Instance>
-<InstName>grp_pretest_fu_185</InstName>
+<InstName>grp_pretest_fu_187</InstName>
 <ModuleName>pretest</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>185</ID>
+<ID>187</ID>
 </Instance>
 </InstancesList>
 </Instance>
@@ -125,23 +125,23 @@
 <Name>pretest</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
-<TargetClockPeriod>8.00</TargetClockPeriod>
-<ClockUncertainty>1.50</ClockUncertainty>
-<EstimatedClockPeriod>6.204</EstimatedClockPeriod>
+<TargetClockPeriod>6.00</TargetClockPeriod>
+<ClockUncertainty>0.75</ClockUncertainty>
+<EstimatedClockPeriod>5.206</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>11</Best-caseLatency>
-<Average-caseLatency>11</Average-caseLatency>
-<Worst-caseLatency>11</Worst-caseLatency>
-<PipelineInitiationInterval>11</PipelineInitiationInterval>
+<Best-caseLatency>19</Best-caseLatency>
+<Average-caseLatency>19</Average-caseLatency>
+<Worst-caseLatency>19</Worst-caseLatency>
+<PipelineInitiationInterval>19</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<DSP48E>8</DSP48E>
-<FF>822</FF>
-<LUT>1235</LUT>
+<DSP48E>10</DSP48E>
+<FF>934</FF>
+<LUT>1120</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
@@ -232,7 +232,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>36</Bits>
+<Bits>40</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -243,7 +243,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>36</Bits>
+<Bits>40</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 </InterfaceSummary>
@@ -252,15 +252,15 @@
 <Name>mandel_calc</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
-<TargetClockPeriod>8.00</TargetClockPeriod>
-<ClockUncertainty>1.50</ClockUncertainty>
-<EstimatedClockPeriod>6.427</EstimatedClockPeriod>
+<TargetClockPeriod>6.00</TargetClockPeriod>
+<ClockUncertainty>0.75</ClockUncertainty>
+<EstimatedClockPeriod>5.206</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>13</Best-caseLatency>
-<Average-caseLatency>342</Average-caseLatency>
-<Worst-caseLatency>26026</Worst-caseLatency>
-<PipelineInitiationInterval>13 ~ 26026</PipelineInitiationInterval>
+<Best-caseLatency>22</Best-caseLatency>
+<Average-caseLatency>553</Average-caseLatency>
+<Worst-caseLatency>42043</Worst-caseLatency>
+<PipelineInitiationInterval>22 ~ 42043</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -272,17 +272,17 @@
 <max>2000</max>
 </range>
 </TripCount>
-<Latency>0 ~ 26012</Latency>
-<IterationLatency>13</IterationLatency>
-<PipelineDepth>13</PipelineDepth>
+<Latency>0 ~ 42020</Latency>
+<IterationLatency>21</IterationLatency>
+<PipelineDepth>21</PipelineDepth>
 </mandel_calc_loop>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<DSP48E>16</DSP48E>
-<FF>1863</FF>
-<LUT>2722</LUT>
+<DSP48E>20</DSP48E>
+<FF>2130</FF>
+<LUT>2492</LUT>
 <BRAM_18K>0</BRAM_18K>
 <URAM>0</URAM>
 </Resources>
@@ -373,7 +373,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>36</Bits>
+<Bits>40</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -384,7 +384,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>36</Bits>
+<Bits>40</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -404,15 +404,15 @@
 <Name>calc</Name>
 <PerformanceEstimates>
 <SummaryOfTimingAnalysis>
-<TargetClockPeriod>8.00</TargetClockPeriod>
-<ClockUncertainty>1.50</ClockUncertainty>
-<EstimatedClockPeriod>6.500</EstimatedClockPeriod>
+<TargetClockPeriod>6.00</TargetClockPeriod>
+<ClockUncertainty>0.75</ClockUncertainty>
+<EstimatedClockPeriod>5.250</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>2067498</Best-caseLatency>
+<Best-caseLatency>3247151</Best-caseLatency>
 <Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>9003261642</Worst-caseLatency>
-<PipelineInitiationInterval>2067499 ~ 9003261643</PipelineInitiationInterval>
+<Worst-caseLatency>14539775087</Worst-caseLatency>
+<PipelineInitiationInterval>3247152 ~ 14539775088</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -424,14 +424,14 @@
 <max>1440</max>
 </range>
 </TripCount>
-<Latency>2067456 ~ 9003261600</Latency>
+<Latency>3247104 ~ 14539775040</Latency>
 <IterationLatency>
 <range>
-<min>2692</min>
-<max>6252265</max>
+<min>4228</min>
+<max>10097066</max>
 </range>
 </IterationLatency>
-<PipelineDepth>2692 ~ 6252265</PipelineDepth>
+<PipelineDepth>4228 ~ 10097066</PipelineDepth>
 <x_for>
 <Name>x_for</Name>
 <TripCount>
@@ -440,14 +440,14 @@
 <max>240</max>
 </range>
 </TripCount>
-<Latency>2688 ~ 6248160</Latency>
+<Latency>4224 ~ 10092960</Latency>
 <IterationLatency>
 <range>
-<min>21</min>
-<max>26034</max>
+<min>33</min>
+<max>42054</max>
 </range>
 </IterationLatency>
-<PipelineDepth>21 ~ 26034</PipelineDepth>
+<PipelineDepth>33 ~ 42054</PipelineDepth>
 </x_for>
 <burst_out>
 <Name>burst_out</Name>
@@ -457,19 +457,19 @@
 <max>4095</max>
 </range>
 </TripCount>
-<Latency>0 ~ 4101</Latency>
+<Latency>0 ~ 4102</Latency>
 <PipelineII>1</PipelineII>
-<PipelineDepth>8</PipelineDepth>
+<PipelineDepth>9</PipelineDepth>
 </burst_out>
 </y_for>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>10</BRAM_18K>
-<DSP48E>144</DSP48E>
-<FF>19148</FF>
-<LUT>27023</LUT>
+<BRAM_18K>12</BRAM_18K>
+<DSP48E>176</DSP48E>
+<FF>21968</FF>
+<LUT>24964</LUT>
 <URAM>0</URAM>
 </Resources>
 </AreaEstimates>

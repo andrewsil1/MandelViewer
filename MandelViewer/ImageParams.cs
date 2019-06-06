@@ -17,9 +17,9 @@ namespace MandelViewer
         #region Constructors
         public ImageParams()
         {
-            X0 = new FixedPoint.FixedPoint(36, 32, -2.0);
-            X1 = new FixedPoint.FixedPoint(36, 32, 1.0);
-            Y0 = new FixedPoint.FixedPoint(36, 32, 1.25);
+            X0 = new FixedPoint.FixedPoint(40, 36, -2.0);
+            X1 = new FixedPoint.FixedPoint(40, 36, 1.0);
+            Y0 = new FixedPoint.FixedPoint(40, 36, 1.25);
             Width = 1024;
         }
 

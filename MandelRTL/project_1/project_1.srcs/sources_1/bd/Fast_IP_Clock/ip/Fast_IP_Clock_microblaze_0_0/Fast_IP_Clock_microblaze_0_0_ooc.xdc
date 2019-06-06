@@ -52,6 +52,6 @@
 # #########################################################
 
 
-create_clock -period 12.571 -name Clk [get_ports Clk]
+create_clock -period 12.444 -name Clk [get_ports Clk]
 
 

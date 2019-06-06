@@ -8,7 +8,7 @@ ap_ready { }
 ap_idle { }
 X0_V { 
 	dir I
-	width 36
+	width 40
 	depth 1
 	mode ap_none
 	offset 16
@@ -16,7 +16,7 @@ X0_V {
 }
 Y0_V { 
 	dir I
-	width 36
+	width 40
 	depth 1
 	mode ap_none
 	offset 28
@@ -24,7 +24,7 @@ Y0_V {
 }
 X1_V { 
 	dir I
-	width 36
+	width 40
 	depth 1
 	mode ap_none
 	offset 40

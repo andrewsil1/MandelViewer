@@ -38,17 +38,17 @@ preplace netloc clk_wiz_0_clk_out3 1 1 4 N 540 600 570 1030 410 1570
 preplace netloc proc_sys_reset_2_peripheral_aresetn 1 3 2 1020 390 1630
 preplace netloc microblaze_0_axi_periph_M04_AXI 1 3 3 1040 18 NJ 18 1940
 preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 2000 200n
-preplace netloc microblaze_0_axi_periph_M05_AXI 1 5 1 1940 358n
 preplace netloc axi_uart16550_0_UART 1 6 1 N 220
-preplace netloc microblaze_0_axi_periph_M03_AXI 1 2 4 640 8 NJ 8 NJ 8 1950
+preplace netloc microblaze_0_axi_periph_M05_AXI 1 5 1 1940 358n
 preplace netloc microblaze_0_axi_periph_M00_AXI 1 5 1 1970 258n
+preplace netloc psram_ip_0_psram_rtl 1 6 1 N 380
+preplace netloc calc_0_m_axi_buf_r 1 4 1 1600 128n
 preplace netloc microblaze_0_debug 1 3 1 1010 280n
 preplace netloc microblaze_0_axi_periph_M01_AXI 1 2 4 630 -12 NJ -12 NJ -12 1960
 preplace netloc microblaze_0_M_AXI_DC 1 4 1 1550 108n
 preplace netloc axi_gpio_0_GPIO 1 6 1 N 520
-preplace netloc calc_0_m_axi_buf_r 1 4 1 1600 128n
 preplace netloc microblaze_0_M_AXI_DP 1 4 1 1540 88n
-preplace netloc psram_ip_0_psram_rtl 1 6 1 N 380
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 2 4 640 8 NJ 8 NJ 8 1950
 preplace netloc axi_intc_0_interrupt 1 3 1 N 260
 preplace netloc microblaze_0_dlmb_1 1 4 1 1560 260n
 preplace netloc microblaze_0_ilmb_1 1 4 1 1590 280n

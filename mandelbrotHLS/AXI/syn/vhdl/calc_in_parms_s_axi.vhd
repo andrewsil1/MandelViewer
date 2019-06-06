@@ -36,9 +36,9 @@ port (
     ap_done               :in   STD_LOGIC;
     ap_ready              :in   STD_LOGIC;
     ap_idle               :in   STD_LOGIC;
-    X0_V                  :out  STD_LOGIC_VECTOR(35 downto 0);
-    Y0_V                  :out  STD_LOGIC_VECTOR(35 downto 0);
-    X1_V                  :out  STD_LOGIC_VECTOR(35 downto 0);
+    X0_V                  :out  STD_LOGIC_VECTOR(39 downto 0);
+    Y0_V                  :out  STD_LOGIC_VECTOR(39 downto 0);
+    X1_V                  :out  STD_LOGIC_VECTOR(39 downto 0);
     width_V               :out  STD_LOGIC_VECTOR(11 downto 0);
     maxIter               :out  STD_LOGIC_VECTOR(15 downto 0)
 );
@@ -66,19 +66,19 @@ end entity calc_in_parms_s_axi;
 -- 0x10 : Data signal of X0_V
 --        bit 31~0 - X0_V[31:0] (Read/Write)
 -- 0x14 : Data signal of X0_V
---        bit 3~0 - X0_V[35:32] (Read/Write)
+--        bit 7~0 - X0_V[39:32] (Read/Write)
 --        others  - reserved
 -- 0x18 : reserved
 -- 0x1c : Data signal of Y0_V
 --        bit 31~0 - Y0_V[31:0] (Read/Write)
 -- 0x20 : Data signal of Y0_V
---        bit 3~0 - Y0_V[35:32] (Read/Write)
+--        bit 7~0 - Y0_V[39:32] (Read/Write)
 --        others  - reserved
 -- 0x24 : reserved
 -- 0x28 : Data signal of X1_V
 --        bit 31~0 - X1_V[31:0] (Read/Write)
 -- 0x2c : Data signal of X1_V
---        bit 3~0 - X1_V[35:32] (Read/Write)
+--        bit 7~0 - X1_V[39:32] (Read/Write)
 --        others  - reserved
 -- 0x30 : reserved
 -- 0x34 : Data signal of width_V
@@ -135,9 +135,9 @@ architecture behave of calc_in_parms_s_axi is
     signal int_gie             : STD_LOGIC := '0';
     signal int_ier             : UNSIGNED(1 downto 0) := (others => '0');
     signal int_isr             : UNSIGNED(1 downto 0) := (others => '0');
-    signal int_X0_V            : UNSIGNED(35 downto 0) := (others => '0');
-    signal int_Y0_V            : UNSIGNED(35 downto 0) := (others => '0');
-    signal int_X1_V            : UNSIGNED(35 downto 0) := (others => '0');
+    signal int_X0_V            : UNSIGNED(39 downto 0) := (others => '0');
+    signal int_Y0_V            : UNSIGNED(39 downto 0) := (others => '0');
+    signal int_X1_V            : UNSIGNED(39 downto 0) := (others => '0');
     signal int_width_V         : UNSIGNED(11 downto 0) := (others => '0');
     signal int_maxIter         : UNSIGNED(15 downto 0) := (others => '0');
 
@@ -264,15 +264,15 @@ begin
                     when ADDR_X0_V_DATA_0 =>
                         rdata_data <= RESIZE(int_X0_V(31 downto 0), 32);
                     when ADDR_X0_V_DATA_1 =>
-                        rdata_data <= RESIZE(int_X0_V(35 downto 32), 32);
+                        rdata_data <= RESIZE(int_X0_V(39 downto 32), 32);
                     when ADDR_Y0_V_DATA_0 =>
                         rdata_data <= RESIZE(int_Y0_V(31 downto 0), 32);
                     when ADDR_Y0_V_DATA_1 =>
-                        rdata_data <= RESIZE(int_Y0_V(35 downto 32), 32);
+                        rdata_data <= RESIZE(int_Y0_V(39 downto 32), 32);
                     when ADDR_X1_V_DATA_0 =>
                         rdata_data <= RESIZE(int_X1_V(31 downto 0), 32);
                     when ADDR_X1_V_DATA_1 =>
-                        rdata_data <= RESIZE(int_X1_V(35 downto 32), 32);
+                        rdata_data <= RESIZE(int_X1_V(39 downto 32), 32);
                     when ADDR_WIDTH_V_DATA_0 =>
                         rdata_data <= RESIZE(int_width_V(11 downto 0), 32);
                     when ADDR_MAXITER_DATA_0 =>
@@ -435,7 +435,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_X0_V_DATA_1) then
-                    int_X0_V(35 downto 32) <= (UNSIGNED(WDATA(3 downto 0)) and wmask(3 downto 0)) or ((not wmask(3 downto 0)) and int_X0_V(35 downto 32));
+                    int_X0_V(39 downto 32) <= (UNSIGNED(WDATA(7 downto 0)) and wmask(7 downto 0)) or ((not wmask(7 downto 0)) and int_X0_V(39 downto 32));
                 end if;
             end if;
         end if;
@@ -457,7 +457,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_Y0_V_DATA_1) then
-                    int_Y0_V(35 downto 32) <= (UNSIGNED(WDATA(3 downto 0)) and wmask(3 downto 0)) or ((not wmask(3 downto 0)) and int_Y0_V(35 downto 32));
+                    int_Y0_V(39 downto 32) <= (UNSIGNED(WDATA(7 downto 0)) and wmask(7 downto 0)) or ((not wmask(7 downto 0)) and int_Y0_V(39 downto 32));
                 end if;
             end if;
         end if;
@@ -479,7 +479,7 @@ begin
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (w_hs = '1' and waddr = ADDR_X1_V_DATA_1) then
-                    int_X1_V(35 downto 32) <= (UNSIGNED(WDATA(3 downto 0)) and wmask(3 downto 0)) or ((not wmask(3 downto 0)) and int_X1_V(35 downto 32));
+                    int_X1_V(39 downto 32) <= (UNSIGNED(WDATA(7 downto 0)) and wmask(7 downto 0)) or ((not wmask(7 downto 0)) and int_X1_V(39 downto 32));
                 end if;
             end if;
         end if;

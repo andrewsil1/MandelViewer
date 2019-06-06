@@ -35086,12 +35086,13 @@ _ssdm_op_SpecDataflowPipeline(-1, 0, "");
 # 11 "mandelbrotHLS/mandel.h"
 using namespace hls;
 
-typedef ap_fixed<36,4,AP_RND_CONV,AP_SAT> real;
+typedef ap_fixed<40,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
 void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf);
-# 2 "mandelbrotHLS/pretest.cpp" 2
+# 1 "mandelbrotHLS/pretest.cpp" 2
+
 # 1 "D:/Xilinx/Vivado/2019.1/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iostream" 1 3
 # 37 "D:/Xilinx/Vivado/2019.1/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iostream" 3
 # 37 "D:/Xilinx/Vivado/2019.1/win64/tools/clang/bin\\..\\lib\\clang\\3.1/../../../include/c++/4.5.2\\iostream" 3
@@ -49765,7 +49766,8 @@ namespace std {
   static ios_base::Init __ioinit;
 
 }
-# 3 "mandelbrotHLS/pretest.cpp" 2
+# 2 "mandelbrotHLS/pretest.cpp" 2
+
 
 using namespace std;
 

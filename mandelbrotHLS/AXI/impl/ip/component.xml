@@ -961,9 +961,9 @@
           </spirit:reset>
           <spirit:field>
             <spirit:name>X0_V</spirit:name>
-            <spirit:description>Bit 35 to 32 Data signal of X0_V</spirit:description>
+            <spirit:description>Bit 39 to 32 Data signal of X0_V</spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">4</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long">8</spirit:bitWidth>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
               <spirit:minimum>0</spirit:minimum>
@@ -974,8 +974,8 @@
           <spirit:field>
             <spirit:name>RESERVED</spirit:name>
             <spirit:description>Reserved.  0s on read.</spirit:description>
-            <spirit:bitOffset>4</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">28</spirit:bitWidth>
+            <spirit:bitOffset>8</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">24</spirit:bitWidth>
             <spirit:access>read-only</spirit:access>
             <spirit:writeValueConstraint>
               <spirit:minimum>0</spirit:minimum>
@@ -1020,9 +1020,9 @@
           </spirit:reset>
           <spirit:field>
             <spirit:name>Y0_V</spirit:name>
-            <spirit:description>Bit 35 to 32 Data signal of Y0_V</spirit:description>
+            <spirit:description>Bit 39 to 32 Data signal of Y0_V</spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">4</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long">8</spirit:bitWidth>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
               <spirit:minimum>0</spirit:minimum>
@@ -1033,8 +1033,8 @@
           <spirit:field>
             <spirit:name>RESERVED</spirit:name>
             <spirit:description>Reserved.  0s on read.</spirit:description>
-            <spirit:bitOffset>4</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">28</spirit:bitWidth>
+            <spirit:bitOffset>8</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">24</spirit:bitWidth>
             <spirit:access>read-only</spirit:access>
             <spirit:writeValueConstraint>
               <spirit:minimum>0</spirit:minimum>
@@ -1079,9 +1079,9 @@
           </spirit:reset>
           <spirit:field>
             <spirit:name>X1_V</spirit:name>
-            <spirit:description>Bit 35 to 32 Data signal of X1_V</spirit:description>
+            <spirit:description>Bit 39 to 32 Data signal of X1_V</spirit:description>
             <spirit:bitOffset>0</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">4</spirit:bitWidth>
+            <spirit:bitWidth spirit:format="long">8</spirit:bitWidth>
             <spirit:access>write-only</spirit:access>
             <spirit:writeValueConstraint>
               <spirit:minimum>0</spirit:minimum>
@@ -1092,8 +1092,8 @@
           <spirit:field>
             <spirit:name>RESERVED</spirit:name>
             <spirit:description>Reserved.  0s on read.</spirit:description>
-            <spirit:bitOffset>4</spirit:bitOffset>
-            <spirit:bitWidth spirit:format="long">28</spirit:bitWidth>
+            <spirit:bitOffset>8</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">24</spirit:bitWidth>
             <spirit:access>read-only</spirit:access>
             <spirit:writeValueConstraint>
               <spirit:minimum>0</spirit:minimum>
@@ -1192,7 +1192,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8a08a68c</spirit:value>
+            <spirit:value>f8266153</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1208,7 +1208,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>10dc59bc</spirit:value>
+            <spirit:value>2b959fde</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1224,7 +1224,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>44067ebc</spirit:value>
+            <spirit:value>3d1d618b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1240,7 +1240,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>021d9b24</spirit:value>
+            <spirit:value>f29c5c6e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1254,7 +1254,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4f710b24</spirit:value>
+            <spirit:value>f6fdfee0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2532,19 +2532,19 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/calc_mul_12ns_36sfYi.v</spirit:name>
+        <spirit:name>hdl/verilog/calc_mul_12ns_40sfYi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/calc_mul_36s_36s_bkb.v</spirit:name>
+        <spirit:name>hdl/verilog/calc_mul_40s_40s_cud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/calc_mul_36s_37s_dEe.v</spirit:name>
+        <spirit:name>hdl/verilog/calc_mul_40s_41s_dEe.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/calc_mul_37s_36s_cud.v</spirit:name>
+        <spirit:name>hdl/verilog/calc_mul_41s_40s_bkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2552,7 +2552,7 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/calc_sdiv_37ns_13eOg.v</spirit:name>
+        <spirit:name>hdl/verilog/calc_sdiv_41ns_13eOg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2586,22 +2586,22 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/calc_mul_12ns_36sfYi.v</spirit:name>
+        <spirit:name>hdl/verilog/calc_mul_12ns_40sfYi.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/calc_mul_36s_36s_bkb.v</spirit:name>
+        <spirit:name>hdl/verilog/calc_mul_40s_40s_cud.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/calc_mul_36s_37s_dEe.v</spirit:name>
+        <spirit:name>hdl/verilog/calc_mul_40s_41s_dEe.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/calc_mul_37s_36s_cud.v</spirit:name>
+        <spirit:name>hdl/verilog/calc_mul_41s_40s_bkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2611,7 +2611,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/verilog/calc_sdiv_37ns_13eOg.v</spirit:name>
+        <spirit:name>hdl/verilog/calc_sdiv_41ns_13eOg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2651,19 +2651,19 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/calc_mul_12ns_36sfYi.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/calc_mul_12ns_40sfYi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/calc_mul_36s_36s_bkb.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/calc_mul_40s_40s_cud.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/calc_mul_36s_37s_dEe.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/calc_mul_40s_41s_dEe.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/calc_mul_37s_36s_cud.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/calc_mul_41s_40s_bkb.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2671,7 +2671,7 @@
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/calc_sdiv_37ns_13eOg.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/calc_sdiv_41ns_13eOg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -2685,7 +2685,7 @@
       <spirit:file>
         <spirit:name>hdl/vhdl/calc.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_921a2e6f</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_6e659b2f</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -2706,22 +2706,22 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/calc_mul_12ns_36sfYi.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/calc_mul_12ns_40sfYi.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/calc_mul_36s_36s_bkb.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/calc_mul_40s_40s_cud.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/calc_mul_36s_37s_dEe.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/calc_mul_40s_41s_dEe.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/calc_mul_37s_36s_cud.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/calc_mul_41s_40s_bkb.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2731,7 +2731,7 @@
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>hdl/vhdl/calc_sdiv_37ns_13eOg.vhd</spirit:name>
+        <spirit:name>hdl/vhdl/calc_sdiv_41ns_13eOg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
       </spirit:file>
@@ -2940,7 +2940,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>clk_period</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="15">8</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.clk_period" spirit:order="15">6</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>machine</spirit:name>
@@ -2952,7 +2952,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="18">2067498</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="18">3247151</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -2969,18 +2969,18 @@
       </xilinx:taxonomies>
       <xilinx:displayName>calc</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1906041134</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2019-06-04T18:34:42Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1906051351</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2019-06-05T20:51:27Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="e2233654"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="ad851dea"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="9430fb3a"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="75f2728f"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="12d79daa"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a0bed333"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="d11ebaa8"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="0e5636b6"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="bd9c4a14"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="c8dfd334"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

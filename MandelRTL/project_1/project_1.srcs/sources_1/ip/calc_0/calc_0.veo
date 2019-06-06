@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: QuickSilver:hls:calc:1.01
-// IP Revision: 1906041134
+// IP Revision: 1906051351
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections

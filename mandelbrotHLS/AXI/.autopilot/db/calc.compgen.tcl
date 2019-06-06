@@ -1,10 +1,10 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 13
-set name calc_sdiv_37ns_13eOg
+set name calc_sdiv_41ns_13eOg
 set corename simcore_sdiv_seq
 set op sdiv
-set stage_num 41
+set stage_num 45
 set max_latency -1
 set registered_input 1
 set clk_width 1
@@ -14,13 +14,13 @@ set reset_signed 0
 set start_width 1
 set start_signed 0
 set done_width 1
-set in0_width 37
+set in0_width 41
 set in0_signed 0
 set in1_width 13
 set in1_signed 0
 set ce_width 1
 set ce_signed 0
-set out_width 37
+set out_width 41
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_sdiv] == "ap_gen_simcore_sdiv"} {
 eval "ap_gen_simcore_sdiv { \
@@ -95,10 +95,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_div, check your pla
 
 
 set id 14
-set name calc_mul_12ns_36sfYi
+set name calc_mul_12ns_40sfYi
 set corename simcore_mul
 set op mul
-set stage_num 3
+set stage_num 6
 set max_latency -1
 set registered_input 1
 set clk_width 1
@@ -107,11 +107,11 @@ set reset_width 1
 set reset_signed 0
 set in0_width 12
 set in0_signed 0
-set in1_width 36
+set in1_width 40
 set in1_signed 1
 set ce_width 1
 set ce_signed 0
-set out_width 48
+set out_width 52
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mul] == "ap_gen_simcore_mul"} {
 eval "ap_gen_simcore_mul { \
@@ -305,7 +305,7 @@ set ROMData {}
 set NumOfStage 2
 set MaxLatency -1
 set DelayBudget 3.257
-set ClkPeriod 8
+set ClkPeriod 6
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
 if {[info proc ap_gen_simcore_mem] == "ap_gen_simcore_mem"} {
@@ -388,7 +388,7 @@ ap_ready { }
 ap_idle { }
 X0_V { 
 	dir I
-	width 36
+	width 40
 	depth 1
 	mode ap_none
 	offset 16
@@ -396,7 +396,7 @@ X0_V {
 }
 Y0_V { 
 	dir I
-	width 36
+	width 40
 	depth 1
 	mode ap_none
 	offset 28
@@ -404,7 +404,7 @@ Y0_V {
 }
 X1_V { 
 	dir I
-	width 36
+	width 40
 	depth 1
 	mode ap_none
 	offset 40
@@ -458,7 +458,7 @@ eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
     corename {m_axi} \
     op interface \
     max_latency -1 \ 
-    delay_budget 6.5 \ 
+    delay_budget 5.25 \ 
     is_flushable 0 \ 
     name {calc_buf_r_m_axi} \
 } "

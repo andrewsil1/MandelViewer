@@ -6,8 +6,8 @@
     </Simulation>
     <files xmlns="">
         <file name="../mandel_maintb.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
-        <file name="mandelbrotHLS/mandel.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="mandelbrotHLS/pretest.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="mandelbrotHLS/mandel.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">
         <solution name="AXI" status="active"/>

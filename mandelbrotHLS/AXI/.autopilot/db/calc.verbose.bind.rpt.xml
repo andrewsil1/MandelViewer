@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'calc'" level="0">
-<item name = "Date">Tue Jun  4 11:20:01 2019
+<item name = "Date">Wed Jun  5 13:50:04 2019
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">mandelbrotHLS</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">8.00, 6.500, 1.50</column>
+<column name="ap_clk">6.00, 5.250, 0.75</column>
 </table>
 </item>
 </section>
@@ -24,28 +24,28 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">2067498, 9003261642, 2067498, 9003261642, none</column>
+<column name="">3247151, 14539775087, 3247151, 14539775087, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_mandel_calc_fu_469">mandel_calc, 13, 26026, 13, 26026, none</column>
-<column name="grp_mandel_calc_fu_477">mandel_calc, 13, 26026, 13, 26026, none</column>
-<column name="grp_mandel_calc_fu_485">mandel_calc, 13, 26026, 13, 26026, none</column>
-<column name="grp_mandel_calc_fu_493">mandel_calc, 13, 26026, 13, 26026, none</column>
-<column name="grp_mandel_calc_fu_509">mandel_calc, 13, 26026, 13, 26026, none</column>
-<column name="grp_mandel_calc_fu_501">mandel_calc, 13, 26026, 13, 26026, none</column>
-<column name="grp_mandel_calc_fu_453">mandel_calc, 13, 26026, 13, 26026, none</column>
-<column name="grp_mandel_calc_fu_461">mandel_calc, 13, 26026, 13, 26026, none</column>
+<column name="grp_mandel_calc_fu_469">mandel_calc, 22, 42043, 22, 42043, none</column>
+<column name="grp_mandel_calc_fu_477">mandel_calc, 22, 42043, 22, 42043, none</column>
+<column name="grp_mandel_calc_fu_485">mandel_calc, 22, 42043, 22, 42043, none</column>
+<column name="grp_mandel_calc_fu_493">mandel_calc, 22, 42043, 22, 42043, none</column>
+<column name="grp_mandel_calc_fu_509">mandel_calc, 22, 42043, 22, 42043, none</column>
+<column name="grp_mandel_calc_fu_501">mandel_calc, 22, 42043, 22, 42043, none</column>
+<column name="grp_mandel_calc_fu_453">mandel_calc, 22, 42043, 22, 42043, none</column>
+<column name="grp_mandel_calc_fu_461">mandel_calc, 22, 42043, 22, 42043, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- y_for">2067456, 9003261600, 2692 ~ 6252265, -, -, 768 ~ 1440, no</column>
-<column name=" + x_for">2688, 6248160, 21 ~ 26034, -, -, 128 ~ 240, no</column>
-<column name=" + burst_out">0, 4101, 8, 1, 1, 0 ~ 4095, yes</column>
+<column name="- y_for">3247104, 14539775040, 4228 ~ 10097066, -, -, 768 ~ 1440, no</column>
+<column name=" + x_for">4224, 10092960, 33 ~ 42054, -, -, 128 ~ 240, no</column>
+<column name=" + burst_out">0, 4102, 9, 1, 1, 0 ~ 4095, yes</column>
 </table>
 </item>
 </section>

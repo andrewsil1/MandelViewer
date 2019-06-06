@@ -13,7 +13,7 @@ set Pointer0 "0"
 set Reference0 "0"
 set Dims0 [list 0]
 set Interface0 "wire"
-set DataType0 "[list ap_fixed 36 4 4 0 0 ]"
+set DataType0 "[list ap_fixed 40 4 4 0 0 ]"
 set Port0 [list $PortName0 $Interface0 $DataType0 $Pointer0 $Dims0 $Const0 $Volatile0 $ArrayOpt0]
 lappend PortList $Port0
 set PortName1 "Y0"
@@ -25,7 +25,7 @@ set Pointer1 "0"
 set Reference1 "0"
 set Dims1 [list 0]
 set Interface1 "wire"
-set DataType1 "[list ap_fixed 36 4 4 0 0 ]"
+set DataType1 "[list ap_fixed 40 4 4 0 0 ]"
 set Port1 [list $PortName1 $Interface1 $DataType1 $Pointer1 $Dims1 $Const1 $Volatile1 $ArrayOpt1]
 lappend PortList $Port1
 set PortName2 "X1"
@@ -37,7 +37,7 @@ set Pointer2 "0"
 set Reference2 "0"
 set Dims2 [list 0]
 set Interface2 "wire"
-set DataType2 "[list ap_fixed 36 4 4 0 0 ]"
+set DataType2 "[list ap_fixed 40 4 4 0 0 ]"
 set Port2 [list $PortName2 $Interface2 $DataType2 $Pointer2 $Dims2 $Const2 $Volatile2 $ArrayOpt2]
 lappend PortList $Port2
 set PortName3 "width"
