@@ -11,11 +11,9 @@
 #include "xcalc.h"
 #include "microblaze_sleep.h"
 
-//#include <climits>
 #include <stdio.h>
 
 #include "uartfuncs.h"
-#include "psram_ip.h"
 #include "LZ4/lz4frame.h"
 #include "LZ4/xxhash.h"
 
@@ -44,63 +42,63 @@
  * and received with the Uart device.
  */
 #define TEST_BUFFER_SIZE        100
-//#define FRAC_BITS				32
 #define BAUD_RATE				3000000U //3Mbps is the maximum the FTDI USB UART can handle.
 #define	CHUNK_SIZE				65536    //Serial packet chunks for sending image data
 //TODO: Tell receiver how big the chunks are over the wire so the rx buffer can be sized appropriately.
 
 /************************** Function Prototypes ******************************/
-
-int CalcMandelbrot(XIntc *IntcInstancePtr,	XUartNs550 *UartInstancePtr, u16 UartDeviceId, u16 UartIntrId);
 uint32_t rc_crc32(uint32_t crc, const char *buf, size_t len);
+int SetupCalc();
 
 /************************** Variable Definitions *****************************/
 
- XUartNs550 UartNs550Instance;	 /* Instance of the UART Device */
- XUartLite DbgInstance;			 /* Instance of the MDM_1 UartLite for console */
- XIntc InterruptController;      /* The instance of the Interrupt Controller */
- XCalc Calc;					 /* The instance of the Mandelbrot Calc device */
- XCalc_Config *Calc_Cfg;		 /* The instance of the Calc config */
+XUartNs550 UartNs550Instance;	 /* Instance of the UART Device */
+XUartLite DbgInstance;			 /* Instance of the MDM_1 UartLite for console */
+XIntc InterruptController;      /* The instance of the Interrupt Controller */
+XCalc Calc;					 /* The instance of the Mandelbrot Calc device */
+XCalc_Config *Calc_Cfg;		 /* The instance of the Calc config */
 
- /*
-  * The following buffer is used to receive data with the Uart.
-  */
- u8 ReceiveBuffer[TEST_BUFFER_SIZE];
- u8* ReceiveBufferPtr = &ReceiveBuffer[0];
+/*
+ * The following buffer is used to receive data with the Uart.
+ */
+u8 ReceiveBuffer[TEST_BUFFER_SIZE];
+u8* ReceiveBufferPtr = &ReceiveBuffer[0];
 
+/*
+ * The following counters are used to determine when the entire buffer has
+ * been sent and received.
+ */
+volatile int TotalReceivedCount;
+volatile int TotalSentCount;
+volatile int TotalErrorCount;
+static XUartNs550Stats Stats;
+
+// Coordinates for Mandelbrot set calculation to pass to the hardware - Upper left X/Y, Upper right X.
+u64 X0, X1, Y0;
+u32 maxIter = 2000;
+u32 MAXWIDTH = 0; // Retrieved from hardware later.
+u32 UNROLL = 0;   // Retrieved from hardware later. Width % UNROLL must be 0.
+u32 WIDTH = 1920;  // Initial width of image.
+u32 HEIGHT = WIDTH * 3U / 4U;
 
 /* Addresses of various spaces in PSRAM */
-u8* compressBuffer = (u8*) (PSRAM_BASE + 0x200000);		 // Space to compress data prior to transmission.
+u8* compressBuffer = (u8*) (PSRAM_BASE + (1920 * 1440 * sizeof(u16)));  // Space to compress data prior to transmission. 0x546000 is the maximum size of the raw image buffer below the compression buffer.
 u8* heap = (u8*) (PSRAM_BASE + 0xC00000);				 // Location of heap, as defined in lscript.ld
 
+// For the serial port...
+u16 Options;
+u8 Errors;
 
- /*
-  * The following counters are used to determine when the entire buffer has
-  * been sent and received.
-  */
- volatile int TotalReceivedCount;
- volatile int TotalSentCount;
- volatile int TotalErrorCount;
- static XUartNs550Stats Stats;
-
- // Coordinates for Mandelbrot set calculation to pass to the hardware - Upper left X/Y, Upper right X.
- u64 X0, X1, Y0;
- u32 maxIter = 2000;
- u32 WIDTH = 1024;  // Hardware supports up to 1920 wide. Do not exceed, and ensure it remains divisible by 8.
- u32 HEIGHT = WIDTH * 3U / 4U;
-
- // For the serial port...
- u16 Options;
- u8 Errors;
-
- u32 CompressOutput() {
+u32 CompressOutput() {
 	 LZ4F_cctx* cctxPtr;	//compressionContext object
 	 u32 compressCapacity = (u32)heap - (u32)compressBuffer; // Space above 80C00000 is reserved for program heap.
 
 	 LZ4F_errorCode_t error = LZ4F_createCompressionContext(&cctxPtr, LZ4F_VERSION);
 	 if (error != 0) {
+		#ifdef DEBUG
 		 xil_printf("Error creating compression context: %s", LZ4F_getErrorName(error));
-		 return XST_FAILURE;
+		#endif
+		return XST_FAILURE;
 	 }
 
 	 LZ4F_frameInfo_t frameInfo;
@@ -148,7 +146,7 @@ u8* heap = (u8*) (PSRAM_BASE + 0xC00000);				 // Location of heap, as defined in
 	 return bytesWritten;
  }
 
- void GetCommand(XUartNs550 *UartInstancePtr, u8 *ReceiveBufferPtr) {
+void GetCommand(XUartNs550 *UartInstancePtr, u8 *ReceiveBufferPtr) {
 
 	XUartNs550_ClearStats(UartInstancePtr);
 	static char SendStat[] = "@\n";
@@ -166,7 +164,7 @@ u8* heap = (u8*) (PSRAM_BASE + 0xC00000);				 // Location of heap, as defined in
 
  }
 
- u32 GetUIntParam (XUartNs550 *UartInstancePtr, u8 *ReceiveBufferPtr) {
+u32 GetUIntParam (XUartNs550 *UartInstancePtr, u8 *ReceiveBufferPtr) {
 
 	 XUartNs550_ClearStats(UartInstancePtr);
 	 XUartNs550_Recv(UartInstancePtr, ReceiveBufferPtr, 4);  // Get length of packet
@@ -193,7 +191,7 @@ u8* heap = (u8*) (PSRAM_BASE + 0xC00000);				 // Location of heap, as defined in
  	 return (*(u32*)ReceiveBufferPtr); //Return the data.
  }
 
- u64 GetParam (XUartNs550 *UartInstancePtr, u8 *ReceiveBufferPtr) {
+u64 GetParam (XUartNs550 *UartInstancePtr, u8 *ReceiveBufferPtr) {
 
 	 XUartNs550_ClearStats(UartInstancePtr);
 	 XUartNs550_Recv(UartInstancePtr, ReceiveBufferPtr, 4);  // Get length of packet
@@ -218,9 +216,9 @@ u8* heap = (u8*) (PSRAM_BASE + 0xC00000);				 // Location of heap, as defined in
 	 }
 
  	 return (*(u64*)ReceiveBufferPtr); //Return the data.
- }
+}
 
- void SerialSend(XUartNs550 *UartInstancePtr, u8* sendBuffer, u32 TotalToSend) {
+void SerialSend(XUartNs550 *UartInstancePtr, u8* sendBuffer, u32 TotalToSend) {
 /* This function returns the entire calculated image (iteration) buffer over the serial port
  * using chunks of about 64K, with a CRC appended at the end to guarantee data integrity, Xmodem style.
  */
@@ -297,9 +295,9 @@ u8* heap = (u8*) (PSRAM_BASE + 0xC00000);				 // Location of heap, as defined in
 	 static char done[] = "DONE";
 	 while (XUartNs550_IsSending(UartInstancePtr)) {}
 	 XUartNs550_Send(UartInstancePtr, (u8 *) done, 4);						// Send the "DONE" tag.
- }
+}
 
- void StartCalc(XUartNs550 *UartInstancePtr) {
+void StartCalc(XUartNs550 *UartInstancePtr) {
  #ifdef DEBUG
  	xil_printf("Calc IP starting.\r\n");
  #endif
@@ -309,6 +307,19 @@ u8* heap = (u8*) (PSRAM_BASE + 0xC00000);				 // Location of heap, as defined in
  		Values are 4.32-bit fixed point: Uppermost bytes of ULL are not used.
  	*/
 
+ 	if (WIDTH > MAXWIDTH) {
+		#ifdef DEBUG
+ 			xil_printf("Specified image width of %d exceeds MAXWIDTH of %d.",WIDTH,MAXWIDTH);
+		#endif
+ 		return;
+ 	}
+
+ 	if (WIDTH % UNROLL != 0) {
+		#ifdef DEBUG
+			xil_printf("Specified image width of %d is not divisible by unroll of %d.",WIDTH,UNROLL);
+		#endif
+	return;
+ 	}
  	XCalc_Set_X0_V(&Calc, X0);
  	XCalc_Set_X1_V(&Calc, X1);
  	XCalc_Set_Y0_V(&Calc, Y0);
@@ -328,31 +339,13 @@ u8* heap = (u8*) (PSRAM_BASE + 0xC00000);				 // Location of heap, as defined in
 
     // Send the contents of image memory to the serial port.
     TotalSentCount = 0;
-    //uint TotalToSend = HEIGHT * WIDTH * sizeof(u16);
     XUartNs550_ClearStats(UartInstancePtr);
-
     SerialSend(UartInstancePtr, compressBuffer, TotalToSend);
-    //SerialSend(UartInstancePtr, (u8 *)PSRAM_BASE, TotalToSend);
 
 #ifdef DEBUG
     xil_printf("Send complete, waiting for command.\r\n");
 #endif
-
-  }
-
-int main()
-{
-
-	//Variable definitions
-	int Status = CalcMandelbrot(&InterruptController, &UartNs550Instance, UART_DEVICE_ID, UART_IRPT_INTR);
-
-	if (Status != XST_SUCCESS) {
-			return XST_FAILURE;
-		}
-
-	return Status;
 }
-
 
 int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartDeviceId, u16 UartIntrId)
 {
@@ -399,6 +392,8 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 
 	xil_printf("Calc IP is ready.\r\n");
 	// Wait for Go command.
+
+	SetupCalc();
 
 	XUartNs550_ClearStats(UartInstancePtr);
 
@@ -454,4 +449,57 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 
     return Status;
 
+}
+
+int SetupCalc() {
+ #ifdef DEBUG
+ 	xil_printf("Retrieving HW constants from calculator.\r\n");
+ #endif
+
+ 	/*	The set goes from -2 to 2 on the X axis, and -1 to 1 on the Y axis.
+ 		Pick a 4:3 window specified by Top Left X/Y coordinate, Top Right X value. The rest is calculated.
+ 		Values are 4.32-bit fixed point: Uppermost bytes of ULL are not used.
+ 	*/
+
+ 	XCalc_Set_setup(&Calc, (u32) true);
+    XCalc_Start(&Calc);
+
+    // Wait for the data to come back.
+    while (!XCalc_IsDone(&Calc)) {};
+
+    u32 valid = XCalc_Get_maxWidth_V_vld(&Calc);
+    if (valid) {
+     	MAXWIDTH = XCalc_Get_maxWidth_V(&Calc);
+    }
+    else {
+       	return XST_FAILURE;
+    }
+
+    valid = XCalc_Get_unroll_vld(&Calc);
+    if (valid) {
+    	UNROLL = XCalc_Get_unroll(&Calc);
+    }
+    else
+    {
+    	return XST_FAILURE;
+    }
+
+	#ifdef DEBUG
+    	xil_printf("Retrieved successfully: MaxWidth: %d, Unroll: %d.\r\n",MAXWIDTH,UNROLL);
+	#endif
+
+    XCalc_Set_setup(&Calc, (u32) false);
+    return XST_SUCCESS;
+}
+
+int main()
+{
+	//Variable definitions
+	int Status = CalcMandelbrot(&InterruptController, &UartNs550Instance, UART_DEVICE_ID, UART_IRPT_INTR);
+
+	if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+	return Status;
 }
