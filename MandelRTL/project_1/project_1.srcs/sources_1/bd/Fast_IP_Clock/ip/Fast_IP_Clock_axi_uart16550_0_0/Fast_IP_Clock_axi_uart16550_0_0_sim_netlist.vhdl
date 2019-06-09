@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri May 31 11:53:16 2019
+-- Date        : Fri May 31 11:53:15 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_uart16550_0_0/Fast_IP_Clock_axi_uart16550_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Fast_IP_Clock_axi_uart16550_0_0 -prefix
+--               Fast_IP_Clock_axi_uart16550_0_0_ Fast_IP_Clock_axi_uart16550_0_0_sim_netlist.vhdl
 -- Design      : Fast_IP_Clock_axi_uart16550_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,8 +28,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_address_decoder is
     Bus_RNW_reg_reg_0 : in STD_LOGIC;
     wrReq_d1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_address_decoder : entity is "address_decoder";
 end Fast_IP_Clock_axi_uart16550_0_0_address_decoder;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_address_decoder is
@@ -127,8 +125,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_cntr_incr_decr_addn_f is
     SS : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_cntr_incr_decr_addn_f : entity is "cntr_incr_decr_addn_f";
 end Fast_IP_Clock_axi_uart16550_0_0_cntr_incr_decr_addn_f;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_cntr_incr_decr_addn_f is
@@ -579,8 +575,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_dynshreg_f is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_dynshreg_f : entity is "dynshreg_f";
 end Fast_IP_Clock_axi_uart16550_0_0_dynshreg_f;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_dynshreg_f is
@@ -1155,8 +1149,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_ipic_if is
     s_axi_aclk : in STD_LOGIC;
     bus2ip_rdce_i : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_ipic_if : entity is "ipic_if";
 end Fast_IP_Clock_axi_uart16550_0_0_ipic_if;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_ipic_if is
@@ -1329,8 +1321,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_rx16550 is
     rx_fifo_rst : in STD_LOGIC;
     rx_fifo_full : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_rx16550 : entity is "rx16550";
 end Fast_IP_Clock_axi_uart16550_0_0_rx16550;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_rx16550 is
@@ -3232,8 +3222,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_rx_fifo_control is
     rxrdyN_int_reg_0 : in STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_rx_fifo_control : entity is "rx_fifo_control";
 end Fast_IP_Clock_axi_uart16550_0_0_rx_fifo_control;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_rx_fifo_control is
@@ -3697,8 +3685,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_tx16550 is
     sin : in STD_LOGIC;
     freeze : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_tx16550 : entity is "tx16550";
 end Fast_IP_Clock_axi_uart16550_0_0_tx16550;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_tx16550 is
@@ -4491,8 +4477,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_xuart_tx_load_sm is
     \lsr_reg[5]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \tsr_int_reg[7]_1\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_xuart_tx_load_sm : entity is "xuart_tx_load_sm";
 end Fast_IP_Clock_axi_uart16550_0_0_xuart_tx_load_sm;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_xuart_tx_load_sm is
@@ -4828,8 +4812,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_slave_attachment is
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wrReq_d1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_slave_attachment : entity is "slave_attachment";
 end Fast_IP_Clock_axi_uart16550_0_0_slave_attachment;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_slave_attachment is
@@ -5228,8 +5210,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_srl_fifo_rbu_f is
     p_2_in50_in : in STD_LOGIC;
     \tsr_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_srl_fifo_rbu_f : entity is "srl_fifo_rbu_f";
 end Fast_IP_Clock_axi_uart16550_0_0_srl_fifo_rbu_f;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_srl_fifo_rbu_f is
@@ -5455,8 +5435,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_axi_lite_ipif is
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 );
     wrReq_d1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end Fast_IP_Clock_axi_uart16550_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_axi_lite_ipif is
@@ -5575,8 +5553,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_rx_fifo_block is
     rxrdyN_int_reg_0 : in STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_rx_fifo_block : entity is "rx_fifo_block";
 end Fast_IP_Clock_axi_uart16550_0_0_rx_fifo_block;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_rx_fifo_block is
@@ -5699,8 +5675,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_tx_fifo_block is
     p_2_in50_in : in STD_LOGIC;
     \tsr_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_tx_fifo_block : entity is "tx_fifo_block";
 end Fast_IP_Clock_axi_uart16550_0_0_tx_fifo_block;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_tx_fifo_block is
@@ -5753,8 +5727,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_uart16550 is
     freeze : in STD_LOGIC;
     sin : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_uart16550 : entity is "uart16550";
 end Fast_IP_Clock_axi_uart16550_0_0_uart16550;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_uart16550 is
@@ -9222,8 +9194,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_xuart is
     freeze : in STD_LOGIC;
     sin : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_xuart : entity is "xuart";
 end Fast_IP_Clock_axi_uart16550_0_0_xuart;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_uart16550_0_0_xuart is
@@ -9329,8 +9299,6 @@ entity Fast_IP_Clock_axi_uart16550_0_0_axi_uart16550 is
   attribute C_S_AXI_ADDR_WIDTH of Fast_IP_Clock_axi_uart16550_0_0_axi_uart16550 : entity is 13;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of Fast_IP_Clock_axi_uart16550_0_0_axi_uart16550 : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_uart16550_0_0_axi_uart16550 : entity is "axi_uart16550";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Fast_IP_Clock_axi_uart16550_0_0_axi_uart16550 : entity is "yes";
 end Fast_IP_Clock_axi_uart16550_0_0_axi_uart16550;

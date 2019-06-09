@@ -84,6 +84,8 @@ u32 XCalc_IsReady(XCalc *InstancePtr);
 void XCalc_EnableAutoRestart(XCalc *InstancePtr);
 void XCalc_DisableAutoRestart(XCalc *InstancePtr);
 
+void XCalc_Set_setup(XCalc *InstancePtr, u32 Data);
+u32 XCalc_Get_setup(XCalc *InstancePtr);
 void XCalc_Set_X0_V(XCalc *InstancePtr, u64 Data);
 u64 XCalc_Get_X0_V(XCalc *InstancePtr);
 void XCalc_Set_Y0_V(XCalc *InstancePtr, u64 Data);
@@ -92,6 +94,10 @@ void XCalc_Set_X1_V(XCalc *InstancePtr, u64 Data);
 u64 XCalc_Get_X1_V(XCalc *InstancePtr);
 void XCalc_Set_width_V(XCalc *InstancePtr, u32 Data);
 u32 XCalc_Get_width_V(XCalc *InstancePtr);
+u32 XCalc_Get_maxWidth_V(XCalc *InstancePtr);
+u32 XCalc_Get_maxWidth_V_vld(XCalc *InstancePtr);
+u32 XCalc_Get_unroll(XCalc *InstancePtr);
+u32 XCalc_Get_unroll_vld(XCalc *InstancePtr);
 void XCalc_Set_maxIter(XCalc *InstancePtr, u32 Data);
 u32 XCalc_Get_maxIter(XCalc *InstancePtr);
 

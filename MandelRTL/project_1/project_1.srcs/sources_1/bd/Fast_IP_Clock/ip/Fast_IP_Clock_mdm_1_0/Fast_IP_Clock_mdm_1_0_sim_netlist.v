@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Jun  5 14:41:40 2019
+// Date        : Fri May 31 13:45:48 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_mdm_1_0/Fast_IP_Clock_mdm_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_mdm_1_0 -prefix
+//               Fast_IP_Clock_mdm_1_0_ Fast_IP_Clock_mdm_1_0_sim_netlist.v
 // Design      : Fast_IP_Clock_mdm_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -45,11 +45,11 @@ module Fast_IP_Clock_mdm_1_0
     Dbg_Update_0,
     Dbg_Rst_0,
     Dbg_Disable_0);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI:MBDEBUG_AXI_0:MBDEBUG_AXI_1:MBDEBUG_AXI_2:MBDEBUG_AXI_3:MBDEBUG_AXI_4:MBDEBUG_AXI_5:MBDEBUG_AXI_6:MBDEBUG_AXI_7:MBDEBUG_AXI_8:MBDEBUG_AXI_9:MBDEBUG_AXI_10:MBDEBUG_AXI_11:MBDEBUG_AXI_12:MBDEBUG_AXI_13:MBDEBUG_AXI_14:MBDEBUG_AXI_15:MBDEBUG_AXI_16:MBDEBUG_AXI_17:MBDEBUG_AXI_18:MBDEBUG_AXI_19:MBDEBUG_AXI_20:MBDEBUG_AXI_21:MBDEBUG_AXI_22:MBDEBUG_AXI_23:MBDEBUG_AXI_24:MBDEBUG_AXI_25:MBDEBUG_AXI_26:MBDEBUG_AXI_27:MBDEBUG_AXI_28:MBDEBUG_AXI_29:MBDEBUG_AXI_30:MBDEBUG_AXI_31, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 80357142, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input S_AXI_ACLK;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.S_AXI_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI:MBDEBUG_AXI_0:MBDEBUG_AXI_1:MBDEBUG_AXI_2:MBDEBUG_AXI_3:MBDEBUG_AXI_4:MBDEBUG_AXI_5:MBDEBUG_AXI_6:MBDEBUG_AXI_7:MBDEBUG_AXI_8:MBDEBUG_AXI_9:MBDEBUG_AXI_10:MBDEBUG_AXI_11:MBDEBUG_AXI_12:MBDEBUG_AXI_13:MBDEBUG_AXI_14:MBDEBUG_AXI_15:MBDEBUG_AXI_16:MBDEBUG_AXI_17:MBDEBUG_AXI_18:MBDEBUG_AXI_19:MBDEBUG_AXI_20:MBDEBUG_AXI_21:MBDEBUG_AXI_22:MBDEBUG_AXI_23:MBDEBUG_AXI_24:MBDEBUG_AXI_25:MBDEBUG_AXI_26:MBDEBUG_AXI_27:MBDEBUG_AXI_28:MBDEBUG_AXI_29:MBDEBUG_AXI_30:MBDEBUG_AXI_31, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 80000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input S_AXI_ACLK;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.S_AXI_ARESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input S_AXI_ARESETN;
   (* x_interface_info = "xilinx.com:signal:interrupt:1.0 INTERRUPT.INTERRUPT INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME INTERRUPT.INTERRUPT, SENSITIVITY EDGE_RISING, SUGGESTED_PRIORITY HIGH, PortWidth 1" *) output Interrupt;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.Debug_SYS_Rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.Debug_SYS_Rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) output Debug_SYS_Rst;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 80357142, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [3:0]S_AXI_AWADDR;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 80000000, ID_WIDTH 0, ADDR_WIDTH 4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [3:0]S_AXI_AWADDR;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input S_AXI_AWVALID;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output S_AXI_AWREADY;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]S_AXI_WDATA;
@@ -998,7 +998,7 @@ module Fast_IP_Clock_mdm_1_0
   (* C_M_AXI_ADDR_WIDTH = "32" *) 
   (* C_M_AXI_DATA_WIDTH = "32" *) 
   (* C_M_AXI_THREAD_ID_WIDTH = "1" *) 
-  (* C_S_AXI_ACLK_FREQ_HZ = "80357142" *) 
+  (* C_S_AXI_ACLK_FREQ_HZ = "80000000" *) 
   (* C_S_AXI_ADDR_WIDTH = "4" *) 
   (* C_S_AXI_DATA_WIDTH = "32" *) 
   (* C_TRACE_ASYNC_RESET = "0" *) 
@@ -2533,7 +2533,6 @@ module Fast_IP_Clock_mdm_1_0
         .bscan_ext_update(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "JTAG_CONTROL" *) 
 module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
    (Q,
     data_Exists_I_reg,
@@ -4144,7 +4143,6 @@ module Fast_IP_Clock_mdm_1_0_JTAG_CONTROL
         .Q(\tdi_shifter_reg_n_0_[7] ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_BSCANE2" *) 
 module Fast_IP_Clock_mdm_1_0_MB_BSCANE2
    (\Use_BSCAN.PORT_Selector_reg[0] ,
     DRCK,
@@ -4303,7 +4301,6 @@ module Fast_IP_Clock_mdm_1_0_MB_BSCANE2
         .O(\shift_Count_reg[0] ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_BUFG" *) 
 module Fast_IP_Clock_mdm_1_0_MB_BUFG
    (Ext_JTAG_DRCK,
     DRCK);
@@ -4319,7 +4316,6 @@ module Fast_IP_Clock_mdm_1_0_MB_BUFG
         .O(Ext_JTAG_DRCK));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDC_1" *) 
 module Fast_IP_Clock_mdm_1_0_MB_FDC_1
    (D_2,
     data_cmd_reset6_out,
@@ -4870,7 +4866,6 @@ module Fast_IP_Clock_mdm_1_0_MB_FDC_1
         .O(\tdi_shifter_reg[0]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDRE" *) 
 module Fast_IP_Clock_mdm_1_0_MB_FDRE
    (Q_0,
     bus2ip_wrce,
@@ -4900,7 +4895,6 @@ module Fast_IP_Clock_mdm_1_0_MB_FDRE
         .R(bus2ip_wrce));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDRE_1" *) 
 module Fast_IP_Clock_mdm_1_0_MB_FDRE_1
    (sync,
     \Use_Serial_Unified_Completion.count_reg[1] ,
@@ -5597,7 +5591,6 @@ module Fast_IP_Clock_mdm_1_0_MB_FDRE_7
         .O(LI));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDRSE" *) 
 module Fast_IP_Clock_mdm_1_0_MB_FDRSE
    (Ext_BRK,
     \Using_FPGA.Native_0 ,
@@ -5636,7 +5629,6 @@ module Fast_IP_Clock_mdm_1_0_MB_FDRSE
         .O(\Using_FPGA.Native_i_1__4_n_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_MUXCY_XORCY" *) 
 module Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY
    (LO,
     O,
@@ -5892,7 +5884,6 @@ module Fast_IP_Clock_mdm_1_0_MB_MUXCY_XORCY_6
   assign O = lopt_1;
 endmodule
 
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
 module Fast_IP_Clock_mdm_1_0_MB_SRL16E
    (\shift_Count_reg[0] ,
     Q,
@@ -6739,7 +6730,6 @@ module Fast_IP_Clock_mdm_1_0_MB_SRL16E__parameterized7_9
         .Q(Data_Out));
 endmodule
 
-(* ORIG_REF_NAME = "MB_XORCY" *) 
 module Fast_IP_Clock_mdm_1_0_MB_XORCY
    (sum_A_0,
     LI,
@@ -6780,12 +6770,12 @@ endmodule
 (* C_DEBUG_INTERFACE = "0" *) (* C_EXT_TRIG_RESET_VALUE = "20'b11110001001000110100" *) (* C_FAMILY = "artix7" *) 
 (* C_INTERCONNECT = "2" *) (* C_JTAG_CHAIN = "2" *) (* C_MB_DBG_PORTS = "1" *) 
 (* C_M_AXIS_DATA_WIDTH = "32" *) (* C_M_AXIS_ID_WIDTH = "7" *) (* C_M_AXI_ADDR_WIDTH = "32" *) 
-(* C_M_AXI_DATA_WIDTH = "32" *) (* C_M_AXI_THREAD_ID_WIDTH = "1" *) (* C_S_AXI_ACLK_FREQ_HZ = "80357142" *) 
+(* C_M_AXI_DATA_WIDTH = "32" *) (* C_M_AXI_THREAD_ID_WIDTH = "1" *) (* C_S_AXI_ACLK_FREQ_HZ = "80000000" *) 
 (* C_S_AXI_ADDR_WIDTH = "4" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRACE_ASYNC_RESET = "0" *) 
 (* C_TRACE_CLK_FREQ_HZ = "200000000" *) (* C_TRACE_CLK_OUT_PHASE = "90" *) (* C_TRACE_DATA_WIDTH = "32" *) 
 (* C_TRACE_ID = "110" *) (* C_TRACE_OUTPUT = "0" *) (* C_TRACE_PROTOCOL = "1" *) 
 (* C_USE_BSCAN = "0" *) (* C_USE_CONFIG_RESET = "0" *) (* C_USE_CROSS_TRIGGER = "0" *) 
-(* C_USE_UART = "1" *) (* ORIG_REF_NAME = "MDM" *) 
+(* C_USE_UART = "1" *) 
 module Fast_IP_Clock_mdm_1_0_MDM
    (Config_Reset,
     Scan_Reset_Sel,
@@ -15628,7 +15618,6 @@ module Fast_IP_Clock_mdm_1_0_MDM
        (.P(\<const1> ));
 endmodule
 
-(* ORIG_REF_NAME = "MDM_Core" *) 
 module Fast_IP_Clock_mdm_1_0_MDM_Core
    (Q,
     rx_Data_Present,
@@ -16306,7 +16295,6 @@ module Fast_IP_Clock_mdm_1_0_MDM_Core
         .S(S_AXI_ARESETN_0));
 endmodule
 
-(* ORIG_REF_NAME = "SRL_FIFO" *) 
 module Fast_IP_Clock_mdm_1_0_SRL_FIFO
    (data_Exists_I_reg_0,
     RX_Data,
@@ -16797,7 +16785,6 @@ module Fast_IP_Clock_mdm_1_0_SRL_FIFO_0
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "address_decoder" *) 
 module Fast_IP_Clock_mdm_1_0_address_decoder
    (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ,
@@ -17214,7 +17201,6 @@ module Fast_IP_Clock_mdm_1_0_address_decoder
         .O(\FSM_onehot_state_reg[3] ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module Fast_IP_Clock_mdm_1_0_axi_lite_ipif
    (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ,
@@ -17361,7 +17347,6 @@ module Fast_IP_Clock_mdm_1_0_axi_lite_ipif
         .tx_Buffer_Full(tx_Buffer_Full));
 endmodule
 
-(* ORIG_REF_NAME = "pselect_f" *) 
 module Fast_IP_Clock_mdm_1_0_pselect_f
    (ce_expnd_i_3,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
@@ -17403,7 +17388,6 @@ module Fast_IP_Clock_mdm_1_0_pselect_f__parameterized1
         .O(ce_expnd_i_1));
 endmodule
 
-(* ORIG_REF_NAME = "slave_attachment" *) 
 module Fast_IP_Clock_mdm_1_0_slave_attachment
    (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,

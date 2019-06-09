@@ -1431,10 +1431,46 @@
           </spirit:field>
         </spirit:register>
         <spirit:register>
+          <spirit:name>setup</spirit:name>
+          <spirit:displayName>setup</spirit:displayName>
+          <spirit:description>Data signal of setup</spirit:description>
+          <spirit:addressOffset>16</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>write-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>setup</spirit:name>
+            <spirit:description>Bit 0 to 0 Data signal of setup</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
+            <spirit:access>write-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>RESERVED</spirit:name>
+            <spirit:description>Reserved.  0s on read.</spirit:description>
+            <spirit:bitOffset>1</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">31</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
           <spirit:name>X0_V_1</spirit:name>
           <spirit:displayName>X0_V_1</spirit:displayName>
           <spirit:description>Data signal of X0_V</spirit:description>
-          <spirit:addressOffset>16</spirit:addressOffset>
+          <spirit:addressOffset>24</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1457,7 +1493,7 @@
           <spirit:name>X0_V_2</spirit:name>
           <spirit:displayName>X0_V_2</spirit:displayName>
           <spirit:description>Data signal of X0_V</spirit:description>
-          <spirit:addressOffset>20</spirit:addressOffset>
+          <spirit:addressOffset>28</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1493,7 +1529,7 @@
           <spirit:name>Y0_V_1</spirit:name>
           <spirit:displayName>Y0_V_1</spirit:displayName>
           <spirit:description>Data signal of Y0_V</spirit:description>
-          <spirit:addressOffset>28</spirit:addressOffset>
+          <spirit:addressOffset>36</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1516,7 +1552,7 @@
           <spirit:name>Y0_V_2</spirit:name>
           <spirit:displayName>Y0_V_2</spirit:displayName>
           <spirit:description>Data signal of Y0_V</spirit:description>
-          <spirit:addressOffset>32</spirit:addressOffset>
+          <spirit:addressOffset>40</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1552,7 +1588,7 @@
           <spirit:name>X1_V_1</spirit:name>
           <spirit:displayName>X1_V_1</spirit:displayName>
           <spirit:description>Data signal of X1_V</spirit:description>
-          <spirit:addressOffset>40</spirit:addressOffset>
+          <spirit:addressOffset>48</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1575,7 +1611,7 @@
           <spirit:name>X1_V_2</spirit:name>
           <spirit:displayName>X1_V_2</spirit:displayName>
           <spirit:description>Data signal of X1_V</spirit:description>
-          <spirit:addressOffset>44</spirit:addressOffset>
+          <spirit:addressOffset>52</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1611,7 +1647,7 @@
           <spirit:name>width_V</spirit:name>
           <spirit:displayName>width_V</spirit:displayName>
           <spirit:description>Data signal of width_V</spirit:description>
-          <spirit:addressOffset>52</spirit:addressOffset>
+          <spirit:addressOffset>60</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1644,10 +1680,158 @@
           </spirit:field>
         </spirit:register>
         <spirit:register>
+          <spirit:name>maxWidth_V</spirit:name>
+          <spirit:displayName>maxWidth_V</spirit:displayName>
+          <spirit:description>Data signal of maxWidth_V</spirit:description>
+          <spirit:addressOffset>68</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>maxWidth_V</spirit:name>
+            <spirit:description>Bit 11 to 0 Data signal of maxWidth_V</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">12</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>RESERVED</spirit:name>
+            <spirit:description>Reserved.  0s on read.</spirit:description>
+            <spirit:bitOffset>12</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">20</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>maxWidth_V_ctrl</spirit:name>
+          <spirit:displayName>maxWidth_V_ctrl</spirit:displayName>
+          <spirit:description>Control signal of maxWidth_V</spirit:description>
+          <spirit:addressOffset>72</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>maxWidth_V_ap_vld</spirit:name>
+            <spirit:description>Control signal maxWidth_V_ap_vld</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>RESERVED</spirit:name>
+            <spirit:description>Reserved.  0s on read.</spirit:description>
+            <spirit:bitOffset>1</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">31</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>unroll</spirit:name>
+          <spirit:displayName>unroll</spirit:displayName>
+          <spirit:description>Data signal of unroll</spirit:description>
+          <spirit:addressOffset>76</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>unroll</spirit:name>
+            <spirit:description>Bit 15 to 0 Data signal of unroll</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">16</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>RESERVED</spirit:name>
+            <spirit:description>Reserved.  0s on read.</spirit:description>
+            <spirit:bitOffset>16</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">16</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>unroll_ctrl</spirit:name>
+          <spirit:displayName>unroll_ctrl</spirit:displayName>
+          <spirit:description>Control signal of unroll</spirit:description>
+          <spirit:addressOffset>80</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+          <spirit:field>
+            <spirit:name>unroll_ap_vld</spirit:name>
+            <spirit:description>Control signal unroll_ap_vld</spirit:description>
+            <spirit:bitOffset>0</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">1</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+          <spirit:field>
+            <spirit:name>RESERVED</spirit:name>
+            <spirit:description>Reserved.  0s on read.</spirit:description>
+            <spirit:bitOffset>1</spirit:bitOffset>
+            <spirit:bitWidth spirit:format="long">31</spirit:bitWidth>
+            <spirit:access>read-only</spirit:access>
+            <spirit:writeValueConstraint>
+              <spirit:minimum>0</spirit:minimum>
+              <spirit:maximum>0</spirit:maximum>
+            </spirit:writeValueConstraint>
+            <spirit:readAction>modify</spirit:readAction>
+            <spirit:testable spirit:testConstraint="unconstrained">false</spirit:testable>
+          </spirit:field>
+        </spirit:register>
+        <spirit:register>
           <spirit:name>maxIter</spirit:name>
           <spirit:displayName>maxIter</spirit:displayName>
           <spirit:description>Data signal of maxIter</spirit:description>
-          <spirit:addressOffset>60</spirit:addressOffset>
+          <spirit:addressOffset>84</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
           <spirit:access>write-only</spirit:access>
           <spirit:reset>
@@ -1695,11 +1879,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jun 05 21:01:03 UTC 2019</spirit:value>
+            <spirit:value>Sun Jun 09 04:39:01 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:cd5caf0f</spirit:value>
+            <spirit:value>9:4f57f34e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3009,7 +3193,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="18">3247151</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="18">47</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -3034,7 +3218,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>calc</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1906051351</xilinx:coreRevision>
+      <xilinx:coreRevision>1906082136</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_BUF_R.ARUSER_WIDTH" xilinx:valueSource="auto"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXI_BUF_R.AWUSER_WIDTH" xilinx:valueSource="auto"/>
@@ -3076,11 +3260,11 @@
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="e2233654"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="ad851dea"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="12d79daa"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a0bed333"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="2eb6dcda"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1ff77aa9"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="d11ebaa8"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="0e5636b6"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="c8dfd334"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="8cc0d87c"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

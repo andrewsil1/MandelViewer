@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri May 31 11:58:34 2019
+-- Date        : Mon Jun  3 15:30:49 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top Fast_IP_Clock_auto_pc_4 -prefix
 --               Fast_IP_Clock_auto_pc_4_ Fast_IP_Clock_auto_pc_4_stub.vhdl

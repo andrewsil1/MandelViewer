@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 -- Date        : Fri May 31 11:50:55 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_intc_0_0/Fast_IP_Clock_axi_intc_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Fast_IP_Clock_axi_intc_0_0 -prefix
+--               Fast_IP_Clock_axi_intc_0_0_ Fast_IP_Clock_axi_intc_0_0_sim_netlist.vhdl
 -- Design      : Fast_IP_Clock_axi_intc_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -61,8 +61,6 @@ entity Fast_IP_Clock_axi_intc_0_0_address_decoder is
     p_0_in9_in : in STD_LOGIC;
     Bus_RNW_reg_reg_4 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_intc_0_0_address_decoder : entity is "address_decoder";
 end Fast_IP_Clock_axi_intc_0_0_address_decoder;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_intc_0_0_address_decoder is
@@ -995,8 +993,6 @@ entity Fast_IP_Clock_axi_intc_0_0_intc_core is
     intr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \REG_GEN[0].ier_reg[0]_1\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_intc_0_0_intc_core : entity is "intc_core";
 end Fast_IP_Clock_axi_intc_0_0_intc_core;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_intc_0_0_intc_core is
@@ -1474,8 +1470,6 @@ entity Fast_IP_Clock_axi_intc_0_0_slave_attachment is
     \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]\ : in STD_LOGIC;
     p_0_in9_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_intc_0_0_slave_attachment : entity is "slave_attachment";
 end Fast_IP_Clock_axi_intc_0_0_slave_attachment;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_intc_0_0_slave_attachment is
@@ -2323,8 +2317,6 @@ entity Fast_IP_Clock_axi_intc_0_0_axi_lite_ipif is
     \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]\ : in STD_LOGIC;
     p_0_in9_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_intc_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end Fast_IP_Clock_axi_intc_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_intc_0_0_axi_lite_ipif is
@@ -2476,8 +2468,6 @@ entity Fast_IP_Clock_axi_intc_0_0_axi_intc is
   attribute C_S_AXI_ADDR_WIDTH of Fast_IP_Clock_axi_intc_0_0_axi_intc : entity is 9;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of Fast_IP_Clock_axi_intc_0_0_axi_intc : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_intc_0_0_axi_intc : entity is "axi_intc";
   attribute hdl : string;
   attribute hdl of Fast_IP_Clock_axi_intc_0_0_axi_intc : entity is "VHDL";
   attribute imp_netlist : string;

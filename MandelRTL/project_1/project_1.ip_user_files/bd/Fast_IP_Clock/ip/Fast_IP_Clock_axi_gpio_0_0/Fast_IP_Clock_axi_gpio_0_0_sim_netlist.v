@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri May 31 11:52:34 2019
+// Date        : Fri May 31 11:52:33 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_gpio_0_0/Fast_IP_Clock_axi_gpio_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_axi_gpio_0_0 -prefix
+//               Fast_IP_Clock_axi_gpio_0_0_ Fast_IP_Clock_axi_gpio_0_0_sim_netlist.v
 // Design      : Fast_IP_Clock_axi_gpio_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -128,7 +128,6 @@ module Fast_IP_Clock_axi_gpio_0_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "GPIO_Core" *) 
 module Fast_IP_Clock_axi_gpio_0_0_GPIO_Core
    (GPIO_xferAck_i,
     gpio_xferAck_Reg,
@@ -486,7 +485,6 @@ module Fast_IP_Clock_axi_gpio_0_0_GPIO_Core
         .O(ip2bus_wrack_i));
 endmodule
 
-(* ORIG_REF_NAME = "address_decoder" *) 
 module Fast_IP_Clock_axi_gpio_0_0_address_decoder
    (\GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg ,
     \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ,
@@ -748,7 +746,7 @@ endmodule
 (* C_FAMILY = "artix7" *) (* C_GPIO2_WIDTH = "32" *) (* C_GPIO_WIDTH = "5" *) 
 (* C_INTERRUPT_PRESENT = "0" *) (* C_IS_DUAL = "0" *) (* C_S_AXI_ADDR_WIDTH = "9" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRI_DEFAULT = "-1" *) (* C_TRI_DEFAULT_2 = "-1" *) 
-(* ORIG_REF_NAME = "axi_gpio" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_group = "LOGICORE" *) 
+(* downgradeipidentifiedwarnings = "yes" *) (* ip_group = "LOGICORE" *) 
 module Fast_IP_Clock_axi_gpio_0_0_axi_gpio
    (s_axi_aclk,
     s_axi_aresetn,
@@ -1054,7 +1052,6 @@ module Fast_IP_Clock_axi_gpio_0_0_axi_gpio
         .R(bus2ip_reset));
 endmodule
 
-(* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module Fast_IP_Clock_axi_gpio_0_0_axi_lite_ipif
    (bus2ip_reset,
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg ,
@@ -1193,7 +1190,6 @@ module Fast_IP_Clock_axi_gpio_0_0_axi_lite_ipif
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
 module Fast_IP_Clock_axi_gpio_0_0_cdc_sync
    (scndry_vect_out,
     gpio_io_i,
@@ -1443,7 +1439,6 @@ module Fast_IP_Clock_axi_gpio_0_0_cdc_sync
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "pselect_f" *) 
 module Fast_IP_Clock_axi_gpio_0_0_pselect_f
    (ce_expnd_i_3,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] );
@@ -1479,7 +1474,6 @@ module Fast_IP_Clock_axi_gpio_0_0_pselect_f__parameterized1
         .O(ce_expnd_i_1));
 endmodule
 
-(* ORIG_REF_NAME = "slave_attachment" *) 
 module Fast_IP_Clock_axi_gpio_0_0_slave_attachment
    (SR,
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg ,

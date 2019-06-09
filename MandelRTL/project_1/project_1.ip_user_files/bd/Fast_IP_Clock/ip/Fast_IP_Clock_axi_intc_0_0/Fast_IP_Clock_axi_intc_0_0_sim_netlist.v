@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 // Date        : Fri May 31 11:50:55 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_intc_0_0/Fast_IP_Clock_axi_intc_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_axi_intc_0_0 -prefix
+//               Fast_IP_Clock_axi_intc_0_0_ Fast_IP_Clock_axi_intc_0_0_sim_netlist.v
 // Design      : Fast_IP_Clock_axi_intc_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -145,7 +145,6 @@ module Fast_IP_Clock_axi_intc_0_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "address_decoder" *) 
 module Fast_IP_Clock_axi_intc_0_0_address_decoder
    (Bus_RNW_reg_reg_0,
     Bus_RNW_reg_reg_1,
@@ -971,9 +970,9 @@ endmodule
 (* C_IRQ_IS_LEVEL = "1" *) (* C_IVAR_RESET_VALUE = "64'b0000000000000000000000000000000000000000000000000000000000010000" *) (* C_KIND_OF_EDGE = "-1" *) 
 (* C_KIND_OF_INTR = "-11" *) (* C_KIND_OF_LVL = "-1" *) (* C_MB_CLK_NOT_CONNECTED = "1" *) 
 (* C_NUM_INTR_INPUTS = "2" *) (* C_NUM_SW_INTR = "0" *) (* C_NUM_SYNC_FF = "2" *) 
-(* C_S_AXI_ADDR_WIDTH = "9" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* ORIG_REF_NAME = "axi_intc" *) 
-(* hdl = "VHDL" *) (* imp_netlist = "TRUE" *) (* ip_group = "LOGICORE" *) 
-(* iptype = "PERIPHERAL" *) (* run_ngcbuild = "TRUE" *) (* style = "HDL" *) 
+(* C_S_AXI_ADDR_WIDTH = "9" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* hdl = "VHDL" *) 
+(* imp_netlist = "TRUE" *) (* ip_group = "LOGICORE" *) (* iptype = "PERIPHERAL" *) 
+(* run_ngcbuild = "TRUE" *) (* style = "HDL" *) 
 module Fast_IP_Clock_axi_intc_0_0_axi_intc
    (s_axi_aclk,
     s_axi_aresetn,
@@ -1271,7 +1270,6 @@ module Fast_IP_Clock_axi_intc_0_0_axi_intc
         .R(p_0_in));
 endmodule
 
-(* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module Fast_IP_Clock_axi_intc_0_0_axi_lite_ipif
    (s_axi_rresp,
     s_axi_rvalid_i_reg,
@@ -1488,7 +1486,6 @@ module Fast_IP_Clock_axi_intc_0_0_axi_lite_ipif
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "intc_core" *) 
 module Fast_IP_Clock_axi_intc_0_0_intc_core
    (p_0_in,
     \IVR_GEN.ivr_reg[1]_0 ,
@@ -1874,7 +1871,6 @@ module Fast_IP_Clock_axi_intc_0_0_intc_core
         .O(p_0_in));
 endmodule
 
-(* ORIG_REF_NAME = "slave_attachment" *) 
 module Fast_IP_Clock_axi_intc_0_0_slave_attachment
    (s_axi_rresp,
     s_axi_rvalid_i_reg_0,

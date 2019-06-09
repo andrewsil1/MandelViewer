@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue Jun  4 12:42:26 2019
+-- Date        : Tue Jun  4 12:42:25 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_lmb_bram_0/Fast_IP_Clock_lmb_bram_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Fast_IP_Clock_lmb_bram_0 -prefix
+--               Fast_IP_Clock_lmb_bram_0_ Fast_IP_Clock_lmb_bram_0_sim_netlist.vhdl
 -- Design      : Fast_IP_Clock_lmb_bram_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -31,8 +31,6 @@ entity Fast_IP_Clock_lmb_bram_0_blk_mem_gen_prim_wrapper is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     web : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end Fast_IP_Clock_lmb_bram_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_prim_wrapper is
@@ -16099,8 +16097,6 @@ entity Fast_IP_Clock_lmb_bram_0_blk_mem_gen_prim_width is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     web : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end Fast_IP_Clock_lmb_bram_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_prim_width is
@@ -17791,8 +17787,6 @@ entity Fast_IP_Clock_lmb_bram_0_blk_mem_gen_generic_cstr is
     rstb : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end Fast_IP_Clock_lmb_bram_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_generic_cstr is
@@ -18391,8 +18385,6 @@ entity Fast_IP_Clock_lmb_bram_0_blk_mem_gen_top is
     rstb : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end Fast_IP_Clock_lmb_bram_0_blk_mem_gen_top;
 
 architecture STRUCTURE of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_top is
@@ -18440,8 +18432,6 @@ entity Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3_synth is
     rstb : in STD_LOGIC;
     enb : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3_synth : entity is "blk_mem_gen_v8_4_3_synth";
 end Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3_synth;
 
 architecture STRUCTURE of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3_synth is
@@ -18686,8 +18676,6 @@ entity Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3 is
   attribute C_WRITE_WIDTH_B of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3 : entity is "artix7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3 : entity is "blk_mem_gen_v8_4_3";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3 : entity is "yes";
 end Fast_IP_Clock_lmb_bram_0_blk_mem_gen_v8_4_3;
