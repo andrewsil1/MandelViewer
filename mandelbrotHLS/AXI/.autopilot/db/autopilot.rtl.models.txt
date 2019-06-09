@@ -3,8 +3,6 @@ calc_mul_40s_40s_cud
 calc_mul_40s_41s_dEe
 calc_sdiv_41ns_13eOg
 calc_mul_12ns_40sfYi
-calc_mux_832_16_1_1
-calc_mem_0
 calc_in_parms_s_axi
 calc_buf_r_m_axi
 pretest

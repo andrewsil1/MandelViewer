@@ -26,6 +26,7 @@ module AESL_axi_slave_in_parms (
     TRAN_s_axi_in_parms_BREADY,
     TRAN_s_axi_in_parms_BRESP,
     TRAN_in_parms_write_data_finish,
+    TRAN_in_parms_read_data_finish,
     TRAN_in_parms_start_in,
     TRAN_in_parms_idle_out,
     TRAN_in_parms_ready_out,
@@ -42,6 +43,8 @@ module AESL_axi_slave_in_parms (
 `define TV_IN_Y0_V "../tv/cdatafile/c.calc.autotvin_Y0_V.dat"
 `define TV_IN_X1_V "../tv/cdatafile/c.calc.autotvin_X1_V.dat"
 `define TV_IN_width_V "../tv/cdatafile/c.calc.autotvin_width_V.dat"
+`define TV_OUT_maxWidth_V "../tv/rtldatafile/rtl.calc.autotvout_maxWidth_V.dat"
+`define TV_OUT_unroll "../tv/rtldatafile/rtl.calc.autotvout_unroll.dat"
 `define TV_IN_maxIter "../tv/cdatafile/c.calc.autotvin_maxIter.dat"
 parameter ADDR_WIDTH = 7;
 parameter DATA_WIDTH = 32;
@@ -57,6 +60,12 @@ parameter X1_V_c_bitwidth = 40;
 parameter width_V_DEPTH = 1;
 reg [31 : 0] width_V_OPERATE_DEPTH = 0;
 parameter width_V_c_bitwidth = 12;
+parameter maxWidth_V_DEPTH = 1;
+reg [31 : 0] maxWidth_V_OPERATE_DEPTH = 0;
+parameter maxWidth_V_c_bitwidth = 12;
+parameter unroll_DEPTH = 1;
+reg [31 : 0] unroll_OPERATE_DEPTH = 0;
+parameter unroll_c_bitwidth = 16;
 parameter maxIter_DEPTH = 1;
 reg [31 : 0] maxIter_OPERATE_DEPTH = 0;
 parameter maxIter_c_bitwidth = 16;
@@ -67,7 +76,11 @@ parameter X0_V_data_in_addr = 16;
 parameter Y0_V_data_in_addr = 28;
 parameter X1_V_data_in_addr = 40;
 parameter width_V_data_in_addr = 52;
-parameter maxIter_data_in_addr = 60;
+parameter maxIter_data_in_addr = 76;
+parameter maxWidth_V_data_out_addr = 60;
+parameter maxWidth_V_valid_out_addr = 64;
+parameter unroll_data_out_addr = 68;
+parameter unroll_valid_out_addr = 72;
 parameter STATUS_ADDR = 0;
 
 output [ADDR_WIDTH - 1 : 0] TRAN_s_axi_in_parms_AWADDR;
@@ -88,6 +101,7 @@ input  TRAN_s_axi_in_parms_BVALID;
 output  TRAN_s_axi_in_parms_BREADY;
 input [2 - 1 : 0] TRAN_s_axi_in_parms_BRESP;
 output TRAN_in_parms_write_data_finish;
+output TRAN_in_parms_read_data_finish;
 input     clk;
 input     reset;
 input     TRAN_in_parms_start_in;
@@ -118,6 +132,10 @@ reg [X1_V_c_bitwidth - 1 : 0] mem_X1_V [X1_V_DEPTH - 1 : 0];
 reg X1_V_write_data_finish;
 reg [DATA_WIDTH - 1 : 0] mem_width_V [width_V_DEPTH - 1 : 0];
 reg width_V_write_data_finish;
+reg [DATA_WIDTH - 1 : 0] mem_maxWidth_V [maxWidth_V_DEPTH - 1 : 0];
+reg maxWidth_V_read_data_finish;
+reg [DATA_WIDTH - 1 : 0] mem_unroll [unroll_DEPTH - 1 : 0];
+reg unroll_read_data_finish;
 reg [DATA_WIDTH - 1 : 0] mem_maxIter [maxIter_DEPTH - 1 : 0];
 reg maxIter_write_data_finish;
 reg AESL_ready_out_index_reg = 0;
@@ -134,6 +152,8 @@ reg process_3_finish = 0;
 reg process_4_finish = 0;
 reg process_5_finish = 0;
 reg process_6_finish = 0;
+reg process_7_finish = 0;
+reg process_8_finish = 0;
 //write X0_V reg
 reg [31 : 0] write_X0_V_count = 0;
 reg write_X0_V_run_flag = 0;
@@ -154,6 +174,14 @@ reg write_one_width_V_data_done = 0;
 reg [31 : 0] write_maxIter_count = 0;
 reg write_maxIter_run_flag = 0;
 reg write_one_maxIter_data_done = 0;
+//read maxWidth_V reg
+reg [31 : 0] read_maxWidth_V_count = 0;
+reg read_maxWidth_V_run_flag = 0;
+reg read_one_maxWidth_V_data_done = 0;
+//read unroll reg
+reg [31 : 0] read_unroll_count = 0;
+reg read_unroll_run_flag = 0;
+reg read_one_unroll_data_done = 0;
 reg [31 : 0] write_start_count = 0;
 reg write_start_run_flag = 0;
 
@@ -176,13 +204,14 @@ assign TRAN_in_parms_write_start_finish = AESL_write_start_finish;
 assign TRAN_in_parms_done_out = AESL_done_index_reg;
 assign TRAN_in_parms_ready_out = AESL_ready_out_index_reg;
 assign TRAN_in_parms_idle_out = AESL_idle_index_reg;
+assign TRAN_in_parms_read_data_finish = 1 & maxWidth_V_read_data_finish & unroll_read_data_finish;
 assign TRAN_in_parms_write_data_finish = 1 & X0_V_write_data_finish & Y0_V_write_data_finish & X1_V_write_data_finish & width_V_write_data_finish & maxIter_write_data_finish;
 always @(TRAN_in_parms_ready_in or ready_initial) 
 begin
     AESL_ready_reg <= TRAN_in_parms_ready_in | ready_initial;
 end
 
-always @(reset or process_0_finish or process_1_finish or process_2_finish or process_3_finish or process_4_finish or process_5_finish or process_6_finish ) begin
+always @(reset or process_0_finish or process_1_finish or process_2_finish or process_3_finish or process_4_finish or process_5_finish or process_6_finish or process_7_finish or process_8_finish ) begin
     if (reset == 0) begin
         ongoing_process_number <= 0;
     end
@@ -205,6 +234,12 @@ always @(reset or process_0_finish or process_1_finish or process_2_finish or pr
             ongoing_process_number <= ongoing_process_number + 1;
     end
     else if (ongoing_process_number == 6 && process_6_finish == 1) begin
+            ongoing_process_number <= ongoing_process_number + 1;
+    end
+    else if (ongoing_process_number == 7 && process_7_finish == 1) begin
+            ongoing_process_number <= ongoing_process_number + 1;
+    end
+    else if (ongoing_process_number == 8 && process_8_finish == 1) begin
             ongoing_process_number <= 0;
     end
 end
@@ -745,7 +780,7 @@ always @(reset or posedge clk) begin
         write_start_count <= 0;
     end
     else begin
-        if (write_start_count >= 1) begin
+        if (write_start_count >= 2) begin
             write_start_run_flag <= 0; 
         end
         else if (TRAN_in_parms_write_start_in === 1) begin
@@ -784,6 +819,160 @@ initial begin : write_start
     end
 end
 
+always @(reset or posedge clk) begin
+    if (reset == 0) begin
+        maxWidth_V_read_data_finish <= 0;
+        read_maxWidth_V_run_flag <= 0; 
+        read_maxWidth_V_count = 0;
+        count_operate_depth_by_bitwidth_and_depth (maxWidth_V_c_bitwidth, maxWidth_V_DEPTH, maxWidth_V_OPERATE_DEPTH);
+    end
+    else begin
+        if (TRAN_in_parms_start_in === 1) begin
+            read_maxWidth_V_run_flag = 1; 
+        end
+        if (TRAN_in_parms_transaction_done_in === 1) begin
+            maxWidth_V_read_data_finish <= 0;
+            read_maxWidth_V_count = 0; 
+        end
+        if (read_one_maxWidth_V_data_done === 1) begin
+            read_maxWidth_V_count = read_maxWidth_V_count + 1;
+            if (read_maxWidth_V_count == maxWidth_V_OPERATE_DEPTH) begin
+                read_maxWidth_V_run_flag <= 0; 
+                maxWidth_V_read_data_finish <= 1;
+            end
+        end
+    end
+end
+
+initial begin : read_maxWidth_V
+    integer read_maxWidth_V_resp;
+    integer process_num;
+    integer get_vld;
+    integer four_byte_num;
+    integer c_bitwidth;
+    integer i;
+    integer j;
+
+    wait(reset === 1);
+    @(posedge clk);
+    c_bitwidth = maxWidth_V_c_bitwidth;
+    process_num = 7;
+    count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
+    while (1) begin
+        process_7_finish <= 0;
+        if (ongoing_process_number === process_num && process_busy === 0 ) begin
+            if (read_maxWidth_V_run_flag === 1) begin
+                process_busy = 1;
+                get_vld = 0;
+                //read maxWidth_V vld
+                read (maxWidth_V_valid_out_addr, RDATA_reg, read_maxWidth_V_resp);
+                if (RDATA_reg[0 : 0] == 1) begin
+                    get_vld = 1;
+                end
+                if (get_vld == 1) begin
+                    //read maxWidth_V data 
+                    for (i = 0 ; i < four_byte_num ; i = i+1) begin
+                        read (maxWidth_V_data_out_addr + read_maxWidth_V_count * four_byte_num * 4 + i * 4, RDATA_reg, read_maxWidth_V_resp);
+                        if (maxWidth_V_c_bitwidth < 32) begin
+                            mem_maxWidth_V[read_maxWidth_V_count] <= RDATA_reg;
+                        end
+                        else begin
+                            for (j=0 ; j < 32 ; j = j + 1) begin
+                                if (i*32 + j < maxWidth_V_c_bitwidth) begin
+                                    mem_maxWidth_V[read_maxWidth_V_count][i*32 + j] <= RDATA_reg[j];
+                                end
+                            end
+                        end
+                    end
+                    
+                    read_one_maxWidth_V_data_done <= 1;
+                    @(posedge clk);
+                    read_one_maxWidth_V_data_done <= 0;
+                end    
+                process_busy = 0;
+            end    
+            process_7_finish <= 1;
+        end
+        @(posedge clk);
+    end    
+end
+always @(reset or posedge clk) begin
+    if (reset == 0) begin
+        unroll_read_data_finish <= 0;
+        read_unroll_run_flag <= 0; 
+        read_unroll_count = 0;
+        count_operate_depth_by_bitwidth_and_depth (unroll_c_bitwidth, unroll_DEPTH, unroll_OPERATE_DEPTH);
+    end
+    else begin
+        if (TRAN_in_parms_start_in === 1) begin
+            read_unroll_run_flag = 1; 
+        end
+        if (TRAN_in_parms_transaction_done_in === 1) begin
+            unroll_read_data_finish <= 0;
+            read_unroll_count = 0; 
+        end
+        if (read_one_unroll_data_done === 1) begin
+            read_unroll_count = read_unroll_count + 1;
+            if (read_unroll_count == unroll_OPERATE_DEPTH) begin
+                read_unroll_run_flag <= 0; 
+                unroll_read_data_finish <= 1;
+            end
+        end
+    end
+end
+
+initial begin : read_unroll
+    integer read_unroll_resp;
+    integer process_num;
+    integer get_vld;
+    integer four_byte_num;
+    integer c_bitwidth;
+    integer i;
+    integer j;
+
+    wait(reset === 1);
+    @(posedge clk);
+    c_bitwidth = unroll_c_bitwidth;
+    process_num = 8;
+    count_c_data_four_byte_num_by_bitwidth (c_bitwidth , four_byte_num) ;
+    while (1) begin
+        process_8_finish <= 0;
+        if (ongoing_process_number === process_num && process_busy === 0 ) begin
+            if (read_unroll_run_flag === 1) begin
+                process_busy = 1;
+                get_vld = 0;
+                //read unroll vld
+                read (unroll_valid_out_addr, RDATA_reg, read_unroll_resp);
+                if (RDATA_reg[0 : 0] == 1) begin
+                    get_vld = 1;
+                end
+                if (get_vld == 1) begin
+                    //read unroll data 
+                    for (i = 0 ; i < four_byte_num ; i = i+1) begin
+                        read (unroll_data_out_addr + read_unroll_count * four_byte_num * 4 + i * 4, RDATA_reg, read_unroll_resp);
+                        if (unroll_c_bitwidth < 32) begin
+                            mem_unroll[read_unroll_count] <= RDATA_reg;
+                        end
+                        else begin
+                            for (j=0 ; j < 32 ; j = j + 1) begin
+                                if (i*32 + j < unroll_c_bitwidth) begin
+                                    mem_unroll[read_unroll_count][i*32 + j] <= RDATA_reg[j];
+                                end
+                            end
+                        end
+                    end
+                    
+                    read_one_unroll_data_done <= 1;
+                    @(posedge clk);
+                    read_one_unroll_data_done <= 0;
+                end    
+                process_busy = 0;
+            end    
+            process_8_finish <= 1;
+        end
+        @(posedge clk);
+    end    
+end
 //------------------------Task and function-------------- 
 task read_token; 
     input integer fp; 
@@ -1170,6 +1359,170 @@ initial begin : read_width_V_file_process
       transaction_idx = transaction_idx + 1; 
   end 
   $fclose(fp); 
+end 
+ 
+//------------------------Write file----------------------- 
+ 
+// Write data to file 
+ 
+initial begin : write_maxWidth_V_file_proc 
+  integer fp; 
+  integer factor; 
+  integer transaction_idx; 
+  reg [maxWidth_V_c_bitwidth - 1 : 0] mem_tmp; 
+  reg [ 100*8 : 1] str;
+  integer i; 
+  transaction_idx = 0; 
+  count_seperate_factor_by_bitwidth (maxWidth_V_c_bitwidth , factor);
+  while(1) begin 
+      @(posedge clk);
+      while (maxWidth_V_read_data_finish !== 1) begin
+          @(posedge clk);
+      end
+      # 0.1;
+      fp = $fopen(`TV_OUT_maxWidth_V, "a"); 
+      if(fp == 0) begin       // Failed to open file 
+          $display("Failed to open file \"%s\"!", `TV_OUT_maxWidth_V); 
+          $finish; 
+      end 
+      $fdisplay(fp, "[[transaction]] %d", transaction_idx);
+      for (i = 0; i < (maxWidth_V_DEPTH - maxWidth_V_DEPTH % factor); i = i + 1) begin
+          if (factor == 4) begin
+              if (i%factor == 0) begin
+                  mem_tmp = mem_maxWidth_V[i/factor][7:0];
+              end
+              if (i%factor == 1) begin
+                  mem_tmp = mem_maxWidth_V[i/factor][15:8];
+              end
+              if (i%factor == 2) begin
+                  mem_tmp = mem_maxWidth_V[i/factor][23:16];
+              end
+              if (i%factor == 3) begin
+                  mem_tmp = mem_maxWidth_V[i/factor][31:24];
+              end
+              $fdisplay(fp,"0x%x",mem_tmp);
+          end
+          if (factor == 2) begin
+              if (i%factor == 0) begin
+                  mem_tmp = mem_maxWidth_V[i/factor][15:0];
+              end
+              if (i%factor == 1) begin
+                  mem_tmp = mem_maxWidth_V[i/factor][31:16];
+              end
+              $fdisplay(fp,"0x%x",mem_tmp);
+          end
+          if (factor == 1) begin
+              $fdisplay(fp,"0x%x",mem_maxWidth_V[i]);
+          end
+      end 
+      if (factor == 4) begin
+          if ((maxWidth_V_DEPTH - 1) % factor == 2) begin
+              $fdisplay(fp,"0x%x",mem_maxWidth_V[maxWidth_V_DEPTH / factor][7:0]);
+              $fdisplay(fp,"0x%x",mem_maxWidth_V[maxWidth_V_DEPTH / factor][15:8]);
+              $fdisplay(fp,"0x%x",mem_maxWidth_V[maxWidth_V_DEPTH / factor][23:16]);
+          end
+          if ((maxWidth_V_DEPTH - 1) % factor == 1) begin
+              $fdisplay(fp,"0x%x",mem_maxWidth_V[maxWidth_V_DEPTH / factor][7:0]);
+              $fdisplay(fp,"0x%x",mem_maxWidth_V[maxWidth_V_DEPTH / factor][15:8]);
+          end
+          if ((maxWidth_V_DEPTH - 1) % factor == 0) begin
+              $fdisplay(fp,"0x%x",mem_maxWidth_V[maxWidth_V_DEPTH / factor][7:0]);
+          end
+      end
+      if (factor == 2) begin
+          if ((maxWidth_V_DEPTH - 1) % factor == 0) begin
+              $fdisplay(fp,"0x%x",mem_maxWidth_V[maxWidth_V_DEPTH / factor][15:0]);
+          end
+      end
+      $fdisplay(fp, "[[/transaction]]");
+      transaction_idx = transaction_idx + 1;
+      $fclose(fp); 
+      while (TRAN_in_parms_start_in !== 1) begin
+          @(posedge clk);
+      end
+  end 
+end 
+ 
+//------------------------Write file----------------------- 
+ 
+// Write data to file 
+ 
+initial begin : write_unroll_file_proc 
+  integer fp; 
+  integer factor; 
+  integer transaction_idx; 
+  reg [unroll_c_bitwidth - 1 : 0] mem_tmp; 
+  reg [ 100*8 : 1] str;
+  integer i; 
+  transaction_idx = 0; 
+  count_seperate_factor_by_bitwidth (unroll_c_bitwidth , factor);
+  while(1) begin 
+      @(posedge clk);
+      while (unroll_read_data_finish !== 1) begin
+          @(posedge clk);
+      end
+      # 0.1;
+      fp = $fopen(`TV_OUT_unroll, "a"); 
+      if(fp == 0) begin       // Failed to open file 
+          $display("Failed to open file \"%s\"!", `TV_OUT_unroll); 
+          $finish; 
+      end 
+      $fdisplay(fp, "[[transaction]] %d", transaction_idx);
+      for (i = 0; i < (unroll_DEPTH - unroll_DEPTH % factor); i = i + 1) begin
+          if (factor == 4) begin
+              if (i%factor == 0) begin
+                  mem_tmp = mem_unroll[i/factor][7:0];
+              end
+              if (i%factor == 1) begin
+                  mem_tmp = mem_unroll[i/factor][15:8];
+              end
+              if (i%factor == 2) begin
+                  mem_tmp = mem_unroll[i/factor][23:16];
+              end
+              if (i%factor == 3) begin
+                  mem_tmp = mem_unroll[i/factor][31:24];
+              end
+              $fdisplay(fp,"0x%x",mem_tmp);
+          end
+          if (factor == 2) begin
+              if (i%factor == 0) begin
+                  mem_tmp = mem_unroll[i/factor][15:0];
+              end
+              if (i%factor == 1) begin
+                  mem_tmp = mem_unroll[i/factor][31:16];
+              end
+              $fdisplay(fp,"0x%x",mem_tmp);
+          end
+          if (factor == 1) begin
+              $fdisplay(fp,"0x%x",mem_unroll[i]);
+          end
+      end 
+      if (factor == 4) begin
+          if ((unroll_DEPTH - 1) % factor == 2) begin
+              $fdisplay(fp,"0x%x",mem_unroll[unroll_DEPTH / factor][7:0]);
+              $fdisplay(fp,"0x%x",mem_unroll[unroll_DEPTH / factor][15:8]);
+              $fdisplay(fp,"0x%x",mem_unroll[unroll_DEPTH / factor][23:16]);
+          end
+          if ((unroll_DEPTH - 1) % factor == 1) begin
+              $fdisplay(fp,"0x%x",mem_unroll[unroll_DEPTH / factor][7:0]);
+              $fdisplay(fp,"0x%x",mem_unroll[unroll_DEPTH / factor][15:8]);
+          end
+          if ((unroll_DEPTH - 1) % factor == 0) begin
+              $fdisplay(fp,"0x%x",mem_unroll[unroll_DEPTH / factor][7:0]);
+          end
+      end
+      if (factor == 2) begin
+          if ((unroll_DEPTH - 1) % factor == 0) begin
+              $fdisplay(fp,"0x%x",mem_unroll[unroll_DEPTH / factor][15:0]);
+          end
+      end
+      $fdisplay(fp, "[[/transaction]]");
+      transaction_idx = transaction_idx + 1;
+      $fclose(fp); 
+      while (TRAN_in_parms_start_in !== 1) begin
+          @(posedge clk);
+      end
+  end 
 end 
  
 //------------------------Read file------------------------ 

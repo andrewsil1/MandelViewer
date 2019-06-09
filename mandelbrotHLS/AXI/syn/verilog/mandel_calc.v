@@ -188,8 +188,8 @@ reg  signed [39:0] grp_fu_224_p0;
 reg  signed [40:0] grp_fu_224_p1;
 wire   [79:0] p_Result_s_fu_240_p1;
 wire   [79:0] trunc_ln718_fu_248_p0;
-wire   [79:0] p_Result_s_16_fu_252_p1;
-wire   [2:0] p_Result_s_16_fu_252_p4;
+wire   [79:0] p_Result_s_13_fu_252_p1;
+wire   [2:0] p_Result_s_13_fu_252_p4;
 wire   [79:0] p_Result_5_fu_268_p1;
 wire   [2:0] p_Result_7_fu_290_p4;
 wire   [79:0] x2_V_fu_346_p1;
@@ -897,7 +897,7 @@ assign Range2_all_ones_3_fu_1032_p0 = reg_1240;
 
 assign Range2_all_ones_3_fu_1032_p2 = ((Range2_all_ones_3_fu_1032_p0 == 4'd15) ? 1'b1 : 1'b0);
 
-assign Range2_all_ones_fu_262_p2 = ((p_Result_s_16_fu_252_p4 == 3'd7) ? 1'b1 : 1'b0);
+assign Range2_all_ones_fu_262_p2 = ((p_Result_s_13_fu_252_p4 == 3'd7) ? 1'b1 : 1'b0);
 
 assign and_ln38_fu_1171_p2 = (icmp_ln1498_reg_1446 & icmp_ln1498_1_fu_1166_p2);
 
@@ -1127,9 +1127,9 @@ assign p_Result_9_fu_813_p1 = grp_fu_916_p2;
 
 assign p_Result_9_fu_813_p4 = {{p_Result_9_fu_813_p1[41:40]}};
 
-assign p_Result_s_16_fu_252_p1 = grp_fu_224_p2;
+assign p_Result_s_13_fu_252_p1 = grp_fu_224_p2;
 
-assign p_Result_s_16_fu_252_p4 = {{p_Result_s_16_fu_252_p1[79:77]}};
+assign p_Result_s_13_fu_252_p4 = {{p_Result_s_13_fu_252_p1[79:77]}};
 
 assign p_Result_s_fu_240_p1 = grp_fu_224_p2;
 

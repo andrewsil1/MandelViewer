@@ -80,11 +80,14 @@ proc check_tvin_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
+         "c.calc.autotvin_setup.dat"
          "c.calc.autotvin_X0_V.dat"
          "c.calc.autotvin_Y0_V.dat"
          "c.calc.autotvin_X1_V.dat"
          "c.calc.autotvin_width_V.dat"
          "c.calc.autotvin_maxIter.dat"
+         "c.calc.autotvout_maxWidth_V.dat"
+         "c.calc.autotvout_unroll.dat"
          "c.calc.autotvout_buf_r.dat"
     }
     foreach rtlfile $rtlfilelist {
@@ -110,6 +113,8 @@ proc check_tvout_file {} {
 		puts stdout "[debug_prompt arg check_sim.tcl] start...";
 	}
     set rtlfilelist {
+         "rtl.calc.autotvout_maxWidth_V.dat"
+         "rtl.calc.autotvout_unroll.dat"
          "rtl.calc.autotvout_buf_r.dat"
     }
     foreach rtlfile $rtlfilelist {

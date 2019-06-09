@@ -100446,7 +100446,7 @@ typedef ap_fixed<40,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
-void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf);
+void calc(bool setup, real X0, real Y0, real X1, res width, res* maxWidth, unsigned short* unroll, pixval maxIter, pixval *buf);
 # 2 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel_maintb.cpp" 2
 
 
@@ -100465,6 +100465,8 @@ int main() {
  real X0, Y0, X1;
  const int HEIGHT = 104 * 3 / 4;
  const pixval maxIter = 500;
+ res maxWidth;
+ unsigned short unroll;
 
  pixval mem[HEIGHT * 104];
 
@@ -100473,15 +100475,38 @@ int main() {
  Y0 = 1;
  X1 = 2;
 
+ 
+#ifndef HLS_FASTSIM
+#define calc AESL_WRAP_calc
+#endif
+# 24 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel_maintb.cpp"
+calc(true, X0, Y0, X1, 104, &maxWidth, &unroll, maxIter, mem);
+#undef calc
+# 24 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel_maintb.cpp"
+
+ if (maxWidth != (res)1920) {
+     cout << "MaxWidth is an unexpected value.\n" << endl;
+     return -1;
+ }
+
+ if (unroll != 8) {
+     cout << "Unroll is an unexpected value.\n" << endl;
+     return -1;
+ }
+
+ if (104 % unroll != 0 || (res)104 > maxWidth) {
+        cout << "Testbench width is not a multiple of received unroll value, or exceeds MaxWidth.\n" << endl;
+        return -1;
+ }
 
     
 #ifndef HLS_FASTSIM
 #define calc AESL_WRAP_calc
 #endif
-# 23 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel_maintb.cpp"
-calc(X0, Y0, X1, 104, maxIter, mem);
+# 40 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel_maintb.cpp"
+calc(false, X0, Y0, X1, 104, &maxWidth, &unroll, maxIter, mem);
 #undef calc
-# 23 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel_maintb.cpp"
+# 40 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel_maintb.cpp"
 
 
  for (int y = 0; y < HEIGHT; y++) {
@@ -100496,5 +100521,5 @@ calc(X0, Y0, X1, 104, maxIter, mem);
  return 0;
 }
 #endif
-# 35 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel_maintb.cpp"
+# 52 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel_maintb.cpp"
 

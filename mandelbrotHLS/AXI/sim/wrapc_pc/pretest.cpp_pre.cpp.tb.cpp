@@ -100446,7 +100446,7 @@ typedef ap_fixed<40,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
-void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf);
+void calc(bool setup, real X0, real Y0, real X1, res width, res* maxWidth, unsigned short* unroll, pixval maxIter, pixval *buf);
 # 2 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/pretest.cpp" 2
 
 

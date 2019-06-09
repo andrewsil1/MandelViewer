@@ -5,8 +5,8 @@
 ############################################################
 open_project mandelbrotHLS
 set_top calc
-add_files mandelbrotHLS/mandel.cpp
 add_files mandelbrotHLS/pretest.cpp
+add_files mandelbrotHLS/mandel.cpp
 add_files -tb mandelbrotHLS/mandel_maintb.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "AXI"
 set_part {xc7a100t-csg324-1} -tool vivado
@@ -21,4 +21,4 @@ source "./mandelbrotHLS/AXI/directives.tcl"
 csim_design -ldflags {-Wl,--stack,10485760} -O
 csynth_design
 cosim_design -O -ldflags {-Wl,--stack,10485760} -trace_level all
-export_design -flow syn -rtl verilog -format ip_catalog -description "Mandelbrot Calculator Core" -vendor "QuickSilver" -version "1.01" -display_name "calc"
+export_design -rtl verilog -format ip_catalog -description "Mandelbrot Calculator Core" -vendor "QuickSilver" -version "1.01" -display_name "calc"

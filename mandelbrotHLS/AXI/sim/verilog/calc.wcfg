@@ -22,7 +22,7 @@
          <obj_property name="label">C InOuts</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="group3" type="group">
-            <obj_property name="label">X0__Y0__X1__width__maxIter__return(axi_slave)</obj_property>
+            <obj_property name="label">X0__Y0__X1__width__maxWidth__unroll__maxIter__return(axi_slave)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_calc_top/AESL_inst_calc/interrupt" type="logic">
                <obj_property name="ElementShortName">interrupt</obj_property>
@@ -385,6 +385,18 @@
          </wvobject>
       </wvobject>
       <wvobject fp_name="group72" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group73" type="group">
+            <obj_property name="label">setup(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_calc_top/AESL_inst_calc/setup" type="logic">
+               <obj_property name="ElementShortName">setup</obj_property>
+               <obj_property name="ObjectShortName">setup</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group75" type="group">
          <obj_property name="label">Block-level IO Handshake(internal)</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_calc_top/AESL_inst_calc/ap_done" type="logic">
@@ -404,7 +416,7 @@
             <obj_property name="ObjectShortName">ap_start</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group77" type="group">
+      <wvobject fp_name="group80" type="group">
          <obj_property name="label">Reset</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_calc_top/AESL_inst_calc/ap_rst_n" type="logic">
@@ -412,7 +424,7 @@
             <obj_property name="ObjectShortName">ap_rst_n</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group79" type="group">
+      <wvobject fp_name="group82" type="group">
          <obj_property name="label">Clock</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <wvobject fp_name="/apatb_calc_top/AESL_inst_calc/ap_clk" type="logic">
@@ -421,13 +433,13 @@
          </wvobject>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group81" type="group">
+   <wvobject fp_name="group84" type="group">
       <obj_property name="label">Test Bench Signals</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="group82" type="group">
+      <wvobject fp_name="group85" type="group">
          <obj_property name="label">Internal Signals</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group83" type="group">
+         <wvobject fp_name="group86" type="group">
             <obj_property name="label">Simulation Status</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_calc_top/AUTOTB_TRANSACTION_NUM" type="array">
@@ -446,9 +458,14 @@
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject fp_name="group84" type="group">
+         <wvobject fp_name="group87" type="group">
             <obj_property name="label">Port Depth</obj_property>
             <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_calc_top/LENGTH_setup" type="array">
+               <obj_property name="ElementShortName">LENGTH_setup[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_setup[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
             <wvobject fp_name="/apatb_calc_top/LENGTH_X0_V" type="array">
                <obj_property name="ElementShortName">LENGTH_X0_V[31:0]</obj_property>
                <obj_property name="ObjectShortName">LENGTH_X0_V[31:0]</obj_property>
@@ -469,6 +486,16 @@
                <obj_property name="ObjectShortName">LENGTH_width_V[31:0]</obj_property>
                <obj_property name="Radix">HEXRADIX</obj_property>
             </wvobject>
+            <wvobject fp_name="/apatb_calc_top/LENGTH_maxWidth_V" type="array">
+               <obj_property name="ElementShortName">LENGTH_maxWidth_V[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_maxWidth_V[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject fp_name="/apatb_calc_top/LENGTH_unroll" type="array">
+               <obj_property name="ElementShortName">LENGTH_unroll[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_unroll[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
             <wvobject fp_name="/apatb_calc_top/LENGTH_maxIter" type="array">
                <obj_property name="ElementShortName">LENGTH_maxIter[31:0]</obj_property>
                <obj_property name="ObjectShortName">LENGTH_maxIter[31:0]</obj_property>
@@ -481,11 +508,11 @@
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group94" type="group">
+      <wvobject fp_name="group100" type="group">
          <obj_property name="label">C InOuts</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group95" type="group">
-            <obj_property name="label">X0__Y0__X1__width__maxIter__return(axi_slave)</obj_property>
+         <wvobject fp_name="group101" type="group">
+            <obj_property name="label">X0__Y0__X1__width__maxWidth__unroll__maxIter__return(axi_slave)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject fp_name="/apatb_calc_top/in_parms_INTERRUPT" type="logic">
                <obj_property name="ElementShortName">in_parms_INTERRUPT</obj_property>
@@ -590,13 +617,13 @@
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group114" type="group">
+      <wvobject fp_name="group120" type="group">
          <obj_property name="label">C Outputs</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject fp_name="group115" type="group">
+         <wvobject fp_name="group121" type="group">
             <obj_property name="label">buf(axi_master)</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject fp_name="group116" type="group">
+            <wvobject fp_name="group122" type="group">
                <obj_property name="label">Read Channel</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_calc_top/buf_r_RRESP" type="array">
@@ -675,7 +702,7 @@
                   <obj_property name="Radix">HEXRADIX</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject fp_name="group117" type="group">
+            <wvobject fp_name="group123" type="group">
                <obj_property name="label">Write Channel</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_calc_top/buf_r_BUSER" type="array">
@@ -769,7 +796,7 @@
                   <obj_property name="Radix">HEXRADIX</obj_property>
                </wvobject>
             </wvobject>
-            <wvobject fp_name="group118" type="group">
+            <wvobject fp_name="group124" type="group">
                <obj_property name="label">Handshakes</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <wvobject fp_name="/apatb_calc_top/buf_r_BREADY" type="logic">
@@ -844,6 +871,18 @@
                   <obj_property name="CustomSignalColor">#ffff00</obj_property>
                   <obj_property name="UseCustomSignalColor">true</obj_property>
                </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group170" type="group">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="group171" type="group">
+            <obj_property name="label">setup(wire)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject fp_name="/apatb_calc_top/setup" type="logic">
+               <obj_property name="ElementShortName">setup</obj_property>
+               <obj_property name="ObjectShortName">setup</obj_property>
             </wvobject>
          </wvobject>
       </wvobject>

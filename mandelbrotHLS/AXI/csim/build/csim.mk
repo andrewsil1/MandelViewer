@@ -18,7 +18,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../mandel_maintb.cpp ../../../mandel.cpp ../../../pretest.cpp
+HLS_SOURCES = ../../../mandel_maintb.cpp ../../../pretest.cpp ../../../mandel.cpp
 
 TARGET := csim.exe
 
@@ -78,14 +78,14 @@ $(ObjDir)/mandel_maintb.o: ../../../mandel_maintb.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/mandel_maintb.d
 
-$(ObjDir)/mandel.o: ../../../mandel.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../mandel.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
-
--include $(ObjDir)/mandel.d
-
 $(ObjDir)/pretest.o: ../../../pretest.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../pretest.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
 
 -include $(ObjDir)/pretest.d
+
+$(ObjDir)/mandel.o: ../../../mandel.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../mandel.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) -DNDEBUG $< -o $@ ; \
+
+-include $(ObjDir)/mandel.d

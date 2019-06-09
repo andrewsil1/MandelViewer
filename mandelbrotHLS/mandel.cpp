@@ -54,51 +54,36 @@ pixval mandel_calc(real x_in, real y_in, pixval maxIter) {
 }
 
 //Calculates entire Mandelbrot Set 2D array and returns a completed buffer of iterations per pixel
-void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf) {
+void calc(bool setup, real X0, real Y0, real X1, res width, res *maxWidth, unsigned short *unroll, pixval maxIter, pixval *buf) {
 
-   	real delta = (real) 0.0;
-    real x,y;
-    res height;
-    int index;
-    pixval mem[MAXWIDTH];
+   	real delta = (X1 - X0) /  width;            // Fractional cartesian distance between adjacent physical pixels
+    real y = Y0;
+    real x = X0;
+    res height = width / 4 * 3;
+    int index = 0;                              // Points to next output memory location
 
+    *maxWidth = MAXWIDTH;  //Tell the Microblaze what the maximum width we will accept is.
+    *unroll = 8;           //BUGBUG: Compiler doesn't allow a way to automatically sync this with HLS Directives
 
-	//Divide the specified X range of the desired image by the pixel count to figure out how much to step the
-    //coordinates by in each iteration. We assume square pixels, so delta is the same for both axes.
-	    delta = (X1 - X0) /  width;
-        #ifndef __SYNTHESIS__
-	        cout << "Delta:" << std::setprecision(16) << delta << endl;
-        #endif
+    if (setup) { // Bail now if we're in "setup" mode and not ready to run yet.
+        return;
+    }
 
-        height = width * 3 / 4;
-        index = 0;
-	    y = Y0;
+    #ifndef __SYNTHESIS__
+        cout << "Delta:" << std::setprecision(16) << delta << endl;
+    #endif
 
         // Begin in the -X,+Y quadrant (II), iterate across each line, then down, and finally end in +X,-Y quadrant (IV)
         // Calculate the Mandelbrot escape value at each pixel, using the corresponding x/y fixed point values.
 y_for:  for (res line = 0; line < height; line++) {
-            #ifndef __SYNTHESIS__ // These asserts break Cosimulation for some reason if not kept out during synthesis.
-                assert (height <= MAXWIDTH * 3 / 4);
-                assert (width % 8 == 0); // Line width must be multiple of 8 or it is not safe to turn off exit check on partial unroll of factor 8.
-                assert (width <= MAXWIDTH);
-            #endif
 x_for:      for (res pix_x = 0; pix_x < width; pix_x++) {
 
                 x = X0 + (pix_x * delta); // This form (multiply the pixel x value by delta) allows parallelism in unrolling.
                 // Trying to lower the cost of a multiplier by instead using an incremental add of delta during each iteration
                 // seems to ruin parallel unrolling, probably due to each iteration relying on the addition result from the prior iteration.
 
-                mem[pix_x] = mandel_calc(x,y,maxIter);
+                buf[index++] = mandel_calc(x,y,maxIter);
                 // When pre-test is performed inside this function call, parallelism from loop unrolling works.  When trying to do it outside, it serializes all of the calls.
-            }
-
-            //Write this line of computed data from internal BRAM out to the larger PSRAM.
-burst_out:  for (int i = 0; i < width; i++)
-            {
-                #pragma HLS PIPELINE
-                buf[index++] = mem[i];
-                // Index remains valid after loop ends so we can pick up where we leave off in destination RAM next time around.
-                // TODO: Write current index to an output register so we can start picking up results without waiting for the whole thing.
             }
 
             // Continue with the next line

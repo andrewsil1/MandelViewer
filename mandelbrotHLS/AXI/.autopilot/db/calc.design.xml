@@ -5,10 +5,10 @@
 <ModuleName>calc</ModuleName>
 <InstancesList>
 <Instance>
-<InstName>grp_mandel_calc_fu_469</InstName>
+<InstName>grp_mandel_calc_fu_336</InstName>
 <ModuleName>mandel_calc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>469</ID>
+<ID>336</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_pretest_fu_187</InstName>
@@ -19,10 +19,10 @@
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_mandel_calc_fu_477</InstName>
+<InstName>grp_mandel_calc_fu_344</InstName>
 <ModuleName>mandel_calc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>477</ID>
+<ID>344</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_pretest_fu_187</InstName>
@@ -33,10 +33,10 @@
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_mandel_calc_fu_485</InstName>
+<InstName>grp_mandel_calc_fu_352</InstName>
 <ModuleName>mandel_calc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>485</ID>
+<ID>352</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_pretest_fu_187</InstName>
@@ -47,10 +47,10 @@
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_mandel_calc_fu_493</InstName>
+<InstName>grp_mandel_calc_fu_360</InstName>
 <ModuleName>mandel_calc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>493</ID>
+<ID>360</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_pretest_fu_187</InstName>
@@ -61,10 +61,10 @@
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_mandel_calc_fu_509</InstName>
+<InstName>grp_mandel_calc_fu_376</InstName>
 <ModuleName>mandel_calc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>509</ID>
+<ID>376</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_pretest_fu_187</InstName>
@@ -75,10 +75,10 @@
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_mandel_calc_fu_501</InstName>
+<InstName>grp_mandel_calc_fu_368</InstName>
 <ModuleName>mandel_calc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>501</ID>
+<ID>368</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_pretest_fu_187</InstName>
@@ -89,10 +89,10 @@
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_mandel_calc_fu_453</InstName>
+<InstName>grp_mandel_calc_fu_320</InstName>
 <ModuleName>mandel_calc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>453</ID>
+<ID>320</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_pretest_fu_187</InstName>
@@ -103,10 +103,10 @@
 </InstancesList>
 </Instance>
 <Instance>
-<InstName>grp_mandel_calc_fu_461</InstName>
+<InstName>grp_mandel_calc_fu_328</InstName>
 <ModuleName>mandel_calc</ModuleName>
 <IsCompInst>true</IsCompInst>
-<ID>461</ID>
+<ID>328</ID>
 <InstancesList>
 <Instance>
 <InstName>grp_pretest_fu_187</InstName>
@@ -258,7 +258,7 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <Best-caseLatency>22</Best-caseLatency>
-<Average-caseLatency>553</Average-caseLatency>
+<Average-caseLatency>80</Average-caseLatency>
 <Worst-caseLatency>42043</Worst-caseLatency>
 <PipelineInitiationInterval>22 ~ 42043</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
@@ -409,10 +409,10 @@
 <EstimatedClockPeriod>5.250</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
-<Best-caseLatency>3247151</Best-caseLatency>
-<Average-caseLatency>undef</Average-caseLatency>
-<Worst-caseLatency>14539775087</Worst-caseLatency>
-<PipelineInitiationInterval>3247152 ~ 14539775088</PipelineInitiationInterval>
+<Best-caseLatency>47</Best-caseLatency>
+<Average-caseLatency>5063471</Average-caseLatency>
+<Worst-caseLatency>14538012527</Worst-caseLatency>
+<PipelineInitiationInterval>48 ~ 14538012528</PipelineInitiationInterval>
 <PipelineType>none</PipelineType>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -424,14 +424,14 @@
 <max>1440</max>
 </range>
 </TripCount>
-<Latency>3247104 ~ 14539775040</Latency>
+<Latency>4425216 ~ 14538012480</Latency>
 <IterationLatency>
 <range>
-<min>4228</min>
-<max>10097066</max>
+<min>5762</min>
+<max>10095842</max>
 </range>
 </IterationLatency>
-<PipelineDepth>4228 ~ 10097066</PipelineDepth>
+<PipelineDepth>5762 ~ 10095842</PipelineDepth>
 <x_for>
 <Name>x_for</Name>
 <TripCount>
@@ -440,36 +440,24 @@
 <max>240</max>
 </range>
 </TripCount>
-<Latency>4224 ~ 10092960</Latency>
+<Latency>5760 ~ 10095840</Latency>
 <IterationLatency>
 <range>
-<min>33</min>
-<max>42054</max>
+<min>45</min>
+<max>42066</max>
 </range>
 </IterationLatency>
-<PipelineDepth>33 ~ 42054</PipelineDepth>
+<PipelineDepth>45 ~ 42066</PipelineDepth>
 </x_for>
-<burst_out>
-<Name>burst_out</Name>
-<TripCount>
-<range>
-<min>0</min>
-<max>4095</max>
-</range>
-</TripCount>
-<Latency>0 ~ 4102</Latency>
-<PipelineII>1</PipelineII>
-<PipelineDepth>9</PipelineDepth>
-</burst_out>
 </y_for>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 <AreaEstimates>
 <Resources>
-<BRAM_18K>12</BRAM_18K>
+<BRAM_18K>2</BRAM_18K>
 <DSP48E>176</DSP48E>
-<FF>21968</FF>
-<LUT>24964</LUT>
+<FF>21963</FF>
+<LUT>24793</LUT>
 <URAM>0</URAM>
 </Resources>
 </AreaEstimates>

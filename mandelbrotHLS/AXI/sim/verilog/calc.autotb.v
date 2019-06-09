@@ -12,35 +12,47 @@
 `define AUTOTB_PER_RESULT_TRANS_FILE "calc.performance.result.transaction.xml"
 `define AUTOTB_TOP_INST AESL_inst_apatb_calc_top
 `define AUTOTB_MAX_ALLOW_LATENCY  15000000
-`define AUTOTB_CLOCK_PERIOD_DIV2 4.00
+`define AUTOTB_CLOCK_PERIOD_DIV2 3.00
 
+`define AESL_DEPTH_setup 1
 `define AESL_DEPTH_X0_V 1
 `define AESL_DEPTH_Y0_V 1
 `define AESL_DEPTH_X1_V 1
 `define AESL_DEPTH_width_V 1
+`define AESL_DEPTH_maxWidth_V 1
+`define AESL_DEPTH_unroll 1
 `define AESL_DEPTH_maxIter 1
 `define AESL_DEPTH_buf_r 1
+`define AUTOTB_TVIN_setup  "../tv/cdatafile/c.calc.autotvin_setup.dat"
 `define AUTOTB_TVIN_X0_V  "../tv/cdatafile/c.calc.autotvin_X0_V.dat"
 `define AUTOTB_TVIN_Y0_V  "../tv/cdatafile/c.calc.autotvin_Y0_V.dat"
 `define AUTOTB_TVIN_X1_V  "../tv/cdatafile/c.calc.autotvin_X1_V.dat"
 `define AUTOTB_TVIN_width_V  "../tv/cdatafile/c.calc.autotvin_width_V.dat"
 `define AUTOTB_TVIN_maxIter  "../tv/cdatafile/c.calc.autotvin_maxIter.dat"
+`define AUTOTB_TVIN_setup_out_wrapc  "../tv/rtldatafile/rtl.calc.autotvin_setup.dat"
 `define AUTOTB_TVIN_X0_V_out_wrapc  "../tv/rtldatafile/rtl.calc.autotvin_X0_V.dat"
 `define AUTOTB_TVIN_Y0_V_out_wrapc  "../tv/rtldatafile/rtl.calc.autotvin_Y0_V.dat"
 `define AUTOTB_TVIN_X1_V_out_wrapc  "../tv/rtldatafile/rtl.calc.autotvin_X1_V.dat"
 `define AUTOTB_TVIN_width_V_out_wrapc  "../tv/rtldatafile/rtl.calc.autotvin_width_V.dat"
 `define AUTOTB_TVIN_maxIter_out_wrapc  "../tv/rtldatafile/rtl.calc.autotvin_maxIter.dat"
+`define AUTOTB_TVOUT_maxWidth_V  "../tv/cdatafile/c.calc.autotvout_maxWidth_V.dat"
+`define AUTOTB_TVOUT_unroll  "../tv/cdatafile/c.calc.autotvout_unroll.dat"
 `define AUTOTB_TVOUT_buf_r  "../tv/cdatafile/c.calc.autotvout_buf_r.dat"
+`define AUTOTB_TVOUT_maxWidth_V_out_wrapc  "../tv/rtldatafile/rtl.calc.autotvout_maxWidth_V.dat"
+`define AUTOTB_TVOUT_unroll_out_wrapc  "../tv/rtldatafile/rtl.calc.autotvout_unroll.dat"
 `define AUTOTB_TVOUT_buf_r_out_wrapc  "../tv/rtldatafile/rtl.calc.autotvout_buf_r.dat"
 module `AUTOTB_TOP;
 
-parameter AUTOTB_TRANSACTION_NUM = 1;
+parameter AUTOTB_TRANSACTION_NUM = 2;
 parameter PROGRESS_TIMEOUT = 10000000;
 parameter LATENCY_ESTIMATION = 2147483647;
+parameter LENGTH_setup = 1;
 parameter LENGTH_X0_V = 1;
 parameter LENGTH_Y0_V = 1;
 parameter LENGTH_X1_V = 1;
 parameter LENGTH_width_V = 1;
+parameter LENGTH_maxWidth_V = 1;
+parameter LENGTH_unroll = 1;
 parameter LENGTH_maxIter = 1;
 parameter LENGTH_buf_r = 8112;
 
@@ -90,6 +102,7 @@ wire  in_parms_BVALID;
 wire  in_parms_BREADY;
 wire [1 : 0] in_parms_BRESP;
 wire  in_parms_INTERRUPT;
+wire  setup;
 wire  buf_r_AWVALID;
 wire  buf_r_AWREADY;
 wire [31 : 0] buf_r_AWADDR;
@@ -144,6 +157,7 @@ reg ready_last_n;
 reg ready_delay_last_n;
 reg done_delay_last_n;
 reg interface_done = 0;
+wire in_parms_read_data_finish;
 wire in_parms_write_data_finish;
 wire AESL_slave_start;
 reg AESL_slave_start_lock = 0;
@@ -183,6 +197,7 @@ wire ap_rst_n_n;
     .interrupt(in_parms_INTERRUPT),
     .ap_clk(ap_clk),
     .ap_rst_n(ap_rst_n),
+    .setup(setup),
     .m_axi_buf_r_AWVALID(buf_r_AWVALID),
     .m_axi_buf_r_AWREADY(buf_r_AWREADY),
     .m_axi_buf_r_AWADDR(buf_r_AWADDR),
@@ -239,7 +254,7 @@ assign AESL_ce = ce;
 assign AESL_continue = tb_continue;
   assign AESL_slave_write_start_in = slave_start_status  & in_parms_write_data_finish;
   assign AESL_slave_start = AESL_slave_write_start_finish;
-  assign AESL_done = slave_done_status ;
+  assign AESL_done = slave_done_status  & in_parms_read_data_finish;
 
 always @(posedge AESL_clock)
 begin
@@ -291,6 +306,62 @@ begin
         slave_done_status <= 1;
     end
 end
+// The signal of port setup
+reg [0: 0] AESL_REG_setup = 0;
+assign setup = AESL_REG_setup;
+initial begin : read_file_process_setup
+    integer fp;
+    integer err;
+    integer ret;
+    integer proc_rand;
+    reg [199  : 0] token;
+    integer i;
+    reg transaction_finish;
+    integer transaction_idx;
+    transaction_idx = 0;
+    wait(AESL_reset === 1);
+    fp = $fopen(`AUTOTB_TVIN_setup,"r");
+    if(fp == 0) begin       // Failed to open file
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVIN_setup);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    if (token != "[[[runtime]]]") begin
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    read_token(fp, token);
+    while (token != "[[[/runtime]]]") begin
+        if (token != "[[transaction]]") begin
+            $display("ERROR: Simulation using HLS TB failed.");
+              $finish;
+        end
+        read_token(fp, token);  // skip transaction number
+          read_token(fp, token);
+            # 0.2;
+            while(ready_wire !== 1) begin
+                @(posedge AESL_clock);
+                # 0.2;
+            end
+        if(token != "[[/transaction]]") begin
+            ret = $sscanf(token, "0x%x", AESL_REG_setup);
+              if (ret != 1) begin
+                  $display("Failed to parse token!");
+                $display("ERROR: Simulation using HLS TB failed.");
+                  $finish;
+              end
+            @(posedge AESL_clock);
+              read_token(fp, token);
+        end
+          read_token(fp, token);
+    end
+    $fclose(fp);
+end
+
+
+
+
 
 
 
@@ -374,6 +445,7 @@ AESL_axi_slave_in_parms AESL_AXI_SLAVE_in_parms(
     .TRAN_s_axi_in_parms_BREADY (in_parms_BREADY),
     .TRAN_s_axi_in_parms_BRESP (in_parms_BRESP),
     .TRAN_in_parms_interrupt (in_parms_INTERRUPT),
+    .TRAN_in_parms_read_data_finish(in_parms_read_data_finish),
     .TRAN_in_parms_write_data_finish(in_parms_write_data_finish),
     .TRAN_in_parms_ready_out (AESL_ready),
     .TRAN_in_parms_ready_in (AESL_slave_ready),
@@ -447,6 +519,9 @@ initial begin
 end
 
 
+reg end_setup;
+reg [31:0] size_setup;
+reg [31:0] size_setup_backup;
 reg end_X0_V;
 reg [31:0] size_X0_V;
 reg [31:0] size_X0_V_backup;
@@ -462,6 +537,12 @@ reg [31:0] size_width_V_backup;
 reg end_maxIter;
 reg [31:0] size_maxIter;
 reg [31:0] size_maxIter_backup;
+reg end_maxWidth_V;
+reg [31:0] size_maxWidth_V;
+reg [31:0] size_maxWidth_V_backup;
+reg end_unroll;
+reg [31:0] size_unroll;
+reg [31:0] size_unroll_backup;
 reg end_buf_r;
 reg [31:0] size_buf_r;
 reg [31:0] size_buf_r_backup;
@@ -565,6 +646,66 @@ begin
           interface_done = 0;
   end
 end
+
+reg dump_tvout_finish_maxWidth_V;
+
+initial begin : dump_tvout_runtime_sign_maxWidth_V
+    integer fp;
+    dump_tvout_finish_maxWidth_V = 0;
+    fp = $fopen(`AUTOTB_TVOUT_maxWidth_V_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_maxWidth_V_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_maxWidth_V_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_maxWidth_V_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_maxWidth_V = 1;
+end
+
+
+reg dump_tvout_finish_unroll;
+
+initial begin : dump_tvout_runtime_sign_unroll
+    integer fp;
+    dump_tvout_finish_unroll = 0;
+    fp = $fopen(`AUTOTB_TVOUT_unroll_out_wrapc, "w");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_unroll_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[runtime]]]");
+    $fclose(fp);
+    wait (done_cnt == AUTOTB_TRANSACTION_NUM);
+    // last transaction is saved at negedge right after last done
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    @ (posedge AESL_clock);
+    fp = $fopen(`AUTOTB_TVOUT_unroll_out_wrapc, "a");
+    if (fp == 0) begin
+        $display("Failed to open file \"%s\"!", `AUTOTB_TVOUT_unroll_out_wrapc);
+        $display("ERROR: Simulation using HLS TB failed.");
+        $finish;
+    end
+    $fdisplay(fp,"[[[/runtime]]]");
+    $fclose(fp);
+    dump_tvout_finish_unroll = 1;
+end
+
 
 reg dump_tvout_finish_buf_r;
 

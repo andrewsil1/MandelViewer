@@ -73,6 +73,23 @@ void XCalc_DisableAutoRestart(XCalc *InstancePtr) {
     XCalc_WriteReg(InstancePtr->In_parms_BaseAddress, XCALC_IN_PARMS_ADDR_AP_CTRL, 0);
 }
 
+void XCalc_Set_setup(XCalc *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XCalc_WriteReg(InstancePtr->In_parms_BaseAddress, XCALC_IN_PARMS_ADDR_SETUP_DATA, Data);
+}
+
+u32 XCalc_Get_setup(XCalc *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XCalc_ReadReg(InstancePtr->In_parms_BaseAddress, XCALC_IN_PARMS_ADDR_SETUP_DATA);
+    return Data;
+}
+
 void XCalc_Set_X0_V(XCalc *InstancePtr, u64 Data) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
@@ -145,6 +162,46 @@ u32 XCalc_Get_width_V(XCalc *InstancePtr) {
 
     Data = XCalc_ReadReg(InstancePtr->In_parms_BaseAddress, XCALC_IN_PARMS_ADDR_WIDTH_V_DATA);
     return Data;
+}
+
+u32 XCalc_Get_maxWidth_V(XCalc *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XCalc_ReadReg(InstancePtr->In_parms_BaseAddress, XCALC_IN_PARMS_ADDR_MAXWIDTH_V_DATA);
+    return Data;
+}
+
+u32 XCalc_Get_maxWidth_V_vld(XCalc *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XCalc_ReadReg(InstancePtr->In_parms_BaseAddress, XCALC_IN_PARMS_ADDR_MAXWIDTH_V_CTRL);
+    return Data & 0x1;
+}
+
+u32 XCalc_Get_unroll(XCalc *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XCalc_ReadReg(InstancePtr->In_parms_BaseAddress, XCALC_IN_PARMS_ADDR_UNROLL_DATA);
+    return Data;
+}
+
+u32 XCalc_Get_unroll_vld(XCalc *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XCalc_ReadReg(InstancePtr->In_parms_BaseAddress, XCALC_IN_PARMS_ADDR_UNROLL_CTRL);
+    return Data & 0x1;
 }
 
 void XCalc_Set_maxIter(XCalc *InstancePtr, u32 Data) {

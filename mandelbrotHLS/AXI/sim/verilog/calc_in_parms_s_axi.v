@@ -37,6 +37,10 @@ module calc_in_parms_s_axi
     output wire [39:0]                   Y0_V,
     output wire [39:0]                   X1_V,
     output wire [11:0]                   width_V,
+    input  wire [11:0]                   maxWidth_V,
+    input  wire                          maxWidth_V_ap_vld,
+    input  wire [15:0]                   unroll,
+    input  wire                          unroll_ap_vld,
     output wire [15:0]                   maxIter
 );
 //------------------------Address Info-------------------
@@ -80,38 +84,54 @@ module calc_in_parms_s_axi
 //        bit 11~0 - width_V[11:0] (Read/Write)
 //        others   - reserved
 // 0x38 : reserved
-// 0x3c : Data signal of maxIter
+// 0x3c : Data signal of maxWidth_V
+//        bit 11~0 - maxWidth_V[11:0] (Read)
+//        others   - reserved
+// 0x40 : Control signal of maxWidth_V
+//        bit 0  - maxWidth_V_ap_vld (Read/COR)
+//        others - reserved
+// 0x44 : Data signal of unroll
+//        bit 15~0 - unroll[15:0] (Read)
+//        others   - reserved
+// 0x48 : Control signal of unroll
+//        bit 0  - unroll_ap_vld (Read/COR)
+//        others - reserved
+// 0x4c : Data signal of maxIter
 //        bit 15~0 - maxIter[15:0] (Read/Write)
 //        others   - reserved
-// 0x40 : reserved
+// 0x50 : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL        = 7'h00,
-    ADDR_GIE            = 7'h04,
-    ADDR_IER            = 7'h08,
-    ADDR_ISR            = 7'h0c,
-    ADDR_X0_V_DATA_0    = 7'h10,
-    ADDR_X0_V_DATA_1    = 7'h14,
-    ADDR_X0_V_CTRL      = 7'h18,
-    ADDR_Y0_V_DATA_0    = 7'h1c,
-    ADDR_Y0_V_DATA_1    = 7'h20,
-    ADDR_Y0_V_CTRL      = 7'h24,
-    ADDR_X1_V_DATA_0    = 7'h28,
-    ADDR_X1_V_DATA_1    = 7'h2c,
-    ADDR_X1_V_CTRL      = 7'h30,
-    ADDR_WIDTH_V_DATA_0 = 7'h34,
-    ADDR_WIDTH_V_CTRL   = 7'h38,
-    ADDR_MAXITER_DATA_0 = 7'h3c,
-    ADDR_MAXITER_CTRL   = 7'h40,
-    WRIDLE              = 2'd0,
-    WRDATA              = 2'd1,
-    WRRESP              = 2'd2,
-    WRRESET             = 2'd3,
-    RDIDLE              = 2'd0,
-    RDDATA              = 2'd1,
-    RDRESET             = 2'd2,
+    ADDR_AP_CTRL           = 7'h00,
+    ADDR_GIE               = 7'h04,
+    ADDR_IER               = 7'h08,
+    ADDR_ISR               = 7'h0c,
+    ADDR_X0_V_DATA_0       = 7'h10,
+    ADDR_X0_V_DATA_1       = 7'h14,
+    ADDR_X0_V_CTRL         = 7'h18,
+    ADDR_Y0_V_DATA_0       = 7'h1c,
+    ADDR_Y0_V_DATA_1       = 7'h20,
+    ADDR_Y0_V_CTRL         = 7'h24,
+    ADDR_X1_V_DATA_0       = 7'h28,
+    ADDR_X1_V_DATA_1       = 7'h2c,
+    ADDR_X1_V_CTRL         = 7'h30,
+    ADDR_WIDTH_V_DATA_0    = 7'h34,
+    ADDR_WIDTH_V_CTRL      = 7'h38,
+    ADDR_MAXWIDTH_V_DATA_0 = 7'h3c,
+    ADDR_MAXWIDTH_V_CTRL   = 7'h40,
+    ADDR_UNROLL_DATA_0     = 7'h44,
+    ADDR_UNROLL_CTRL       = 7'h48,
+    ADDR_MAXITER_DATA_0    = 7'h4c,
+    ADDR_MAXITER_CTRL      = 7'h50,
+    WRIDLE                 = 2'd0,
+    WRDATA                 = 2'd1,
+    WRRESP                 = 2'd2,
+    WRRESET                = 2'd3,
+    RDIDLE                 = 2'd0,
+    RDDATA                 = 2'd1,
+    RDRESET                = 2'd2,
     ADDR_BITS         = 7;
 
 //------------------------Local signal-------------------
@@ -139,6 +159,10 @@ localparam
     reg  [39:0]                   int_Y0_V = 'b0;
     reg  [39:0]                   int_X1_V = 'b0;
     reg  [11:0]                   int_width_V = 'b0;
+    reg  [11:0]                   int_maxWidth_V = 'b0;
+    reg                           int_maxWidth_V_ap_vld;
+    reg  [15:0]                   int_unroll = 'b0;
+    reg                           int_unroll_ap_vld;
     reg  [15:0]                   int_maxIter = 'b0;
 
 //------------------------Instantiation------------------
@@ -267,6 +291,18 @@ always @(posedge ACLK) begin
                 end
                 ADDR_WIDTH_V_DATA_0: begin
                     rdata <= int_width_V[11:0];
+                end
+                ADDR_MAXWIDTH_V_DATA_0: begin
+                    rdata <= int_maxWidth_V[11:0];
+                end
+                ADDR_MAXWIDTH_V_CTRL: begin
+                    rdata[0] <= int_maxWidth_V_ap_vld;
+                end
+                ADDR_UNROLL_DATA_0: begin
+                    rdata <= int_unroll[15:0];
+                end
+                ADDR_UNROLL_CTRL: begin
+                    rdata[0] <= int_unroll_ap_vld;
                 end
                 ADDR_MAXITER_DATA_0: begin
                     rdata <= int_maxIter[15:0];
@@ -448,6 +484,50 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_WIDTH_V_DATA_0)
             int_width_V[11:0] <= (WDATA[31:0] & wmask) | (int_width_V[11:0] & ~wmask);
+    end
+end
+
+// int_maxWidth_V
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_maxWidth_V <= 0;
+    else if (ACLK_EN) begin
+        if (maxWidth_V_ap_vld)
+            int_maxWidth_V <= maxWidth_V;
+    end
+end
+
+// int_maxWidth_V_ap_vld
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_maxWidth_V_ap_vld <= 1'b0;
+    else if (ACLK_EN) begin
+        if (maxWidth_V_ap_vld)
+            int_maxWidth_V_ap_vld <= 1'b1;
+        else if (ar_hs && raddr == ADDR_MAXWIDTH_V_CTRL)
+            int_maxWidth_V_ap_vld <= 1'b0; // clear on read
+    end
+end
+
+// int_unroll
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_unroll <= 0;
+    else if (ACLK_EN) begin
+        if (unroll_ap_vld)
+            int_unroll <= unroll;
+    end
+end
+
+// int_unroll_ap_vld
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_unroll_ap_vld <= 1'b0;
+    else if (ACLK_EN) begin
+        if (unroll_ap_vld)
+            int_unroll_ap_vld <= 1'b1;
+        else if (ar_hs && raddr == ADDR_UNROLL_CTRL)
+            int_unroll_ap_vld <= 1'b0; // clear on read
     end
 end
 

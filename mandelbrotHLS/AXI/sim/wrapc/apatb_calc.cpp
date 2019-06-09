@@ -31,6 +31,8 @@ using namespace sc_dt;
 // [dump_enumeration [get_enumeration_list]] ---------->
 
 
+// wrapc file define: "setup"
+#define AUTOTB_TVIN_setup  "../tv/cdatafile/c.calc.autotvin_setup.dat"
 // wrapc file define: "X0_V"
 #define AUTOTB_TVIN_X0_V  "../tv/cdatafile/c.calc.autotvin_X0_V.dat"
 // wrapc file define: "Y0_V"
@@ -39,6 +41,10 @@ using namespace sc_dt;
 #define AUTOTB_TVIN_X1_V  "../tv/cdatafile/c.calc.autotvin_X1_V.dat"
 // wrapc file define: "width_V"
 #define AUTOTB_TVIN_width_V  "../tv/cdatafile/c.calc.autotvin_width_V.dat"
+// wrapc file define: "maxWidth_V"
+#define AUTOTB_TVOUT_maxWidth_V  "../tv/cdatafile/c.calc.autotvout_maxWidth_V.dat"
+// wrapc file define: "unroll"
+#define AUTOTB_TVOUT_unroll  "../tv/cdatafile/c.calc.autotvout_unroll.dat"
 // wrapc file define: "maxIter"
 #define AUTOTB_TVIN_maxIter  "../tv/cdatafile/c.calc.autotvin_maxIter.dat"
 // wrapc file define: "buf_r"
@@ -47,6 +53,10 @@ using namespace sc_dt;
 
 #define INTER_TCL  "../tv/cdatafile/ref.tcl"
 
+// tvout file define: "maxWidth_V"
+#define AUTOTB_TVOUT_PC_maxWidth_V  "../tv/rtldatafile/rtl.calc.autotvout_maxWidth_V.dat"
+// tvout file define: "unroll"
+#define AUTOTB_TVOUT_PC_unroll  "../tv/rtldatafile/rtl.calc.autotvout_unroll.dat"
 // tvout file define: "buf_r"
 #define AUTOTB_TVOUT_PC_buf_r  "../tv/rtldatafile/rtl.calc.autotvout_buf_r.dat"
 
@@ -54,10 +64,13 @@ class INTER_TCL_FILE {
 	public:
 		INTER_TCL_FILE(const char* name) {
 			mName = name;
+			setup_depth = 0;
 			X0_V_depth = 0;
 			Y0_V_depth = 0;
 			X1_V_depth = 0;
 			width_V_depth = 0;
+			maxWidth_V_depth = 0;
+			unroll_depth = 0;
 			maxIter_depth = 0;
 			buf_r_depth = 0;
 			trans_num =0;
@@ -79,10 +92,13 @@ class INTER_TCL_FILE {
 
 		string get_depth_list () {
 			stringstream total_list;
+			total_list << "{setup " << setup_depth << "}\n";
 			total_list << "{X0_V " << X0_V_depth << "}\n";
 			total_list << "{Y0_V " << Y0_V_depth << "}\n";
 			total_list << "{X1_V " << X1_V_depth << "}\n";
 			total_list << "{width_V " << width_V_depth << "}\n";
+			total_list << "{maxWidth_V " << maxWidth_V_depth << "}\n";
+			total_list << "{unroll " << unroll_depth << "}\n";
 			total_list << "{maxIter " << maxIter_depth << "}\n";
 			total_list << "{buf_r " << buf_r_depth << "}\n";
 			return total_list.str();
@@ -92,10 +108,13 @@ class INTER_TCL_FILE {
 			(*class_num) = (*class_num) > num ? (*class_num) : num;
 		}
 	public:
+		int setup_depth;
 		int X0_V_depth;
 		int Y0_V_depth;
 		int X1_V_depth;
 		int width_V_depth;
+		int maxWidth_V_depth;
+		int unroll_depth;
 		int maxIter_depth;
 		int buf_r_depth;
 		int trans_num;
@@ -106,18 +125,24 @@ class INTER_TCL_FILE {
 };
 
 extern void calc (
+bool setup,
 ap_fixed<40, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X0,
 ap_fixed<40, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> Y0,
 ap_fixed<40, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X1,
 ap_uint<12> width,
+ap_uint<12>* maxWidth,
+unsigned short* unroll,
 unsigned short maxIter,
 unsigned short* buf);
 
 void AESL_WRAP_calc (
+bool setup,
 ap_fixed<40, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X0,
 ap_fixed<40, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> Y0,
 ap_fixed<40, 4, (ap_q_mode) 4, (ap_o_mode)0, 0> X1,
 ap_uint<12> width,
+ap_uint<12>* maxWidth,
+unsigned short* unroll,
 unsigned short maxIter,
 unsigned short* buf)
 {
@@ -133,6 +158,276 @@ unsigned short* buf)
 		string AESL_num;
 		static AESL_FILE_HANDLER aesl_fh;
 
+
+		// output port post check: "maxWidth_V"
+		aesl_fh.read(AUTOTB_TVOUT_PC_maxWidth_V, AESL_token); // [[transaction]]
+		if (AESL_token != "[[transaction]]")
+		{
+			exit(1);
+		}
+		aesl_fh.read(AUTOTB_TVOUT_PC_maxWidth_V, AESL_num); // transaction number
+
+		if (atoi(AESL_num.c_str()) == AESL_transaction_pc)
+		{
+			aesl_fh.read(AUTOTB_TVOUT_PC_maxWidth_V, AESL_token); // data
+
+			sc_bv<12> *maxWidth_V_pc_buffer = new sc_bv<12>[1];
+			int i = 0;
+
+			while (AESL_token != "[[/transaction]]")
+			{
+				bool no_x = false;
+				bool err = false;
+
+				// search and replace 'X' with "0" from the 1st char of token
+				while (!no_x)
+				{
+					size_t x_found = AESL_token.find('X');
+					if (x_found != string::npos)
+					{
+						if (!err)
+						{
+							cerr << "WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'maxWidth_V', possible cause: There are uninitialized variables in the C design." << endl;
+							err = true;
+						}
+						AESL_token.replace(x_found, 1, "0");
+					}
+					else
+					{
+						no_x = true;
+					}
+				}
+
+				no_x = false;
+
+				// search and replace 'x' with "0" from the 3rd char of token
+				while (!no_x)
+				{
+					size_t x_found = AESL_token.find('x', 2);
+
+					if (x_found != string::npos)
+					{
+						if (!err)
+						{
+							cerr << "WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'maxWidth_V', possible cause: There are uninitialized variables in the C design." << endl;
+							err = true;
+						}
+						AESL_token.replace(x_found, 1, "0");
+					}
+					else
+					{
+						no_x = true;
+					}
+				}
+
+				// push token into output port buffer
+				if (AESL_token != "")
+				{
+					maxWidth_V_pc_buffer[i] = AESL_token.c_str();
+					i++;
+				}
+
+				aesl_fh.read(AUTOTB_TVOUT_PC_maxWidth_V, AESL_token); // data or [[/transaction]]
+
+				if (AESL_token == "[[[/runtime]]]" || aesl_fh.eof(AUTOTB_TVOUT_PC_maxWidth_V))
+				{
+					exit(1);
+				}
+			}
+
+			// ***********************************
+			if (i > 0)
+			{
+				// RTL Name: maxWidth_V
+				{
+					// bitslice(11, 0)
+					// {
+						// celement: maxWidth.V(11, 0)
+						// {
+							sc_lv<12>* maxWidth_V_lv0_0_0_1 = new sc_lv<12>[1];
+						// }
+					// }
+
+					// bitslice(11, 0)
+					{
+						int hls_map_index = 0;
+						// celement: maxWidth.V(11, 0)
+						{
+							// carray: (0) => (0) @ (1)
+							for (int i_0 = 0; i_0 <= 0; i_0 += 1)
+							{
+								if (&(maxWidth[0]) != NULL) // check the null address if the c port is array or others
+								{
+									maxWidth_V_lv0_0_0_1[hls_map_index].range(11, 0) = sc_bv<12>(maxWidth_V_pc_buffer[hls_map_index].range(11, 0));
+									hls_map_index++;
+								}
+							}
+						}
+					}
+
+					// bitslice(11, 0)
+					{
+						int hls_map_index = 0;
+						// celement: maxWidth.V(11, 0)
+						{
+							// carray: (0) => (0) @ (1)
+							for (int i_0 = 0; i_0 <= 0; i_0 += 1)
+							{
+								// sub                    : i_0
+								// ori_name               : maxWidth[i_0]
+								// sub_1st_elem           : 0
+								// ori_name_1st_elem      : maxWidth[0]
+								// output_left_conversion : maxWidth[i_0]
+								// output_type_conversion : (maxWidth_V_lv0_0_0_1[hls_map_index]).to_string(SC_BIN).c_str()
+								if (&(maxWidth[0]) != NULL) // check the null address if the c port is array or others
+								{
+									maxWidth[i_0] = (maxWidth_V_lv0_0_0_1[hls_map_index]).to_string(SC_BIN).c_str();
+									hls_map_index++;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// release memory allocation
+			delete [] maxWidth_V_pc_buffer;
+		}
+
+		// output port post check: "unroll"
+		aesl_fh.read(AUTOTB_TVOUT_PC_unroll, AESL_token); // [[transaction]]
+		if (AESL_token != "[[transaction]]")
+		{
+			exit(1);
+		}
+		aesl_fh.read(AUTOTB_TVOUT_PC_unroll, AESL_num); // transaction number
+
+		if (atoi(AESL_num.c_str()) == AESL_transaction_pc)
+		{
+			aesl_fh.read(AUTOTB_TVOUT_PC_unroll, AESL_token); // data
+
+			sc_bv<16> *unroll_pc_buffer = new sc_bv<16>[1];
+			int i = 0;
+
+			while (AESL_token != "[[/transaction]]")
+			{
+				bool no_x = false;
+				bool err = false;
+
+				// search and replace 'X' with "0" from the 1st char of token
+				while (!no_x)
+				{
+					size_t x_found = AESL_token.find('X');
+					if (x_found != string::npos)
+					{
+						if (!err)
+						{
+							cerr << "WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'unroll', possible cause: There are uninitialized variables in the C design." << endl;
+							err = true;
+						}
+						AESL_token.replace(x_found, 1, "0");
+					}
+					else
+					{
+						no_x = true;
+					}
+				}
+
+				no_x = false;
+
+				// search and replace 'x' with "0" from the 3rd char of token
+				while (!no_x)
+				{
+					size_t x_found = AESL_token.find('x', 2);
+
+					if (x_found != string::npos)
+					{
+						if (!err)
+						{
+							cerr << "WARNING: [SIM 212-201] RTL produces unknown value 'X' on port 'unroll', possible cause: There are uninitialized variables in the C design." << endl;
+							err = true;
+						}
+						AESL_token.replace(x_found, 1, "0");
+					}
+					else
+					{
+						no_x = true;
+					}
+				}
+
+				// push token into output port buffer
+				if (AESL_token != "")
+				{
+					unroll_pc_buffer[i] = AESL_token.c_str();
+					i++;
+				}
+
+				aesl_fh.read(AUTOTB_TVOUT_PC_unroll, AESL_token); // data or [[/transaction]]
+
+				if (AESL_token == "[[[/runtime]]]" || aesl_fh.eof(AUTOTB_TVOUT_PC_unroll))
+				{
+					exit(1);
+				}
+			}
+
+			// ***********************************
+			if (i > 0)
+			{
+				// RTL Name: unroll
+				{
+					// bitslice(15, 0)
+					// {
+						// celement: unroll(15, 0)
+						// {
+							sc_lv<16>* unroll_lv0_0_0_1 = new sc_lv<16>[1];
+						// }
+					// }
+
+					// bitslice(15, 0)
+					{
+						int hls_map_index = 0;
+						// celement: unroll(15, 0)
+						{
+							// carray: (0) => (0) @ (1)
+							for (int i_0 = 0; i_0 <= 0; i_0 += 1)
+							{
+								if (&(unroll[0]) != NULL) // check the null address if the c port is array or others
+								{
+									unroll_lv0_0_0_1[hls_map_index].range(15, 0) = sc_bv<16>(unroll_pc_buffer[hls_map_index].range(15, 0));
+									hls_map_index++;
+								}
+							}
+						}
+					}
+
+					// bitslice(15, 0)
+					{
+						int hls_map_index = 0;
+						// celement: unroll(15, 0)
+						{
+							// carray: (0) => (0) @ (1)
+							for (int i_0 = 0; i_0 <= 0; i_0 += 1)
+							{
+								// sub                    : i_0
+								// ori_name               : unroll[i_0]
+								// sub_1st_elem           : 0
+								// ori_name_1st_elem      : unroll[0]
+								// output_left_conversion : unroll[i_0]
+								// output_type_conversion : (unroll_lv0_0_0_1[hls_map_index]).to_uint64()
+								if (&(unroll[0]) != NULL) // check the null address if the c port is array or others
+								{
+									unroll[i_0] = (unroll_lv0_0_0_1[hls_map_index]).to_uint64();
+									hls_map_index++;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// release memory allocation
+			delete [] unroll_pc_buffer;
+		}
 
 		// output port post check: "buf_r"
 		aesl_fh.read(AUTOTB_TVOUT_PC_buf_r, AESL_token); // [[transaction]]
@@ -278,6 +573,10 @@ unsigned short* buf)
 
 		static AESL_FILE_HANDLER aesl_fh;
 
+		// "setup"
+		char* tvin_setup = new char[50];
+		aesl_fh.touch(AUTOTB_TVIN_setup);
+
 		// "X0_V"
 		char* tvin_X0_V = new char[50];
 		aesl_fh.touch(AUTOTB_TVIN_X0_V);
@@ -294,6 +593,14 @@ unsigned short* buf)
 		char* tvin_width_V = new char[50];
 		aesl_fh.touch(AUTOTB_TVIN_width_V);
 
+		// "maxWidth_V"
+		char* tvout_maxWidth_V = new char[50];
+		aesl_fh.touch(AUTOTB_TVOUT_maxWidth_V);
+
+		// "unroll"
+		char* tvout_unroll = new char[50];
+		aesl_fh.touch(AUTOTB_TVOUT_unroll);
+
 		// "maxIter"
 		char* tvin_maxIter = new char[50];
 		aesl_fh.touch(AUTOTB_TVIN_maxIter);
@@ -307,6 +614,48 @@ unsigned short* buf)
 		CodeState = DUMP_INPUTS;
 		static INTER_TCL_FILE tcl_file(INTER_TCL);
 		int leading_zero;
+
+		// [[transaction]]
+		sprintf(tvin_setup, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(AUTOTB_TVIN_setup, tvin_setup);
+
+		sc_bv<1> setup_tvin_wrapc_buffer;
+
+		// RTL Name: setup
+		{
+			// bitslice(0, 0)
+			{
+				// celement: setup(0, 0)
+				{
+					// carray: (0) => (0) @ (0)
+					{
+						// sub                   : 
+						// ori_name              : setup
+						// sub_1st_elem          : 
+						// ori_name_1st_elem     : setup
+						// regulate_c_name       : setup
+						// input_type_conversion : setup
+						if (&(setup) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<1> setup_tmp_mem;
+							setup_tmp_mem = setup;
+							setup_tvin_wrapc_buffer.range(0, 0) = setup_tmp_mem.range(0, 0);
+						}
+					}
+				}
+			}
+		}
+
+		// dump tv to file
+		for (int i = 0; i < 1; i++)
+		{
+			sprintf(tvin_setup, "%s\n", (setup_tvin_wrapc_buffer).to_string(SC_HEX).c_str());
+			aesl_fh.write(AUTOTB_TVIN_setup, tvin_setup);
+		}
+
+		tcl_file.set_num(1, &tcl_file.setup_depth);
+		sprintf(tvin_setup, "[[/transaction]] \n");
+		aesl_fh.write(AUTOTB_TVIN_setup, tvin_setup);
 
 		// [[transaction]]
 		sprintf(tvin_X0_V, "[[transaction]] %d\n", AESL_transaction);
@@ -569,9 +918,105 @@ unsigned short* buf)
 // [call_c_dut] ---------->
 
 		CodeState = CALL_C_DUT;
-		calc(X0, Y0, X1, width, maxIter, buf);
+		calc(setup, X0, Y0, X1, width, maxWidth, unroll, maxIter, buf);
 
 		CodeState = DUMP_OUTPUTS;
+
+		// [[transaction]]
+		sprintf(tvout_maxWidth_V, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(AUTOTB_TVOUT_maxWidth_V, tvout_maxWidth_V);
+
+		sc_bv<12>* maxWidth_V_tvout_wrapc_buffer = new sc_bv<12>[1];
+
+		// RTL Name: maxWidth_V
+		{
+			// bitslice(11, 0)
+			{
+				int hls_map_index = 0;
+				// celement: maxWidth.V(11, 0)
+				{
+					// carray: (0) => (0) @ (1)
+					for (int i_0 = 0; i_0 <= 0; i_0 += 1)
+					{
+						// sub                   : i_0
+						// ori_name              : maxWidth[i_0]
+						// sub_1st_elem          : 0
+						// ori_name_1st_elem     : maxWidth[0]
+						// regulate_c_name       : maxWidth_V
+						// input_type_conversion : (maxWidth[i_0]).to_string(2).c_str()
+						if (&(maxWidth[0]) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<12> maxWidth_V_tmp_mem;
+							maxWidth_V_tmp_mem = (maxWidth[i_0]).to_string(2).c_str();
+							maxWidth_V_tvout_wrapc_buffer[hls_map_index].range(11, 0) = maxWidth_V_tmp_mem.range(11, 0);
+                                 	       hls_map_index++;
+						}
+					}
+				}
+			}
+		}
+
+		// dump tv to file
+		for (int i = 0; i < 1; i++)
+		{
+			sprintf(tvout_maxWidth_V, "%s\n", (maxWidth_V_tvout_wrapc_buffer[i]).to_string(SC_HEX).c_str());
+			aesl_fh.write(AUTOTB_TVOUT_maxWidth_V, tvout_maxWidth_V);
+		}
+
+		tcl_file.set_num(1, &tcl_file.maxWidth_V_depth);
+		sprintf(tvout_maxWidth_V, "[[/transaction]] \n");
+		aesl_fh.write(AUTOTB_TVOUT_maxWidth_V, tvout_maxWidth_V);
+
+		// release memory allocation
+		delete [] maxWidth_V_tvout_wrapc_buffer;
+
+		// [[transaction]]
+		sprintf(tvout_unroll, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(AUTOTB_TVOUT_unroll, tvout_unroll);
+
+		sc_bv<16>* unroll_tvout_wrapc_buffer = new sc_bv<16>[1];
+
+		// RTL Name: unroll
+		{
+			// bitslice(15, 0)
+			{
+				int hls_map_index = 0;
+				// celement: unroll(15, 0)
+				{
+					// carray: (0) => (0) @ (1)
+					for (int i_0 = 0; i_0 <= 0; i_0 += 1)
+					{
+						// sub                   : i_0
+						// ori_name              : unroll[i_0]
+						// sub_1st_elem          : 0
+						// ori_name_1st_elem     : unroll[0]
+						// regulate_c_name       : unroll
+						// input_type_conversion : unroll[i_0]
+						if (&(unroll[0]) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<16> unroll_tmp_mem;
+							unroll_tmp_mem = unroll[i_0];
+							unroll_tvout_wrapc_buffer[hls_map_index].range(15, 0) = unroll_tmp_mem.range(15, 0);
+                                 	       hls_map_index++;
+						}
+					}
+				}
+			}
+		}
+
+		// dump tv to file
+		for (int i = 0; i < 1; i++)
+		{
+			sprintf(tvout_unroll, "%s\n", (unroll_tvout_wrapc_buffer[i]).to_string(SC_HEX).c_str());
+			aesl_fh.write(AUTOTB_TVOUT_unroll, tvout_unroll);
+		}
+
+		tcl_file.set_num(1, &tcl_file.unroll_depth);
+		sprintf(tvout_unroll, "[[/transaction]] \n");
+		aesl_fh.write(AUTOTB_TVOUT_unroll, tvout_unroll);
+
+		// release memory allocation
+		delete [] unroll_tvout_wrapc_buffer;
 
 		// [[transaction]]
 		sprintf(tvout_buf_r, "[[transaction]] %d\n", AESL_transaction);
@@ -622,6 +1067,8 @@ unsigned short* buf)
 		delete [] buf_r_tvout_wrapc_buffer;
 
 		CodeState = DELETE_CHAR_BUFFERS;
+		// release memory allocation: "setup"
+		delete [] tvin_setup;
 		// release memory allocation: "X0_V"
 		delete [] tvin_X0_V;
 		// release memory allocation: "Y0_V"
@@ -630,6 +1077,10 @@ unsigned short* buf)
 		delete [] tvin_X1_V;
 		// release memory allocation: "width_V"
 		delete [] tvin_width_V;
+		// release memory allocation: "maxWidth_V"
+		delete [] tvout_maxWidth_V;
+		// release memory allocation: "unroll"
+		delete [] tvout_unroll;
 		// release memory allocation: "maxIter"
 		delete [] tvin_maxIter;
 		// release memory allocation: "buf_r"

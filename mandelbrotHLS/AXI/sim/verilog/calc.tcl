@@ -2,25 +2,25 @@
 log_wave -r /
 set designtopgroup [add_wave_group "Design Top Signals"]
 set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
-set X0__Y0__X1__width__maxIter__return_group [add_wave_group X0__Y0__X1__width__maxIter__return(axi_slave) -into $cinoutgroup]
-add_wave /apatb_calc_top/AESL_inst_calc/interrupt -into $X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_BRESP -into $X0__Y0__X1__width__maxIter__return_group -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_BREADY -into $X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_BVALID -into $X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_RRESP -into $X0__Y0__X1__width__maxIter__return_group -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_RDATA -into $X0__Y0__X1__width__maxIter__return_group -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_RREADY -into $X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_RVALID -into $X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_ARREADY -into $X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_ARVALID -into $X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_ARADDR -into $X0__Y0__X1__width__maxIter__return_group -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_WSTRB -into $X0__Y0__X1__width__maxIter__return_group -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_WDATA -into $X0__Y0__X1__width__maxIter__return_group -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_WREADY -into $X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_WVALID -into $X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_AWREADY -into $X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_AWVALID -into $X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_AWADDR -into $X0__Y0__X1__width__maxIter__return_group -radix hex
+set X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group [add_wave_group X0__Y0__X1__width__maxWidth__unroll__maxIter__return(axi_slave) -into $cinoutgroup]
+add_wave /apatb_calc_top/AESL_inst_calc/interrupt -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_BRESP -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_BREADY -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_BVALID -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_RRESP -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_RDATA -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_RREADY -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_RVALID -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_ARREADY -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_ARVALID -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_ARADDR -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_WSTRB -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_WDATA -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_WREADY -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_WVALID -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_AWREADY -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_AWVALID -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/AESL_inst_calc/s_axi_in_parms_AWADDR -into $X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
 set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
 set buf_group [add_wave_group buf(axi_master) -into $coutputgroup]
 set rdata_group [add_wave_group "Read Channel" -into $buf_group]
@@ -71,6 +71,9 @@ add_wave /apatb_calc_top/AESL_inst_calc/m_axi_buf_r_AWID -into $wdata_group -rad
 add_wave /apatb_calc_top/AESL_inst_calc/m_axi_buf_r_AWADDR -into $wdata_group -radix hex
 add_wave /apatb_calc_top/AESL_inst_calc/m_axi_buf_r_AWREADY -into $ctrl_group -color #ffff00 -radix hex
 add_wave /apatb_calc_top/AESL_inst_calc/m_axi_buf_r_AWVALID -into $ctrl_group -color #ffff00 -radix hex
+set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+set setup_group [add_wave_group setup(wire) -into $cinputgroup]
+add_wave /apatb_calc_top/AESL_inst_calc/setup -into $setup_group -radix hex
 set blocksiggroup [add_wave_group "Block-level IO Handshake(internal)" -into $designtopgroup]
 add_wave /apatb_calc_top/AESL_inst_calc/ap_done -into $blocksiggroup
 add_wave /apatb_calc_top/AESL_inst_calc/ap_idle -into $blocksiggroup
@@ -87,32 +90,35 @@ set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
 add_wave /apatb_calc_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
 add_wave /apatb_calc_top/ready_cnt -into $tb_simstatus_group -radix hex
 add_wave /apatb_calc_top/done_cnt -into $tb_simstatus_group -radix hex
+add_wave /apatb_calc_top/LENGTH_setup -into $tb_portdepth_group -radix hex
 add_wave /apatb_calc_top/LENGTH_X0_V -into $tb_portdepth_group -radix hex
 add_wave /apatb_calc_top/LENGTH_Y0_V -into $tb_portdepth_group -radix hex
 add_wave /apatb_calc_top/LENGTH_X1_V -into $tb_portdepth_group -radix hex
 add_wave /apatb_calc_top/LENGTH_width_V -into $tb_portdepth_group -radix hex
+add_wave /apatb_calc_top/LENGTH_maxWidth_V -into $tb_portdepth_group -radix hex
+add_wave /apatb_calc_top/LENGTH_unroll -into $tb_portdepth_group -radix hex
 add_wave /apatb_calc_top/LENGTH_maxIter -into $tb_portdepth_group -radix hex
 add_wave /apatb_calc_top/LENGTH_buf_r -into $tb_portdepth_group -radix hex
 set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
-set tb_X0__Y0__X1__width__maxIter__return_group [add_wave_group X0__Y0__X1__width__maxIter__return(axi_slave) -into $tbcinoutgroup]
-add_wave /apatb_calc_top/in_parms_INTERRUPT -into $tb_X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/in_parms_BRESP -into $tb_X0__Y0__X1__width__maxIter__return_group -radix hex
-add_wave /apatb_calc_top/in_parms_BREADY -into $tb_X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/in_parms_BVALID -into $tb_X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/in_parms_RRESP -into $tb_X0__Y0__X1__width__maxIter__return_group -radix hex
-add_wave /apatb_calc_top/in_parms_RDATA -into $tb_X0__Y0__X1__width__maxIter__return_group -radix hex
-add_wave /apatb_calc_top/in_parms_RREADY -into $tb_X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/in_parms_RVALID -into $tb_X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/in_parms_ARREADY -into $tb_X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/in_parms_ARVALID -into $tb_X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/in_parms_ARADDR -into $tb_X0__Y0__X1__width__maxIter__return_group -radix hex
-add_wave /apatb_calc_top/in_parms_WSTRB -into $tb_X0__Y0__X1__width__maxIter__return_group -radix hex
-add_wave /apatb_calc_top/in_parms_WDATA -into $tb_X0__Y0__X1__width__maxIter__return_group -radix hex
-add_wave /apatb_calc_top/in_parms_WREADY -into $tb_X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/in_parms_WVALID -into $tb_X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/in_parms_AWREADY -into $tb_X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/in_parms_AWVALID -into $tb_X0__Y0__X1__width__maxIter__return_group -color #ffff00 -radix hex
-add_wave /apatb_calc_top/in_parms_AWADDR -into $tb_X0__Y0__X1__width__maxIter__return_group -radix hex
+set tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group [add_wave_group X0__Y0__X1__width__maxWidth__unroll__maxIter__return(axi_slave) -into $tbcinoutgroup]
+add_wave /apatb_calc_top/in_parms_INTERRUPT -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/in_parms_BRESP -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
+add_wave /apatb_calc_top/in_parms_BREADY -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/in_parms_BVALID -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/in_parms_RRESP -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
+add_wave /apatb_calc_top/in_parms_RDATA -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
+add_wave /apatb_calc_top/in_parms_RREADY -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/in_parms_RVALID -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/in_parms_ARREADY -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/in_parms_ARVALID -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/in_parms_ARADDR -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
+add_wave /apatb_calc_top/in_parms_WSTRB -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
+add_wave /apatb_calc_top/in_parms_WDATA -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
+add_wave /apatb_calc_top/in_parms_WREADY -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/in_parms_WVALID -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/in_parms_AWREADY -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/in_parms_AWVALID -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -color #ffff00 -radix hex
+add_wave /apatb_calc_top/in_parms_AWADDR -into $tb_X0__Y0__X1__width__maxWidth__unroll__maxIter__return_group -radix hex
 set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
 set tb_buf_group [add_wave_group buf(axi_master) -into $tbcoutputgroup]
 set rdata_group [add_wave_group "Read Channel" -into $tb_buf_group]
@@ -163,6 +169,9 @@ add_wave /apatb_calc_top/buf_r_AWID -into $wdata_group -radix hex
 add_wave /apatb_calc_top/buf_r_AWADDR -into $wdata_group -radix hex
 add_wave /apatb_calc_top/buf_r_AWREADY -into $ctrl_group -color #ffff00 -radix hex
 add_wave /apatb_calc_top/buf_r_AWVALID -into $ctrl_group -color #ffff00 -radix hex
+set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+set tb_setup_group [add_wave_group setup(wire) -into $tbcinputgroup]
+add_wave /apatb_calc_top/setup -into $tb_setup_group -radix hex
 save_wave_config calc.wcfg
 run all
 quit

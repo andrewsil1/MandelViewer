@@ -100442,7 +100442,7 @@ typedef ap_fixed<40,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
-void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf);
+void calc(bool setup, real X0, real Y0, real X1, res width, res* maxWidth, unsigned short* unroll, pixval maxIter, pixval *buf);
 # 2 "C:/Users/andrewsi/Documents/GitHub/MandelViewer/mandelbrotHLS/mandel_maintb.cpp" 2
 
 
@@ -100456,6 +100456,8 @@ int main() {
  real X0, Y0, X1;
  const int HEIGHT = 104 * 3 / 4;
  const pixval maxIter = 500;
+ res maxWidth;
+ unsigned short unroll;
 
  pixval mem[HEIGHT * 104];
 
@@ -100464,8 +100466,23 @@ int main() {
  Y0 = 1;
  X1 = 2;
 
+ calc(true, X0, Y0, X1, 104, &maxWidth, &unroll, maxIter, mem);
+ if (maxWidth != (res)1920) {
+     cout << "MaxWidth is an unexpected value.\n" << endl;
+     return -1;
+ }
 
-    calc(X0, Y0, X1, 104, maxIter, mem);
+ if (unroll != 8) {
+     cout << "Unroll is an unexpected value.\n" << endl;
+     return -1;
+ }
+
+ if (104 % unroll != 0 || (res)104 > maxWidth) {
+        cout << "Testbench width is not a multiple of received unroll value, or exceeds MaxWidth.\n" << endl;
+        return -1;
+ }
+
+    calc(false, X0, Y0, X1, 104, &maxWidth, &unroll, maxIter, mem);
 
  for (int y = 0; y < HEIGHT; y++) {
     for (int x = 0; x < 104; x++)

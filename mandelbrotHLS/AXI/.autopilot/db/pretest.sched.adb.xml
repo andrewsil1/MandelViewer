@@ -838,10 +838,10 @@ _ZN13ap_fixed_baseILi40ELi4ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="22" bw="3" op_0_bw="3" op_1_bw="80" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi4ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:19  %p_Result_s_15 = call i3 @_ssdm_op_PartSelect.i3.i80.i32.i32(i80 %r_V_9, i32 77, i32 79)
+_ZN13ap_fixed_baseILi40ELi4ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:19  %p_Result_s_12 = call i3 @_ssdm_op_PartSelect.i3.i80.i32.i32(i80 %r_V_9, i32 77, i32 79)
 
 ]]></Node>
-<StgValue><ssdm name="p_Result_s_15"/></StgValue>
+<StgValue><ssdm name="p_Result_s_12"/></StgValue>
 </operation>
 
 <operation id="68" st_id="6" stage="1" lat="1">
@@ -853,7 +853,7 @@ _ZN13ap_fixed_baseILi40ELi4ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_ad
 
 <Node id="23" bw="1" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-_ZN13ap_fixed_baseILi40ELi4ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:20  %Range2_all_ones = icmp eq i3 %p_Result_s_15, -1
+_ZN13ap_fixed_baseILi40ELi4ELb1EL9ap_q_mode4EL9ap_o_mode0ELi0EE19quantization_adjustEbbb.exit.i.i.i.i_ifconv:20  %Range2_all_ones = icmp eq i3 %p_Result_s_12, -1
 
 ]]></Node>
 <StgValue><ssdm name="Range2_all_ones"/></StgValue>

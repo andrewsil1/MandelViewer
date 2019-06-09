@@ -35090,7 +35090,7 @@ typedef ap_fixed<40,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
-void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf);
+void calc(bool setup, real X0, real Y0, real X1, res width, res* maxWidth, unsigned short* unroll, pixval maxIter, pixval *buf);
 # 2 "mandelbrotHLS/mandel.cpp" 2
 # 1 "mandelbrotHLS/pretest.h" 1
 # 1 "mandelbrotHLS/mandel.h" 1
@@ -35101,7 +35101,7 @@ typedef ap_fixed<40,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
-void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf);
+void calc(bool setup, real X0, real Y0, real X1, res width, res* maxWidth, unsigned short* unroll, pixval maxIter, pixval *buf);
 # 2 "mandelbrotHLS/pretest.h" 2
 
 bool pretest(real x, real y);
@@ -49797,7 +49797,7 @@ pixval mandel_calc(real x_in, real y_in, pixval maxIter) {
         iter = maxIter;
    } else {
         mandel_calc_loop:for (iter = 0; iter < maxIter; iter++) {
-#pragma HLS LOOP_TRIPCOUNT min=0 max=2000 avg=50
+#pragma HLS LOOP_TRIPCOUNT min=0 max=2000 avg=5
 # 29 "mandelbrotHLS/mandel.cpp"
 
             real x2 = x*x;
@@ -49827,7 +49827,7 @@ pixval mandel_calc(real x_in, real y_in, pixval maxIter) {
 }
 
 
-void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf) {
+void calc(bool setup, real X0, real Y0, real X1, res width, res *maxWidth, unsigned short *unroll, pixval maxIter, pixval *buf) {
 #pragma HLS INTERFACE m_axi depth=8112 port=&buf offset=off
 # 57 "mandelbrotHLS/mandel.cpp"
 
@@ -49846,64 +49846,55 @@ void calc(real X0, real Y0, real X1, res width, pixval maxIter, pixval *buf) {
 #pragma HLS INTERFACE s_axilite port=return bundle=in_parms
 # 57 "mandelbrotHLS/mandel.cpp"
 
+#pragma HLS INTERFACE s_axilite port=&setup bundle=in_parms
+# 57 "mandelbrotHLS/mandel.cpp"
+
 #pragma HLS INTERFACE s_axilite port=&width bundle=in_parms
 # 57 "mandelbrotHLS/mandel.cpp"
 
+#pragma HLS INTERFACE s_axilite register port=&maxWidth bundle=in_parms
+# 57 "mandelbrotHLS/mandel.cpp"
 
-    real delta = (real) 0.0;
-    real x,y;
-    res height;
-    int index;
-    pixval mem[1920];
-#pragma HLS ARRAY_PARTITION variable=&mem cyclic factor=8 dim=1
-# 63 "mandelbrotHLS/mandel.cpp"
+#pragma HLS INTERFACE s_axilite register port=&unroll bundle=in_parms
+# 57 "mandelbrotHLS/mandel.cpp"
 
 
+    real delta = (X1 - X0) / width;
+    real y = Y0;
+    real x = X0;
+    res height = width / 4 * 3;
+    int index = 0;
+
+    *maxWidth = 1920;
+    *unroll = 8;
+
+    if (setup) {
+        return;
+    }
 
 
 
-     delta = (X1 - X0) / width;
 
-
-
-
-        height = width * 3 / 4;
-        index = 0;
-     y = Y0;
 
 
 
 y_for: for (res line = 0; line < height; line++) {
 #pragma HLS LOOP_TRIPCOUNT min=768 max=1440 avg=768
-# 79 "mandelbrotHLS/mandel.cpp"
-
-
-
-
-
+# 78 "mandelbrotHLS/mandel.cpp"
 
 x_for: for (res pix_x = 0; pix_x < width; pix_x++) {
 #pragma HLS LOOP_TRIPCOUNT min=1024 max=1920 avg=1024
-# 85 "mandelbrotHLS/mandel.cpp"
+# 79 "mandelbrotHLS/mandel.cpp"
 
 #pragma HLS UNROLL skip_exit_check factor=8
-# 85 "mandelbrotHLS/mandel.cpp"
+# 79 "mandelbrotHLS/mandel.cpp"
 
 
                 x = X0 + (pix_x * delta);
 
 
 
-                mem[pix_x] = mandel_calc(x,y,maxIter);
-
-            }
-
-
-burst_out: for (int i = 0; i < width; i++)
-            {
-#pragma HLS PIPELINE
- buf[index++] = mem[i];
-
+                buf[index++] = mandel_calc(x,y,maxIter);
 
             }
 

@@ -3,34 +3,6 @@
       "directive": [
         {
           "functionName": "calc",
-          "label": "",
-          "functionLabel": "",
-          "pragma": {
-            "name": "ARRAY_PARTITION",
-            "option": [
-              {
-                "name": "variable",
-                "value": "mem",
-                "positionalBoolean": "4"
-              },
-              {
-                "name": "cyclic",
-                "value": "",
-                "positionalBoolean": "type"
-              },
-              {
-                "name": "factor",
-                "value": "8"
-              },
-              {
-                "name": "dim",
-                "value": "1"
-              }
-            ]
-          }
-        },
-        {
-          "functionName": "calc",
           "label": "x_for",
           "functionLabel": "",
           "pragma": {
@@ -72,30 +44,6 @@
               {
                 "name": "offset",
                 "value": "off"
-              }
-            ]
-          }
-        },
-        {
-          "functionName": "calc",
-          "label": "",
-          "functionLabel": "",
-          "pragma": {
-            "name": "INTERFACE",
-            "option": [
-              {
-                "name": "s_axilite",
-                "value": "",
-                "positionalBoolean": "mode"
-              },
-              {
-                "name": "port",
-                "value": "return",
-                "positionalBoolean": "4"
-              },
-              {
-                "name": "bundle",
-                "value": "in_parms"
               }
             ]
           }
@@ -237,7 +185,7 @@
               },
               {
                 "name": "avg",
-                "value": "50"
+                "value": "5"
               }
             ]
           }
@@ -282,6 +230,112 @@
               {
                 "name": "avg",
                 "value": "1024"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "register",
+                "value": "",
+                "positionalBoolean": "1"
+              },
+              {
+                "name": "port",
+                "value": "maxWidth",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "bundle",
+                "value": "in_parms"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "register",
+                "value": "",
+                "positionalBoolean": "1"
+              },
+              {
+                "name": "port",
+                "value": "unroll",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "bundle",
+                "value": "in_parms"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "setup",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "bundle",
+                "value": "in_parms"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "return",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "bundle",
+                "value": "in_parms"
               }
             ]
           }

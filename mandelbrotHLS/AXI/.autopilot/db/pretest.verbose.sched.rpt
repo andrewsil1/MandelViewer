@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'pretest'
 ================================================================
-* Date:           Wed Jun  5 13:49:33 2019
+* Date:           Sat Jun  8 21:35:21 2019
 
 * Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
 * Project:        mandelbrotHLS
@@ -150,8 +150,8 @@ State 6 <SV = 5> <Delay = 5.08>
 ST_6 : Operation 64 [1/6] (3.89ns)   --->   "%r_V_9 = mul nsw i80 %r_V, %r_V" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 64 'mul' 'r_V_9' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i80.i32(i80 %r_V_9, i32 79)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 65 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%trunc_ln718 = trunc i80 %r_V_9 to i35" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 66 'trunc' 'trunc_ln718' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%p_Result_s_15 = call i3 @_ssdm_op_PartSelect.i3.i80.i32.i32(i80 %r_V_9, i32 77, i32 79)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 67 'partselect' 'p_Result_s_15' <Predicate = true> <Delay = 0.00>
-ST_6 : Operation 68 [1/1] (1.18ns)   --->   "%Range2_all_ones = icmp eq i3 %p_Result_s_15, -1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 68 'icmp' 'Range2_all_ones' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%p_Result_s_12 = call i3 @_ssdm_op_PartSelect.i3.i80.i32.i32(i80 %r_V_9, i32 77, i32 79)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 67 'partselect' 'p_Result_s_12' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 68 [1/1] (1.18ns)   --->   "%Range2_all_ones = icmp eq i3 %p_Result_s_12, -1" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 68 'icmp' 'Range2_all_ones' <Predicate = true> <Delay = 1.18> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.98> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_6 : Operation 69 [1/1] (0.00ns)   --->   "%p_Result_1 = call i4 @_ssdm_op_PartSelect.i4.i80.i32.i32(i80 %r_V_9, i32 76, i32 79)" [mandelbrotHLS/pretest.cpp:12]   --->   Operation 69 'partselect' 'p_Result_1' <Predicate = true> <Delay = 0.00>
 ST_6 : Operation 70 [4/6] (3.89ns)   --->   "%r_V_10 = mul nsw i80 %r_V_2, %r_V_2" [mandelbrotHLS/pretest.cpp:14]   --->   Operation 70 'mul' 'r_V_10' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
 ST_6 : Operation 71 [4/6] (3.89ns)   --->   "%r_V_11 = mul nsw i80 %r_V_7, %r_V_7" [mandelbrotHLS/pretest.cpp:17]   --->   Operation 71 'mul' 'r_V_11' <Predicate = true> <Delay = 3.89> <Core = "MulnS">   --->   Core 17 'MulnS' <Latency = 5> <II = 1> <Delay = 3.89> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>

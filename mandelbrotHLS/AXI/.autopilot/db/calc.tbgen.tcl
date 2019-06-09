@@ -14,70 +14,76 @@ set isEnableWaveformDebug 1
 set C_modelName {calc}
 set C_modelType { void 0 }
 set C_modelArgList {
+	{ setup uint 1 regular {axi_slave 0}  }
 	{ X0_V int 40 regular {axi_slave 0}  }
 	{ Y0_V int 40 regular {axi_slave 0}  }
 	{ X1_V int 40 regular {axi_slave 0}  }
 	{ width_V int 12 regular {axi_slave 0}  }
+	{ maxWidth_V int 12 regular {axi_slave 1}  }
+	{ unroll int 16 regular {axi_slave 1}  }
 	{ maxIter uint 16 regular {axi_slave 0}  }
 	{ buf_r int 16 regular {axi_master 1}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "X0_V", "interface" : "axi_slave", "bundle":"in_parms","type":"ap_none","bitwidth" : 40, "direction" : "READONLY", "bitSlice":[{"low":0,"up":39,"cElement": [{"cName": "X0.V","cData": "int40","bit_use": { "low": 0,"up": 39},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":16}, "offset_end" : {"in":27}} , 
- 	{ "Name" : "Y0_V", "interface" : "axi_slave", "bundle":"in_parms","type":"ap_none","bitwidth" : 40, "direction" : "READONLY", "bitSlice":[{"low":0,"up":39,"cElement": [{"cName": "Y0.V","cData": "int40","bit_use": { "low": 0,"up": 39},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":28}, "offset_end" : {"in":39}} , 
- 	{ "Name" : "X1_V", "interface" : "axi_slave", "bundle":"in_parms","type":"ap_none","bitwidth" : 40, "direction" : "READONLY", "bitSlice":[{"low":0,"up":39,"cElement": [{"cName": "X1.V","cData": "int40","bit_use": { "low": 0,"up": 39},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":40}, "offset_end" : {"in":51}} , 
- 	{ "Name" : "width_V", "interface" : "axi_slave", "bundle":"in_parms","type":"ap_none","bitwidth" : 12, "direction" : "READONLY", "bitSlice":[{"low":0,"up":11,"cElement": [{"cName": "width.V","cData": "uint12","bit_use": { "low": 0,"up": 11},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":52}, "offset_end" : {"in":59}} , 
- 	{ "Name" : "maxIter", "interface" : "axi_slave", "bundle":"in_parms","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "bitSlice":[{"low":0,"up":15,"cElement": [{"cName": "maxIter","cData": "unsigned short","bit_use": { "low": 0,"up": 15},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":60}, "offset_end" : {"in":67}} , 
+	{ "Name" : "setup", "interface" : "axi_slave", "bundle":"in_parms","type":"ap_none","bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "setup","cData": "bool","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":16}, "offset_end" : {"in":23}} , 
+ 	{ "Name" : "X0_V", "interface" : "axi_slave", "bundle":"in_parms","type":"ap_none","bitwidth" : 40, "direction" : "READONLY", "bitSlice":[{"low":0,"up":39,"cElement": [{"cName": "X0.V","cData": "int40","bit_use": { "low": 0,"up": 39},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":24}, "offset_end" : {"in":35}} , 
+ 	{ "Name" : "Y0_V", "interface" : "axi_slave", "bundle":"in_parms","type":"ap_none","bitwidth" : 40, "direction" : "READONLY", "bitSlice":[{"low":0,"up":39,"cElement": [{"cName": "Y0.V","cData": "int40","bit_use": { "low": 0,"up": 39},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":36}, "offset_end" : {"in":47}} , 
+ 	{ "Name" : "X1_V", "interface" : "axi_slave", "bundle":"in_parms","type":"ap_none","bitwidth" : 40, "direction" : "READONLY", "bitSlice":[{"low":0,"up":39,"cElement": [{"cName": "X1.V","cData": "int40","bit_use": { "low": 0,"up": 39},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":48}, "offset_end" : {"in":59}} , 
+ 	{ "Name" : "width_V", "interface" : "axi_slave", "bundle":"in_parms","type":"ap_none","bitwidth" : 12, "direction" : "READONLY", "bitSlice":[{"low":0,"up":11,"cElement": [{"cName": "width.V","cData": "uint12","bit_use": { "low": 0,"up": 11},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":60}, "offset_end" : {"in":67}} , 
+ 	{ "Name" : "maxWidth_V", "interface" : "axi_slave", "bundle":"in_parms","type":"ap_vld","bitwidth" : 12, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":11,"cElement": [{"cName": "maxWidth.V","cData": "uint12","bit_use": { "low": 0,"up": 11},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}], "offset" : {"out":68}, "offset_end" : {"out":75}} , 
+ 	{ "Name" : "unroll", "interface" : "axi_slave", "bundle":"in_parms","type":"ap_vld","bitwidth" : 16, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":15,"cElement": [{"cName": "unroll","cData": "unsigned short","bit_use": { "low": 0,"up": 15},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}], "offset" : {"out":76}, "offset_end" : {"out":83}} , 
+ 	{ "Name" : "maxIter", "interface" : "axi_slave", "bundle":"in_parms","type":"ap_none","bitwidth" : 16, "direction" : "READONLY", "bitSlice":[{"low":0,"up":15,"cElement": [{"cName": "maxIter","cData": "unsigned short","bit_use": { "low": 0,"up": 15},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}], "offset" : {"in":84}, "offset_end" : {"in":91}} , 
  	{ "Name" : "buf_r", "interface" : "axi_master", "bitwidth" : 16, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":15,"cElement": [{"cName": "buf","cData": "unsigned short","bit_use": { "low": 0,"up": 15},"cArray": [{"low" : 0,"up" : 8111,"step" : 1}]}]}]} ]}
 # RTL Port declarations: 
 set portNum 65
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst_n sc_in sc_logic 1 reset -1 active_low_sync } 
-	{ m_axi_buf_r_AWVALID sc_out sc_logic 1 signal 5 } 
-	{ m_axi_buf_r_AWREADY sc_in sc_logic 1 signal 5 } 
-	{ m_axi_buf_r_AWADDR sc_out sc_lv 32 signal 5 } 
-	{ m_axi_buf_r_AWID sc_out sc_lv 1 signal 5 } 
-	{ m_axi_buf_r_AWLEN sc_out sc_lv 8 signal 5 } 
-	{ m_axi_buf_r_AWSIZE sc_out sc_lv 3 signal 5 } 
-	{ m_axi_buf_r_AWBURST sc_out sc_lv 2 signal 5 } 
-	{ m_axi_buf_r_AWLOCK sc_out sc_lv 2 signal 5 } 
-	{ m_axi_buf_r_AWCACHE sc_out sc_lv 4 signal 5 } 
-	{ m_axi_buf_r_AWPROT sc_out sc_lv 3 signal 5 } 
-	{ m_axi_buf_r_AWQOS sc_out sc_lv 4 signal 5 } 
-	{ m_axi_buf_r_AWREGION sc_out sc_lv 4 signal 5 } 
-	{ m_axi_buf_r_AWUSER sc_out sc_lv 1 signal 5 } 
-	{ m_axi_buf_r_WVALID sc_out sc_logic 1 signal 5 } 
-	{ m_axi_buf_r_WREADY sc_in sc_logic 1 signal 5 } 
-	{ m_axi_buf_r_WDATA sc_out sc_lv 32 signal 5 } 
-	{ m_axi_buf_r_WSTRB sc_out sc_lv 4 signal 5 } 
-	{ m_axi_buf_r_WLAST sc_out sc_logic 1 signal 5 } 
-	{ m_axi_buf_r_WID sc_out sc_lv 1 signal 5 } 
-	{ m_axi_buf_r_WUSER sc_out sc_lv 1 signal 5 } 
-	{ m_axi_buf_r_ARVALID sc_out sc_logic 1 signal 5 } 
-	{ m_axi_buf_r_ARREADY sc_in sc_logic 1 signal 5 } 
-	{ m_axi_buf_r_ARADDR sc_out sc_lv 32 signal 5 } 
-	{ m_axi_buf_r_ARID sc_out sc_lv 1 signal 5 } 
-	{ m_axi_buf_r_ARLEN sc_out sc_lv 8 signal 5 } 
-	{ m_axi_buf_r_ARSIZE sc_out sc_lv 3 signal 5 } 
-	{ m_axi_buf_r_ARBURST sc_out sc_lv 2 signal 5 } 
-	{ m_axi_buf_r_ARLOCK sc_out sc_lv 2 signal 5 } 
-	{ m_axi_buf_r_ARCACHE sc_out sc_lv 4 signal 5 } 
-	{ m_axi_buf_r_ARPROT sc_out sc_lv 3 signal 5 } 
-	{ m_axi_buf_r_ARQOS sc_out sc_lv 4 signal 5 } 
-	{ m_axi_buf_r_ARREGION sc_out sc_lv 4 signal 5 } 
-	{ m_axi_buf_r_ARUSER sc_out sc_lv 1 signal 5 } 
-	{ m_axi_buf_r_RVALID sc_in sc_logic 1 signal 5 } 
-	{ m_axi_buf_r_RREADY sc_out sc_logic 1 signal 5 } 
-	{ m_axi_buf_r_RDATA sc_in sc_lv 32 signal 5 } 
-	{ m_axi_buf_r_RLAST sc_in sc_logic 1 signal 5 } 
-	{ m_axi_buf_r_RID sc_in sc_lv 1 signal 5 } 
-	{ m_axi_buf_r_RUSER sc_in sc_lv 1 signal 5 } 
-	{ m_axi_buf_r_RRESP sc_in sc_lv 2 signal 5 } 
-	{ m_axi_buf_r_BVALID sc_in sc_logic 1 signal 5 } 
-	{ m_axi_buf_r_BREADY sc_out sc_logic 1 signal 5 } 
-	{ m_axi_buf_r_BRESP sc_in sc_lv 2 signal 5 } 
-	{ m_axi_buf_r_BID sc_in sc_lv 1 signal 5 } 
-	{ m_axi_buf_r_BUSER sc_in sc_lv 1 signal 5 } 
+	{ m_axi_buf_r_AWVALID sc_out sc_logic 1 signal 8 } 
+	{ m_axi_buf_r_AWREADY sc_in sc_logic 1 signal 8 } 
+	{ m_axi_buf_r_AWADDR sc_out sc_lv 32 signal 8 } 
+	{ m_axi_buf_r_AWID sc_out sc_lv 1 signal 8 } 
+	{ m_axi_buf_r_AWLEN sc_out sc_lv 8 signal 8 } 
+	{ m_axi_buf_r_AWSIZE sc_out sc_lv 3 signal 8 } 
+	{ m_axi_buf_r_AWBURST sc_out sc_lv 2 signal 8 } 
+	{ m_axi_buf_r_AWLOCK sc_out sc_lv 2 signal 8 } 
+	{ m_axi_buf_r_AWCACHE sc_out sc_lv 4 signal 8 } 
+	{ m_axi_buf_r_AWPROT sc_out sc_lv 3 signal 8 } 
+	{ m_axi_buf_r_AWQOS sc_out sc_lv 4 signal 8 } 
+	{ m_axi_buf_r_AWREGION sc_out sc_lv 4 signal 8 } 
+	{ m_axi_buf_r_AWUSER sc_out sc_lv 1 signal 8 } 
+	{ m_axi_buf_r_WVALID sc_out sc_logic 1 signal 8 } 
+	{ m_axi_buf_r_WREADY sc_in sc_logic 1 signal 8 } 
+	{ m_axi_buf_r_WDATA sc_out sc_lv 32 signal 8 } 
+	{ m_axi_buf_r_WSTRB sc_out sc_lv 4 signal 8 } 
+	{ m_axi_buf_r_WLAST sc_out sc_logic 1 signal 8 } 
+	{ m_axi_buf_r_WID sc_out sc_lv 1 signal 8 } 
+	{ m_axi_buf_r_WUSER sc_out sc_lv 1 signal 8 } 
+	{ m_axi_buf_r_ARVALID sc_out sc_logic 1 signal 8 } 
+	{ m_axi_buf_r_ARREADY sc_in sc_logic 1 signal 8 } 
+	{ m_axi_buf_r_ARADDR sc_out sc_lv 32 signal 8 } 
+	{ m_axi_buf_r_ARID sc_out sc_lv 1 signal 8 } 
+	{ m_axi_buf_r_ARLEN sc_out sc_lv 8 signal 8 } 
+	{ m_axi_buf_r_ARSIZE sc_out sc_lv 3 signal 8 } 
+	{ m_axi_buf_r_ARBURST sc_out sc_lv 2 signal 8 } 
+	{ m_axi_buf_r_ARLOCK sc_out sc_lv 2 signal 8 } 
+	{ m_axi_buf_r_ARCACHE sc_out sc_lv 4 signal 8 } 
+	{ m_axi_buf_r_ARPROT sc_out sc_lv 3 signal 8 } 
+	{ m_axi_buf_r_ARQOS sc_out sc_lv 4 signal 8 } 
+	{ m_axi_buf_r_ARREGION sc_out sc_lv 4 signal 8 } 
+	{ m_axi_buf_r_ARUSER sc_out sc_lv 1 signal 8 } 
+	{ m_axi_buf_r_RVALID sc_in sc_logic 1 signal 8 } 
+	{ m_axi_buf_r_RREADY sc_out sc_logic 1 signal 8 } 
+	{ m_axi_buf_r_RDATA sc_in sc_lv 32 signal 8 } 
+	{ m_axi_buf_r_RLAST sc_in sc_logic 1 signal 8 } 
+	{ m_axi_buf_r_RID sc_in sc_lv 1 signal 8 } 
+	{ m_axi_buf_r_RUSER sc_in sc_lv 1 signal 8 } 
+	{ m_axi_buf_r_RRESP sc_in sc_lv 2 signal 8 } 
+	{ m_axi_buf_r_BVALID sc_in sc_logic 1 signal 8 } 
+	{ m_axi_buf_r_BREADY sc_out sc_logic 1 signal 8 } 
+	{ m_axi_buf_r_BRESP sc_in sc_lv 2 signal 8 } 
+	{ m_axi_buf_r_BID sc_in sc_lv 1 signal 8 } 
+	{ m_axi_buf_r_BUSER sc_in sc_lv 1 signal 8 } 
 	{ s_axi_in_parms_AWVALID sc_in sc_logic 1 signal -1 } 
 	{ s_axi_in_parms_AWREADY sc_out sc_logic 1 signal -1 } 
 	{ s_axi_in_parms_AWADDR sc_in sc_lv 7 signal -1 } 
@@ -98,14 +104,14 @@ set portList {
 	{ interrupt sc_out sc_logic 1 signal -1 } 
 }
 set NewPortList {[ 
-	{ "name": "s_axi_in_parms_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "in_parms", "role": "AWADDR" },"address":[{"name":"calc","role":"start","value":"0","valid_bit":"0"},{"name":"calc","role":"continue","value":"0","valid_bit":"4"},{"name":"calc","role":"auto_start","value":"0","valid_bit":"7"},{"name":"X0_V","role":"data","value":"16"},{"name":"Y0_V","role":"data","value":"28"},{"name":"X1_V","role":"data","value":"40"},{"name":"width_V","role":"data","value":"52"},{"name":"maxIter","role":"data","value":"60"}] },
+	{ "name": "s_axi_in_parms_AWADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "in_parms", "role": "AWADDR" },"address":[{"name":"calc","role":"start","value":"0","valid_bit":"0"},{"name":"calc","role":"continue","value":"0","valid_bit":"4"},{"name":"calc","role":"auto_start","value":"0","valid_bit":"7"},{"name":"setup","role":"data","value":"16"},{"name":"X0_V","role":"data","value":"24"},{"name":"Y0_V","role":"data","value":"36"},{"name":"X1_V","role":"data","value":"48"},{"name":"width_V","role":"data","value":"60"},{"name":"maxIter","role":"data","value":"84"}] },
 	{ "name": "s_axi_in_parms_AWVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "in_parms", "role": "AWVALID" } },
 	{ "name": "s_axi_in_parms_AWREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "in_parms", "role": "AWREADY" } },
 	{ "name": "s_axi_in_parms_WVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "in_parms", "role": "WVALID" } },
 	{ "name": "s_axi_in_parms_WREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "in_parms", "role": "WREADY" } },
 	{ "name": "s_axi_in_parms_WDATA", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "in_parms", "role": "WDATA" } },
 	{ "name": "s_axi_in_parms_WSTRB", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "in_parms", "role": "WSTRB" } },
-	{ "name": "s_axi_in_parms_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "in_parms", "role": "ARADDR" },"address":[{"name":"calc","role":"start","value":"0","valid_bit":"0"},{"name":"calc","role":"done","value":"0","valid_bit":"1"},{"name":"calc","role":"idle","value":"0","valid_bit":"2"},{"name":"calc","role":"ready","value":"0","valid_bit":"3"},{"name":"calc","role":"auto_start","value":"0","valid_bit":"7"}] },
+	{ "name": "s_axi_in_parms_ARADDR", "direction": "in", "datatype": "sc_lv", "bitwidth":7, "type": "signal", "bundle":{"name": "in_parms", "role": "ARADDR" },"address":[{"name":"calc","role":"start","value":"0","valid_bit":"0"},{"name":"calc","role":"done","value":"0","valid_bit":"1"},{"name":"calc","role":"idle","value":"0","valid_bit":"2"},{"name":"calc","role":"ready","value":"0","valid_bit":"3"},{"name":"calc","role":"auto_start","value":"0","valid_bit":"7"},{"name":"maxWidth_V","role":"data","value":"68"}, {"name":"maxWidth_V","role":"valid","value":"72","valid_bit":"0"},{"name":"unroll","role":"data","value":"76"}, {"name":"unroll","role":"valid","value":"80","valid_bit":"0"}] },
 	{ "name": "s_axi_in_parms_ARVALID", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "in_parms", "role": "ARVALID" } },
 	{ "name": "s_axi_in_parms_ARREADY", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "in_parms", "role": "ARREADY" } },
 	{ "name": "s_axi_in_parms_RVALID", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "in_parms", "role": "RVALID" } },
@@ -165,13 +171,13 @@ set NewPortList {[
  	{ "name": "m_axi_buf_r_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "buf_r", "role": "BUSER" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "17", "23", "29", "35", "41", "47", "53", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "3", "9", "15", "21", "27", "33", "39", "45", "51", "52", "53", "54", "55", "56", "57", "58", "59"],
 		"CDFG" : "calc",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3247151", "EstimateLatencyMax" : "14539775087",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "47", "EstimateLatencyMax" : "14538012527",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -179,19 +185,22 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
 		"WaitState" : [
-			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_453"},
-			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_461"},
-			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_469"},
-			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_477"},
-			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_485"},
-			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_493"},
-			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_501"},
-			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_509"}],
+			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_320"},
+			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_328"},
+			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_336"},
+			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_344"},
+			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_352"},
+			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_360"},
+			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_368"},
+			{"State" : "ap_ST_fsm_state58", "FSM" : "ap_CS_fsm", "SubInstance" : "grp_mandel_calc_fu_376"}],
 		"Port" : [
+			{"Name" : "setup", "Type" : "None", "Direction" : "I"},
 			{"Name" : "X0_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "Y0_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "X1_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "width_V", "Type" : "None", "Direction" : "I"},
+			{"Name" : "maxWidth_V", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "unroll", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "maxIter", "Type" : "None", "Direction" : "I"},
 			{"Name" : "buf_r", "Type" : "MAXI", "Direction" : "O",
 				"BlockSignal" : [
@@ -200,15 +209,7 @@ set RtlHierarchyInfo {[
 					{"Name" : "buf_r_blk_n_B", "Type" : "RtlSignal"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_in_parms_s_axi_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_buf_r_m_axi_U", "Parent" : "0"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mem_0_U", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mem_1_U", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mem_2_U", "Parent" : "0"},
-	{"ID" : "6", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mem_3_U", "Parent" : "0"},
-	{"ID" : "7", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mem_4_U", "Parent" : "0"},
-	{"ID" : "8", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mem_5_U", "Parent" : "0"},
-	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mem_6_U", "Parent" : "0"},
-	{"ID" : "10", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mem_7_U", "Parent" : "0"},
-	{"ID" : "11", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_453", "Parent" : "0", "Child" : ["12", "15", "16"],
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_320", "Parent" : "0", "Child" : ["4", "7", "8"],
 		"CDFG" : "mandel_calc",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -227,7 +228,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "x_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "maxIter", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_453.grp_pretest_fu_187", "Parent" : "11", "Child" : ["13", "14"],
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_320.grp_pretest_fu_187", "Parent" : "3", "Child" : ["5", "6"],
 		"CDFG" : "pretest",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -243,11 +244,11 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "x_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "13", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_453.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "12"},
-	{"ID" : "14", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_453.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "12"},
-	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_453.calc_mul_40s_41s_dEe_U7", "Parent" : "11"},
-	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_453.calc_mul_40s_40s_cud_U8", "Parent" : "11"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_461", "Parent" : "0", "Child" : ["18", "21", "22"],
+	{"ID" : "5", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_320.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "4"},
+	{"ID" : "6", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_320.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "4"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_320.calc_mul_40s_41s_dEe_U7", "Parent" : "3"},
+	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_320.calc_mul_40s_40s_cud_U8", "Parent" : "3"},
+	{"ID" : "9", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_328", "Parent" : "0", "Child" : ["10", "13", "14"],
 		"CDFG" : "mandel_calc",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -266,7 +267,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "x_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "maxIter", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_461.grp_pretest_fu_187", "Parent" : "17", "Child" : ["19", "20"],
+	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_328.grp_pretest_fu_187", "Parent" : "9", "Child" : ["11", "12"],
 		"CDFG" : "pretest",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -282,11 +283,11 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "x_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "19", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_461.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "18"},
-	{"ID" : "20", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_461.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "18"},
-	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_461.calc_mul_40s_41s_dEe_U7", "Parent" : "17"},
-	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_461.calc_mul_40s_40s_cud_U8", "Parent" : "17"},
-	{"ID" : "23", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_469", "Parent" : "0", "Child" : ["24", "27", "28"],
+	{"ID" : "11", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_328.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "10"},
+	{"ID" : "12", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_328.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "10"},
+	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_328.calc_mul_40s_41s_dEe_U7", "Parent" : "9"},
+	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_328.calc_mul_40s_40s_cud_U8", "Parent" : "9"},
+	{"ID" : "15", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_336", "Parent" : "0", "Child" : ["16", "19", "20"],
 		"CDFG" : "mandel_calc",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -305,7 +306,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "x_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "maxIter", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "24", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_469.grp_pretest_fu_187", "Parent" : "23", "Child" : ["25", "26"],
+	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_336.grp_pretest_fu_187", "Parent" : "15", "Child" : ["17", "18"],
 		"CDFG" : "pretest",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -321,11 +322,11 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "x_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "25", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_469.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "24"},
-	{"ID" : "26", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_469.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "24"},
-	{"ID" : "27", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_469.calc_mul_40s_41s_dEe_U7", "Parent" : "23"},
-	{"ID" : "28", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_469.calc_mul_40s_40s_cud_U8", "Parent" : "23"},
-	{"ID" : "29", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_477", "Parent" : "0", "Child" : ["30", "33", "34"],
+	{"ID" : "17", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_336.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "16"},
+	{"ID" : "18", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_336.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "16"},
+	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_336.calc_mul_40s_41s_dEe_U7", "Parent" : "15"},
+	{"ID" : "20", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_336.calc_mul_40s_40s_cud_U8", "Parent" : "15"},
+	{"ID" : "21", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_344", "Parent" : "0", "Child" : ["22", "25", "26"],
 		"CDFG" : "mandel_calc",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -344,7 +345,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "x_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "maxIter", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "30", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_477.grp_pretest_fu_187", "Parent" : "29", "Child" : ["31", "32"],
+	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_344.grp_pretest_fu_187", "Parent" : "21", "Child" : ["23", "24"],
 		"CDFG" : "pretest",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -360,11 +361,11 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "x_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "31", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_477.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "30"},
-	{"ID" : "32", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_477.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "30"},
-	{"ID" : "33", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_477.calc_mul_40s_41s_dEe_U7", "Parent" : "29"},
-	{"ID" : "34", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_477.calc_mul_40s_40s_cud_U8", "Parent" : "29"},
-	{"ID" : "35", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_485", "Parent" : "0", "Child" : ["36", "39", "40"],
+	{"ID" : "23", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_344.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "22"},
+	{"ID" : "24", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_344.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "22"},
+	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_344.calc_mul_40s_41s_dEe_U7", "Parent" : "21"},
+	{"ID" : "26", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_344.calc_mul_40s_40s_cud_U8", "Parent" : "21"},
+	{"ID" : "27", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_352", "Parent" : "0", "Child" : ["28", "31", "32"],
 		"CDFG" : "mandel_calc",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -383,7 +384,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "x_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "maxIter", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "36", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_485.grp_pretest_fu_187", "Parent" : "35", "Child" : ["37", "38"],
+	{"ID" : "28", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_352.grp_pretest_fu_187", "Parent" : "27", "Child" : ["29", "30"],
 		"CDFG" : "pretest",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -399,11 +400,11 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "x_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "37", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_485.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "36"},
-	{"ID" : "38", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_485.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "36"},
-	{"ID" : "39", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_485.calc_mul_40s_41s_dEe_U7", "Parent" : "35"},
-	{"ID" : "40", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_485.calc_mul_40s_40s_cud_U8", "Parent" : "35"},
-	{"ID" : "41", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_493", "Parent" : "0", "Child" : ["42", "45", "46"],
+	{"ID" : "29", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_352.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "28"},
+	{"ID" : "30", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_352.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "28"},
+	{"ID" : "31", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_352.calc_mul_40s_41s_dEe_U7", "Parent" : "27"},
+	{"ID" : "32", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_352.calc_mul_40s_40s_cud_U8", "Parent" : "27"},
+	{"ID" : "33", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_360", "Parent" : "0", "Child" : ["34", "37", "38"],
 		"CDFG" : "mandel_calc",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -422,7 +423,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "x_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "maxIter", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "42", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_493.grp_pretest_fu_187", "Parent" : "41", "Child" : ["43", "44"],
+	{"ID" : "34", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_360.grp_pretest_fu_187", "Parent" : "33", "Child" : ["35", "36"],
 		"CDFG" : "pretest",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -438,11 +439,11 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "x_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "43", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_493.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "42"},
-	{"ID" : "44", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_493.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "42"},
-	{"ID" : "45", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_493.calc_mul_40s_41s_dEe_U7", "Parent" : "41"},
-	{"ID" : "46", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_493.calc_mul_40s_40s_cud_U8", "Parent" : "41"},
-	{"ID" : "47", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_501", "Parent" : "0", "Child" : ["48", "51", "52"],
+	{"ID" : "35", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_360.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "34"},
+	{"ID" : "36", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_360.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "34"},
+	{"ID" : "37", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_360.calc_mul_40s_41s_dEe_U7", "Parent" : "33"},
+	{"ID" : "38", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_360.calc_mul_40s_40s_cud_U8", "Parent" : "33"},
+	{"ID" : "39", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_368", "Parent" : "0", "Child" : ["40", "43", "44"],
 		"CDFG" : "mandel_calc",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -461,7 +462,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "x_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "maxIter", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "48", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_501.grp_pretest_fu_187", "Parent" : "47", "Child" : ["49", "50"],
+	{"ID" : "40", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_368.grp_pretest_fu_187", "Parent" : "39", "Child" : ["41", "42"],
 		"CDFG" : "pretest",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -477,11 +478,11 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "x_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "49", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_501.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "48"},
-	{"ID" : "50", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_501.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "48"},
-	{"ID" : "51", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_501.calc_mul_40s_41s_dEe_U7", "Parent" : "47"},
-	{"ID" : "52", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_501.calc_mul_40s_40s_cud_U8", "Parent" : "47"},
-	{"ID" : "53", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_509", "Parent" : "0", "Child" : ["54", "57", "58"],
+	{"ID" : "41", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_368.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "40"},
+	{"ID" : "42", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_368.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "40"},
+	{"ID" : "43", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_368.calc_mul_40s_41s_dEe_U7", "Parent" : "39"},
+	{"ID" : "44", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_368.calc_mul_40s_40s_cud_U8", "Parent" : "39"},
+	{"ID" : "45", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_376", "Parent" : "0", "Child" : ["46", "49", "50"],
 		"CDFG" : "mandel_calc",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -500,7 +501,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "x_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "maxIter", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "54", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_509.grp_pretest_fu_187", "Parent" : "53", "Child" : ["55", "56"],
+	{"ID" : "46", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_376.grp_pretest_fu_187", "Parent" : "45", "Child" : ["47", "48"],
 		"CDFG" : "pretest",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
@@ -516,30 +517,32 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "x_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "y_V", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "55", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_509.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "54"},
-	{"ID" : "56", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_509.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "54"},
-	{"ID" : "57", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_509.calc_mul_40s_41s_dEe_U7", "Parent" : "53"},
-	{"ID" : "58", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_509.calc_mul_40s_40s_cud_U8", "Parent" : "53"},
-	{"ID" : "59", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_sdiv_41ns_13eOg_U13", "Parent" : "0"},
-	{"ID" : "60", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U14", "Parent" : "0"},
-	{"ID" : "61", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U15", "Parent" : "0"},
-	{"ID" : "62", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U16", "Parent" : "0"},
-	{"ID" : "63", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U17", "Parent" : "0"},
-	{"ID" : "64", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U18", "Parent" : "0"},
-	{"ID" : "65", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U19", "Parent" : "0"},
-	{"ID" : "66", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U20", "Parent" : "0"},
-	{"ID" : "67", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U21", "Parent" : "0"},
-	{"ID" : "68", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mux_832_16_1_1_U22", "Parent" : "0"}]}
+	{"ID" : "47", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_376.grp_pretest_fu_187.calc_mul_41s_40s_bkb_U1", "Parent" : "46"},
+	{"ID" : "48", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_376.grp_pretest_fu_187.calc_mul_40s_40s_cud_U2", "Parent" : "46"},
+	{"ID" : "49", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_376.calc_mul_40s_41s_dEe_U7", "Parent" : "45"},
+	{"ID" : "50", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_mandel_calc_fu_376.calc_mul_40s_40s_cud_U8", "Parent" : "45"},
+	{"ID" : "51", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_sdiv_41ns_13eOg_U13", "Parent" : "0"},
+	{"ID" : "52", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U14", "Parent" : "0"},
+	{"ID" : "53", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U15", "Parent" : "0"},
+	{"ID" : "54", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U16", "Parent" : "0"},
+	{"ID" : "55", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U17", "Parent" : "0"},
+	{"ID" : "56", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U18", "Parent" : "0"},
+	{"ID" : "57", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U19", "Parent" : "0"},
+	{"ID" : "58", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U20", "Parent" : "0"},
+	{"ID" : "59", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.calc_mul_12ns_40sfYi_U21", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	calc {
+		setup {Type I LastRead 0 FirstWrite -1}
 		X0_V {Type I LastRead 0 FirstWrite -1}
 		Y0_V {Type I LastRead 0 FirstWrite -1}
 		X1_V {Type I LastRead 0 FirstWrite -1}
 		width_V {Type I LastRead 0 FirstWrite -1}
+		maxWidth_V {Type O LastRead -1 FirstWrite 45}
+		unroll {Type O LastRead -1 FirstWrite 45}
 		maxIter {Type I LastRead 0 FirstWrite -1}
-		buf_r {Type O LastRead 53 FirstWrite 52}}
+		buf_r {Type O LastRead 66 FirstWrite 58}}
 	mandel_calc {
 		x_in_V {Type I LastRead 0 FirstWrite -1}
 		y_in_V {Type I LastRead 0 FirstWrite -1}
@@ -600,12 +603,11 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "3247151", "Max" : "14539775087"}
-	, {"Name" : "Interval", "Min" : "3247152", "Max" : "1654873200"}
+	{"Name" : "Latency", "Min" : "47", "Max" : "14538012527"}
+	, {"Name" : "Interval", "Min" : "48", "Max" : "1653110640"}
 ]}
 
 set PipelineEnableSignalInfo {[
-	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
 ]}
 
 set Spec2ImplPortList { 

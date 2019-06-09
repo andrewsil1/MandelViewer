@@ -11,16 +11,33 @@ int main() {
 	real X0, Y0, X1;
 	const int HEIGHT = WIDTH * 3 / 4;
 	const pixval maxIter = 500;
+	res maxWidth;
+	unsigned short unroll;
 
 	pixval mem[HEIGHT * WIDTH];
 
 	//The set goes from -2 to 2 on the X axis, and -1 to 1 on the Y axis. Pick a 4:3 window specified by Top Left X/Y coordinate, Top Right X value. The rest is calculated.
 	X0 = -2;
-	Y0 = 1;
-	X1 = 2;
+	Y0 = 1.25;
+	X1 = 1;
 
+	calc(true, X0, Y0, X1, WIDTH, &maxWidth, &unroll, maxIter, mem);  // Calculate the full array, store in mem.
+	if (maxWidth != (res)1920) {
+	    cout << "MaxWidth is an unexpected value.\n" << endl;
+	    return -1;
+	}
 
-    calc(X0, Y0, X1, WIDTH, maxIter, mem);  // Calculate the full array, store in mem.
+	if (unroll != 8) {
+	    cout << "Unroll is an unexpected value.\n" << endl;
+	    return -1;
+	}
+
+	if (WIDTH % unroll != 0 || (res)WIDTH > maxWidth) {
+        cout << "Testbench width is not a multiple of received unroll value, or exceeds MaxWidth.\n" << endl;
+        return -1;
+	}
+
+    calc(false, X0, Y0, X1, WIDTH, &maxWidth, &unroll, maxIter, mem);  // Calculate the full array, store in mem.
 
 	for (int y = 0; y < HEIGHT; y++) {
 	   for (int x = 0; x < WIDTH; x++)

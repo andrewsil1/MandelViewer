@@ -142,8 +142,8 @@ struct pretest : public sc_module {
     sc_signal< sc_lv<40> > r_V_7_fu_283_p0;
     sc_signal< sc_lv<80> > p_Result_s_fu_292_p1;
     sc_signal< sc_lv<80> > trunc_ln718_fu_300_p0;
-    sc_signal< sc_lv<80> > p_Result_s_15_fu_304_p1;
-    sc_signal< sc_lv<3> > p_Result_s_15_fu_304_p4;
+    sc_signal< sc_lv<80> > p_Result_s_12_fu_304_p1;
+    sc_signal< sc_lv<3> > p_Result_s_12_fu_304_p4;
     sc_signal< sc_lv<80> > p_Result_1_fu_320_p1;
     sc_signal< sc_lv<80> > y2_V_fu_345_p1;
     sc_signal< sc_lv<80> > tmp_3_fu_354_p1;
@@ -399,8 +399,8 @@ struct pretest : public sc_module {
     void thread_p_Result_5_fu_112_p3();
     void thread_p_Result_7_fu_621_p1();
     void thread_p_Result_7_fu_621_p3();
-    void thread_p_Result_s_15_fu_304_p1();
-    void thread_p_Result_s_15_fu_304_p4();
+    void thread_p_Result_s_12_fu_304_p1();
+    void thread_p_Result_s_12_fu_304_p4();
     void thread_p_Result_s_fu_292_p1();
     void thread_q_V_fu_605_p1();
     void thread_r_3_fu_628_p2();

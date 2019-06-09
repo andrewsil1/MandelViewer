@@ -1011,7 +1011,7 @@
             <Obj>
               <type>0</type>
               <id>22</id>
-              <name>p_Result_s_15</name>
+              <name>p_Result_s_12</name>
               <fileName>mandelbrotHLS/pretest.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>12</lineNumber>
@@ -1035,7 +1035,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>p_Result_s_15_fu_304_p4</rtlName>
+              <rtlName>p_Result_s_12_fu_304_p4</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>3</bitwidth>
@@ -16108,7 +16108,7 @@
         </second>
       </item>
       <item>
-        <first>p_Result_s_15_fu_304</first>
+        <first>p_Result_s_12_fu_304</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

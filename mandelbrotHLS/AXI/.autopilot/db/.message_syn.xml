@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
 	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;mandelbrotHLS/pretest.cpp&apos; ..."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;mandelbrotHLS/mandel.cpp&apos; ..."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:52 . Memory (MB): peak = 173.375 ; gain = 83.039"/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:52 . Memory (MB): peak = 173.375 ; gain = 83.039"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;mandelbrotHLS/pretest.cpp&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:55 . Memory (MB): peak = 173.730 ; gain = 87.617"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:55 . Memory (MB): peak = 173.730 ; gain = 87.617"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:55 . Memory (MB): peak = 256.453 ; gain = 166.117"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:58 . Memory (MB): peak = 256.477 ; gain = 170.363"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:56 . Memory (MB): peak = 338.609 ; gain = 248.273"/>
-	<Message severity="INFO" prefix="[XFORM 203-501]" key="XFORM_UNROLL_STATUS_326" tag="" content="Unrolling loop &apos;x_for&apos; (mandelbrotHLS/mandel.cpp:85) in function &apos;calc&apos; partially (and skipping exit check) with a factor of 8."/>
-	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_109" tag="" content="Partitioning array &apos;mem&apos; (mandelbrotHLS/mandel.cpp:63) in dimension 1 with a cyclic factor 8."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:59 . Memory (MB): peak = 339.898 ; gain = 253.785"/>
+	<Message severity="INFO" prefix="[XFORM 203-501]" key="XFORM_UNROLL_STATUS_326" tag="" content="Unrolling loop &apos;x_for&apos; (mandelbrotHLS/mandel.cpp:79) in function &apos;calc&apos; partially (and skipping exit check) with a factor of 8."/>
 	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (mandelbrotHLS/pretest.cpp:12:12) to (mandelbrotHLS/pretest.cpp:26:1) in function &apos;pretest&apos;... converting 24 basic blocks."/>
 	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (mandelbrotHLS/mandel.cpp:29:66) to (mandelbrotHLS/mandel.cpp:34:17) in function &apos;mandel_calc&apos;... converting 13 basic blocks."/>
 	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (mandelbrotHLS/mandel.cpp:36:30) to (mandelbrotHLS/mandel.cpp:38:21) in function &apos;mandel_calc&apos;... converting 11 basic blocks."/>
-	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (mandelbrotHLS/mandel.cpp:85:53) to (mandelbrotHLS/mandel.cpp:85:43) in function &apos;calc&apos;... converting 33 basic blocks."/>
-	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (mandelbrotHLS/mandel.cpp:105:13) to (mandelbrotHLS/mandel.cpp:79:42) in function &apos;calc&apos;... converting 5 basic blocks."/>
-	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock to (mandelbrotHLS/mandel.cpp:79:25) in function &apos;calc&apos;... converting 5 basic blocks."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:58 . Memory (MB): peak = 455.895 ; gain = 365.559"/>
-	<Message severity="WARNING" prefix="[XFORM 203-542]" key="XFORM_LOOPFLAT_INVALID_219" tag="LOOP,SDX_LOOP" content="Cannot flatten a loop nest &apos;y_for&apos; (mandelbrotHLS/mandel.cpp:79:51) in function &apos;calc&apos; : 
-
-more than one sub loop."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:59 . Memory (MB): peak = 487.938 ; gain = 397.602"/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (mandelbrotHLS/mandel.cpp:79:53) to (mandelbrotHLS/mandel.cpp:79:43) in function &apos;calc&apos;... converting 33 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (mandelbrotHLS/mandel.cpp:90:13) to (mandelbrotHLS/mandel.cpp:78:42) in function &apos;calc&apos;... converting 5 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock to (mandelbrotHLS/mandel.cpp:68:5) in function &apos;calc&apos;... converting 5 basic blocks."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:01:00 . Memory (MB): peak = 455.285 ; gain = 369.172"/>
+	<Message severity="INFO" prefix="[XFORM 203-811]" key="XFORM_BUS_BURST_INFER_STATUS_265" tag="AXI,SDX_AXI" content="Inferring bus burst write of length 8 on port &apos;buf&apos; (mandelbrotHLS/mandel.cpp:85:32)."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:01:01 . Memory (MB): peak = 487.605 ; gain = 401.492"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;calc&apos; ..."/>
 	<Message severity="WARNING" prefix="[SYN 201-107]" key="SYN_PORT_NAME_ILLEGAL_593" tag="" content="Renaming port name &apos;calc/buf&apos; to &apos;calc/buf_r&apos; to avoid the conflict with HDL keywords or other object names."/>
@@ -63,7 +60,7 @@ more than one sub loop."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_16" tag="" content="Start constructing STG ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_15" tag="" content="Finished constructing STG."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 59.082 seconds; current allocated memory: 425.540 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 62.005 seconds; current allocated memory: 425.114 MB."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
@@ -89,9 +86,9 @@ more than one sub loop."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  15    33     28      0      0     133    43     1967.6"/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  16    35     29      0      0     133    43     1955.2"/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_703" tag="" content="Final cost: 1955.2"/>
-	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_694" tag="" content="Done micro-architecture refinement; elapsed 4.563 sec."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_694" tag="" content="Done micro-architecture refinement; elapsed 4.469 sec."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 4.807 seconds; current allocated memory: 426.555 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 4.771 seconds; current allocated memory: 426.132 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;mandel_calc&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
@@ -127,7 +124,7 @@ more than one sub loop."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_16" tag="" content="Start constructing STG ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_15" tag="" content="Finished constructing STG."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.588 seconds; current allocated memory: 427.190 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.603 seconds; current allocated memory: 426.752 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-434]" key="HLS 200-434" tag="SDX" content="Only 0 loops out of a total 1 loops have been pipelined in this design."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
@@ -154,9 +151,9 @@ more than one sub loop."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  15    37     33      0      0     172    69     4467.65"/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  16    37     33      0      0     172    69     4467.65"/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_703" tag="" content="Final cost: 4467.65"/>
-	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_694" tag="" content="Done micro-architecture refinement; elapsed 7.536 sec."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_694" tag="" content="Done micro-architecture refinement; elapsed 6.958 sec."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 7.847 seconds; current allocated memory: 429.010 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 7.258 seconds; current allocated memory: 428.587 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;calc&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
@@ -179,8 +176,6 @@ more than one sub loop."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_11" tag="" content="Generating Precedence constraints ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_11" tag="" content="Generating Supporting dependence constraints ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_11" tag="" content="Generating Pipeline constraints ..."/>
-	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;burst_out&apos;."/>
-	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 9."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_11" tag="" content="Generating DSP mapping constraints ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_11" tag="" content="Generating Supporting dependence constraints ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_11" tag="" content="Generating Resource constraints ..."/>
@@ -199,35 +194,35 @@ more than one sub loop."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_16" tag="" content="Start constructing STG ..."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_15" tag="" content="Finished constructing STG."/>
 	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.008 seconds; current allocated memory: 430.375 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.876 seconds; current allocated memory: 429.746 MB."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
 	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_696" tag="" content="Start micro-architecture refinement ..."/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_706" tag="" content="Current cost: 44574.5"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_706" tag="" content="Current cost: 44079.3"/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_702" tag="" content=" Iter  Moves  Swaps Merges  Swept   Fu     Reg     Cost"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_700" tag="" content="  0      0      0      0      0     292    131    44574.5"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  1     40     19      0      0     292    131    44202.7"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  2     30     17      0      0     292    131    43933.9"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  3     29     20      0      0     292    131    43789.7"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  4     30     20      0      0     292    131    43650.7"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  5     29     20      0      0     292    131    43519.7"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  6     37     20      0      0     292    131    43316.7"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  7     32     20      0      0     292    131    43186.7"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  8     36     20      0      0     292    131    43126.7"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  9     31     20      0      0     292    131    43125.9"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  10    31     20      0      0     292    131    43127.9"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  11    31     20      0      0     292    131    43128.9"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  12    36     20      0      0     292    131    43112.1"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  13    32     20      0      0     292    131    43107.9"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  14    31     20      0      0     292    131    43107.9"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  15    28     20      0      0     292    131    43107.9"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  16    28     20      0      0     292    131    43107.9"/>
-	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_703" tag="" content="Final cost: 43107.9"/>
-	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_694" tag="" content="Done micro-architecture refinement; elapsed 16.117 sec."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_700" tag="" content="  0      0      0      0      0     259    109    44079.3"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  1     40     19      0      0     259    109    43738.1"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  2     49     23      0      0     259    109    43528.7"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  3     39     25      0      0     259    109    43337.7"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  4     38     30      0      0     259    109    43205.1"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  5     37     29      0      0     259    109    43084.1"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  6     37     29      0      0     259    109    42963.1"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  7     39     31      0      0     259    109    42842.1"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  8     34     26      0      0     259    109    42755.1"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  9     32     26      0      0     259    109    42764.3"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  10    33     27      0      0     259    109    42764.3"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  11    32     26      0      0     259    109    42764.3"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  12    32     26      0      0     259    109    42764.3"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  13    33     27      0      0     259    109    42764.3"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  14    32     26      0      0     259    109    42764.3"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  15    32     26      0      0     259    109    42764.3"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_704" tag="" content="  16    33     27      0      0     259    109    42764.3"/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_703" tag="" content="Final cost: 42764.3"/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_694" tag="" content="Done micro-architecture refinement; elapsed 16.446 sec."/>
 	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 17.099 seconds; current allocated memory: 442.301 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 17.234 seconds; current allocated memory: 441.446 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;pretest&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
@@ -236,7 +231,7 @@ more than one sub loop."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;calc_mul_40s_40s_cud&apos;: 1 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;calc_mul_41s_40s_bkb&apos;: 1 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;pretest&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.895 seconds; current allocated memory: 444.808 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.867 seconds; current allocated memory: 443.885 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;mandel_calc&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
@@ -244,33 +239,34 @@ more than one sub loop."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;calc_mul_40s_40s_cud&apos;: 1 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;calc_mul_40s_41s_dEe&apos;: 1 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;mandel_calc&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.762 seconds; current allocated memory: 446.432 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.791 seconds; current allocated memory: 445.508 MB."/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;calc&apos;"/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
 	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_918" tag="" content="Design contains AXI ports. Reset is fixed to synchronous and active low."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;calc/setup&apos; to &apos;s_axilite &amp; ap_none&apos;."/>
 	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;calc/X0_V&apos; to &apos;s_axilite &amp; ap_none&apos;."/>
 	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;calc/Y0_V&apos; to &apos;s_axilite &amp; ap_none&apos;."/>
 	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;calc/X1_V&apos; to &apos;s_axilite &amp; ap_none&apos;."/>
 	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;calc/width_V&apos; to &apos;s_axilite &amp; ap_none&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;calc/maxWidth_V&apos; to &apos;s_axilite &amp; ap_vld&apos; (register)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;calc/unroll&apos; to &apos;s_axilite &amp; ap_vld&apos; (register)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;calc/maxIter&apos; to &apos;s_axilite &amp; ap_none&apos;."/>
 	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;calc/buf_r&apos; to &apos;m_axi&apos;."/>
 	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;calc&apos; to &apos;s_axilite &amp; ap_ctrl_hs&apos;."/>
-	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_851" tag="" content="Bundling port &apos;return&apos;, &apos;X0_V&apos;, &apos;Y0_V&apos;, &apos;X1_V&apos; and &apos;maxIter&apos; to AXI-Lite port in_parms."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_851" tag="" content="Bundling port &apos;return&apos;, &apos;setup&apos;, &apos;X0_V&apos;, &apos;X1_V&apos;, &apos;width_V&apos;, &apos;maxWidth_V&apos;, &apos;unroll&apos; and &apos;maxIter&apos; to AXI-Lite port in_parms."/>
 	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;calc_sdiv_41ns_13ns_41_45_seq_1&apos; to &apos;calc_sdiv_41ns_13eOg&apos; due to the length limit 20"/>
 	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;calc_mul_12ns_40s_52_6_1&apos; to &apos;calc_mul_12ns_40sfYi&apos; due to the length limit 20"/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;calc_mul_12ns_40sfYi&apos;: 8 instance(s)."/>
-	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;calc_mux_832_16_1_1&apos;: 1 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;calc_sdiv_41ns_13eOg&apos;: 1 instance(s)."/>
 	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;calc&apos;."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.219 seconds; current allocated memory: 449.817 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.215 seconds; current allocated memory: 448.670 MB."/>
 	<Message severity="INFO" prefix="[RTMG 210-282]" key="RTMG_282_1796" tag="" content="Generating pipelined core: &apos;calc_mul_41s_40s_bkb_MulnS_0&apos;"/>
 	<Message severity="INFO" prefix="[RTMG 210-282]" key="RTMG_282_1796" tag="" content="Generating pipelined core: &apos;calc_mul_40s_40s_cud_MulnS_1&apos;"/>
 	<Message severity="INFO" prefix="[RTMG 210-282]" key="RTMG_282_1796" tag="" content="Generating pipelined core: &apos;calc_mul_40s_41s_dEe_MulnS_2&apos;"/>
 	<Message severity="INFO" prefix="[RTMG 210-282]" key="RTMG_282_1796" tag="" content="Generating pipelined core: &apos;calc_sdiv_41ns_13eOg_div&apos;"/>
 	<Message severity="INFO" prefix="[RTMG 210-282]" key="RTMG_282_1796" tag="" content="Generating pipelined core: &apos;calc_mul_12ns_40sfYi_MulnS_3&apos;"/>
-	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;calc_mem_0_ram (RAM)&apos; using block RAMs."/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:41 ; elapsed = 00:01:40 . Memory (MB): peak = 537.426 ; gain = 447.090"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:39 ; elapsed = 00:01:42 . Memory (MB): peak = 535.145 ; gain = 449.031"/>
 	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for calc."/>
 	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for calc."/>
 </Messages>

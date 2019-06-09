@@ -203,8 +203,8 @@ architecture behav of pretest is
     signal r_V_7_fu_283_p0 : STD_LOGIC_VECTOR (39 downto 0);
     signal p_Result_s_fu_292_p1 : STD_LOGIC_VECTOR (79 downto 0);
     signal trunc_ln718_fu_300_p0 : STD_LOGIC_VECTOR (79 downto 0);
-    signal p_Result_s_15_fu_304_p1 : STD_LOGIC_VECTOR (79 downto 0);
-    signal p_Result_s_15_fu_304_p4 : STD_LOGIC_VECTOR (2 downto 0);
+    signal p_Result_s_12_fu_304_p1 : STD_LOGIC_VECTOR (79 downto 0);
+    signal p_Result_s_12_fu_304_p4 : STD_LOGIC_VECTOR (2 downto 0);
     signal p_Result_1_fu_320_p1 : STD_LOGIC_VECTOR (79 downto 0);
     signal y2_V_fu_345_p1 : STD_LOGIC_VECTOR (79 downto 0);
     signal tmp_3_fu_354_p1 : STD_LOGIC_VECTOR (79 downto 0);
@@ -557,7 +557,7 @@ begin
     Range1_all_zeros_1_fu_684_p2 <= "1" when (Range1_all_zeros_1_fu_684_p0 = ap_const_lv4_0) else "0";
     Range1_all_zeros_fu_335_p2 <= "1" when (p_Result_1_reg_915 = ap_const_lv4_0) else "0";
     Range2_all_ones_1_fu_584_p2 <= "1" when (tmp_fu_574_p4 = ap_const_lv3_7) else "0";
-    Range2_all_ones_fu_314_p2 <= "1" when (p_Result_s_15_fu_304_p4 = ap_const_lv3_7) else "0";
+    Range2_all_ones_fu_314_p2 <= "1" when (p_Result_s_12_fu_304_p4 = ap_const_lv3_7) else "0";
     and_ln412_1_fu_640_p2 <= (tmp_14_fu_633_p3 and r_3_fu_628_p2);
     and_ln412_fu_380_p2 <= (tmp_5_fu_373_p3 and r_fu_368_p2);
     and_ln779_1_fu_707_p2 <= (xor_ln779_1_fu_701_p2 and Range2_all_ones_1_reg_1038);
@@ -868,8 +868,8 @@ begin
     p_Result_5_fu_112_p3 <= p_Result_5_fu_112_p1(39 downto 39);
     p_Result_7_fu_621_p1 <= reg_998(80 - 1 downto 0);
     p_Result_7_fu_621_p3 <= p_Result_7_fu_621_p1(75 downto 75);
-    p_Result_s_15_fu_304_p1 <= grp_fu_82_p2(80 - 1 downto 0);
-    p_Result_s_15_fu_304_p4 <= p_Result_s_15_fu_304_p1(79 downto 77);
+    p_Result_s_12_fu_304_p1 <= grp_fu_82_p2(80 - 1 downto 0);
+    p_Result_s_12_fu_304_p4 <= p_Result_s_12_fu_304_p1(79 downto 77);
     p_Result_s_fu_292_p1 <= grp_fu_82_p2(80 - 1 downto 0);
     q_V_fu_605_p1 <= reg_998(80 - 1 downto 0);
     r_3_fu_628_p2 <= (tmp_12_fu_614_p3 or r_2_reg_1022);

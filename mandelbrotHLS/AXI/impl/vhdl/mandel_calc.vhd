@@ -245,8 +245,8 @@ architecture behav of mandel_calc is
     signal grp_fu_224_p1 : STD_LOGIC_VECTOR (40 downto 0);
     signal p_Result_s_fu_240_p1 : STD_LOGIC_VECTOR (79 downto 0);
     signal trunc_ln718_fu_248_p0 : STD_LOGIC_VECTOR (79 downto 0);
-    signal p_Result_s_16_fu_252_p1 : STD_LOGIC_VECTOR (79 downto 0);
-    signal p_Result_s_16_fu_252_p4 : STD_LOGIC_VECTOR (2 downto 0);
+    signal p_Result_s_13_fu_252_p1 : STD_LOGIC_VECTOR (79 downto 0);
+    signal p_Result_s_13_fu_252_p4 : STD_LOGIC_VECTOR (2 downto 0);
     signal p_Result_5_fu_268_p1 : STD_LOGIC_VECTOR (79 downto 0);
     signal p_Result_7_fu_290_p4 : STD_LOGIC_VECTOR (2 downto 0);
     signal x2_V_fu_346_p1 : STD_LOGIC_VECTOR (79 downto 0);
@@ -877,7 +877,7 @@ begin
     Range2_all_ones_2_fu_300_p2 <= "1" when (p_Result_7_fu_290_p4 = ap_const_lv3_7) else "0";
     Range2_all_ones_3_fu_1032_p0 <= reg_1240(4 - 1 downto 0);
     Range2_all_ones_3_fu_1032_p2 <= "1" when (Range2_all_ones_3_fu_1032_p0 = ap_const_lv4_F) else "0";
-    Range2_all_ones_fu_262_p2 <= "1" when (p_Result_s_16_fu_252_p4 = ap_const_lv3_7) else "0";
+    Range2_all_ones_fu_262_p2 <= "1" when (p_Result_s_13_fu_252_p4 = ap_const_lv3_7) else "0";
     and_ln38_fu_1171_p2 <= (icmp_ln1498_reg_1446 and icmp_ln1498_1_fu_1166_p2);
     and_ln412_2_fu_491_p2 <= (tmp_31_fu_484_p3 and or_ln412_fu_479_p2);
     and_ln412_3_fu_988_p2 <= (tmp_40_fu_981_p3 and or_ln412_1_fu_976_p2);
@@ -1200,8 +1200,8 @@ begin
     p_Result_7_fu_290_p4 <= grp_fu_779_p2(79 downto 77);
     p_Result_9_fu_813_p1 <= grp_fu_916_p2(42 - 1 downto 0);
     p_Result_9_fu_813_p4 <= p_Result_9_fu_813_p1(41 downto 40);
-    p_Result_s_16_fu_252_p1 <= grp_fu_224_p2(80 - 1 downto 0);
-    p_Result_s_16_fu_252_p4 <= p_Result_s_16_fu_252_p1(79 downto 77);
+    p_Result_s_13_fu_252_p1 <= grp_fu_224_p2(80 - 1 downto 0);
+    p_Result_s_13_fu_252_p4 <= p_Result_s_13_fu_252_p1(79 downto 77);
     p_Result_s_fu_240_p1 <= grp_fu_224_p2(80 - 1 downto 0);
     p_Val2_21_fu_730_p3 <= 
         select_ln340_4_fu_1144_p3 when (or_ln340_13_fu_710_p2(0) = '1') else 

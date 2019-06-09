@@ -22,7 +22,7 @@
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
 <Best-caseLatency>22</Best-caseLatency>
-<Average-caseLatency>553</Average-caseLatency>
+<Average-caseLatency>80</Average-caseLatency>
 <Worst-caseLatency>42043</Worst-caseLatency>
 <Interval-min>22</Interval-min>
 <Interval-max>42043</Interval-max>
