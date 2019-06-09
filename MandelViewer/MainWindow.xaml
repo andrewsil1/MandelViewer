@@ -5,29 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MandelViewer"
         mc:Ignorable="d"
-        Title="MandelViewer" Height="929" Width="1090" ResizeMode="CanMinimize" Closing="MainWindow1_Closing">
+        Title="MandelViewer" Height="1140" Width="1365.333" Closing="MainWindow1_Closing" Loaded="MainWindow1_Loaded" ResizeMode="CanResizeWithGrip">
     <Grid x:Name="Grid">
-        <ComboBox x:Name="ComPortcomboBox" HorizontalAlignment="Left" Margin="20,28,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComPortcomboBox_SelectionChanged" SnapsToDevicePixels="True"/>
+        <ComboBox x:Name="ComPortcomboBox" HorizontalAlignment="Left" Margin="20,28,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComPortcomboBox_SelectionChanged" SnapsToDevicePixels="True" ToolTip="Choose the COM port connected to the Nexys4."/>
         <TextBlock x:Name="ComTextBlock" HorizontalAlignment="Left" Margin="20,6,0,0" TextWrapping="Wrap" Text="COM Port:" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.0,0.0"/>
-        <Image x:Name="Fractal" Margin="30,119,30,13" Width="1024" Height ="768" MinWidth="1024" MinHeight="768"/>
-        <TextBox x:Name="X0" HorizontalAlignment="Left" Height="22" Margin="157,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <Image x:Name="Fractal" Margin="30,125,0,0" Width="1280" Height ="960" MinWidth="1024" MinHeight="768" Stretch="None" SnapsToDevicePixels="True" MaxWidth="1920" MaxHeight="1440" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="X0" HorizontalAlignment="Left" Height="22" Margin="157,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103"/>
         <TextBlock x:Name="ComTextBlock_Copy" HorizontalAlignment="Left" Margin="157,6,0,0" TextWrapping="Wrap" Text="Upper left X:" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.0,0.0"/>
-        <TextBox x:Name="X1" HorizontalAlignment="Left" Height="22" Margin="310,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
-        <TextBlock x:Name="ComTextBlock_Copy1" HorizontalAlignment="Left" Margin="310,6,0,0" TextWrapping="Wrap" Text="Upper Right X:" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.0,0.0"/>
-        <TextBlock x:Name="ComTextBlock_Copy2" HorizontalAlignment="Left" Margin="462,6,0,0" TextWrapping="Wrap" Text="Top Y:" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.0,0.0"/>
-        <TextBox x:Name="Y0" HorizontalAlignment="Left" Height="22" Margin="462,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
-        <Button x:Name="buttonGo" Content="Go" HorizontalAlignment="Left" Height="22" Margin="615,28,0,0" VerticalAlignment="Top" Width="55" SnapsToDevicePixels="True" Click="ButtonGo_Click"/>
-        <Button x:Name="buttonDown" HorizontalAlignment="Left" Margin="752,42,0,0" VerticalAlignment="Top" Width="20" FontFamily="Wingdings" Content="ò" TextOptions.TextFormattingMode="Display" SnapsToDevicePixels="True" Click="MoveButtons_Click"/>
-        <Button x:Name="buttonUp" HorizontalAlignment="Left" Margin="752,21,0,0" VerticalAlignment="Top" Width="20" FontFamily="Wingdings" Content="ñ" TextOptions.TextFormattingMode="Display" SnapsToDevicePixels="True" Click="MoveButtons_Click"/>
-        <Button x:Name="buttonRight" HorizontalAlignment="Left" Margin="777,30,0,0" VerticalAlignment="Top" Width="20" FontFamily="Wingdings" Content="ð" TextOptions.TextFormattingMode="Display" RenderTransformOrigin="0.517,0.404" SnapsToDevicePixels="True" Click="MoveButtons_Click"/>
-        <Button x:Name="buttonLeft" HorizontalAlignment="Left" Margin="728,30,0,0" VerticalAlignment="Top" Width="20" FontFamily="Wingdings" Content="ï" TextOptions.TextFormattingMode="Display" RenderTransformOrigin="0.5,0.5" SnapsToDevicePixels="True" Click="MoveButtons_Click"/>
-        <Button x:Name="buttonZoomIn" Content="Zoom In" HorizontalAlignment="Left" Height="22" Margin="806,15,0,0" VerticalAlignment="Top" Width="69" SnapsToDevicePixels="True" Click="ButtonZoom_Click"/>
-        <Label x:Name="labelStatus" Content="" HorizontalAlignment="Left" Margin="964,26,0,0" VerticalAlignment="Top" Width="104"/>
-        <TextBox x:Name="ZoomPercent" HorizontalAlignment="Left" Height="22" Margin="885,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" Text="30"/>
-        <Label x:Name="labelZoomMove" Content="Zoom/Move" HorizontalAlignment="Left" Margin="880,4,0,0" VerticalAlignment="Top" Height="24"/>
-        <Button x:Name="buttonZoomOut" Content="Zoom Out" HorizontalAlignment="Left" Height="22" Margin="806,42,0,0" VerticalAlignment="Top" Width="69" SnapsToDevicePixels="True" Click="ButtonZoom_Click"/>
-        <Label x:Name="labelPercent" Content="%" HorizontalAlignment="Left" Margin="926,25,0,0" VerticalAlignment="Top" Height="24" Width="26"/>
-        <TextBox x:Name="maxItersTextBox" HorizontalAlignment="Left" Height="22" Margin="157,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Text="2000" LostFocus="MaxItersTextBox_LostFocus"/>
+        <TextBox x:Name="X1" HorizontalAlignment="Left" Height="22" Margin="273,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103
+                 "/>
+        <TextBlock x:Name="ComTextBlock_Copy1" HorizontalAlignment="Left" Margin="273,6,0,0" TextWrapping="Wrap" Text="Upper Right X:" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.0,0.0"/>
+        <TextBlock x:Name="ComTextBlock_Copy2" HorizontalAlignment="Left" Margin="391,6,0,0" TextWrapping="Wrap" Text="Top Y:" VerticalAlignment="Top" Width="84" RenderTransformOrigin="0.0,0.0"/>
+        <TextBox x:Name="Y0" HorizontalAlignment="Left" Height="22" Margin="391,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103"/>
+        <Button x:Name="buttonDown" HorizontalAlignment="Left" Margin="540,43,0,0" VerticalAlignment="Top" Width="20" FontFamily="Wingdings" Content="ò" TextOptions.TextFormattingMode="Display" SnapsToDevicePixels="True" Click="MoveButtons_Click"/>
+        <Button x:Name="buttonUp" HorizontalAlignment="Left" Margin="540,22,0,0" VerticalAlignment="Top" Width="20" FontFamily="Wingdings" Content="ñ" TextOptions.TextFormattingMode="Display" SnapsToDevicePixels="True" Click="MoveButtons_Click"/>
+        <Button x:Name="buttonRight" HorizontalAlignment="Left" Margin="565,31,0,0" VerticalAlignment="Top" Width="20" FontFamily="Wingdings" Content="ð" TextOptions.TextFormattingMode="Display" RenderTransformOrigin="0.517,0.404" SnapsToDevicePixels="True" Click="MoveButtons_Click"/>
+        <Button x:Name="buttonLeft" HorizontalAlignment="Left" Margin="516,31,0,0" VerticalAlignment="Top" Width="20" FontFamily="Wingdings" Content="ï" TextOptions.TextFormattingMode="Display" RenderTransformOrigin="0.5,0.5" SnapsToDevicePixels="True" Click="MoveButtons_Click"/>
+        <Button x:Name="buttonZoomIn" Content="Zoom In" HorizontalAlignment="Left" Height="22" Margin="594,16,0,0" VerticalAlignment="Top" Width="69" SnapsToDevicePixels="True" Click="ButtonZoom_Click"/>
+        <TextBox x:Name="ZoomPercent" HorizontalAlignment="Left" Height="22" Margin="673,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" Text="30"/>
+        <Label x:Name="labelZoomMove" Content="Zoom/Move" HorizontalAlignment="Left" Margin="668,5,0,0" VerticalAlignment="Top" Height="24"/>
+        <Button x:Name="buttonZoomOut" Content="Zoom Out" HorizontalAlignment="Left" Height="22" Margin="594,43,0,0" VerticalAlignment="Top" Width="69" SnapsToDevicePixels="True" Click="ButtonZoom_Click"/>
+        <Label x:Name="labelPercent" Content="%" HorizontalAlignment="Left" Margin="714,26,0,0" VerticalAlignment="Top" Height="24" Width="26"/>
+        <TextBox x:Name="maxItersTextBox" HorizontalAlignment="Left" Height="22" Margin="157,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" Text="2000" LostFocus="MaxItersTextBox_LostFocus"/>
         <TextBlock x:Name="maxItersTextBlock" HorizontalAlignment="Left" Margin="157,55,0,0" TextWrapping="Wrap" Text="Maximum Iterations:" VerticalAlignment="Top" Width="138" RenderTransformOrigin="0.0,0.0"/>
+        <Button x:Name="buttonGo" Content="Go" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="55" SnapsToDevicePixels="True" Click="ButtonGo_Click" RenderTransformOrigin="-0.006,0.636" Margin="770,27,0,0"/>
+        <Label x:Name="labelStatus" Content="" VerticalAlignment="Top" Margin="850,25,0,0" HorizontalAlignment="Left" Width="115"/>
     </Grid>
 </Window>

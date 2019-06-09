@@ -20,7 +20,7 @@ namespace MandelViewer
             X0 = new FixedPoint.FixedPoint(40, 36, -2.0);
             X1 = new FixedPoint.FixedPoint(40, 36, 1.0);
             Y0 = new FixedPoint.FixedPoint(40, 36, 1.25);
-            Width = 1024;
+            Width = 1280;
         }
 
         public ImageParams(FixedPoint.FixedPoint X0, FixedPoint.FixedPoint X1, FixedPoint.FixedPoint Y0, int Width)

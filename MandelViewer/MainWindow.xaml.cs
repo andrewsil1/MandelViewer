@@ -21,6 +21,7 @@
     using K4os.Compression.LZ4.Streams;
 
     using FixedPoint;
+    using System.Drawing;
 
     public partial class MainWindow : Window
     {
@@ -44,58 +45,6 @@
 
             crc32 = new Crc32();
             imageParams = new ImageParams(); //Set up standard "zoomed out" starting image coordinates.
-
-            // Bind the UI controls to the object data.
-            Binding X0Binding = new Binding("X0")
-            {
-                Source = imageParams,
-                Converter = imageParams.X0
-            };
-            Binding X1Binding = new Binding("X1")
-            {
-                Source = imageParams,
-                Converter = imageParams.X1
-            };
-            Binding Y0Binding = new Binding("Y0")
-            {
-                Source = imageParams,
-                Converter = imageParams.Y0
-            };
-
-            X0.SetBinding(TextBox.TextProperty, X0Binding);
-            X1.SetBinding(TextBox.TextProperty, X1Binding);
-            Y0.SetBinding(TextBox.TextProperty, Y0Binding);
-
-            _serialPort = new SerialPort();
-            _serialPort.ErrorReceived += SerialErrorHandler;
-            
-            ImageBufferLength = (int)Fractal.Height * (int)Fractal.Width * sizeof(short);
-
-            // Get a list of serial port names and open the first one we find.
-            string[] ports = SerialPort.GetPortNames();
-            foreach (string port in ports)
-            {
-                ComPortcomboBox.Items.Add(port);
-            }
-            ComPortcomboBox.SelectedItem = ComPortcomboBox.Items[0];
-
-            Fractal.SnapsToDevicePixels = true;
-            // Create a bitmap and tie it to the onscreen control.
-            writeableBitmap = new WriteableBitmap(
-                (int)Fractal.Width,
-                (int)Fractal.Height,
-                96,
-                96,
-                PixelFormats.Bgr32,
-                null);
-
-            RenderOptions.SetBitmapScalingMode(this.Fractal, BitmapScalingMode.HighQuality);
-            RenderOptions.SetEdgeMode(this.Fractal, EdgeMode.Unspecified);
-
-            this.Fractal.Stretch = Stretch.None;
-            this.Fractal.Source = writeableBitmap;
-
-            AutomateGo();
         }
 
         #region Serial Processing
@@ -177,6 +126,248 @@
         static void SerialErrorHandler(object sender, SerialErrorReceivedEventArgs e)
         {
             Debug.WriteLine(e.EventType.ToString());
+        }
+        #endregion
+
+        #region UI Event Processing
+
+        /* Allow all of the modal buttons to be enabled/disabled as a group. (Don't allow anyone to press while data is still incoming, for example.)
+         */
+        private void ChangeButtonStates(bool state)
+        {
+            buttonGo.IsEnabled = state;
+            buttonZoomIn.IsEnabled = state;
+            buttonZoomOut.IsEnabled = state;
+            buttonUp.IsEnabled = state;
+            buttonDown.IsEnabled = state;
+            buttonLeft.IsEnabled = state;
+            buttonRight.IsEnabled = state;
+        }
+
+        private async void ButtonGo_Click(object sender, RoutedEventArgs e)
+        {
+            ChangeButtonStates(false);
+            await Task.Run(() => WaitForReady());
+            SendCommand(crc32, "A", imageParams.X0);
+            await Task.Run(() => WaitForReady());
+            SendCommand(crc32, "B", imageParams.X1);
+            await Task.Run(() => WaitForReady());
+            SendCommand(crc32, "C", imageParams.Y0);
+            await Task.Run(() => WaitForReady());
+            SendCommand(crc32, "D", maxItersTextBox.Text);
+            await Task.Run(() => WaitForReady());
+            _serialPort.Write("G");
+            Debug.WriteLine("{0:hh:mm:ss.fff}: Calculation launched.", DateTime.Now);
+            this.labelStatus.Content = "Working...";
+
+            ThreadPool.QueueUserWorkItem(DoCalculation);
+        }
+
+
+        /* When updating the bound controls programmatically, need to give them a kick to update the source data object.
+         */
+        private void UpdateBindings()
+        {
+            BindingExpression x0Expr = X0.GetBindingExpression(TextBox.TextProperty);
+            BindingExpression x1Expr = X1.GetBindingExpression(TextBox.TextProperty);
+            BindingExpression y0Expr = Y0.GetBindingExpression(TextBox.TextProperty);
+            x0Expr.UpdateSource();
+            x1Expr.UpdateSource();
+            y0Expr.UpdateSource();
+        }
+
+        /* Helper function:Click the "Go" button automatically. WPF makes this a bit less than straightforward...
+         */
+        private void AutomateGo()
+        {
+            if (_serialPort.IsOpen)
+            {
+                ButtonAutomationPeer peer = new ButtonAutomationPeer(this.buttonGo);
+                IInvokeProvider invokeProv = peer.GetPattern(PatternInterface.Invoke) as IInvokeProvider;
+                invokeProv.Invoke();
+            }
+        }
+
+        /* Handle all of the "move" buttons with a single event.  Move the window around and recalculate.*/
+        private void MoveButtons_Click(object sender, RoutedEventArgs e)
+        {
+            //This is just easier than implementing actual fixed-point math on the underlying data for the time being,
+            //although we may lose precision in the conversions back and forth. Something to do later...
+            double.TryParse(X0.Text, out double x0);
+            double.TryParse(X1.Text, out double x1);
+            double.TryParse(Y0.Text, out double y0);
+            bool OK = int.TryParse(ZoomPercent.Text, out int movePercent);
+            if (OK)
+            {
+                double delta = (x1 - x0) * movePercent / 100;
+
+                if (e.Source.Equals(buttonLeft))
+                {
+                    X0.Text = (x0 - delta).ToString();
+                    X1.Text = (x1 - delta).ToString();
+                }
+                else if (e.Source.Equals(buttonRight))
+                {
+                    X0.Text = (x0 + delta).ToString();
+                    X1.Text = (x1 + delta).ToString();
+                }
+                else if (e.Source.Equals(buttonUp))
+                {
+                    Y0.Text = (y0 + (delta * 0.75)).ToString();
+                }
+                else if (e.Source.Equals(buttonDown))
+                {
+                    Y0.Text = (y0 - (delta * 0.75)).ToString();
+                }
+                else
+                {
+                    throw new Exception("Received MoveButtons_Click from an unknown source.");
+                }
+                UpdateBindings();
+                AutomateGo();
+            }
+        }
+
+        /* The Zoom button closes in or expands the sides to increase the zoom level.
+         */
+        private void ButtonZoom_Click(object sender, RoutedEventArgs e)
+        {
+            // By default, let's move the sides in by 15% and adjust the Y top line to match.
+            double.TryParse(X0.Text, out double x0);
+            double.TryParse(X1.Text, out double x1);
+            double.TryParse(Y0.Text, out double y0);
+            double width = x1 - x0;
+            bool OK = int.TryParse(ZoomPercent.Text,out zoomPercent);
+            if (OK)
+            {
+                double delta = width * zoomPercent / 100;
+                if (sender.Equals(buttonZoomOut)) {
+                    delta = -delta;
+                }
+                X0.Text = (x0 + delta).ToString();
+                X1.Text = (x1 - delta).ToString();
+                Y0.Text = (y0 - (delta * .75)).ToString(); //Y delta is 3/4 of X in a 4:3 aspect ratio image.
+                UpdateBindings();
+                AutomateGo();
+            }
+        }
+
+
+        /* Used to open the selected COM port with the expected parameters.
+         */
+        private void ComPortcomboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ComPortcomboBox.SelectedIndex != 0 && ComPortcomboBox.Items[0].Equals("Select..."))
+            {
+                _serialPort.Close();
+                _serialPort.PortName = ComPortcomboBox.SelectedItem.ToString();
+                _serialPort.DataBits = 8;
+                _serialPort.BaudRate = BAUD_RATE;
+                _serialPort.Parity = Parity.None;
+                _serialPort.StopBits = StopBits.One;
+                _serialPort.Handshake = Handshake.None;
+                _serialPort.ReadBufferSize = 1 << 17; //receive buffer
+
+                // Set the read/write timeouts
+                _serialPort.ReadTimeout = 1000;
+                _serialPort.WriteTimeout = 1000;
+
+                _serialPort.Open();
+                buttonGo.IsEnabled = true;
+
+                if (ComPortcomboBox.Items[0].Equals("Select..."))
+                {
+                    ComPortcomboBox.Items.RemoveAt(0);
+                }
+            }
+            else
+            {
+                buttonGo.IsEnabled = false;
+            }
+        }
+
+        private void MaxItersTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            bool OK = ushort.TryParse(maxItersTextBox.Text, out ushort result);
+            if (OK)
+            {
+                maxIter = result;
+            }
+        }
+
+        private void MainWindow1_Loaded(object sender, RoutedEventArgs e)
+        {
+                  // Bind the UI controls to the object data.
+            Binding X0Binding = new Binding("X0")
+            {
+                Source = imageParams,
+                Converter = imageParams.X0
+            };
+            Binding X1Binding = new Binding("X1")
+            {
+                Source = imageParams,
+                Converter = imageParams.X1
+            };
+            Binding Y0Binding = new Binding("Y0")
+            {
+                Source = imageParams,
+                Converter = imageParams.Y0
+            };
+
+            X0.SetBinding(TextBox.TextProperty, X0Binding);
+            X1.SetBinding(TextBox.TextProperty, X1Binding);
+            Y0.SetBinding(TextBox.TextProperty, Y0Binding);
+
+            _serialPort = new SerialPort();
+            _serialPort.ErrorReceived += SerialErrorHandler;
+
+            // Get screen scaling
+            Matrix m =
+           PresentationSource.FromVisual(Application.Current.MainWindow).CompositionTarget.TransformToDevice;
+            double dx = m.M11; // notice it's divided by 96 already
+            double dy = m.M22; // notice it's divided by 96 already
+
+            // Create a bitmap and tie it to the onscreen control.
+            writeableBitmap = new WriteableBitmap(
+                1920,
+                1440,
+                96*dx,
+                96*dy,
+                PixelFormats.Bgr32,
+                null);
+
+            ImageBufferLength = writeableBitmap.PixelWidth * writeableBitmap.PixelHeight * sizeof(short);
+
+            // Get a list of serial port names
+            ComPortcomboBox.Items.Add("Select...");
+            ComPortcomboBox.SelectedIndex = 0;
+            string[] ports = SerialPort.GetPortNames();
+            foreach (string port in ports)
+            {
+                ComPortcomboBox.Items.Add(port);
+            }
+
+            // If we only find one port, just select it immediately.
+            if (ComPortcomboBox.Items.Count == 2) // (Including our helper text...)
+                ComPortcomboBox.SelectedItem = ComPortcomboBox.Items[1];
+
+            // Set up the image box that will display our results
+            this.Fractal.Width = writeableBitmap.PixelWidth;
+            this.Fractal.Height = writeableBitmap.PixelHeight;
+            this.Fractal.MaxWidth = writeableBitmap.PixelWidth;
+            this.Fractal.MaxHeight = writeableBitmap.PixelHeight;
+            this.Fractal.SnapsToDevicePixels = true;
+            this.Fractal.Stretch = Stretch.None;
+            this.Fractal.Source = writeableBitmap;
+            RenderOptions.SetBitmapScalingMode(this.Fractal, BitmapScalingMode.HighQuality);
+            RenderOptions.SetEdgeMode(this.Fractal, EdgeMode.Unspecified);
+
+            AutomateGo();
+        }
+
+        private void MainWindow1_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            _serialPort.Close();
         }
         #endregion
 
@@ -448,161 +639,5 @@
                 }
             }
         }
-
-        #region UI Event Processing
-
-        /* Allow all of the modal buttons to be enabled/disabled as a group. (Don't allow anyone to press while data is still incoming, for example.)
-         */
-        private void ChangeButtonStates(bool state)
-        {
-            buttonGo.IsEnabled = state;
-            buttonZoomIn.IsEnabled = state;
-            buttonZoomOut.IsEnabled = state;
-            buttonUp.IsEnabled = state;
-            buttonDown.IsEnabled = state;
-            buttonLeft.IsEnabled = state;
-            buttonRight.IsEnabled = state;
-        }
-
-        private async void ButtonGo_Click(object sender, RoutedEventArgs e)
-        {
-            ChangeButtonStates(false);
-            await Task.Run(() => WaitForReady());
-            SendCommand(crc32, "A", imageParams.X0);
-            await Task.Run(() => WaitForReady());
-            SendCommand(crc32, "B", imageParams.X1);
-            await Task.Run(() => WaitForReady());
-            SendCommand(crc32, "C", imageParams.Y0);
-            await Task.Run(() => WaitForReady());
-            SendCommand(crc32, "D", maxItersTextBox.Text);
-            await Task.Run(() => WaitForReady());
-            _serialPort.Write("G");
-            Debug.WriteLine("{0:hh:mm:ss.fff}: Calculation launched.", DateTime.Now);
-            this.labelStatus.Content = "Working...";
-
-            ThreadPool.QueueUserWorkItem(DoCalculation);
-        }
-
-
-        /* When updating the bound controls programmatically, need to give them a kick to update the source data object.
-         */
-        private void UpdateBindings()
-        {
-            BindingExpression x0Expr = X0.GetBindingExpression(TextBox.TextProperty);
-            BindingExpression x1Expr = X1.GetBindingExpression(TextBox.TextProperty);
-            BindingExpression y0Expr = Y0.GetBindingExpression(TextBox.TextProperty);
-            x0Expr.UpdateSource();
-            x1Expr.UpdateSource();
-            y0Expr.UpdateSource();
-        }
-
-        /* Helper function:Click the "Go" button automatically. WPF makes this a bit less than straightforward...
-         */
-        private void AutomateGo()
-        {
-            ButtonAutomationPeer peer = new ButtonAutomationPeer(this.buttonGo);
-            IInvokeProvider invokeProv = peer.GetPattern(PatternInterface.Invoke) as IInvokeProvider;
-            invokeProv.Invoke();
-        }
-
-        /* Handle all of the "move" buttons with a single event.  Move the window around and recalculate.*/
-        private void MoveButtons_Click(object sender, RoutedEventArgs e)
-        {
-            //This is just easier than implementing actual fixed-point math on the underlying data for the time being,
-            //although we may lose precision in the conversions back and forth. Something to do later...
-            double.TryParse(X0.Text, out double x0);
-            double.TryParse(X1.Text, out double x1);
-            double.TryParse(Y0.Text, out double y0);
-            bool OK = int.TryParse(ZoomPercent.Text, out int movePercent);
-            if (OK)
-            {
-                double delta = (x1 - x0) * movePercent / 100;
-
-                if (e.Source.Equals(buttonLeft))
-                {
-                    X0.Text = (x0 - delta).ToString();
-                    X1.Text = (x1 - delta).ToString();
-                }
-                else if (e.Source.Equals(buttonRight))
-                {
-                    X0.Text = (x0 + delta).ToString();
-                    X1.Text = (x1 + delta).ToString();
-                }
-                else if (e.Source.Equals(buttonUp))
-                {
-                    Y0.Text = (y0 + (delta * 0.75)).ToString();
-                }
-                else if (e.Source.Equals(buttonDown))
-                {
-                    Y0.Text = (y0 - (delta * 0.75)).ToString();
-                }
-                else
-                {
-                    throw new Exception("Received MoveButtons_Click from an unknown source.");
-                }
-                UpdateBindings();
-                AutomateGo();
-            }
-        }
-
-        /* The Zoom button closes in or expands the sides to increase the zoom level.
-         */
-        private void ButtonZoom_Click(object sender, RoutedEventArgs e)
-        {
-            // By default, let's move the sides in by 15% and adjust the Y top line to match.
-            double.TryParse(X0.Text, out double x0);
-            double.TryParse(X1.Text, out double x1);
-            double.TryParse(Y0.Text, out double y0);
-            double width = x1 - x0;
-            bool OK = int.TryParse(ZoomPercent.Text,out zoomPercent);
-            if (OK)
-            {
-                double delta = width * zoomPercent / 100;
-                if (sender.Equals(buttonZoomOut)) {
-                    delta = -delta;
-                }
-                X0.Text = (x0 + delta).ToString();
-                X1.Text = (x1 - delta).ToString();
-                Y0.Text = (y0 - (delta * .75)).ToString(); //Y delta is 3/4 of X in a 4:3 aspect ratio image.
-                UpdateBindings();
-                AutomateGo();
-            }
-        }
-
-
-        /* Used to open the selected COM port with the expected parameters.
-         */
-        private void ComPortcomboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            _serialPort.Close();
-            _serialPort.PortName = ComPortcomboBox.SelectedItem.ToString();
-            _serialPort.DataBits = 8;
-            _serialPort.BaudRate = BAUD_RATE;
-            _serialPort.Parity = Parity.None;
-            _serialPort.StopBits = StopBits.One;
-            _serialPort.Handshake = Handshake.None;
-            _serialPort.ReadBufferSize = 1 << 17; //receive buffer
-
-            // Set the read/write timeouts
-            _serialPort.ReadTimeout = 1000;
-            _serialPort.WriteTimeout = 1000;
-
-            _serialPort.Open();
-        }
-
-        private void MaxItersTextBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            bool OK = ushort.TryParse(maxItersTextBox.Text, out ushort result);
-            if (OK)
-            {
-                maxIter = result;
-            }
-        }
-
-        private void MainWindow1_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            _serialPort.Close();
-        }
-        #endregion
     }
 }
