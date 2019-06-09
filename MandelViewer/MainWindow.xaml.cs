@@ -596,16 +596,13 @@
                 string s = System.Text.Encoding.UTF8.GetString(buffer, 0, 4);
                 if (s != "DONE")
                 {
-                    int payloadSegmentEnd = packetLength - 4;
-                    uint incomingCrc = BitConverter.ToUInt32(buffer, payloadSegmentEnd); //Extract CRC from the packet.
-                    Array.Copy(buffer, 0, payload, payloadBytes, payloadSegmentEnd);       //Copy bytes without the CRC tacked on to the complete payload buffer
-                    uint calcCrc = crc32.Get(new ArraySegment<byte>(payload, payloadBytes, payloadSegmentEnd));
-                    payloadBytes += payloadSegmentEnd;
-
+                    int payloadSegmentLength = packetLength - 4;
+                    uint incomingCrc = BitConverter.ToUInt32(buffer, payloadSegmentLength);   //Extract CRC from the packet.
+                    Array.Copy(buffer, 0, payload, payloadBytes, payloadSegmentLength);       //Copy bytes without the CRC tacked on to the complete payload buffer
+                    uint calcCrc = crc32.Get(new ArraySegment<byte>(payload, payloadBytes, payloadSegmentLength)); // Calculate the CRC ourselves and compare to expected
                     if (calcCrc != incomingCrc)
                     {
                         Debug.Write(string.Format("Incoming CRC: {0:X}  Calculated CRC: {1:X}\n", incomingCrc, calcCrc));
-                        payloadBytes -= payloadSegmentEnd;
                         failedAttempts++;
                         _serialPort.Write(GetAscii("Z"), 0, 1); //Error
                         if (failedAttempts > 5)
@@ -616,6 +613,7 @@
                     }
                     else
                     {
+                        payloadBytes += payloadSegmentLength;
                         _serialPort.Write(GetAscii("@"), 0, 1); //Acknowledge receipt.
                         failedAttempts = 0;                     //Reset for next packet.
                     }
