@@ -14,8 +14,8 @@
 #include <stdio.h>
 
 #include "uartfuncs.h"
-#include "LZ4/lz4frame.h"
-#include "LZ4/xxhash.h"
+#include "lz4frame.h"
+#include "xxhash.h"
 
 #ifdef DEBUG
 	#include <xil_printf.h>
@@ -272,9 +272,9 @@ void SerialSend(XUartNs550 *UartInstancePtr, u8* sendBuffer, u32 TotalToSend) {
 					 xil_printf("Receiver indicated CRC failure, retrying.");
 				 } else
 			     Xil_AssertVoidAlways(); //We got some kind of garbage from the receiver, must bail and fail.
-
-			 #endif
 			 }
+			 #endif
+
 			 if (sendAttempts > 5) {
 				 #ifdef DEBUG
 				 xil_printf("5 send attempts failed.");
