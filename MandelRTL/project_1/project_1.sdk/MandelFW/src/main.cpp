@@ -78,12 +78,12 @@ u64 X0, X1, Y0;
 u32 maxIter = 2000;
 u32 MAXWIDTH = 0; // Retrieved from hardware later.
 u32 UNROLL = 0;   // Retrieved from hardware later. Width % UNROLL must be 0.
-u32 WIDTH = 1920;  // Initial width of image.
+u32 WIDTH = 1920; // Initial width of image. Can be changed by host with command 'E'
 u32 HEIGHT = WIDTH * 3U / 4U;
 
 /* Addresses of various spaces in PSRAM */
-u8* compressBuffer = (u8*) (PSRAM_BASE + (1920 * 1440 * sizeof(u16)));  // Space to compress data prior to transmission. 0x546000 is the maximum size of the raw image buffer below the compression buffer.
-u8* heap = (u8*) (PSRAM_BASE + 0xC00000);				 // Location of heap, as defined in lscript.ld
+u8* compressBuffer;							// Space to compress data prior to transmission. Determined by interrogating hardware.
+u8* heap = (u8*) (PSRAM_BASE + 0xC00000);	// Location of heap, as defined in lscript.ld
 
 // For the serial port...
 u16 Options;
@@ -102,12 +102,14 @@ u32 CompressOutput() {
 	 }
 
 	 LZ4F_frameInfo_t frameInfo;
-	 frameInfo.blockSizeID = LZ4F_max4MB;
+	 frameInfo.blockSizeID = LZ4F_max1MB;
 	 frameInfo.blockMode = LZ4F_blockLinked;
 	 frameInfo.contentChecksumFlag = LZ4F_noContentChecksum; //disabled
-	 frameInfo.contentSize = WIDTH * HEIGHT * sizeof(u16);
 	 frameInfo.dictID = 0;
 	 frameInfo.blockChecksumFlag = LZ4F_noBlockChecksum; //disabled
+
+	 u32 imageSize = WIDTH * HEIGHT * sizeof(u16);
+	 frameInfo.contentSize = imageSize;
 
 	 LZ4F_preferences_t prefs;
 	 memset(&prefs,0,sizeof(prefs));
@@ -125,14 +127,25 @@ u32 CompressOutput() {
 	 } else
 		 bytesWritten += returncode;
 
-	 returncode = LZ4F_compressUpdate(cctxPtr, compressBuffer+bytesWritten, compressCapacity-bytesWritten, (void*) PSRAM_BASE, frameInfo.contentSize, NULL);
-	 if (LZ4F_isError(returncode)) {
-	 		 xil_printf("Error with compressUpdate: %s\r\n",LZ4F_getErrorName(returncode));
-	 		 return XST_FAILURE;
-	 } else
-	 	 bytesWritten += returncode;
+	 u32 bufferIndex = PSRAM_BASE;
+	 u32 chunkSize = imageSize > 0x100000 ? 0x100000 : imageSize; // Chunk is minimum of complete buffer, or 4MB.
+
+	 while (chunkSize > 0) {
+		 returncode = LZ4F_compressUpdate(cctxPtr, compressBuffer+bytesWritten, compressCapacity-bytesWritten, (void*) bufferIndex, chunkSize, NULL);
+		 if (LZ4F_isError(returncode)) {
+				 xil_printf("Error with compressUpdate: %s\r\n",LZ4F_getErrorName(returncode));
+				 return XST_FAILURE;
+		 } else
+		 {
+			 bytesWritten += returncode;
+			 bufferIndex += chunkSize;
+		 }
+		 imageSize -= chunkSize;
+		 chunkSize = imageSize > 0x100000 ? 0x100000 : imageSize; // Chunk is minimum of complete buffer, or 1MB.
+	 }
 
 	 returncode = bytesWritten += LZ4F_compressEnd(cctxPtr, compressBuffer+bytesWritten, compressCapacity-bytesWritten, NULL);
+
 	 if (LZ4F_isError(returncode)) {
 	 	 		 xil_printf("Error with compressEnd: %s\r\n",LZ4F_getErrorName(returncode));
 	 	 		 return XST_FAILURE;
@@ -432,6 +445,13 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 #endif
 				maxIter = GetUIntParam(UartInstancePtr, ReceiveBufferPtr);
 				break;
+			case 'E' :
+#ifdef DEBUG
+				xil_printf("Got E\r\n");
+#endif
+				WIDTH = GetUIntParam(UartInstancePtr, ReceiveBufferPtr);
+				HEIGHT = WIDTH * 3U / 4U;
+				break;
 			case 'X' :
 #ifdef DEBUG
 				xil_printf("Got X\r\n");
@@ -470,6 +490,7 @@ int SetupCalc() {
     u32 valid = XCalc_Get_maxWidth_V_vld(&Calc);
     if (valid) {
      	MAXWIDTH = XCalc_Get_maxWidth_V(&Calc);
+     	compressBuffer = (u8*) (PSRAM_BASE + (MAXWIDTH * (MAXWIDTH * 3U /4U) * sizeof(u16)));
     }
     else {
        	return XST_FAILURE;

@@ -21,7 +21,6 @@
     using K4os.Compression.LZ4.Streams;
 
     using FixedPoint;
-    using System.Drawing;
 
     public partial class MainWindow : Window
     {
@@ -89,7 +88,7 @@
             }
             else
             {
-                Debug.WriteLine("maxIterations was not parsable as a uShort.");
+                Debug.WriteLine("Parameter to send was not parsable as a uShort.");
             }
         }
 
@@ -155,6 +154,10 @@
             SendCommand(crc32, "C", imageParams.Y0);
             await Task.Run(() => WaitForReady());
             SendCommand(crc32, "D", maxItersTextBox.Text);
+            await Task.Run(() => WaitForReady());
+
+            WriteableBitmap src = (WriteableBitmap) this.Fractal.Source;
+            SendCommand(crc32, "E", (src.Width * src.DpiX / 96).ToString());
             await Task.Run(() => WaitForReady());
             _serialPort.Write("G");
             Debug.WriteLine("{0:hh:mm:ss.fff}: Calculation launched.", DateTime.Now);
@@ -321,6 +324,11 @@
             _serialPort = new SerialPort();
             _serialPort.ErrorReceived += SerialErrorHandler;
 
+            //Get screen res
+            var size = System.Windows.Forms.SystemInformation.PrimaryMonitorSize;
+            int resX = (size.Width <= 2560) ? 1280 : 1920;
+            int resY = (size.Width <= 2560) ? 960 : 1440;
+
             // Get screen scaling
             Matrix m =
            PresentationSource.FromVisual(Application.Current.MainWindow).CompositionTarget.TransformToDevice;
@@ -329,8 +337,8 @@
 
             // Create a bitmap and tie it to the onscreen control.
             writeableBitmap = new WriteableBitmap(
-                1920,
-                1440,
+                resX,
+                resY,
                 96*dx,
                 96*dy,
                 PixelFormats.Bgr32,
@@ -623,11 +631,20 @@
                     done = true;
                     incomingData.Write(payload, 0, payloadBytes);                   //Put compressed buffer into a memory stream.
                     incomingData.Seek(0, 0);
+                    
                     using (var source = LZ4Stream.Decode(incomingData, 0, false))
                     {
-                        source.Read(drawBuffer, 0, ImageBufferLength);              //Pass the stream through the decompressor and store in the drawBuffer.
+                        int offset = 0;
+                        int remaining = ImageBufferLength;
+                        while (remaining > 0)
+                        {
+                            int retrieved = source.Read(drawBuffer, offset, remaining);              //Pass the stream through the decompressor and store in the drawBuffer.
+                            remaining -= retrieved;
+                            offset += retrieved;
+                        }
                     }
                     ThreadPool.QueueUserWorkItem(DrawPayload, drawBuffer);
+
                     Debug.WriteLine(string.Format("{0:hh:mm:ss.fff}: Total Compressed Bytes read: {1}", DateTime.Now, payloadBytes));
                     Dispatcher.Invoke(() =>
                     {
