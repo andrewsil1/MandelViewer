@@ -578,173 +578,168 @@ set_property IOSTANDARD LVCMOS33 [get_ports usb_uart_txd]
 #set_property PACKAGE_PIN T15 [get_ports RamCLK]
 #	set_property IOSTANDARD LVCMOS33 [get_ports RamCLK]
 #Bank = 14, Pin name = IO_L23P_T3_A03_D19_14,				Sch name = CRAM_ADVN
-set_property PACKAGE_PIN T13 [get_ports psram_rtl_0_adv_ldn]
-set_property IOSTANDARD LVCMOS33 [get_ports psram_rtl_0_adv_ldn]
+set_property PACKAGE_PIN T13 [get_ports cellular_ram_adv_ldn]
+set_property IOSTANDARD LVCMOS33 [get_ports cellular_ram_adv_ldn]
 #Bank = 14, Pin name = IO_L4P_T0_D04_14,					Sch name = CRAM_CEN
-set_property PACKAGE_PIN L18 [get_ports psram_rtl_0_ce_n]
-set_property IOSTANDARD LVCMOS33 [get_ports psram_rtl_0_ce_n]
+set_property PACKAGE_PIN L18 [get_ports cellular_ram_ce_n]
+set_property IOSTANDARD LVCMOS33 [get_ports cellular_ram_ce_n]
 #Bank = 15, Pin name = IO_L19P_T3_A22_15,					Sch name = CRAM_CRE
-set_property PACKAGE_PIN J14 [get_ports psram_rtl_0_cre]
-set_property IOSTANDARD LVCMOS33 [get_ports psram_rtl_0_cre]
+set_property PACKAGE_PIN J14 [get_ports cellular_ram_cre]
+set_property IOSTANDARD LVCMOS33 [get_ports cellular_ram_cre]
 #Bank = 15, Pin name = IO_L15P_T2_DQS_15,					Sch name = CRAM_OEN
-set_property PACKAGE_PIN H14 [get_ports psram_rtl_0_oen]
-set_property IOSTANDARD LVCMOS33 [get_ports psram_rtl_0_oen]
+set_property PACKAGE_PIN H14 [get_ports cellular_ram_oen]
+set_property IOSTANDARD LVCMOS33 [get_ports cellular_ram_oen]
 #Bank = 14, Pin name = IO_0_14,								Sch name = CRAM_WEN
-set_property PACKAGE_PIN R11 [get_ports psram_rtl_0_wen]
-set_property IOSTANDARD LVCMOS33 [get_ports psram_rtl_0_wen]
+set_property PACKAGE_PIN R11 [get_ports cellular_ram_wen]
+set_property IOSTANDARD LVCMOS33 [get_ports cellular_ram_wen]
 #Bank = 15, Pin name = IO_L24N_T3_RS0_15,					Sch name = CRAM_LBN
-set_property PACKAGE_PIN J15 [get_ports {psram_rtl_0_ben[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_ben[0]}]
+set_property PACKAGE_PIN J15 [get_ports {cellular_ram_ben[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_ben[0]}]
 #Bank = 15, Pin name = IO_L17N_T2_A25_15,					Sch name = CRAM_UBN
-set_property PACKAGE_PIN J13 [get_ports {psram_rtl_0_ben[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_ben[1]}]
+set_property PACKAGE_PIN J13 [get_ports {cellular_ram_ben[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_ben[1]}]
 #Bank = 14, Pin name = IO_L14P_T2_SRCC_14,					Sch name = CRAM_WAIT
-#set_property PACKAGE_PIN T14 [get_ports RamWait]
-#	set_property IOSTANDARD LVCMOS33 [get_ports RamWait]
+set_property PACKAGE_PIN T14 [get_ports cellular_ram_wait]
+set_property IOSTANDARD LVCMOS33 [get_ports cellular_ram_wait]
 
 #Bank = 14, Pin name = IO_L5P_T0_DQ06_14,					Sch name = CRAM_DQ0
-set_property PACKAGE_PIN R12 [get_ports {psram_rtl_0_dq_io[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[0]}]
+set_property PACKAGE_PIN R12 [get_ports {cellular_ram_dq_io[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[0]}]
 #Bank = 14, Pin name = IO_L19P_T3_A10_D26_14,				Sch name = CRAM_DQ1
-set_property PACKAGE_PIN T11 [get_ports {psram_rtl_0_dq_io[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[1]}]
+set_property PACKAGE_PIN T11 [get_ports {cellular_ram_dq_io[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[1]}]
 #Bank = 14, Pin name = IO_L20P_T3_A08)D24_14,				Sch name = CRAM_DQ2
-set_property PACKAGE_PIN U12 [get_ports {psram_rtl_0_dq_io[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[2]}]
+set_property PACKAGE_PIN U12 [get_ports {cellular_ram_dq_io[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[2]}]
 #Bank = 14, Pin name = IO_L5N_T0_D07_14,					Sch name = CRAM_DQ3
-set_property PACKAGE_PIN R13 [get_ports {psram_rtl_0_dq_io[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[3]}]
+set_property PACKAGE_PIN R13 [get_ports {cellular_ram_dq_io[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[3]}]
 #Bank = 14, Pin name = IO_L17N_T2_A13_D29_14,				Sch name = CRAM_DQ4
-set_property PACKAGE_PIN U18 [get_ports {psram_rtl_0_dq_io[4]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[4]}]
+set_property PACKAGE_PIN U18 [get_ports {cellular_ram_dq_io[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[4]}]
 #Bank = 14, Pin name = IO_L12N_T1_MRCC_14,					Sch name = CRAM_DQ5
-set_property PACKAGE_PIN R17 [get_ports {psram_rtl_0_dq_io[5]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[5]}]
+set_property PACKAGE_PIN R17 [get_ports {cellular_ram_dq_io[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[5]}]
 #Bank = 14, Pin name = IO_L7N_T1_D10_14,					Sch name = CRAM_DQ6
-set_property PACKAGE_PIN T18 [get_ports {psram_rtl_0_dq_io[6]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[6]}]
+set_property PACKAGE_PIN T18 [get_ports {cellular_ram_dq_io[6]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[6]}]
 #Bank = 14, Pin name = IO_L7P_T1_D09_14,					Sch name = CRAM_DQ7
-set_property PACKAGE_PIN R18 [get_ports {psram_rtl_0_dq_io[7]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[7]}]
+set_property PACKAGE_PIN R18 [get_ports {cellular_ram_dq_io[7]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[7]}]
 #Bank = 15, Pin name = IO_L22N_T3_A16_15,					Sch name = CRAM_DQ8
-set_property PACKAGE_PIN F18 [get_ports {psram_rtl_0_dq_io[8]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[8]}]
+set_property PACKAGE_PIN F18 [get_ports {cellular_ram_dq_io[8]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[8]}]
 #Bank = 15, Pin name = IO_L22P_T3_A17_15,					Sch name = CRAM_DQ9
-set_property PACKAGE_PIN G18 [get_ports {psram_rtl_0_dq_io[9]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[9]}]
+set_property PACKAGE_PIN G18 [get_ports {cellular_ram_dq_io[9]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[9]}]
 #Bank = 15, Pin name = IO_IO_L18N_T2_A23_15,				Sch name = CRAM_DQ10
-set_property PACKAGE_PIN G17 [get_ports {psram_rtl_0_dq_io[10]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[10]}]
+set_property PACKAGE_PIN G17 [get_ports {cellular_ram_dq_io[10]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[10]}]
 #Bank = 14, Pin name = IO_L4N_T0_D05_14,					Sch name = CRAM_DQ11
-set_property PACKAGE_PIN M18 [get_ports {psram_rtl_0_dq_io[11]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[11]}]
+set_property PACKAGE_PIN M18 [get_ports {cellular_ram_dq_io[11]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[11]}]
 #Bank = 14, Pin name = IO_L10N_T1_D15_14,					Sch name = CRAM_DQ12
-set_property PACKAGE_PIN M17 [get_ports {psram_rtl_0_dq_io[12]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[12]}]
+set_property PACKAGE_PIN M17 [get_ports {cellular_ram_dq_io[12]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[12]}]
 #Bank = 14, Pin name = IO_L9N_T1_DQS_D13_14,				Sch name = CRAM_DQ13
-set_property PACKAGE_PIN P18 [get_ports {psram_rtl_0_dq_io[13]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[13]}]
+set_property PACKAGE_PIN P18 [get_ports {cellular_ram_dq_io[13]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[13]}]
 #Bank = 14, Pin name = IO_L9P_T1_DQS_14,					Sch name = CRAM_DQ14
-set_property PACKAGE_PIN N17 [get_ports {psram_rtl_0_dq_io[14]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[14]}]
+set_property PACKAGE_PIN N17 [get_ports {cellular_ram_dq_io[14]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[14]}]
 #Bank = 14, Pin name = IO_L12P_T1_MRCC_14,					Sch name = CRAM_DQ15
-set_property PACKAGE_PIN P17 [get_ports {psram_rtl_0_dq_io[15]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_dq_io[15]}]
+set_property PACKAGE_PIN P17 [get_ports {cellular_ram_dq_io[15]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_dq_io[15]}]
 
 #Bank = 15, Pin name = IO_L23N_T3_FWE_B_15,					Sch name = CRAM_A0
-set_property PACKAGE_PIN J18 [get_ports {psram_rtl_0_addr[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[0]}]
+set_property PACKAGE_PIN J18 [get_ports {cellular_ram_addr[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[0]}]
 #Bank = 15, Pin name = IO_L18P_T2_A24_15,					Sch name = CRAM_A1
-set_property PACKAGE_PIN H17 [get_ports {psram_rtl_0_addr[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[1]}]
+set_property PACKAGE_PIN H17 [get_ports {cellular_ram_addr[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[1]}]
 #Bank = 15, Pin name = IO_L19N_T3_A21_VREF_15,				Sch name = CRAM_A2
-set_property PACKAGE_PIN H15 [get_ports {psram_rtl_0_addr[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[2]}]
+set_property PACKAGE_PIN H15 [get_ports {cellular_ram_addr[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[2]}]
 #Bank = 15, Pin name = IO_L23P_T3_FOE_B_15,					Sch name = CRAM_A3
-set_property PACKAGE_PIN J17 [get_ports {psram_rtl_0_addr[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[3]}]
+set_property PACKAGE_PIN J17 [get_ports {cellular_ram_addr[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[3]}]
 #Bank = 15, Pin name = IO_L13P_T2_MRCC_15,					Sch name = CRAM_A4
-set_property PACKAGE_PIN H16 [get_ports {psram_rtl_0_addr[4]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[4]}]
+set_property PACKAGE_PIN H16 [get_ports {cellular_ram_addr[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[4]}]
 #Bank = 15, Pin name = IO_L24P_T3_RS1_15,					Sch name = CRAM_A5
-set_property PACKAGE_PIN K15 [get_ports {psram_rtl_0_addr[5]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[5]}]
+set_property PACKAGE_PIN K15 [get_ports {cellular_ram_addr[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[5]}]
 #Bank = 15, Pin name = IO_L17P_T2_A26_15,					Sch name = CRAM_A6
-set_property PACKAGE_PIN K13 [get_ports {psram_rtl_0_addr[6]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[6]}]
+set_property PACKAGE_PIN K13 [get_ports {cellular_ram_addr[6]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[6]}]
 #Bank = 14, Pin name = IO_L11P_T1_SRCC_14,					Sch name = CRAM_A7
-set_property PACKAGE_PIN N15 [get_ports {psram_rtl_0_addr[7]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[7]}]
+set_property PACKAGE_PIN N15 [get_ports {cellular_ram_addr[7]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[7]}]
 #Bank = 14, Pin name = IO_L16N_T2_SRCC-14,					Sch name = CRAM_A8
-set_property PACKAGE_PIN V16 [get_ports {psram_rtl_0_addr[8]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[8]}]
+set_property PACKAGE_PIN V16 [get_ports {cellular_ram_addr[8]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[8]}]
 #Bank = 14, Pin name = IO_L22P_T3_A05_D21_14,				Sch name = CRAM_A9
-set_property PACKAGE_PIN U14 [get_ports {psram_rtl_0_addr[9]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[9]}]
+set_property PACKAGE_PIN U14 [get_ports {cellular_ram_addr[9]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[9]}]
 #Bank = 14, Pin name = IO_L22N_T3_A04_D20_14,				Sch name = CRAM_A10
-set_property PACKAGE_PIN V14 [get_ports {psram_rtl_0_addr[10]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[10]}]
+set_property PACKAGE_PIN V14 [get_ports {cellular_ram_addr[10]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[10]}]
 #Bank = 14, Pin name = IO_L20N_T3_A07_D23_14,				Sch name = CRAM_A11
-set_property PACKAGE_PIN V12 [get_ports {psram_rtl_0_addr[11]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[11]}]
+set_property PACKAGE_PIN V12 [get_ports {cellular_ram_addr[11]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[11]}]
 #Bank = 14, Pin name = IO_L8N_T1_D12_14,					Sch name = CRAM_A12
-set_property PACKAGE_PIN P14 [get_ports {psram_rtl_0_addr[12]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[12]}]
+set_property PACKAGE_PIN P14 [get_ports {cellular_ram_addr[12]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[12]}]
 #Bank = 14, Pin name = IO_L18P_T2_A12_D28_14,				Sch name = CRAM_A13
-set_property PACKAGE_PIN U16 [get_ports {psram_rtl_0_addr[13]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[13]}]
+set_property PACKAGE_PIN U16 [get_ports {cellular_ram_addr[13]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[13]}]
 #Bank = 14, Pin name = IO_L13N_T2_MRCC_14,					Sch name = CRAM_A14
-set_property PACKAGE_PIN R15 [get_ports {psram_rtl_0_addr[14]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[14]}]
+set_property PACKAGE_PIN R15 [get_ports {cellular_ram_addr[14]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[14]}]
 #Bank = 14, Pin name = IO_L8P_T1_D11_14,					Sch name = CRAM_A15
-set_property PACKAGE_PIN N14 [get_ports {psram_rtl_0_addr[15]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[15]}]
+set_property PACKAGE_PIN N14 [get_ports {cellular_ram_addr[15]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[15]}]
 #Bank = 14, Pin name = IO_L11N_T1_SRCC_14,					Sch name = CRAM_A16
-set_property PACKAGE_PIN N16 [get_ports {psram_rtl_0_addr[16]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[16]}]
+set_property PACKAGE_PIN N16 [get_ports {cellular_ram_addr[16]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[16]}]
 #Bank = 14, Pin name = IO_L6N_T0_D08_VREF_14,				Sch name = CRAM_A17
-set_property PACKAGE_PIN M13 [get_ports {psram_rtl_0_addr[17]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[17]}]
+set_property PACKAGE_PIN M13 [get_ports {cellular_ram_addr[17]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[17]}]
 #Bank = 14, Pin name = IO_L18N_T2_A11_D27_14,				Sch name = CRAM_A18
-set_property PACKAGE_PIN V17 [get_ports {psram_rtl_0_addr[18]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[18]}]
+set_property PACKAGE_PIN V17 [get_ports {cellular_ram_addr[18]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[18]}]
 #Bank = 14, Pin name = IO_L17P_T2_A14_D30_14,				Sch name = CRAM_A19
-set_property PACKAGE_PIN U17 [get_ports {psram_rtl_0_addr[19]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[19]}]
+set_property PACKAGE_PIN U17 [get_ports {cellular_ram_addr[19]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[19]}]
 #Bank = 14, Pin name = IO_L24N_T3_A00_D16_14,				Sch name = CRAM_A20
-set_property PACKAGE_PIN T10 [get_ports {psram_rtl_0_addr[20]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[20]}]
+set_property PACKAGE_PIN T10 [get_ports {cellular_ram_addr[20]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[20]}]
 #Bank = 14, Pin name = IO_L10P_T1_D14_14,					Sch name = CRAM_A21
-set_property PACKAGE_PIN M16 [get_ports {psram_rtl_0_addr[21]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[21]}]
+set_property PACKAGE_PIN M16 [get_ports {cellular_ram_addr[21]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[21]}]
 #Bank = 14, Pin name = IO_L23N_T3_A02_D18_14,				Sch name = CRAM_A22
-set_property PACKAGE_PIN U13 [get_ports {psram_rtl_0_addr[22]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {psram_rtl_0_addr[22]}]
-
-
-create_pblock pblock_microblaze_0
-add_cells_to_pblock [get_pblocks pblock_microblaze_0] [get_cells -quiet [list Fast_IP_Clock_i/microblaze_0]]
-resize_pblock [get_pblocks pblock_microblaze_0] -add {SLICE_X12Y10:SLICE_X39Y48}
-
-create_pblock pblock_mdm_1
-add_cells_to_pblock [get_pblocks pblock_mdm_1] [get_cells -quiet [list Fast_IP_Clock_i/mdm_1]]
-resize_pblock [get_pblocks pblock_mdm_1] -add {SLICE_X40Y35:SLICE_X51Y49}
-
-create_pblock pblock_calc_0
-add_cells_to_pblock [get_pblocks pblock_calc_0] [get_cells -quiet [list Fast_IP_Clock_i/calc_0]]
-resize_pblock [get_pblocks pblock_calc_0] -add {SLICE_X52Y22:SLICE_X81Y174 SLICE_X28Y50:SLICE_X51Y174}
+set_property PACKAGE_PIN U13 [get_ports {cellular_ram_addr[22]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_addr[22]}]
 
 create_pblock pblock_axi_uart16550_0
 add_cells_to_pblock [get_pblocks pblock_axi_uart16550_0] [get_cells -quiet [list Fast_IP_Clock_i/axi_uart16550_0]]
 resize_pblock [get_pblocks pblock_axi_uart16550_0] -add {SLICE_X82Y123:SLICE_X89Y143}
 
 create_pblock pblock_psram_ip_0
-add_cells_to_pblock [get_pblocks pblock_psram_ip_0] [get_cells -quiet [list Fast_IP_Clock_i/psram_ip_0]]
-resize_pblock [get_pblocks pblock_psram_ip_0] -add {SLICE_X0Y81:SLICE_X7Y99}
+add_cells_to_pblock [get_pblocks pblock_psram_ip_0] [get_cells -quiet [list Fast_IP_Clock_i/axi_emc_0]]
+resize_pblock [get_pblocks pblock_psram_ip_0] -add {SLICE_X0Y75:SLICE_X13Y99}
 
 create_pblock pblock_axi_gpio_0
 add_cells_to_pblock [get_pblocks pblock_axi_gpio_0] [get_cells -quiet [list Fast_IP_Clock_i/axi_gpio_0]]
 resize_pblock [get_pblocks pblock_axi_gpio_0] -add {SLICE_X0Y140:SLICE_X7Y147}
+
+create_pblock pblock_microblaze_0_1
+add_cells_to_pblock [get_pblocks pblock_microblaze_0_1] [get_cells -quiet [list Fast_IP_Clock_i/microblaze_0]]
+resize_pblock [get_pblocks pblock_microblaze_0_1] -add {SLICE_X28Y65:SLICE_X57Y99}
+resize_pblock [get_pblocks pblock_microblaze_0_1] -add {DSP48_X1Y26:DSP48_X1Y39}
+create_pblock pblock_calc_0
+add_cells_to_pblock [get_pblocks pblock_calc_0] [get_cells -quiet [list Fast_IP_Clock_i/calc_0]]
+resize_pblock [get_pblocks pblock_calc_0] -add {SLICE_X26Y150:SLICE_X81Y199 SLICE_X28Y100:SLICE_X81Y149 SLICE_X58Y51:SLICE_X89Y99}
 
 
 

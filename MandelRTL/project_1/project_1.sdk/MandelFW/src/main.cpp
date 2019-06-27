@@ -10,6 +10,7 @@
 #include "xintc.h"
 #include "xcalc.h"
 #include "microblaze_sleep.h"
+#include "malloc.h"
 
 #include <stdio.h>
 
@@ -82,8 +83,8 @@ u32 WIDTH = 1920; // Initial width of image. Can be changed by host with command
 u32 HEIGHT = WIDTH * 3U / 4U;
 
 /* Addresses of various spaces in PSRAM */
-u8* compressBuffer;							// Space to compress data prior to transmission. Determined by interrogating hardware.
-u8* heap = (u8*) (PSRAM_BASE + 0xC00000);	// Location of heap, as defined in lscript.ld
+u8* compressBuffer;							// Space to compress data prior to transmission.
+u8* heap = (u8*) (0x80546000);				// Location of heap, as defined in lscript.ld
 
 // For the serial port...
 u16 Options;
@@ -91,7 +92,7 @@ u8 Errors;
 
 u32 CompressOutput() {
 	 LZ4F_cctx* cctxPtr;	//compressionContext object
-	 u32 compressCapacity = (u32)heap - (u32)compressBuffer; // Space above 80C00000 is reserved for program heap.
+	 u32 compressCapacity = MAXWIDTH * (MAXWIDTH * 3U /4U) * sizeof(u16); // Space above 80C00000 is reserved for program heap.
 
 	 LZ4F_errorCode_t error = LZ4F_createCompressionContext(&cctxPtr, LZ4F_VERSION);
 	 if (error != 0) {
@@ -342,6 +343,7 @@ void StartCalc(XUartNs550 *UartInstancePtr) {
 
     // Wait for the full image to iterate.
     while (!XCalc_IsDone(&Calc)) {};
+    Xil_L1DCacheInvalidate();
 
 #ifdef DEBUG
     xil_printf("Calc IP is done, returning data.\r\n");
@@ -372,6 +374,7 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 
     XUartLite_ResetFifos(&DbgInstance);
 
+	Xil_DCacheEnable();
 #ifdef DEBUG
 	//Fill 16MB empty memory with a recognizable pattern.
 	xil_printf("Initializing memory\r\n");
@@ -380,7 +383,7 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 	}
 #endif
 
-	Xil_DCacheEnable();
+
 
 	//Set up the external UART and configure the interrupt handler for bytes in RX buffer
 		Status = UartSetup(IntcInstancePtr, UartInstancePtr, UartDeviceId, UartIntrId);
@@ -490,7 +493,9 @@ int SetupCalc() {
     u32 valid = XCalc_Get_maxWidth_V_vld(&Calc);
     if (valid) {
      	MAXWIDTH = XCalc_Get_maxWidth_V(&Calc);
-     	compressBuffer = (u8*) (PSRAM_BASE + (MAXWIDTH * (MAXWIDTH * 3U /4U) * sizeof(u16)));
+     	if (compressBuffer == NULL) {
+     		compressBuffer = (u8*) malloc(MAXWIDTH * (MAXWIDTH * 3U /4U) * sizeof(u16));
+     	}
     }
     else {
        	return XST_FAILURE;

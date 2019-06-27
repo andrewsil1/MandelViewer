@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri May 31 11:50:55 2019
+-- Date        : Mon Jun 24 15:42:26 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top Fast_IP_Clock_axi_intc_0_0 -prefix
---               Fast_IP_Clock_axi_intc_0_0_ Fast_IP_Clock_axi_intc_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_intc_0_0/Fast_IP_Clock_axi_intc_0_0_sim_netlist.vhdl
 -- Design      : Fast_IP_Clock_axi_intc_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -61,6 +61,8 @@ entity Fast_IP_Clock_axi_intc_0_0_address_decoder is
     p_0_in9_in : in STD_LOGIC;
     Bus_RNW_reg_reg_4 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_intc_0_0_address_decoder : entity is "address_decoder";
 end Fast_IP_Clock_axi_intc_0_0_address_decoder;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_intc_0_0_address_decoder is
@@ -993,6 +995,8 @@ entity Fast_IP_Clock_axi_intc_0_0_intc_core is
     intr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \REG_GEN[0].ier_reg[0]_1\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_intc_0_0_intc_core : entity is "intc_core";
 end Fast_IP_Clock_axi_intc_0_0_intc_core;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_intc_0_0_intc_core is
@@ -1470,6 +1474,8 @@ entity Fast_IP_Clock_axi_intc_0_0_slave_attachment is
     \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]\ : in STD_LOGIC;
     p_0_in9_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_intc_0_0_slave_attachment : entity is "slave_attachment";
 end Fast_IP_Clock_axi_intc_0_0_slave_attachment;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_intc_0_0_slave_attachment is
@@ -2317,6 +2323,8 @@ entity Fast_IP_Clock_axi_intc_0_0_axi_lite_ipif is
     \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]\ : in STD_LOGIC;
     p_0_in9_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_intc_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end Fast_IP_Clock_axi_intc_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of Fast_IP_Clock_axi_intc_0_0_axi_lite_ipif is
@@ -2468,6 +2476,8 @@ entity Fast_IP_Clock_axi_intc_0_0_axi_intc is
   attribute C_S_AXI_ADDR_WIDTH of Fast_IP_Clock_axi_intc_0_0_axi_intc : entity is 9;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of Fast_IP_Clock_axi_intc_0_0_axi_intc : entity is 32;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of Fast_IP_Clock_axi_intc_0_0_axi_intc : entity is "axi_intc";
   attribute hdl : string;
   attribute hdl of Fast_IP_Clock_axi_intc_0_0_axi_intc : entity is "VHDL";
   attribute imp_netlist : string;
@@ -2853,7 +2863,7 @@ architecture STRUCTURE of Fast_IP_Clock_axi_intc_0_0 is
   attribute x_interface_parameter of intr : signal is "XIL_INTERFACENAME interrupt_input, SENSITIVITY LEVEL_HIGH:EDGE_RISING, PortWidth 2";
   attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 s_axi ARADDR";
   attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 s_axi AWADDR";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 s_axi BRESP";
   attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 s_axi RDATA";
   attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 s_axi RRESP";

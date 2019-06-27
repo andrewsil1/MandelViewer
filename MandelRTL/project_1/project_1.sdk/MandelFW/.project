@@ -3,6 +3,7 @@
 	<name>MandelFW</name>
 	<comment>Created by SDK v2018.3. fast_bsp - microblaze_0</comment>
 	<projects>
+		<project>LZ4</project>
 		<project>standalone_bsp_0</project>
 	</projects>
 	<buildSpec>

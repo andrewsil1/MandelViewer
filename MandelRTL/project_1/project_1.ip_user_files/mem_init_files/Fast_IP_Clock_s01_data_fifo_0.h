@@ -78,6 +78,7 @@ public: // module pin-to-pin RTL interface
 
   sc_core::sc_in< bool > aclk;
   sc_core::sc_in< bool > aresetn;
+  sc_core::sc_in< sc_dt::sc_bv<1> > s_axi_awid;
   sc_core::sc_in< sc_dt::sc_bv<32> > s_axi_awaddr;
   sc_core::sc_in< sc_dt::sc_bv<8> > s_axi_awlen;
   sc_core::sc_in< sc_dt::sc_bv<3> > s_axi_awsize;
@@ -94,9 +95,11 @@ public: // module pin-to-pin RTL interface
   sc_core::sc_in< bool > s_axi_wlast;
   sc_core::sc_in< bool > s_axi_wvalid;
   sc_core::sc_out< bool > s_axi_wready;
+  sc_core::sc_out< sc_dt::sc_bv<1> > s_axi_bid;
   sc_core::sc_out< sc_dt::sc_bv<2> > s_axi_bresp;
   sc_core::sc_out< bool > s_axi_bvalid;
   sc_core::sc_in< bool > s_axi_bready;
+  sc_core::sc_in< sc_dt::sc_bv<1> > s_axi_arid;
   sc_core::sc_in< sc_dt::sc_bv<32> > s_axi_araddr;
   sc_core::sc_in< sc_dt::sc_bv<8> > s_axi_arlen;
   sc_core::sc_in< sc_dt::sc_bv<3> > s_axi_arsize;
@@ -108,11 +111,13 @@ public: // module pin-to-pin RTL interface
   sc_core::sc_in< sc_dt::sc_bv<4> > s_axi_arqos;
   sc_core::sc_in< bool > s_axi_arvalid;
   sc_core::sc_out< bool > s_axi_arready;
+  sc_core::sc_out< sc_dt::sc_bv<1> > s_axi_rid;
   sc_core::sc_out< sc_dt::sc_bv<32> > s_axi_rdata;
   sc_core::sc_out< sc_dt::sc_bv<2> > s_axi_rresp;
   sc_core::sc_out< bool > s_axi_rlast;
   sc_core::sc_out< bool > s_axi_rvalid;
   sc_core::sc_in< bool > s_axi_rready;
+  sc_core::sc_out< sc_dt::sc_bv<1> > m_axi_awid;
   sc_core::sc_out< sc_dt::sc_bv<32> > m_axi_awaddr;
   sc_core::sc_out< sc_dt::sc_bv<8> > m_axi_awlen;
   sc_core::sc_out< sc_dt::sc_bv<3> > m_axi_awsize;
@@ -129,9 +134,11 @@ public: // module pin-to-pin RTL interface
   sc_core::sc_out< bool > m_axi_wlast;
   sc_core::sc_out< bool > m_axi_wvalid;
   sc_core::sc_in< bool > m_axi_wready;
+  sc_core::sc_in< sc_dt::sc_bv<1> > m_axi_bid;
   sc_core::sc_in< sc_dt::sc_bv<2> > m_axi_bresp;
   sc_core::sc_in< bool > m_axi_bvalid;
   sc_core::sc_out< bool > m_axi_bready;
+  sc_core::sc_out< sc_dt::sc_bv<1> > m_axi_arid;
   sc_core::sc_out< sc_dt::sc_bv<32> > m_axi_araddr;
   sc_core::sc_out< sc_dt::sc_bv<8> > m_axi_arlen;
   sc_core::sc_out< sc_dt::sc_bv<3> > m_axi_arsize;
@@ -143,6 +150,7 @@ public: // module pin-to-pin RTL interface
   sc_core::sc_out< sc_dt::sc_bv<4> > m_axi_arqos;
   sc_core::sc_out< bool > m_axi_arvalid;
   sc_core::sc_in< bool > m_axi_arready;
+  sc_core::sc_in< sc_dt::sc_bv<1> > m_axi_rid;
   sc_core::sc_in< sc_dt::sc_bv<32> > m_axi_rdata;
   sc_core::sc_in< sc_dt::sc_bv<2> > m_axi_rresp;
   sc_core::sc_in< bool > m_axi_rlast;

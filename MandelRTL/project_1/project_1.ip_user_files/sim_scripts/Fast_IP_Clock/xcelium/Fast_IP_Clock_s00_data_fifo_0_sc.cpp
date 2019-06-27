@@ -60,7 +60,7 @@ Fast_IP_Clock_s00_data_fifo_0_sc::Fast_IP_Clock_s00_data_fifo_0_sc(const sc_core
 
   // initialize module
   xsc::common_cpp::properties model_param_props;
-  model_param_props.addLong("C_AXI_PROTOCOL", "0");
+  model_param_props.addLong("C_AXI_PROTOCOL", "2");
   model_param_props.addLong("C_AXI_ID_WIDTH", "1");
   model_param_props.addLong("C_AXI_ADDR_WIDTH", "32");
   model_param_props.addLong("C_AXI_DATA_WIDTH", "32");
@@ -70,13 +70,13 @@ Fast_IP_Clock_s00_data_fifo_0_sc::Fast_IP_Clock_s00_data_fifo_0_sc(const sc_core
   model_param_props.addLong("C_AXI_WUSER_WIDTH", "1");
   model_param_props.addLong("C_AXI_RUSER_WIDTH", "1");
   model_param_props.addLong("C_AXI_BUSER_WIDTH", "1");
-  model_param_props.addLong("C_AXI_WRITE_FIFO_DEPTH", "512");
-  model_param_props.addLong("C_AXI_WRITE_FIFO_DELAY", "1");
-  model_param_props.addLong("C_AXI_READ_FIFO_DEPTH", "512");
-  model_param_props.addLong("C_AXI_READ_FIFO_DELAY", "1");
+  model_param_props.addLong("C_AXI_WRITE_FIFO_DEPTH", "32");
+  model_param_props.addLong("C_AXI_WRITE_FIFO_DELAY", "0");
+  model_param_props.addLong("C_AXI_READ_FIFO_DEPTH", "32");
+  model_param_props.addLong("C_AXI_READ_FIFO_DELAY", "0");
   model_param_props.addString("C_FAMILY", "artix7");
-  model_param_props.addString("C_AXI_WRITE_FIFO_TYPE", "bram");
-  model_param_props.addString("C_AXI_READ_FIFO_TYPE", "bram");
+  model_param_props.addString("C_AXI_WRITE_FIFO_TYPE", "lut");
+  model_param_props.addString("C_AXI_READ_FIFO_TYPE", "lut");
   mp_impl = new axi_data_fifo("inst", model_param_props);
 
   // initialize sockets

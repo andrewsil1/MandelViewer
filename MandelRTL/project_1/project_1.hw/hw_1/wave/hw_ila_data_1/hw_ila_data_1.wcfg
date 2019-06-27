@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="6521fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="275"></NameColumnWidth>
+      <ValueColumnWidth column_width="92"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="32" />
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_1" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_1[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_2" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_2[7:4]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_2[7:4]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_3" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_3[13:9]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_3[13:9]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_4" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_4[19:15]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_4[19:15]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_5" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_5[22:21]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_5[22:21]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_6" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_6[27:24]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_6[27:24]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_7" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_7[35:32]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_7[35:32]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_8" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_8[39:37]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_8[39:37]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_9" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_9[44:41]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_9[44:41]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_10" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_10[50:46]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_10[50:46]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_11" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_11[56:52]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_11[56:52]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_12" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_12[60:58]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_12[60:58]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_13" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_13[66:62]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_13[66:62]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_14" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status_14[81:73]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_14[81:73]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_1/inst/pc_status[91:86]</obj_property>
+      <obj_property name="ObjectShortName">pc_status[91:86]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_1" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_1[2:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_1[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_2" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_2[7:4]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_2[7:4]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_3" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_3[13:9]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_3[13:9]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_4" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_4[19:15]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_4[19:15]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_5" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_5[22:21]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_5[22:21]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_6" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_6[27:24]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_6[27:24]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_7" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_7[35:32]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_7[35:32]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_8" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_8[39:37]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_8[39:37]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_9" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_9[44:41]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_9[44:41]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_10" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_10[50:46]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_10[50:46]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_11" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_11[56:52]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_11[56:52]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_12" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_12[60:58]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_12[60:58]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_13" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_13[66:62]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_13[66:62]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_14" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status_14[81:73]</obj_property>
+      <obj_property name="ObjectShortName">pc_status_14[81:73]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/axi_protocol_checker_0/inst/pc_status[91:90]</obj_property>
+      <obj_property name="ObjectShortName">pc_status[91:90]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/pc_asserted" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/pc_asserted</obj_property>
+      <obj_property name="ObjectShortName">pc_asserted</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="Fast_IP_Clock_i/pc_asserted_1" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">Fast_IP_Clock_i/pc_asserted_1</obj_property>
+      <obj_property name="ObjectShortName">pc_asserted_1</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

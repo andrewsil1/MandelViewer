@@ -42,13 +42,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="62"/>
-    <Option Name="WTModelSimExportSim" Val="62"/>
-    <Option Name="WTQuestaExportSim" Val="62"/>
-    <Option Name="WTIesExportSim" Val="62"/>
-    <Option Name="WTVcsExportSim" Val="62"/>
-    <Option Name="WTRivieraExportSim" Val="62"/>
-    <Option Name="WTActivehdlExportSim" Val="62"/>
+    <Option Name="WTXSimExportSim" Val="66"/>
+    <Option Name="WTModelSimExportSim" Val="66"/>
+    <Option Name="WTQuestaExportSim" Val="66"/>
+    <Option Name="WTIesExportSim" Val="66"/>
+    <Option Name="WTVcsExportSim" Val="66"/>
+    <Option Name="WTRivieraExportSim" Val="66"/>
+    <Option Name="WTActivehdlExportSim" Val="66"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -69,29 +69,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="Fast_IP_Clock.bd" FileRelPathName="ip/Fast_IP_Clock_proc_sys_reset_2_0/Fast_IP_Clock_proc_sys_reset_2_0.xci">
-          <Proxy FileSetName="Fast_IP_Clock_proc_sys_reset_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Fast_IP_Clock.bd" FileRelPathName="ip/Fast_IP_Clock_proc_sys_reset_0_0/Fast_IP_Clock_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="Fast_IP_Clock_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Fast_IP_Clock.bd" FileRelPathName="ip/Fast_IP_Clock_calc_0_0/Fast_IP_Clock_calc_0_0.xci">
-          <Proxy FileSetName="Fast_IP_Clock_calc_0_0"/>
+        <CompFileExtendedInfo CompFileName="Fast_IP_Clock.bd" FileRelPathName="ip/Fast_IP_Clock_microblaze_0_0/Fast_IP_Clock_microblaze_0_0.xci">
+          <Proxy FileSetName="Fast_IP_Clock_microblaze_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Fast_IP_Clock.bd" FileRelPathName="ip/Fast_IP_Clock_clk_wiz_0_0/Fast_IP_Clock_clk_wiz_0_0.xci">
           <Proxy FileSetName="Fast_IP_Clock_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Fast_IP_Clock.bd" FileRelPathName="ip/Fast_IP_Clock_dlmb_v10_0/Fast_IP_Clock_dlmb_v10_0.xci">
-          <Proxy FileSetName="Fast_IP_Clock_dlmb_v10_0"/>
+        <CompFileExtendedInfo CompFileName="Fast_IP_Clock.bd" FileRelPathName="ip/Fast_IP_Clock_axi_intc_0_0/Fast_IP_Clock_axi_intc_0_0.xci">
+          <Proxy FileSetName="Fast_IP_Clock_axi_intc_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Fast_IP_Clock.bd" FileRelPathName="ip/Fast_IP_Clock_ilmb_v10_0/Fast_IP_Clock_ilmb_v10_0.xci">
-          <Proxy FileSetName="Fast_IP_Clock_ilmb_v10_0"/>
+        <CompFileExtendedInfo CompFileName="Fast_IP_Clock.bd" FileRelPathName="ip/Fast_IP_Clock_xbar_2/Fast_IP_Clock_xbar_2.xci">
+          <Proxy FileSetName="Fast_IP_Clock_xbar_2"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Fast_IP_Clock.bd" FileRelPathName="ip/Fast_IP_Clock_dlmb_bram_if_cntlr_0/Fast_IP_Clock_dlmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="Fast_IP_Clock_dlmb_bram_if_cntlr_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Fast_IP_Clock.bd" FileRelPathName="ip/Fast_IP_Clock_ilmb_bram_if_cntlr_0/Fast_IP_Clock_ilmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="Fast_IP_Clock_ilmb_bram_if_cntlr_0"/>
+        <CompFileExtendedInfo CompFileName="Fast_IP_Clock.bd" FileRelPathName="ip/Fast_IP_Clock_smartconnect_0_0/Fast_IP_Clock_smartconnect_0_0.xci">
+          <Proxy FileSetName="Fast_IP_Clock_smartconnect_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/Fast_IP_Clock/hdl/Fast_IP_Clock_wrapper.v">
@@ -128,22 +119,22 @@
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
       <Filter Type="Utils"/>
-      <File Path="$PSRCDIR/utils_1/imports/impl_1/Fast_IP_Clock_wrapper_routed.dcp">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PRUNDIR/impl_1/Fast_IP_Clock_wrapper_routed.dcp"/>
-          <Attr Name="ImportTime" Val="1560055361"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedInSteps" Val="impl_1"/>
-          <Attr Name="AutoDcp" Val="1"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/utils_1/imports/synth_1/Fast_IP_Clock_wrapper.dcp">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PRUNDIR/synth_1/Fast_IP_Clock_wrapper.dcp"/>
           <Attr Name="ImportTime" Val="1560050747"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="AutoDcp" Val="1"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/utils_1/imports/impl_1/Fast_IP_Clock_wrapper_routed.dcp">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PRUNDIR/impl_1/Fast_IP_Clock_wrapper_routed.dcp"/>
+          <Attr Name="ImportTime" Val="1561672502"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedInSteps" Val="impl_1"/>
           <Attr Name="AutoDcp" Val="1"/>
         </FileInfo>
       </File>
@@ -165,51 +156,33 @@
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
+    <FileSet Name="Fast_IP_Clock_axi_intc_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Fast_IP_Clock_axi_intc_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Fast_IP_Clock_axi_intc_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
     <FileSet Name="Fast_IP_Clock_clk_wiz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Fast_IP_Clock_clk_wiz_0_0">
       <Config>
         <Option Name="TopModule" Val="Fast_IP_Clock_clk_wiz_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="Fast_IP_Clock_dlmb_v10_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Fast_IP_Clock_dlmb_v10_0">
+    <FileSet Name="Fast_IP_Clock_xbar_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Fast_IP_Clock_xbar_2">
       <Config>
-        <Option Name="TopModule" Val="Fast_IP_Clock_dlmb_v10_0"/>
+        <Option Name="TopModule" Val="Fast_IP_Clock_xbar_2"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="Fast_IP_Clock_proc_sys_reset_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Fast_IP_Clock_proc_sys_reset_0_0">
+    <FileSet Name="Fast_IP_Clock_microblaze_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Fast_IP_Clock_microblaze_0_0">
       <Config>
-        <Option Name="TopModule" Val="Fast_IP_Clock_proc_sys_reset_0_0"/>
+        <Option Name="TopModule" Val="Fast_IP_Clock_microblaze_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="Fast_IP_Clock_ilmb_v10_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Fast_IP_Clock_ilmb_v10_0">
+    <FileSet Name="Fast_IP_Clock_smartconnect_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Fast_IP_Clock_smartconnect_0_0">
       <Config>
-        <Option Name="TopModule" Val="Fast_IP_Clock_ilmb_v10_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="Fast_IP_Clock_dlmb_bram_if_cntlr_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Fast_IP_Clock_dlmb_bram_if_cntlr_0">
-      <Config>
-        <Option Name="TopModule" Val="Fast_IP_Clock_dlmb_bram_if_cntlr_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="Fast_IP_Clock_ilmb_bram_if_cntlr_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Fast_IP_Clock_ilmb_bram_if_cntlr_0">
-      <Config>
-        <Option Name="TopModule" Val="Fast_IP_Clock_ilmb_bram_if_cntlr_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="Fast_IP_Clock_proc_sys_reset_2_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Fast_IP_Clock_proc_sys_reset_2_0">
-      <Config>
-        <Option Name="TopModule" Val="Fast_IP_Clock_proc_sys_reset_2_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="Fast_IP_Clock_calc_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Fast_IP_Clock_calc_0_0">
-      <Config>
-        <Option Name="TopModule" Val="Fast_IP_Clock_calc_0_0"/>
+        <Option Name="TopModule" Val="Fast_IP_Clock_smartconnect_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -235,7 +208,9 @@
   <Runs Version="1" Minor="10">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="true" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design">
           <Option Id="ReTiming">1</Option>
         </Step>
@@ -244,70 +219,51 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
+    <Run Id="Fast_IP_Clock_axi_intc_0_0_synth_1" Type="Ft3:Synth" SrcSet="Fast_IP_Clock_axi_intc_0_0" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_axi_intc_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Fast_IP_Clock_axi_intc_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
     <Run Id="Fast_IP_Clock_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="Fast_IP_Clock_clk_wiz_0_0" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Fast_IP_Clock_clk_wiz_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="Fast_IP_Clock_dlmb_v10_0_synth_1" Type="Ft3:Synth" SrcSet="Fast_IP_Clock_dlmb_v10_0" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_dlmb_v10_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Fast_IP_Clock_dlmb_v10_0_synth_1" IncludeInArchive="true">
+    <Run Id="Fast_IP_Clock_xbar_2_synth_1" Type="Ft3:Synth" SrcSet="Fast_IP_Clock_xbar_2" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_xbar_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Fast_IP_Clock_xbar_2_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="Fast_IP_Clock_proc_sys_reset_0_0_synth_1" Type="Ft3:Synth" SrcSet="Fast_IP_Clock_proc_sys_reset_0_0" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_proc_sys_reset_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Fast_IP_Clock_proc_sys_reset_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="Fast_IP_Clock_microblaze_0_0_synth_1" Type="Ft3:Synth" SrcSet="Fast_IP_Clock_microblaze_0_0" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_microblaze_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Fast_IP_Clock_microblaze_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="Fast_IP_Clock_ilmb_v10_0_synth_1" Type="Ft3:Synth" SrcSet="Fast_IP_Clock_ilmb_v10_0" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_ilmb_v10_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Fast_IP_Clock_ilmb_v10_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="Fast_IP_Clock_dlmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="Fast_IP_Clock_dlmb_bram_if_cntlr_0" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_dlmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Fast_IP_Clock_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="Fast_IP_Clock_ilmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="Fast_IP_Clock_ilmb_bram_if_cntlr_0" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_ilmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Fast_IP_Clock_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="Fast_IP_Clock_proc_sys_reset_2_0_synth_1" Type="Ft3:Synth" SrcSet="Fast_IP_Clock_proc_sys_reset_2_0" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_proc_sys_reset_2_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Fast_IP_Clock_proc_sys_reset_2_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="Fast_IP_Clock_calc_0_0_synth_1" Type="Ft3:Synth" SrcSet="Fast_IP_Clock_calc_0_0" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_calc_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Fast_IP_Clock_calc_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="Fast_IP_Clock_smartconnect_0_0_synth_1" Type="Ft3:Synth" SrcSet="Fast_IP_Clock_smartconnect_0_0" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_smartconnect_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Fast_IP_Clock_smartconnect_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -320,7 +276,9 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Uses multiple algorithms for optimization, placement, and routing to get potentially better results." AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/impl_1/Fast_IP_Clock_wrapper_routed.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Performance_Explore" Flow="Vivado Implementation 2018"/>
+        <StratHandle Name="Performance_Explore" Flow="Vivado Implementation 2018">
+          <Desc>Uses multiple algorithms for optimization, placement, and routing to get potentially better results.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design">
           <Option Id="Directive">0</Option>
@@ -343,9 +301,29 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
+    <Run Id="Fast_IP_Clock_axi_intc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_axi_intc_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Fast_IP_Clock_axi_intc_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
     <Run Id="Fast_IP_Clock_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Fast_IP_Clock_clk_wiz_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -359,9 +337,11 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="Fast_IP_Clock_dlmb_v10_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_dlmb_v10_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Fast_IP_Clock_dlmb_v10_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="Fast_IP_Clock_xbar_2_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_xbar_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Fast_IP_Clock_xbar_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -375,9 +355,11 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="Fast_IP_Clock_proc_sys_reset_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_proc_sys_reset_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Fast_IP_Clock_proc_sys_reset_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="Fast_IP_Clock_microblaze_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_microblaze_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Fast_IP_Clock_microblaze_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -391,71 +373,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="Fast_IP_Clock_ilmb_v10_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_ilmb_v10_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Fast_IP_Clock_ilmb_v10_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="Fast_IP_Clock_dlmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_dlmb_bram_if_cntlr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Fast_IP_Clock_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="Fast_IP_Clock_ilmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_ilmb_bram_if_cntlr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Fast_IP_Clock_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="Fast_IP_Clock_proc_sys_reset_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_proc_sys_reset_2_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Fast_IP_Clock_proc_sys_reset_2_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="Fast_IP_Clock_calc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_calc_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Fast_IP_Clock_calc_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="Fast_IP_Clock_smartconnect_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="Fast_IP_Clock_smartconnect_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Fast_IP_Clock_smartconnect_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
           <Desc>Default settings for Implementation.</Desc>

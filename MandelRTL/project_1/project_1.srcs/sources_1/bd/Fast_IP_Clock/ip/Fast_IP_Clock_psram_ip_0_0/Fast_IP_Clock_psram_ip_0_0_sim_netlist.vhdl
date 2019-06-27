@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri May 31 11:50:56 2019
+-- Date        : Sat Jun  8 19:34:06 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top Fast_IP_Clock_psram_ip_0_0 -prefix
 --               Fast_IP_Clock_psram_ip_0_0_ Fast_IP_Clock_psram_ip_0_0_sim_netlist.vhdl
@@ -7880,8 +7880,6 @@ end Fast_IP_Clock_psram_ip_0_0;
 architecture STRUCTURE of Fast_IP_Clock_psram_ip_0_0 is
   signal \<const0>\ : STD_LOGIC;
   signal \^mem_data_t\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \^s00_axi_arid\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \^s00_axi_awid\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute x_interface_info : string;
   attribute x_interface_info of MEM_ADV : signal is "xilinx.com:interface:emc:1.0 psram_rtl ADV_LDN";
   attribute x_interface_info of MEM_CEN : signal is "xilinx.com:interface:emc:1.0 psram_rtl CE_N";
@@ -7926,7 +7924,7 @@ architecture STRUCTURE of Fast_IP_Clock_psram_ip_0_0 is
   attribute x_interface_info of s00_axi_awburst : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWBURST";
   attribute x_interface_info of s00_axi_awcache : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWCACHE";
   attribute x_interface_info of s00_axi_awid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWID";
-  attribute x_interface_parameter of s00_axi_awid : signal is "XIL_INTERFACENAME S00_AXI, WIZ.DATA_WIDTH 32, WIZ.MEMORY_SIZE 1024, SUPPORTS_NARROW_BURST 1, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 2, ADDR_WIDTH 24, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 1, RUSER_WIDTH 1, BUSER_WIDTH 1, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of s00_axi_awid : signal is "XIL_INTERFACENAME S00_AXI, WIZ.DATA_WIDTH 32, WIZ.MEMORY_SIZE 1024, SUPPORTS_NARROW_BURST 1, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 2, ADDR_WIDTH 24, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 1, RUSER_WIDTH 1, BUSER_WIDTH 1, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s00_axi_awlen : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWLEN";
   attribute x_interface_info of s00_axi_awprot : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT";
   attribute x_interface_info of s00_axi_awqos : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWQOS";
@@ -7961,15 +7959,15 @@ begin
   MEM_DATA_T(2) <= \^mem_data_t\(0);
   MEM_DATA_T(1) <= \^mem_data_t\(0);
   MEM_DATA_T(0) <= \^mem_data_t\(0);
-  \^s00_axi_arid\(1 downto 0) <= s00_axi_arid(1 downto 0);
-  \^s00_axi_awid\(1 downto 0) <= s00_axi_awid(1 downto 0);
-  s00_axi_bid(1 downto 0) <= \^s00_axi_awid\(1 downto 0);
   s00_axi_bresp(1) <= \<const0>\;
   s00_axi_bresp(0) <= \<const0>\;
   s00_axi_buser(0) <= \<const0>\;
-  s00_axi_rid(1 downto 0) <= \^s00_axi_arid\(1 downto 0);
   s00_axi_rresp(1) <= \<const0>\;
   s00_axi_rresp(0) <= \<const0>\;
+  s00_axi_bid(0) <= 'Z';
+  s00_axi_bid(1) <= 'Z';
+  s00_axi_rid(0) <= 'Z';
+  s00_axi_rid(1) <= 'Z';
   s00_axi_ruser(0) <= 'Z';
 GND: unisim.vcomponents.GND
      port map (

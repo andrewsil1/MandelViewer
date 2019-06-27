@@ -37,6 +37,9 @@
 								</option>
 								<option id="xilinx.gnu.mb.compiler.inferred.usepcmp.1175914218" name="Use Pattern Compare (-mxl-pattern-compare)" superClass="xilinx.gnu.mb.compiler.inferred.usepcmp" value="true" valueType="boolean"/>
 								<option id="xilinx.gnu.mb.compiler.inferred.mul.801625988" name="Hardware Multiplier" superClass="xilinx.gnu.mb.compiler.inferred.mul" value="xilinx.gnu.mb.compiler.inferred.mul.32bit" valueType="enumerated"/>
+								<option id="xilinx.gnu.compiler.dircategory.includes.1695215283" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;C:\Users\andrewsi\Documents\GitHub\lz4\lib\&quot;"/>
+								</option>
 								<inputType id="xilinx.gnu.compiler.input.1121399240" name="C source files" superClass="xilinx.gnu.compiler.input"/>
 							</tool>
 							<tool command="mb-g++" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GCCErrorParser" id="xilinx.gnu.mb.cxx.toolchain.compiler.debug.1047440818" name="MicroBlaze g++ compiler" superClass="xilinx.gnu.mb.cxx.toolchain.compiler.debug">
@@ -57,7 +60,7 @@
 								<option id="xilinx.gnu.mb.compiler.inferred.usepcmp.1284029945" name="Use Pattern Compare (-mxl-pattern-compare)" superClass="xilinx.gnu.mb.compiler.inferred.usepcmp" value="true" valueType="boolean"/>
 								<option id="xilinx.gnu.mb.compiler.inferred.mul.805734691" name="Hardware Multiplier" superClass="xilinx.gnu.mb.compiler.inferred.mul" value="xilinx.gnu.mb.compiler.inferred.mul.32bit" valueType="enumerated"/>
 								<option id="xilinx.gnu.compiler.dircategory.includes.1411993535" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;C:\Users\andrewsi\Documents\GitHub\lz4\lib&quot;"/>
+									<listOptionValue builtIn="false" value="C:\Users\andrewsi\Documents\GitHub\lz4\lib\"/>
 								</option>
 								<option id="xilinx.gnu.compiler.misc.other.337735567" name="Other flags" superClass="xilinx.gnu.compiler.misc.other" value="-c -fmessage-length=0 -MT&quot;$@&quot;" valueType="string"/>
 								<inputType id="xilinx.gnu.mb.cxx.compiler.input.1786757306" name="C++ source files" superClass="xilinx.gnu.mb.cxx.compiler.input"/>
@@ -105,7 +108,7 @@
 									<listOptionValue builtIn="false" value="LZ4"/>
 								</option>
 								<option id="xilinx.gnu.c.link.option.paths.1196516244" name="Library search path (-L)" superClass="xilinx.gnu.c.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;C:\Users\andrewsi\Documents\GitHub\lz4\lib\debug&quot;"/>
+									<listOptionValue builtIn="false" value="C:\Users\andrewsi\Documents\GitHub\lz4\lib\debug"/>
 								</option>
 								<option id="xilinx.gnu.c.link.option.ldflags.505100334" name="Linker Flags" superClass="xilinx.gnu.c.link.option.ldflags" value="" valueType="string"/>
 								<inputType id="xilinx.gnu.linker.input.1803810921" superClass="xilinx.gnu.linker.input">
@@ -158,6 +161,9 @@
 								</option>
 								<option id="xilinx.gnu.mb.compiler.inferred.usepcmp.1371260416" name="Use Pattern Compare (-mxl-pattern-compare)" superClass="xilinx.gnu.mb.compiler.inferred.usepcmp" value="true" valueType="boolean"/>
 								<option id="xilinx.gnu.mb.compiler.inferred.mul.1943463247" name="Hardware Multiplier" superClass="xilinx.gnu.mb.compiler.inferred.mul" value="xilinx.gnu.mb.compiler.inferred.mul.32bit" valueType="enumerated"/>
+								<option id="xilinx.gnu.compiler.dircategory.includes.1393120723" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;C:\Users\andrewsi\Documents\GitHub\lz4\lib\&quot;"/>
+								</option>
 								<inputType id="xilinx.gnu.compiler.input.1868729124" name="C source files" superClass="xilinx.gnu.compiler.input"/>
 							</tool>
 							<tool id="xilinx.gnu.mb.cxx.toolchain.compiler.release.1230281845" name="MicroBlaze g++ compiler" superClass="xilinx.gnu.mb.cxx.toolchain.compiler.release">
@@ -174,8 +180,8 @@
 								</option>
 								<option id="xilinx.gnu.mb.compiler.inferred.usepcmp.291885249" name="Use Pattern Compare (-mxl-pattern-compare)" superClass="xilinx.gnu.mb.compiler.inferred.usepcmp" value="true" valueType="boolean"/>
 								<option id="xilinx.gnu.mb.compiler.inferred.mul.2122796715" name="Hardware Multiplier" superClass="xilinx.gnu.mb.compiler.inferred.mul" value="xilinx.gnu.mb.compiler.inferred.mul.32bit" valueType="enumerated"/>
-								<option id="xilinx.gnu.compiler.dircategory.includes.1539489585" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;C:\Users\andrewsi\Documents\GitHub\lz4\lib&quot;"/>
+								<option id="xilinx.gnu.compiler.dircategory.includes.1539489585" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+									<listOptionValue builtIn="false" value="C:\Users\andrewsi\Documents\GitHub\lz4\lib\"/>
 								</option>
 								<inputType id="xilinx.gnu.mb.cxx.compiler.input.127345772" name="C++ source files" superClass="xilinx.gnu.mb.cxx.compiler.input"/>
 							</tool>
@@ -219,10 +225,10 @@
 								<option id="xilinx.gnu.c.link.option.strip.1773405354" name="Omit all Symbol Information (-s)" superClass="xilinx.gnu.c.link.option.strip" value="false" valueType="boolean"/>
 								<option id="xilinx.gnu.mb.linker.inferred.usepcmp.2131941300" name="Use Pattern Compare (-mxl-pattern-compare)" superClass="xilinx.gnu.mb.linker.inferred.usepcmp" value="true" valueType="boolean"/>
 								<option id="xilinx.gnu.mb.linker.inferred.mul.509055498" name="Hardware Multiplier" superClass="xilinx.gnu.mb.linker.inferred.mul" value="xilinx.gnu.mb.linker.inferred.mul.32bit" valueType="enumerated"/>
-								<option id="xilinx.gnu.c.link.option.paths.1062429170" superClass="xilinx.gnu.c.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;C:\Users\andrewsi\Documents\GitHub\lz4\lib\Release&quot;"/>
+								<option id="xilinx.gnu.c.link.option.paths.1062429170" name="Library search path (-L)" superClass="xilinx.gnu.c.link.option.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="C:\Users\andrewsi\Documents\GitHub\lz4\lib\release"/>
 								</option>
-								<option id="xilinx.gnu.c.link.option.libs.1664958736" superClass="xilinx.gnu.c.link.option.libs" valueType="libs">
+								<option id="xilinx.gnu.c.link.option.libs.1664958736" name="Libraries (-l)" superClass="xilinx.gnu.c.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="LZ4"/>
 								</option>
 								<inputType id="xilinx.gnu.linker.input.71523889" superClass="xilinx.gnu.linker.input">
