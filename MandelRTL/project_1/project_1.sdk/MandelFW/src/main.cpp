@@ -18,9 +18,7 @@
 #include "lz4frame.h"
 #include "xxhash.h"
 
-#ifdef DEBUG
-	#include <xil_printf.h>
-#endif
+extern u32 CompressOutput(u32 compressBuffer, u32 imageSize);
 
 /************************** Constant Definitions *****************************/
 
@@ -82,83 +80,12 @@ u32 UNROLL = 0;   // Retrieved from hardware later. Width % UNROLL must be 0.
 u32 WIDTH = 1920; // Initial width of image. Can be changed by host with command 'E'
 u32 HEIGHT = WIDTH * 3U / 4U;
 
-/* Addresses of various spaces in PSRAM */
 u8* compressBuffer;							// Space to compress data prior to transmission.
-u8* heap = (u8*) (0x80546000);				// Location of heap, as defined in lscript.ld
 
 // For the serial port...
 u16 Options;
 u8 Errors;
 
-u32 CompressOutput() {
-	 LZ4F_cctx* cctxPtr;	//compressionContext object
-	 u32 compressCapacity = MAXWIDTH * (MAXWIDTH * 3U /4U) * sizeof(u16); // Space above 80C00000 is reserved for program heap.
-
-	 LZ4F_errorCode_t error = LZ4F_createCompressionContext(&cctxPtr, LZ4F_VERSION);
-	 if (error != 0) {
-		#ifdef DEBUG
-		 xil_printf("Error creating compression context: %s", LZ4F_getErrorName(error));
-		#endif
-		return XST_FAILURE;
-	 }
-
-	 LZ4F_frameInfo_t frameInfo;
-	 frameInfo.blockSizeID = LZ4F_max1MB;
-	 frameInfo.blockMode = LZ4F_blockLinked;
-	 frameInfo.contentChecksumFlag = LZ4F_noContentChecksum; //disabled
-	 frameInfo.dictID = 0;
-	 frameInfo.blockChecksumFlag = LZ4F_noBlockChecksum; //disabled
-
-	 u32 imageSize = WIDTH * HEIGHT * sizeof(u16);
-	 frameInfo.contentSize = imageSize;
-
-	 LZ4F_preferences_t prefs;
-	 memset(&prefs,0,sizeof(prefs));
-	 prefs.frameInfo = frameInfo;
-	 prefs.compressionLevel = 0; //default (fast mode)
-	 prefs.autoFlush = 1; //always flush, less use of internal buffers
-	 prefs.favorDecSpeed = 0; //Don't care about decompression speed, much more so about the encode side. :-)
-
-	 u32 bytesWritten = 0;
-
-	 u32 returncode = LZ4F_compressBegin(cctxPtr, compressBuffer , compressCapacity, &prefs);
-	 if (LZ4F_isError(returncode)) {
-		 xil_printf("Error with compressBegin: %s\r\n",LZ4F_getErrorName(returncode));
-		 return XST_FAILURE;
-	 } else
-		 bytesWritten += returncode;
-
-	 u32 bufferIndex = PSRAM_BASE;
-	 u32 chunkSize = imageSize > 0x100000 ? 0x100000 : imageSize; // Chunk is minimum of complete buffer, or 4MB.
-
-	 while (chunkSize > 0) {
-		 returncode = LZ4F_compressUpdate(cctxPtr, compressBuffer+bytesWritten, compressCapacity-bytesWritten, (void*) bufferIndex, chunkSize, NULL);
-		 if (LZ4F_isError(returncode)) {
-				 xil_printf("Error with compressUpdate: %s\r\n",LZ4F_getErrorName(returncode));
-				 return XST_FAILURE;
-		 } else
-		 {
-			 bytesWritten += returncode;
-			 bufferIndex += chunkSize;
-		 }
-		 imageSize -= chunkSize;
-		 chunkSize = imageSize > 0x100000 ? 0x100000 : imageSize; // Chunk is minimum of complete buffer, or 1MB.
-	 }
-
-	 returncode = bytesWritten += LZ4F_compressEnd(cctxPtr, compressBuffer+bytesWritten, compressCapacity-bytesWritten, NULL);
-
-	 if (LZ4F_isError(returncode)) {
-	 	 		 xil_printf("Error with compressEnd: %s\r\n",LZ4F_getErrorName(returncode));
-	 	 		 return XST_FAILURE;
-	 } else
-	 	 bytesWritten = returncode; //The returncode from compressEnd is the _entire_ size of the frame and includes the bytes from the prior calls.
-	 #ifdef DEBUG
-	 	 xil_printf("Successfully compressed to %d bytes.\r\n",bytesWritten);
-	 #endif
-
-	 LZ4F_freeCompressionContext(cctxPtr);
-	 return bytesWritten;
- }
 
 void GetCommand(XUartNs550 *UartInstancePtr, u8 *ReceiveBufferPtr) {
 
@@ -343,14 +270,15 @@ void StartCalc(XUartNs550 *UartInstancePtr) {
 
     // Wait for the full image to iterate.
     while (!XCalc_IsDone(&Calc)) {};
-    Xil_L1DCacheInvalidate();
 
 #ifdef DEBUG
     xil_printf("Calc IP is done, returning data.\r\n");
 #endif
 
     // Compress contents of image memory
-    uint TotalToSend = CompressOutput();
+    u32 compressBufferSize = MAXWIDTH * (MAXWIDTH * 3U /4U) * sizeof(u16);
+    u32 imageSize = WIDTH * HEIGHT * sizeof(u16);
+    uint TotalToSend = CompressOutput(compressBufferSize,imageSize);
 
     // Send the contents of image memory to the serial port.
     TotalSentCount = 0;
@@ -406,9 +334,11 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 
 	while (!XCalc_IsIdle(&Calc)) {} // Wait for IP to be Idle
 
+#ifdef DEBUG
 	xil_printf("Calc IP is ready.\r\n");
-	// Wait for Go command.
+#endif
 
+	// Wait for Go command.
 	SetupCalc();
 
 	XUartNs550_ClearStats(UartInstancePtr);

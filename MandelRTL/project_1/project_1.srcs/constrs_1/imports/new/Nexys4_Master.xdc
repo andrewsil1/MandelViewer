@@ -599,8 +599,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_ben[0]}]
 set_property PACKAGE_PIN J13 [get_ports {cellular_ram_ben[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {cellular_ram_ben[1]}]
 #Bank = 14, Pin name = IO_L14P_T2_SRCC_14,					Sch name = CRAM_WAIT
-set_property PACKAGE_PIN T14 [get_ports cellular_ram_wait]
-set_property IOSTANDARD LVCMOS33 [get_ports cellular_ram_wait]
 
 #Bank = 14, Pin name = IO_L5P_T0_DQ06_14,					Sch name = CRAM_DQ0
 set_property PACKAGE_PIN R12 [get_ports {cellular_ram_dq_io[0]}]
@@ -726,8 +724,8 @@ add_cells_to_pblock [get_pblocks pblock_axi_uart16550_0] [get_cells -quiet [list
 resize_pblock [get_pblocks pblock_axi_uart16550_0] -add {SLICE_X82Y123:SLICE_X89Y143}
 
 create_pblock pblock_psram_ip_0
-add_cells_to_pblock [get_pblocks pblock_psram_ip_0] [get_cells -quiet [list Fast_IP_Clock_i/axi_emc_0]]
-resize_pblock [get_pblocks pblock_psram_ip_0] -add {SLICE_X0Y75:SLICE_X13Y99}
+add_cells_to_pblock [get_pblocks pblock_psram_ip_0] [get_cells -quiet [list Fast_IP_Clock_i/psram_ip_0]]
+resize_pblock [get_pblocks pblock_psram_ip_0] -add {SLICE_X12Y37:SLICE_X19Y49}
 
 create_pblock pblock_axi_gpio_0
 add_cells_to_pblock [get_pblocks pblock_axi_gpio_0] [get_cells -quiet [list Fast_IP_Clock_i/axi_gpio_0]]
@@ -744,3 +742,9 @@ resize_pblock [get_pblocks pblock_calc_0] -add {SLICE_X26Y150:SLICE_X81Y199 SLIC
 
 
 
+
+create_pblock pblock_system_cache_0
+add_cells_to_pblock [get_pblocks pblock_system_cache_0] [get_cells -quiet [list Fast_IP_Clock_i/system_cache_0]]
+resize_pblock [get_pblocks pblock_system_cache_0] -add {SLICE_X52Y10:SLICE_X77Y49}
+resize_pblock [get_pblocks pblock_system_cache_0] -add {RAMB18_X1Y4:RAMB18_X2Y19}
+resize_pblock [get_pblocks pblock_system_cache_0] -add {RAMB36_X1Y2:RAMB36_X2Y9}

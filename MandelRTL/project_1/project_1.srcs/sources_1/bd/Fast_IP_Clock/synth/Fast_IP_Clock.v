@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Thu Jun 27 15:04:43 2019
+//Date        : Sat Jun 29 14:11:34 2019
 //Host        : AndrewSi64 running 64-bit major release  (build 9200)
 //Command     : generate_target Fast_IP_Clock.bd
 //Design      : Fast_IP_Clock
@@ -87,39 +87,63 @@ module Fast_IP_Clock
   wire mdm_1_Debug_SYS_Rst;
   wire mdm_1_Interrupt;
   wire microblaze_0_Clk;
-  wire [31:0]microblaze_0_M_AXI_DC_ARADDR;
-  wire [1:0]microblaze_0_M_AXI_DC_ARBURST;
-  wire [3:0]microblaze_0_M_AXI_DC_ARCACHE;
-  wire [7:0]microblaze_0_M_AXI_DC_ARLEN;
-  wire microblaze_0_M_AXI_DC_ARLOCK;
-  wire [2:0]microblaze_0_M_AXI_DC_ARPROT;
-  wire [3:0]microblaze_0_M_AXI_DC_ARQOS;
-  wire microblaze_0_M_AXI_DC_ARREADY;
-  wire [2:0]microblaze_0_M_AXI_DC_ARSIZE;
-  wire microblaze_0_M_AXI_DC_ARVALID;
-  wire [31:0]microblaze_0_M_AXI_DC_AWADDR;
-  wire [1:0]microblaze_0_M_AXI_DC_AWBURST;
-  wire [3:0]microblaze_0_M_AXI_DC_AWCACHE;
-  wire [7:0]microblaze_0_M_AXI_DC_AWLEN;
-  wire microblaze_0_M_AXI_DC_AWLOCK;
-  wire [2:0]microblaze_0_M_AXI_DC_AWPROT;
-  wire [3:0]microblaze_0_M_AXI_DC_AWQOS;
-  wire microblaze_0_M_AXI_DC_AWREADY;
-  wire [2:0]microblaze_0_M_AXI_DC_AWSIZE;
-  wire microblaze_0_M_AXI_DC_AWVALID;
-  wire microblaze_0_M_AXI_DC_BREADY;
-  wire [1:0]microblaze_0_M_AXI_DC_BRESP;
-  wire microblaze_0_M_AXI_DC_BVALID;
-  wire [31:0]microblaze_0_M_AXI_DC_RDATA;
-  wire microblaze_0_M_AXI_DC_RLAST;
-  wire microblaze_0_M_AXI_DC_RREADY;
-  wire [1:0]microblaze_0_M_AXI_DC_RRESP;
-  wire microblaze_0_M_AXI_DC_RVALID;
-  wire [31:0]microblaze_0_M_AXI_DC_WDATA;
-  wire microblaze_0_M_AXI_DC_WLAST;
-  wire microblaze_0_M_AXI_DC_WREADY;
-  wire [3:0]microblaze_0_M_AXI_DC_WSTRB;
-  wire microblaze_0_M_AXI_DC_WVALID;
+  wire [31:0]microblaze_0_M_ACE_DC_ACADDR;
+  wire [2:0]microblaze_0_M_ACE_DC_ACPROT;
+  wire microblaze_0_M_ACE_DC_ACREADY;
+  wire [3:0]microblaze_0_M_ACE_DC_ACSNOOP;
+  wire microblaze_0_M_ACE_DC_ACVALID;
+  wire [31:0]microblaze_0_M_ACE_DC_ARADDR;
+  wire [1:0]microblaze_0_M_ACE_DC_ARBAR;
+  wire [1:0]microblaze_0_M_ACE_DC_ARBURST;
+  wire [3:0]microblaze_0_M_ACE_DC_ARCACHE;
+  wire [1:0]microblaze_0_M_ACE_DC_ARDOMAIN;
+  wire [0:0]microblaze_0_M_ACE_DC_ARID;
+  wire [7:0]microblaze_0_M_ACE_DC_ARLEN;
+  wire microblaze_0_M_ACE_DC_ARLOCK;
+  wire [2:0]microblaze_0_M_ACE_DC_ARPROT;
+  wire [3:0]microblaze_0_M_ACE_DC_ARQOS;
+  wire microblaze_0_M_ACE_DC_ARREADY;
+  wire [2:0]microblaze_0_M_ACE_DC_ARSIZE;
+  wire [3:0]microblaze_0_M_ACE_DC_ARSNOOP;
+  wire microblaze_0_M_ACE_DC_ARVALID;
+  wire [31:0]microblaze_0_M_ACE_DC_AWADDR;
+  wire [1:0]microblaze_0_M_ACE_DC_AWBAR;
+  wire [1:0]microblaze_0_M_ACE_DC_AWBURST;
+  wire [3:0]microblaze_0_M_ACE_DC_AWCACHE;
+  wire [1:0]microblaze_0_M_ACE_DC_AWDOMAIN;
+  wire [0:0]microblaze_0_M_ACE_DC_AWID;
+  wire [7:0]microblaze_0_M_ACE_DC_AWLEN;
+  wire microblaze_0_M_ACE_DC_AWLOCK;
+  wire [2:0]microblaze_0_M_ACE_DC_AWPROT;
+  wire [3:0]microblaze_0_M_ACE_DC_AWQOS;
+  wire microblaze_0_M_ACE_DC_AWREADY;
+  wire [2:0]microblaze_0_M_ACE_DC_AWSIZE;
+  wire [2:0]microblaze_0_M_ACE_DC_AWSNOOP;
+  wire microblaze_0_M_ACE_DC_AWVALID;
+  wire [0:0]microblaze_0_M_ACE_DC_BID;
+  wire microblaze_0_M_ACE_DC_BREADY;
+  wire [1:0]microblaze_0_M_ACE_DC_BRESP;
+  wire microblaze_0_M_ACE_DC_BVALID;
+  wire [31:0]microblaze_0_M_ACE_DC_CDDATA;
+  wire microblaze_0_M_ACE_DC_CDLAST;
+  wire microblaze_0_M_ACE_DC_CDREADY;
+  wire microblaze_0_M_ACE_DC_CDVALID;
+  wire microblaze_0_M_ACE_DC_CRREADY;
+  wire [4:0]microblaze_0_M_ACE_DC_CRRESP;
+  wire microblaze_0_M_ACE_DC_CRVALID;
+  wire microblaze_0_M_ACE_DC_RACK;
+  wire [31:0]microblaze_0_M_ACE_DC_RDATA;
+  wire [0:0]microblaze_0_M_ACE_DC_RID;
+  wire microblaze_0_M_ACE_DC_RLAST;
+  wire microblaze_0_M_ACE_DC_RREADY;
+  wire [3:0]microblaze_0_M_ACE_DC_RRESP;
+  wire microblaze_0_M_ACE_DC_RVALID;
+  wire microblaze_0_M_ACE_DC_WACK;
+  wire [31:0]microblaze_0_M_ACE_DC_WDATA;
+  wire microblaze_0_M_ACE_DC_WLAST;
+  wire microblaze_0_M_ACE_DC_WREADY;
+  wire [3:0]microblaze_0_M_ACE_DC_WSTRB;
+  wire microblaze_0_M_ACE_DC_WVALID;
   wire [31:0]microblaze_0_M_AXI_DP_ARADDR;
   wire [2:0]microblaze_0_M_AXI_DP_ARPROT;
   wire microblaze_0_M_AXI_DP_ARREADY;
@@ -264,39 +288,43 @@ module Fast_IP_Clock
   wire [15:0]psram_ip_0_psram_rtl_DQ_T;
   wire psram_ip_0_psram_rtl_OEN;
   wire psram_ip_0_psram_rtl_WEN;
-  wire [23:0]smartconnect_0_M00_AXI_ARADDR;
-  wire [1:0]smartconnect_0_M00_AXI_ARBURST;
-  wire [3:0]smartconnect_0_M00_AXI_ARCACHE;
-  wire [7:0]smartconnect_0_M00_AXI_ARLEN;
-  wire [0:0]smartconnect_0_M00_AXI_ARLOCK;
-  wire [2:0]smartconnect_0_M00_AXI_ARPROT;
-  wire [3:0]smartconnect_0_M00_AXI_ARQOS;
-  wire smartconnect_0_M00_AXI_ARREADY;
-  wire [2:0]smartconnect_0_M00_AXI_ARSIZE;
-  wire smartconnect_0_M00_AXI_ARVALID;
-  wire [23:0]smartconnect_0_M00_AXI_AWADDR;
-  wire [1:0]smartconnect_0_M00_AXI_AWBURST;
-  wire [3:0]smartconnect_0_M00_AXI_AWCACHE;
-  wire [7:0]smartconnect_0_M00_AXI_AWLEN;
-  wire [0:0]smartconnect_0_M00_AXI_AWLOCK;
-  wire [2:0]smartconnect_0_M00_AXI_AWPROT;
-  wire [3:0]smartconnect_0_M00_AXI_AWQOS;
-  wire smartconnect_0_M00_AXI_AWREADY;
-  wire [2:0]smartconnect_0_M00_AXI_AWSIZE;
-  wire smartconnect_0_M00_AXI_AWVALID;
-  wire smartconnect_0_M00_AXI_BREADY;
-  wire [1:0]smartconnect_0_M00_AXI_BRESP;
-  wire smartconnect_0_M00_AXI_BVALID;
-  wire [31:0]smartconnect_0_M00_AXI_RDATA;
-  wire smartconnect_0_M00_AXI_RLAST;
-  wire smartconnect_0_M00_AXI_RREADY;
-  wire [1:0]smartconnect_0_M00_AXI_RRESP;
-  wire smartconnect_0_M00_AXI_RVALID;
-  wire [31:0]smartconnect_0_M00_AXI_WDATA;
-  wire smartconnect_0_M00_AXI_WLAST;
-  wire smartconnect_0_M00_AXI_WREADY;
-  wire [3:0]smartconnect_0_M00_AXI_WSTRB;
-  wire smartconnect_0_M00_AXI_WVALID;
+  wire [31:0]system_cache_0_M0_AXI_ARADDR;
+  wire [1:0]system_cache_0_M0_AXI_ARBURST;
+  wire [3:0]system_cache_0_M0_AXI_ARCACHE;
+  wire [0:0]system_cache_0_M0_AXI_ARID;
+  wire [7:0]system_cache_0_M0_AXI_ARLEN;
+  wire system_cache_0_M0_AXI_ARLOCK;
+  wire [2:0]system_cache_0_M0_AXI_ARPROT;
+  wire [3:0]system_cache_0_M0_AXI_ARQOS;
+  wire system_cache_0_M0_AXI_ARREADY;
+  wire [2:0]system_cache_0_M0_AXI_ARSIZE;
+  wire system_cache_0_M0_AXI_ARVALID;
+  wire [31:0]system_cache_0_M0_AXI_AWADDR;
+  wire [1:0]system_cache_0_M0_AXI_AWBURST;
+  wire [3:0]system_cache_0_M0_AXI_AWCACHE;
+  wire [0:0]system_cache_0_M0_AXI_AWID;
+  wire [7:0]system_cache_0_M0_AXI_AWLEN;
+  wire system_cache_0_M0_AXI_AWLOCK;
+  wire [2:0]system_cache_0_M0_AXI_AWPROT;
+  wire [3:0]system_cache_0_M0_AXI_AWQOS;
+  wire system_cache_0_M0_AXI_AWREADY;
+  wire [2:0]system_cache_0_M0_AXI_AWSIZE;
+  wire system_cache_0_M0_AXI_AWVALID;
+  wire [0:0]system_cache_0_M0_AXI_BID;
+  wire system_cache_0_M0_AXI_BREADY;
+  wire [1:0]system_cache_0_M0_AXI_BRESP;
+  wire system_cache_0_M0_AXI_BVALID;
+  wire [31:0]system_cache_0_M0_AXI_RDATA;
+  wire [0:0]system_cache_0_M0_AXI_RID;
+  wire system_cache_0_M0_AXI_RLAST;
+  wire system_cache_0_M0_AXI_RREADY;
+  wire [1:0]system_cache_0_M0_AXI_RRESP;
+  wire system_cache_0_M0_AXI_RVALID;
+  wire [31:0]system_cache_0_M0_AXI_WDATA;
+  wire system_cache_0_M0_AXI_WLAST;
+  wire system_cache_0_M0_AXI_WREADY;
+  wire [3:0]system_cache_0_M0_AXI_WSTRB;
+  wire system_cache_0_M0_AXI_WVALID;
   wire [1:0]xlconcat_0_dout;
 
   assign axi_gpio_0_GPIO_TRI_I = push_buttons_5bits_tri_i[4:0];
@@ -505,41 +533,63 @@ module Fast_IP_Clock
         .Instr_Addr(microblaze_0_ilmb_1_ABUS),
         .Interrupt(axi_intc_0_interrupt_INTERRUPT),
         .Interrupt_Address({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .M_AXI_DC_ARADDR(microblaze_0_M_AXI_DC_ARADDR),
-        .M_AXI_DC_ARBURST(microblaze_0_M_AXI_DC_ARBURST),
-        .M_AXI_DC_ARCACHE(microblaze_0_M_AXI_DC_ARCACHE),
-        .M_AXI_DC_ARLEN(microblaze_0_M_AXI_DC_ARLEN),
-        .M_AXI_DC_ARLOCK(microblaze_0_M_AXI_DC_ARLOCK),
-        .M_AXI_DC_ARPROT(microblaze_0_M_AXI_DC_ARPROT),
-        .M_AXI_DC_ARQOS(microblaze_0_M_AXI_DC_ARQOS),
-        .M_AXI_DC_ARREADY(microblaze_0_M_AXI_DC_ARREADY),
-        .M_AXI_DC_ARSIZE(microblaze_0_M_AXI_DC_ARSIZE),
-        .M_AXI_DC_ARVALID(microblaze_0_M_AXI_DC_ARVALID),
-        .M_AXI_DC_AWADDR(microblaze_0_M_AXI_DC_AWADDR),
-        .M_AXI_DC_AWBURST(microblaze_0_M_AXI_DC_AWBURST),
-        .M_AXI_DC_AWCACHE(microblaze_0_M_AXI_DC_AWCACHE),
-        .M_AXI_DC_AWLEN(microblaze_0_M_AXI_DC_AWLEN),
-        .M_AXI_DC_AWLOCK(microblaze_0_M_AXI_DC_AWLOCK),
-        .M_AXI_DC_AWPROT(microblaze_0_M_AXI_DC_AWPROT),
-        .M_AXI_DC_AWQOS(microblaze_0_M_AXI_DC_AWQOS),
-        .M_AXI_DC_AWREADY(microblaze_0_M_AXI_DC_AWREADY),
-        .M_AXI_DC_AWSIZE(microblaze_0_M_AXI_DC_AWSIZE),
-        .M_AXI_DC_AWVALID(microblaze_0_M_AXI_DC_AWVALID),
-        .M_AXI_DC_BID(1'b0),
-        .M_AXI_DC_BREADY(microblaze_0_M_AXI_DC_BREADY),
-        .M_AXI_DC_BRESP(microblaze_0_M_AXI_DC_BRESP),
-        .M_AXI_DC_BVALID(microblaze_0_M_AXI_DC_BVALID),
-        .M_AXI_DC_RDATA(microblaze_0_M_AXI_DC_RDATA),
-        .M_AXI_DC_RID(1'b0),
-        .M_AXI_DC_RLAST(microblaze_0_M_AXI_DC_RLAST),
-        .M_AXI_DC_RREADY(microblaze_0_M_AXI_DC_RREADY),
-        .M_AXI_DC_RRESP(microblaze_0_M_AXI_DC_RRESP),
-        .M_AXI_DC_RVALID(microblaze_0_M_AXI_DC_RVALID),
-        .M_AXI_DC_WDATA(microblaze_0_M_AXI_DC_WDATA),
-        .M_AXI_DC_WLAST(microblaze_0_M_AXI_DC_WLAST),
-        .M_AXI_DC_WREADY(microblaze_0_M_AXI_DC_WREADY),
-        .M_AXI_DC_WSTRB(microblaze_0_M_AXI_DC_WSTRB),
-        .M_AXI_DC_WVALID(microblaze_0_M_AXI_DC_WVALID),
+        .M_AXI_DC_ACADDR(microblaze_0_M_ACE_DC_ACADDR),
+        .M_AXI_DC_ACPROT(microblaze_0_M_ACE_DC_ACPROT),
+        .M_AXI_DC_ACREADY(microblaze_0_M_ACE_DC_ACREADY),
+        .M_AXI_DC_ACSNOOP(microblaze_0_M_ACE_DC_ACSNOOP),
+        .M_AXI_DC_ACVALID(microblaze_0_M_ACE_DC_ACVALID),
+        .M_AXI_DC_ARADDR(microblaze_0_M_ACE_DC_ARADDR),
+        .M_AXI_DC_ARBAR(microblaze_0_M_ACE_DC_ARBAR),
+        .M_AXI_DC_ARBURST(microblaze_0_M_ACE_DC_ARBURST),
+        .M_AXI_DC_ARCACHE(microblaze_0_M_ACE_DC_ARCACHE),
+        .M_AXI_DC_ARDOMAIN(microblaze_0_M_ACE_DC_ARDOMAIN),
+        .M_AXI_DC_ARID(microblaze_0_M_ACE_DC_ARID),
+        .M_AXI_DC_ARLEN(microblaze_0_M_ACE_DC_ARLEN),
+        .M_AXI_DC_ARLOCK(microblaze_0_M_ACE_DC_ARLOCK),
+        .M_AXI_DC_ARPROT(microblaze_0_M_ACE_DC_ARPROT),
+        .M_AXI_DC_ARQOS(microblaze_0_M_ACE_DC_ARQOS),
+        .M_AXI_DC_ARREADY(microblaze_0_M_ACE_DC_ARREADY),
+        .M_AXI_DC_ARSIZE(microblaze_0_M_ACE_DC_ARSIZE),
+        .M_AXI_DC_ARSNOOP(microblaze_0_M_ACE_DC_ARSNOOP),
+        .M_AXI_DC_ARVALID(microblaze_0_M_ACE_DC_ARVALID),
+        .M_AXI_DC_AWADDR(microblaze_0_M_ACE_DC_AWADDR),
+        .M_AXI_DC_AWBAR(microblaze_0_M_ACE_DC_AWBAR),
+        .M_AXI_DC_AWBURST(microblaze_0_M_ACE_DC_AWBURST),
+        .M_AXI_DC_AWCACHE(microblaze_0_M_ACE_DC_AWCACHE),
+        .M_AXI_DC_AWDOMAIN(microblaze_0_M_ACE_DC_AWDOMAIN),
+        .M_AXI_DC_AWID(microblaze_0_M_ACE_DC_AWID),
+        .M_AXI_DC_AWLEN(microblaze_0_M_ACE_DC_AWLEN),
+        .M_AXI_DC_AWLOCK(microblaze_0_M_ACE_DC_AWLOCK),
+        .M_AXI_DC_AWPROT(microblaze_0_M_ACE_DC_AWPROT),
+        .M_AXI_DC_AWQOS(microblaze_0_M_ACE_DC_AWQOS),
+        .M_AXI_DC_AWREADY(microblaze_0_M_ACE_DC_AWREADY),
+        .M_AXI_DC_AWSIZE(microblaze_0_M_ACE_DC_AWSIZE),
+        .M_AXI_DC_AWSNOOP(microblaze_0_M_ACE_DC_AWSNOOP),
+        .M_AXI_DC_AWVALID(microblaze_0_M_ACE_DC_AWVALID),
+        .M_AXI_DC_BID(microblaze_0_M_ACE_DC_BID),
+        .M_AXI_DC_BREADY(microblaze_0_M_ACE_DC_BREADY),
+        .M_AXI_DC_BRESP(microblaze_0_M_ACE_DC_BRESP),
+        .M_AXI_DC_BVALID(microblaze_0_M_ACE_DC_BVALID),
+        .M_AXI_DC_CDDATA(microblaze_0_M_ACE_DC_CDDATA),
+        .M_AXI_DC_CDLAST(microblaze_0_M_ACE_DC_CDLAST),
+        .M_AXI_DC_CDREADY(microblaze_0_M_ACE_DC_CDREADY),
+        .M_AXI_DC_CDVALID(microblaze_0_M_ACE_DC_CDVALID),
+        .M_AXI_DC_CRREADY(microblaze_0_M_ACE_DC_CRREADY),
+        .M_AXI_DC_CRRESP(microblaze_0_M_ACE_DC_CRRESP),
+        .M_AXI_DC_CRVALID(microblaze_0_M_ACE_DC_CRVALID),
+        .M_AXI_DC_RACK(microblaze_0_M_ACE_DC_RACK),
+        .M_AXI_DC_RDATA(microblaze_0_M_ACE_DC_RDATA),
+        .M_AXI_DC_RID(microblaze_0_M_ACE_DC_RID),
+        .M_AXI_DC_RLAST(microblaze_0_M_ACE_DC_RLAST),
+        .M_AXI_DC_RREADY(microblaze_0_M_ACE_DC_RREADY),
+        .M_AXI_DC_RRESP(microblaze_0_M_ACE_DC_RRESP),
+        .M_AXI_DC_RVALID(microblaze_0_M_ACE_DC_RVALID),
+        .M_AXI_DC_WACK(microblaze_0_M_ACE_DC_WACK),
+        .M_AXI_DC_WDATA(microblaze_0_M_ACE_DC_WDATA),
+        .M_AXI_DC_WLAST(microblaze_0_M_ACE_DC_WLAST),
+        .M_AXI_DC_WREADY(microblaze_0_M_ACE_DC_WREADY),
+        .M_AXI_DC_WSTRB(microblaze_0_M_ACE_DC_WSTRB),
+        .M_AXI_DC_WVALID(microblaze_0_M_ACE_DC_WVALID),
         .M_AXI_DP_ARADDR(microblaze_0_M_AXI_DP_ARADDR),
         .M_AXI_DP_ARPROT(microblaze_0_M_AXI_DP_ARPROT),
         .M_AXI_DP_ARREADY(microblaze_0_M_AXI_DP_ARREADY),
@@ -724,149 +774,221 @@ module Fast_IP_Clock
         .MEM_OEN(psram_ip_0_psram_rtl_OEN),
         .MEM_WEN(psram_ip_0_psram_rtl_WEN),
         .s00_axi_aclk(microblaze_0_Clk),
-        .s00_axi_araddr(smartconnect_0_M00_AXI_ARADDR),
-        .s00_axi_arburst(smartconnect_0_M00_AXI_ARBURST),
-        .s00_axi_arcache(smartconnect_0_M00_AXI_ARCACHE),
+        .s00_axi_araddr(system_cache_0_M0_AXI_ARADDR[23:0]),
+        .s00_axi_arburst(system_cache_0_M0_AXI_ARBURST),
+        .s00_axi_arcache(system_cache_0_M0_AXI_ARCACHE),
         .s00_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
-        .s00_axi_arid(1'b0),
-        .s00_axi_arlen(smartconnect_0_M00_AXI_ARLEN),
-        .s00_axi_arlock(smartconnect_0_M00_AXI_ARLOCK),
-        .s00_axi_arprot(smartconnect_0_M00_AXI_ARPROT),
-        .s00_axi_arqos(smartconnect_0_M00_AXI_ARQOS),
-        .s00_axi_arready(smartconnect_0_M00_AXI_ARREADY),
+        .s00_axi_arid(system_cache_0_M0_AXI_ARID),
+        .s00_axi_arlen(system_cache_0_M0_AXI_ARLEN),
+        .s00_axi_arlock(system_cache_0_M0_AXI_ARLOCK),
+        .s00_axi_arprot(system_cache_0_M0_AXI_ARPROT),
+        .s00_axi_arqos(system_cache_0_M0_AXI_ARQOS),
+        .s00_axi_arready(system_cache_0_M0_AXI_ARREADY),
         .s00_axi_arregion({1'b0,1'b0,1'b0,1'b0}),
-        .s00_axi_arsize(smartconnect_0_M00_AXI_ARSIZE),
+        .s00_axi_arsize(system_cache_0_M0_AXI_ARSIZE),
         .s00_axi_aruser(1'b0),
-        .s00_axi_arvalid(smartconnect_0_M00_AXI_ARVALID),
-        .s00_axi_awaddr(smartconnect_0_M00_AXI_AWADDR),
-        .s00_axi_awburst(smartconnect_0_M00_AXI_AWBURST),
-        .s00_axi_awcache(smartconnect_0_M00_AXI_AWCACHE),
-        .s00_axi_awid(1'b0),
-        .s00_axi_awlen(smartconnect_0_M00_AXI_AWLEN),
-        .s00_axi_awlock(smartconnect_0_M00_AXI_AWLOCK),
-        .s00_axi_awprot(smartconnect_0_M00_AXI_AWPROT),
-        .s00_axi_awqos(smartconnect_0_M00_AXI_AWQOS),
-        .s00_axi_awready(smartconnect_0_M00_AXI_AWREADY),
+        .s00_axi_arvalid(system_cache_0_M0_AXI_ARVALID),
+        .s00_axi_awaddr(system_cache_0_M0_AXI_AWADDR[23:0]),
+        .s00_axi_awburst(system_cache_0_M0_AXI_AWBURST),
+        .s00_axi_awcache(system_cache_0_M0_AXI_AWCACHE),
+        .s00_axi_awid(system_cache_0_M0_AXI_AWID),
+        .s00_axi_awlen(system_cache_0_M0_AXI_AWLEN),
+        .s00_axi_awlock(system_cache_0_M0_AXI_AWLOCK),
+        .s00_axi_awprot(system_cache_0_M0_AXI_AWPROT),
+        .s00_axi_awqos(system_cache_0_M0_AXI_AWQOS),
+        .s00_axi_awready(system_cache_0_M0_AXI_AWREADY),
         .s00_axi_awregion({1'b0,1'b0,1'b0,1'b0}),
-        .s00_axi_awsize(smartconnect_0_M00_AXI_AWSIZE),
+        .s00_axi_awsize(system_cache_0_M0_AXI_AWSIZE),
         .s00_axi_awuser(1'b0),
-        .s00_axi_awvalid(smartconnect_0_M00_AXI_AWVALID),
-        .s00_axi_bready(smartconnect_0_M00_AXI_BREADY),
-        .s00_axi_bresp(smartconnect_0_M00_AXI_BRESP),
-        .s00_axi_bvalid(smartconnect_0_M00_AXI_BVALID),
-        .s00_axi_rdata(smartconnect_0_M00_AXI_RDATA),
-        .s00_axi_rlast(smartconnect_0_M00_AXI_RLAST),
-        .s00_axi_rready(smartconnect_0_M00_AXI_RREADY),
-        .s00_axi_rresp(smartconnect_0_M00_AXI_RRESP),
-        .s00_axi_rvalid(smartconnect_0_M00_AXI_RVALID),
-        .s00_axi_wdata(smartconnect_0_M00_AXI_WDATA),
-        .s00_axi_wlast(smartconnect_0_M00_AXI_WLAST),
-        .s00_axi_wready(smartconnect_0_M00_AXI_WREADY),
-        .s00_axi_wstrb(smartconnect_0_M00_AXI_WSTRB),
+        .s00_axi_awvalid(system_cache_0_M0_AXI_AWVALID),
+        .s00_axi_bid(system_cache_0_M0_AXI_BID),
+        .s00_axi_bready(system_cache_0_M0_AXI_BREADY),
+        .s00_axi_bresp(system_cache_0_M0_AXI_BRESP),
+        .s00_axi_bvalid(system_cache_0_M0_AXI_BVALID),
+        .s00_axi_rdata(system_cache_0_M0_AXI_RDATA),
+        .s00_axi_rid(system_cache_0_M0_AXI_RID),
+        .s00_axi_rlast(system_cache_0_M0_AXI_RLAST),
+        .s00_axi_rready(system_cache_0_M0_AXI_RREADY),
+        .s00_axi_rresp(system_cache_0_M0_AXI_RRESP),
+        .s00_axi_rvalid(system_cache_0_M0_AXI_RVALID),
+        .s00_axi_wdata(system_cache_0_M0_AXI_WDATA),
+        .s00_axi_wlast(system_cache_0_M0_AXI_WLAST),
+        .s00_axi_wready(system_cache_0_M0_AXI_WREADY),
+        .s00_axi_wstrb(system_cache_0_M0_AXI_WSTRB),
         .s00_axi_wuser(1'b0),
-        .s00_axi_wvalid(smartconnect_0_M00_AXI_WVALID));
-  Fast_IP_Clock_smartconnect_0_0 smartconnect_0
-       (.M00_AXI_araddr(smartconnect_0_M00_AXI_ARADDR),
-        .M00_AXI_arburst(smartconnect_0_M00_AXI_ARBURST),
-        .M00_AXI_arcache(smartconnect_0_M00_AXI_ARCACHE),
-        .M00_AXI_arlen(smartconnect_0_M00_AXI_ARLEN),
-        .M00_AXI_arlock(smartconnect_0_M00_AXI_ARLOCK),
-        .M00_AXI_arprot(smartconnect_0_M00_AXI_ARPROT),
-        .M00_AXI_arqos(smartconnect_0_M00_AXI_ARQOS),
-        .M00_AXI_arready(smartconnect_0_M00_AXI_ARREADY),
-        .M00_AXI_arsize(smartconnect_0_M00_AXI_ARSIZE),
-        .M00_AXI_arvalid(smartconnect_0_M00_AXI_ARVALID),
-        .M00_AXI_awaddr(smartconnect_0_M00_AXI_AWADDR),
-        .M00_AXI_awburst(smartconnect_0_M00_AXI_AWBURST),
-        .M00_AXI_awcache(smartconnect_0_M00_AXI_AWCACHE),
-        .M00_AXI_awlen(smartconnect_0_M00_AXI_AWLEN),
-        .M00_AXI_awlock(smartconnect_0_M00_AXI_AWLOCK),
-        .M00_AXI_awprot(smartconnect_0_M00_AXI_AWPROT),
-        .M00_AXI_awqos(smartconnect_0_M00_AXI_AWQOS),
-        .M00_AXI_awready(smartconnect_0_M00_AXI_AWREADY),
-        .M00_AXI_awsize(smartconnect_0_M00_AXI_AWSIZE),
-        .M00_AXI_awvalid(smartconnect_0_M00_AXI_AWVALID),
-        .M00_AXI_bready(smartconnect_0_M00_AXI_BREADY),
-        .M00_AXI_bresp(smartconnect_0_M00_AXI_BRESP),
-        .M00_AXI_bvalid(smartconnect_0_M00_AXI_BVALID),
-        .M00_AXI_rdata(smartconnect_0_M00_AXI_RDATA),
-        .M00_AXI_rlast(smartconnect_0_M00_AXI_RLAST),
-        .M00_AXI_rready(smartconnect_0_M00_AXI_RREADY),
-        .M00_AXI_rresp(smartconnect_0_M00_AXI_RRESP),
-        .M00_AXI_rvalid(smartconnect_0_M00_AXI_RVALID),
-        .M00_AXI_wdata(smartconnect_0_M00_AXI_WDATA),
-        .M00_AXI_wlast(smartconnect_0_M00_AXI_WLAST),
-        .M00_AXI_wready(smartconnect_0_M00_AXI_WREADY),
-        .M00_AXI_wstrb(smartconnect_0_M00_AXI_WSTRB),
-        .M00_AXI_wvalid(smartconnect_0_M00_AXI_WVALID),
-        .S00_AXI_araddr(microblaze_0_M_AXI_DC_ARADDR),
-        .S00_AXI_arburst(microblaze_0_M_AXI_DC_ARBURST),
-        .S00_AXI_arcache(microblaze_0_M_AXI_DC_ARCACHE),
-        .S00_AXI_arlen(microblaze_0_M_AXI_DC_ARLEN),
-        .S00_AXI_arlock(microblaze_0_M_AXI_DC_ARLOCK),
-        .S00_AXI_arprot(microblaze_0_M_AXI_DC_ARPROT),
-        .S00_AXI_arqos(microblaze_0_M_AXI_DC_ARQOS),
-        .S00_AXI_arready(microblaze_0_M_AXI_DC_ARREADY),
-        .S00_AXI_arsize(microblaze_0_M_AXI_DC_ARSIZE),
-        .S00_AXI_arvalid(microblaze_0_M_AXI_DC_ARVALID),
-        .S00_AXI_awaddr(microblaze_0_M_AXI_DC_AWADDR),
-        .S00_AXI_awburst(microblaze_0_M_AXI_DC_AWBURST),
-        .S00_AXI_awcache(microblaze_0_M_AXI_DC_AWCACHE),
-        .S00_AXI_awlen(microblaze_0_M_AXI_DC_AWLEN),
-        .S00_AXI_awlock(microblaze_0_M_AXI_DC_AWLOCK),
-        .S00_AXI_awprot(microblaze_0_M_AXI_DC_AWPROT),
-        .S00_AXI_awqos(microblaze_0_M_AXI_DC_AWQOS),
-        .S00_AXI_awready(microblaze_0_M_AXI_DC_AWREADY),
-        .S00_AXI_awsize(microblaze_0_M_AXI_DC_AWSIZE),
-        .S00_AXI_awvalid(microblaze_0_M_AXI_DC_AWVALID),
-        .S00_AXI_bready(microblaze_0_M_AXI_DC_BREADY),
-        .S00_AXI_bresp(microblaze_0_M_AXI_DC_BRESP),
-        .S00_AXI_bvalid(microblaze_0_M_AXI_DC_BVALID),
-        .S00_AXI_rdata(microblaze_0_M_AXI_DC_RDATA),
-        .S00_AXI_rlast(microblaze_0_M_AXI_DC_RLAST),
-        .S00_AXI_rready(microblaze_0_M_AXI_DC_RREADY),
-        .S00_AXI_rresp(microblaze_0_M_AXI_DC_RRESP),
-        .S00_AXI_rvalid(microblaze_0_M_AXI_DC_RVALID),
-        .S00_AXI_wdata(microblaze_0_M_AXI_DC_WDATA),
-        .S00_AXI_wlast(microblaze_0_M_AXI_DC_WLAST),
-        .S00_AXI_wready(microblaze_0_M_AXI_DC_WREADY),
-        .S00_AXI_wstrb(microblaze_0_M_AXI_DC_WSTRB),
-        .S00_AXI_wvalid(microblaze_0_M_AXI_DC_WVALID),
-        .S01_AXI_araddr(calc_0_m_axi_buf_r_ARADDR),
-        .S01_AXI_arburst(calc_0_m_axi_buf_r_ARBURST),
-        .S01_AXI_arcache(calc_0_m_axi_buf_r_ARCACHE),
-        .S01_AXI_arlen(calc_0_m_axi_buf_r_ARLEN),
-        .S01_AXI_arlock(calc_0_m_axi_buf_r_ARLOCK[0]),
-        .S01_AXI_arprot(calc_0_m_axi_buf_r_ARPROT),
-        .S01_AXI_arqos(calc_0_m_axi_buf_r_ARQOS),
-        .S01_AXI_arready(calc_0_m_axi_buf_r_ARREADY),
-        .S01_AXI_arsize(calc_0_m_axi_buf_r_ARSIZE),
-        .S01_AXI_arvalid(calc_0_m_axi_buf_r_ARVALID),
-        .S01_AXI_awaddr(calc_0_m_axi_buf_r_AWADDR),
-        .S01_AXI_awburst(calc_0_m_axi_buf_r_AWBURST),
-        .S01_AXI_awcache(calc_0_m_axi_buf_r_AWCACHE),
-        .S01_AXI_awlen(calc_0_m_axi_buf_r_AWLEN),
-        .S01_AXI_awlock(calc_0_m_axi_buf_r_AWLOCK[0]),
-        .S01_AXI_awprot(calc_0_m_axi_buf_r_AWPROT),
-        .S01_AXI_awqos(calc_0_m_axi_buf_r_AWQOS),
-        .S01_AXI_awready(calc_0_m_axi_buf_r_AWREADY),
-        .S01_AXI_awsize(calc_0_m_axi_buf_r_AWSIZE),
-        .S01_AXI_awvalid(calc_0_m_axi_buf_r_AWVALID),
-        .S01_AXI_bready(calc_0_m_axi_buf_r_BREADY),
-        .S01_AXI_bresp(calc_0_m_axi_buf_r_BRESP),
-        .S01_AXI_bvalid(calc_0_m_axi_buf_r_BVALID),
-        .S01_AXI_rdata(calc_0_m_axi_buf_r_RDATA),
-        .S01_AXI_rlast(calc_0_m_axi_buf_r_RLAST),
-        .S01_AXI_rready(calc_0_m_axi_buf_r_RREADY),
-        .S01_AXI_rresp(calc_0_m_axi_buf_r_RRESP),
-        .S01_AXI_rvalid(calc_0_m_axi_buf_r_RVALID),
-        .S01_AXI_wdata(calc_0_m_axi_buf_r_WDATA),
-        .S01_AXI_wlast(calc_0_m_axi_buf_r_WLAST),
-        .S01_AXI_wready(calc_0_m_axi_buf_r_WREADY),
-        .S01_AXI_wstrb(calc_0_m_axi_buf_r_WSTRB),
-        .S01_AXI_wvalid(calc_0_m_axi_buf_r_WVALID),
-        .aclk(microblaze_0_Clk),
-        .aresetn(proc_sys_reset_0_peripheral_aresetn));
+        .s00_axi_wvalid(system_cache_0_M0_AXI_WVALID));
+  Fast_IP_Clock_system_cache_0_0 system_cache_0
+       (.ACLK(microblaze_0_Clk),
+        .ARESETN(proc_sys_reset_0_peripheral_aresetn),
+        .M0_AXI_ARADDR(system_cache_0_M0_AXI_ARADDR),
+        .M0_AXI_ARBURST(system_cache_0_M0_AXI_ARBURST),
+        .M0_AXI_ARCACHE(system_cache_0_M0_AXI_ARCACHE),
+        .M0_AXI_ARID(system_cache_0_M0_AXI_ARID),
+        .M0_AXI_ARLEN(system_cache_0_M0_AXI_ARLEN),
+        .M0_AXI_ARLOCK(system_cache_0_M0_AXI_ARLOCK),
+        .M0_AXI_ARPROT(system_cache_0_M0_AXI_ARPROT),
+        .M0_AXI_ARQOS(system_cache_0_M0_AXI_ARQOS),
+        .M0_AXI_ARREADY(system_cache_0_M0_AXI_ARREADY),
+        .M0_AXI_ARSIZE(system_cache_0_M0_AXI_ARSIZE),
+        .M0_AXI_ARVALID(system_cache_0_M0_AXI_ARVALID),
+        .M0_AXI_AWADDR(system_cache_0_M0_AXI_AWADDR),
+        .M0_AXI_AWBURST(system_cache_0_M0_AXI_AWBURST),
+        .M0_AXI_AWCACHE(system_cache_0_M0_AXI_AWCACHE),
+        .M0_AXI_AWID(system_cache_0_M0_AXI_AWID),
+        .M0_AXI_AWLEN(system_cache_0_M0_AXI_AWLEN),
+        .M0_AXI_AWLOCK(system_cache_0_M0_AXI_AWLOCK),
+        .M0_AXI_AWPROT(system_cache_0_M0_AXI_AWPROT),
+        .M0_AXI_AWQOS(system_cache_0_M0_AXI_AWQOS),
+        .M0_AXI_AWREADY(system_cache_0_M0_AXI_AWREADY),
+        .M0_AXI_AWSIZE(system_cache_0_M0_AXI_AWSIZE),
+        .M0_AXI_AWVALID(system_cache_0_M0_AXI_AWVALID),
+        .M0_AXI_BID(system_cache_0_M0_AXI_BID),
+        .M0_AXI_BREADY(system_cache_0_M0_AXI_BREADY),
+        .M0_AXI_BRESP(system_cache_0_M0_AXI_BRESP),
+        .M0_AXI_BVALID(system_cache_0_M0_AXI_BVALID),
+        .M0_AXI_RDATA(system_cache_0_M0_AXI_RDATA),
+        .M0_AXI_RID(system_cache_0_M0_AXI_RID),
+        .M0_AXI_RLAST(system_cache_0_M0_AXI_RLAST),
+        .M0_AXI_RREADY(system_cache_0_M0_AXI_RREADY),
+        .M0_AXI_RRESP(system_cache_0_M0_AXI_RRESP),
+        .M0_AXI_RVALID(system_cache_0_M0_AXI_RVALID),
+        .M0_AXI_WDATA(system_cache_0_M0_AXI_WDATA),
+        .M0_AXI_WLAST(system_cache_0_M0_AXI_WLAST),
+        .M0_AXI_WREADY(system_cache_0_M0_AXI_WREADY),
+        .M0_AXI_WSTRB(system_cache_0_M0_AXI_WSTRB),
+        .M0_AXI_WVALID(system_cache_0_M0_AXI_WVALID),
+        .S0_AXI_ACADDR(microblaze_0_M_ACE_DC_ACADDR),
+        .S0_AXI_ACPROT(microblaze_0_M_ACE_DC_ACPROT),
+        .S0_AXI_ACREADY(microblaze_0_M_ACE_DC_ACREADY),
+        .S0_AXI_ACSNOOP(microblaze_0_M_ACE_DC_ACSNOOP),
+        .S0_AXI_ACVALID(microblaze_0_M_ACE_DC_ACVALID),
+        .S0_AXI_ARADDR(microblaze_0_M_ACE_DC_ARADDR),
+        .S0_AXI_ARBAR(microblaze_0_M_ACE_DC_ARBAR),
+        .S0_AXI_ARBURST(microblaze_0_M_ACE_DC_ARBURST),
+        .S0_AXI_ARCACHE(microblaze_0_M_ACE_DC_ARCACHE),
+        .S0_AXI_ARDOMAIN(microblaze_0_M_ACE_DC_ARDOMAIN),
+        .S0_AXI_ARID(microblaze_0_M_ACE_DC_ARID),
+        .S0_AXI_ARLEN(microblaze_0_M_ACE_DC_ARLEN),
+        .S0_AXI_ARLOCK(microblaze_0_M_ACE_DC_ARLOCK),
+        .S0_AXI_ARPROT(microblaze_0_M_ACE_DC_ARPROT),
+        .S0_AXI_ARQOS(microblaze_0_M_ACE_DC_ARQOS),
+        .S0_AXI_ARREADY(microblaze_0_M_ACE_DC_ARREADY),
+        .S0_AXI_ARSIZE(microblaze_0_M_ACE_DC_ARSIZE),
+        .S0_AXI_ARSNOOP(microblaze_0_M_ACE_DC_ARSNOOP),
+        .S0_AXI_ARVALID(microblaze_0_M_ACE_DC_ARVALID),
+        .S0_AXI_AWADDR(microblaze_0_M_ACE_DC_AWADDR),
+        .S0_AXI_AWBAR(microblaze_0_M_ACE_DC_AWBAR),
+        .S0_AXI_AWBURST(microblaze_0_M_ACE_DC_AWBURST),
+        .S0_AXI_AWCACHE(microblaze_0_M_ACE_DC_AWCACHE),
+        .S0_AXI_AWDOMAIN(microblaze_0_M_ACE_DC_AWDOMAIN),
+        .S0_AXI_AWID(microblaze_0_M_ACE_DC_AWID),
+        .S0_AXI_AWLEN(microblaze_0_M_ACE_DC_AWLEN),
+        .S0_AXI_AWLOCK(microblaze_0_M_ACE_DC_AWLOCK),
+        .S0_AXI_AWPROT(microblaze_0_M_ACE_DC_AWPROT),
+        .S0_AXI_AWQOS(microblaze_0_M_ACE_DC_AWQOS),
+        .S0_AXI_AWREADY(microblaze_0_M_ACE_DC_AWREADY),
+        .S0_AXI_AWSIZE(microblaze_0_M_ACE_DC_AWSIZE),
+        .S0_AXI_AWSNOOP(microblaze_0_M_ACE_DC_AWSNOOP),
+        .S0_AXI_AWVALID(microblaze_0_M_ACE_DC_AWVALID),
+        .S0_AXI_BID(microblaze_0_M_ACE_DC_BID),
+        .S0_AXI_BREADY(microblaze_0_M_ACE_DC_BREADY),
+        .S0_AXI_BRESP(microblaze_0_M_ACE_DC_BRESP),
+        .S0_AXI_BVALID(microblaze_0_M_ACE_DC_BVALID),
+        .S0_AXI_CDDATA(microblaze_0_M_ACE_DC_CDDATA),
+        .S0_AXI_CDLAST(microblaze_0_M_ACE_DC_CDLAST),
+        .S0_AXI_CDREADY(microblaze_0_M_ACE_DC_CDREADY),
+        .S0_AXI_CDVALID(microblaze_0_M_ACE_DC_CDVALID),
+        .S0_AXI_CRREADY(microblaze_0_M_ACE_DC_CRREADY),
+        .S0_AXI_CRRESP(microblaze_0_M_ACE_DC_CRRESP),
+        .S0_AXI_CRVALID(microblaze_0_M_ACE_DC_CRVALID),
+        .S0_AXI_GEN_ARADDR(calc_0_m_axi_buf_r_ARADDR),
+        .S0_AXI_GEN_ARBURST(calc_0_m_axi_buf_r_ARBURST),
+        .S0_AXI_GEN_ARCACHE(calc_0_m_axi_buf_r_ARCACHE),
+        .S0_AXI_GEN_ARID(1'b0),
+        .S0_AXI_GEN_ARLEN(calc_0_m_axi_buf_r_ARLEN),
+        .S0_AXI_GEN_ARLOCK(calc_0_m_axi_buf_r_ARLOCK[0]),
+        .S0_AXI_GEN_ARPROT(calc_0_m_axi_buf_r_ARPROT),
+        .S0_AXI_GEN_ARQOS(calc_0_m_axi_buf_r_ARQOS),
+        .S0_AXI_GEN_ARREADY(calc_0_m_axi_buf_r_ARREADY),
+        .S0_AXI_GEN_ARSIZE(calc_0_m_axi_buf_r_ARSIZE),
+        .S0_AXI_GEN_ARVALID(calc_0_m_axi_buf_r_ARVALID),
+        .S0_AXI_GEN_AWADDR(calc_0_m_axi_buf_r_AWADDR),
+        .S0_AXI_GEN_AWBURST(calc_0_m_axi_buf_r_AWBURST),
+        .S0_AXI_GEN_AWCACHE(calc_0_m_axi_buf_r_AWCACHE),
+        .S0_AXI_GEN_AWID(1'b0),
+        .S0_AXI_GEN_AWLEN(calc_0_m_axi_buf_r_AWLEN),
+        .S0_AXI_GEN_AWLOCK(calc_0_m_axi_buf_r_AWLOCK[0]),
+        .S0_AXI_GEN_AWPROT(calc_0_m_axi_buf_r_AWPROT),
+        .S0_AXI_GEN_AWQOS(calc_0_m_axi_buf_r_AWQOS),
+        .S0_AXI_GEN_AWREADY(calc_0_m_axi_buf_r_AWREADY),
+        .S0_AXI_GEN_AWSIZE(calc_0_m_axi_buf_r_AWSIZE),
+        .S0_AXI_GEN_AWVALID(calc_0_m_axi_buf_r_AWVALID),
+        .S0_AXI_GEN_BREADY(calc_0_m_axi_buf_r_BREADY),
+        .S0_AXI_GEN_BRESP(calc_0_m_axi_buf_r_BRESP),
+        .S0_AXI_GEN_BVALID(calc_0_m_axi_buf_r_BVALID),
+        .S0_AXI_GEN_RDATA(calc_0_m_axi_buf_r_RDATA),
+        .S0_AXI_GEN_RLAST(calc_0_m_axi_buf_r_RLAST),
+        .S0_AXI_GEN_RREADY(calc_0_m_axi_buf_r_RREADY),
+        .S0_AXI_GEN_RRESP(calc_0_m_axi_buf_r_RRESP),
+        .S0_AXI_GEN_RVALID(calc_0_m_axi_buf_r_RVALID),
+        .S0_AXI_GEN_WDATA(calc_0_m_axi_buf_r_WDATA),
+        .S0_AXI_GEN_WLAST(calc_0_m_axi_buf_r_WLAST),
+        .S0_AXI_GEN_WREADY(calc_0_m_axi_buf_r_WREADY),
+        .S0_AXI_GEN_WSTRB(calc_0_m_axi_buf_r_WSTRB),
+        .S0_AXI_GEN_WVALID(calc_0_m_axi_buf_r_WVALID),
+        .S0_AXI_RACK(microblaze_0_M_ACE_DC_RACK),
+        .S0_AXI_RDATA(microblaze_0_M_ACE_DC_RDATA),
+        .S0_AXI_RID(microblaze_0_M_ACE_DC_RID),
+        .S0_AXI_RLAST(microblaze_0_M_ACE_DC_RLAST),
+        .S0_AXI_RREADY(microblaze_0_M_ACE_DC_RREADY),
+        .S0_AXI_RRESP(microblaze_0_M_ACE_DC_RRESP),
+        .S0_AXI_RVALID(microblaze_0_M_ACE_DC_RVALID),
+        .S0_AXI_WACK(microblaze_0_M_ACE_DC_WACK),
+        .S0_AXI_WDATA(microblaze_0_M_ACE_DC_WDATA),
+        .S0_AXI_WLAST(microblaze_0_M_ACE_DC_WLAST),
+        .S0_AXI_WREADY(microblaze_0_M_ACE_DC_WREADY),
+        .S0_AXI_WSTRB(microblaze_0_M_ACE_DC_WSTRB),
+        .S0_AXI_WVALID(microblaze_0_M_ACE_DC_WVALID),
+        .S1_AXI_ACREADY(1'b0),
+        .S1_AXI_ARADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S1_AXI_ARBAR({1'b0,1'b0}),
+        .S1_AXI_ARBURST({1'b0,1'b0}),
+        .S1_AXI_ARCACHE({1'b0,1'b0,1'b0,1'b0}),
+        .S1_AXI_ARDOMAIN({1'b0,1'b0}),
+        .S1_AXI_ARID(1'b0),
+        .S1_AXI_ARLEN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S1_AXI_ARLOCK(1'b0),
+        .S1_AXI_ARPROT({1'b0,1'b0,1'b0}),
+        .S1_AXI_ARQOS({1'b0,1'b0,1'b0,1'b0}),
+        .S1_AXI_ARSIZE({1'b0,1'b1,1'b0}),
+        .S1_AXI_ARSNOOP({1'b0,1'b0,1'b0,1'b0}),
+        .S1_AXI_ARVALID(1'b0),
+        .S1_AXI_AWADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S1_AXI_AWBAR({1'b0,1'b0}),
+        .S1_AXI_AWBURST({1'b0,1'b0}),
+        .S1_AXI_AWCACHE({1'b0,1'b0,1'b0,1'b0}),
+        .S1_AXI_AWDOMAIN({1'b0,1'b0}),
+        .S1_AXI_AWID(1'b0),
+        .S1_AXI_AWLEN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S1_AXI_AWLOCK(1'b0),
+        .S1_AXI_AWPROT({1'b0,1'b0,1'b0}),
+        .S1_AXI_AWQOS({1'b0,1'b0,1'b0,1'b0}),
+        .S1_AXI_AWSIZE({1'b0,1'b1,1'b0}),
+        .S1_AXI_AWSNOOP({1'b0,1'b0,1'b0}),
+        .S1_AXI_AWVALID(1'b0),
+        .S1_AXI_BREADY(1'b0),
+        .S1_AXI_CDDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S1_AXI_CDLAST(1'b0),
+        .S1_AXI_CDVALID(1'b0),
+        .S1_AXI_CRRESP({1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S1_AXI_CRVALID(1'b0),
+        .S1_AXI_RACK(1'b0),
+        .S1_AXI_RREADY(1'b0),
+        .S1_AXI_WACK(1'b0),
+        .S1_AXI_WDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .S1_AXI_WLAST(1'b0),
+        .S1_AXI_WSTRB({1'b0,1'b0,1'b0,1'b0}),
+        .S1_AXI_WVALID(1'b0));
   Fast_IP_Clock_xlconcat_0_0 xlconcat_0
        (.In0(mdm_1_Interrupt),
         .In1(axi_uart16550_0_ip2intc_irpt),

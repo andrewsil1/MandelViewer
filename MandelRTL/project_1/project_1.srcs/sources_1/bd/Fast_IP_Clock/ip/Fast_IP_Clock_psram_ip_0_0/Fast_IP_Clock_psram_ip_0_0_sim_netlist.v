@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Sat Jun  8 19:34:06 2019
+// Date        : Mon Jun 24 12:55:38 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_psram_ip_0_0 -prefix
 //               Fast_IP_Clock_psram_ip_0_0_ Fast_IP_Clock_psram_ip_0_0_sim_netlist.v
@@ -2170,7 +2170,7 @@ module Fast_IP_Clock_psram_ip_0_0
   (* x_interface_info = "xilinx.com:interface:emc:1.0 psram_rtl DQ_T" *) output [15:0]MEM_DATA_T;
   (* x_interface_info = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_CLK, ASSOCIATED_BUSIF S00_AXI, ASSOCIATED_RESET s00_axi_aresetn, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input s00_axi_aclk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s00_axi_aresetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWID" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI, WIZ.DATA_WIDTH 32, WIZ.MEMORY_SIZE 1024, SUPPORTS_NARROW_BURST 1, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 2, ADDR_WIDTH 24, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 1, RUSER_WIDTH 1, BUSER_WIDTH 1, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [1:0]s00_axi_awid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWID" *) (* x_interface_parameter = "XIL_INTERFACENAME S00_AXI, WIZ.DATA_WIDTH 32, WIZ.MEMORY_SIZE 1024, SUPPORTS_NARROW_BURST 1, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 1, ADDR_WIDTH 24, AWUSER_WIDTH 1, ARUSER_WIDTH 1, WUSER_WIDTH 1, RUSER_WIDTH 1, BUSER_WIDTH 1, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 16, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [0:0]s00_axi_awid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *) input [23:0]s00_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWLEN" *) input [7:0]s00_axi_awlen;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI AWSIZE" *) input [2:0]s00_axi_awsize;
@@ -2189,12 +2189,12 @@ module Fast_IP_Clock_psram_ip_0_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WUSER" *) input [0:0]s00_axi_wuser;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WVALID" *) input s00_axi_wvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI WREADY" *) output s00_axi_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BID" *) output [1:0]s00_axi_bid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BID" *) output [0:0]s00_axi_bid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BRESP" *) output [1:0]s00_axi_bresp;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BUSER" *) output [0:0]s00_axi_buser;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BVALID" *) output s00_axi_bvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI BREADY" *) input s00_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARID" *) input [1:0]s00_axi_arid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARID" *) input [0:0]s00_axi_arid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARADDR" *) input [23:0]s00_axi_araddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARLEN" *) input [7:0]s00_axi_arlen;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARSIZE" *) input [2:0]s00_axi_arsize;
@@ -2207,7 +2207,7 @@ module Fast_IP_Clock_psram_ip_0_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARUSER" *) input [0:0]s00_axi_aruser;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARVALID" *) input s00_axi_arvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI ARREADY" *) output s00_axi_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RID" *) output [1:0]s00_axi_rid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RID" *) output [0:0]s00_axi_rid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RDATA" *) output [31:0]s00_axi_rdata;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RRESP" *) output [1:0]s00_axi_rresp;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S00_AXI RLAST" *) output s00_axi_rlast;
@@ -2229,11 +2229,13 @@ module Fast_IP_Clock_psram_ip_0_0
   wire [23:0]s00_axi_araddr;
   wire [1:0]s00_axi_arburst;
   wire s00_axi_aresetn;
+  wire [0:0]s00_axi_arid;
   wire [7:0]s00_axi_arlen;
   wire s00_axi_arready;
   wire s00_axi_arvalid;
   wire [23:0]s00_axi_awaddr;
   wire [1:0]s00_axi_awburst;
+  wire [0:0]s00_axi_awid;
   wire [7:0]s00_axi_awlen;
   wire s00_axi_awready;
   wire s00_axi_awvalid;
@@ -2266,9 +2268,11 @@ module Fast_IP_Clock_psram_ip_0_0
   assign MEM_DATA_T[2] = \^MEM_DATA_T [0];
   assign MEM_DATA_T[1] = \^MEM_DATA_T [0];
   assign MEM_DATA_T[0] = \^MEM_DATA_T [0];
+  assign s00_axi_bid[0] = s00_axi_awid;
   assign s00_axi_bresp[1] = \<const0> ;
   assign s00_axi_bresp[0] = \<const0> ;
   assign s00_axi_buser[0] = \<const0> ;
+  assign s00_axi_rid[0] = s00_axi_arid;
   assign s00_axi_rresp[1] = \<const0> ;
   assign s00_axi_rresp[0] = \<const0> ;
   GND GND

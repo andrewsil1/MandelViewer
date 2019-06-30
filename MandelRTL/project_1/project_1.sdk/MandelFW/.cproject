@@ -183,6 +183,9 @@
 								<option id="xilinx.gnu.compiler.dircategory.includes.1539489585" name="Include Paths" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:\Users\andrewsi\Documents\GitHub\lz4\lib\"/>
 								</option>
+								<option id="xilinx.gnu.compiler.symbols.undefined.285869623" superClass="xilinx.gnu.compiler.symbols.undefined" valueType="undefDefinedSymbols">
+									<listOptionValue builtIn="false" value="DEBUG"/>
+								</option>
 								<inputType id="xilinx.gnu.mb.cxx.compiler.input.127345772" name="C++ source files" superClass="xilinx.gnu.mb.cxx.compiler.input"/>
 							</tool>
 							<tool id="xilinx.gnu.mb.toolchain.archiver.221885334" name="MicroBlaze archiver" superClass="xilinx.gnu.mb.toolchain.archiver"/>

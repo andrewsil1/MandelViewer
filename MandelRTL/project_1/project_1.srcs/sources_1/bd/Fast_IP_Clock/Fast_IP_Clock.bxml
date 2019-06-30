@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="37">
   <CompositeFile CompositeFileTopName="Fast_IP_Clock" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1561673100"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1561673100"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1561673100"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1561673100"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1561842698"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1561842698"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1561842698"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1561842698"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\Fast_IP_Clock_mdm_1_0\Fast_IP_Clock_mdm_1_0.xci" Type="IP">
         <Instance HierarchyPath="mdm_1"/>
@@ -146,14 +146,6 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\Fast_IP_Clock_smartconnect_0_0\Fast_IP_Clock_smartconnect_0_0.xci" Type="IP">
-        <Instance HierarchyPath="smartconnect_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
       <File Name="ip\Fast_IP_Clock_psram_ip_0_0\Fast_IP_Clock_psram_ip_0_0.xci" Type="IP">
         <Instance HierarchyPath="psram_ip_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -172,6 +164,14 @@
       </File>
       <File Name="ip\Fast_IP_Clock_m02_data_fifo_0\Fast_IP_Clock_m02_data_fifo_0.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0_axi_periph/m02_couplers/m02_data_fifo"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\Fast_IP_Clock_system_cache_0_0\Fast_IP_Clock_system_cache_0_0.xci" Type="IP">
+        <Instance HierarchyPath="system_cache_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

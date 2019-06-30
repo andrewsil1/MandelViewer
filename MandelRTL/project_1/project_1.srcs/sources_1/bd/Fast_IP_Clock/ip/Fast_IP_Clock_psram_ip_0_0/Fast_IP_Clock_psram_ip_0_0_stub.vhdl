@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Sat Jun  8 19:34:06 2019
+-- Date        : Mon Jun 24 12:55:38 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top Fast_IP_Clock_psram_ip_0_0 -prefix
 --               Fast_IP_Clock_psram_ip_0_0_ Fast_IP_Clock_psram_ip_0_0_stub.vhdl
@@ -26,7 +26,7 @@ entity Fast_IP_Clock_psram_ip_0_0 is
     MEM_DATA_T : out STD_LOGIC_VECTOR ( 15 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
-    s00_axi_awid : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_awid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 23 downto 0 );
     s00_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s00_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -45,12 +45,12 @@ entity Fast_IP_Clock_psram_ip_0_0 is
     s00_axi_wuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     s00_axi_wvalid : in STD_LOGIC;
     s00_axi_wready : out STD_LOGIC;
-    s00_axi_bid : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bid : out STD_LOGIC_VECTOR ( 0 to 0 );
     s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_buser : out STD_LOGIC_VECTOR ( 0 to 0 );
     s00_axi_bvalid : out STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;
-    s00_axi_arid : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_arid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 23 downto 0 );
     s00_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s00_axi_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -63,7 +63,7 @@ entity Fast_IP_Clock_psram_ip_0_0 is
     s00_axi_aruser : in STD_LOGIC_VECTOR ( 0 to 0 );
     s00_axi_arvalid : in STD_LOGIC;
     s00_axi_arready : out STD_LOGIC;
-    s00_axi_rid : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rid : out STD_LOGIC_VECTOR ( 0 to 0 );
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_rlast : out STD_LOGIC;
@@ -78,7 +78,7 @@ architecture stub of Fast_IP_Clock_psram_ip_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "MEM_ADDR_OUT[22:0],MEM_CEN,MEM_OEN,MEM_WEN,MEM_BEN[1:0],MEM_ADV,MEM_CRE,MEM_DATA_I[15:0],MEM_DATA_O[15:0],MEM_DATA_T[15:0],s00_axi_aclk,s00_axi_aresetn,s00_axi_awid[1:0],s00_axi_awaddr[23:0],s00_axi_awlen[7:0],s00_axi_awsize[2:0],s00_axi_awburst[1:0],s00_axi_awlock,s00_axi_awcache[3:0],s00_axi_awprot[2:0],s00_axi_awqos[3:0],s00_axi_awregion[3:0],s00_axi_awuser[0:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wlast,s00_axi_wuser[0:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bid[1:0],s00_axi_bresp[1:0],s00_axi_buser[0:0],s00_axi_bvalid,s00_axi_bready,s00_axi_arid[1:0],s00_axi_araddr[23:0],s00_axi_arlen[7:0],s00_axi_arsize[2:0],s00_axi_arburst[1:0],s00_axi_arlock,s00_axi_arcache[3:0],s00_axi_arprot[2:0],s00_axi_arqos[3:0],s00_axi_arregion[3:0],s00_axi_aruser[0:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rid[1:0],s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rlast,s00_axi_ruser[0:0],s00_axi_rvalid,s00_axi_rready";
+attribute black_box_pad_pin of stub : architecture is "MEM_ADDR_OUT[22:0],MEM_CEN,MEM_OEN,MEM_WEN,MEM_BEN[1:0],MEM_ADV,MEM_CRE,MEM_DATA_I[15:0],MEM_DATA_O[15:0],MEM_DATA_T[15:0],s00_axi_aclk,s00_axi_aresetn,s00_axi_awid[0:0],s00_axi_awaddr[23:0],s00_axi_awlen[7:0],s00_axi_awsize[2:0],s00_axi_awburst[1:0],s00_axi_awlock,s00_axi_awcache[3:0],s00_axi_awprot[2:0],s00_axi_awqos[3:0],s00_axi_awregion[3:0],s00_axi_awuser[0:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wlast,s00_axi_wuser[0:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bid[0:0],s00_axi_bresp[1:0],s00_axi_buser[0:0],s00_axi_bvalid,s00_axi_bready,s00_axi_arid[0:0],s00_axi_araddr[23:0],s00_axi_arlen[7:0],s00_axi_arsize[2:0],s00_axi_arburst[1:0],s00_axi_arlock,s00_axi_arcache[3:0],s00_axi_arprot[2:0],s00_axi_arqos[3:0],s00_axi_arregion[3:0],s00_axi_aruser[0:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rid[0:0],s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rlast,s00_axi_ruser[0:0],s00_axi_rvalid,s00_axi_rready";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "psram_ip_v1_0,Vivado 2019.1";
 begin
