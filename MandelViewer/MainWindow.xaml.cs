@@ -260,7 +260,7 @@
          */
         private void ComPortcomboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (ComPortcomboBox.SelectedIndex != 0 && ComPortcomboBox.Items[0].Equals("Select..."))
+            if (ComPortcomboBox.SelectedIndex > 0 && ComPortcomboBox.Items[0].Equals("Select..."))
             {
                 _serialPort.Close();
                 _serialPort.PortName = ComPortcomboBox.SelectedItem.ToString();
@@ -275,12 +275,20 @@
                 _serialPort.ReadTimeout = 1000;
                 _serialPort.WriteTimeout = 1000;
 
-                _serialPort.Open();
-                buttonGo.IsEnabled = true;
-
-                if (ComPortcomboBox.Items[0].Equals("Select..."))
+                try
                 {
-                    ComPortcomboBox.Items.RemoveAt(0);
+                    _serialPort.Open();
+                    buttonGo.IsEnabled = true;
+                    if (ComPortcomboBox.Items[0].Equals("Select..."))
+                    {
+                        ComPortcomboBox.Items.RemoveAt(0);
+                    }
+                }
+                catch (Exception exception)
+                {
+                    MessageBox.Show("Selected serial port couldn't be opened.", "Serial port error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    ComPortcomboBox.Items.Remove(ComPortcomboBox.SelectedItem);
+                    ComPortcomboBox.SelectedItem = ComPortcomboBox.Items[0];
                 }
             }
             else
