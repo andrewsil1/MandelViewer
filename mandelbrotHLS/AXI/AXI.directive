@@ -100,6 +100,22 @@
                 <option name="bundle" value="in_parms"/>
             </pragma>
         </directive>
+        <directive functionName="calc" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="depth" value="8112"/>
+                <option name="port" value="LED" positionalBoolean="4"/>
+                <option name="offset" value="direct"/>
+            </pragma>
+        </directive>
+        <directive functionName="calc" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="depth" value="8112"/>
+                <option name="port" value="LEDControl" positionalBoolean="4"/>
+                <option name="offset" value="direct"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

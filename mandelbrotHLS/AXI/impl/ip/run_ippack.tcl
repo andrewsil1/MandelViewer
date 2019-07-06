@@ -53,7 +53,7 @@ set Library     "hls"
 set IPName      "calc"
 set Version     "1.01"
 set DisplayName "calc"
-set Revision    "1906082136"
+set Revision    "1907051203"
 set Description "Mandelbrot Calculator Core"
 set Device      "artix7"
 set AutoFamily  ""
@@ -75,6 +75,7 @@ calc_mul_40s_41s_dEe
 calc_sdiv_41ns_13eOg
 calc_mul_12ns_40sfYi
 calc_in_parms_s_axi
+calc_gmem_m_axi
 calc_buf_r_m_axi
 pretest
 mandel_calc
@@ -201,7 +202,7 @@ set Interfaces {
                 Bits "1"
             }
         }
-        buses "s_axi_in_parms m_axi_buf_r"
+        buses "s_axi_in_parms m_axi_gmem m_axi_buf_r"
         reset "ap_rst_n"
     }
     ap_rst_n {
@@ -224,6 +225,249 @@ set Interfaces {
                 Bits "1"
             }
         }
+    }
+    m_axi_gmem {
+        type "native_axim"
+        mode "master"
+        port_prefix "m_axi_gmem"
+        data_width "32"
+        param_prefix "C_M_AXI_GMEM"
+        port_width "AWADDR 32 AWID 1 AWUSER 1 WDATA 32 WSTRB 4 WID 1 WUSER 1 ARADDR 32 ARID 1 ARUSER 1 RDATA 32 RID 1 RUSER 1 BID 1 BUSER 1"
+        ctype {
+            AWLEN {
+                Type "integer unsigned"
+                Width "8"
+                Bits "8"
+            }
+            AWSIZE {
+                Type "integer unsigned"
+                Width "3"
+                Bits "3"
+            }
+            AWBURST {
+                Type "integer unsigned"
+                Width "2"
+                Bits "2"
+            }
+            AWLOCK {
+                Type "integer unsigned"
+                Width "2"
+                Bits "2"
+            }
+            AWREGION {
+                Type "integer unsigned"
+                Width "4"
+                Bits "4"
+            }
+            AWCACHE {
+                Type "integer unsigned"
+                Width "4"
+                Bits "4"
+            }
+            AWPROT {
+                Type "integer unsigned"
+                Width "3"
+                Bits "3"
+            }
+            AWQOS {
+                Type "integer unsigned"
+                Width "4"
+                Bits "4"
+            }
+            AWVALID {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            AWREADY {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            WLAST {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            WVALID {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            WREADY {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            BVALID {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            BREADY {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            BRESP {
+                Type "integer unsigned"
+                Width "2"
+                Bits "2"
+            }
+            ARLEN {
+                Type "integer unsigned"
+                Width "8"
+                Bits "8"
+            }
+            ARSIZE {
+                Type "integer unsigned"
+                Width "3"
+                Bits "3"
+            }
+            ARBURST {
+                Type "integer unsigned"
+                Width "2"
+                Bits "2"
+            }
+            ARLOCK {
+                Type "integer unsigned"
+                Width "2"
+                Bits "2"
+            }
+            ARREGION {
+                Type "integer unsigned"
+                Width "4"
+                Bits "4"
+            }
+            ARCACHE {
+                Type "integer unsigned"
+                Width "4"
+                Bits "4"
+            }
+            ARPROT {
+                Type "integer unsigned"
+                Width "3"
+                Bits "3"
+            }
+            ARQOS {
+                Type "integer unsigned"
+                Width "4"
+                Bits "4"
+            }
+            ARVALID {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            ARREADY {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            RLAST {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            RVALID {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            RREADY {
+                Type "bool"
+                Width "1"
+                Bits "1"
+            }
+            RRESP {
+                Type "integer unsigned"
+                Width "2"
+                Bits "2"
+            }
+            AWADDR {
+                Type "integer unsigned"
+                Width "32"
+                Bits "32"
+            }
+            AWID {
+                Type "integer unsigned"
+                Width "1"
+                Bits "1"
+            }
+            AWUSER {
+                Type "integer unsigned"
+                Width "1"
+                Bits "1"
+            }
+            WDATA {
+                Type "integer signed"
+                Width "32"
+                Bits "32"
+            }
+            WSTRB {
+                Type "integer unsigned"
+                Width "4"
+                Bits "4"
+            }
+            WID {
+                Type "integer unsigned"
+                Width "1"
+                Bits "1"
+            }
+            WUSER {
+                Type "integer unsigned"
+                Width "1"
+                Bits "1"
+            }
+            ARADDR {
+                Type "integer unsigned"
+                Width "32"
+                Bits "32"
+            }
+            ARID {
+                Type "integer unsigned"
+                Width "1"
+                Bits "1"
+            }
+            ARUSER {
+                Type "integer unsigned"
+                Width "1"
+                Bits "1"
+            }
+            RDATA {
+                Type "integer signed"
+                Width "32"
+                Bits "32"
+            }
+            RID {
+                Type "integer unsigned"
+                Width "1"
+                Bits "1"
+            }
+            RUSER {
+                Type "integer unsigned"
+                Width "1"
+                Bits "1"
+            }
+            BID {
+                Type "integer unsigned"
+                Width "1"
+                Bits "1"
+            }
+            BUSER {
+                Type "integer unsigned"
+                Width "1"
+                Bits "1"
+            }
+        }
+        HasOffset "1"
+        preferred_usage_value "MEMORY"
+        has_dependant_on "0"
+        offset_slave_name ""
+        NUM_READ_OUTSTANDING "16"
+        NUM_WRITE_OUTSTANDING "16"
+        MAX_READ_BURST_LENGTH "16"
+        MAX_WRITE_BURST_LENGTH "16"
     }
     m_axi_buf_r {
         type "native_axim"
@@ -467,6 +711,30 @@ set Interfaces {
         NUM_WRITE_OUTSTANDING "16"
         MAX_READ_BURST_LENGTH "16"
         MAX_WRITE_BURST_LENGTH "16"
+    }
+    LEDControl {
+        type "data"
+        dir "in"
+        width "32"
+        ctype {
+            DATA {
+                Type "null"
+                Width "32"
+                Bits "32"
+            }
+        }
+    }
+    LED {
+        type "data"
+        dir "in"
+        width "32"
+        ctype {
+            DATA {
+                Type "null"
+                Width "32"
+                Bits "32"
+            }
+        }
     }
 }
 

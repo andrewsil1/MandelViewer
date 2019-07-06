@@ -1011,7 +1011,7 @@
 					<Obj>
 						<type>0</type>
 						<id>22</id>
-						<name>p_Result_s_12</name>
+						<name>p_Result_s_14</name>
 						<fileName>mandelbrotHLS/pretest.cpp</fileName>
 						<fileDirectory>C:\Users\andrewsi\Documents\GitHub\MandelViewer</fileDirectory>
 						<lineNumber>12</lineNumber>
@@ -12882,7 +12882,7 @@
 			</second>
 		</item>
 		<item>
-			<first>p_Result_s_12_fu_304</first>
+			<first>p_Result_s_14_fu_304</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

@@ -1641,7 +1641,7 @@
             <Obj>
               <type>0</type>
               <id>42</id>
-              <name>p_Result_s_13</name>
+              <name>p_Result_s_15</name>
               <fileName>mandelbrotHLS/mandel.cpp</fileName>
               <fileDirectory>..</fileDirectory>
               <lineNumber>30</lineNumber>
@@ -1665,7 +1665,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>p_Result_s_13_fu_252_p4</rtlName>
+              <rtlName>p_Result_s_15_fu_252_p4</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>3</bitwidth>
@@ -22440,7 +22440,7 @@
         </second>
       </item>
       <item>
-        <first>p_Result_s_13_fu_252</first>
+        <first>p_Result_s_15_fu_252</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

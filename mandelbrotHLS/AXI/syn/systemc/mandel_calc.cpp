@@ -161,7 +161,7 @@ mandel_calc::mandel_calc(sc_module_name name) : sc_module(name), mVcdFile(0) {
 
     SC_METHOD(thread_Range2_all_ones_fu_262_p2);
     sensitive << ( ap_CS_fsm_state9 );
-    sensitive << ( p_Result_s_13_fu_252_p4 );
+    sensitive << ( p_Result_s_15_fu_252_p4 );
 
     SC_METHOD(thread_and_ln38_fu_1171_p2);
     sensitive << ( icmp_ln1498_reg_1446 );
@@ -717,12 +717,12 @@ mandel_calc::mandel_calc(sc_module_name name) : sc_module(name), mVcdFile(0) {
     SC_METHOD(thread_p_Result_9_fu_813_p4);
     sensitive << ( p_Result_9_fu_813_p1 );
 
-    SC_METHOD(thread_p_Result_s_13_fu_252_p1);
+    SC_METHOD(thread_p_Result_s_15_fu_252_p1);
     sensitive << ( grp_fu_224_p2 );
     sensitive << ( ap_CS_fsm_state9 );
 
-    SC_METHOD(thread_p_Result_s_13_fu_252_p4);
-    sensitive << ( p_Result_s_13_fu_252_p1 );
+    SC_METHOD(thread_p_Result_s_15_fu_252_p4);
+    sensitive << ( p_Result_s_15_fu_252_p1 );
 
     SC_METHOD(thread_p_Result_s_fu_240_p1);
     sensitive << ( grp_fu_224_p2 );
@@ -1156,8 +1156,8 @@ mandel_calc::mandel_calc(sc_module_name name) : sc_module(name), mVcdFile(0) {
     sc_trace(mVcdFile, grp_fu_224_p1, "grp_fu_224_p1");
     sc_trace(mVcdFile, p_Result_s_fu_240_p1, "p_Result_s_fu_240_p1");
     sc_trace(mVcdFile, trunc_ln718_fu_248_p0, "trunc_ln718_fu_248_p0");
-    sc_trace(mVcdFile, p_Result_s_13_fu_252_p1, "p_Result_s_13_fu_252_p1");
-    sc_trace(mVcdFile, p_Result_s_13_fu_252_p4, "p_Result_s_13_fu_252_p4");
+    sc_trace(mVcdFile, p_Result_s_15_fu_252_p1, "p_Result_s_15_fu_252_p1");
+    sc_trace(mVcdFile, p_Result_s_15_fu_252_p4, "p_Result_s_15_fu_252_p4");
     sc_trace(mVcdFile, p_Result_5_fu_268_p1, "p_Result_5_fu_268_p1");
     sc_trace(mVcdFile, p_Result_7_fu_290_p4, "p_Result_7_fu_290_p4");
     sc_trace(mVcdFile, x2_V_fu_346_p1, "x2_V_fu_346_p1");
@@ -1556,7 +1556,7 @@ void mandel_calc::thread_Range2_all_ones_3_fu_1032_p2() {
 }
 
 void mandel_calc::thread_Range2_all_ones_fu_262_p2() {
-    Range2_all_ones_fu_262_p2 = (!p_Result_s_13_fu_252_p4.read().is_01() || !ap_const_lv3_7.is_01())? sc_lv<1>(): sc_lv<1>(p_Result_s_13_fu_252_p4.read() == ap_const_lv3_7);
+    Range2_all_ones_fu_262_p2 = (!p_Result_s_15_fu_252_p4.read().is_01() || !ap_const_lv3_7.is_01())? sc_lv<1>(): sc_lv<1>(p_Result_s_15_fu_252_p4.read() == ap_const_lv3_7);
 }
 
 void mandel_calc::thread_and_ln38_fu_1171_p2() {
@@ -2190,12 +2190,12 @@ void mandel_calc::thread_p_Result_9_fu_813_p4() {
     p_Result_9_fu_813_p4 = p_Result_9_fu_813_p1.read().range(41, 40);
 }
 
-void mandel_calc::thread_p_Result_s_13_fu_252_p1() {
-    p_Result_s_13_fu_252_p1 =  (sc_lv<80>) (grp_fu_224_p2.read());
+void mandel_calc::thread_p_Result_s_15_fu_252_p1() {
+    p_Result_s_15_fu_252_p1 =  (sc_lv<80>) (grp_fu_224_p2.read());
 }
 
-void mandel_calc::thread_p_Result_s_13_fu_252_p4() {
-    p_Result_s_13_fu_252_p4 = p_Result_s_13_fu_252_p1.read().range(79, 77);
+void mandel_calc::thread_p_Result_s_15_fu_252_p4() {
+    p_Result_s_15_fu_252_p4 = p_Result_s_15_fu_252_p1.read().range(79, 77);
 }
 
 void mandel_calc::thread_p_Result_s_fu_240_p1() {

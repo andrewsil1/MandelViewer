@@ -112,6 +112,30 @@ set Interface8 "wire"
 set DataType8 "unsigned short"
 set Port8 [list $PortName8 $Interface8 $DataType8 $Pointer8 $Dims8 $Const8 $Volatile8 $ArrayOpt8]
 lappend PortList $Port8
+set PortName9 "LEDControl"
+set BitWidth9 "64"
+set ArrayOpt9 ""
+set Const9 "0"
+set Volatile9 "0"
+set Pointer9 "1"
+set Reference9 "0"
+set Dims9 [list 0]
+set Interface9 "wire"
+set DataType9 "long unsigned int"
+set Port9 [list $PortName9 $Interface9 $DataType9 $Pointer9 $Dims9 $Const9 $Volatile9 $ArrayOpt9]
+lappend PortList $Port9
+set PortName10 "LED"
+set BitWidth10 "64"
+set ArrayOpt10 ""
+set Const10 "0"
+set Volatile10 "0"
+set Pointer10 "1"
+set Reference10 "0"
+set Dims10 [list 0]
+set Interface10 "wire"
+set DataType10 "long unsigned int"
+set Port10 [list $PortName10 $Interface10 $DataType10 $Pointer10 $Dims10 $Const10 $Volatile10 $ArrayOpt10]
+lappend PortList $Port10
 set globalAPint "" 
 set returnAPInt "" 
 set hasCPPAPInt 1 

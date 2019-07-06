@@ -1,5 +1,15 @@
 <InterfaceSummary>
 <RtlPorts>
+<name>gmem</name>
+<CType>
+<TypeName>long unsigned int</TypeName>
+<TypeWidth>32</TypeWidth>
+<PhysicalWidth>32</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
 <name>setup</name>
 <CType>
 <TypeName>bool</TypeName>

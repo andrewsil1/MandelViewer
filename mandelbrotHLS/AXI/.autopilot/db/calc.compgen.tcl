@@ -290,6 +290,27 @@ eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
     max_latency -1 \ 
     delay_budget 5.25 \ 
     is_flushable 0 \ 
+    name {calc_gmem_m_axi} \
+} "
+} else {
+puts "@W \[IMPL-110\] Cannot find AXI interface model in the library. Ignored generation of AXI interface for 'gmem'"
+}
+}
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler calc_gmem_m_axi
+}
+
+# Native M_AXI:
+if {${::AESL::PGuard_simmodel_gen}} {
+if {[info proc ::AESL_LIB_XILADAPTER::m_axi_gen] == "::AESL_LIB_XILADAPTER::m_axi_gen"} {
+eval "::AESL_LIB_XILADAPTER::m_axi_gen { \
+    id 26 \
+    corename {m_axi} \
+    op interface \
+    max_latency -1 \ 
+    delay_budget 5.25 \ 
+    is_flushable 0 \ 
     name {calc_buf_r_m_axi} \
 } "
 } else {
@@ -299,6 +320,36 @@ puts "@W \[IMPL-110\] Cannot find AXI interface model in the library. Ignored ge
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler calc_buf_r_m_axi
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 27 \
+    name LEDControl \
+    type other \
+    dir I \
+    reset_level 0 \
+    sync_rst true \
+    corename dc_LEDControl \
+    op interface \
+    ports { LEDControl { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 28 \
+    name LED \
+    type other \
+    dir I \
+    reset_level 0 \
+    sync_rst true \
+    corename dc_LED \
+    op interface \
+    ports { LED { I 32 vector } } \
+} "
 }
 
 

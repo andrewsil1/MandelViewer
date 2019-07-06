@@ -908,7 +908,7 @@ BEGIN
       C_D_AXI => 1,
       C_I_LMB => 1,
       C_I_AXI => 0,
-      C_USE_MSR_INSTR => 0,
+      C_USE_MSR_INSTR => 1,
       C_USE_PCMP_INSTR => 1,
       C_USE_BARREL => 1,
       C_USE_DIV => 1,

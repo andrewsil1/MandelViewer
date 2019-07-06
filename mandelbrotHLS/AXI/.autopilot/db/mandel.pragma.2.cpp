@@ -35090,7 +35090,7 @@ typedef ap_fixed<40,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
-void calc(bool setup, real X0, real Y0, real X1, res width, res* maxWidth, unsigned short* unroll, pixval maxIter, pixval *buf);
+void calc(bool setup, real X0, real Y0, real X1, res width, res* maxWidth, unsigned short* unroll, pixval maxIter, pixval *buf, unsigned long *LEDControl, unsigned long *LED);
 # 2 "mandelbrotHLS/mandel.cpp" 2
 # 1 "mandelbrotHLS/pretest.h" 1
 # 1 "mandelbrotHLS/mandel.h" 1
@@ -35101,7 +35101,7 @@ typedef ap_fixed<40,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
-void calc(bool setup, real X0, real Y0, real X1, res width, res* maxWidth, unsigned short* unroll, pixval maxIter, pixval *buf);
+void calc(bool setup, real X0, real Y0, real X1, res width, res* maxWidth, unsigned short* unroll, pixval maxIter, pixval *buf, unsigned long *LEDControl, unsigned long *LED);
 # 2 "mandelbrotHLS/pretest.h" 2
 
 bool pretest(real x, real y);
@@ -49827,7 +49827,13 @@ _ssdm_op_SpecLoopTripCount(0, 2000, 5, "");
 }
 
 
-void calc(bool setup, real X0, real Y0, real X1, res width, res *maxWidth, unsigned short *unroll, pixval maxIter, pixval *buf) {
+void calc(bool setup, real X0, real Y0, real X1, res width, res *maxWidth, unsigned short *unroll, pixval maxIter, pixval *buf, unsigned long *LEDControl, unsigned long *LED) {
+_ssdm_op_SpecInterface(LED, "m_axi", 0, 0, "", 0, 8112, "", "direct", "", 16, 16, 16, 16, "", "");
+# 57 "mandelbrotHLS/mandel.cpp"
+
+_ssdm_op_SpecInterface(LEDControl, "m_axi", 0, 0, "", 0, 8112, "", "direct", "", 16, 16, 16, 16, "", "");
+# 57 "mandelbrotHLS/mandel.cpp"
+
 _ssdm_op_SpecInterface(buf, "m_axi", 0, 0, "", 0, 8112, "", "off", "", 16, 16, 16, 16, "", "");
 # 57 "mandelbrotHLS/mandel.cpp"
 
@@ -49859,6 +49865,7 @@ _ssdm_op_SpecInterface(unroll, "s_axilite", 1, 1, "", 0, 0, "in_parms", "", "", 
 # 57 "mandelbrotHLS/mandel.cpp"
 
 
+
     real delta = (X1 - X0) / width;
     real y = Y0;
     real x = X0;
@@ -49876,18 +49883,21 @@ _ssdm_op_SpecInterface(unroll, "s_axilite", 1, 1, "", 0, 0, "in_parms", "", "", 
 
 
 
+        *LEDControl = 0x83;
+
 
 
 y_for: for (res line = 0; line < height; line++) {
 _ssdm_op_SpecLoopTripCount(768, 1440, 768, "");
-# 78 "mandelbrotHLS/mandel.cpp"
+# 81 "mandelbrotHLS/mandel.cpp"
 
+            *LED = line;
 x_for: for (res pix_x = 0; pix_x < width; pix_x++) {
 _ssdm_op_SpecLoopTripCount(1024, 1920, 1024, "");
-# 79 "mandelbrotHLS/mandel.cpp"
+# 83 "mandelbrotHLS/mandel.cpp"
 
 _ssdm_Unroll(1, 4, 8, "");
-# 79 "mandelbrotHLS/mandel.cpp"
+# 83 "mandelbrotHLS/mandel.cpp"
 
 
                 x = X0 + (pix_x * delta);

@@ -10,9 +10,9 @@
 
 <MemInfoSimulation Version="1" Minor="1">
   <Processor Endianness="Little" InstPath="Fast_IP_Clock_i/microblaze_0">
-    <AddressSpace Name="Fast_IP_Clock_i_microblaze_0.Fast_IP_Clock_i_microblaze_0_local_memory_lmb_bram_256K_13_ADDR_SPACE" ECC="NONE" Begin="0" End="262143">
+    <AddressSpace Name="Fast_IP_Clock_i_microblaze_0.Fast_IP_Clock_i_microblaze_0_local_memory_lmb_bram_ADDR_SPACE" ECC="NONE" Begin="0" End="262143">
       <BusBlock>
-        <BitLane MemType="microblaze_0_local_memory_lmb_bram_256K_13_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="262143">
+        <BitLane MemType="microblaze_0_local_memory_lmb_bram_MEM_DEVICE" MemType_DataWidth="32" MemType_AddressDepth="262143">
           <DataWidth MSB="31" LSB="0"/>
           <AddressRange Begin="0" End="65535"/>
           <Parity ON="false" NumBits="0"/>

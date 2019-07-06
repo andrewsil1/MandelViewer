@@ -170,8 +170,8 @@ struct mandel_calc : public sc_module {
     sc_signal< sc_lv<41> > grp_fu_224_p1;
     sc_signal< sc_lv<80> > p_Result_s_fu_240_p1;
     sc_signal< sc_lv<80> > trunc_ln718_fu_248_p0;
-    sc_signal< sc_lv<80> > p_Result_s_13_fu_252_p1;
-    sc_signal< sc_lv<3> > p_Result_s_13_fu_252_p4;
+    sc_signal< sc_lv<80> > p_Result_s_15_fu_252_p1;
+    sc_signal< sc_lv<3> > p_Result_s_15_fu_252_p4;
     sc_signal< sc_lv<80> > p_Result_5_fu_268_p1;
     sc_signal< sc_lv<3> > p_Result_7_fu_290_p4;
     sc_signal< sc_lv<80> > x2_V_fu_346_p1;
@@ -528,8 +528,8 @@ struct mandel_calc : public sc_module {
     void thread_p_Result_7_fu_290_p4();
     void thread_p_Result_9_fu_813_p1();
     void thread_p_Result_9_fu_813_p4();
-    void thread_p_Result_s_13_fu_252_p1();
-    void thread_p_Result_s_13_fu_252_p4();
+    void thread_p_Result_s_15_fu_252_p1();
+    void thread_p_Result_s_15_fu_252_p4();
     void thread_p_Result_s_fu_240_p1();
     void thread_p_Val2_21_fu_730_p3();
     void thread_r_5_fu_331_p2();

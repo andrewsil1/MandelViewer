@@ -131,6 +131,24 @@
         "interfaceRef": "m_axi_buf_r",
         "registerRefs": ["*"]
       }
+    },
+    "LEDControl": {
+      "index": "9",
+      "type": {
+        "kinds": ["pointer"],
+        "dataType": "long",
+        "dataWidth": "32",
+        "interfaceRef": "m_axi_gmem"
+      }
+    },
+    "LED": {
+      "index": "10",
+      "type": {
+        "kinds": ["pointer"],
+        "dataType": "long",
+        "dataWidth": "32",
+        "interfaceRef": "m_axi_gmem"
+      }
     }
   },
   "Return": {
@@ -163,6 +181,7 @@
     ],
     "Vhdl": [
       "impl\/vhdl\/calc_buf_r_m_axi.vhd",
+      "impl\/vhdl\/calc_gmem_m_axi.vhd",
       "impl\/vhdl\/calc_in_parms_s_axi.vhd",
       "impl\/vhdl\/calc_mul_12ns_40sfYi.vhd",
       "impl\/vhdl\/calc_mul_40s_40s_cud.vhd",
@@ -175,6 +194,7 @@
     ],
     "Verilog": [
       "impl\/verilog\/calc_buf_r_m_axi.v",
+      "impl\/verilog\/calc_gmem_m_axi.v",
       "impl\/verilog\/calc_in_parms_s_axi.v",
       "impl\/verilog\/calc_mul_12ns_40sfYi.v",
       "impl\/verilog\/calc_mul_40s_40s_cud.v",
@@ -211,7 +231,7 @@
       "ctype": {"CLK": {"Type": "bool"}},
       "bundle_name": "ap_clk",
       "bundle_role": "default",
-      "buses": "s_axi_in_parms m_axi_buf_r",
+      "buses": "s_axi_in_parms m_axi_gmem m_axi_buf_r",
       "reset": "ap_rst_n"
     },
     "ap_rst_n": {
@@ -226,6 +246,28 @@
       "ctype": {"INTERRUPT": {"Type": "bool"}},
       "bundle_name": "in_parms",
       "bundle_role": "interrupt"
+    },
+    "LED": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "32"
+        }},
+      "bundle_name": "LED",
+      "bundle_role": "default"
+    },
+    "LEDControl": {
+      "type": "data",
+      "dir": "in",
+      "width": "32",
+      "ctype": {"DATA": {
+          "Type": "null",
+          "Width": "32"
+        }},
+      "bundle_name": "LEDControl",
+      "bundle_role": "default"
     },
     "m_axi_buf_r": {
       "type": "native_axim",
@@ -381,6 +423,184 @@
         }
       },
       "HasOffset": "0",
+      "preferred_usage_value": "MEMORY",
+      "has_dependant_on": "0",
+      "NUM_READ_OUTSTANDING": "16",
+      "NUM_WRITE_OUTSTANDING": "16",
+      "MAX_READ_BURST_LENGTH": "16",
+      "MAX_WRITE_BURST_LENGTH": "16",
+      "port_width": {
+        "ARADDR": "32",
+        "ARID": "1",
+        "ARUSER": "1",
+        "AWADDR": "32",
+        "AWID": "1",
+        "AWUSER": "1",
+        "BID": "1",
+        "BUSER": "1",
+        "RDATA": "32",
+        "RID": "1",
+        "RUSER": "1",
+        "WDATA": "32",
+        "WID": "1",
+        "WSTRB": "4",
+        "WUSER": "1"
+      }
+    },
+    "m_axi_gmem": {
+      "type": "native_axim",
+      "is_adaptor": "true",
+      "mode": "master",
+      "port_prefix": "m_axi_gmem",
+      "data_width": "32",
+      "param_prefix": "C_M_AXI_GMEM",
+      "ctype": {
+        "AWLEN": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "AWSIZE": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "AWBURST": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWLOCK": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWREGION": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWCACHE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWPROT": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "AWQOS": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WLAST": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARLEN": {
+          "Type": "integer unsigned",
+          "Width": "8"
+        },
+        "ARSIZE": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "ARBURST": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARLOCK": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARREGION": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARCACHE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARPROT": {
+          "Type": "integer unsigned",
+          "Width": "3"
+        },
+        "ARQOS": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RLAST": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "AWID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "AWUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "WDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "WID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "WUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "ARID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "ARUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "RDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        },
+        "RID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "RUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "BID": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "BUSER": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        }
+      },
+      "HasOffset": "1",
       "preferred_usage_value": "MEMORY",
       "has_dependant_on": "0",
       "NUM_READ_OUTSTANDING": "16",
@@ -997,6 +1217,196 @@
       "width": "1",
       "isVector": "true"
     },
+    "m_axi_gmem_AWVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_gmem_AWREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_gmem_AWADDR": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_gmem_AWID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_gmem_AWLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_gmem_AWSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_gmem_AWBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_gmem_AWLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_gmem_AWCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_gmem_AWPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_gmem_AWQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_gmem_AWREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_gmem_AWUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_gmem_WVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_gmem_WREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_gmem_WDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_gmem_WSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_gmem_WLAST": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_gmem_WID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_gmem_WUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_gmem_ARVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_gmem_ARREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_gmem_ARADDR": {
+      "dir": "out",
+      "width": "32"
+    },
+    "m_axi_gmem_ARID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_gmem_ARLEN": {
+      "dir": "out",
+      "width": "8"
+    },
+    "m_axi_gmem_ARSIZE": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_gmem_ARBURST": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_gmem_ARLOCK": {
+      "dir": "out",
+      "width": "2"
+    },
+    "m_axi_gmem_ARCACHE": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_gmem_ARPROT": {
+      "dir": "out",
+      "width": "3"
+    },
+    "m_axi_gmem_ARQOS": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_gmem_ARREGION": {
+      "dir": "out",
+      "width": "4"
+    },
+    "m_axi_gmem_ARUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_gmem_RVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_gmem_RREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_gmem_RDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "m_axi_gmem_RLAST": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_gmem_RID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_gmem_RUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_gmem_RRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_gmem_BVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "m_axi_gmem_BREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "m_axi_gmem_BRESP": {
+      "dir": "in",
+      "width": "2"
+    },
+    "m_axi_gmem_BID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "m_axi_gmem_BUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
     "m_axi_buf_r_AWVALID": {
       "dir": "out",
       "width": "1"
@@ -1186,6 +1596,14 @@
       "dir": "in",
       "width": "1",
       "isVector": "true"
+    },
+    "LEDControl": {
+      "dir": "in",
+      "width": "32"
+    },
+    "LED": {
+      "dir": "in",
+      "width": "32"
     }
   },
   "ModuleInfo": {
@@ -1194,7 +1612,7 @@
       "Instances": [
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_336",
+          "InstanceName": "grp_mandel_calc_fu_406",
           "Instances": [{
               "ModuleName": "pretest",
               "InstanceName": "grp_pretest_fu_187"
@@ -1202,7 +1620,7 @@
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_344",
+          "InstanceName": "grp_mandel_calc_fu_414",
           "Instances": [{
               "ModuleName": "pretest",
               "InstanceName": "grp_pretest_fu_187"
@@ -1210,7 +1628,7 @@
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_352",
+          "InstanceName": "grp_mandel_calc_fu_422",
           "Instances": [{
               "ModuleName": "pretest",
               "InstanceName": "grp_pretest_fu_187"
@@ -1218,7 +1636,7 @@
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_360",
+          "InstanceName": "grp_mandel_calc_fu_430",
           "Instances": [{
               "ModuleName": "pretest",
               "InstanceName": "grp_pretest_fu_187"
@@ -1226,7 +1644,7 @@
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_376",
+          "InstanceName": "grp_mandel_calc_fu_446",
           "Instances": [{
               "ModuleName": "pretest",
               "InstanceName": "grp_pretest_fu_187"
@@ -1234,7 +1652,7 @@
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_368",
+          "InstanceName": "grp_mandel_calc_fu_438",
           "Instances": [{
               "ModuleName": "pretest",
               "InstanceName": "grp_pretest_fu_187"
@@ -1242,7 +1660,7 @@
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_320",
+          "InstanceName": "grp_mandel_calc_fu_390",
           "Instances": [{
               "ModuleName": "pretest",
               "InstanceName": "grp_pretest_fu_187"
@@ -1250,7 +1668,7 @@
         },
         {
           "ModuleName": "mandel_calc",
-          "InstanceName": "grp_mandel_calc_fu_328",
+          "InstanceName": "grp_mandel_calc_fu_398",
           "Instances": [{
               "ModuleName": "pretest",
               "InstanceName": "grp_pretest_fu_187"
@@ -1340,11 +1758,11 @@
       "calc": {
         "Latency": {
           "LatencyBest": "47",
-          "LatencyAvg": "5063471",
-          "LatencyWorst": "14538012527",
+          "LatencyAvg": "5065778",
+          "LatencyWorst": "14538021173",
           "PipelineIIMin": "48",
-          "PipelineIIMax": "14538012528",
-          "PipelineII": "48 ~ 14538012528",
+          "PipelineIIMax": "14538021174",
+          "PipelineII": "48 ~ 14538021174",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -1356,13 +1774,13 @@
         "Loops": [{
             "Name": "y_for",
             "TripCount": "",
-            "LatencyMin": "4425216",
-            "LatencyMax": "14538012480",
-            "Latency": "4425216 ~ 14538012480",
+            "LatencyMin": "4429824",
+            "LatencyMax": "14538021120",
+            "Latency": "4429824 ~ 14538021120",
             "PipelineII": "",
-            "PipelineDepthMin": "5762",
-            "PipelineDepthMax": "10095842",
-            "PipelineDepth": "5762 ~ 10095842",
+            "PipelineDepthMin": "5768",
+            "PipelineDepthMax": "10095848",
+            "PipelineDepth": "5768 ~ 10095848",
             "Loops": [{
                 "Name": "x_for",
                 "TripCount": "",
@@ -1376,10 +1794,10 @@
               }]
           }],
         "Area": {
-          "BRAM_18K": "2",
+          "BRAM_18K": "4",
           "DSP48E": "176",
-          "FF": "21963",
-          "LUT": "24793",
+          "FF": "22566",
+          "LUT": "25601",
           "URAM": "0"
         }
       }
@@ -1395,7 +1813,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2019-06-08 21:36:26 -0700",
+    "Time": "2019-07-05 12:03:41 -0700",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.1"
   }

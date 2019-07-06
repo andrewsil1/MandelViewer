@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 // IP VLNV: QuickSilver:hls:calc:1.01
-// IP Revision: 1906082136
+// IP Revision: 1907051203
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -75,6 +75,41 @@ calc_0 your_instance_name (
   .ap_clk(ap_clk),                                  // input wire ap_clk
   .ap_rst_n(ap_rst_n),                              // input wire ap_rst_n
   .interrupt(interrupt),                            // output wire interrupt
+  .m_axi_gmem_AWADDR(m_axi_gmem_AWADDR),            // output wire [31 : 0] m_axi_gmem_AWADDR
+  .m_axi_gmem_AWLEN(m_axi_gmem_AWLEN),              // output wire [7 : 0] m_axi_gmem_AWLEN
+  .m_axi_gmem_AWSIZE(m_axi_gmem_AWSIZE),            // output wire [2 : 0] m_axi_gmem_AWSIZE
+  .m_axi_gmem_AWBURST(m_axi_gmem_AWBURST),          // output wire [1 : 0] m_axi_gmem_AWBURST
+  .m_axi_gmem_AWLOCK(m_axi_gmem_AWLOCK),            // output wire [1 : 0] m_axi_gmem_AWLOCK
+  .m_axi_gmem_AWREGION(m_axi_gmem_AWREGION),        // output wire [3 : 0] m_axi_gmem_AWREGION
+  .m_axi_gmem_AWCACHE(m_axi_gmem_AWCACHE),          // output wire [3 : 0] m_axi_gmem_AWCACHE
+  .m_axi_gmem_AWPROT(m_axi_gmem_AWPROT),            // output wire [2 : 0] m_axi_gmem_AWPROT
+  .m_axi_gmem_AWQOS(m_axi_gmem_AWQOS),              // output wire [3 : 0] m_axi_gmem_AWQOS
+  .m_axi_gmem_AWVALID(m_axi_gmem_AWVALID),          // output wire m_axi_gmem_AWVALID
+  .m_axi_gmem_AWREADY(m_axi_gmem_AWREADY),          // input wire m_axi_gmem_AWREADY
+  .m_axi_gmem_WDATA(m_axi_gmem_WDATA),              // output wire [31 : 0] m_axi_gmem_WDATA
+  .m_axi_gmem_WSTRB(m_axi_gmem_WSTRB),              // output wire [3 : 0] m_axi_gmem_WSTRB
+  .m_axi_gmem_WLAST(m_axi_gmem_WLAST),              // output wire m_axi_gmem_WLAST
+  .m_axi_gmem_WVALID(m_axi_gmem_WVALID),            // output wire m_axi_gmem_WVALID
+  .m_axi_gmem_WREADY(m_axi_gmem_WREADY),            // input wire m_axi_gmem_WREADY
+  .m_axi_gmem_BRESP(m_axi_gmem_BRESP),              // input wire [1 : 0] m_axi_gmem_BRESP
+  .m_axi_gmem_BVALID(m_axi_gmem_BVALID),            // input wire m_axi_gmem_BVALID
+  .m_axi_gmem_BREADY(m_axi_gmem_BREADY),            // output wire m_axi_gmem_BREADY
+  .m_axi_gmem_ARADDR(m_axi_gmem_ARADDR),            // output wire [31 : 0] m_axi_gmem_ARADDR
+  .m_axi_gmem_ARLEN(m_axi_gmem_ARLEN),              // output wire [7 : 0] m_axi_gmem_ARLEN
+  .m_axi_gmem_ARSIZE(m_axi_gmem_ARSIZE),            // output wire [2 : 0] m_axi_gmem_ARSIZE
+  .m_axi_gmem_ARBURST(m_axi_gmem_ARBURST),          // output wire [1 : 0] m_axi_gmem_ARBURST
+  .m_axi_gmem_ARLOCK(m_axi_gmem_ARLOCK),            // output wire [1 : 0] m_axi_gmem_ARLOCK
+  .m_axi_gmem_ARREGION(m_axi_gmem_ARREGION),        // output wire [3 : 0] m_axi_gmem_ARREGION
+  .m_axi_gmem_ARCACHE(m_axi_gmem_ARCACHE),          // output wire [3 : 0] m_axi_gmem_ARCACHE
+  .m_axi_gmem_ARPROT(m_axi_gmem_ARPROT),            // output wire [2 : 0] m_axi_gmem_ARPROT
+  .m_axi_gmem_ARQOS(m_axi_gmem_ARQOS),              // output wire [3 : 0] m_axi_gmem_ARQOS
+  .m_axi_gmem_ARVALID(m_axi_gmem_ARVALID),          // output wire m_axi_gmem_ARVALID
+  .m_axi_gmem_ARREADY(m_axi_gmem_ARREADY),          // input wire m_axi_gmem_ARREADY
+  .m_axi_gmem_RDATA(m_axi_gmem_RDATA),              // input wire [31 : 0] m_axi_gmem_RDATA
+  .m_axi_gmem_RRESP(m_axi_gmem_RRESP),              // input wire [1 : 0] m_axi_gmem_RRESP
+  .m_axi_gmem_RLAST(m_axi_gmem_RLAST),              // input wire m_axi_gmem_RLAST
+  .m_axi_gmem_RVALID(m_axi_gmem_RVALID),            // input wire m_axi_gmem_RVALID
+  .m_axi_gmem_RREADY(m_axi_gmem_RREADY),            // output wire m_axi_gmem_RREADY
   .m_axi_buf_r_AWADDR(m_axi_buf_r_AWADDR),          // output wire [31 : 0] m_axi_buf_r_AWADDR
   .m_axi_buf_r_AWLEN(m_axi_buf_r_AWLEN),            // output wire [7 : 0] m_axi_buf_r_AWLEN
   .m_axi_buf_r_AWSIZE(m_axi_buf_r_AWSIZE),          // output wire [2 : 0] m_axi_buf_r_AWSIZE
@@ -109,7 +144,9 @@ calc_0 your_instance_name (
   .m_axi_buf_r_RRESP(m_axi_buf_r_RRESP),            // input wire [1 : 0] m_axi_buf_r_RRESP
   .m_axi_buf_r_RLAST(m_axi_buf_r_RLAST),            // input wire m_axi_buf_r_RLAST
   .m_axi_buf_r_RVALID(m_axi_buf_r_RVALID),          // input wire m_axi_buf_r_RVALID
-  .m_axi_buf_r_RREADY(m_axi_buf_r_RREADY)          // output wire m_axi_buf_r_RREADY
+  .m_axi_buf_r_RREADY(m_axi_buf_r_RREADY),          // output wire m_axi_buf_r_RREADY
+  .LEDControl(LEDControl),                          // input wire [31 : 0] LEDControl
+  .LED(LED)                                        // input wire [31 : 0] LED
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

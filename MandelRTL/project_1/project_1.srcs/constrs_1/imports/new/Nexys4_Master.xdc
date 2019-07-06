@@ -133,59 +133,61 @@ set_property IOSTANDARD LVCMOS33 [get_ports clk]
 #set_property PACKAGE_PIN L16 [get_ports RGB2_Blue]
 #set_property IOSTANDARD LVCMOS33 [get_ports RGB2_Blue]
 
+set_property IOB TRUE [get_ports {cathode[*]}]
+set_property IOB TRUE [get_ports {anode[*]}]
+set_property IOB TRUE [get_ports dp]
 
+#7 segment display
+#Bank = 34, Pin name = IO_L2N_T0_34,						Sch name = CA
+set_property PACKAGE_PIN L3 [get_ports {cathode[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cathode[0]}]
+#Bank = 34, Pin name = IO_L3N_T0_DQS_34,					Sch name = CB
+set_property PACKAGE_PIN N1 [get_ports {cathode[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cathode[1]}]
+#Bank = 34, Pin name = IO_L6N_T0_VREF_34,					Sch name = CC
+set_property PACKAGE_PIN L5 [get_ports {cathode[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cathode[2]}]
+#Bank = 34, Pin name = IO_L5N_T0_34,						Sch name = CD
+set_property PACKAGE_PIN L4 [get_ports {cathode[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cathode[3]}]
+#Bank = 34, Pin name = IO_L2P_T0_34,						Sch name = CE
+set_property PACKAGE_PIN K3 [get_ports {cathode[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cathode[4]}]
+#Bank = 34, Pin name = IO_L4N_T0_34,						Sch name = CF
+set_property PACKAGE_PIN M2 [get_ports {cathode[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cathode[5]}]
+#Bank = 34, Pin name = IO_L6P_T0_34,						Sch name = CG
+set_property PACKAGE_PIN L6 [get_ports {cathode[6]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {cathode[6]}]
 
-##7 segment display
-##Bank = 34, Pin name = IO_L2N_T0_34,						Sch name = CA
-#set_property PACKAGE_PIN L3 [get_ports {seg[0]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {seg[0]}]
-##Bank = 34, Pin name = IO_L3N_T0_DQS_34,					Sch name = CB
-#set_property PACKAGE_PIN N1 [get_ports {seg[1]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {seg[1]}]
-##Bank = 34, Pin name = IO_L6N_T0_VREF_34,					Sch name = CC
-#set_property PACKAGE_PIN L5 [get_ports {seg[2]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {seg[2]}]
-##Bank = 34, Pin name = IO_L5N_T0_34,						Sch name = CD
-#set_property PACKAGE_PIN L4 [get_ports {seg[3]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {seg[3]}]
-##Bank = 34, Pin name = IO_L2P_T0_34,						Sch name = CE
-#set_property PACKAGE_PIN K3 [get_ports {seg[4]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {seg[4]}]
-##Bank = 34, Pin name = IO_L4N_T0_34,						Sch name = CF
-#set_property PACKAGE_PIN M2 [get_ports {seg[5]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {seg[5]}]
-##Bank = 34, Pin name = IO_L6P_T0_34,						Sch name = CG
-#set_property PACKAGE_PIN L6 [get_ports {seg[6]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {seg[6]}]
+#Bank = 34, Pin name = IO_L16P_T2_34,						Sch name = DP
+set_property PACKAGE_PIN M4 [get_ports dp]
+set_property IOSTANDARD LVCMOS33 [get_ports dp]
 
-##Bank = 34, Pin name = IO_L16P_T2_34,						Sch name = DP
-#set_property PACKAGE_PIN M4 [get_ports dp]
-#	set_property IOSTANDARD LVCMOS33 [get_ports dp]
-
-##Bank = 34, Pin name = IO_L18N_T2_34,						Sch name = AN0
-#set_property PACKAGE_PIN N6 [get_ports {an[0]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {an[0]}]
-##Bank = 34, Pin name = IO_L18P_T2_34,						Sch name = AN1
-#set_property PACKAGE_PIN M6 [get_ports {an[1]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {an[1]}]
-##Bank = 34, Pin name = IO_L4P_T0_34,						Sch name = AN2
-#set_property PACKAGE_PIN M3 [get_ports {an[2]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {an[2]}]
-##Bank = 34, Pin name = IO_L13_T2_MRCC_34,					Sch name = AN3
-#set_property PACKAGE_PIN N5 [get_ports {an[3]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {an[3]}]
-##Bank = 34, Pin name = IO_L3P_T0_DQS_34,					Sch name = AN4
-#set_property PACKAGE_PIN N2 [get_ports {an[4]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {an[4]}]
-##Bank = 34, Pin name = IO_L16N_T2_34,						Sch name = AN5
-#set_property PACKAGE_PIN N4 [get_ports {an[5]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {an[5]}]
-##Bank = 34, Pin name = IO_L1P_T0_34,						Sch name = AN6
-#set_property PACKAGE_PIN L1 [get_ports {an[6]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {an[6]}]
-##Bank = 34, Pin name = IO_L1N_T034,							Sch name = AN7
-#set_property PACKAGE_PIN M1 [get_ports {an[7]}]
-#	set_property IOSTANDARD LVCMOS33 [get_ports {an[7]}]
+#Bank = 34, Pin name = IO_L18N_T2_34,						Sch name = AN0
+set_property PACKAGE_PIN N6 [get_ports {anode[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {anode[0]}]
+#Bank = 34, Pin name = IO_L18P_T2_34,						Sch name = AN1
+set_property PACKAGE_PIN M6 [get_ports {anode[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {anode[1]}]
+#Bank = 34, Pin name = IO_L4P_T0_34,						Sch name = AN2
+set_property PACKAGE_PIN M3 [get_ports {anode[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {anode[2]}]
+#Bank = 34, Pin name = IO_L13_T2_MRCC_34,					Sch name = AN3
+set_property PACKAGE_PIN N5 [get_ports {anode[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {anode[3]}]
+#Bank = 34, Pin name = IO_L3P_T0_DQS_34,					Sch name = AN4
+set_property PACKAGE_PIN N2 [get_ports {anode[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {anode[4]}]
+#Bank = 34, Pin name = IO_L16N_T2_34,						Sch name = AN5
+set_property PACKAGE_PIN N4 [get_ports {anode[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {anode[5]}]
+#Bank = 34, Pin name = IO_L1P_T0_34,						Sch name = AN6
+set_property PACKAGE_PIN L1 [get_ports {anode[6]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {anode[6]}]
+#Bank = 34, Pin name = IO_L1N_T034,							Sch name = AN7
+set_property PACKAGE_PIN M1 [get_ports {anode[7]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {anode[7]}]
 
 
 
@@ -193,21 +195,21 @@ set_property IOSTANDARD LVCMOS33 [get_ports clk]
 #Bank = 15, Pin name = IO_L3P_T0_DQS_AD1P_15,				Sch name = CPU_RESET
 set_property PACKAGE_PIN C12 [get_ports btnCpuReset]
 set_property IOSTANDARD LVCMOS33 [get_ports btnCpuReset]
-#Bank = 15, Pin name = IO_L11N_T1_SRCC_15,					Sch name = BTNC
-set_property PACKAGE_PIN E16 [get_ports {push_buttons_5bits_tri_i[4]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {push_buttons_5bits_tri_i[4]}]
-#Bank = 15, Pin name = IO_L14P_T2_SRCC_15,					Sch name = BTNU
-set_property PACKAGE_PIN F15 [get_ports {push_buttons_5bits_tri_i[0]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {push_buttons_5bits_tri_i[0]}]
-#Bank = CONFIG, Pin name = IO_L15N_T2_DQS_DOUT_CSO_B_14,	Sch name = BTNL
-set_property PACKAGE_PIN T16 [get_ports {push_buttons_5bits_tri_i[1]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {push_buttons_5bits_tri_i[1]}]
-#Bank = 14, Pin name = IO_25_14,							Sch name = BTNR
-set_property PACKAGE_PIN R10 [get_ports {push_buttons_5bits_tri_i[3]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {push_buttons_5bits_tri_i[3]}]
-#Bank = 14, Pin name = IO_L21P_T3_DQS_14,					Sch name = BTND
-set_property PACKAGE_PIN V10 [get_ports {push_buttons_5bits_tri_i[2]}]
-set_property IOSTANDARD LVCMOS33 [get_ports {push_buttons_5bits_tri_i[2]}]
+##Bank = 15, Pin name = IO_L11N_T1_SRCC_15,					Sch name = BTNC
+#set_property PACKAGE_PIN E16 [get_ports {push_buttons_5bits_tri_i[4]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {push_buttons_5bits_tri_i[4]}]
+##Bank = 15, Pin name = IO_L14P_T2_SRCC_15,					Sch name = BTNU
+#set_property PACKAGE_PIN F15 [get_ports {push_buttons_5bits_tri_i[0]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {push_buttons_5bits_tri_i[0]}]
+##Bank = CONFIG, Pin name = IO_L15N_T2_DQS_DOUT_CSO_B_14,	Sch name = BTNL
+#set_property PACKAGE_PIN T16 [get_ports {push_buttons_5bits_tri_i[1]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {push_buttons_5bits_tri_i[1]}]
+##Bank = 14, Pin name = IO_25_14,							Sch name = BTNR
+#set_property PACKAGE_PIN R10 [get_ports {push_buttons_5bits_tri_i[3]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {push_buttons_5bits_tri_i[3]}]
+##Bank = 14, Pin name = IO_L21P_T3_DQS_14,					Sch name = BTND
+#set_property PACKAGE_PIN V10 [get_ports {push_buttons_5bits_tri_i[2]}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {push_buttons_5bits_tri_i[2]}]
 
 
 
@@ -572,7 +574,14 @@ set_property IOSTANDARD LVCMOS33 [get_ports usb_uart_txd]
 #set_property IOSTANDARD LVCMOS33 [get_ports QspiCSn]
 
 
-
+set_property IOB TRUE [get_ports {cellular_ram_addr[*]}]
+set_property IOB TRUE [get_ports {cellular_ram_dq_io[*]}]
+set_property IOB TRUE [get_ports cellular_ram_adv_ldn]
+set_property IOB TRUE [get_ports cellular_ram_ce_n]
+set_property IOB TRUE [get_ports cellular_ram_cre]
+set_property IOB TRUE [get_ports cellular_ram_oen]
+set_property IOB TRUE [get_ports cellular_ram_wen]
+set_property IOB TRUE [get_ports {cellular_ram_ben[*]}]
 #Cellular RAM
 ##Bank = 14, Pin name = IO_L14N_T2_SRCC_14,					Sch name = CRAM_CLK
 #set_property PACKAGE_PIN T15 [get_ports RamCLK]
@@ -727,10 +736,6 @@ create_pblock pblock_psram_ip_0
 add_cells_to_pblock [get_pblocks pblock_psram_ip_0] [get_cells -quiet [list Fast_IP_Clock_i/psram_ip_0]]
 resize_pblock [get_pblocks pblock_psram_ip_0] -add {SLICE_X12Y37:SLICE_X19Y49}
 
-create_pblock pblock_axi_gpio_0
-add_cells_to_pblock [get_pblocks pblock_axi_gpio_0] [get_cells -quiet [list Fast_IP_Clock_i/axi_gpio_0]]
-resize_pblock [get_pblocks pblock_axi_gpio_0] -add {SLICE_X0Y140:SLICE_X7Y147}
-
 create_pblock pblock_microblaze_0_1
 add_cells_to_pblock [get_pblocks pblock_microblaze_0_1] [get_cells -quiet [list Fast_IP_Clock_i/microblaze_0]]
 resize_pblock [get_pblocks pblock_microblaze_0_1] -add {SLICE_X28Y65:SLICE_X57Y99}
@@ -739,12 +744,10 @@ create_pblock pblock_calc_0
 add_cells_to_pblock [get_pblocks pblock_calc_0] [get_cells -quiet [list Fast_IP_Clock_i/calc_0]]
 resize_pblock [get_pblocks pblock_calc_0] -add {SLICE_X26Y150:SLICE_X81Y199 SLICE_X28Y100:SLICE_X81Y149 SLICE_X58Y51:SLICE_X89Y99}
 
-
-
-
-
 create_pblock pblock_system_cache_0
 add_cells_to_pblock [get_pblocks pblock_system_cache_0] [get_cells -quiet [list Fast_IP_Clock_i/system_cache_0]]
 resize_pblock [get_pblocks pblock_system_cache_0] -add {SLICE_X52Y10:SLICE_X77Y49}
 resize_pblock [get_pblocks pblock_system_cache_0] -add {RAMB18_X1Y4:RAMB18_X2Y19}
 resize_pblock [get_pblocks pblock_system_cache_0] -add {RAMB36_X1Y2:RAMB36_X2Y9}
+
+set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]

@@ -339,6 +339,62 @@
               }
             ]
           }
+        },
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "m_axi",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "depth",
+                "value": "8112"
+              },
+              {
+                "name": "port",
+                "value": "LED",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "offset",
+                "value": "direct"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "calc",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "m_axi",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "depth",
+                "value": "8112"
+              },
+              {
+                "name": "port",
+                "value": "LEDControl",
+                "positionalBoolean": "4"
+              },
+              {
+                "name": "offset",
+                "value": "direct"
+              }
+            ]
+          }
         }
       ]
     }]}

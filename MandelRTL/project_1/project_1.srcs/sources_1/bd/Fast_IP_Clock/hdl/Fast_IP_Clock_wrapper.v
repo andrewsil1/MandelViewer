@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Sat Jun 29 21:08:56 2019
+//Date        : Fri Jul  5 14:22:12 2019
 //Host        : AndrewSi64 running 64-bit major release  (build 9200)
 //Command     : generate_target Fast_IP_Clock_wrapper.bd
 //Design      : Fast_IP_Clock_wrapper
@@ -10,7 +10,9 @@
 `timescale 1 ps / 1 ps
 
 module Fast_IP_Clock_wrapper
-   (btnCpuReset,
+   (anode,
+    btnCpuReset,
+    cathode,
     cellular_ram_addr,
     cellular_ram_adv_ldn,
     cellular_ram_ben,
@@ -20,10 +22,12 @@ module Fast_IP_Clock_wrapper
     cellular_ram_oen,
     cellular_ram_wen,
     clk,
-    push_buttons_5bits_tri_i,
+    dp,
     usb_uart_rxd,
     usb_uart_txd);
+  output [7:0]anode;
   input btnCpuReset;
+  output [6:0]cathode;
   output [22:0]cellular_ram_addr;
   output cellular_ram_adv_ldn;
   output [1:0]cellular_ram_ben;
@@ -33,11 +37,13 @@ module Fast_IP_Clock_wrapper
   output cellular_ram_oen;
   output cellular_ram_wen;
   input clk;
-  input [4:0]push_buttons_5bits_tri_i;
+  output dp;
   input usb_uart_rxd;
   output usb_uart_txd;
 
+  wire [7:0]anode;
   wire btnCpuReset;
+  wire [6:0]cathode;
   wire [22:0]cellular_ram_addr;
   wire cellular_ram_adv_ldn;
   wire [1:0]cellular_ram_ben;
@@ -110,12 +116,14 @@ module Fast_IP_Clock_wrapper
   wire cellular_ram_oen;
   wire cellular_ram_wen;
   wire clk;
-  wire [4:0]push_buttons_5bits_tri_i;
+  wire dp;
   wire usb_uart_rxd;
   wire usb_uart_txd;
 
   Fast_IP_Clock Fast_IP_Clock_i
-       (.btnCpuReset(btnCpuReset),
+       (.anode(anode),
+        .btnCpuReset(btnCpuReset),
+        .cathode(cathode),
         .cellular_ram_addr(cellular_ram_addr),
         .cellular_ram_adv_ldn(cellular_ram_adv_ldn),
         .cellular_ram_ben(cellular_ram_ben),
@@ -127,7 +135,7 @@ module Fast_IP_Clock_wrapper
         .cellular_ram_oen(cellular_ram_oen),
         .cellular_ram_wen(cellular_ram_wen),
         .clk(clk),
-        .push_buttons_5bits_tri_i(push_buttons_5bits_tri_i),
+        .dp(dp),
         .usb_uart_rxd(usb_uart_rxd),
         .usb_uart_txd(usb_uart_txd));
   IOBUF cellular_ram_dq_iobuf_0

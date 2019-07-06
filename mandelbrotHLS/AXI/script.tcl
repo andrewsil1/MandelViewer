@@ -21,4 +21,4 @@ source "./mandelbrotHLS/AXI/directives.tcl"
 csim_design -ldflags {-Wl,--stack,10485760} -O
 csynth_design
 cosim_design -O -ldflags {-Wl,--stack,10485760} -trace_level all
-export_design -rtl verilog -format ip_catalog -description "Mandelbrot Calculator Core" -vendor "QuickSilver" -version "1.01" -display_name "calc"
+export_design -flow syn -rtl verilog -format ip_catalog -description "Mandelbrot Calculator Core" -vendor "QuickSilver" -version "1.01" -display_name "calc"

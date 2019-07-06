@@ -688,10 +688,10 @@ mandel_calc_loop_begin:8  %trunc_ln718 = trunc i80 %r_V_17 to i35
 
 <Node id="42" bw="3" op_0_bw="3" op_1_bw="80" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-mandel_calc_loop_begin:20  %p_Result_s_13 = call i3 @_ssdm_op_PartSelect.i3.i80.i32.i32(i80 %r_V_17, i32 77, i32 79)
+mandel_calc_loop_begin:20  %p_Result_s_15 = call i3 @_ssdm_op_PartSelect.i3.i80.i32.i32(i80 %r_V_17, i32 77, i32 79)
 
 ]]></Node>
-<StgValue><ssdm name="p_Result_s_13"/></StgValue>
+<StgValue><ssdm name="p_Result_s_15"/></StgValue>
 </operation>
 
 <operation id="57" st_id="9" stage="1" lat="1">
@@ -703,7 +703,7 @@ mandel_calc_loop_begin:20  %p_Result_s_13 = call i3 @_ssdm_op_PartSelect.i3.i80.
 
 <Node id="43" bw="1" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-mandel_calc_loop_begin:21  %Range2_all_ones = icmp eq i3 %p_Result_s_13, -1
+mandel_calc_loop_begin:21  %Range2_all_ones = icmp eq i3 %p_Result_s_15, -1
 
 ]]></Node>
 <StgValue><ssdm name="Range2_all_ones"/></StgValue>
@@ -3478,15 +3478,15 @@ mandel_calc_loop_end:1  br label %1
 </dataflow>
 <dataflow id="329" from="r_V_17" to="trunc_ln718" fromId="53" toId="55">
 </dataflow>
-<dataflow id="331" from="_ssdm_op_PartSelect.i3.i80.i32.i32" to="p_Result_s_13" fromId="330" toId="56">
+<dataflow id="331" from="_ssdm_op_PartSelect.i3.i80.i32.i32" to="p_Result_s_15" fromId="330" toId="56">
 </dataflow>
-<dataflow id="332" from="r_V_17" to="p_Result_s_13" fromId="53" toId="56">
+<dataflow id="332" from="r_V_17" to="p_Result_s_15" fromId="53" toId="56">
 </dataflow>
-<dataflow id="334" from="StgValue_333" to="p_Result_s_13" fromId="333" toId="56">
+<dataflow id="334" from="StgValue_333" to="p_Result_s_15" fromId="333" toId="56">
 </dataflow>
-<dataflow id="335" from="StgValue_327" to="p_Result_s_13" fromId="327" toId="56">
+<dataflow id="335" from="StgValue_327" to="p_Result_s_15" fromId="327" toId="56">
 </dataflow>
-<dataflow id="336" from="p_Result_s_13" to="Range2_all_ones" fromId="56" toId="57">
+<dataflow id="336" from="p_Result_s_15" to="Range2_all_ones" fromId="56" toId="57">
 </dataflow>
 <dataflow id="338" from="StgValue_337" to="Range2_all_ones" fromId="337" toId="57">
 </dataflow>

@@ -54,7 +54,8 @@ pixval mandel_calc(real x_in, real y_in, pixval maxIter) {
 }
 
 //Calculates entire Mandelbrot Set 2D array and returns a completed buffer of iterations per pixel
-void calc(bool setup, real X0, real Y0, real X1, res width, res *maxWidth, unsigned short *unroll, pixval maxIter, pixval *buf) {
+void calc(bool setup, real X0, real Y0, real X1, res width, res *maxWidth, unsigned short *unroll, pixval maxIter, pixval *buf, \
+          unsigned long *LEDControl, unsigned long *LED) {
 
    	real delta = (X1 - X0) /  width;            // Fractional cartesian distance between adjacent physical pixels
     real y = Y0;
@@ -73,9 +74,12 @@ void calc(bool setup, real X0, real Y0, real X1, res width, res *maxWidth, unsig
         cout << "Delta:" << std::setprecision(16) << delta << endl;
     #endif
 
+        *LEDControl = 0x83; // Set LED display control reg for decimal interpretation, enabled display, and trim leading zeroes.
+
         // Begin in the -X,+Y quadrant (II), iterate across each line, then down, and finally end in +X,-Y quadrant (IV)
         // Calculate the Mandelbrot escape value at each pixel, using the corresponding x/y fixed point values.
 y_for:  for (res line = 0; line < height; line++) {
+            *LED = line;  // Display current line on LED
 x_for:      for (res pix_x = 0; pix_x < width; pix_x++) {
 
                 x = X0 + (pix_x * delta); // This form (multiply the pixel x value by delta) allows parallelism in unrolling.

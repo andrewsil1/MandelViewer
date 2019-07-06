@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: QuickSilver:hls:calc:1.01
--- IP Revision: 1906082136
+-- IP Revision: 1907051203
 
 -- The following code must appear in the VHDL architecture header.
 
@@ -74,6 +74,41 @@ COMPONENT calc_0
     ap_clk : IN STD_LOGIC;
     ap_rst_n : IN STD_LOGIC;
     interrupt : OUT STD_LOGIC;
+    m_axi_gmem_AWADDR : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    m_axi_gmem_AWLEN : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    m_axi_gmem_AWSIZE : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+    m_axi_gmem_AWBURST : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    m_axi_gmem_AWLOCK : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    m_axi_gmem_AWREGION : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    m_axi_gmem_AWCACHE : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    m_axi_gmem_AWPROT : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+    m_axi_gmem_AWQOS : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    m_axi_gmem_AWVALID : OUT STD_LOGIC;
+    m_axi_gmem_AWREADY : IN STD_LOGIC;
+    m_axi_gmem_WDATA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    m_axi_gmem_WSTRB : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    m_axi_gmem_WLAST : OUT STD_LOGIC;
+    m_axi_gmem_WVALID : OUT STD_LOGIC;
+    m_axi_gmem_WREADY : IN STD_LOGIC;
+    m_axi_gmem_BRESP : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    m_axi_gmem_BVALID : IN STD_LOGIC;
+    m_axi_gmem_BREADY : OUT STD_LOGIC;
+    m_axi_gmem_ARADDR : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    m_axi_gmem_ARLEN : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    m_axi_gmem_ARSIZE : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+    m_axi_gmem_ARBURST : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    m_axi_gmem_ARLOCK : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    m_axi_gmem_ARREGION : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    m_axi_gmem_ARCACHE : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    m_axi_gmem_ARPROT : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+    m_axi_gmem_ARQOS : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    m_axi_gmem_ARVALID : OUT STD_LOGIC;
+    m_axi_gmem_ARREADY : IN STD_LOGIC;
+    m_axi_gmem_RDATA : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    m_axi_gmem_RRESP : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    m_axi_gmem_RLAST : IN STD_LOGIC;
+    m_axi_gmem_RVALID : IN STD_LOGIC;
+    m_axi_gmem_RREADY : OUT STD_LOGIC;
     m_axi_buf_r_AWADDR : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     m_axi_buf_r_AWLEN : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     m_axi_buf_r_AWSIZE : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -108,7 +143,9 @@ COMPONENT calc_0
     m_axi_buf_r_RRESP : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     m_axi_buf_r_RLAST : IN STD_LOGIC;
     m_axi_buf_r_RVALID : IN STD_LOGIC;
-    m_axi_buf_r_RREADY : OUT STD_LOGIC
+    m_axi_buf_r_RREADY : OUT STD_LOGIC;
+    LEDControl : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    LED : IN STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -139,6 +176,41 @@ your_instance_name : calc_0
     ap_clk => ap_clk,
     ap_rst_n => ap_rst_n,
     interrupt => interrupt,
+    m_axi_gmem_AWADDR => m_axi_gmem_AWADDR,
+    m_axi_gmem_AWLEN => m_axi_gmem_AWLEN,
+    m_axi_gmem_AWSIZE => m_axi_gmem_AWSIZE,
+    m_axi_gmem_AWBURST => m_axi_gmem_AWBURST,
+    m_axi_gmem_AWLOCK => m_axi_gmem_AWLOCK,
+    m_axi_gmem_AWREGION => m_axi_gmem_AWREGION,
+    m_axi_gmem_AWCACHE => m_axi_gmem_AWCACHE,
+    m_axi_gmem_AWPROT => m_axi_gmem_AWPROT,
+    m_axi_gmem_AWQOS => m_axi_gmem_AWQOS,
+    m_axi_gmem_AWVALID => m_axi_gmem_AWVALID,
+    m_axi_gmem_AWREADY => m_axi_gmem_AWREADY,
+    m_axi_gmem_WDATA => m_axi_gmem_WDATA,
+    m_axi_gmem_WSTRB => m_axi_gmem_WSTRB,
+    m_axi_gmem_WLAST => m_axi_gmem_WLAST,
+    m_axi_gmem_WVALID => m_axi_gmem_WVALID,
+    m_axi_gmem_WREADY => m_axi_gmem_WREADY,
+    m_axi_gmem_BRESP => m_axi_gmem_BRESP,
+    m_axi_gmem_BVALID => m_axi_gmem_BVALID,
+    m_axi_gmem_BREADY => m_axi_gmem_BREADY,
+    m_axi_gmem_ARADDR => m_axi_gmem_ARADDR,
+    m_axi_gmem_ARLEN => m_axi_gmem_ARLEN,
+    m_axi_gmem_ARSIZE => m_axi_gmem_ARSIZE,
+    m_axi_gmem_ARBURST => m_axi_gmem_ARBURST,
+    m_axi_gmem_ARLOCK => m_axi_gmem_ARLOCK,
+    m_axi_gmem_ARREGION => m_axi_gmem_ARREGION,
+    m_axi_gmem_ARCACHE => m_axi_gmem_ARCACHE,
+    m_axi_gmem_ARPROT => m_axi_gmem_ARPROT,
+    m_axi_gmem_ARQOS => m_axi_gmem_ARQOS,
+    m_axi_gmem_ARVALID => m_axi_gmem_ARVALID,
+    m_axi_gmem_ARREADY => m_axi_gmem_ARREADY,
+    m_axi_gmem_RDATA => m_axi_gmem_RDATA,
+    m_axi_gmem_RRESP => m_axi_gmem_RRESP,
+    m_axi_gmem_RLAST => m_axi_gmem_RLAST,
+    m_axi_gmem_RVALID => m_axi_gmem_RVALID,
+    m_axi_gmem_RREADY => m_axi_gmem_RREADY,
     m_axi_buf_r_AWADDR => m_axi_buf_r_AWADDR,
     m_axi_buf_r_AWLEN => m_axi_buf_r_AWLEN,
     m_axi_buf_r_AWSIZE => m_axi_buf_r_AWSIZE,
@@ -173,7 +245,9 @@ your_instance_name : calc_0
     m_axi_buf_r_RRESP => m_axi_buf_r_RRESP,
     m_axi_buf_r_RLAST => m_axi_buf_r_RLAST,
     m_axi_buf_r_RVALID => m_axi_buf_r_RVALID,
-    m_axi_buf_r_RREADY => m_axi_buf_r_RREADY
+    m_axi_buf_r_RREADY => m_axi_buf_r_RREADY,
+    LEDControl => LEDControl,
+    LED => LED
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ---------
 

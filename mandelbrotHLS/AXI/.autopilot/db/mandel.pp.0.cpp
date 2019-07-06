@@ -35090,7 +35090,7 @@ typedef ap_fixed<40,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
-void calc(bool setup, real X0, real Y0, real X1, res width, res* maxWidth, unsigned short* unroll, pixval maxIter, pixval *buf);
+void calc(bool setup, real X0, real Y0, real X1, res width, res* maxWidth, unsigned short* unroll, pixval maxIter, pixval *buf, unsigned long *LEDControl, unsigned long *LED);
 # 2 "mandelbrotHLS/mandel.cpp" 2
 # 1 "mandelbrotHLS/pretest.h" 1
 # 1 "mandelbrotHLS/mandel.h" 1
@@ -35101,7 +35101,7 @@ typedef ap_fixed<40,4,AP_RND_CONV,AP_SAT> real;
 typedef ap_uint<12> res;
 typedef unsigned short int pixval;
 
-void calc(bool setup, real X0, real Y0, real X1, res width, res* maxWidth, unsigned short* unroll, pixval maxIter, pixval *buf);
+void calc(bool setup, real X0, real Y0, real X1, res width, res* maxWidth, unsigned short* unroll, pixval maxIter, pixval *buf, unsigned long *LEDControl, unsigned long *LED);
 # 2 "mandelbrotHLS/pretest.h" 2
 
 bool pretest(real x, real y);
@@ -49827,7 +49827,13 @@ pixval mandel_calc(real x_in, real y_in, pixval maxIter) {
 }
 
 
-void calc(bool setup, real X0, real Y0, real X1, res width, res *maxWidth, unsigned short *unroll, pixval maxIter, pixval *buf) {
+void calc(bool setup, real X0, real Y0, real X1, res width, res *maxWidth, unsigned short *unroll, pixval maxIter, pixval *buf, unsigned long *LEDControl, unsigned long *LED) {
+#pragma HLS INTERFACE m_axi depth=8112 port=&LED offset=direct
+# 57 "mandelbrotHLS/mandel.cpp"
+
+#pragma HLS INTERFACE m_axi depth=8112 port=&LEDControl offset=direct
+# 57 "mandelbrotHLS/mandel.cpp"
+
 #pragma HLS INTERFACE m_axi depth=8112 port=&buf offset=off
 # 57 "mandelbrotHLS/mandel.cpp"
 
@@ -49859,6 +49865,7 @@ void calc(bool setup, real X0, real Y0, real X1, res width, res *maxWidth, unsig
 # 57 "mandelbrotHLS/mandel.cpp"
 
 
+
     real delta = (X1 - X0) / width;
     real y = Y0;
     real x = X0;
@@ -49876,18 +49883,21 @@ void calc(bool setup, real X0, real Y0, real X1, res width, res *maxWidth, unsig
 
 
 
+        *LEDControl = 0x83;
+
 
 
 y_for: for (res line = 0; line < height; line++) {
 #pragma HLS LOOP_TRIPCOUNT min=768 max=1440 avg=768
-# 78 "mandelbrotHLS/mandel.cpp"
+# 81 "mandelbrotHLS/mandel.cpp"
 
+            *LED = line;
 x_for: for (res pix_x = 0; pix_x < width; pix_x++) {
 #pragma HLS LOOP_TRIPCOUNT min=1024 max=1920 avg=1024
-# 79 "mandelbrotHLS/mandel.cpp"
+# 83 "mandelbrotHLS/mandel.cpp"
 
 #pragma HLS UNROLL skip_exit_check factor=8
-# 79 "mandelbrotHLS/mandel.cpp"
+# 83 "mandelbrotHLS/mandel.cpp"
 
 
                 x = X0 + (pix_x * delta);

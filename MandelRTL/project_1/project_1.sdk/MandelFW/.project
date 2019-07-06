@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>MandelFW</name>
-	<comment>Created by SDK v2018.3. fast_bsp - microblaze_0</comment>
+	<comment></comment>
 	<projects>
 		<project>LZ4</project>
-		<project>standalone_bsp_0</project>
+		<project>standalone_bsp_1</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -688,10 +688,10 @@ mandel_calc_loop_begin:8  %trunc_ln718 = trunc i80 %r_V_17 to i35
 
 <Node id="42" bw="3" op_0_bw="3" op_1_bw="80" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-mandel_calc_loop_begin:20  %p_Result_s_13 = call i3 @_ssdm_op_PartSelect.i3.i80.i32.i32(i80 %r_V_17, i32 77, i32 79)
+mandel_calc_loop_begin:20  %p_Result_s_15 = call i3 @_ssdm_op_PartSelect.i3.i80.i32.i32(i80 %r_V_17, i32 77, i32 79)
 
 ]]></Node>
-<StgValue><ssdm name="p_Result_s_13"/></StgValue>
+<StgValue><ssdm name="p_Result_s_15"/></StgValue>
 </operation>
 
 <operation id="57" st_id="9" stage="1" lat="1">
@@ -703,7 +703,7 @@ mandel_calc_loop_begin:20  %p_Result_s_13 = call i3 @_ssdm_op_PartSelect.i3.i80.
 
 <Node id="43" bw="1" op_0_bw="3" op_1_bw="3">
 <![CDATA[
-mandel_calc_loop_begin:21  %Range2_all_ones = icmp eq i3 %p_Result_s_13, -1
+mandel_calc_loop_begin:21  %Range2_all_ones = icmp eq i3 %p_Result_s_15, -1
 
 ]]></Node>
 <StgValue><ssdm name="Range2_all_ones"/></StgValue>

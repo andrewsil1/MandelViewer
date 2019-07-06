@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Jun 24 15:42:24 2019
+// Date        : Fri Jul  5 12:13:59 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_clk_wiz_0_0/Fast_IP_Clock_clk_wiz_0_0_sim_netlist.v
@@ -15,26 +15,22 @@
 (* NotValidForBitStream *)
 module Fast_IP_Clock_clk_wiz_0_0
    (AXIclk,
-    MBClk,
     CalcClk,
     locked,
     clk_in1);
   output AXIclk;
-  output MBClk;
   output CalcClk;
   output locked;
   input clk_in1;
 
   wire AXIclk;
   wire CalcClk;
-  wire MBClk;
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire locked;
 
   Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz inst
        (.AXIclk(AXIclk),
         .CalcClk(CalcClk),
-        .MBClk(MBClk),
         .clk_in1(clk_in1),
         .locked(locked));
 endmodule
@@ -42,12 +38,10 @@ endmodule
 (* ORIG_REF_NAME = "Fast_IP_Clock_clk_wiz_0_0_clk_wiz" *) 
 module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
    (AXIclk,
-    MBClk,
     CalcClk,
     locked,
     clk_in1);
   output AXIclk;
-  output MBClk;
   output CalcClk;
   output locked;
   input clk_in1;
@@ -58,9 +52,6 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   wire CalcClk;
   wire CalcClk_Fast_IP_Clock_clk_wiz_0_0;
   wire CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk;
-  wire MBClk;
-  wire MBClk_Fast_IP_Clock_clk_wiz_0_0;
-  wire MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk;
   wire clk_in1;
   wire clk_in1_Fast_IP_Clock_clk_wiz_0_0;
   wire clkfbout_Fast_IP_Clock_clk_wiz_0_0;
@@ -68,12 +59,12 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   wire locked;
   (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg1;
   (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg2;
-  (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg3;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
+  wire NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED;
@@ -130,28 +121,6 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
     clkout2_buf
        (.CE0(seq_reg2[7]),
         .CE1(1'b0),
-        .I0(MBClk_Fast_IP_Clock_clk_wiz_0_0),
-        .I1(1'b1),
-        .IGNORE0(1'b0),
-        .IGNORE1(1'b1),
-        .O(MBClk),
-        .S0(1'b1),
-        .S1(1'b0));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFH clkout2_buf_en
-       (.I(MBClk_Fast_IP_Clock_clk_wiz_0_0),
-        .O(MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  (* XILINX_LEGACY_PRIM = "BUFGCE" *) 
-  (* XILINX_TRANSFORM_PINMAP = "CE:CE0 I:I0" *) 
-  BUFGCTRL #(
-    .INIT_OUT(0),
-    .PRESELECT_I0("TRUE"),
-    .PRESELECT_I1("FALSE"),
-    .SIM_DEVICE("7SERIES")) 
-    clkout3_buf
-       (.CE0(seq_reg3[7]),
-        .CE1(1'b0),
         .I0(CalcClk_Fast_IP_Clock_clk_wiz_0_0),
         .I1(1'b1),
         .IGNORE0(1'b0),
@@ -160,26 +129,26 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
         .S0(1'b1),
         .S1(1'b0));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFH clkout3_buf_en
+  BUFH clkout2_buf_en
        (.I(CalcClk_Fast_IP_Clock_clk_wiz_0_0),
         .O(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk));
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(10.000000),
+    .CLKFBOUT_MULT_F(6.500000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(10.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(10.000000),
+    .CLKOUT0_DIVIDE_F(6.500000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(10),
+    .CLKOUT1_DIVIDE(5),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
-    .CLKOUT2_DIVIDE(10),
+    .CLKOUT2_DIVIDE(1),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
@@ -224,9 +193,9 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),
         .CLKOUT0(AXIclk_Fast_IP_Clock_clk_wiz_0_0),
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(MBClk_Fast_IP_Clock_clk_wiz_0_0),
+        .CLKOUT1(CalcClk_Fast_IP_Clock_clk_wiz_0_0),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
-        .CLKOUT2(CalcClk_Fast_IP_Clock_clk_wiz_0_0),
+        .CLKOUT2(NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),
         .CLKOUT3(NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT3B(NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED),
@@ -332,7 +301,7 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[0] 
-       (.C(MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
+       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(locked),
         .Q(seq_reg2[0]),
@@ -342,7 +311,7 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[1] 
-       (.C(MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
+       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[0]),
         .Q(seq_reg2[1]),
@@ -352,7 +321,7 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[2] 
-       (.C(MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
+       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[1]),
         .Q(seq_reg2[2]),
@@ -362,7 +331,7 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[3] 
-       (.C(MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
+       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[2]),
         .Q(seq_reg2[3]),
@@ -372,7 +341,7 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[4] 
-       (.C(MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
+       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[3]),
         .Q(seq_reg2[4]),
@@ -382,7 +351,7 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[5] 
-       (.C(MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
+       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[4]),
         .Q(seq_reg2[5]),
@@ -392,7 +361,7 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[6] 
-       (.C(MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
+       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[5]),
         .Q(seq_reg2[6]),
@@ -402,90 +371,10 @@ module Fast_IP_Clock_clk_wiz_0_0_Fast_IP_Clock_clk_wiz_0_0_clk_wiz
   FDRE #(
     .INIT(1'b0)) 
     \seq_reg2_reg[7] 
-       (.C(MBClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
+       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
         .CE(1'b1),
         .D(seq_reg2[6]),
         .Q(seq_reg2[7]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[0] 
-       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(locked),
-        .Q(seq_reg3[0]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[1] 
-       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[0]),
-        .Q(seq_reg3[1]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[2] 
-       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[1]),
-        .Q(seq_reg3[2]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[3] 
-       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[2]),
-        .Q(seq_reg3[3]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[4] 
-       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[3]),
-        .Q(seq_reg3[4]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[5] 
-       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[4]),
-        .Q(seq_reg3[5]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[6] 
-       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[5]),
-        .Q(seq_reg3[6]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE #(
-    .INIT(1'b0)) 
-    \seq_reg3_reg[7] 
-       (.C(CalcClk_Fast_IP_Clock_clk_wiz_0_0_en_clk),
-        .CE(1'b1),
-        .D(seq_reg3[6]),
-        .Q(seq_reg3[7]),
         .R(1'b0));
 endmodule
 `ifndef GLBL

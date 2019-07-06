@@ -13,6 +13,7 @@ int main() {
 	const pixval maxIter = 500;
 	res maxWidth;
 	unsigned short unroll;
+	unsigned long LED, LEDControl;
 
 	pixval mem[HEIGHT * WIDTH];
 
@@ -21,7 +22,7 @@ int main() {
 	Y0 = 1.25;
 	X1 = 1;
 
-	calc(true, X0, Y0, X1, WIDTH, &maxWidth, &unroll, maxIter, mem);  // Calculate the full array, store in mem.
+	calc(true, X0, Y0, X1, WIDTH, &maxWidth, &unroll, maxIter, mem, &LEDControl, &LED);  // Calculate the full array, store in mem.
 	if (maxWidth != (res)1920) {
 	    cout << "MaxWidth is an unexpected value.\n" << endl;
 	    return -1;
@@ -37,7 +38,7 @@ int main() {
         return -1;
 	}
 
-    calc(false, X0, Y0, X1, WIDTH, &maxWidth, &unroll, maxIter, mem);  // Calculate the full array, store in mem.
+    calc(false, X0, Y0, X1, WIDTH, &maxWidth, &unroll, maxIter, mem, &LEDControl, &LED);  // Calculate the full array, store in mem.
 
 	for (int y = 0; y < HEIGHT; y++) {
 	   for (int x = 0; x < WIDTH; x++)

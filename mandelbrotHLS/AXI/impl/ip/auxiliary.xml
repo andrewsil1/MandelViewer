@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="calc" xd:componentRef="calc" xd:initiationInterval="x" xd:clockPeriod="6.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_in_parms" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(LEDControl)" xd:originalName="LEDControl" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="8112" xd:dataWidth="32" xd:bufferDirection="out"/>
+  <xd:arg xd:name="*(LED)" xd:originalName="LED" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:dataPack="true" xd:bitMapping="31:0" xd:arraySize="8112" xd:dataWidth="32" xd:bufferDirection="out"/>
   <xd:arg xd:name="setup" xd:originalName="setup" xd:direction="in" xd:interfaceRef="s_axi_in_parms" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
   <xd:arg xd:name="X0" xd:originalName="X0" xd:direction="in" xd:interfaceRef="s_axi_in_parms" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="40"/>
   <xd:arg xd:name="Y0" xd:originalName="Y0" xd:direction="in" xd:interfaceRef="s_axi_in_parms" xd:busTypeRef="axilite" xd:offset="0x24" xd:handshakeRef="ap_none" xd:dataWidth="40"/>
@@ -10,6 +12,8 @@
   <xd:arg xd:name="*(unroll)" xd:originalName="unroll" xd:direction="out" xd:interfaceRef="s_axi_in_parms" xd:busTypeRef="axilite" xd:offset="0x4C" xd:handshakeRef="ap_vld" xd:statusOffset="0x50" xd:dataWidth="16"/>
   <xd:arg xd:name="maxIter" xd:originalName="maxIter" xd:direction="in" xd:interfaceRef="s_axi_in_parms" xd:busTypeRef="axilite" xd:offset="0x54" xd:handshakeRef="ap_none" xd:dataWidth="16"/>
   <xd:arg xd:name="*(buf)" xd:originalName="buf" xd:direction="inout" xd:interfaceRef="m_axi_buf_r" xd:busTypeRef="aximm" xd:arraySize="8112" xd:dataWidth="16" xd:bufferDirection="out"/>
-  <xd:latencyEstimates xd:best-case="47" xd:worst-case="14538012527" xd:average-case="5063471"/>
-  <xd:resourceEstimates xd:LUT="24793" xd:FF="21963" xd:BRAM="2" xd:DSP="176"/>
+  <xd:arg xd:name="LEDControl" xd:originalName="LEDControl" xd:direction="in" xd:interfaceRef="LEDControl" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:aximmInterfaceRef="m_axi_gmem" xd:dataWidth="32" xd:firstOut="45"/>
+  <xd:arg xd:name="LED" xd:originalName="LED" xd:direction="in" xd:interfaceRef="LED" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:aximmInterfaceRef="m_axi_gmem" xd:dataWidth="32" xd:firstOut="45"/>
+  <xd:latencyEstimates xd:best-case="47" xd:worst-case="14538021173" xd:average-case="5065778"/>
+  <xd:resourceEstimates xd:LUT="25601" xd:FF="22566" xd:BRAM="4" xd:DSP="176"/>
 </xd:acceleratorMap>

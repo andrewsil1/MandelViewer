@@ -4,6 +4,7 @@ calc_mul_40s_41s_dEe
 calc_sdiv_41ns_13eOg
 calc_mul_12ns_40sfYi
 calc_in_parms_s_axi
+calc_gmem_m_axi
 calc_buf_r_m_axi
 pretest
 mandel_calc

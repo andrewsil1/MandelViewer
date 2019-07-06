@@ -17,3 +17,5 @@ set_directive_interface -mode s_axilite -register -bundle in_parms "calc" maxWid
 set_directive_interface -mode s_axilite -register -bundle in_parms "calc" unroll
 set_directive_interface -mode s_axilite -bundle in_parms "calc" setup
 set_directive_interface -mode s_axilite -bundle in_parms "calc"
+set_directive_interface -mode m_axi -depth 8112 -offset direct "calc" LED
+set_directive_interface -mode m_axi -depth 8112 -offset direct "calc" LEDControl
