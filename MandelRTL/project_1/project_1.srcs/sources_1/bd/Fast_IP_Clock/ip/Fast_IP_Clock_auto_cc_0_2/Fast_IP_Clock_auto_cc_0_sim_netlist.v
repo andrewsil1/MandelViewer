@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Jul  5 14:25:35 2019
+// Date        : Fri Jul  5 14:25:34 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_cc_0_2/Fast_IP_Clock_auto_cc_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_auto_cc_0 -prefix
+//               Fast_IP_Clock_auto_cc_0_ Fast_IP_Clock_auto_cc_0_sim_netlist.v
 // Design      : Fast_IP_Clock_auto_cc_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -405,10 +405,10 @@ endmodule
 (* C_WDATA_WIDTH = "32" *) (* C_WID_RIGHT = "36" *) (* C_WID_WIDTH = "0" *) 
 (* C_WLAST_RIGHT = "0" *) (* C_WLAST_WIDTH = "0" *) (* C_WSTRB_RIGHT = "0" *) 
 (* C_WSTRB_WIDTH = "4" *) (* C_WUSER_RIGHT = "0" *) (* C_WUSER_WIDTH = "0" *) 
-(* C_W_WIDTH = "36" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_clock_converter_v2_1_18_axi_clock_converter" *) 
-(* P_ACLK_RATIO = "2" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
-(* P_AXILITE = "2" *) (* P_FULLY_REG = "1" *) (* P_LIGHT_WT = "0" *) 
-(* P_LUTRAM_ASYNC = "12" *) (* P_ROUNDING_OFFSET = "0" *) (* P_SI_LT_MI = "1'b1" *) 
+(* C_W_WIDTH = "36" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* P_ACLK_RATIO = "2" *) 
+(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
+(* P_FULLY_REG = "1" *) (* P_LIGHT_WT = "0" *) (* P_LUTRAM_ASYNC = "12" *) 
+(* P_ROUNDING_OFFSET = "0" *) (* P_SI_LT_MI = "1'b1" *) 
 module Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter
    (s_axi_aclk,
     s_axi_aresetn,
@@ -770,7 +770,6 @@ module Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter
         .src_in({m_axi_rresp,m_axi_rdata}));
 endmodule
 
-(* ORIG_REF_NAME = "axi_clock_converter_v2_1_18_lite_async" *) 
 module Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_lite_async
    (dest_out,
     s_axi_arready,
@@ -1960,9 +1959,8 @@ module Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_lite_async__xdcDup__1
 endmodule
 
 (* DEST_EXT_HSK = "1" *) (* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "0" *) 
-(* ORIG_REF_NAME = "xpm_cdc_handshake" *) (* SIM_ASSERT_CHK = "0" *) (* SRC_SYNC_FF = "3" *) 
-(* VERSION = "0" *) (* WIDTH = "10" *) (* XPM_MODULE = "TRUE" *) 
-(* xpm_cdc = "HANDSHAKE" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SRC_SYNC_FF = "3" *) (* VERSION = "0" *) 
+(* WIDTH = "10" *) (* XPM_MODULE = "TRUE" *) (* xpm_cdc = "HANDSHAKE" *) 
 module Fast_IP_Clock_auto_cc_0_xpm_cdc_handshake
    (src_clk,
     src_in,
@@ -3689,9 +3687,9 @@ module Fast_IP_Clock_auto_cc_0_xpm_cdc_handshake__xdcDup__1
         .src_in(src_sendd_ff));
 endmodule
 
-(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
-(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
-(* XPM_MODULE = "TRUE" *) (* xpm_cdc = "SINGLE" *) 
+(* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) 
+(* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) 
+(* xpm_cdc = "SINGLE" *) 
 module Fast_IP_Clock_auto_cc_0_xpm_cdc_single
    (src_clk,
     src_in,

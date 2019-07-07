@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Jul  5 14:25:40 2019
+-- Date        : Fri Jul  5 14:25:39 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_cc_1/Fast_IP_Clock_auto_cc_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Fast_IP_Clock_auto_cc_1 -prefix
+--               Fast_IP_Clock_auto_cc_1_ Fast_IP_Clock_auto_cc_1_sim_netlist.vhdl
 -- Design      : Fast_IP_Clock_auto_cc_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,8 +28,6 @@ entity Fast_IP_Clock_auto_cc_1_xpm_cdc_async_rst is
   attribute INIT_SYNC_FF of Fast_IP_Clock_auto_cc_1_xpm_cdc_async_rst : entity is 0;
   attribute INV_DEF_VAL : string;
   attribute INV_DEF_VAL of Fast_IP_Clock_auto_cc_1_xpm_cdc_async_rst : entity is "1'b1";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_xpm_cdc_async_rst : entity is "xpm_cdc_async_rst";
   attribute RST_ACTIVE_HIGH : integer;
   attribute RST_ACTIVE_HIGH of Fast_IP_Clock_auto_cc_1_xpm_cdc_async_rst : entity is 1;
   attribute VERSION : integer;
@@ -725,8 +723,6 @@ entity Fast_IP_Clock_auto_cc_1_xpm_cdc_gray is
   attribute DEST_SYNC_FF of Fast_IP_Clock_auto_cc_1_xpm_cdc_gray : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of Fast_IP_Clock_auto_cc_1_xpm_cdc_gray : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_xpm_cdc_gray : entity is "xpm_cdc_gray";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of Fast_IP_Clock_auto_cc_1_xpm_cdc_gray : entity is 1;
   attribute SIM_ASSERT_CHK : integer;
@@ -3835,8 +3831,6 @@ entity Fast_IP_Clock_auto_cc_1_xpm_cdc_single is
   attribute DEST_SYNC_FF of Fast_IP_Clock_auto_cc_1_xpm_cdc_single : entity is 4;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of Fast_IP_Clock_auto_cc_1_xpm_cdc_single : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_xpm_cdc_single : entity is "xpm_cdc_single";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of Fast_IP_Clock_auto_cc_1_xpm_cdc_single : entity is 0;
   attribute SRC_INPUT_REG : integer;
@@ -5077,8 +5071,6 @@ entity Fast_IP_Clock_auto_cc_1_dmem is
     \gpr1.dout_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_dmem : entity is "dmem";
 end Fast_IP_Clock_auto_cc_1_dmem;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_dmem is
@@ -8728,8 +8720,6 @@ entity Fast_IP_Clock_auto_cc_1_rd_bin_cntr is
     s_aclk : in STD_LOGIC;
     \gc0.count_d1_reg[3]_1\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_rd_bin_cntr : entity is "rd_bin_cntr";
 end Fast_IP_Clock_auto_cc_1_rd_bin_cntr;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_rd_bin_cntr is
@@ -9689,8 +9679,6 @@ entity Fast_IP_Clock_auto_cc_1_rd_fwft is
     WR_PNTR_RD : in STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_rd_fwft : entity is "rd_fwft";
 end Fast_IP_Clock_auto_cc_1_rd_fwft;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_rd_fwft is
@@ -10948,8 +10936,6 @@ entity Fast_IP_Clock_auto_cc_1_rd_status_flags_as is
     s_aclk : in STD_LOGIC;
     ram_empty_i_reg_1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_rd_status_flags_as : entity is "rd_status_flags_as";
 end Fast_IP_Clock_auto_cc_1_rd_status_flags_as;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_rd_status_flags_as is
@@ -11224,8 +11210,6 @@ entity Fast_IP_Clock_auto_cc_1_wr_bin_cntr is
     m_aclk : in STD_LOGIC;
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_wr_bin_cntr : entity is "wr_bin_cntr";
 end Fast_IP_Clock_auto_cc_1_wr_bin_cntr;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_wr_bin_cntr is
@@ -12363,8 +12347,6 @@ entity Fast_IP_Clock_auto_cc_1_wr_status_flags_as is
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     RD_PNTR_WR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_wr_status_flags_as : entity is "wr_status_flags_as";
 end Fast_IP_Clock_auto_cc_1_wr_status_flags_as;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_wr_status_flags_as is
@@ -12794,8 +12776,6 @@ entity Fast_IP_Clock_auto_cc_1_clk_x_pntrs is
     s_aclk : in STD_LOGIC;
     \src_gray_ff_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_clk_x_pntrs : entity is "clk_x_pntrs";
 end Fast_IP_Clock_auto_cc_1_clk_x_pntrs;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_clk_x_pntrs is
@@ -13268,8 +13248,6 @@ entity Fast_IP_Clock_auto_cc_1_memory is
     \gpr1.dout_i_reg[1]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \gpr1.dout_i_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_memory : entity is "memory";
 end Fast_IP_Clock_auto_cc_1_memory;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_memory is
@@ -16083,8 +16061,6 @@ entity Fast_IP_Clock_auto_cc_1_rd_logic is
     ram_empty_i_reg : in STD_LOGIC;
     WR_PNTR_RD : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_rd_logic : entity is "rd_logic";
 end Fast_IP_Clock_auto_cc_1_rd_logic;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_rd_logic is
@@ -16396,8 +16372,6 @@ entity Fast_IP_Clock_auto_cc_1_reset_blk_ramfifo is
     s_aclk : in STD_LOGIC;
     s_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_reset_blk_ramfifo : entity is "reset_blk_ramfifo";
 end Fast_IP_Clock_auto_cc_1_reset_blk_ramfifo;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_reset_blk_ramfifo is
@@ -17930,8 +17904,6 @@ entity Fast_IP_Clock_auto_cc_1_wr_logic is
     m_axi_bvalid : in STD_LOGIC;
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_wr_logic : entity is "wr_logic";
 end Fast_IP_Clock_auto_cc_1_wr_logic;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_wr_logic is
@@ -18209,8 +18181,6 @@ entity Fast_IP_Clock_auto_cc_1_fifo_generator_ramfifo is
     m_axi_arready : in STD_LOGIC;
     I86 : in STD_LOGIC_VECTOR ( 61 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_fifo_generator_ramfifo : entity is "fifo_generator_ramfifo";
 end Fast_IP_Clock_auto_cc_1_fifo_generator_ramfifo;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_fifo_generator_ramfifo is
@@ -18724,8 +18694,6 @@ entity Fast_IP_Clock_auto_cc_1_fifo_generator_top is
     m_axi_arready : in STD_LOGIC;
     I86 : in STD_LOGIC_VECTOR ( 61 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_fifo_generator_top : entity is "fifo_generator_top";
 end Fast_IP_Clock_auto_cc_1_fifo_generator_top;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_fifo_generator_top is
@@ -18933,8 +18901,6 @@ entity Fast_IP_Clock_auto_cc_1_fifo_generator_v13_2_4_synth is
     m_axi_rvalid : in STD_LOGIC;
     s_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_fifo_generator_v13_2_4_synth : entity is "fifo_generator_v13_2_4_synth";
 end Fast_IP_Clock_auto_cc_1_fifo_generator_v13_2_4_synth;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_fifo_generator_v13_2_4_synth is
@@ -19703,8 +19669,6 @@ entity Fast_IP_Clock_auto_cc_1_fifo_generator_v13_2_4 is
   attribute C_WR_PNTR_WIDTH_WRCH of Fast_IP_Clock_auto_cc_1_fifo_generator_v13_2_4 : entity is 4;
   attribute C_WR_RESPONSE_LATENCY : integer;
   attribute C_WR_RESPONSE_LATENCY of Fast_IP_Clock_auto_cc_1_fifo_generator_v13_2_4 : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_fifo_generator_v13_2_4 : entity is "fifo_generator_v13_2_4";
 end Fast_IP_Clock_auto_cc_1_fifo_generator_v13_2_4;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_1_fifo_generator_v13_2_4 is
@@ -20327,8 +20291,6 @@ entity Fast_IP_Clock_auto_cc_1_axi_clock_converter_v2_1_18_axi_clock_converter i
   attribute C_W_WIDTH of Fast_IP_Clock_auto_cc_1_axi_clock_converter_v2_1_18_axi_clock_converter : entity is 37;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Fast_IP_Clock_auto_cc_1_axi_clock_converter_v2_1_18_axi_clock_converter : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_1_axi_clock_converter_v2_1_18_axi_clock_converter : entity is "axi_clock_converter_v2_1_18_axi_clock_converter";
   attribute P_ACLK_RATIO : integer;
   attribute P_ACLK_RATIO of Fast_IP_Clock_auto_cc_1_axi_clock_converter_v2_1_18_axi_clock_converter : entity is 2;
   attribute P_AXI3 : integer;

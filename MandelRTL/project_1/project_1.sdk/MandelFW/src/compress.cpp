@@ -44,8 +44,8 @@ u32 CompressOutput(u32 compressCapacity, u32 imageSize) {
 	 } else
 		 bytesWritten += returncode;
 
-	 u32 bufferIndex = PSRAM_BASE;
-	 u32 chunkSize = imageSize > 0x100000 ? 0x100000 : imageSize; // Chunk is minimum of complete buffer, or 4MB.
+	 volatile u32 bufferIndex = PSRAM_BASE;
+	 u32 chunkSize = imageSize > 0x100000 ? 0x100000 : imageSize; // Chunk is minimum of complete buffer, or 1MB.
 
 	 while (chunkSize > 0) {
 		 returncode = LZ4F_compressUpdate(cctxPtr, compressBuffer+bytesWritten, compressCapacity-bytesWritten, (void*) bufferIndex, chunkSize, NULL);

@@ -53,14 +53,14 @@ int SetupCalc();
 
 XUartNs550 UartNs550Instance;	 /* Instance of the UART Device */
 XUartLite DbgInstance;			 /* Instance of the MDM_1 UartLite for console */
-XIntc InterruptController;      /* The instance of the Interrupt Controller */
-XCalc Calc;					 /* The instance of the Mandelbrot Calc device */
-XCalc_Config *Calc_Cfg;		 /* The instance of the Calc config */
+XIntc InterruptController;       /* The instance of the Interrupt Controller */
+XCalc Calc;					     /* The instance of the Mandelbrot Calc device */
+XCalc_Config *Calc_Cfg;		     /* The instance of the Calc config */
 
 /*
  * The following buffer is used to receive data with the Uart.
  */
-u8 ReceiveBuffer[TEST_BUFFER_SIZE];
+volatile u8 ReceiveBuffer[TEST_BUFFER_SIZE];
 u8* ReceiveBufferPtr = &ReceiveBuffer[0];
 
 /*
@@ -306,7 +306,7 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 #ifdef DEBUG
 	//Fill 16MB empty memory with a recognizable pattern.
 	xil_printf("Initializing memory\r\n");
-	for (u32* x = (u32 *)PSRAM_BASE; x <= (u32 *)PSRAM_END - 1; x++) {
+	for (volatile u32* x = (u32 *)PSRAM_BASE; x <= (u32 *)PSRAM_END - 1; x++) {
 		 *x = 0xDEADBEEF;
 	}
 #endif

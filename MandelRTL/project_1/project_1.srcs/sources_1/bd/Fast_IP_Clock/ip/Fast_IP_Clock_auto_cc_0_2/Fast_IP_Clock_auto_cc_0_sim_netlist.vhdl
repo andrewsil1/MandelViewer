@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri Jul  5 14:25:35 2019
+-- Date        : Fri Jul  5 14:25:34 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_auto_cc_0_2/Fast_IP_Clock_auto_cc_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Fast_IP_Clock_auto_cc_0 -prefix
+--               Fast_IP_Clock_auto_cc_0_ Fast_IP_Clock_auto_cc_0_sim_netlist.vhdl
 -- Design      : Fast_IP_Clock_auto_cc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity Fast_IP_Clock_auto_cc_0_xpm_cdc_single is
   attribute DEST_SYNC_FF of Fast_IP_Clock_auto_cc_0_xpm_cdc_single : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of Fast_IP_Clock_auto_cc_0_xpm_cdc_single : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_0_xpm_cdc_single : entity is "xpm_cdc_single";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of Fast_IP_Clock_auto_cc_0_xpm_cdc_single : entity is 0;
   attribute SRC_INPUT_REG : integer;
@@ -771,8 +769,6 @@ entity Fast_IP_Clock_auto_cc_0_xpm_cdc_handshake is
   attribute DEST_SYNC_FF of Fast_IP_Clock_auto_cc_0_xpm_cdc_handshake : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of Fast_IP_Clock_auto_cc_0_xpm_cdc_handshake : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_0_xpm_cdc_handshake : entity is "xpm_cdc_handshake";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of Fast_IP_Clock_auto_cc_0_xpm_cdc_handshake : entity is 0;
   attribute SRC_SYNC_FF : integer;
@@ -3024,8 +3020,6 @@ entity Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_lite_async is
     m_axi_arready : in STD_LOGIC;
     s_axi_arvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_lite_async : entity is "axi_clock_converter_v2_1_18_lite_async";
 end Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_lite_async;
 
 architecture STRUCTURE of Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_lite_async is
@@ -4806,8 +4800,6 @@ entity Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter i
   attribute C_W_WIDTH of Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter : entity is 36;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter : entity is "axi_clock_converter_v2_1_18_axi_clock_converter";
   attribute P_ACLK_RATIO : integer;
   attribute P_ACLK_RATIO of Fast_IP_Clock_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter : entity is 2;
   attribute P_AXI3 : integer;
