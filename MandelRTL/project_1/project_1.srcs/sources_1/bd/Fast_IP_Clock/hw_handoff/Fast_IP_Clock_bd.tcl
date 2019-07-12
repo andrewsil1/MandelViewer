@@ -224,6 +224,144 @@ proc create_hier_cell_microblaze_0_local_memory { parentCell nameHier } {
   current_bd_instance $oldCurInst
 }
 
+# Hierarchical cell: Resets
+proc create_hier_cell_Resets { parentCell nameHier } {
+
+  variable script_folder
+
+  if { $parentCell eq "" || $nameHier eq "" } {
+     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_Resets() - Empty argument(s)!"}
+     return
+  }
+
+  # Get object for parentCell
+  set parentObj [get_bd_cells $parentCell]
+  if { $parentObj == "" } {
+     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     return
+  }
+
+  # Make sure parentObj is hier blk
+  set parentType [get_property TYPE $parentObj]
+  if { $parentType ne "hier" } {
+     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     return
+  }
+
+  # Save current instance; Restore later
+  set oldCurInst [current_bd_instance .]
+
+  # Set parent object as current
+  current_bd_instance $parentObj
+
+  # Create cell and set as current instance
+  set hier_obj [create_bd_cell -type hier $nameHier]
+  current_bd_instance $hier_obj
+
+  # Create interface pins
+
+  # Create pins
+  create_bd_pin -dir I -type rst btnCpuReset
+  create_bd_pin -dir O -from 0 -to 0 -type rst bus_struct_reset
+  create_bd_pin -dir I dcm_locked
+  create_bd_pin -dir I -type rst mb_debug_sys_rst
+  create_bd_pin -dir O -type rst mb_reset
+  create_bd_pin -dir O -from 0 -to 0 -type rst peripheral_aresetn
+  create_bd_pin -dir O -from 0 -to 0 -type rst peripheral_aresetn1
+  create_bd_pin -dir I -type clk slowest_sync_clk
+  create_bd_pin -dir I -type clk slowest_sync_clk1
+
+  # Create instance: proc_sys_reset_0, and set properties
+  set proc_sys_reset_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0 ]
+  set_property -dict [ list \
+   CONFIG.RESET_BOARD_INTERFACE {Custom} \
+   CONFIG.USE_BOARD_FLOW {true} \
+ ] $proc_sys_reset_0
+
+  # Create instance: proc_sys_reset_1, and set properties
+  set proc_sys_reset_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_1 ]
+  set_property -dict [ list \
+   CONFIG.RESET_BOARD_INTERFACE {Custom} \
+   CONFIG.USE_BOARD_FLOW {true} \
+ ] $proc_sys_reset_1
+
+  # Create port connections
+  connect_bd_net -net SYS_Rst_1 [get_bd_pins bus_struct_reset] [get_bd_pins proc_sys_reset_0/bus_struct_reset]
+  connect_bd_net -net btnCpuReset_1 [get_bd_pins btnCpuReset] [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins proc_sys_reset_1/ext_reset_in]
+  connect_bd_net -net clk_wiz_0_CalcClk [get_bd_pins slowest_sync_clk] [get_bd_pins proc_sys_reset_1/slowest_sync_clk]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_pins dcm_locked] [get_bd_pins proc_sys_reset_0/dcm_locked] [get_bd_pins proc_sys_reset_1/dcm_locked]
+  connect_bd_net -net mdm_1_Debug_SYS_Rst [get_bd_pins mb_debug_sys_rst] [get_bd_pins proc_sys_reset_0/mb_debug_sys_rst] [get_bd_pins proc_sys_reset_1/mb_debug_sys_rst]
+  connect_bd_net -net microblaze_0_Clk [get_bd_pins slowest_sync_clk1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
+  connect_bd_net -net proc_sys_reset_0_mb_reset [get_bd_pins mb_reset] [get_bd_pins proc_sys_reset_0/mb_reset]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins peripheral_aresetn1] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+  connect_bd_net -net proc_sys_reset_1_peripheral_aresetn [get_bd_pins peripheral_aresetn] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
+
+  # Restore current instance
+  current_bd_instance $oldCurInst
+}
+
+# Hierarchical cell: Constants
+proc create_hier_cell_Constants { parentCell nameHier } {
+
+  variable script_folder
+
+  if { $parentCell eq "" || $nameHier eq "" } {
+     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_Constants() - Empty argument(s)!"}
+     return
+  }
+
+  # Get object for parentCell
+  set parentObj [get_bd_cells $parentCell]
+  if { $parentObj == "" } {
+     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     return
+  }
+
+  # Make sure parentObj is hier blk
+  set parentType [get_property TYPE $parentObj]
+  if { $parentType ne "hier" } {
+     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     return
+  }
+
+  # Save current instance; Restore later
+  set oldCurInst [current_bd_instance .]
+
+  # Set parent object as current
+  current_bd_instance $parentObj
+
+  # Create cell and set as current instance
+  set hier_obj [create_bd_cell -type hier $nameHier]
+  current_bd_instance $hier_obj
+
+  # Create interface pins
+
+  # Create pins
+  create_bd_pin -dir O -from 31 -to 0 dout
+  create_bd_pin -dir O -from 31 -to 0 dout1
+
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0x44a20000} \
+   CONFIG.CONST_WIDTH {32} \
+ ] $xlconstant_0
+
+  # Create instance: xlconstant_1, and set properties
+  set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0x44a20004} \
+   CONFIG.CONST_WIDTH {32} \
+ ] $xlconstant_1
+
+  # Create port connections
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins dout1] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net xlconstant_1_dout [get_bd_pins dout] [get_bd_pins xlconstant_1/dout]
+
+  # Restore current instance
+  current_bd_instance $oldCurInst
+}
+
 
 # Procedure to create entire design; Provide argument to make
 # procedure reusable. If parentCell is "", will use root.
@@ -276,6 +414,12 @@ proc create_root_design { parentCell } {
    CONFIG.PHASE {0.000} \
  ] $clk
   set dp [ create_bd_port -dir O dp ]
+
+  # Create instance: Constants
+  create_hier_cell_Constants [current_bd_instance .] Constants
+
+  # Create instance: Resets
+  create_hier_cell_Resets [current_bd_instance .] Resets
 
   # Create instance: SevenSegController_0, and set properties
   set SevenSegController_0 [ create_bd_cell -type ip -vlnv QuickSilverIP_LLC:user:SevenSegController:1.17 SevenSegController_0 ]
@@ -369,9 +513,10 @@ proc create_root_design { parentCell } {
    CONFIG.C_AREA_OPTIMIZED {0} \
    CONFIG.C_BRANCH_TARGET_CACHE_SIZE {0} \
    CONFIG.C_DCACHE_ADDR_TAG {14} \
-   CONFIG.C_DCACHE_ALWAYS_USED {1} \
+   CONFIG.C_DCACHE_BASEADDR {0x0000000080000000} \
    CONFIG.C_DCACHE_BYTE_SIZE {1024} \
    CONFIG.C_DCACHE_FORCE_TAG_LUTRAM {1} \
+   CONFIG.C_DCACHE_HIGHADDR {0x0000000080FFFFFF} \
    CONFIG.C_DCACHE_LINE_LEN {8} \
    CONFIG.C_DEBUG_ENABLED {1} \
    CONFIG.C_DIV_ZERO_EXCEPTION {0} \
@@ -398,29 +543,8 @@ proc create_root_design { parentCell } {
    CONFIG.G_USE_EXCEPTIONS {0} \
  ] $microblaze_0
 
-  # Create instance: microblaze_0_axi_periph, and set properties
-  set microblaze_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 microblaze_0_axi_periph ]
-  set_property -dict [ list \
-   CONFIG.NUM_MI {5} \
-   CONFIG.NUM_SI {2} \
- ] $microblaze_0_axi_periph
-
   # Create instance: microblaze_0_local_memory
   create_hier_cell_microblaze_0_local_memory [current_bd_instance .] microblaze_0_local_memory
-
-  # Create instance: proc_sys_reset_0, and set properties
-  set proc_sys_reset_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0 ]
-  set_property -dict [ list \
-   CONFIG.RESET_BOARD_INTERFACE {Custom} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $proc_sys_reset_0
-
-  # Create instance: proc_sys_reset_1, and set properties
-  set proc_sys_reset_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_1 ]
-  set_property -dict [ list \
-   CONFIG.RESET_BOARD_INTERFACE {Custom} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $proc_sys_reset_1
 
   # Create instance: psram_ip_0, and set properties
   set psram_ip_0 [ create_bd_cell -type ip -vlnv OneAcreWood.local:user:psram_ip:1.0 psram_ip_0 ]
@@ -429,6 +553,8 @@ proc create_root_design { parentCell } {
   set smartconnect_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 smartconnect_0 ]
   set_property -dict [ list \
    CONFIG.NUM_CLKS {2} \
+   CONFIG.NUM_MI {6} \
+   CONFIG.NUM_SI {4} \
  ] $smartconnect_0
 
   # Create instance: xlconcat_0, and set properties
@@ -437,57 +563,43 @@ proc create_root_design { parentCell } {
    CONFIG.NUM_PORTS {2} \
  ] $xlconcat_0
 
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0x44a20000} \
-   CONFIG.CONST_WIDTH {32} \
- ] $xlconstant_0
-
-  # Create instance: xlconstant_1, and set properties
-  set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0x44a20004} \
-   CONFIG.CONST_WIDTH {32} \
- ] $xlconstant_1
-
   # Create interface connections
   connect_bd_intf_net -intf_net axi_intc_0_interrupt [get_bd_intf_pins axi_intc_0/interrupt] [get_bd_intf_pins microblaze_0/INTERRUPT]
   connect_bd_intf_net -intf_net axi_uart16550_0_UART [get_bd_intf_ports usb_uart] [get_bd_intf_pins axi_uart16550_0/UART]
-  connect_bd_intf_net -intf_net calc_0_m_axi_buf_r [get_bd_intf_pins calc_0/m_axi_buf_r] [get_bd_intf_pins smartconnect_0/S01_AXI]
-  connect_bd_intf_net -intf_net calc_0_m_axi_gmem [get_bd_intf_pins calc_0/m_axi_gmem] [get_bd_intf_pins microblaze_0_axi_periph/S01_AXI]
-  connect_bd_intf_net -intf_net microblaze_0_M_AXI_DC [get_bd_intf_pins microblaze_0/M_AXI_DC] [get_bd_intf_pins smartconnect_0/S00_AXI]
-  connect_bd_intf_net -intf_net microblaze_0_M_AXI_DP [get_bd_intf_pins microblaze_0/M_AXI_DP] [get_bd_intf_pins microblaze_0_axi_periph/S00_AXI]
-  connect_bd_intf_net -intf_net microblaze_0_axi_periph_M00_AXI [get_bd_intf_pins axi_intc_0/s_axi] [get_bd_intf_pins microblaze_0_axi_periph/M00_AXI]
-  connect_bd_intf_net -intf_net microblaze_0_axi_periph_M01_AXI [get_bd_intf_pins axi_uart16550_0/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M01_AXI]
-  connect_bd_intf_net -intf_net microblaze_0_axi_periph_M02_AXI [get_bd_intf_pins mdm_1/S_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M02_AXI]
-  connect_bd_intf_net -intf_net microblaze_0_axi_periph_M03_AXI [get_bd_intf_pins calc_0/s_axi_in_parms] [get_bd_intf_pins microblaze_0_axi_periph/M03_AXI]
-  connect_bd_intf_net -intf_net microblaze_0_axi_periph_M04_AXI [get_bd_intf_pins SevenSegController_0/S00_AXI] [get_bd_intf_pins microblaze_0_axi_periph/M04_AXI]
+  connect_bd_intf_net -intf_net calc_0_m_axi_buf_r [get_bd_intf_pins calc_0/m_axi_buf_r] [get_bd_intf_pins smartconnect_0/S03_AXI]
+  connect_bd_intf_net -intf_net calc_0_m_axi_gmem [get_bd_intf_pins calc_0/m_axi_gmem] [get_bd_intf_pins smartconnect_0/S02_AXI]
+  connect_bd_intf_net -intf_net microblaze_0_M_AXI_DC [get_bd_intf_pins microblaze_0/M_AXI_DC] [get_bd_intf_pins smartconnect_0/S01_AXI]
+  connect_bd_intf_net -intf_net microblaze_0_M_AXI_DP [get_bd_intf_pins microblaze_0/M_AXI_DP] [get_bd_intf_pins smartconnect_0/S00_AXI]
   connect_bd_intf_net -intf_net microblaze_0_debug [get_bd_intf_pins mdm_1/MBDEBUG_0] [get_bd_intf_pins microblaze_0/DEBUG]
   connect_bd_intf_net -intf_net microblaze_0_dlmb_1 [get_bd_intf_pins microblaze_0/DLMB] [get_bd_intf_pins microblaze_0_local_memory/DLMB]
   connect_bd_intf_net -intf_net microblaze_0_ilmb_1 [get_bd_intf_pins microblaze_0/ILMB] [get_bd_intf_pins microblaze_0_local_memory/ILMB]
   connect_bd_intf_net -intf_net psram_ip_0_psram_rtl [get_bd_intf_ports cellular_ram] [get_bd_intf_pins psram_ip_0/psram_rtl]
-  connect_bd_intf_net -intf_net smartconnect_0_M00_AXI [get_bd_intf_pins psram_ip_0/S00_AXI] [get_bd_intf_pins smartconnect_0/M00_AXI]
+  connect_bd_intf_net -intf_net smartconnect_0_M00_AXI [get_bd_intf_pins calc_0/s_axi_in_parms] [get_bd_intf_pins smartconnect_0/M00_AXI]
+  connect_bd_intf_net -intf_net smartconnect_0_M01_AXI [get_bd_intf_pins axi_intc_0/s_axi] [get_bd_intf_pins smartconnect_0/M01_AXI]
+  connect_bd_intf_net -intf_net smartconnect_0_M02_AXI [get_bd_intf_pins mdm_1/S_AXI] [get_bd_intf_pins smartconnect_0/M02_AXI]
+  connect_bd_intf_net -intf_net smartconnect_0_M03_AXI [get_bd_intf_pins psram_ip_0/S00_AXI] [get_bd_intf_pins smartconnect_0/M03_AXI]
+  connect_bd_intf_net -intf_net smartconnect_0_M04_AXI [get_bd_intf_pins SevenSegController_0/S00_AXI] [get_bd_intf_pins smartconnect_0/M04_AXI]
+  connect_bd_intf_net -intf_net smartconnect_0_M05_AXI [get_bd_intf_pins axi_uart16550_0/S_AXI] [get_bd_intf_pins smartconnect_0/M05_AXI]
 
   # Create port connections
-  connect_bd_net -net SYS_Rst_1 [get_bd_pins microblaze_0_local_memory/SYS_Rst] [get_bd_pins proc_sys_reset_0/bus_struct_reset]
+  connect_bd_net -net SYS_Rst_1 [get_bd_pins Resets/bus_struct_reset] [get_bd_pins microblaze_0_local_memory/SYS_Rst]
   connect_bd_net -net SevenSegController_0_anode [get_bd_ports anode] [get_bd_pins SevenSegController_0/anode]
   connect_bd_net -net SevenSegController_0_cathode [get_bd_ports cathode] [get_bd_pins SevenSegController_0/cathode]
   connect_bd_net -net SevenSegController_0_dp [get_bd_ports dp] [get_bd_pins SevenSegController_0/dp]
   connect_bd_net -net axi_uart16550_0_ip2intc_irpt [get_bd_pins axi_uart16550_0/ip2intc_irpt] [get_bd_pins xlconcat_0/In1]
-  connect_bd_net -net btnCpuReset_1 [get_bd_ports btnCpuReset] [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins proc_sys_reset_1/ext_reset_in]
+  connect_bd_net -net btnCpuReset_1 [get_bd_ports btnCpuReset] [get_bd_pins Resets/btnCpuReset]
   connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clk_wiz_0_CalcClk [get_bd_pins calc_0/ap_clk] [get_bd_pins clk_wiz_0/CalcClk] [get_bd_pins microblaze_0_axi_periph/M03_ACLK] [get_bd_pins microblaze_0_axi_periph/S01_ACLK] [get_bd_pins proc_sys_reset_1/slowest_sync_clk] [get_bd_pins smartconnect_0/aclk1]
-  connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins proc_sys_reset_0/dcm_locked] [get_bd_pins proc_sys_reset_1/dcm_locked]
-  connect_bd_net -net mdm_1_Debug_SYS_Rst [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins proc_sys_reset_0/mb_debug_sys_rst]
+  connect_bd_net -net clk_wiz_0_CalcClk [get_bd_pins Resets/slowest_sync_clk] [get_bd_pins calc_0/ap_clk] [get_bd_pins clk_wiz_0/CalcClk] [get_bd_pins smartconnect_0/aclk1]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_pins Resets/dcm_locked] [get_bd_pins clk_wiz_0/locked]
+  connect_bd_net -net mdm_1_Debug_SYS_Rst [get_bd_pins Resets/mb_debug_sys_rst] [get_bd_pins mdm_1/Debug_SYS_Rst]
   connect_bd_net -net mdm_1_Interrupt [get_bd_pins mdm_1/Interrupt] [get_bd_pins xlconcat_0/In0]
-  connect_bd_net -net microblaze_0_Clk [get_bd_pins SevenSegController_0/s00_axi_aclk] [get_bd_pins axi_intc_0/s_axi_aclk] [get_bd_pins axi_uart16550_0/s_axi_aclk] [get_bd_pins clk_wiz_0/AXIclk] [get_bd_pins mdm_1/S_AXI_ACLK] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_axi_periph/ACLK] [get_bd_pins microblaze_0_axi_periph/M00_ACLK] [get_bd_pins microblaze_0_axi_periph/M01_ACLK] [get_bd_pins microblaze_0_axi_periph/M02_ACLK] [get_bd_pins microblaze_0_axi_periph/M04_ACLK] [get_bd_pins microblaze_0_axi_periph/S00_ACLK] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins psram_ip_0/s00_axi_aclk] [get_bd_pins smartconnect_0/aclk]
-  connect_bd_net -net proc_sys_reset_0_mb_reset [get_bd_pins microblaze_0/Reset] [get_bd_pins proc_sys_reset_0/mb_reset]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins SevenSegController_0/s00_axi_aresetn] [get_bd_pins axi_intc_0/s_axi_aresetn] [get_bd_pins axi_uart16550_0/s_axi_aresetn] [get_bd_pins mdm_1/S_AXI_ARESETN] [get_bd_pins microblaze_0_axi_periph/ARESETN] [get_bd_pins microblaze_0_axi_periph/M00_ARESETN] [get_bd_pins microblaze_0_axi_periph/M01_ARESETN] [get_bd_pins microblaze_0_axi_periph/M02_ARESETN] [get_bd_pins microblaze_0_axi_periph/M04_ARESETN] [get_bd_pins microblaze_0_axi_periph/S00_ARESETN] [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins psram_ip_0/s00_axi_aresetn] [get_bd_pins smartconnect_0/aresetn]
-  connect_bd_net -net proc_sys_reset_1_peripheral_aresetn [get_bd_pins calc_0/ap_rst_n] [get_bd_pins microblaze_0_axi_periph/M03_ARESETN] [get_bd_pins microblaze_0_axi_periph/S01_ARESETN] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
+  connect_bd_net -net microblaze_0_Clk [get_bd_pins Resets/slowest_sync_clk1] [get_bd_pins SevenSegController_0/s00_axi_aclk] [get_bd_pins axi_intc_0/s_axi_aclk] [get_bd_pins axi_uart16550_0/s_axi_aclk] [get_bd_pins clk_wiz_0/AXIclk] [get_bd_pins mdm_1/S_AXI_ACLK] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins psram_ip_0/s00_axi_aclk] [get_bd_pins smartconnect_0/aclk]
+  connect_bd_net -net proc_sys_reset_0_mb_reset [get_bd_pins Resets/mb_reset] [get_bd_pins microblaze_0/Reset]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins Resets/peripheral_aresetn1] [get_bd_pins SevenSegController_0/s00_axi_aresetn] [get_bd_pins axi_intc_0/s_axi_aresetn] [get_bd_pins axi_uart16550_0/s_axi_aresetn] [get_bd_pins mdm_1/S_AXI_ARESETN] [get_bd_pins psram_ip_0/s00_axi_aresetn] [get_bd_pins smartconnect_0/aresetn]
+  connect_bd_net -net proc_sys_reset_1_peripheral_aresetn [get_bd_pins Resets/peripheral_aresetn] [get_bd_pins calc_0/ap_rst_n]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins axi_intc_0/intr] [get_bd_pins xlconcat_0/dout]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins calc_0/LEDControl] [get_bd_pins xlconstant_0/dout]
-  connect_bd_net -net xlconstant_1_dout [get_bd_pins calc_0/LED] [get_bd_pins xlconstant_1/dout]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins Constants/dout1] [get_bd_pins calc_0/LEDControl]
+  connect_bd_net -net xlconstant_1_dout [get_bd_pins Constants/dout] [get_bd_pins calc_0/LED]
 
   # Create address segments
   create_bd_addr_seg -range 0x00010000 -offset 0x44A20000 [get_bd_addr_spaces calc_0/Data_m_axi_gmem] [get_bd_addr_segs SevenSegController_0/S00_AXI/S00_AXI_reg] SEG_SevenSegController_0_S00_AXI_reg

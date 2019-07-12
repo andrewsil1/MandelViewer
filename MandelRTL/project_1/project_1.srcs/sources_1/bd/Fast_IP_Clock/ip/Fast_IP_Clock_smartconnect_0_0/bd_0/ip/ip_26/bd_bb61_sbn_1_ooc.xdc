@@ -46,8 +46,7 @@
 # PART OF THIS FILE AT ALL TIMES.
 #
 ################################################################################
-# Clocks are async
+ 
 create_clock -period 100.0 -name s_sc_aclk [get_ports s_sc_aclk]
-create_clock -period 100.1 -name m_sc_aclk [get_ports m_sc_aclk]
  
 

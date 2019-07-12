@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Thu Jun 27 10:03:39 2019
+// Date        : Mon Jul  8 15:59:47 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top Fast_IP_Clock_microblaze_0_0 -prefix
 //               Fast_IP_Clock_microblaze_0_0_ Fast_IP_Clock_microblaze_0_0_stub.v

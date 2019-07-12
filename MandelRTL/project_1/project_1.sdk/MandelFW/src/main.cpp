@@ -60,7 +60,7 @@ XCalc_Config *Calc_Cfg;		     /* The instance of the Calc config */
 /*
  * The following buffer is used to receive data with the Uart.
  */
-volatile u8 ReceiveBuffer[TEST_BUFFER_SIZE];
+u8 ReceiveBuffer[TEST_BUFFER_SIZE];
 u8* ReceiveBufferPtr = &ReceiveBuffer[0];
 
 /*
@@ -384,6 +384,9 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 #endif
 				WIDTH = GetUIntParam(UartInstancePtr, ReceiveBufferPtr);
 				HEIGHT = WIDTH * 3U / 4U;
+#ifdef DEBUG
+				xil_printf("Width set to: %d\r\n",WIDTH);
+#endif
 				break;
 			case 'X' :
 #ifdef DEBUG

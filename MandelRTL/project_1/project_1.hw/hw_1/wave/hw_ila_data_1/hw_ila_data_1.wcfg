@@ -10,31 +10,61 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="4950001fs"></ZoomEndTime>
-      <Cursor1Time time="183000fs"></Cursor1Time>
+      <ZoomEndTime time="8192001fs"></ZoomEndTime>
+      <Cursor1Time time="16000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="271"></NameColumnWidth>
-      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+      <NameColumnWidth column_width="679"></NameColumnWidth>
+      <ValueColumnWidth column_width="494"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="1" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="group74" type="group">
-      <obj_property name="label">slot_0 : calc_0_m_axi_gmem : Interface</obj_property>
+   <wvobject fp_name="group93" type="group">
+      <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : Interface</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="Detail_Data">Interface_(i1:s0)_(calc_0_m_axi_gmem)_tooltip</obj_property>
-      <obj_property name="Render_Data">Interface_(i1:s0)_(calc_0_m_axi_gmem)</obj_property>
+      <obj_property name="Detail_Data">Interface_(i1:s0)_(smartconnect_0_M00_AXI)_tooltip</obj_property>
+      <obj_property name="Render_Data">Interface_(i1:s0)_(smartconnect_0_M00_AXI)</obj_property>
       <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
-      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
+      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="group75" type="group">
-         <obj_property name="label">slot_0 : calc_0_m_axi_gmem : AR Channel</obj_property>
+      <wvobject fp_name="group140" type="group">
+         <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : Write Transactions 1</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="Detail_Data">AR_Channel_(i1:s0)_(calc_0_m_axi_gmem)_tooltip</obj_property>
-         <obj_property name="Render_Data">AR_Channel_(i1:s0)_(calc_0_m_axi_gmem)</obj_property>
+         <obj_property name="Detail_Data">slot_0___smartconnect_0_M00_AXI___Write_Transactions_1_tooltip</obj_property>
+         <obj_property name="Render_Data">slot_0___smartconnect_0_M00_AXI___Write_Transactions_1</obj_property>
+         <obj_property name="EnumTransactionColorTable">0000=blank</obj_property>
+         <obj_property name="CustomSignalColor">LightSeaGreen</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      </wvobject>
+      <wvobject fp_name="group139" type="group">
+         <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : Write Transactions 0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">slot_0___smartconnect_0_M00_AXI___Write_Transactions_0_tooltip</obj_property>
+         <obj_property name="Render_Data">slot_0___smartconnect_0_M00_AXI___Write_Transactions_0</obj_property>
+         <obj_property name="EnumTransactionColorTable">0000=blank</obj_property>
+         <obj_property name="CustomSignalColor">LightSeaGreen</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      </wvobject>
+      <wvobject fp_name="group138" type="group">
+         <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : Read Transactions 0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">slot_0___smartconnect_0_M00_AXI___Read_Transactions_0_tooltip</obj_property>
+         <obj_property name="Render_Data">slot_0___smartconnect_0_M00_AXI___Read_Transactions_0</obj_property>
+         <obj_property name="EnumTransactionColorTable">0000=blank</obj_property>
+         <obj_property name="CustomSignalColor">Orange</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+      </wvobject>
+      <wvobject fp_name="group94" type="group">
+         <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : AR Channel</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Detail_Data">AR_Channel_(i1:s0)_(smartconnect_0_M00_AXI)_tooltip</obj_property>
+         <obj_property name="Render_Data">AR_Channel_(i1:s0)_(smartconnect_0_M00_AXI)</obj_property>
          <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
          <obj_property name="CustomSignalColor">Yellow</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
@@ -43,7 +73,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_arvalid</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_arvalid</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : ARVALID</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : ARVALID</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
@@ -51,15 +81,24 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_arready</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_arready</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : ARREADY</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : ARREADY</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
          <wvobject fp_name="Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_araddr" type="array">
             <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_araddr[31:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axi_araddr[31:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : ARADDR</obj_property>
+            <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_araddr[23:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_araddr[23:0]</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : ARADDR</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_arburst" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_arburst[1:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_arburst[1:0]</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : ARBURST</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -68,7 +107,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_arlen[7:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_arlen[7:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : ARLEN</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : ARLEN</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -77,7 +116,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_arsize[2:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_arsize[2:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : ARSIZE</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : ARSIZE</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -86,7 +125,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_arcache[3:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_arcache[3:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : ARCACHE</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : ARCACHE</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -95,7 +134,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_arprot[2:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_arprot[2:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : ARPROT</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : ARPROT</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -104,7 +143,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_arlock</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_arlock</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : ARLOCK</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : ARLOCK</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
@@ -112,26 +151,17 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_arqos[3:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_arqos[3:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : ARQOS</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_ar_cnt" type="array">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_ar_cnt[1:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axi_ar_cnt[1:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : AR_CNT</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : ARQOS</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group86" type="group">
-         <obj_property name="label">slot_0 : calc_0_m_axi_gmem : R Channel</obj_property>
+      <wvobject fp_name="group105" type="group">
+         <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : R Channel</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="Detail_Data">R_Channel_(i1:s0)_(calc_0_m_axi_gmem)_tooltip</obj_property>
-         <obj_property name="Render_Data">R_Channel_(i1:s0)_(calc_0_m_axi_gmem)</obj_property>
+         <obj_property name="Detail_Data">R_Channel_(i1:s0)_(smartconnect_0_M00_AXI)_tooltip</obj_property>
+         <obj_property name="Render_Data">R_Channel_(i1:s0)_(smartconnect_0_M00_AXI)</obj_property>
          <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
          <obj_property name="CustomSignalColor">Gold</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
@@ -140,7 +170,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_rvalid</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_rvalid</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : RVALID</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : RVALID</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
@@ -148,7 +178,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_rready</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_rready</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : RREADY</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : RREADY</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
@@ -156,7 +186,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_rlast</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_rlast</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : RLAST</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : RLAST</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
@@ -164,7 +194,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_rdata[31:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_rdata[31:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : RDATA</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : RDATA</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -173,36 +203,26 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_rresp[1:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_rresp[1:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : RRESP</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_r_cnt" type="array">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_r_cnt[1:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axi_r_cnt[1:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : R_CNT</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : RRESP</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group93" type="group">
-         <obj_property name="label">slot_0 : calc_0_m_axi_gmem : AW Channel</obj_property>
+      <wvobject fp_name="group111" type="group">
+         <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : AW Channel</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="Detail_Data">AW_Channel_(i1:s0)_(calc_0_m_axi_gmem)_tooltip</obj_property>
-         <obj_property name="Render_Data">AW_Channel_(i1:s0)_(calc_0_m_axi_gmem)</obj_property>
+         <obj_property name="Detail_Data">AW_Channel_(i1:s0)_(smartconnect_0_M00_AXI)_tooltip</obj_property>
+         <obj_property name="Render_Data">AW_Channel_(i1:s0)_(smartconnect_0_M00_AXI)</obj_property>
          <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
          <obj_property name="CustomSignalColor">MediumTurquoise</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-         <obj_property name="isExpanded"></obj_property>
          <wvobject fp_name="Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awvalid" type="logic">
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awvalid</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_awvalid</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : AWVALID</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : AWVALID</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
@@ -210,15 +230,24 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awready</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_awready</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : AWREADY</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : AWREADY</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
          <wvobject fp_name="Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awaddr" type="array">
             <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awaddr[31:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axi_awaddr[31:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : AWADDR</obj_property>
+            <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awaddr[23:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_awaddr[23:0]</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : AWADDR</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awburst" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awburst[1:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_awburst[1:0]</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : AWBURST</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -227,7 +256,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awlen[7:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_awlen[7:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : AWLEN</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : AWLEN</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -236,7 +265,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awsize[2:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_awsize[2:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : AWSIZE</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : AWSIZE</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -245,7 +274,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awcache[3:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_awcache[3:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : AWCACHE</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : AWCACHE</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -254,7 +283,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awprot[2:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_awprot[2:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : AWPROT</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : AWPROT</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -263,7 +292,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awlock</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_awlock</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : AWLOCK</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : AWLOCK</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
@@ -271,36 +300,26 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_awqos[3:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_awqos[3:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : AWQOS</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_aw_cnt" type="array">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_aw_cnt[1:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axi_aw_cnt[1:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : AW_CNT</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : AWQOS</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group104" type="group">
-         <obj_property name="label">slot_0 : calc_0_m_axi_gmem : W Channel</obj_property>
+      <wvobject fp_name="group122" type="group">
+         <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : W Channel</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="Detail_Data">W_Channel_(i1:s0)_(calc_0_m_axi_gmem)_tooltip</obj_property>
-         <obj_property name="Render_Data">W_Channel_(i1:s0)_(calc_0_m_axi_gmem)</obj_property>
+         <obj_property name="Detail_Data">W_Channel_(i1:s0)_(smartconnect_0_M00_AXI)_tooltip</obj_property>
+         <obj_property name="Render_Data">W_Channel_(i1:s0)_(smartconnect_0_M00_AXI)</obj_property>
          <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
          <obj_property name="CustomSignalColor">Teal</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-         <obj_property name="isExpanded"></obj_property>
          <wvobject fp_name="Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_wvalid" type="logic">
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_wvalid</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_wvalid</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : WVALID</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : WVALID</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
@@ -308,7 +327,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_wready</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_wready</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : WREADY</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : WREADY</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
@@ -316,7 +335,16 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_wlast</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_wlast</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : WLAST</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : WLAST</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject fp_name="Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_wdata" type="array">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_wdata[31:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_wdata[31:0]</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : WDATA</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
@@ -324,17 +352,17 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_wstrb[3:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_wstrb[3:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : WSTRB</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : WSTRB</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject fp_name="group110" type="group">
-         <obj_property name="label">slot_0 : calc_0_m_axi_gmem : B Channel</obj_property>
+      <wvobject fp_name="group128" type="group">
+         <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : B Channel</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="Detail_Data">B_Channel_(i1:s0)_(calc_0_m_axi_gmem)_tooltip</obj_property>
-         <obj_property name="Render_Data">B_Channel_(i1:s0)_(calc_0_m_axi_gmem)</obj_property>
+         <obj_property name="Detail_Data">B_Channel_(i1:s0)_(smartconnect_0_M00_AXI)_tooltip</obj_property>
+         <obj_property name="Render_Data">B_Channel_(i1:s0)_(smartconnect_0_M00_AXI)</obj_property>
          <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
          <obj_property name="CustomSignalColor">SteelBlue</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
@@ -343,7 +371,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_bvalid</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_bvalid</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : BVALID</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : BVALID</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
@@ -351,7 +379,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_bready</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_bready</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : BREADY</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : BREADY</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
@@ -359,16 +387,7 @@
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_bresp[1:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_0_axi_bresp[1:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : BRESP</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_b_cnt" type="array">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">Fast_IP_Clock_i/system_ila_0/inst/net_slot_0_axi_b_cnt[1:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axi_b_cnt[1:0]</obj_property>
-            <obj_property name="label">slot_0 : calc_0_m_axi_gmem : B_CNT</obj_property>
+            <obj_property name="label">slot_0 : smartconnect_0_M00_AXI : BRESP</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

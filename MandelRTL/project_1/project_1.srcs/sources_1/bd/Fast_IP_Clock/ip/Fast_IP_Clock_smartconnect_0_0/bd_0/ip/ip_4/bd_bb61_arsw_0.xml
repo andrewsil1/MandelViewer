@@ -118,7 +118,7 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">0</spirit:left>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">5</spirit:left>
               <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((0 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">0</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
@@ -130,7 +130,7 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">0</spirit:left>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">5</spirit:left>
               <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((0 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">0</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
@@ -142,7 +142,7 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">0</spirit:left>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">5</spirit:left>
               <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((0 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">0</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
@@ -154,7 +154,7 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">137</spirit:left>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">146</spirit:left>
               <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((0 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">0</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
@@ -166,7 +166,7 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">0</spirit:left>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">5</spirit:left>
               <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((0 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">0</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
@@ -200,7 +200,7 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">1</spirit:left>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">3</spirit:left>
               <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((0 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">0</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
@@ -212,7 +212,7 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">1</spirit:left>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">3</spirit:left>
               <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((0 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">0</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
@@ -224,7 +224,7 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">1</spirit:left>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">3</spirit:left>
               <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((0 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">0</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
@@ -236,7 +236,7 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">1</spirit:left>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">3</spirit:left>
               <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((0 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">0</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
@@ -248,7 +248,7 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">137</spirit:left>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">146</spirit:left>
               <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((0 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">0</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
@@ -276,8 +276,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">1</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">1</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">11</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">6</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -288,8 +288,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">1</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">1</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">11</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">6</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -300,8 +300,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">1</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">1</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">11</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">6</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -312,8 +312,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">275</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">138</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">293</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">147</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -324,8 +324,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">1</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">1</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">11</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">6</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -358,8 +358,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">3</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">2</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">7</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">4</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -370,8 +370,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">3</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">2</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">7</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">4</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -382,8 +382,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">3</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">2</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">7</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">4</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -394,8 +394,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">3</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">2</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">7</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">4</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -406,8 +406,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">275</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">138</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">293</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">147</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -415,7 +415,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M01_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_MI&apos;)) > 1)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M01_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_MI&apos;)) > 1)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -434,8 +434,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">2</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">2</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">17</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">12</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -446,8 +446,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">2</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">2</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">17</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">12</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -458,8 +458,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">2</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">2</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">17</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">12</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -470,8 +470,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">413</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">276</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">440</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">294</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -482,8 +482,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">2</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">2</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">17</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">12</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -497,7 +497,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S02_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_SI&apos;)) > 2)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S02_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_SI&apos;)) > 2)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -516,8 +516,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">5</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">4</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">11</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">8</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -528,8 +528,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">5</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">4</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">11</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">8</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -540,8 +540,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">5</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">4</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">11</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">8</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -552,8 +552,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">5</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">4</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">11</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">8</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -564,8 +564,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">413</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">276</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">440</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">294</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -573,7 +573,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M02_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_MI&apos;)) > 2)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M02_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_MI&apos;)) > 2)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -592,8 +592,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">3</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">3</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">23</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">18</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -604,8 +604,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">3</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">3</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">23</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">18</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -616,8 +616,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">3</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">3</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">23</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">18</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -628,8 +628,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">551</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">414</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">587</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">441</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -640,8 +640,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">3</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">3</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">23</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">18</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -655,7 +655,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S03_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_SI&apos;)) > 3)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S03_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_SI&apos;)) > 3)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -674,8 +674,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">7</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">6</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">15</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">12</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -686,8 +686,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">7</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">6</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">15</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">12</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -698,8 +698,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">7</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">6</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">15</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">12</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -710,8 +710,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">7</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">6</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">15</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">12</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -722,8 +722,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">551</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">414</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">587</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">441</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -731,7 +731,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M03_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_MI&apos;)) > 3)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M03_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_MI&apos;)) > 3)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -750,8 +750,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">4</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">4</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">29</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">24</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -762,8 +762,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">4</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">4</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">29</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">24</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -774,8 +774,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">4</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">4</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">29</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">24</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -786,8 +786,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">689</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">552</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">734</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">588</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -798,8 +798,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">4</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">4</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">29</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">24</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -832,8 +832,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">9</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">8</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">19</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">16</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -844,8 +844,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">9</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">8</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">19</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">16</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -856,8 +856,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">9</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">8</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">19</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">16</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -868,8 +868,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">9</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">8</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">19</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">16</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -880,8 +880,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">689</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">552</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">734</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">588</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -889,7 +889,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M04_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_MI&apos;)) > 4)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M04_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_MI&apos;)) > 4)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -908,8 +908,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">5</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">5</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">35</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">30</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -920,8 +920,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">5</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">5</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">35</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">30</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -932,8 +932,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">5</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">5</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">35</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">30</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -944,8 +944,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">827</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">690</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">881</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">735</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -956,8 +956,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">5</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">5</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">35</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">30</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -990,8 +990,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">11</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">10</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">23</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">20</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1002,8 +1002,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">11</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">10</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">23</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">20</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1014,8 +1014,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">11</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">10</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">23</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">20</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1026,8 +1026,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">11</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">10</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">23</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">20</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1038,8 +1038,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">827</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">690</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">881</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">735</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1047,7 +1047,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M05_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_MI&apos;)) > 5)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M05_SC" xilinx:dependency="(spirit:decode(id(&apos;PARAM_VALUE.NUM_MI&apos;)) > 5)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -1066,8 +1066,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">6</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">6</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">41</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">36</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1078,8 +1078,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">6</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">6</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">41</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">36</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1090,8 +1090,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">6</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">6</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">41</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">36</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1102,8 +1102,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">965</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">828</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1028</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">882</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1114,8 +1114,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">6</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">6</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">41</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">36</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1148,8 +1148,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">13</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">12</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">27</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">24</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1160,8 +1160,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">13</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">12</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">27</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">24</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1172,8 +1172,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">13</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">12</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">27</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">24</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1184,8 +1184,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">13</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">12</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">27</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">24</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1196,8 +1196,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">965</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">828</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1028</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">882</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1224,8 +1224,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">7</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">7</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">47</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">42</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1236,8 +1236,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">7</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">7</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">47</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">42</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1248,8 +1248,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">7</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">7</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">47</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">42</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1260,8 +1260,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1103</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">966</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1175</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1029</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1272,8 +1272,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">7</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">7</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">47</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">42</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1306,8 +1306,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">15</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">14</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">31</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">28</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1318,8 +1318,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">15</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">14</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">31</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">28</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1330,8 +1330,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">15</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">14</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">31</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">28</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1342,8 +1342,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">15</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">14</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">31</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">28</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1354,8 +1354,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1103</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">966</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1175</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1029</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1382,8 +1382,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">8</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">8</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">53</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">48</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1394,8 +1394,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">8</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">8</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">53</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">48</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1406,8 +1406,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">8</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">8</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">53</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">48</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1418,8 +1418,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1241</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1104</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1322</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1176</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1430,8 +1430,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">8</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">8</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">53</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">48</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1464,8 +1464,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">17</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">16</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">35</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">32</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1476,8 +1476,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">17</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">16</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">35</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">32</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1488,8 +1488,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">17</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">16</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">35</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">32</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1500,8 +1500,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">17</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">16</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">35</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">32</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1512,8 +1512,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1241</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1104</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1322</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1176</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1540,8 +1540,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">9</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">9</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">59</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">54</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1552,8 +1552,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">9</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">9</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">59</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">54</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1564,8 +1564,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">9</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">9</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">59</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">54</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1576,8 +1576,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1379</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1242</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1469</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1323</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1588,8 +1588,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">9</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">9</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">59</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">54</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1622,8 +1622,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">19</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">18</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">39</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">36</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1634,8 +1634,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">19</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">18</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">39</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">36</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1646,8 +1646,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">19</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">18</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">39</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">36</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1658,8 +1658,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">19</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">18</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">39</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">36</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1670,8 +1670,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1379</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1242</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1469</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1323</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1698,8 +1698,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">10</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">10</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">65</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">60</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1710,8 +1710,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">10</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">10</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">65</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">60</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1722,8 +1722,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">10</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">10</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">65</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">60</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1734,8 +1734,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1517</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1380</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1616</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1470</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1746,8 +1746,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">10</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">10</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">65</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">60</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1780,8 +1780,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">21</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">20</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">43</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">40</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1792,8 +1792,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">21</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">20</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">43</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">40</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1804,8 +1804,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">21</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">20</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">43</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">40</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1816,8 +1816,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">21</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">20</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">43</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">40</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1828,8 +1828,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1517</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1380</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1616</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1470</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1856,8 +1856,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">11</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">11</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">71</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">66</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1868,8 +1868,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">11</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">11</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">71</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">66</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1880,8 +1880,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">11</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">11</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">71</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">66</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1892,8 +1892,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1655</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1518</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1763</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1617</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1904,8 +1904,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">11</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">11</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">71</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">66</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1938,8 +1938,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">23</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">22</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">47</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">44</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1950,8 +1950,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">23</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">22</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">47</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">44</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1962,8 +1962,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">23</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">22</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">47</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">44</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1974,8 +1974,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">23</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">22</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">47</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">44</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1986,8 +1986,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1655</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1518</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1763</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1617</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2014,8 +2014,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">12</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">12</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">77</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">72</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2026,8 +2026,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">12</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">12</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">77</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">72</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2038,8 +2038,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">12</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">12</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">77</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">72</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2050,8 +2050,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1793</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1656</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1910</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1764</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2062,8 +2062,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">12</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">12</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">77</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">72</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2096,8 +2096,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">25</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">24</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">51</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">48</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2108,8 +2108,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">25</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">24</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">51</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">48</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2120,8 +2120,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">25</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">24</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">51</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">48</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2132,8 +2132,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">25</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">24</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">51</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">48</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2144,8 +2144,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1793</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1656</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1910</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1764</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2172,8 +2172,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">13</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">13</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">83</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">78</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2184,8 +2184,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">13</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">13</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">83</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">78</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2196,8 +2196,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">13</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">13</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">83</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">78</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2208,8 +2208,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1931</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1794</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">2057</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1911</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2220,8 +2220,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">13</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">13</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">83</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">78</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2254,8 +2254,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">27</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">26</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">55</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">52</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2266,8 +2266,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">27</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">26</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">55</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">52</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2278,8 +2278,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">27</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">26</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">55</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">52</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2290,8 +2290,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">27</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">26</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">55</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">52</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2302,8 +2302,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">1931</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1794</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">2057</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1911</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2330,8 +2330,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">14</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">14</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">89</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">84</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2342,8 +2342,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">14</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">14</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">89</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">84</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2354,8 +2354,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">14</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">14</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">89</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">84</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2366,8 +2366,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">2069</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1932</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">2204</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">2058</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2378,8 +2378,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">14</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">14</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">89</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">84</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2412,8 +2412,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">29</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">28</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">59</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">56</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2424,8 +2424,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">29</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">28</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">59</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">56</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2436,8 +2436,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">29</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">28</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">59</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">56</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2448,8 +2448,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">29</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">28</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">59</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">56</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2460,8 +2460,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">2069</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">1932</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">2204</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">2058</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2488,8 +2488,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">15</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">15</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">95</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">90</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2500,8 +2500,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">15</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">15</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">95</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">90</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2512,8 +2512,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">15</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">15</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">95</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1) + 1)">90</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2524,8 +2524,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">2207</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">2070</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">2351</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">2205</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2536,8 +2536,8 @@
           <spirit:physicalPort>
             <spirit:name>s_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">15</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">15</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">95</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1) + 1)">90</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2570,8 +2570,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_recv</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">31</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">30</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">63</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">60</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2582,8 +2582,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_send</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">31</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">30</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">63</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">60</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2594,8 +2594,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_req</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">31</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">30</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">63</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1) + 1)">60</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2606,8 +2606,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_info</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">31</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">30</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">63</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1) + 1)">60</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2618,8 +2618,8 @@
           <spirit:physicalPort>
             <spirit:name>m_sc_payld</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">2207</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">2070</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">2351</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1) + 1)">2205</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2650,11 +2650,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jul 05 21:22:21 UTC 2019</spirit:value>
+            <spirit:value>Tue Jul 09 20:57:49 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:06dc95e9</spirit:value>
+            <spirit:value>9:60096f0a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2665,7 +2665,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:06dc95e9</spirit:value>
+            <spirit:value>9:60096f0a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2681,11 +2681,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jul 05 21:22:21 UTC 2019</spirit:value>
+            <spirit:value>Tue Jul 09 20:57:49 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:06dc95e9</spirit:value>
+            <spirit:value>9:60096f0a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2704,11 +2704,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jul 05 21:22:21 UTC 2019</spirit:value>
+            <spirit:value>Tue Jul 09 20:57:49 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b5b8493d</spirit:value>
+            <spirit:value>9:1df668cb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2724,11 +2724,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Jul 05 21:22:21 UTC 2019</spirit:value>
+            <spirit:value>Tue Jul 09 20:57:49 UTC 2019</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b5b8493d</spirit:value>
+            <spirit:value>9:1df668cb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2768,7 +2768,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">23</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2779,7 +2779,7 @@
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_CONNECTIVITY&apos;)))" spirit:bitStringLength="2">0x3</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_CONNECTIVITY&apos;)))" spirit:bitStringLength="2">0b001000010000111111111111</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -2795,7 +2795,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">23</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2812,7 +2812,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">23</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2829,7 +2829,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) * 1) - 1)">23</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2846,7 +2846,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">275</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">587</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2863,7 +2863,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))) - 1)">23</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2880,7 +2880,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">23</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2897,7 +2897,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">23</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2914,7 +2914,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) - 1)">23</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2931,7 +2931,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;))) * 1) - 1)">23</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2948,7 +2948,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">137</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_PAYLD_WIDTH&apos;))) - 1)">881</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -2965,7 +2965,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>C_PAYLD_WIDTH</spirit:name>
         <spirit:displayName>C_PAYLD_WIDTH</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PAYLD_WIDTH" spirit:minimum="1" spirit:maximum="1854" spirit:rangeType="long">138</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_PAYLD_WIDTH" spirit:minimum="1" spirit:maximum="1854" spirit:rangeType="long">147</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>K_MAX_INFO_WIDTH</spirit:name>
@@ -2989,12 +2989,12 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_NUM_SI</spirit:name>
         <spirit:displayName>C_NUM_SI</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_SI" spirit:minimum="0" spirit:maximum="16" spirit:rangeType="long">2</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_SI" spirit:minimum="0" spirit:maximum="16" spirit:rangeType="long">4</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_NUM_MI</spirit:name>
         <spirit:displayName>C_NUM_MI</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_MI" spirit:minimum="0" spirit:maximum="16" spirit:rangeType="long">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_NUM_MI" spirit:minimum="0" spirit:maximum="16" spirit:rangeType="long">6</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_TESTING_MODE</spirit:name>
@@ -3004,7 +3004,7 @@
       <spirit:modelParameter spirit:dataType="bitstring">
         <spirit:name>C_CONNECTIVITY</spirit:name>
         <spirit:displayName>C_CONNECTIVITY</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONNECTIVITY" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))){&quot;1&quot;}}" spirit:bitStringLength="2">&quot;11&quot;</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_CONNECTIVITY" spirit:dependency="{(spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_SI&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI&apos;))){&quot;1&quot;}}" spirit:bitStringLength="24">0b001000010000111111111111</spirit:value>
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
@@ -3141,12 +3141,12 @@
     <spirit:parameter>
       <spirit:name>NUM_SI</spirit:name>
       <spirit:displayName>NUM_SI</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_SI" spirit:order="5" spirit:minimum="1" spirit:maximum="16" spirit:rangeType="long">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_SI" spirit:order="5" spirit:minimum="1" spirit:maximum="16" spirit:rangeType="long">4</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>NUM_MI</spirit:name>
       <spirit:displayName>NUM_MI</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_MI" spirit:order="6" spirit:minimum="1" spirit:maximum="16" spirit:rangeType="long">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_MI" spirit:order="6" spirit:minimum="1" spirit:maximum="16" spirit:rangeType="long">6</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>TESTING_MODE</spirit:name>
@@ -3156,7 +3156,7 @@
     <spirit:parameter>
       <spirit:name>PAYLD_WIDTH</spirit:name>
       <spirit:displayName>PAYLD_WIDTH</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PAYLD_WIDTH" spirit:order="8" spirit:minimum="0" spirit:maximum="1854" spirit:rangeType="long">138</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PAYLD_WIDTH" spirit:order="8" spirit:minimum="0" spirit:maximum="1854" spirit:rangeType="long">147</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M00_S00_CONNECTIVITY</spirit:name>
@@ -3171,12 +3171,12 @@
     <spirit:parameter>
       <spirit:name>M00_S02_CONNECTIVITY</spirit:name>
       <spirit:displayName>My M00_S02_CONNECTIVITY</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M00_S02_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M00_S02_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M00_S03_CONNECTIVITY</spirit:name>
       <spirit:displayName>My M00_S03_CONNECTIVITY</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M00_S03_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M00_S03_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M00_S04_CONNECTIVITY</spirit:name>
@@ -3251,12 +3251,12 @@
     <spirit:parameter>
       <spirit:name>M01_S02_CONNECTIVITY</spirit:name>
       <spirit:displayName>My M01_S02_CONNECTIVITY</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M01_S02_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M01_S02_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M01_S03_CONNECTIVITY</spirit:name>
       <spirit:displayName>My M01_S03_CONNECTIVITY</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M01_S03_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M01_S03_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M01_S04_CONNECTIVITY</spirit:name>
@@ -3331,12 +3331,12 @@
     <spirit:parameter>
       <spirit:name>M02_S02_CONNECTIVITY</spirit:name>
       <spirit:displayName>My M02_S02_CONNECTIVITY</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_S02_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_S02_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M02_S03_CONNECTIVITY</spirit:name>
       <spirit:displayName>My M02_S03_CONNECTIVITY</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_S03_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M02_S03_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M02_S04_CONNECTIVITY</spirit:name>
@@ -3411,7 +3411,7 @@
     <spirit:parameter>
       <spirit:name>M03_S02_CONNECTIVITY</spirit:name>
       <spirit:displayName>My M03_S02_CONNECTIVITY</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M03_S02_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M03_S02_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M03_S03_CONNECTIVITY</spirit:name>
@@ -3496,7 +3496,7 @@
     <spirit:parameter>
       <spirit:name>M04_S03_CONNECTIVITY</spirit:name>
       <spirit:displayName>My M04_S03_CONNECTIVITY</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M04_S03_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M04_S03_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M04_S04_CONNECTIVITY</spirit:name>
@@ -3571,12 +3571,12 @@
     <spirit:parameter>
       <spirit:name>M05_S02_CONNECTIVITY</spirit:name>
       <spirit:displayName>My M05_S02_CONNECTIVITY</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M05_S02_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M05_S02_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M05_S03_CONNECTIVITY</spirit:name>
       <spirit:displayName>My M05_S03_CONNECTIVITY</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M05_S03_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M05_S03_CONNECTIVITY" spirit:choiceRef="choice_pairs_4873554b">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>M05_S04_CONNECTIVITY</spirit:name>
@@ -4459,6 +4459,28 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M00_S00_CONNECTIVITY" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M00_S01_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M00_S02_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M00_S03_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S00_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S01_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S02_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M01_S03_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S00_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S01_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S02_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M02_S03_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S00_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S01_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S02_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M03_S03_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M04_S00_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M04_S01_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M04_S02_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M04_S03_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M05_S00_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M05_S01_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M05_S02_CONNECTIVITY" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M05_S03_CONNECTIVITY" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.M_PIPELINES" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.NUM_MI" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.NUM_SI" xilinx:valueSource="user"/>

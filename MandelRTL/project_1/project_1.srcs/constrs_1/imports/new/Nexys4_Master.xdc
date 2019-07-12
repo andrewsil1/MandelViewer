@@ -744,10 +744,10 @@ create_pblock pblock_calc_0
 add_cells_to_pblock [get_pblocks pblock_calc_0] [get_cells -quiet [list Fast_IP_Clock_i/calc_0]]
 resize_pblock [get_pblocks pblock_calc_0] -add {SLICE_X26Y150:SLICE_X81Y199 SLICE_X28Y100:SLICE_X81Y149 SLICE_X58Y51:SLICE_X89Y99}
 
-create_pblock pblock_system_cache_0
-add_cells_to_pblock [get_pblocks pblock_system_cache_0] [get_cells -quiet [list Fast_IP_Clock_i/system_cache_0]]
-resize_pblock [get_pblocks pblock_system_cache_0] -add {SLICE_X52Y10:SLICE_X77Y49}
-resize_pblock [get_pblocks pblock_system_cache_0] -add {RAMB18_X1Y4:RAMB18_X2Y19}
-resize_pblock [get_pblocks pblock_system_cache_0] -add {RAMB36_X1Y2:RAMB36_X2Y9}
+#create_pblock pblock_system_cache_0
+#add_cells_to_pblock [get_pblocks pblock_system_cache_0] [get_cells -quiet [list Fast_IP_Clock_i/system_cache_0]]
+#resize_pblock [get_pblocks pblock_system_cache_0] -add {SLICE_X52Y10:SLICE_X77Y49}
+#resize_pblock [get_pblocks pblock_system_cache_0] -add {RAMB18_X1Y4:RAMB18_X2Y19}
+#resize_pblock [get_pblocks pblock_system_cache_0] -add {RAMB36_X1Y2:RAMB36_X2Y9}
 
 set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
