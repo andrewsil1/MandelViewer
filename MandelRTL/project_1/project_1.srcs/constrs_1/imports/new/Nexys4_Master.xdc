@@ -738,8 +738,8 @@ resize_pblock [get_pblocks pblock_psram_ip_0] -add {SLICE_X12Y37:SLICE_X19Y49}
 
 create_pblock pblock_microblaze_0_1
 add_cells_to_pblock [get_pblocks pblock_microblaze_0_1] [get_cells -quiet [list Fast_IP_Clock_i/microblaze_0]]
-resize_pblock [get_pblocks pblock_microblaze_0_1] -add {SLICE_X28Y65:SLICE_X57Y99}
-resize_pblock [get_pblocks pblock_microblaze_0_1] -add {DSP48_X1Y26:DSP48_X1Y39}
+resize_pblock [get_pblocks pblock_microblaze_0_1] -add {SLICE_X28Y58:SLICE_X57Y99}
+resize_pblock [get_pblocks pblock_microblaze_0_1] -add {DSP48_X1Y24:DSP48_X1Y39}
 create_pblock pblock_calc_0
 add_cells_to_pblock [get_pblocks pblock_calc_0] [get_cells -quiet [list Fast_IP_Clock_i/calc_0]]
 resize_pblock [get_pblocks pblock_calc_0] -add {SLICE_X26Y150:SLICE_X81Y199 SLICE_X28Y100:SLICE_X81Y149 SLICE_X58Y51:SLICE_X89Y99}
@@ -751,3 +751,15 @@ resize_pblock [get_pblocks pblock_calc_0] -add {SLICE_X26Y150:SLICE_X81Y199 SLIC
 #resize_pblock [get_pblocks pblock_system_cache_0] -add {RAMB36_X1Y2:RAMB36_X2Y9}
 
 set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
+
+create_pblock pblock_system_cache_0
+add_cells_to_pblock [get_pblocks pblock_system_cache_0] [get_cells -quiet [list Fast_IP_Clock_i/system_cache_0]]
+resize_pblock [get_pblocks pblock_system_cache_0] -add {SLICE_X52Y0:SLICE_X83Y50}
+resize_pblock [get_pblocks pblock_system_cache_0] -add {RAMB18_X1Y0:RAMB18_X2Y39}
+resize_pblock [get_pblocks pblock_system_cache_0] -add {RAMB36_X1Y0:RAMB36_X2Y19}
+
+
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clk_1]

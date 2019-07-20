@@ -15,14 +15,14 @@ BEGIN PROCESSOR
  PARAMETER DRIVER_NAME = cpu
  PARAMETER DRIVER_VER = 2.9
  PARAMETER HW_INSTANCE = microblaze_0
- PARAMETER compiler_flags =  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-mul -mno-xl-soft-div -mcpu=v11.0
+ PARAMETER compiler_flags =  -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-mul -mno-xl-reorder -mno-xl-soft-div -mcpu=v11.0
 END
 
 
 BEGIN DRIVER
- PARAMETER DRIVER_NAME = gpio
- PARAMETER DRIVER_VER = 4.4
- PARAMETER HW_INSTANCE = axi_gpio_0
+ PARAMETER DRIVER_NAME = generic
+ PARAMETER DRIVER_VER = 2.0
+ PARAMETER HW_INSTANCE = SevenSegController_0
 END
 
 BEGIN DRIVER
@@ -62,8 +62,8 @@ BEGIN DRIVER
 END
 
 BEGIN DRIVER
- PARAMETER DRIVER_NAME = psram_ip
- PARAMETER DRIVER_VER = 1.0
+ PARAMETER DRIVER_NAME = generic
+ PARAMETER DRIVER_VER = 2.0
  PARAMETER HW_INSTANCE = psram_ip_0
 END
 

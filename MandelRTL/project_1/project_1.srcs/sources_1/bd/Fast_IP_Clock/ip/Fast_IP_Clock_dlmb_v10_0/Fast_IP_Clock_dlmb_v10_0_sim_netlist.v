@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Jun 24 11:58:51 2019
+// Date        : Wed Jul 17 22:08:54 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_dlmb_v10_0 -prefix
-//               Fast_IP_Clock_dlmb_v10_0_ Fast_IP_Clock_dlmb_v10_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_dlmb_v10_0/Fast_IP_Clock_dlmb_v10_0_sim_netlist.v
 // Design      : Fast_IP_Clock_dlmb_v10_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -125,7 +125,7 @@ module Fast_IP_Clock_dlmb_v10_0
 endmodule
 
 (* C_EXT_RESET_HIGH = "1" *) (* C_LMB_AWIDTH = "32" *) (* C_LMB_DWIDTH = "32" *) 
-(* C_LMB_NUM_SLAVES = "1" *) 
+(* C_LMB_NUM_SLAVES = "1" *) (* ORIG_REF_NAME = "lmb_v10" *) 
 module Fast_IP_Clock_dlmb_v10_0_lmb_v10
    (LMB_Clk,
     SYS_Rst,

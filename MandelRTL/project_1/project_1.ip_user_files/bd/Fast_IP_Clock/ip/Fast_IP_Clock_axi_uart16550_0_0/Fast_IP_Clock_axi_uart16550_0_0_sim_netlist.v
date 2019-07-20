@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri May 31 11:53:15 2019
+// Date        : Wed Jul 17 22:13:31 2019
 // Host        : AndrewSi64 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top Fast_IP_Clock_axi_uart16550_0_0 -prefix
-//               Fast_IP_Clock_axi_uart16550_0_0_ Fast_IP_Clock_axi_uart16550_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_uart16550_0_0/Fast_IP_Clock_axi_uart16550_0_0_sim_netlist.v
 // Design      : Fast_IP_Clock_axi_uart16550_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -54,7 +54,7 @@ module Fast_IP_Clock_axi_uart16550_0_0
   (* x_interface_info = "xilinx.com:signal:reset:1.0 ARESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
   (* x_interface_info = "xilinx.com:signal:interrupt:1.0 INTERRUPT INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output ip2intc_irpt;
   input freeze;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 13, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [12:0]s_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 13, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 16, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [12:0]s_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]s_axi_wdata;
@@ -173,6 +173,7 @@ module Fast_IP_Clock_axi_uart16550_0_0
         .xout(NLW_U0_xout_UNCONNECTED));
 endmodule
 
+(* ORIG_REF_NAME = "address_decoder" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_address_decoder
    (\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ,
     bus2ip_rdce_i,
@@ -265,6 +266,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_address_decoder
         .O(Wr));
 endmodule
 
+(* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_axi_lite_ipif
    (ce_out_i,
     s_axi_rvalid,
@@ -361,7 +363,8 @@ endmodule
 
 (* C_EXTERNAL_XIN_CLK_HZ = "25000000" *) (* C_FAMILY = "artix7" *) (* C_HAS_EXTERNAL_RCLK = "0" *) 
 (* C_HAS_EXTERNAL_XIN = "0" *) (* C_IS_A_16550 = "1" *) (* C_S_AXI_ACLK_FREQ_HZ = "100000000" *) 
-(* C_S_AXI_ADDR_WIDTH = "13" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* C_S_AXI_ADDR_WIDTH = "13" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* ORIG_REF_NAME = "axi_uart16550" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_axi_uart16550
    (s_axi_aclk,
     s_axi_aresetn,
@@ -580,6 +583,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_axi_uart16550
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "cntr_incr_decr_addn_f" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_cntr_incr_decr_addn_f
    (fifo_full_p1,
     Q,
@@ -978,6 +982,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_cntr_incr_decr_addn_f_0
         .O(lsr4_set));
 endmodule
 
+(* ORIG_REF_NAME = "dynshreg_f" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_dynshreg_f
    (out,
     tx_fifo_wr_en_d,
@@ -1513,6 +1518,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_dynshreg_f__parameterized0
         .O(lsr2_set));
 endmodule
 
+(* ORIG_REF_NAME = "ipic_if" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_ipic_if
    (wrReq_d1,
     s_axi_awready,
@@ -1636,6 +1642,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_ipic_if
         .R(bus2ip_reset_int_core));
 endmodule
 
+(* ORIG_REF_NAME = "rx16550" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_rx16550
    (rx_fifo_data_in,
     p_0_in,
@@ -3146,6 +3153,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_rx16550
         .R(rx_rst));
 endmodule
 
+(* ORIG_REF_NAME = "rx_fifo_block" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_rx_fifo_block
    (rx_fifo_full,
     Rx_error_in_fifo,
@@ -3485,6 +3493,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_rx_fifo_block
         .wr_d(wr_d));
 endmodule
 
+(* ORIG_REF_NAME = "rx_fifo_control" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_rx_fifo_control
    (Rx_error_in_fifo,
     thre_iir_set_reg,
@@ -3934,6 +3943,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_rx_fifo_control
         .O(thre_iir_set_i_4_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "slave_attachment" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_slave_attachment
    (\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
     s_axi_rvalid,
@@ -4282,6 +4292,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_slave_attachment
         .R(bus2ip_reset_int_core));
 endmodule
 
+(* ORIG_REF_NAME = "srl_fifo_rbu_f" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_srl_fifo_rbu_f
    (Q,
     FIFO_Full_reg_0,
@@ -4580,6 +4591,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_srl_fifo_rbu_f__parameterized0
         .R(rx_fifo_rst));
 endmodule
 
+(* ORIG_REF_NAME = "tx16550" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_tx16550
    (tx_empty,
     tx_fifo_rd_en_int,
@@ -5233,6 +5245,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_tx16550
         .R(bus2ip_reset_int_core));
 endmodule
 
+(* ORIG_REF_NAME = "tx_fifo_block" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_tx_fifo_block
    (Q,
     FIFO_Full_reg,
@@ -5291,6 +5304,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_tx_fifo_block
         .txrdyn(txrdyn));
 endmodule
 
+(* ORIG_REF_NAME = "uart16550" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_uart16550
    (baudoutn,
     ip2intc_irpt,
@@ -7999,6 +8013,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_uart16550
         .writing_thr(writing_thr));
 endmodule
 
+(* ORIG_REF_NAME = "xuart" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_xuart
    (baudoutn,
     ip2intc_irpt,
@@ -8123,6 +8138,7 @@ module Fast_IP_Clock_axi_uart16550_0_0_xuart
         .txrdyn(txrdyn));
 endmodule
 
+(* ORIG_REF_NAME = "xuart_tx_load_sm" *) 
 module Fast_IP_Clock_axi_uart16550_0_0_xuart_tx_load_sm
    (\lsr_reg[5] ,
     \lsr_reg[5]_0 ,

@@ -7,7 +7,7 @@
 #include "xxhash.h"
 
 extern u8* compressBuffer;
-#define PSRAM_BASE				XPAR_PSRAM_IP_0_S00_AXI_BASEADDR
+#define PSRAM_BASE				XPAR_PSRAM_IP_0_BASEADDR
 
 u32 CompressOutput(u32 compressCapacity, u32 imageSize) {
 	 LZ4F_cctx* cctxPtr;	//compressionContext object

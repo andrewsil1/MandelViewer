@@ -18,6 +18,10 @@
 #include "lz4frame.h"
 #include "xxhash.h"
 
+extern unsigned int _stack_end;
+extern unsigned int _stack;
+extern unsigned int _heap;
+
 extern u32 CompressOutput(u32 compressBuffer, u32 imageSize);
 
 /************************** Constant Definitions *****************************/
@@ -32,8 +36,8 @@ extern u32 CompressOutput(u32 compressBuffer, u32 imageSize);
 #define DBG_BASE				XPAR_UARTLITE_0_BASEADDR
 #define DBG_DEVICE_ID			XPAR_UARTLITE_0_DEVICE_ID
 #define UART_CLOCK				XPAR_AXI_UART16550_0_CLOCK_FREQ_HZ
-#define PSRAM_BASE				XPAR_PSRAM_IP_0_S00_AXI_BASEADDR
-#define PSRAM_END				XPAR_PSRAM_IP_0_S00_AXI_HIGHADDR
+#define PSRAM_BASE				XPAR_PSRAM_IP_0_BASEADDR
+#define PSRAM_END				XPAR_PSRAM_IP_0_HIGHADDR
 #define CALC_DEVICE_ID			XPAR_CALC_0_DEVICE_ID
 
 /*
@@ -80,12 +84,21 @@ u32 UNROLL = 0;   // Retrieved from hardware later. Width % UNROLL must be 0.
 u32 WIDTH = 1920; // Initial width of image. Can be changed by host with command 'E'
 u32 HEIGHT = WIDTH * 3U / 4U;
 
+const char* stackErr= "StackOverflow Exception\r\n";
+const char* alignErr = "Alignment Exception\r\n";
+
 u8* compressBuffer;							// Space to compress data prior to transmission.
 
 // For the serial port...
 u16 Options;
 u8 Errors;
 
+static void spv_exception_handler(void *InstancePtr)
+{
+	Xil_ExceptionDisable();
+	xil_printf((char*) InstancePtr);
+	Xil_AssertVoidAlways();
+}
 
 void GetCommand(XUartNs550 *UartInstancePtr, u8 *ReceiveBufferPtr) {
 
@@ -302,22 +315,11 @@ int CalcMandelbrot(INTC *IntcInstancePtr, XUartNs550 *UartInstancePtr, u16 UartD
 
     XUartLite_ResetFifos(&DbgInstance);
 
-	Xil_DCacheEnable();
-#ifdef DEBUG
-	//Fill 16MB empty memory with a recognizable pattern.
-	xil_printf("Initializing memory\r\n");
-	for (volatile u32* x = (u32 *)PSRAM_BASE; x <= (u32 *)PSRAM_END - 1; x++) {
-		 *x = 0xDEADBEEF;
-	}
-#endif
-
-
-
 	//Set up the external UART and configure the interrupt handler for bytes in RX buffer
-		Status = UartSetup(IntcInstancePtr, UartInstancePtr, UartDeviceId, UartIntrId);
-			if (Status != XST_SUCCESS) {
-				return XST_FAILURE;
-			}
+    Status = UartSetup(IntcInstancePtr, UartInstancePtr, UartDeviceId, UartIntrId);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
 
 	// Change the baud rate of the UART and indicate that incoming AXI clock is 100MHz.
 	XUartNs550_SetBaud(UART_BASE, UART_CLOCK, BAUD_RATE);
@@ -429,6 +431,10 @@ int SetupCalc() {
      	if (compressBuffer == NULL) {
      		compressBuffer = (u8*) malloc(MAXWIDTH * (MAXWIDTH * 3U /4U) * sizeof(u16));
      	}
+     	if (compressBuffer == NULL) {
+     		xil_printf("Malloc failed!");
+     		Xil_AssertNonvoidAlways();
+     	}
     }
     else {
        	return XST_FAILURE;
@@ -453,6 +459,22 @@ int SetupCalc() {
 
 int main()
 {
+	//Set up stack boundaries
+	mtslr(&_stack_end);
+	mtshr(&_stack);
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_STACK_VIOLATION, spv_exception_handler, (void*) stackErr);
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_UNALIGNED_ACCESS, spv_exception_handler, (void*) alignErr);
+	Xil_ExceptionEnable();
+
+	Xil_DCacheEnable();
+
+	//Fill 16MB empty memory with a recognizable pattern.
+	xil_printf("Initializing memory\r\n");
+	for (u32* x = (u32 *)PSRAM_BASE; x <= (u32 *)PSRAM_END; x++) {
+		 *x = 0xDEADBEEF;
+	}
+
 	//Variable definitions
 	int Status = CalcMandelbrot(&InterruptController, &UartNs550Instance, UART_DEVICE_ID, UART_IRPT_INTR);
 

@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Fri May 31 11:53:15 2019
+-- Date        : Wed Jul 17 22:13:31 2019
 -- Host        : AndrewSi64 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top Fast_IP_Clock_axi_uart16550_0_0 -prefix
---               Fast_IP_Clock_axi_uart16550_0_0_ Fast_IP_Clock_axi_uart16550_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               C:/Users/andrewsi/Documents/GitHub/MandelViewer/MandelRTL/project_1/project_1.srcs/sources_1/bd/Fast_IP_Clock/ip/Fast_IP_Clock_axi_uart16550_0_0/Fast_IP_Clock_axi_uart16550_0_0_stub.vhdl
 -- Design      : Fast_IP_Clock_axi_uart16550_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

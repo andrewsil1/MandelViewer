@@ -70,7 +70,7 @@ module bd_bb61_sarn_1 (
   m_sc_payld
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF S_AXIS_ARB:M_AXIS_ARB:S_SC, ASSOCIATED_RESET s_sc_aresetn, ASSOCIATED_CLKEN s_sc_aclken, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF S_AXIS_ARB:M_AXIS_ARB:S_SC, ASSOCIATED_RESET s_sc_aresetn, ASSOCIATED_CLKEN s_sc_aclken, FREQ_HZ 120000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 aclk CLK" *)
 input wire s_sc_aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -85,7 +85,7 @@ input wire [0 : 0] s_sc_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC RECV" *)
 output wire [0 : 0] s_sc_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC PAYLD" *)
-input wire [146 : 0] s_sc_payld;
+input wire [141 : 0] s_sc_payld;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_sc_aclk, ASSOCIATED_BUSIF M_SC, ASSOCIATED_RESET m_sc_aresetn, ASSOCIATED_CLKEN m_sc_aclken, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m_sc_aclk CLK" *)
 input wire m_sc_aclk;
@@ -93,15 +93,15 @@ input wire m_sc_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 m_sc_aresetn RST" *)
 input wire m_sc_aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC RECV" *)
-input wire [5 : 0] m_sc_recv;
+input wire [4 : 0] m_sc_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC SEND" *)
-output wire [5 : 0] m_sc_send;
+output wire [4 : 0] m_sc_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC REQ" *)
-output wire [5 : 0] m_sc_req;
+output wire [4 : 0] m_sc_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC INFO" *)
-output wire [5 : 0] m_sc_info;
+output wire [4 : 0] m_sc_info;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC PAYLD" *)
-output wire [146 : 0] m_sc_payld;
+output wire [141 : 0] m_sc_payld;
 
   sc_node_v1_0_10_top #(
     .C_FAMILY("artix7"),
@@ -113,15 +113,15 @@ output wire [146 : 0] m_sc_payld;
     .C_ENABLE_PIPELINING(8'H01),
     .C_SYNCHRONIZATION_STAGES(3),
     .C_NUM_SI(1),
-    .C_NUM_MI(6),
+    .C_NUM_MI(5),
     .C_CHANNEL(2),
-    .C_PAYLD_WIDTH(147),
+    .C_PAYLD_WIDTH(142),
     .C_S_NUM_BYTES_ARRAY(32'H00000004),
-    .C_M_NUM_BYTES_ARRAY(192'H000000040000000400000004000000040000000400000004),
+    .C_M_NUM_BYTES_ARRAY(160'H0000000400000004000000040000000400000004),
     .C_USER_BITS_PER_BYTE(0),
     .C_ARBITER_MODE(1),
-    .C_SC_ROUTE_WIDTH(6),
-    .C_ID_WIDTH(3),
+    .C_SC_ROUTE_WIDTH(5),
+    .C_ID_WIDTH(1),
     .C_ADDR_WIDTH(32),
     .C_USER_WIDTH(0),
     .C_MAX_PAYLD_BYTES(4),
@@ -130,7 +130,7 @@ output wire [146 : 0] m_sc_payld;
     .C_M_SEND_PIPELINE(1),
     .C_S_LATENCY(0),
     .C_NUM_OUTSTANDING(16),
-    .C_ACLK_RELATIONSHIP(1),
+    .C_ACLK_RELATIONSHIP(0),
     .C_ACLKEN_CONVERSION(0)
   ) inst (
     .s_sc_aclk(s_sc_aclk),
